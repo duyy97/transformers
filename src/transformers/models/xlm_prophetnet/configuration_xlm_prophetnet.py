@@ -25,7 +25,7 @@ logger = logging.get_logger(__name__)
 
 XLM_PROPHETNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/xprophetnet-large-wiki100-cased": (
-        "https://hf-mirror.com/microsoft/xprophetnet-large-wiki100-cased/resolve/main/config.json"
+        "https://huggingface.co/microsoft/xprophetnet-large-wiki100-cased/resolve/main/config.json"
     ),
 }
 
@@ -35,7 +35,7 @@ class XLMProphetNetConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`XLMProphetNetModel`]. It is used to instantiate a
     XLMProphetNet model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the XLMProphetNet
-    [microsoft/xprophetnet-large-wiki100-cased](https://hf-mirror.com/microsoft/xprophetnet-large-wiki100-cased)
+    [microsoft/xprophetnet-large-wiki100-cased](https://huggingface.co/microsoft/xprophetnet-large-wiki100-cased)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

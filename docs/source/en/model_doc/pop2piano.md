@@ -13,7 +13,7 @@ specific language governing permissions and limitations under the License.
 # Pop2Piano
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/spaces/sweetcocoa/pop2piano">
+<a href="https://huggingface.co/spaces/sweetcocoa/pop2piano">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -48,7 +48,7 @@ directly from pop audio without using melody and chord extraction
 modules. We show that Pop2Piano, trained with our dataset, is capable
 of producing plausible piano covers.*
 
-This model was contributed by [Susnato Dhar](https://hf-mirror.com/susnato).
+This model was contributed by [Susnato Dhar](https://huggingface.co/susnato).
 The original code can be found [here](https://github.com/sweetcocoa/pop2piano).
 
 ## Usage tips

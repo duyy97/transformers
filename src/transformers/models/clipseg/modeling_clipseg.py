@@ -44,7 +44,7 @@ _CHECKPOINT_FOR_DOC = "CIDAS/clipseg-rd64-refined"
 
 CLIPSEG_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "CIDAS/clipseg-rd64-refined",
-    # See all CLIPSeg models at https://hf-mirror.com/models?filter=clipseg
+    # See all CLIPSeg models at https://huggingface.co/models?filter=clipseg
 ]
 
 

@@ -265,7 +265,7 @@ def main():
         default=None,
         type=str,
         required=True,
-        help="Path to pretrained model or model identifier from hf-mirror.com/models",
+        help="Path to pretrained model or model identifier from huggingface.co/models",
     )
     parser.add_argument(
         "--task_name",
@@ -299,7 +299,7 @@ def main():
         "--cache_dir",
         default=None,
         type=str,
-        help="Where do you want to store the pre-trained models downloaded from hf-mirror.com",
+        help="Where do you want to store the pre-trained models downloaded from huggingface.co",
     )
     parser.add_argument(
         "--data_subset", type=int, default=-1, help="If > 0: limit the data to a subset of data_subset instances."

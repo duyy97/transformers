@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 
 在您进行预训练模型微调之前，需要下载一个数据集并为训练做好准备。之前的教程向您展示了如何处理训练数据，现在您有机会将这些技能付诸实践！
 
-首先，加载[Yelp评论](https://hf-mirror.com/datasets/yelp_review_full)数据集：
+首先，加载[Yelp评论](https://huggingface.co/datasets/yelp_review_full)数据集：
 
 ```py
 >>> from datasets import load_dataset
@@ -43,7 +43,7 @@ rendered properly in your Markdown viewer.
  'text': 'My expectations for McDonalds are t rarely high. But for one to still fail so spectacularly...that takes something special!\\nThe cashier took my friends\'s order, then promptly ignored me. I had to force myself in front of a cashier who opened his register to wait on the person BEHIND me. I waited over five minutes for a gigantic order that included precisely one kid\'s meal. After watching two people who ordered after me be handed their food, I asked where mine was. The manager started yelling at the cashiers for \\"serving off their orders\\" when they didn\'t have their food. But neither cashier was anywhere near those controls, and the manager was the one serving food to customers and clearing the boards.\\nThe manager was rude when giving me my order. She didn\'t make sure that I had everything ON MY RECEIPT, and never even had the decency to apologize that I felt I was getting poor service.\\nI\'ve eaten at various McDonalds restaurants for over 30 years. I\'ve worked at more than one location. I expect bad days, bad moods, and the occasional mistake. But I have yet to have a decent experience at this store. It will remain a place I avoid unless someone in my party needs to avoid illness from low blood sugar. Perhaps I should go back to the racially biased service of Steak n Shake instead!'}
 ```
 
-正如您现在所知，您需要一个`tokenizer`来处理文本，包括填充和截断操作以处理可变的序列长度。如果要一次性处理您的数据集，可以使用 🤗 Datasets 的 [`map`](https://hf-mirror.com/docs/datasets/process#map) 方法，将预处理函数应用于整个数据集：
+正如您现在所知，您需要一个`tokenizer`来处理文本，包括填充和截断操作以处理可变的序列长度。如果要一次性处理您的数据集，可以使用 🤗 Datasets 的 [`map`](https://huggingface.co/docs/datasets/process#map) 方法，将预处理函数应用于整个数据集：
 
 ```py
 >>> from transformers import AutoTokenizer
@@ -79,7 +79,7 @@ rendered properly in your Markdown viewer.
 
 🤗 Transformers 提供了一个专为训练 🤗 Transformers 模型而优化的 [`Trainer`] 类，使您无需手动编写自己的训练循环步骤而更轻松地开始训练模型。[`Trainer`] API 支持各种训练选项和功能，如日志记录、梯度累积和混合精度。
 
-首先加载您的模型并指定期望的标签数量。根据 Yelp Review [数据集卡片](https://hf-mirror.com/datasets/yelp_review_full#data-fields)，您知道有五个标签：
+首先加载您的模型并指定期望的标签数量。根据 Yelp Review [数据集卡片](https://huggingface.co/datasets/yelp_review_full#data-fields)，您知道有五个标签：
 
 
 ```py
@@ -96,7 +96,7 @@ rendered properly in your Markdown viewer.
 
 ### 训练超参数
 
-接下来，创建一个 [`TrainingArguments`] 类，其中包含您可以调整的所有超参数以及用于激活不同训练选项的标志。对于本教程，您可以从默认的训练[超参数](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments)开始，但随时可以尝试不同的设置以找到最佳设置。
+接下来，创建一个 [`TrainingArguments`] 类，其中包含您可以调整的所有超参数以及用于激活不同训练选项的标志。对于本教程，您可以从默认的训练[超参数](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)开始，但随时可以尝试不同的设置以找到最佳设置。
 
 指定保存训练检查点的位置：
 
@@ -108,7 +108,7 @@ rendered properly in your Markdown viewer.
 
 ### 评估
 
-[`Trainer`] 在训练过程中不会自动评估模型性能。您需要向 [`Trainer`] 传递一个函数来计算和展示指标。[🤗 Evaluate](https://hf-mirror.com/docs/evaluate/index) 库提供了一个简单的 [`accuracy`](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 函数，您可以使用 [`evaluate.load`] 函数加载它（有关更多信息，请参阅此[快速入门](https://hf-mirror.com/docs/evaluate/a_quick_tour)）：
+[`Trainer`] 在训练过程中不会自动评估模型性能。您需要向 [`Trainer`] 传递一个函数来计算和展示指标。[🤗 Evaluate](https://huggingface.co/docs/evaluate/index) 库提供了一个简单的 [`accuracy`](https://huggingface.co/spaces/evaluate-metric/accuracy) 函数，您可以使用 [`evaluate.load`] 函数加载它（有关更多信息，请参阅此[快速入门](https://huggingface.co/docs/evaluate/a_quick_tour)）：
 
 ```py
 >>> import numpy as np
@@ -166,7 +166,7 @@ rendered properly in your Markdown viewer.
 
 当您希望使用 Keras API 训练 🤗 Transformers 模型时，您需要将您的数据集转换为 Keras 可理解的格式。如果您的数据集很小，您可以将整个数据集转换为NumPy数组并传递给 Keras。在进行更复杂的操作之前，让我们先尝试这种方法。
 
-首先，加载一个数据集。我们将使用 [GLUE benchmark](https://hf-mirror.com/datasets/glue) 中的 CoLA 数据集，因为它是一个简单的二元文本分类任务。现在只使用训练数据集。
+首先，加载一个数据集。我们将使用 [GLUE benchmark](https://huggingface.co/datasets/glue) 中的 CoLA 数据集，因为它是一个简单的二元文本分类任务。现在只使用训练数据集。
 
 
 ```py
@@ -232,7 +232,7 @@ dataset = dataset.map(tokenize_dataset)
 ```py
 >>> tf_dataset = model.prepare_tf_dataset(dataset["train"], batch_size=16, shuffle=True, tokenizer=tokenizer)
 ```
-请注意，在上面的代码示例中，您需要将`tokenizer`传递给`prepare_tf_dataset`，以便它可以在加载批次时正确填充它们。如果数据集中的所有样本都具有相同的长度而且不需要填充，您可以跳过此参数。如果需要执行比填充样本更复杂的操作（例如，用于掩码语言模型的`tokens` 替换），则可以使用 `collate_fn` 参数，而不是传递一个函数来将样本列表转换为批次并应用任何所需的预处理。请查看我们的[示例](https://github.com/huggingface/transformers/tree/main/examples)或[笔记](https://hf-mirror.com/docs/transformers/notebooks)以了解此方法的实际操作。
+请注意，在上面的代码示例中，您需要将`tokenizer`传递给`prepare_tf_dataset`，以便它可以在加载批次时正确填充它们。如果数据集中的所有样本都具有相同的长度而且不需要填充，您可以跳过此参数。如果需要执行比填充样本更复杂的操作（例如，用于掩码语言模型的`tokens` 替换），则可以使用 `collate_fn` 参数，而不是传递一个函数来将样本列表转换为批次并应用任何所需的预处理。请查看我们的[示例](https://github.com/huggingface/transformers/tree/main/examples)或[笔记](https://huggingface.co/docs/transformers/notebooks)以了解此方法的实际操作。
 
 一旦创建了 `tf.data.Dataset`，您可以像以前一样编译和训练模型：
 

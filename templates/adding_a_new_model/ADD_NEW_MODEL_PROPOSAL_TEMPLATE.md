@@ -62,7 +62,7 @@ efficiently scale Transformers while keeping maintenance costs at a
 reasonable level.
 
 A good first starting point to better understand the library is to read
-the [documentation of our philosophy](https://hf-mirror.com/transformers/philosophy.html).
+the [documentation of our philosophy](https://huggingface.co/transformers/philosophy.html).
 As a result of our way of working, there are some choices that we try to apply to all models:
 
 -   Composition is generally favored over abstraction
@@ -91,7 +91,7 @@ exemplary purposes, we will call the PyTorch model to be added to 🤗 Transform
 
 Let's take a look:
 
-![image](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png)
+![image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png)
 
 As you can see, we do make use of inheritance in 🤗 Transformers, but we
 keep the level of abstraction to an absolute minimum. There are never
@@ -149,9 +149,9 @@ blog posts on how to port a model:
 
 1.  [Porting GPT2
     Model](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28)
-    by [Thomas](https://hf-mirror.com/thomwolf)
-2.  [Porting WMT19 MT Model](https://hf-mirror.com/blog/porting-fsmt)
-    by [Stas](https://hf-mirror.com/stas)
+    by [Thomas](https://huggingface.co/thomwolf)
+2.  [Porting WMT19 MT Model](https://huggingface.co/blog/porting-fsmt)
+    by [Stas](https://huggingface.co/stas)
 
 From experience, we can tell you that the most important things to keep
 in mind when adding a model are:
@@ -242,7 +242,7 @@ on the practical ones, namely:
 -   What is the novel feature of the model making it different from
     BERT/GPT-2/BART?
 -   Which of the already existing [🤗 Transformers
-    models](https://hf-mirror.com/transformers/#contents) is most
+    models](https://huggingface.co/transformers/#contents) is most
     similar to *[camelcase name of model]*?
 -   What type of tokenizer is used? A sentencepiece tokenizer? Word
     piece tokenizer? Is it the same tokenizer as used for BERT or BART?

@@ -22,9 +22,9 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 SAM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/sam-vit-huge": "https://hf-mirror.com/facebook/sam-vit-huge/resolve/main/config.json",
-    "facebook/sam-vit-large": "https://hf-mirror.com/facebook/sam-vit-large/resolve/main/config.json",
-    "facebook/sam-vit-base": "https://hf-mirror.com/facebook/sam-vit-base/resolve/main/config.json",
+    "facebook/sam-vit-huge": "https://huggingface.co/facebook/sam-vit-huge/resolve/main/config.json",
+    "facebook/sam-vit-large": "https://huggingface.co/facebook/sam-vit-large/resolve/main/config.json",
+    "facebook/sam-vit-base": "https://huggingface.co/facebook/sam-vit-base/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class SamPromptEncoderConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SamPromptEncoder`]. The [`SamPromptEncoder`]
     module is used to encode the input 2D points and bounding boxes. Instantiating a configuration defaults will yield
     a similar configuration to that of the SAM-vit-h
-    [facebook/sam-vit-huge](https://hf-mirror.com/facebook/sam-vit-huge) architecture.
+    [facebook/sam-vit-huge](https://huggingface.co/facebook/sam-vit-huge) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -80,7 +80,7 @@ class SamMaskDecoderConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SamMaskDecoder`]. It is used to instantiate a SAM
     mask decoder to the specified arguments, defining the model architecture. Instantiating a configuration defaults
     will yield a similar configuration to that of the SAM-vit-h
-    [facebook/sam-vit-huge](https://hf-mirror.com/facebook/sam-vit-huge) architecture.
+    [facebook/sam-vit-huge](https://huggingface.co/facebook/sam-vit-huge) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -141,7 +141,7 @@ class SamVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SamVisionModel`]. It is used to instantiate a SAM
     vision encoder according to the specified arguments, defining the model architecture. Instantiating a configuration
     defaults will yield a similar configuration to that of the SAM ViT-h
-    [facebook/sam-vit-huge](https://hf-mirror.com/facebook/sam-vit-huge) architecture.
+    [facebook/sam-vit-huge](https://huggingface.co/facebook/sam-vit-huge) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -239,7 +239,7 @@ class SamConfig(PretrainedConfig):
     [`SamConfig`] is the configuration class to store the configuration of a [`SamModel`]. It is used to instantiate a
     SAM model according to the specified arguments, defining the vision model, prompt-encoder model and mask decoder
     configs. Instantiating a configuration with the defaults will yield a similar configuration to that of the
-    SAM-ViT-H [facebook/sam-vit-huge](https://hf-mirror.com/facebook/sam-vit-huge) architecture.
+    SAM-ViT-H [facebook/sam-vit-huge](https://huggingface.co/facebook/sam-vit-huge) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

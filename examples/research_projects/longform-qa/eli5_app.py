@@ -138,7 +138,7 @@ def answer_question(
 st.title("Long Form Question Answering with ELI5")
 
 # Start sidebar
-header_html = "<img src='https://hf-mirror.com/front/assets/huggingface_logo.svg'>"
+header_html = "<img src='https://huggingface.co/front/assets/huggingface_logo.svg'>"
 header_full = """
 <html>
   <head>
@@ -223,7 +223,7 @@ if generate_options:
     generate_info = """
     ### Answer generation options
 
-    The sequence-to-sequence model was initialized with [BART](https://hf-mirror.com/facebook/bart-large)
+    The sequence-to-sequence model was initialized with [BART](https://huggingface.co/facebook/bart-large)
     weights and fine-tuned on the ELI5 QA pairs and retrieved documents. You can use the model for greedy decoding with
     **beam** search, or **sample** from the decoder's output probabilities.
     """

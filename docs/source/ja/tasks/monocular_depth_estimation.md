@@ -50,7 +50,7 @@ pip install -q transformers
 ## Depth estimation pipeline
 
 深度推定をサポートするモデルで推論を試す最も簡単な方法は、対応する [`pipeline`] を使用することです。
-[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?pipeline_tag=Depth-estimation&sort=downloads) からパイプラインをインスタンス化します。
+[Hugging Face Hub のチェックポイント](https://huggingface.co/models?pipeline_tag=Depth-estimation&sort=downloads) からパイプラインをインスタンス化します。
 
 
 ```py
@@ -72,7 +72,7 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
 </div>
 
 画像をパイプラインに渡します。
@@ -92,14 +92,14 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>
 
 ## Depth estimation inference by hand
 
 深度推定パイプラインの使用方法を理解したので、同じ結果を手動で複製する方法を見てみましょう。
 
-まず、[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?pipeline_tag=Depth-estimation&sort=downloads) からモデルと関連プロセッサをロードします。
+まず、[Hugging Face Hub のチェックポイント](https://huggingface.co/models?pipeline_tag=Depth-estimation&sort=downloads) からモデルと関連プロセッサをロードします。
 ここでは、前と同じチェックポイントを使用します。
 
 
@@ -150,5 +150,5 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>

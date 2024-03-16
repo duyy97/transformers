@@ -261,7 +261,7 @@ if args.seed is not None:
     set_seed(args.seed)
 
 # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-# or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+# or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
 # (the dataset will be downloaded automatically from the datasets Hub).
 #
 # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -272,7 +272,7 @@ if args.dataset_name is not None:
 else:
     raise ValueError("Evaluation requires a dataset name")
 # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-# https://hf-mirror.com/docs/datasets/loading_datasets.
+# https://huggingface.co/docs/datasets/loading_datasets.
 
 # Preprocessing the datasets.
 # Preprocessing is slightly different for training and evaluation.

@@ -137,8 +137,8 @@ def clean_main_ref_in_model_list():
     while not lines[index].startswith(_end_prompt):
         if lines[index].startswith("1."):
             lines[index] = lines[index].replace(
-                "https://hf-mirror.com/docs/transformers/main/model_doc",
-                "https://hf-mirror.com/docs/transformers/model_doc",
+                "https://huggingface.co/docs/transformers/main/model_doc",
+                "https://huggingface.co/docs/transformers/model_doc",
             )
         index += 1
 

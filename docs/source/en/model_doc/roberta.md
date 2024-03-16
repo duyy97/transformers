@@ -17,20 +17,20 @@ rendered properly in your Markdown viewer.
 # RoBERTa
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=roberta">
+<a href="https://huggingface.co/models?filter=roberta">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-roberta-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/roberta-base">
+<a href="https://huggingface.co/spaces/docs-demos/roberta-base">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
-<a href="https://hf-mirror.com/papers/1907.11692">
+<a href="https://huggingface.co/papers/1907.11692">
 <img alt="Paper page" src="https://img.shields.io/badge/Paper%20page-1907.11692-green">
 </a>
 </div>
 
 ## Overview
 
-The RoBERTa model was proposed in [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/abs/1907.11692) by Yinhan Liu, [Myle Ott](https://hf-mirror.com/myleott), Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
+The RoBERTa model was proposed in [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/abs/1907.11692) by Yinhan Liu, [Myle Ott](https://huggingface.co/myleott), Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
 Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. It is based on Google's BERT model released in 2018.
 
 It builds on BERT and modifies key hyperparameters, removing the next-sentence pretraining objective and training with
@@ -47,7 +47,7 @@ model published after it. Our best model achieves state-of-the-art results on GL
 highlight the importance of previously overlooked design choices, and raise questions about the source of recently
 reported improvements. We release our models and code.*
 
-This model was contributed by [julien-c](https://hf-mirror.com/julien-c). The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/roberta).
+This model was contributed by [julien-c](https://huggingface.co/julien-c). The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/roberta).
 
 ## Usage tips
 
@@ -71,8 +71,8 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-classification"/>
 
-- A blog on [Getting Started with Sentiment Analysis on Twitter](https://hf-mirror.com/blog/sentiment-analysis-twitter) using RoBERTa and the [Inference API](https://hf-mirror.com/inference-api).
-- A blog on [Opinion Classification with Kili and Hugging Face AutoTrain](https://hf-mirror.com/blog/opinion-classification-with-kili) using RoBERTa.
+- A blog on [Getting Started with Sentiment Analysis on Twitter](https://huggingface.co/blog/sentiment-analysis-twitter) using RoBERTa and the [Inference API](https://huggingface.co/inference-api).
+- A blog on [Opinion Classification with Kili and Hugging Face AutoTrain](https://huggingface.co/blog/opinion-classification-with-kili) using RoBERTa.
 - A notebook on how to [finetune RoBERTa for sentiment analysis](https://colab.research.google.com/github/DhavalTaunk08/NLP_scripts/blob/master/sentiment_analysis_using_roberta.ipynb). 🌎
 - [`RobertaForSequenceClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification.ipynb).
 - [`TFRobertaForSequenceClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification-tf.ipynb).
@@ -84,25 +84,25 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 - [`RobertaForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb).
 - [`TFRobertaForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb).
 - [`FlaxRobertaForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/token-classification).
-- [Token classification](https://hf-mirror.com/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Token classification](https://huggingface.co/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Token classification task guide](../tasks/token_classification)
 
 <PipelineTag pipeline="fill-mask"/>
 
-- A blog on [How to train a new language model from scratch using Transformers and Tokenizers](https://hf-mirror.com/blog/how-to-train) with RoBERTa.
+- A blog on [How to train a new language model from scratch using Transformers and Tokenizers](https://huggingface.co/blog/how-to-train) with RoBERTa.
 - [`RobertaForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFRobertaForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxRobertaForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb).
-- [Masked language modeling](https://hf-mirror.com/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Masked language modeling](https://huggingface.co/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Masked language modeling task guide](../tasks/masked_language_modeling)
 
 <PipelineTag pipeline="question-answering"/>
 
-- A blog on [Accelerated Inference with Optimum and Transformers Pipelines](https://hf-mirror.com/blog/optimum-inference) with RoBERTa for question answering.
+- A blog on [Accelerated Inference with Optimum and Transformers Pipelines](https://huggingface.co/blog/optimum-inference) with RoBERTa for question answering.
 - [`RobertaForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb).
 - [`TFRobertaForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb).
 - [`FlaxRobertaForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/question-answering).
-- [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Question answering](https://huggingface.co/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Question answering task guide](../tasks/question_answering)
 
 **Multiple choice**

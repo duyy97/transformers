@@ -40,7 +40,7 @@ The original code can be found [here](https://github.com/microsoft/DialoGPT).
   than the left.
 - DialoGPT was trained with a causal language modeling (CLM) objective on conversational data and is therefore powerful
   at response generation in open-domain dialogue systems.
-- DialoGPT enables the user to create a chat bot in just 10 lines of code as shown on [DialoGPT's model card](https://hf-mirror.com/microsoft/DialoGPT-medium).
+- DialoGPT enables the user to create a chat bot in just 10 lines of code as shown on [DialoGPT's model card](https://huggingface.co/microsoft/DialoGPT-medium).
 
 Training:
 

@@ -32,8 +32,8 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "xlnet/xlnet-base-cased": "https://hf-mirror.com/xlnet/xlnet-base-cased/resolve/main/spiece.model",
-        "xlnet/xlnet-large-cased": "https://hf-mirror.com/xlnet/xlnet-large-cased/resolve/main/spiece.model",
+        "xlnet/xlnet-base-cased": "https://huggingface.co/xlnet/xlnet-base-cased/resolve/main/spiece.model",
+        "xlnet/xlnet-large-cased": "https://huggingface.co/xlnet/xlnet-large-cased/resolve/main/spiece.model",
     }
 }
 

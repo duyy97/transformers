@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [UCF101](https://www.crcv.ucf.edu/) のサブセットで [VideoMAE](https://hf-mirror.com/docs/transformers/main/en/model_doc/videomae) を微調整します。 data/UCF101.php) データセット。
+1. [UCF101](https://www.crcv.ucf.edu/) のサブセットで [VideoMAE](https://huggingface.co/docs/transformers/main/en/model_doc/videomae) を微調整します。 data/UCF101.php) データセット。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -173,7 +173,7 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 
 この警告は、一部の重み (たとえば、`classifier`層の重みとバイアス) を破棄し、他のいくつかの重み (新しい`classifier`層の重みとバイアス) をランダムに初期化していることを示しています。この場合、これは予想されることです。事前にトレーニングされた重みを持たない新しい頭部を追加しているため、推論に使用する前にこのモデルを微調整する必要があるとライブラリが警告します。これはまさに私たちが行おうとしているものです。する。
 
-**注意** [このチェックポイント](https://hf-mirror.com/MCG-NJU/videomae-base-finetuned-kinetics) は、同様のダウンストリームで微調整されてチェックポイントが取得されたため、このタスクのパフォーマンスが向上することに注意してください。かなりのドメインの重複があるタスク。 `MCG-NJU/videomae-base-finetuned-kinetics` を微調整して取得した [このチェックポイント](https://hf-mirror.com/sayakpaul/videomae-base-finetuned-kinetics-finetuned-ucf101-subset) を確認できます。 -キネティクス`。
+**注意** [このチェックポイント](https://huggingface.co/MCG-NJU/videomae-base-finetuned-kinetics) は、同様のダウンストリームで微調整されてチェックポイントが取得されたため、このタスクのパフォーマンスが向上することに注意してください。かなりのドメインの重複があるタスク。 `MCG-NJU/videomae-base-finetuned-kinetics` を微調整して取得した [このチェックポイント](https://huggingface.co/sayakpaul/videomae-base-finetuned-kinetics-finetuned-ucf101-subset) を確認できます。 -キネティクス`。
 
 ## Prepare the datasets for training
 
@@ -341,12 +341,12 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif.gif" alt="Person playing basketball"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif.gif" alt="Person playing basketball"/>
 </div>
 
 ## Train the model 
 
-🤗 Transformers の [`Trainer`](https://hf-mirror.com/docs/transformers/main_classes/trainer) をモデルのトレーニングに利用します。 `Trainer`をインスタンス化するには、トレーニング構成と評価メトリクスを定義する必要があります。最も重要なのは [`TrainingArguments`](https://hf-mirror.com/transformers/main_classes/trainer.html#transformers.TrainingArguments) で、これはトレーニングを構成するためのすべての属性を含むクラスです。モデルのチェックポイントを保存するために使用される出力フォルダー名が必要です。また、🤗 Hub 上のモデル リポジトリ内のすべての情報を同期するのにも役立ちます。
+🤗 Transformers の [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer) をモデルのトレーニングに利用します。 `Trainer`をインスタンス化するには、トレーニング構成と評価メトリクスを定義する必要があります。最も重要なのは [`TrainingArguments`](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments) で、これはトレーニングを構成するためのすべての属性を含むクラスです。モデルのチェックポイントを保存するために使用される出力フォルダー名が必要です。また、🤗 Hub 上のモデル リポジトリ内のすべての情報を同期するのにも役立ちます。
 
 トレーニング引数のほとんどは一目瞭然ですが、ここで非常に重要なのは`remove_unused_columns=False`です。これにより、モデルの呼び出し関数で使用されない機能が削除されます。デフォルトでは`True`です。これは、通常、未使用の特徴列を削除し、モデルの呼び出し関数への入力を解凍しやすくすることが理想的であるためです。ただし、この場合、`pixel_values` (モデルが入力で期待する必須キーです) を作成するには、未使用の機能 (特に`video`) が必要です。
 
@@ -445,17 +445,17 @@ def compute_metrics(eval_pred):
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif_two.gif" alt="Teams playing basketball"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif_two.gif" alt="Teams playing basketball"/>
 </div>
 
-推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`](https://hf-mirror.com/docs/transformers/main/en/main_classes/pipelines#transformers.VideoClassificationPipeline). で使用することです。モデルを使用してビデオ分類用の` pipeline`をインスタンス化し、それにビデオを渡します。
+推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`](https://huggingface.co/docs/transformers/main/en/main_classes/pipelines#transformers.VideoClassificationPipeline). で使用することです。モデルを使用してビデオ分類用の` pipeline`をインスタンス化し、それにビデオを渡します。
 
 
 ```py
 >>> from transformers import pipeline
 
 >>> video_cls = pipeline(model="my_awesome_video_cls_model")
->>> video_cls("https://hf-mirror.com/datasets/sayakpaul/ucf101-subset/resolve/main/v_BasketballDunk_g14_c06.avi")
+>>> video_cls("https://huggingface.co/datasets/sayakpaul/ucf101-subset/resolve/main/v_BasketballDunk_g14_c06.avi")
 [{'score': 0.9272987842559814, 'label': 'BasketballDunk'},
  {'score': 0.017777055501937866, 'label': 'BabyCrawling'},
  {'score': 0.01663011871278286, 'label': 'BalanceBeam'},

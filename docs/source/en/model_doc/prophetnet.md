@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ProphetNet
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=prophetnet">
+<a href="https://huggingface.co/models?filter=prophetnet">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-prophetnet-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/prophetnet-large-uncased">
+<a href="https://huggingface.co/spaces/docs-demos/prophetnet-large-uncased">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>

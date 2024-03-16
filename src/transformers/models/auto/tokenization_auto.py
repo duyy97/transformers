@@ -544,7 +544,7 @@ def get_tokenizer_config(
             This can be either:
 
             - a string, the *model id* of a pretrained model configuration hosted inside a model repo on
-              hf-mirror.com.
+              huggingface.co.
             - a path to a *directory* containing a configuration file saved using the
               [`~PreTrainedTokenizer.save_pretrained`] method, e.g., `./my_model_directory/`.
 
@@ -564,12 +564,12 @@ def get_tokenizer_config(
             when running `huggingface-cli login` (stored in `~/.huggingface`).
         revision (`str`, *optional*, defaults to `"main"`):
             The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-            git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+            git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
             identifier allowed by git.
         local_files_only (`bool`, *optional*, defaults to `False`):
             If `True`, will only try to load the tokenizer configuration from local files.
         subfolder (`str`, *optional*, defaults to `""`):
-            In case the tokenizer config is located inside a subfolder of the model repo on hf-mirror.com, you can
+            In case the tokenizer config is located inside a subfolder of the model repo on huggingface.co, you can
             specify the folder name here.
 
     <Tip>
@@ -584,7 +584,7 @@ def get_tokenizer_config(
     Examples:
 
     ```python
-    # Download configuration from hf-mirror.com and cache.
+    # Download configuration from huggingface.co and cache.
     tokenizer_config = get_tokenizer_config("google-bert/bert-base-uncased")
     # This model does not have a tokenizer config so the result will be an empty dict.
     tokenizer_config = get_tokenizer_config("FacebookAI/xlm-roberta-base")
@@ -664,7 +664,7 @@ class AutoTokenizer:
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 Can be either:
 
-                    - A string, the *model id* of a predefined tokenizer hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a predefined tokenizer hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing vocabulary files required by the tokenizer, for instance saved
                       using the [`~PreTrainedTokenizer.save_pretrained`] method, e.g., `./my_model_directory/`.
                     - A path or url to a single saved vocabulary file if and only if the tokenizer only requires a
@@ -688,13 +688,13 @@ class AutoTokenizer:
                 'http://hostname': 'foo.bar:4012'}`. The proxies are used on each request.
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
             subfolder (`str`, *optional*):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com (e.g. for
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co (e.g. for
                 facebook/rag-token-base), specify it here.
             use_fast (`bool`, *optional*, defaults to `True`):
-                Use a [fast Rust-based tokenizer](https://hf-mirror.com/docs/tokenizers/index) if it is supported for
+                Use a [fast Rust-based tokenizer](https://huggingface.co/docs/tokenizers/index) if it is supported for
                 a given model. If a fast tokenizer is not available for a given model, a normal Python-based tokenizer
                 is returned instead.
             tokenizer_type (`str`, *optional*):
@@ -713,16 +713,16 @@ class AutoTokenizer:
         ```python
         >>> from transformers import AutoTokenizer
 
-        >>> # Download vocabulary from hf-mirror.com and cache.
+        >>> # Download vocabulary from huggingface.co and cache.
         >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 
-        >>> # Download vocabulary from hf-mirror.com (user-uploaded) and cache.
+        >>> # Download vocabulary from huggingface.co (user-uploaded) and cache.
         >>> tokenizer = AutoTokenizer.from_pretrained("dbmdz/bert-base-german-cased")
 
         >>> # If vocabulary files are in a directory (e.g. tokenizer was saved using *save_pretrained('./test/saved_model/')*)
         >>> # tokenizer = AutoTokenizer.from_pretrained("./test/bert_saved_model/")
 
-        >>> # Download vocabulary from hf-mirror.com and define model-specific arguments
+        >>> # Download vocabulary from huggingface.co and define model-specific arguments
         >>> tokenizer = AutoTokenizer.from_pretrained("FacebookAI/roberta-base", add_prefix_space=True)
         ```"""
         use_auth_token = kwargs.pop("use_auth_token", None)

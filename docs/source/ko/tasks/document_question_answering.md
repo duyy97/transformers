@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드는 다음 내용을 설명합니다:
 
-- [DocVQA dataset](https://hf-mirror.com/datasets/nielsr/docvqa_1200_examples_donut)을 사용해 [LayoutLMv2](../model_doc/layoutlmv2) 미세 조정하기
+- [DocVQA dataset](https://huggingface.co/datasets/nielsr/docvqa_1200_examples_donut)을 사용해 [LayoutLMv2](../model_doc/layoutlmv2) 미세 조정하기
 - 추론을 위해 미세 조정된 모델을 사용하기
 
 <Tip>
@@ -79,7 +79,7 @@ pip install -q pytesseract
 ## 데이터 불러오기 [[load-the-data]]
 
 이 가이드에서는 🤗 Hub에서 찾을 수 있는 전처리된 DocVQA의 작은 샘플을 사용합니다. 
-DocVQA의 전체 데이터 세트를 사용하고 싶다면, [DocVQA homepage](https://rrc.cvc.uab.es/?ch=17)에 가입 후 다운로드 할 수 있습니다. 전체 데이터 세트를 다운로드 했다면, 이 가이드를 계속 진행하기 위해 [🤗 dataset에 파일을 가져오는 방법](https://hf-mirror.com/docs/datasets/loading#local-and-remote-files)을 확인하세요.
+DocVQA의 전체 데이터 세트를 사용하고 싶다면, [DocVQA homepage](https://rrc.cvc.uab.es/?ch=17)에 가입 후 다운로드 할 수 있습니다. 전체 데이터 세트를 다운로드 했다면, 이 가이드를 계속 진행하기 위해 [🤗 dataset에 파일을 가져오는 방법](https://huggingface.co/docs/datasets/loading#local-and-remote-files)을 확인하세요.
 
 ```py
 >>> from datasets import load_dataset
@@ -122,7 +122,7 @@ DatasetDict({
 ... )
 ```
 
-이 가이드에서 사용하는 LayoutLMv2 체크포인트는 `max_position_embeddings = 512`로 훈련되었습니다(이 정보는 [체크포인트의 `config.json` 파일](https://hf-mirror.com/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)에서 확인할 수 있습니다).
+이 가이드에서 사용하는 LayoutLMv2 체크포인트는 `max_position_embeddings = 512`로 훈련되었습니다(이 정보는 [체크포인트의 `config.json` 파일](https://huggingface.co/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)에서 확인할 수 있습니다).
 바로 예제를 잘라낼 수도 있지만, 긴 문서의 끝에 답변이 있어 잘리는 상황을 피하기 위해 여기서는 임베딩이 512보다 길어질 가능성이 있는 몇 가지 예제를 제거하겠습니다.
 데이터 세트에 있는 대부분의 문서가 긴 경우 슬라이딩 윈도우 방법을 사용할 수 있습니다 - 자세한 내용을 확인하고 싶으면 이 [노트북](https://github.com/huggingface/notebooks/blob/main/examples/question_answering.ipynb)을 확인하세요.
 
@@ -147,7 +147,7 @@ DatasetDict({
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
  </div>
 
 ## 데이터 전처리 [[preprocess-the-data]]
@@ -351,7 +351,7 @@ end_index 18
 문서 질의 응답을 평가하려면 상당한 양의 후처리가 필요합니다. 시간이 너무 많이 걸리지 않도록 이 가이드에서는 평가 단계를 생략합니다.
 [`Trainer`]가 훈련 과정에서 평가 손실(evaluation loss)을 계속 계산하기 때문에 모델의 성능을 대략적으로 알 수 있습니다.
 추출적(Extractive) 질의 응답은 보통 F1/exact match 방법을 사용해 평가됩니다.
-직접 구현해보고 싶으시다면, Hugging Face course의 [Question Answering chapter](https://hf-mirror.com/course/chapter7/7?fw=pt#postprocessing)을 참고하세요.
+직접 구현해보고 싶으시다면, Hugging Face course의 [Question Answering chapter](https://huggingface.co/course/chapter7/7?fw=pt#postprocessing)을 참고하세요.
 
 ## 훈련 [[train]]
 

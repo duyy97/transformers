@@ -39,11 +39,11 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google-t5/t5-small": "https://hf-mirror.com/google-t5/t5-small/resolve/main/spiece.model",
-        "google-t5/t5-base": "https://hf-mirror.com/google-t5/t5-base/resolve/main/spiece.model",
-        "google-t5/t5-large": "https://hf-mirror.com/google-t5/t5-large/resolve/main/spiece.model",
-        "google-t5/t5-3b": "https://hf-mirror.com/google-t5/t5-3b/resolve/main/spiece.model",
-        "google-t5/t5-11b": "https://hf-mirror.com/google-t5/t5-11b/resolve/main/spiece.model",
+        "google-t5/t5-small": "https://huggingface.co/google-t5/t5-small/resolve/main/spiece.model",
+        "google-t5/t5-base": "https://huggingface.co/google-t5/t5-base/resolve/main/spiece.model",
+        "google-t5/t5-large": "https://huggingface.co/google-t5/t5-large/resolve/main/spiece.model",
+        "google-t5/t5-3b": "https://huggingface.co/google-t5/t5-3b/resolve/main/spiece.model",
+        "google-t5/t5-11b": "https://huggingface.co/google-t5/t5-11b/resolve/main/spiece.model",
     }
 }
 

@@ -225,7 +225,7 @@ def get_cached_module_file(
             This can be either:
 
             - a string, the *model id* of a pretrained model configuration hosted inside a model repo on
-              hf-mirror.com.
+              huggingface.co.
             - a path to a *directory* containing a configuration file saved using the
               [`~PreTrainedTokenizer.save_pretrained`] method, e.g., `./my_model_directory/`.
 
@@ -247,7 +247,7 @@ def get_cached_module_file(
             when running `huggingface-cli login` (stored in `~/.huggingface`).
         revision (`str`, *optional*, defaults to `"main"`):
             The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-            git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+            git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
             identifier allowed by git.
         local_files_only (`bool`, *optional*, defaults to `False`):
             If `True`, will only try to load the tokenizer configuration from local files.
@@ -367,7 +367,7 @@ def get_cached_module_file(
     if len(new_files) > 0 and revision is None:
         new_files = "\n".join([f"- {f}" for f in new_files])
         repo_type_str = "" if repo_type is None else f"{repo_type}s/"
-        url = f"https://hf-mirror.com/{repo_type_str}{pretrained_model_name_or_path}"
+        url = f"https://huggingface.co/{repo_type_str}{pretrained_model_name_or_path}"
         logger.warning(
             f"A new version of the following files was downloaded from {url}:\n{new_files}"
             "\n. Make sure to double-check they do not contain any added malicious code. To avoid downloading new "
@@ -410,7 +410,7 @@ def get_class_from_dynamic_module(
             This can be either:
 
             - a string, the *model id* of a pretrained model configuration hosted inside a model repo on
-              hf-mirror.com.
+              huggingface.co.
             - a path to a *directory* containing a configuration file saved using the
               [`~PreTrainedTokenizer.save_pretrained`] method, e.g., `./my_model_directory/`.
 
@@ -435,7 +435,7 @@ def get_class_from_dynamic_module(
             when running `huggingface-cli login` (stored in `~/.huggingface`).
         revision (`str`, *optional*, defaults to `"main"`):
             The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-            git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+            git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
             identifier allowed by git.
         local_files_only (`bool`, *optional*, defaults to `False`):
             If `True`, will only try to load the tokenizer configuration from local files.
@@ -444,7 +444,7 @@ def get_class_from_dynamic_module(
         code_revision (`str`, *optional*, defaults to `"main"`):
             The specific revision to use for the code on the Hub, if the code leaves in a different repository than the
             rest of the model. It can be a branch name, a tag name, or a commit id, since we use a git-based system for
-            storing models and other artifacts on hf-mirror.com, so `revision` can be any identifier allowed by git.
+            storing models and other artifacts on huggingface.co, so `revision` can be any identifier allowed by git.
 
     <Tip>
 
@@ -458,7 +458,7 @@ def get_class_from_dynamic_module(
     Examples:
 
     ```python
-    # Download module `modeling.py` from hf-mirror.com and cache then extract the class `MyBertModel` from this
+    # Download module `modeling.py` from huggingface.co and cache then extract the class `MyBertModel` from this
     # module.
     cls = get_class_from_dynamic_module("modeling.MyBertModel", "sgugger/my-bert-model")
 

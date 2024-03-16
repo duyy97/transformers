@@ -46,13 +46,13 @@ COCO インスタンス セグメンテーションでは 1.3% のマスク AP�
 
 
 <img
-src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/dilated-neighborhood-attention-pattern.jpg"
+src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/dilated-neighborhood-attention-pattern.jpg"
 alt="drawing" width="600"/>
 
 <small> 異なる拡張値を使用した近隣アテンション。
 <a href="https://arxiv.org/abs/2209.15001">元の論文</a>から抜粋。</small>
 
-このモデルは [Ali Hassani](https://hf-mirror.com/alihassanijr) によって提供されました。
+このモデルは [Ali Hassani](https://huggingface.co/alihassanijr) によって提供されました。
 元のコードは [ここ](https://github.com/SHI-Labs/Neighborhood-Attendance-Transformer) にあります。
 
 ## Usage tips

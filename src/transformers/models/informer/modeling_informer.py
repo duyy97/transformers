@@ -42,7 +42,7 @@ _CONFIG_FOR_DOC = "InformerConfig"
 
 INFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "huggingface/informer-tourism-monthly",
-    # See all Informer models at https://hf-mirror.com/models?filter=informer
+    # See all Informer models at https://huggingface.co/models?filter=informer
 ]
 
 

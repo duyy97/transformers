@@ -21,13 +21,13 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "AI-Sweden-Models/gpt-sw3-126m": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-126m/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-356m": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-356m/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-1.3b": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-1.3b/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-6.7b": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-6.7b/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-6.7b-v2": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-6.7b-v2/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-20b": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-20b/resolve/main/spiece.model",
-        "AI-Sweden-Models/gpt-sw3-40b": "https://hf-mirror.com/AI-Sweden-Models/gpt-sw3-20b/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-126m": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-356m": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-1.3b": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-1.3b/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-6.7b": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-6.7b/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-6.7b-v2": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-6.7b-v2/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-20b": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-20b/resolve/main/spiece.model",
+        "AI-Sweden-Models/gpt-sw3-40b": "https://huggingface.co/AI-Sweden-Models/gpt-sw3-20b/resolve/main/spiece.model",
     }
 }
 
@@ -329,7 +329,7 @@ class GPTSw3Tokenizer(PreTrainedTokenizer):
             "\nNo chat template is defined for this tokenizer - using the default template "
             f"for the {self.__class__.__name__} class. If the default is not appropriate for "
             "your model, please set `tokenizer.chat_template` to an appropriate template. "
-            "See https://hf-mirror.com/docs/transformers/main/chat_templating for more information.\n"
+            "See https://huggingface.co/docs/transformers/main/chat_templating for more information.\n"
         )
         return (
             "{{ eos_token }}{{ bos_token }}"

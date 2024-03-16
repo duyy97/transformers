@@ -41,12 +41,12 @@ Blender チャットボット モデルは、[Recipes for building an open-domai
 - Blenderbot は絶対位置埋め込みを備えたモデルであるため、通常は入力を右側にパディングすることをお勧めします。
   左。
 
-このモデルは [sshleifer](https://hf-mirror.com/sshleifer) によって提供されました。著者のコードは [ここ](https://github.com/facebookresearch/ParlAI) にあります。
+このモデルは [sshleifer](https://huggingface.co/sshleifer) によって提供されました。著者のコードは [ここ](https://github.com/facebookresearch/ParlAI) にあります。
 
 ## Implementation Notes
 
 - Blenderbot は、標準の [seq2seq モデル トランスフォーマー](https://arxiv.org/pdf/1706.03762.pdf) ベースのアーキテクチャを使用します。
-- 利用可能なチェックポイントは、[モデル ハブ](https://hf-mirror.com/models?search=blenderbot) で見つけることができます。
+- 利用可能なチェックポイントは、[モデル ハブ](https://huggingface.co/models?search=blenderbot) で見つけることができます。
 - これは *デフォルト* Blenderbot モデル クラスです。ただし、次のような小さなチェックポイントもいくつかあります。
   `facebook/blenderbot_small_90M` はアーキテクチャが異なるため、一緒に使用する必要があります。
   [BlenderbotSmall](ブレンダーボット小)。

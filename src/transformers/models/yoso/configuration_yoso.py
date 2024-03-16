@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 YOSO_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "uw-madison/yoso-4096": "https://hf-mirror.com/uw-madison/yoso-4096/resolve/main/config.json",
-    # See all YOSO models at https://hf-mirror.com/models?filter=yoso
+    "uw-madison/yoso-4096": "https://huggingface.co/uw-madison/yoso-4096/resolve/main/config.json",
+    # See all YOSO models at https://huggingface.co/models?filter=yoso
 }
 
 
@@ -31,7 +31,7 @@ class YosoConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`YosoModel`]. It is used to instantiate an YOSO
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the YOSO
-    [uw-madison/yoso-4096](https://hf-mirror.com/uw-madison/yoso-4096) architecture.
+    [uw-madison/yoso-4096](https://huggingface.co/uw-madison/yoso-4096) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

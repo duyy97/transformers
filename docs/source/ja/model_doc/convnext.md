@@ -32,12 +32,12 @@ ConvNeXT は、ビジョン トランスフォーマーの設計からインス�
 ConvNextと呼ばれます。 ConvNeXts は完全に標準の ConvNet モジュールから構築されており、精度と拡張性の点で Transformers と有利に競合し、87.8% の ImageNet トップ 1 精度を達成しています。
 標準 ConvNet のシンプルさと効率を維持しながら、COCO 検出と ADE20K セグメンテーションでは Swin Transformers よりも優れたパフォーマンスを発揮します。*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.jpg"
 alt="描画" width="600"/>
 
 <small> ConvNeXT アーキテクチャ。 <a href="https://arxiv.org/abs/2201.03545">元の論文</a>から抜粋。</small>
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。 TensorFlow バージョンのモデルは [ariG23498](https://github.com/ariG23498) によって提供されました。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。 TensorFlow バージョンのモデルは [ariG23498](https://github.com/ariG23498) によって提供されました。
 [gante](https://github.com/gante)、および [sayakpaul](https://github.com/sayakpaul) (同等の貢献)。元のコードは [こちら](https://github.com/facebookresearch/ConvNeXt) にあります。
 
 ## Resources

@@ -27,7 +27,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 EFFICIENTNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/efficientnet-b7": "https://hf-mirror.com/google/efficientnet-b7/resolve/main/config.json",
+    "google/efficientnet-b7": "https://huggingface.co/google/efficientnet-b7/resolve/main/config.json",
 }
 
 
@@ -36,7 +36,7 @@ class EfficientNetConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`EfficientNetModel`]. It is used to instantiate an
     EfficientNet model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the EfficientNet
-    [google/efficientnet-b7](https://hf-mirror.com/google/efficientnet-b7) architecture.
+    [google/efficientnet-b7](https://huggingface.co/google/efficientnet-b7) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -32,7 +32,7 @@ There are significant benefits to using a pretrained model. It reduces computati
 
 Before you can fine-tune a pretrained model, download a dataset and prepare it for training. The previous tutorial showed you how to process data for training, and now you get an opportunity to put those skills to the test!
 
-Begin by loading the [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full) dataset:
+Begin by loading the [Yelp Reviews](https://huggingface.co/datasets/yelp_review_full) dataset:
 
 ```py
 >>> from datasets import load_dataset
@@ -43,7 +43,7 @@ Begin by loading the [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_f
  'text': 'My expectations for McDonalds are t rarely high. But for one to still fail so spectacularly...that takes something special!\\nThe cashier took my friends\'s order, then promptly ignored me. I had to force myself in front of a cashier who opened his register to wait on the person BEHIND me. I waited over five minutes for a gigantic order that included precisely one kid\'s meal. After watching two people who ordered after me be handed their food, I asked where mine was. The manager started yelling at the cashiers for \\"serving off their orders\\" when they didn\'t have their food. But neither cashier was anywhere near those controls, and the manager was the one serving food to customers and clearing the boards.\\nThe manager was rude when giving me my order. She didn\'t make sure that I had everything ON MY RECEIPT, and never even had the decency to apologize that I felt I was getting poor service.\\nI\'ve eaten at various McDonalds restaurants for over 30 years. I\'ve worked at more than one location. I expect bad days, bad moods, and the occasional mistake. But I have yet to have a decent experience at this store. It will remain a place I avoid unless someone in my party needs to avoid illness from low blood sugar. Perhaps I should go back to the racially biased service of Steak n Shake instead!'}
 ```
 
-As you now know, you need a tokenizer to process the text and include a padding and truncation strategy to handle any variable sequence lengths. To process your dataset in one step, use 🤗 Datasets [`map`](https://hf-mirror.com/docs/datasets/process#map) method to apply a preprocessing function over the entire dataset:
+As you now know, you need a tokenizer to process the text and include a padding and truncation strategy to handle any variable sequence lengths. To process your dataset in one step, use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/process#map) method to apply a preprocessing function over the entire dataset:
 
 ```py
 >>> from transformers import AutoTokenizer
@@ -81,7 +81,7 @@ just use the button at the top-right of that framework's block!
 
 🤗 Transformers provides a [`Trainer`] class optimized for training 🤗 Transformers models, making it easier to start training without manually writing your own training loop. The [`Trainer`] API supports a wide range of training options and features such as logging, gradient accumulation, and mixed precision.
 
-Start by loading your model and specify the number of expected labels. From the Yelp Review [dataset card](https://hf-mirror.com/datasets/yelp_review_full#data-fields), you know there are five labels:
+Start by loading your model and specify the number of expected labels. From the Yelp Review [dataset card](https://huggingface.co/datasets/yelp_review_full#data-fields), you know there are five labels:
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -98,7 +98,7 @@ initialized. Don't worry, this is completely normal! The pretrained head of the 
 
 ### Training hyperparameters
 
-Next, create a [`TrainingArguments`] class which contains all the hyperparameters you can tune as well as flags for activating different training options. For this tutorial you can start with the default training [hyperparameters](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments), but feel free to experiment with these to find your optimal settings.
+Next, create a [`TrainingArguments`] class which contains all the hyperparameters you can tune as well as flags for activating different training options. For this tutorial you can start with the default training [hyperparameters](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments), but feel free to experiment with these to find your optimal settings.
 
 Specify where to save the checkpoints from your training:
 
@@ -110,7 +110,7 @@ Specify where to save the checkpoints from your training:
 
 ### Evaluate
 
-[`Trainer`] does not automatically evaluate model performance during training. You'll need to pass [`Trainer`] a function to compute and report metrics. The [🤗 Evaluate](https://hf-mirror.com/docs/evaluate/index) library provides a simple [`accuracy`](https://hf-mirror.com/spaces/evaluate-metric/accuracy) function you can load with the [`evaluate.load`] (see this [quicktour](https://hf-mirror.com/docs/evaluate/a_quick_tour) for more information) function:
+[`Trainer`] does not automatically evaluate model performance during training. You'll need to pass [`Trainer`] a function to compute and report metrics. The [🤗 Evaluate](https://huggingface.co/docs/evaluate/index) library provides a simple [`accuracy`](https://huggingface.co/spaces/evaluate-metric/accuracy) function you can load with the [`evaluate.load`] (see this [quicktour](https://huggingface.co/docs/evaluate/a_quick_tour) for more information) function:
 
 ```py
 >>> import numpy as np
@@ -171,7 +171,7 @@ When you want to train a 🤗 Transformers model with the Keras API, you need to
 Keras understands. If your dataset is small, you can just convert the whole thing to NumPy arrays and pass it to Keras.
 Let's try that first before we do anything more complicated.
 
-First, load a dataset. We'll use the CoLA dataset from the [GLUE benchmark](https://hf-mirror.com/datasets/glue),
+First, load a dataset. We'll use the CoLA dataset from the [GLUE benchmark](https://huggingface.co/datasets/glue),
 since it's a simple binary text classification task, and just take the training split for now.
 
 ```py
@@ -260,7 +260,7 @@ If you need to do something more complex than just padding samples (e.g. corrupt
 modelling), you can use the `collate_fn` argument instead to pass a function that will be called to transform the
 list of samples into a batch and apply any preprocessing you want. See our
 [examples](https://github.com/huggingface/transformers/tree/main/examples) or
-[notebooks](https://hf-mirror.com/docs/transformers/notebooks) to see this approach in action.
+[notebooks](https://huggingface.co/docs/transformers/notebooks) to see this approach in action.
 
 Once you've created a `tf.data.Dataset`, you can compile and fit the model as before:
 

@@ -375,7 +375,7 @@ I'm doing great!<|im_end|>
 如果您有任何聊天模型，您应该设置它们的`tokenizer.chat_template`属性，并使用[`~PreTrainedTokenizer.apply_chat_template`]测试，
 然后将更新后的`tokenizer`推送到 Hub。
 即使您不是模型所有者，如果您正在使用一个空的聊天模板或者仍在使用默认的聊天模板，
-请发起一个[pull request](https://hf-mirror.com/docs/hub/repositories-pull-requests-discussions)，以便正确设置该属性！
+请发起一个[pull request](https://huggingface.co/docs/hub/repositories-pull-requests-discussions)，以便正确设置该属性！
 
 一旦属性设置完成，就完成了！`tokenizer.apply_chat_template`现在将在该模型中正常工作，
 这意味着它也会自动支持在诸如`ConversationalPipeline`的地方！

@@ -51,7 +51,7 @@ INIT_TOKENIZER_DOCSTRING += """
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "tokenizer_file": {
-        "facebook/nougat-base": "https://hf-mirror.com/facebook/nougat-base/tokenizer/blob/main/tokenizer.json",
+        "facebook/nougat-base": "https://huggingface.co/facebook/nougat-base/tokenizer/blob/main/tokenizer.json",
     },
 }
 

@@ -146,7 +146,7 @@ Neuron SDK が提供するもの:
 
 ### Implications
 
-BERT（Bidirectional Encoder Representations from Transformers）アーキテクチャやその変種（[distilBERT](https://hf-mirror.com/docs/transformers/main/model_doc/distilbert) や [roBERTa](https://hf-mirror.com/docs/transformers/main/model_doc/roberta) など）に基づくトランスフォーマーモデルは、非生成タスク（抽出型質問応答、シーケンス分類、トークン分類など）において、Inf1上で最適に動作します。ただし、テキスト生成タスクも [AWS Neuron MarianMT チュートリアル](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examples/pytorch/transformers-marianmt.html) に従ってInf1上で実行できます。Inferentiaでボックス外で変換できるモデルに関する詳細情報は、Neuronドキュメンテーションの [Model Architecture Fit](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/neuron-guide/models/models-inferentia.html#models-inferentia) セクションにあります。
+BERT（Bidirectional Encoder Representations from Transformers）アーキテクチャやその変種（[distilBERT](https://huggingface.co/docs/transformers/main/model_doc/distilbert) や [roBERTa](https://huggingface.co/docs/transformers/main/model_doc/roberta) など）に基づくトランスフォーマーモデルは、非生成タスク（抽出型質問応答、シーケンス分類、トークン分類など）において、Inf1上で最適に動作します。ただし、テキスト生成タスクも [AWS Neuron MarianMT チュートリアル](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examples/pytorch/transformers-marianmt.html) に従ってInf1上で実行できます。Inferentiaでボックス外で変換できるモデルに関する詳細情報は、Neuronドキュメンテーションの [Model Architecture Fit](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/neuron-guide/models/models-inferentia.html#models-inferentia) セクションにあります。
 
 ### Dependencies
 

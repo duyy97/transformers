@@ -111,7 +111,7 @@ plot_images(sample_images_to_visualize, sample_captions)
 ```
     
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
 </div>
 
 ## 데이터세트 전처리[[preprocess-the-dataset]]
@@ -146,7 +146,7 @@ test_ds.set_transform(transforms)
 
 ## 기본 모델 가져오기[[load-a-base-model]]
 
-["microsoft/git-base"](https://hf-mirror.com/microsoft/git-base)를 [`AutoModelForCausalLM`](https://hf-mirror.com/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) 객체로 가져옵니다.
+["microsoft/git-base"](https://huggingface.co/microsoft/git-base)를 [`AutoModelForCausalLM`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) 객체로 가져옵니다.
 
 
 ```python
@@ -157,11 +157,11 @@ model = AutoModelForCausalLM.from_pretrained(checkpoint)
 
 ## 평가[[evaluate]]
 
-이미지 캡션 모델은 일반적으로 [Rouge 점수](https://hf-mirror.com/spaces/evaluate-metric/rouge) 또는 [단어 오류율(Word Error Rate)](https://hf-mirror.com/spaces/evaluate-metric/wer)로 평가합니다. 
+이미지 캡션 모델은 일반적으로 [Rouge 점수](https://huggingface.co/spaces/evaluate-metric/rouge) 또는 [단어 오류율(Word Error Rate)](https://huggingface.co/spaces/evaluate-metric/wer)로 평가합니다. 
 이 가이드에서는 단어 오류율(WER)을 사용합니다. 
 
 이를 위해 🤗 Evaluate 라이브러리를 사용합니다. 
-WER의 잠재적 제한 사항 및 기타 문제점은 [이 가이드](https://hf-mirror.com/spaces/evaluate-metric/wer)를 참조하세요. 
+WER의 잠재적 제한 사항 및 기타 문제점은 [이 가이드](https://huggingface.co/spaces/evaluate-metric/wer)를 참조하세요. 
 
 
 ```python
@@ -249,13 +249,13 @@ trainer.push_to_hub()
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
 image = Image.open(requests.get(url, stream=True).raw)
 image
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
 </div>
     
 모델에 사용할 이미지를 준비합니다.

@@ -50,7 +50,7 @@ _CHECKPOINT_FOR_DOC = "dandelin/vilt-b32-mlm"
 
 VILT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "dandelin/vilt-b32-mlm",
-    # See all ViLT models at https://hf-mirror.com/models?filter=vilt
+    # See all ViLT models at https://huggingface.co/models?filter=vilt
 ]
 
 

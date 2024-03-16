@@ -32,7 +32,7 @@ by processors with high-throughput integer math pipelines. We also present a wor
 able to maintain accuracy within 1% of the floating-point baseline on all networks studied, including models that are
 more difficult to quantize, such as MobileNets and BERT-large.*
 
-This model was contributed by [shangz](https://hf-mirror.com/shangz).
+This model was contributed by [shangz](https://huggingface.co/shangz).
 
 ## Usage tips
 

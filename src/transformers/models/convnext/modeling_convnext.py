@@ -56,7 +56,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 CONVNEXT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/convnext-tiny-224",
-    # See all ConvNext models at https://hf-mirror.com/models?filter=convnext
+    # See all ConvNext models at https://huggingface.co/models?filter=convnext
 ]
 
 

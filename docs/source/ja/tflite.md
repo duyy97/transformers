@@ -19,7 +19,7 @@ rendered properly in your Markdown viewer.
 [TensorFlow Lite](https://www.tensorflow.org/lite/guide)は、モバイルフォン、組み込みシステム、およびモノのインターネット（IoT）デバイスなど、リソースに制約のあるデバイスに機械学習モデルを展開するための軽量なフレームワークです。TFLiteは、計算能力、メモリ、および電力消費が限られているこれらのデバイス上でモデルを効率的に最適化して実行するために設計されています。
 TensorFlow Liteモデルは、`.tflite`ファイル拡張子で識別される特別な効率的なポータブル形式で表されます。
 
-🤗 Optimumは、🤗 TransformersモデルをTFLiteにエクスポートするための機能を`exporters.tflite`モジュールを介して提供しています。サポートされているモデルアーキテクチャのリストについては、[🤗 Optimumのドキュメント](https://hf-mirror.com/docs/optimum/exporters/tflite/overview)をご参照ください。
+🤗 Optimumは、🤗 TransformersモデルをTFLiteにエクスポートするための機能を`exporters.tflite`モジュールを介して提供しています。サポートされているモデルアーキテクチャのリストについては、[🤗 Optimumのドキュメント](https://huggingface.co/docs/optimum/exporters/tflite/overview)をご参照ください。
 
 モデルをTFLiteにエクスポートするには、必要な依存関係をインストールしてください：
 
@@ -28,7 +28,7 @@ TensorFlow Liteモデルは、`.tflite`ファイル拡張子で識別される�
 pip install optimum[exporters-tf]
 ```
 
-すべての利用可能な引数を確認するには、[🤗 Optimumドキュメント](https://hf-mirror.com/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model)を参照するか、コマンドラインでヘルプを表示してください：
+すべての利用可能な引数を確認するには、[🤗 Optimumドキュメント](https://huggingface.co/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model)を参照するか、コマンドラインでヘルプを表示してください：
 
 ```bash
 optimum-cli export tflite --help

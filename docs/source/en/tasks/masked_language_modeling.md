@@ -26,7 +26,7 @@ require a good contextual understanding of an entire sequence. BERT is an exampl
 
 This guide will show you how to:
 
-1. Finetune [DistilRoBERTa](https://hf-mirror.com/distilbert/distilroberta-base) on the [r/askscience](https://www.reddit.com/r/askscience/) subset of the [ELI5](https://hf-mirror.com/datasets/eli5) dataset.
+1. Finetune [DistilRoBERTa](https://huggingface.co/distilbert/distilroberta-base) on the [r/askscience](https://www.reddit.com/r/askscience/) subset of the [ELI5](https://huggingface.co/datasets/eli5) dataset.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -57,7 +57,7 @@ We encourage you to log in to your Hugging Face account so you can upload and sh
 
 ## Load ELI5 dataset
 
-Start by loading the first 5000 examples from the [ELI5-Category](https://hf-mirror.com/datasets/eli5_category) dataset with the 🤗 Datasets library. This'll give you a chance to experiment and make sure everything works before spending more time training on the full dataset.
+Start by loading the first 5000 examples from the [ELI5-Category](https://huggingface.co/datasets/eli5_category) dataset with the 🤗 Datasets library. This'll give you a chance to experiment and make sure everything works before spending more time training on the full dataset.
 
 ```py
 >>> from datasets import load_dataset
@@ -108,7 +108,7 @@ For masked language modeling, the next step is to load a DistilRoBERTa tokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
 
-You'll notice from the example above, the `text` field is actually nested inside `answers`. This means you'll need to extract the `text` subfield from its nested structure with the [`flatten`](https://hf-mirror.com/docs/datasets/process#flatten) method:
+You'll notice from the example above, the `text` field is actually nested inside `answers`. This means you'll need to extract the `text` subfield from its nested structure with the [`flatten`](https://huggingface.co/docs/datasets/process#flatten) method:
 
 ```py
 >>> eli5 = eli5.flatten()

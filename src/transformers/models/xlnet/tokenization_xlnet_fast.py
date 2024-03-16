@@ -36,12 +36,12 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model", "tokenizer_file": "tokenizer.
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "xlnet/xlnet-base-cased": "https://hf-mirror.com/xlnet/xlnet-base-cased/resolve/main/spiece.model",
-        "xlnet/xlnet-large-cased": "https://hf-mirror.com/xlnet/xlnet-large-cased/resolve/main/spiece.model",
+        "xlnet/xlnet-base-cased": "https://huggingface.co/xlnet/xlnet-base-cased/resolve/main/spiece.model",
+        "xlnet/xlnet-large-cased": "https://huggingface.co/xlnet/xlnet-large-cased/resolve/main/spiece.model",
     },
     "tokenizer_file": {
-        "xlnet/xlnet-base-cased": "https://hf-mirror.com/xlnet/xlnet-base-cased/resolve/main/tokenizer.json",
-        "xlnet/xlnet-large-cased": "https://hf-mirror.com/xlnet/xlnet-large-cased/resolve/main/tokenizer.json",
+        "xlnet/xlnet-base-cased": "https://huggingface.co/xlnet/xlnet-base-cased/resolve/main/tokenizer.json",
+        "xlnet/xlnet-large-cased": "https://huggingface.co/xlnet/xlnet-large-cased/resolve/main/tokenizer.json",
     },
 }
 
@@ -63,7 +63,7 @@ SEG_ID_PAD = 4
 class XLNetTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" XLNet tokenizer (backed by HuggingFace's *tokenizers* library). Based on
-    [Unigram](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=unigram#models).
+    [Unigram](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=unigram#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

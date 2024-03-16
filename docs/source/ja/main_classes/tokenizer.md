@@ -63,7 +63,7 @@ HuggingFace [トークナイザー ライブラリ](https://github.com/huggingfa
 
 ## PreTrainedTokenizerFast
 
-[`PreTrainedTokenizerFast`] は [tokenizers](https://hf-mirror.com/docs/tokenizers) ライブラリに依存します。 🤗 トークナイザー ライブラリから取得したトークナイザーは、
+[`PreTrainedTokenizerFast`] は [tokenizers](https://huggingface.co/docs/tokenizers) ライブラリに依存します。 🤗 トークナイザー ライブラリから取得したトークナイザーは、
 🤗 トランスに非常に簡単にロードされます。これがどのように行われるかを理解するには、[🤗 tokenizers からの tokenizers を使用する](../fast_tokenizers) ページを参照してください。
 
 [[autodoc]] PreTrainedTokenizerFast

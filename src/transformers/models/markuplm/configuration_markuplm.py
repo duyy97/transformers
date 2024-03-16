@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MARKUPLM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/markuplm-base": "https://hf-mirror.com/microsoft/markuplm-base/resolve/main/config.json",
-    "microsoft/markuplm-large": "https://hf-mirror.com/microsoft/markuplm-large/resolve/main/config.json",
+    "microsoft/markuplm-base": "https://huggingface.co/microsoft/markuplm-base/resolve/main/config.json",
+    "microsoft/markuplm-large": "https://huggingface.co/microsoft/markuplm-large/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class MarkupLMConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MarkupLMModel`]. It is used to instantiate a
     MarkupLM model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the MarkupLM
-    [microsoft/markuplm-base](https://hf-mirror.com/microsoft/markuplm-base) architecture.
+    [microsoft/markuplm-base](https://huggingface.co/microsoft/markuplm-base) architecture.
 
     Configuration objects inherit from [`BertConfig`] and can be used to control the model outputs. Read the
     documentation from [`BertConfig`] for more information.

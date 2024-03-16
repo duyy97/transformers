@@ -20,7 +20,7 @@ rendered properly in your Markdown viewer.
 
 CPM-Ant は、10B パラメータを備えたオープンソースの中国語の事前トレーニング済み言語モデル (PLM) です。これは、CPM-Live のライブ トレーニング プロセスの最初のマイルストーンでもあります。トレーニングプロセスは費用対効果が高く、環境に優しいものです。 CPM-Ant は、CUGE ベンチマークでのデルタ チューニングでも有望な結果を達成しています。フル モデルに加えて、さまざまなハードウェア構成の要件を満たすさまざまな圧縮バージョンも提供しています。 [詳細を見る](https://github.com/OpenBMB/CPM-Live/tree/cpm-ant/cpm-live)
 
-このモデルは [OpenBMB](https://hf-mirror.com/openbmb) によって提供されました。元のコードは [ここ](https://github.com/OpenBMB/CPM-Live/tree/cpm-ant/cpm-live) にあります。
+このモデルは [OpenBMB](https://huggingface.co/openbmb) によって提供されました。元のコードは [ここ](https://github.com/OpenBMB/CPM-Live/tree/cpm-ant/cpm-live) にあります。
 
 ## Resources
 

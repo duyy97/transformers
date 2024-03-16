@@ -195,7 +195,7 @@ Las entradas de audio se preprocesan de forma diferente a las entradas textuales
 pip install datasets
 ```
 
-Carga la tarea de detección de palabras clave del benchmark [SUPERB](https://hf-mirror.com/datasets/superb) (consulta el [tutorial 🤗 Dataset](https://hf-mirror.com/docs/datasets/load_hub) para que obtengas más detalles sobre cómo cargar un dataset):
+Carga la tarea de detección de palabras clave del benchmark [SUPERB](https://huggingface.co/datasets/superb) (consulta el [tutorial 🤗 Dataset](https://huggingface.co/docs/datasets/load_hub) para que obtengas más detalles sobre cómo cargar un dataset):
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -221,9 +221,9 @@ Esto devuelve tres elementos:
 
 ### Resample
 
-Para este tutorial, se utilizará el modelo [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base). Como puedes ver en la model card, el modelo Wav2Vec2 está pre-entrenado en audio de voz muestreado a 16kHz. Es importante que la tasa de muestreo de tus datos de audio coincida con la tasa de muestreo del dataset utilizado para pre-entrenar el modelo. Si la tasa de muestreo de tus datos no es la misma, deberás volver a muestrear tus datos de audio. 
+Para este tutorial, se utilizará el modelo [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base). Como puedes ver en la model card, el modelo Wav2Vec2 está pre-entrenado en audio de voz muestreado a 16kHz. Es importante que la tasa de muestreo de tus datos de audio coincida con la tasa de muestreo del dataset utilizado para pre-entrenar el modelo. Si la tasa de muestreo de tus datos no es la misma, deberás volver a muestrear tus datos de audio. 
 
-Por ejemplo, carga el dataset [LJ Speech](https://hf-mirror.com/datasets/lj_speech) que tiene una tasa de muestreo de 22050kHz. Para utilizar el modelo Wav2Vec2 con este dataset, reduce la tasa de muestreo a 16kHz:
+Por ejemplo, carga el dataset [LJ Speech](https://huggingface.co/datasets/lj_speech) que tiene una tasa de muestreo de 22050kHz. Para utilizar el modelo Wav2Vec2 con este dataset, reduce la tasa de muestreo a 16kHz:
 
 ```py
 >>> lj_speech = load_dataset("lj_speech", split="train")
@@ -234,7 +234,7 @@ Por ejemplo, carga el dataset [LJ Speech](https://hf-mirror.com/datasets/lj_spee
  'sampling_rate': 22050}
 ```
 
-1. Usa el método 🤗 Datasets' [`cast_column`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.cast_column) para reducir la tasa de muestreo a 16kHz:
+1. Usa el método 🤗 Datasets' [`cast_column`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.cast_column) para reducir la tasa de muestreo a 16kHz:
 
 ```py
 >>> lj_speech = lj_speech.cast_column("audio", Audio(sampling_rate=16_000))
@@ -321,7 +321,7 @@ Las longitudes de las dos primeras muestras coinciden ahora con la longitud máx
 
 También se utiliza un extractor de características para procesar imágenes para tareas de visión por computadora. Una vez más, el objetivo es convertir la imagen en bruto en un batch de tensores como entrada.
 
-Vamos a cargar el dataset [food101](https://hf-mirror.com/datasets/food101) para este tutorial. Usa el parámetro 🤗 Datasets `split` para cargar solo una pequeña muestra de la división de entrenamiento ya que el dataset es bastante grande:
+Vamos a cargar el dataset [food101](https://huggingface.co/datasets/food101) para este tutorial. Usa el parámetro 🤗 Datasets `split` para cargar solo una pequeña muestra de la división de entrenamiento ya que el dataset es bastante grande:
 
 ```py
 >>> from datasets import load_dataset
@@ -329,13 +329,13 @@ Vamos a cargar el dataset [food101](https://hf-mirror.com/datasets/food101) para
 >>> dataset = load_dataset("food101", split="train[:100]")
 ```
 
-A continuación, observa la imagen con la función 🤗 Datasets [`Image`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=image#datasets.Image):
+A continuación, observa la imagen con la función 🤗 Datasets [`Image`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=image#datasets.Image):
 
 ```py
 >>> dataset[0]["image"]
 ```
 
-![vision-preprocess-tutorial.png](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png)
+![vision-preprocess-tutorial.png](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png)
 
 ### Extractor de características
 
@@ -370,7 +370,7 @@ Para las tareas de visión por computadora es común añadir algún tipo de aume
 ...     return examples
 ```
 
-3. A continuación, utiliza 🤗 Datasets [`set_transform`](https://hf-mirror.com/docs/datasets/process#format-transform) para aplicar las transformaciones sobre la marcha:
+3. A continuación, utiliza 🤗 Datasets [`set_transform`](https://huggingface.co/docs/datasets/process#format-transform) para aplicar las transformaciones sobre la marcha:
 
 ```py
 >>> dataset.set_transform(transforms)
@@ -417,7 +417,7 @@ Este es el aspecto de la imagen después de preprocesarla. Como era de esperar p
 >>> plt.imshow(img.permute(1, 2, 0))
 ```
 
-![preprocessed_image](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png)
+![preprocessed_image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png)
 
 ## Multimodal
 
@@ -426,7 +426,7 @@ Para las tareas multimodales utilizarás una combinación de todo lo que has apr
 * Extractor de características para preprocesar los datos de audio.
 * Un tokenizador para procesar el texto.
 
-Volvamos al dataset [LJ Speech](https://hf-mirror.com/datasets/lj_speech):
+Volvamos al dataset [LJ Speech](https://huggingface.co/datasets/lj_speech):
 
 ```py
 >>> from datasets import load_dataset

@@ -32,7 +32,7 @@ Ci sono benefici significativi nell'usare un modello pre-addestrato. Si riducono
 
 Prima di poter fare il fine-tuning di un modello pre-addestrato, scarica un dataset e preparalo per l'addestramento. La precedente esercitazione ti ha mostrato come processare i dati per l'addestramento e adesso hai l'opportunità di metterti alla prova!
 
-Inizia caricando il dataset [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full):
+Inizia caricando il dataset [Yelp Reviews](https://huggingface.co/datasets/yelp_review_full):
 
 ```py
 >>> from datasets import load_dataset
@@ -43,7 +43,7 @@ Inizia caricando il dataset [Yelp Reviews](https://hf-mirror.com/datasets/yelp_r
  'text': 'My expectations for McDonalds are t rarely high. But for one to still fail so spectacularly...that takes something special!\\nThe cashier took my friends\'s order, then promptly ignored me. I had to force myself in front of a cashier who opened his register to wait on the person BEHIND me. I waited over five minutes for a gigantic order that included precisely one kid\'s meal. After watching two people who ordered after me be handed their food, I asked where mine was. The manager started yelling at the cashiers for \\"serving off their orders\\" when they didn\'t have their food. But neither cashier was anywhere near those controls, and the manager was the one serving food to customers and clearing the boards.\\nThe manager was rude when giving me my order. She didn\'t make sure that I had everything ON MY RECEIPT, and never even had the decency to apologize that I felt I was getting poor service.\\nI\'ve eaten at various McDonalds restaurants for over 30 years. I\'ve worked at more than one location. I expect bad days, bad moods, and the occasional mistake. But I have yet to have a decent experience at this store. It will remain a place I avoid unless someone in my party needs to avoid illness from low blood sugar. Perhaps I should go back to the racially biased service of Steak n Shake instead!'}
 ```
 
-Come già sai, hai bisogno di un tokenizer per processare il testo e includere una strategia di padding e truncation per gestire sequenze di lunghezza variabile. Per processare il dataset in un unico passo, usa il metodo [`map`](https://hf-mirror.com/docs/datasets/process#map) di 🤗 Datasets che applica la funzione di preprocessing all'intero dataset:
+Come già sai, hai bisogno di un tokenizer per processare il testo e includere una strategia di padding e truncation per gestire sequenze di lunghezza variabile. Per processare il dataset in un unico passo, usa il metodo [`map`](https://huggingface.co/docs/datasets/process#map) di 🤗 Datasets che applica la funzione di preprocessing all'intero dataset:
 
 ```py
 >>> from transformers import AutoTokenizer
@@ -75,7 +75,7 @@ Se vuoi, puoi creare un sottoinsieme più piccolo del dataset per il fine-tuning
 
 🤗 Transformers mette a disposizione la classe [`Trainer`] ottimizzata per addestrare modelli 🤗 Transformers, rendendo semplice iniziare l'addestramento senza scrivere manualmente il tuo ciclo di addestramento. L'API [`Trainer`] supporta un'ampia gamma di opzioni e funzionalità di addestramento come logging, gradient accumulation e mixed precision.
 
-Inizia caricando il tuo modello e specificando il numero di etichette (labels) attese. Nel dataset Yelp Review [dataset card](https://hf-mirror.com/datasets/yelp_review_full#data-fields), sai che ci sono cinque etichette:
+Inizia caricando il tuo modello e specificando il numero di etichette (labels) attese. Nel dataset Yelp Review [dataset card](https://huggingface.co/datasets/yelp_review_full#data-fields), sai che ci sono cinque etichette:
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -91,7 +91,7 @@ Potresti vedere un warning dato che alcuni dei pesi pre-addestrati non sono stat
 
 ### Iperparametri per il training
 
-Successivamente, crea una classe [`TrainingArguments`] contenente tutti gli iperparametri che si possono regore nonché le variabili per attivare le differenti opzioni di addestramento. Per questa esercitazione puoi iniziare con gli [iperparametri](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) di ddestramento predefiniti, ma sentiti libero di sperimentare per trovare la configurazione ottimale per te.
+Successivamente, crea una classe [`TrainingArguments`] contenente tutti gli iperparametri che si possono regore nonché le variabili per attivare le differenti opzioni di addestramento. Per questa esercitazione puoi iniziare con gli [iperparametri](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) di ddestramento predefiniti, ma sentiti libero di sperimentare per trovare la configurazione ottimale per te.
 
 Specifica dove salvare i checkpoints del tuo addestramento:
 
@@ -103,7 +103,7 @@ Specifica dove salvare i checkpoints del tuo addestramento:
 
 ### Metriche
 
-[`Trainer`] non valuta automaticamente le performance del modello durante l'addestramento. Dovrai passare a [`Trainer`] una funzione che calcola e restituisce le metriche. La libreria 🤗 Datasets mette a disposizione una semplice funzione [`accuracy`](https://hf-mirror.com/metrics/accuracy) che puoi caricare con la funzione `load_metric` (guarda questa [esercitazione](https://hf-mirror.com/docs/datasets/metrics) per maggiori informazioni):
+[`Trainer`] non valuta automaticamente le performance del modello durante l'addestramento. Dovrai passare a [`Trainer`] una funzione che calcola e restituisce le metriche. La libreria 🤗 Datasets mette a disposizione una semplice funzione [`accuracy`](https://huggingface.co/metrics/accuracy) che puoi caricare con la funzione `load_metric` (guarda questa [esercitazione](https://huggingface.co/docs/datasets/metrics) per maggiori informazioni):
 
 ```py
 >>> import numpy as np
@@ -172,7 +172,7 @@ Il [`DefaultDataCollator`] assembla tensori in lotti su cui il modello si addest
 
 </Tip>
 
-Successivamente, converti i datasets tokenizzati in TensorFlow datasets con il metodo [`to_tf_dataset`](https://hf-mirror.com/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specifica il tuo input in `columns` e le tue etichette in `label_cols`:
+Successivamente, converti i datasets tokenizzati in TensorFlow datasets con il metodo [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specifica il tuo input in `columns` e le tue etichette in `label_cols`:
 
 ```py
 >>> tf_train_dataset = small_train_dataset.to_tf_dataset(
@@ -346,7 +346,7 @@ Per tenere traccia dei tuoi progressi durante l'addestramento, usa la libreria [
 
 ### Metriche
 
-Proprio come è necessario aggiungere una funzione di valutazione del [`Trainer`], è necessario fare lo stesso quando si scrive il proprio ciclo di addestramento. Ma invece di calcolare e riportare la metrica alla fine di ogni epoca, questa volta accumulerai tutti i batch con [`add_batch`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch) e calcolerai la metrica alla fine.
+Proprio come è necessario aggiungere una funzione di valutazione del [`Trainer`], è necessario fare lo stesso quando si scrive il proprio ciclo di addestramento. Ma invece di calcolare e riportare la metrica alla fine di ogni epoca, questa volta accumulerai tutti i batch con [`add_batch`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch) e calcolerai la metrica alla fine.
 
 ```py
 >>> metric = load_metric("accuracy")

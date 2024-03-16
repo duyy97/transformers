@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 <Youtube id="S2EEG3JIt2A"/>
 
-1. [포럼](https://discuss.hf-mirror.com/)에서 도움을 요청하세요. [Beginners](https://discuss.hf-mirror.com/c/beginners/5) 또는 [🤗 Transformers](https://discuss.hf-mirror.com/c/transformers/9)와 같은 특정 카테고리에 질문을 게시할 수 있습니다. 재현 가능한 코드와 함께 잘 서술된 포럼 게시물을 작성하여 여러분의 문제가 해결될 가능성을 극대화하세요!
+1. [포럼](https://discuss.huggingface.co/)에서 도움을 요청하세요. [Beginners](https://discuss.huggingface.co/c/beginners/5) 또는 [🤗 Transformers](https://discuss.huggingface.co/c/transformers/9)와 같은 특정 카테고리에 질문을 게시할 수 있습니다. 재현 가능한 코드와 함께 잘 서술된 포럼 게시물을 작성하여 여러분의 문제가 해결될 가능성을 극대화하세요!
 
 <Youtube id="_PAli-V4wj0"/>
 
@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 
 3. 이전 버전의 🤗 Transformers을 사용하는 경우 중요한 변경 사항이 버전 사이에 도입되었기 때문에 [마이그레이션](migration) 가이드를 확인하세요.
 
-문제 해결 및 도움 매뉴얼에 대한 자세한 내용은 Hugging Face 강좌의 [8장](https://hf-mirror.com/course/chapter8/1?fw=pt)을 참조하세요.
+문제 해결 및 도움 매뉴얼에 대한 자세한 내용은 Hugging Face 강좌의 [8장](https://huggingface.co/course/chapter8/1?fw=pt)을 참조하세요.
 
 
 ## 방화벽 환경[[firewalled-environments]]

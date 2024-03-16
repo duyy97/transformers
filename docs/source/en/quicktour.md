@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-Get up and running with 🤗 Transformers! Whether you're a developer or an everyday user, this quick tour will help you get started and show you how to use the [`pipeline`] for inference, load a pretrained model and preprocessor with an [AutoClass](./model_doc/auto), and quickly train a model with PyTorch or TensorFlow. If you're a beginner, we recommend checking out our tutorials or [course](https://hf-mirror.com/course/chapter1/1) next for more in-depth explanations of the concepts introduced here.
+Get up and running with 🤗 Transformers! Whether you're a developer or an everyday user, this quick tour will help you get started and show you how to use the [`pipeline`] for inference, load a pretrained model and preprocessor with an [AutoClass](./model_doc/auto), and quickly train a model with PyTorch or TensorFlow. If you're a beginner, we recommend checking out our tutorials or [course](https://huggingface.co/course/chapter1/1) next for more in-depth explanations of the concepts introduced here.
 
 Before you begin, make sure you have all the necessary libraries installed:
 
@@ -77,7 +77,7 @@ Start by creating an instance of [`pipeline`] and specifying a task you want to 
 >>> classifier = pipeline("sentiment-analysis")
 ```
 
-The [`pipeline`] downloads and caches a default [pretrained model](https://hf-mirror.com/distilbert/distilbert-base-uncased-finetuned-sst-2-english) and tokenizer for sentiment analysis. Now you can use the `classifier` on your target text:
+The [`pipeline`] downloads and caches a default [pretrained model](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english) and tokenizer for sentiment analysis. Now you can use the `classifier` on your target text:
 
 ```py
 >>> classifier("We are very happy to show you the 🤗 Transformers library.")
@@ -103,7 +103,7 @@ The [`pipeline`] can also iterate over an entire dataset for any task you like. 
 >>> speech_recognizer = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 ```
 
-Load an audio dataset (see the 🤗 Datasets [Quick Start](https://hf-mirror.com/docs/datasets/quickstart#audio) for more details) you'd like to iterate over. For example, load the [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) dataset:
+Load an audio dataset (see the 🤗 Datasets [Quick Start](https://huggingface.co/docs/datasets/quickstart#audio) for more details) you'd like to iterate over. For example, load the [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) dataset:
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -112,7 +112,7 @@ Load an audio dataset (see the 🤗 Datasets [Quick Start](https://hf-mirror.com
 ```
 
 You need to make sure the sampling rate of the dataset matches the sampling 
-rate [`facebook/wav2vec2-base-960h`](https://hf-mirror.com/facebook/wav2vec2-base-960h) was trained on:
+rate [`facebook/wav2vec2-base-960h`](https://huggingface.co/facebook/wav2vec2-base-960h) was trained on:
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=speech_recognizer.feature_extractor.sampling_rate))
@@ -131,7 +131,7 @@ For larger datasets where the inputs are big (like in speech or vision), you'll 
 
 ### Use another model and tokenizer in the pipeline
 
-The [`pipeline`] can accommodate any model from the [Hub](https://hf-mirror.com/models), making it easy to adapt the [`pipeline`] for other use-cases. For example, if you'd like a model capable of handling French text, use the tags on the Hub to filter for an appropriate model. The top filtered result returns a multilingual [BERT model](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment) finetuned for sentiment analysis you can use for French text:
+The [`pipeline`] can accommodate any model from the [Hub](https://huggingface.co/models), making it easy to adapt the [`pipeline`] for other use-cases. For example, if you'd like a model capable of handling French text, use the tags on the Hub to filter for an appropriate model. The top filtered result returns a multilingual [BERT model](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) finetuned for sentiment analysis you can use for French text:
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

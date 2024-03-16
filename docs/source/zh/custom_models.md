@@ -263,13 +263,13 @@ notebook_login()
 resnet50d.push_to_hub("custom-resnet50d")
 ```
 
-除了模型权重和 JSON 格式的配置外，这行代码也会复制 `custom-resnet50d` 文件夹内的模型以及配置的 `.py` 文件并将结果上传至 Hub。你可以在此[模型仓库](https://hf-mirror.com/sgugger/custom-resnet50d)中查看结果。
+除了模型权重和 JSON 格式的配置外，这行代码也会复制 `custom-resnet50d` 文件夹内的模型以及配置的 `.py` 文件并将结果上传至 Hub。你可以在此[模型仓库](https://huggingface.co/sgugger/custom-resnet50d)中查看结果。
 
 有关推推送至 Hub 方法的更多信息，请参阅[共享教程](model_sharing)。
 
 ## 使用带有自定义代码的模型
 
-可以使用自动类（auto-classes）和 `from_pretrained` 方法，使用模型仓库里带有自定义代码的配置、模型或分词器文件。所有上传到 Hub 的文件和代码都会进行恶意软件扫描（有关更多信息，请参阅 [Hub 安全](https://hf-mirror.com/docs/hub/security#malware-scanning) 文档）, 但你仍应查看模型代码和作者，以避免在你的计算机上执行恶意代码。 设置 `trust_remote_code=True` 以使用带有自定义代码的模型：
+可以使用自动类（auto-classes）和 `from_pretrained` 方法，使用模型仓库里带有自定义代码的配置、模型或分词器文件。所有上传到 Hub 的文件和代码都会进行恶意软件扫描（有关更多信息，请参阅 [Hub 安全](https://huggingface.co/docs/hub/security#malware-scanning) 文档）, 但你仍应查看模型代码和作者，以避免在你的计算机上执行恶意代码。 设置 `trust_remote_code=True` 以使用带有自定义代码的模型：
 
 ```py
 from transformers import AutoModelForImageClassification

@@ -39,16 +39,16 @@ switch between frameworks. For example, a model trained in PyTorch can be export
 ONNX format and then imported in TensorFlow (and vice versa).
 
 Once exported to ONNX format, a model can be:
-- optimized for inference via techniques such as [graph optimization](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/optimization) and [quantization](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/quantization). 
-- run with ONNX Runtime via [`ORTModelForXXX` classes](https://hf-mirror.com/docs/optimum/onnxruntime/package_reference/modeling_ort),
+- optimized for inference via techniques such as [graph optimization](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/optimization) and [quantization](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/quantization). 
+- run with ONNX Runtime via [`ORTModelForXXX` classes](https://huggingface.co/docs/optimum/onnxruntime/package_reference/modeling_ort),
 which follow the same `AutoModel` API as the one you are used to in 🤗 Transformers.
-- run with [optimized inference pipelines](https://hf-mirror.com/docs/optimum/main/en/onnxruntime/usage_guides/pipelines),
+- run with [optimized inference pipelines](https://huggingface.co/docs/optimum/main/en/onnxruntime/usage_guides/pipelines),
 which has the same API as the [`pipeline`] function in 🤗 Transformers. 
 
 🤗 Optimum provides support for the ONNX export by leveraging configuration objects. These configuration objects come 
 ready-made for a number of model architectures, and are designed to be easily extendable to other architectures.
 
-For the list of ready-made configurations, please refer to [🤗 Optimum documentation](https://hf-mirror.com/docs/optimum/exporters/onnx/overview).
+For the list of ready-made configurations, please refer to [🤗 Optimum documentation](https://huggingface.co/docs/optimum/exporters/onnx/overview).
 
 There are two ways to export a 🤗 Transformers model to ONNX, here we show both:
 
@@ -63,7 +63,7 @@ To export a 🤗 Transformers model to ONNX, first install an extra dependency:
 pip install optimum[exporters]
 ```
 
-To check out all available arguments, refer to the [🤗 Optimum docs](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli), 
+To check out all available arguments, refer to the [🤗 Optimum docs](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli), 
 or view help in command line:
 
 ```bash
@@ -93,7 +93,7 @@ The ONNX export succeeded and the exported model was saved at: distilbert_base_u
 The example above illustrates exporting a checkpoint from 🤗 Hub. When exporting a local model, first make sure that you 
 saved both the model's weights and tokenizer files in the same directory (`local_path`). When using CLI, pass the 
 `local_path` to the `model` argument instead of the checkpoint name on 🤗 Hub and provide the `--task` argument. 
-You can review the list of supported tasks in the [🤗 Optimum documentation](https://hf-mirror.com/docs/optimum/exporters/task_manager).
+You can review the list of supported tasks in the [🤗 Optimum documentation](https://huggingface.co/docs/optimum/exporters/task_manager).
 If `task` argument is not provided, it will default to the model architecture without any task specific head.
 
 ```bash
@@ -116,7 +116,7 @@ Runtime](https://onnxruntime.ai/) as follows:
 ```
 
 The process is identical for TensorFlow checkpoints on the Hub. For instance, here's how you would
-export a pure TensorFlow checkpoint from the [Keras organization](https://hf-mirror.com/keras-io):
+export a pure TensorFlow checkpoint from the [Keras organization](https://huggingface.co/keras-io):
 
 ```bash
 optimum-cli export onnx --model keras-io/transformers-qa distilbert_base_cased_squad_onnx/
@@ -145,8 +145,8 @@ Alternative to CLI, you can export a 🤗 Transformers model to ONNX programmati
 ### Exporting a model for an unsupported architecture
 
 If you wish to contribute by adding support for a model that cannot be currently exported, you should first check if it is
-supported in [`optimum.exporters.onnx`](https://hf-mirror.com/docs/optimum/exporters/onnx/overview),
-and if it is not, [contribute to 🤗 Optimum](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/contribute)
+supported in [`optimum.exporters.onnx`](https://huggingface.co/docs/optimum/exporters/onnx/overview),
+and if it is not, [contribute to 🤗 Optimum](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/contribute)
 directly.
 
 ### Exporting a model with `transformers.onnx`

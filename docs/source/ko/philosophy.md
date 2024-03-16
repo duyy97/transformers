@@ -27,9 +27,9 @@ rendered properly in your Markdown viewer.
 1. 사용하기 쉽고 빠르게 만드는 것:
 
 - 학습해야 할 사용자 대상 추상화의 수를 제한했습니다. 실제로 거의 추상화가 없으며, 각 모델을 사용하기 위해 필요한 세 가지 표준 클래스인 [configuration](main_classes/configuration), [models](main_classes/model) 및 전처리 클래스인 ([tokenizer](main_classes/tokenizer)는 NLP용, [image processor](main_classes/image_processor)는 비전용, [feature extractor](main_classes/feature_extractor)는 오디오용, [processor](main_classes/processors)는 멀티모달 입력용)만 사용합니다.
-- 이러한 클래스는 공통적인 `from_pretrained()` 메서드를 사용하여 미리 훈련된 인스턴스에서 간단하고 통일된 방식으로 초기화할 수 있습니다. 이 메소드는 미리 훈련된 체크포인트에서 관련 클래스 인스턴스와 관련 데이터(구성의 하이퍼파라미터, 토크나이저의 어휘, 모델의 가중치)를 (필요한 경우) 다운로드하고 캐시하며 가져옵니다. 체크포인트는 [Hugging Face Hub](https://hf-mirror.com/models)에서 제공되거나 사용자 자체의 저장된 체크포인트에서 제공됩니다.
+- 이러한 클래스는 공통적인 `from_pretrained()` 메서드를 사용하여 미리 훈련된 인스턴스에서 간단하고 통일된 방식으로 초기화할 수 있습니다. 이 메소드는 미리 훈련된 체크포인트에서 관련 클래스 인스턴스와 관련 데이터(구성의 하이퍼파라미터, 토크나이저의 어휘, 모델의 가중치)를 (필요한 경우) 다운로드하고 캐시하며 가져옵니다. 체크포인트는 [Hugging Face Hub](https://huggingface.co/models)에서 제공되거나 사용자 자체의 저장된 체크포인트에서 제공됩니다.
 - 이 세 가지 기본 클래스 위에 라이브러리는 [`pipeline`] API를 제공하여 주어진 작업에 대해 모델을 빠르게 추론하는 데 사용하고, [`Trainer`]를 제공하여 PyTorch 모델을 빠르게 훈련하거나 미세 조정할 수 있도록 합니다(모든 TensorFlow 모델은 `Keras.fit`과 호환됩니다).
-- 결과적으로, 이 라이브러리는 신경망을 구축하기 위한 모듈식 도구 상자가 아닙니다. 라이브러리를 확장하거나 구축하려면 일반적인 Python, PyTorch, TensorFlow, Keras 모듈을 사용하고 라이브러리의 기본 클래스를 상속하여 모델 로딩 및 저장과 같은 기능을 재사용하면 됩니다. 모델에 대한 코딩 철학에 대해 더 자세히 알고 싶다면 [Repeat Yourself](https://hf-mirror.com/blog/transformers-design-philosophy) 블로그 글을 확인해보세요.
+- 결과적으로, 이 라이브러리는 신경망을 구축하기 위한 모듈식 도구 상자가 아닙니다. 라이브러리를 확장하거나 구축하려면 일반적인 Python, PyTorch, TensorFlow, Keras 모듈을 사용하고 라이브러리의 기본 클래스를 상속하여 모델 로딩 및 저장과 같은 기능을 재사용하면 됩니다. 모델에 대한 코딩 철학에 대해 더 자세히 알고 싶다면 [Repeat Yourself](https://huggingface.co/blog/transformers-design-philosophy) 블로그 글을 확인해보세요.
 
 2. 원래 모델과 가능한 한 근접한 성능을 제공하는 최신 모델을 제공하는 것:
 
@@ -60,7 +60,7 @@ rendered properly in your Markdown viewer.
 
 모든 이러한 클래스는 사전 훈련된 인스턴스에서 인스턴스화하고 로컬로 저장하며, 세 가지 메소드를 사용하여 Hub에서 공유할 수 있습니다:
 
-- `from_pretrained()` 메소드를 사용하면 라이브러리 자체에서 제공하는 사전 훈련된 버전(지원되는 모델은 [Model Hub](https://hf-mirror.com/models)에서 찾을 수 있음)이나 사용자가 로컬로 저장한 경우(또는 서버에 저장한 경우)의 모델, 구성 및 전처리 클래스를 인스턴스화할 수 있습니다.
+- `from_pretrained()` 메소드를 사용하면 라이브러리 자체에서 제공하는 사전 훈련된 버전(지원되는 모델은 [Model Hub](https://huggingface.co/models)에서 찾을 수 있음)이나 사용자가 로컬로 저장한 경우(또는 서버에 저장한 경우)의 모델, 구성 및 전처리 클래스를 인스턴스화할 수 있습니다.
 - `save_pretrained()` 메소드를 사용하면 모델, 구성 및 전처리 클래스를 로컬로 저장하여 `from_pretrained()`를 사용하여 다시 가져올 수 있습니다.
 - `push_to_hub()` 메소드를 사용하면 모델, 구성 및 전처리 클래스를 Hub에 공유하여 모두에게 쉽게 접근할 수 있습니다.
 

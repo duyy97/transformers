@@ -30,7 +30,7 @@ VQA の注目すべき使用例には次のようなものがあります。
 
 このガイドでは、次の方法を学びます。
 
-- [`Graphcore/vqa` データセット](https://hf-mirror.com/datasets/Graphcore/vqa) 上で分類 VQA モデル、特に [ViLT](../model_doc/vilt) を微調整します。
+- [`Graphcore/vqa` データセット](https://huggingface.co/datasets/Graphcore/vqa) 上で分類 VQA モデル、特に [ViLT](../model_doc/vilt) を微調整します。
 - 微調整された ViLT を推論に使用します。
 - BLIP-2 などの生成モデルを使用してゼロショット VQA 推論を実行します。
 
@@ -67,11 +67,11 @@ pip install -q transformers datasets
 ## Load the data
 
 説明の目的で、このガイドでは、注釈付きの視覚的な質問に答える「Graphcore/vqa」データセットの非常に小さなサンプルを使用します。
-完全なデータセットは [🤗 Hub](https://hf-mirror.com/datasets/Graphcore/vqa) で見つけることができます。
+完全なデータセットは [🤗 Hub](https://huggingface.co/datasets/Graphcore/vqa) で見つけることができます。
 
-[`Graphcore/vqa` データセット](https://hf-mirror.com/datasets/Graphcore/vqa) の代わりに、
+[`Graphcore/vqa` データセット](https://huggingface.co/datasets/Graphcore/vqa) の代わりに、
 公式 [VQA データセット ページ](https://visualqa.org/download.html) から同じデータを手動で取得します。フォローしたい場合は、
-カスタム データを使用したチュートリアルでは、[画像データセットを作成する](https://hf-mirror.com/docs/datasets/image_dataset#loading-script) 方法を確認してください。
+カスタム データを使用したチュートリアルでは、[画像データセットを作成する](https://huggingface.co/docs/datasets/image_dataset#loading-script) 方法を確認してください。
 🤗 データセットのドキュメントのガイド。
 
 検証分割から最初の 200 個の例をロードし、データセットの機能を調べてみましょう。
@@ -128,7 +128,7 @@ Dataset({
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/vqa-example.png" alt="VQA Image Example"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/vqa-example.png" alt="VQA Image Example"/>
 </div>
 
 
@@ -356,7 +356,7 @@ Predicted answer: down
 
 以前のモデルでは、VQA を分類タスクとして扱いました。 BLIP、BLIP-2、InstructBLIP アプローチなどの一部の最近のモデル
 生成タスクとしての VQA。 [BLIP-2](../model_doc/blip-2) を例として考えてみましょう。新しいビジュアル言語の事前トレーニングを導入しました
-事前にトレーニングされたビジョン エンコーダーと LLM を任意に組み合わせて使用​​できるパラダイム (詳細については、[BLIP-2 ブログ投稿](https://hf-mirror.com/blog/blip-2) を参照)。
+事前にトレーニングされたビジョン エンコーダーと LLM を任意に組み合わせて使用​​できるパラダイム (詳細については、[BLIP-2 ブログ投稿](https://huggingface.co/blog/blip-2) を参照)。
 これにより、視覚的な質問応答を含む複数の視覚言語タスクで最先端の結果を達成することができます。
 
 このモデルを VQA に使用する方法を説明しましょう。まず、モデルをロードしましょう。ここではモデルを明示的に送信します。

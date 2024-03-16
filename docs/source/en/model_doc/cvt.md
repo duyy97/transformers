@@ -33,7 +33,7 @@ performance gains are maintained when pretrained on larger datasets (\eg ImageNe
 ImageNet-22k, our CvT-W24 obtains a top-1 accuracy of 87.7\% on the ImageNet-1k val set. Finally, our results show that the positional encoding, 
 a crucial component in existing Vision Transformers, can be safely removed in our model, simplifying the design for higher resolution vision tasks.*
 
-This model was contributed by [anugunj](https://hf-mirror.com/anugunj). The original code can be found [here](https://github.com/microsoft/CvT).
+This model was contributed by [anugunj](https://huggingface.co/anugunj). The original code can be found [here](https://github.com/microsoft/CvT).
 
 ## Usage tips
 

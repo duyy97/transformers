@@ -30,7 +30,7 @@ Mixtral-8x7B is the second large language model (LLM) released by [mistral.ai](h
 
 Mixtral-8x7B is a decoder-only Transformer with the following architectural choices:
 
-- Mixtral is a Mixture of Experts (MoE) model with 8 experts per MLP, with a total of 45 billion parameters. To learn more about mixture-of-experts, refer to the [blog post](https://hf-mirror.com/blog/moe).
+- Mixtral is a Mixture of Experts (MoE) model with 8 experts per MLP, with a total of 45 billion parameters. To learn more about mixture-of-experts, refer to the [blog post](https://huggingface.co/blog/moe).
 - Despite the model having 45 billion parameters,, the compute required for a single forward pass is the same as that of a 14 billion parameter model. This is because even though each of the experts have to be loaded in RAM (70B like ram requirement) each token from the hidden states are dispatched twice (top 2 routing) and thus the compute (the operation required at each forward computation) is just 2 X sequence_length. 
 
 The following implementation details are shared with Mistral AI's first model [Mistral-7B](mistral):
@@ -47,8 +47,8 @@ For more details refer to the [release blog post](https://mistral.ai/news/mixtra
 ## Usage tips
 
 The Mistral team has released 2 checkpoints:
-- a base model, [Mixtral-8x7B-v0.1](https://hf-mirror.com/mistralai/Mixtral-8x7B-v0.1), which has been pre-trained to predict the next token on internet-scale data.
-- an instruction tuned model, [Mixtral-8x7B-Instruct-v0.1](https://hf-mirror.com/mistralai/Mixtral-8x7B-Instruct-v0.1), which is the base model optimized for chat purposes using supervised fine-tuning (SFT) and direct preference optimization (DPO).
+- a base model, [Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1), which has been pre-trained to predict the next token on internet-scale data.
+- an instruction tuned model, [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1), which is the base model optimized for chat purposes using supervised fine-tuning (SFT) and direct preference optimization (DPO).
 
 The base model can be used as follows:
 
@@ -127,7 +127,7 @@ To load and run a model using Flash Attention-2, refer to the snippet below:
 Below is a expected speedup diagram that compares pure inference time between the native implementation in transformers using `mistralai/Mixtral-8x7B-v0.1` checkpoint and the Flash Attention 2 version of the model.
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/mixtral-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/mixtral-7b-inference-large-seqlen.png">
 </div>
 
 ### Sliding window Attention
@@ -172,7 +172,7 @@ Quantizing a model is as simple as passing a `quantization_config` to the model.
 "The expected output"
 ```
 
-This model was contributed by [Younes Belkada](https://hf-mirror.com/ybelkada) and [Arthur Zucker](https://hf-mirror.com/ArthurZ) .
+This model was contributed by [Younes Belkada](https://huggingface.co/ybelkada) and [Arthur Zucker](https://huggingface.co/ArthurZ) .
 The original code can be found [here](https://github.com/mistralai/mistral-src).
 
 ## Resources

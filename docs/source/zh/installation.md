@@ -173,7 +173,7 @@ conda install conda-forge::transformers
 
 <Tip>
 
-通过设置环境变量 `HF_DATASETS_OFFLINE=1` 将 [🤗 Datasets](https://hf-mirror.com/docs/datasets/) 添加至你的离线训练工作流程中。
+通过设置环境变量 `HF_DATASETS_OFFLINE=1` 将 [🤗 Datasets](https://huggingface.co/docs/datasets/) 添加至你的离线训练工作流程中。
 
 </Tip>
 
@@ -196,9 +196,9 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 
 另一种离线时使用 🤗 Transformers 的方法是预先下载好文件，然后在需要离线使用时指向它们的离线路径。有三种实现的方法：
 
-* 单击 [Model Hub](https://hf-mirror.com/models) 用户界面上的 ↓ 图标下载文件。
+* 单击 [Model Hub](https://huggingface.co/models) 用户界面上的 ↓ 图标下载文件。
 
-    ![下载图标](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![下载图标](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
 * 使用 [`PreTrainedModel.from_pretrained`] 和 [`PreTrainedModel.save_pretrained`] 工作流程：
 
@@ -233,7 +233,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
     python -m pip install huggingface_hub
     ```
 
-    2. 使用 [`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub) 函数将文件下载到指定路径。例如，以下命令将 `config.json` 文件从 [T0](https://hf-mirror.com/bigscience/T0_3B) 模型下载至你想要的路径：
+    2. 使用 [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) 函数将文件下载到指定路径。例如，以下命令将 `config.json` 文件从 [T0](https://huggingface.co/bigscience/T0_3B) 模型下载至你想要的路径：
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -251,6 +251,6 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 
 <Tip>
 
-请参阅 [如何从 Hub 下载文件](https://hf-mirror.com/docs/hub/how-to-downstream) 部分，获取有关下载存储在 Hub 上文件的更多详细信息。
+请参阅 [如何从 Hub 下载文件](https://huggingface.co/docs/hub/how-to-downstream) 部分，获取有关下载存储在 Hub 上文件的更多详细信息。
 
 </Tip>

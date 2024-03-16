@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 QDQBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google-bert/bert-base-uncased": "https://hf-mirror.com/google-bert/bert-base-uncased/resolve/main/config.json",
-    # QDQBERT models can be loaded from any BERT checkpoint, available at https://hf-mirror.com/models?filter=bert
+    "google-bert/bert-base-uncased": "https://huggingface.co/google-bert/bert-base-uncased/resolve/main/config.json",
+    # QDQBERT models can be loaded from any BERT checkpoint, available at https://huggingface.co/models?filter=bert
 }
 
 
@@ -31,7 +31,7 @@ class QDQBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`QDQBertModel`]. It is used to instantiate an
     QDQBERT model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the BERT
-    [google-bert/bert-base-uncased](https://hf-mirror.com/google-bert/bert-base-uncased) architecture.
+    [google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 TVLT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "ZinengTang/tvlt-base": "https://hf-mirror.com/ZinengTang/tvlt-base/blob/main/config.json",
+    "ZinengTang/tvlt-base": "https://huggingface.co/ZinengTang/tvlt-base/blob/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class TvltConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`TvltModel`]. It is used to instantiate a TVLT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the TVLT
-    [ZinengTang/tvlt-base](https://hf-mirror.com/ZinengTang/tvlt-base) architecture.
+    [ZinengTang/tvlt-base](https://huggingface.co/ZinengTang/tvlt-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

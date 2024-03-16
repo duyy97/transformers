@@ -36,7 +36,7 @@ state-of-the-art wav2vec 2.0 performance on the Librispeech (960h) and Libri-lig
 10h, 100h, and 960h fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to 19% and 13% relative WER
 reduction on the more challenging dev-other and test-other evaluation subsets.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten).
 
 # Usage tips
 

@@ -28,13 +28,13 @@ if TYPE_CHECKING:
 logger = logging.get_logger(__name__)
 
 DEBERTA_V2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/deberta-v2-xlarge": "https://hf-mirror.com/microsoft/deberta-v2-xlarge/resolve/main/config.json",
-    "microsoft/deberta-v2-xxlarge": "https://hf-mirror.com/microsoft/deberta-v2-xxlarge/resolve/main/config.json",
+    "microsoft/deberta-v2-xlarge": "https://huggingface.co/microsoft/deberta-v2-xlarge/resolve/main/config.json",
+    "microsoft/deberta-v2-xxlarge": "https://huggingface.co/microsoft/deberta-v2-xxlarge/resolve/main/config.json",
     "microsoft/deberta-v2-xlarge-mnli": (
-        "https://hf-mirror.com/microsoft/deberta-v2-xlarge-mnli/resolve/main/config.json"
+        "https://huggingface.co/microsoft/deberta-v2-xlarge-mnli/resolve/main/config.json"
     ),
     "microsoft/deberta-v2-xxlarge-mnli": (
-        "https://hf-mirror.com/microsoft/deberta-v2-xxlarge-mnli/resolve/main/config.json"
+        "https://huggingface.co/microsoft/deberta-v2-xxlarge-mnli/resolve/main/config.json"
     ),
 }
 
@@ -44,7 +44,7 @@ class DebertaV2Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DebertaV2Model`]. It is used to instantiate a
     DeBERTa-v2 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the DeBERTa
-    [microsoft/deberta-v2-xlarge](https://hf-mirror.com/microsoft/deberta-v2-xlarge) architecture.
+    [microsoft/deberta-v2-xlarge](https://huggingface.co/microsoft/deberta-v2-xlarge) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -30,7 +30,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/mpnet-base": "https://hf-mirror.com/microsoft/mpnet-base/resolve/main/vocab.txt",
+        "microsoft/mpnet-base": "https://huggingface.co/microsoft/mpnet-base/resolve/main/vocab.txt",
     }
 }
 

@@ -23,7 +23,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 AUTOFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "huggingface/autoformer-tourism-monthly": "https://hf-mirror.com/huggingface/autoformer-tourism-monthly/resolve/main/config.json",
+    "huggingface/autoformer-tourism-monthly": "https://huggingface.co/huggingface/autoformer-tourism-monthly/resolve/main/config.json",
 }
 
 
@@ -32,7 +32,7 @@ class AutoformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`AutoformerModel`]. It is used to instantiate an
     Autoformer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Autoformer
-    [huggingface/autoformer-tourism-monthly](https://hf-mirror.com/huggingface/autoformer-tourism-monthly)
+    [huggingface/autoformer-tourism-monthly](https://huggingface.co/huggingface/autoformer-tourism-monthly)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] can be used to control the model outputs. Read the

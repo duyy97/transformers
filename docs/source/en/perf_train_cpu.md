@@ -79,4 +79,4 @@ training_args = TrainingArguments(
 
 ### Practice example
 
-Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://hf-mirror.com/blog/intel-sapphire-rapids)
+Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://huggingface.co/blog/intel-sapphire-rapids)

@@ -32,7 +32,7 @@ transformers-cli upload -y wmt16-en-de-12-1
 * to facebook: "wmt19-ru-en", "wmt19-en-ru", "wmt19-en-de", "wmt19-de-en"
 * to allenai: "wmt16-en-de-dist-12-1", "wmt16-en-de-dist-6-1", "wmt16-en-de-12-1", "wmt19-de-en-6-6-base", "wmt19-de-en-6-6-big"
 
-export b="s3://models.hf-mirror.com/bert"
+export b="s3://models.huggingface.co/bert"
 stas_to_fb () {
 	src=$1
 	shift

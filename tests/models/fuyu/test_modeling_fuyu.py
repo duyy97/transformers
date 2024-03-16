@@ -325,7 +325,7 @@ class FuyuModelIntegrationTest(unittest.TestCase):
         processor = self.default_processor
         model = self.default_model
 
-        url = "https://hf-mirror.com/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
+        url = "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
         image = Image.open(io.BytesIO(requests.get(url).content))
 
         text_prompt_coco_captioning = "Generate a coco-style caption.\n"
@@ -365,7 +365,7 @@ class FuyuModelIntegrationTest(unittest.TestCase):
         text_prompt_chart_vqa = "What is the highest life expectancy at birth of male?\n"
 
         chart_image_url = (
-            "https://hf-mirror.com/datasets/hf-internal-testing/fixtures-captioning/resolve/main/chart.png"
+            "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/chart.png"
         )
         chart_image_pil = Image.open(io.BytesIO(requests.get(chart_image_url).content))
 
@@ -386,7 +386,7 @@ class FuyuModelIntegrationTest(unittest.TestCase):
         EXPECTED_TEXT_COMPLETION = "\x00194213202244\x01|ENDOFTEXT|"
         text_prompt_bbox = "When presented with a box, perform OCR to extract text contained within it. If provided with text, generate the corresponding bounding box.\\nWilliams"  # noqa: E231
 
-        bbox_image_url = "https://hf-mirror.com/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bbox_sample_image.png"
+        bbox_image_url = "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bbox_sample_image.png"
         bbox_image_pil = Image.open(io.BytesIO(requests.get(bbox_image_url).content))
 
         model_inputs_bbox = self.processor(text=text_prompt_bbox, images=bbox_image_pil)

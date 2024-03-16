@@ -160,9 +160,9 @@ Inferentia 的 SDK，支持对 transformers 模型进行跟踪和优化，以便
 
 ### 影响
 
-基于 [BERT（来自 Transformers 的双向编码器表示）](https://hf-mirror.com/docs/transformers/main/model_doc/bert)架构的
-transformers 模型，或其变体，如 [distilBERT](https://hf-mirror.com/docs/transformers/main/model_doc/distilbert)
-和 [roBERTa](https://hf-mirror.com/docs/transformers/main/model_doc/roberta) 在 Inf1 上运行最佳，
+基于 [BERT（来自 Transformers 的双向编码器表示）](https://huggingface.co/docs/transformers/main/model_doc/bert)架构的
+transformers 模型，或其变体，如 [distilBERT](https://huggingface.co/docs/transformers/main/model_doc/distilbert)
+和 [roBERTa](https://huggingface.co/docs/transformers/main/model_doc/roberta) 在 Inf1 上运行最佳，
 可用于生成抽取式问答、序列分类和标记分类等任务。然而，文本生成任务仍可以适应在 Inf1 上运行，
 如这篇 [AWS Neuron MarianMT 教程](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examples/pytorch/transformers-marianmt.html)所述。
 有关可以直接在 Inferentia 上转换的模型的更多信息，请参阅 Neuron 文档的[模型架构适配](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/neuron-guide/models/models-inferentia.html#models-inferentia)章节。

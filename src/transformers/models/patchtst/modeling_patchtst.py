@@ -35,7 +35,7 @@ _CONFIG_FOR_DOC = "PatchTSTConfig"
 
 PATCHTST_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "ibm/patchtst-etth1-pretrain",
-    # See all PatchTST models at https://hf-mirror.com/models?filter=patchtst
+    # See all PatchTST models at https://huggingface.co/models?filter=patchtst
 ]
 
 

@@ -74,7 +74,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -84,7 +84,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -334,7 +334,7 @@ def main():
 
     # region Load datasets
     # Get the datasets: you can either provide your own CSV/JSON training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files this script will use the first column for the full texts and the second column for the
@@ -365,7 +365,7 @@ def main():
             token=model_args.token,
         )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading
+    # https://huggingface.co/docs/datasets/loading
     # endregion
 
     # region Load model config and tokenizer
@@ -550,8 +550,8 @@ def main():
         # yourself if you use this method, whereas they are automatically inferred from the model input names when
         # using model.prepare_tf_dataset()
         # For more info see the docs:
-        # https://hf-mirror.com/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
-        # https://hf-mirror.com/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
+        # https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
+        # https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
 
         tf_train_dataset = model.prepare_tf_dataset(
             train_dataset,
@@ -621,7 +621,7 @@ def main():
             # to be computed each epoch. Any Python code can be included in the metric_fn. This is especially
             # useful for metrics like BLEU and ROUGE that perform string comparisons on decoded model outputs.
             # For more information, see the docs at
-            # https://hf-mirror.com/docs/transformers/main_classes/keras_callbacks#transformers.KerasMetricCallback
+            # https://huggingface.co/docs/transformers/main_classes/keras_callbacks#transformers.KerasMetricCallback
 
             metric_callback = KerasMetricCallback(
                 metric_fn=compute_metrics,
@@ -694,7 +694,7 @@ def main():
 
         # region Validation
         if training_args.do_eval and not training_args.do_train:
-            # Compiling generation with XLA yields enormous speedups, see https://hf-mirror.com/blog/tf-xla-generate
+            # Compiling generation with XLA yields enormous speedups, see https://huggingface.co/blog/tf-xla-generate
             @tf.function(jit_compile=True)
             def generate(**kwargs):
                 return model.generate(**kwargs)

@@ -25,7 +25,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
     }
 }
 
@@ -66,10 +66,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json", "merges_file": "merges.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.json",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.json",
     },
     "merges_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/merges.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/merges.txt",
     },
 }
 
@@ -109,7 +109,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
     },
 }
 

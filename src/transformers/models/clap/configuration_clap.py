@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CLAP_PRETRAINED_MODEL_ARCHIVE_LIST = {
-    "laion/clap-htsat-fused": "https://hf-mirror.com/laion/clap-htsat-fused/resolve/main/config.json",
-    "laion/clap-htsat-unfused": "https://hf-mirror.com/laion/clap-htsat-unfused/resolve/main/config.json",
+    "laion/clap-htsat-fused": "https://huggingface.co/laion/clap-htsat-fused/resolve/main/config.json",
+    "laion/clap-htsat-unfused": "https://huggingface.co/laion/clap-htsat-unfused/resolve/main/config.json",
 }
 
 
@@ -34,7 +34,7 @@ class ClapTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ClapTextModel`]. It is used to instantiate a CLAP
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the CLAP
-    [calp-hsat-fused](https://hf-mirror.com/laion/clap-hsat-fused) architecture.
+    [calp-hsat-fused](https://huggingface.co/laion/clap-hsat-fused) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -166,7 +166,7 @@ class ClapAudioConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ClapAudioModel`]. It is used to instantiate a
     CLAP audio encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the audio encoder of the CLAP
-    [laion/clap-htsat-fused](https://hf-mirror.com/laion/clap-htsat-fused) architecture.
+    [laion/clap-htsat-fused](https://huggingface.co/laion/clap-htsat-fused) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -336,7 +336,7 @@ class ClapConfig(PretrainedConfig):
     [`ClapConfig`] is the configuration class to store the configuration of a [`ClapModel`]. It is used to instantiate
     a CLAP model according to the specified arguments, defining the text model and audio model configs. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the CLAP
-    [laion/clap-htsat-fused](https://hf-mirror.com/laion/clap-htsat-fused) architecture.
+    [laion/clap-htsat-fused](https://huggingface.co/laion/clap-htsat-fused) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

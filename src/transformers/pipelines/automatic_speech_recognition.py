@@ -137,7 +137,7 @@ class AutomaticSpeechRecognitionPipeline(ChunkPipeline):
     >>> from transformers import pipeline
 
     >>> transcriber = pipeline(model="openai/whisper-base")
-    >>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac")
+    >>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac")
     {'text': ' He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick, peppered flour-fatten sauce.'}
     ```
 
@@ -162,7 +162,7 @@ class AutomaticSpeechRecognitionPipeline(ChunkPipeline):
             <Tip>
 
             For more information on how to effectively use `chunk_length_s`, please have a look at the [ASR chunking
-            blog post](https://hf-mirror.com/blog/asr-chunking).
+            blog post](https://huggingface.co/blog/asr-chunking).
 
             </Tip>
 
@@ -174,7 +174,7 @@ class AutomaticSpeechRecognitionPipeline(ChunkPipeline):
             <Tip>
 
             For more information on how to effectively use `stride_length_s`, please have a look at the [ASR chunking
-            blog post](https://hf-mirror.com/blog/asr-chunking).
+            blog post](https://huggingface.co/blog/asr-chunking).
 
             </Tip>
 
@@ -269,7 +269,7 @@ class AutomaticSpeechRecognitionPipeline(ChunkPipeline):
             generate_kwargs (`dict`, *optional*):
                 The dictionary of ad-hoc parametrization of `generate_config` to be used for the generation call. For a
                 complete overview of generate, check the [following
-                guide](https://hf-mirror.com/docs/transformers/en/main_classes/text_generation).
+                guide](https://huggingface.co/docs/transformers/en/main_classes/text_generation).
             max_new_tokens (`int`, *optional*):
                 The maximum numbers of tokens to generate, ignoring the number of tokens in the prompt.
 

@@ -22,7 +22,7 @@ Fine-tuning the library models for token classification task such as Named Entit
 tagging (POS) or phrase extraction (CHUNKS). The main scrip `run_ner.py` leverages the 🤗 Datasets library and the Trainer API. You can easily
 customize it to your needs if you need extra processing on your datasets.
 
-It will either run on a datasets hosted on our [hub](https://hf-mirror.com/datasets) or with your own text files for
+It will either run on a datasets hosted on our [hub](https://huggingface.co/datasets) or with your own text files for
 training and validation, you might just need to add some tweaks in the data preprocessing.
 
 The following example fine-tunes BERT on CoNLL-2003:
@@ -52,7 +52,7 @@ python run_ner.py \
 
 **Note:** This script only works with models that have a fast tokenizer (backed by the 🤗 Tokenizers library) as it
 uses special features of those tokenizers. You can check if your favorite model has a fast tokenizer in
-[this table](https://hf-mirror.com/transformers/index.html#supported-frameworks), if it doesn't you can still use the old version
+[this table](https://huggingface.co/transformers/index.html#supported-frameworks), if it doesn't you can still use the old version
 of the script.
 
 > If your model classification head dimensions do not fit the number of labels in the dataset, you can specify `--ignore_mismatched_sizes` to adapt it.
@@ -65,7 +65,7 @@ You can find the old version of the PyTorch script [here](https://github.com/hug
 
 Based on the script [run_ner_no_trainer.py](https://github.com/huggingface/transformers/blob/main/examples/pytorch/token-classification/run_ner_no_trainer.py).
 
-Like `run_ner.py`, this script allows you to fine-tune any of the models on the [hub](https://hf-mirror.com/models) on a
+Like `run_ner.py`, this script allows you to fine-tune any of the models on the [hub](https://huggingface.co/models) on a
 token classification task, either NER, POS or CHUNKS tasks or your own data in a csv or a JSON file. The main difference is that this
 script exposes the bare training loop, to allow you to quickly experiment and add any customization you would like.
 

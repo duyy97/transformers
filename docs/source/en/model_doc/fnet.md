@@ -37,7 +37,7 @@ sequence lengths on GPUs (and across relatively shorter lengths on TPUs). Finall
 and is particularly efficient at smaller model sizes; for a fixed speed and accuracy budget, small FNet models
 outperform Transformer counterparts.*
 
-This model was contributed by [gchhablani](https://hf-mirror.com/gchhablani). The original code can be found [here](https://github.com/google-research/google-research/tree/master/f_net).
+This model was contributed by [gchhablani](https://huggingface.co/gchhablani). The original code can be found [here](https://github.com/google-research/google-research/tree/master/f_net).
 
 ## Usage tips
 

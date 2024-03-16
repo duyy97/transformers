@@ -32,9 +32,9 @@ VOCAB_FILES_NAMES = {"vocab_file": "spm_char.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/speecht5_asr": "https://hf-mirror.com/microsoft/speecht5_asr/resolve/main/spm_char.model",
-        "microsoft/speecht5_tts": "https://hf-mirror.com/microsoft/speecht5_tts/resolve/main/spm_char.model",
-        "microsoft/speecht5_vc": "https://hf-mirror.com/microsoft/speecht5_vc/resolve/main/spm_char.model",
+        "microsoft/speecht5_asr": "https://huggingface.co/microsoft/speecht5_asr/resolve/main/spm_char.model",
+        "microsoft/speecht5_tts": "https://huggingface.co/microsoft/speecht5_tts/resolve/main/spm_char.model",
+        "microsoft/speecht5_vc": "https://huggingface.co/microsoft/speecht5_vc/resolve/main/spm_char.model",
     }
 }
 

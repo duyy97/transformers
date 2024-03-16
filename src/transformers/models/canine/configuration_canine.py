@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CANINE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/canine-s": "https://hf-mirror.com/google/canine-s/resolve/main/config.json",
-    # See all CANINE models at https://hf-mirror.com/models?filter=canine
+    "google/canine-s": "https://huggingface.co/google/canine-s/resolve/main/config.json",
+    # See all CANINE models at https://huggingface.co/models?filter=canine
 }
 
 
@@ -31,7 +31,7 @@ class CanineConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`CanineModel`]. It is used to instantiate an
     CANINE model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the CANINE
-    [google/canine-s](https://hf-mirror.com/google/canine-s) architecture.
+    [google/canine-s](https://huggingface.co/google/canine-s) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

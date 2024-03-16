@@ -25,12 +25,12 @@ rendered properly in your Markdown viewer.
 
 *DETR は、優れたパフォーマンスを実証しながら、物体検出における多くの手作業で設計されたコンポーネントの必要性を排除するために最近提案されました。ただし、画像特徴マップの処理における Transformer アテンション モジュールの制限により、収束が遅く、特徴の空間解像度が制限されるという問題があります。これらの問題を軽減するために、私たちは Deformable DETR を提案しました。この DETR のアテンション モジュールは、参照周囲の少数の主要なサンプリング ポイントのみに注目します。変形可能な DETR は、10 分の 1 のトレーニング エポックで、DETR よりも優れたパフォーマンス (特に小さなオブジェクトの場合) を達成できます。 COCO ベンチマークに関する広範な実験により、私たちのアプローチの有効性が実証されました。*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/deformable_detr_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/deformable_detr_architecture.png"
 alt="描画" width="600"/>
 
 <small> 変形可能な DETR アーキテクチャ。 <a href="https://arxiv.org/abs/2010.04159">元の論文</a>から抜粋。</small>
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。元のコードは [ここ](https://github.com/fundamentalvision/Deformable-DETR) にあります。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。元のコードは [ここ](https://github.com/fundamentalvision/Deformable-DETR) にあります。
 
 ## Usage tips
 

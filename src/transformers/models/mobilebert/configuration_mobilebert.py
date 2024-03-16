@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MOBILEBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/mobilebert-uncased": "https://hf-mirror.com/google/mobilebert-uncased/resolve/main/config.json"
+    "google/mobilebert-uncased": "https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json"
 }
 
 
@@ -33,7 +33,7 @@ class MobileBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MobileBertModel`] or a [`TFMobileBertModel`]. It
     is used to instantiate a MobileBERT model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the MobileBERT
-    [google/mobilebert-uncased](https://hf-mirror.com/google/mobilebert-uncased) architecture.
+    [google/mobilebert-uncased](https://huggingface.co/google/mobilebert-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

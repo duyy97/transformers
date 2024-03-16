@@ -276,7 +276,7 @@ class GPTQTestActOrderExllama(unittest.TestCase):
     """
     Test GPTQ model with exllama kernel and desc_act=True (also known as act-order).
     More information on those arguments here:
-    https://hf-mirror.com/docs/transformers/main_classes/quantization#transformers.GPTQConfig
+    https://huggingface.co/docs/transformers/main_classes/quantization#transformers.GPTQConfig
     """
 
     EXPECTED_OUTPUTS = set()
@@ -351,7 +351,7 @@ class GPTQTestExllamaV2(unittest.TestCase):
     """
     Test GPTQ model with exllamav2 kernel and desc_act=True (also known as act-order).
     More information on those arguments here:
-    https://hf-mirror.com/docs/transformers/main_classes/quantization#transformers.GPTQConfig
+    https://huggingface.co/docs/transformers/main_classes/quantization#transformers.GPTQConfig
     """
 
     EXPECTED_OUTPUTS = set()

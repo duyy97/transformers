@@ -47,7 +47,7 @@ _CHECKPOINT_FOR_DOC = "facebook/vit-mae-base"
 
 VIT_MAE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/vit-mae-base",
-    # See all ViTMAE models at https://hf-mirror.com/models?filter=vit_mae
+    # See all ViTMAE models at https://huggingface.co/models?filter=vit_mae
 ]
 
 

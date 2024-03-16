@@ -55,7 +55,7 @@ _CONFIG_FOR_DOC = "LEDConfig"
 
 LED_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "allenai/led-base-16384",
-    # See all LED models at https://hf-mirror.com/models?filter=led
+    # See all LED models at https://huggingface.co/models?filter=led
 ]
 
 

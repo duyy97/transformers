@@ -25,7 +25,7 @@ from ..auto.configuration_auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 VITMATTE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "hustvl/vitmatte-small-composition-1k": "https://hf-mirror.com/hustvl/vitmatte-small-composition-1k/resolve/main/config.json",
+    "hustvl/vitmatte-small-composition-1k": "https://huggingface.co/hustvl/vitmatte-small-composition-1k/resolve/main/config.json",
 }
 
 
@@ -34,7 +34,7 @@ class VitMatteConfig(PretrainedConfig):
     This is the configuration class to store the configuration of [`VitMatteForImageMatting`]. It is used to
     instantiate a ViTMatte model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the ViTMatte
-    [hustvl/vitmatte-small-composition-1k](https://hf-mirror.com/hustvl/vitmatte-small-composition-1k) architecture.
+    [hustvl/vitmatte-small-composition-1k](https://huggingface.co/hustvl/vitmatte-small-composition-1k) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

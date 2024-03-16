@@ -30,11 +30,11 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "squeezebert/squeezebert-uncased": (
-            "https://hf-mirror.com/squeezebert/squeezebert-uncased/resolve/main/vocab.txt"
+            "https://huggingface.co/squeezebert/squeezebert-uncased/resolve/main/vocab.txt"
         ),
-        "squeezebert/squeezebert-mnli": "https://hf-mirror.com/squeezebert/squeezebert-mnli/resolve/main/vocab.txt",
+        "squeezebert/squeezebert-mnli": "https://huggingface.co/squeezebert/squeezebert-mnli/resolve/main/vocab.txt",
         "squeezebert/squeezebert-mnli-headless": (
-            "https://hf-mirror.com/squeezebert/squeezebert-mnli-headless/resolve/main/vocab.txt"
+            "https://huggingface.co/squeezebert/squeezebert-mnli-headless/resolve/main/vocab.txt"
         ),
     }
 }

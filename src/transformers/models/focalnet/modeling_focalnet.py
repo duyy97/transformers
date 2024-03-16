@@ -56,7 +56,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 FOCALNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/focalnet-tiny",
-    # See all FocalNet models at https://hf-mirror.com/models?filter=focalnet
+    # See all FocalNet models at https://huggingface.co/models?filter=focalnet
 ]
 
 

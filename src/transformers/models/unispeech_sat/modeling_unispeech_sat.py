@@ -73,7 +73,7 @@ _XVECTOR_CHECKPOINT = "microsoft/unispeech-sat-base-plus-sv"
 _XVECTOR_EXPECTED_OUTPUT = 0.97
 
 UNISPEECH_SAT_PRETRAINED_MODEL_ARCHIVE_LIST = [
-    # See all UniSpeechSat models at https://hf-mirror.com/models?filter=unispeech_sat
+    # See all UniSpeechSat models at https://huggingface.co/models?filter=unispeech_sat
 ]
 
 
@@ -1079,7 +1079,7 @@ UNISPEECH_SAT_INPUTS_DOCSTRING = r"""
 
             `attention_mask` should only be passed if the corresponding processor has `config.return_attention_mask ==
             True`. For all models whose processor has `config.return_attention_mask == False`, such as
-            [microsoft/unispeech-sat-base-100h-libri-ft](https://hf-mirror.com/microsoft/unispeech-sat-base-100h-libri-ft),
+            [microsoft/unispeech-sat-base-100h-libri-ft](https://huggingface.co/microsoft/unispeech-sat-base-100h-libri-ft),
             `attention_mask` should **not** be passed to avoid degraded performance when doing batched inference. For
             such models `input_values` should simply be padded with 0 and passed without `attention_mask`. Be aware
             that these models also yield slightly different results depending on whether `input_values` is padded or

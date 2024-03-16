@@ -27,8 +27,8 @@ from transformers import ClvpConfig, ClvpModelForConditionalGeneration
 
 
 _MODELS = {
-    "clvp": "https://hf-mirror.com/jbetker/tortoise-tts-v2/blob/main/.models/clvp2.pth",
-    "decoder": "https://hf-mirror.com/jbetker/tortoise-tts-v2/blob/main/.models/autoregressive.pth",
+    "clvp": "https://huggingface.co/jbetker/tortoise-tts-v2/blob/main/.models/clvp2.pth",
+    "decoder": "https://huggingface.co/jbetker/tortoise-tts-v2/blob/main/.models/autoregressive.pth",
 }
 
 dim = 1024

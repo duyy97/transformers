@@ -35,7 +35,7 @@ a multilingual language model with a one million token vocabulary. XLM-V outperf
 tested on ranging from natural language inference (XNLI), question answering (MLQA, XQuAD, TyDiQA), and
 named entity recognition (WikiAnn) to low-resource tasks (Americas NLI, MasakhaNER).*
 
-This model was contributed by [stefan-it](https://hf-mirror.com/stefan-it), including detailed experiments with XLM-V on downstream tasks.
+This model was contributed by [stefan-it](https://huggingface.co/stefan-it), including detailed experiments with XLM-V on downstream tasks.
 The experiments repository can be found [here](https://github.com/stefan-it/xlm-v-experiments).
 
 ## Usage tips
@@ -44,7 +44,7 @@ The experiments repository can be found [here](https://github.com/stefan-it/xlm-
   library had to be converted.
 - The `XLMTokenizer` implementation is used to load the vocab and performs tokenization.
 
-A XLM-V (base size) model is available under the [`facebook/xlm-v-base`](https://hf-mirror.com/facebook/xlm-v-base) identifier.
+A XLM-V (base size) model is available under the [`facebook/xlm-v-base`](https://huggingface.co/facebook/xlm-v-base) identifier.
 
 <Tip>
 

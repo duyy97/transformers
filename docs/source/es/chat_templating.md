@@ -346,7 +346,7 @@ Los roles "usuario", "sistema" y "asistente" son los estándar para chat, y reco
 
 ### ¡Quiero añadir algunas plantillas de chat! ¿Cómo debo empezar?
 
-Si tienes algún modelo de chat, debes establecer su atributo `tokenizer.chat_template` y probarlo usando [`~PreTrainedTokenizer.apply_chat_template`], luego subir el tokenizador actualizado al Hub. Esto se aplica incluso si no eres el propietario del modelo: si estás usando un modelo con una plantilla de chat vacía o que todavía está utilizando la plantilla predeterminada de clase, por favor abre una solicitud de extracción [pull request](https://hf-mirror.com/docs/hub/repositories-pull-requests-discussions) al repositorio del modelo para que este atributo se pueda establecer correctamente.
+Si tienes algún modelo de chat, debes establecer su atributo `tokenizer.chat_template` y probarlo usando [`~PreTrainedTokenizer.apply_chat_template`], luego subir el tokenizador actualizado al Hub. Esto se aplica incluso si no eres el propietario del modelo: si estás usando un modelo con una plantilla de chat vacía o que todavía está utilizando la plantilla predeterminada de clase, por favor abre una solicitud de extracción [pull request](https://huggingface.co/docs/hub/repositories-pull-requests-discussions) al repositorio del modelo para que este atributo se pueda establecer correctamente.
 
 Una vez que se establece el atributo, ¡eso es todo, has terminado! `tokenizer.apply_chat_template` ahora funcionará correctamente para ese modelo, ¡lo que significa que también es compatible automáticamente en lugares como `TextGenerationPipeline`!
 

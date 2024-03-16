@@ -30,8 +30,8 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google/fnet-base": "https://hf-mirror.com/google/fnet-base/resolve/main/spiece.model",
-        "google/fnet-large": "https://hf-mirror.com/google/fnet-large/resolve/main/spiece.model",
+        "google/fnet-base": "https://huggingface.co/google/fnet-base/resolve/main/spiece.model",
+        "google/fnet-large": "https://huggingface.co/google/fnet-large/resolve/main/spiece.model",
     },
 }
 

@@ -154,7 +154,7 @@ _CHECKPOINT_FOR_DOC = "sensetime/deformable-detr"
 
 DEFORMABLE_DETR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "sensetime/deformable-detr",
-    # See all Deformable DETR models at https://hf-mirror.com/models?filter=deformable-detr
+    # See all Deformable DETR models at https://huggingface.co/models?filter=deformable-detr
 ]
 
 

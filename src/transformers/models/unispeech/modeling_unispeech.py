@@ -59,7 +59,7 @@ _CTC_EXPECTED_LOSS = 17.17
 UNISPEECH_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/unispeech-large-1500h-cv",
     "microsoft/unispeech-large-multi-lingual-1500h-cv",
-    # See all UniSpeech models at https://hf-mirror.com/models?filter=unispeech
+    # See all UniSpeech models at https://huggingface.co/models?filter=unispeech
 ]
 
 

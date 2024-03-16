@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Pipelines for inference
 
-The [`pipeline`] makes it simple to use any model from the [Hub](https://hf-mirror.com/models) for inference on any language, computer vision, speech, and multimodal tasks. Even if you don't have experience with a specific modality or aren't familiar with the underlying code behind the models, you can still use them for inference with the [`pipeline`]! This tutorial will teach you to:
+The [`pipeline`] makes it simple to use any model from the [Hub](https://huggingface.co/models) for inference on any language, computer vision, speech, and multimodal tasks. Even if you don't have experience with a specific modality or aren't familiar with the underlying code behind the models, you can still use them for inference with the [`pipeline`]! This tutorial will teach you to:
 
 * Use a [`pipeline`] for inference.
 * Use a specific tokenizer or model.
@@ -47,14 +47,14 @@ speech-to-text.
 2. Pass your input to the [`pipeline`]. In the case of speech recognition, this is an audio input file:
 
 ```py
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP LIVE UP THE TRUE MEANING OF ITS TREES'}
 ```
 
-Not the result you had in mind? Check out some of the [most downloaded automatic speech recognition models](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition&sort=trending) 
+Not the result you had in mind? Check out some of the [most downloaded automatic speech recognition models](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition&sort=trending) 
 on the Hub to see if you can get a better transcription.
 
-Let's try the [Whisper large-v2](https://hf-mirror.com/openai/whisper-large) model from OpenAI. Whisper was released 
+Let's try the [Whisper large-v2](https://huggingface.co/openai/whisper-large) model from OpenAI. Whisper was released 
 2 years later than Wav2Vec2, and was trained on close to 10x more data. As such, it beats Wav2Vec2 on most downstream 
 benchmarks. It also has the added benefit of predicting punctuation and casing, neither of which are possible with  
 Wav2Vec2.
@@ -63,11 +63,11 @@ Let's give it a try here to see how it performs:
 
 ```py
 >>> transcriber = pipeline(model="openai/whisper-large-v2")
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
-Now this result looks more accurate! For a deep-dive comparison on Wav2Vec2 vs Whisper, refer to the [Audio Transformers Course](https://hf-mirror.com/learn/audio-course/chapter5/asr_models).
+Now this result looks more accurate! For a deep-dive comparison on Wav2Vec2 vs Whisper, refer to the [Audio Transformers Course](https://huggingface.co/learn/audio-course/chapter5/asr_models).
 We really encourage you to check out the Hub for models in different languages, models specialized in your field, and more.
 You can check out and compare model results directly from your browser on the Hub to see if it fits or 
 handles corner cases better than other ones.
@@ -78,8 +78,8 @@ If you have several inputs, you can pass your input as a list:
 ```py
 transcriber(
     [
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac",
     ]
 )
 ```
@@ -114,7 +114,7 @@ transcriber = pipeline(model="openai/whisper-large-v2", device=0)
 ```
 
 If the model is too large for a single GPU and you are using PyTorch, you can set `device_map="auto"` to automatically 
-determine how to load and store the model weights. Using the `device_map` argument requires the 🤗 [Accelerate](https://hf-mirror.com/docs/accelerate)
+determine how to load and store the model weights. Using the `device_map` argument requires the 🤗 [Accelerate](https://huggingface.co/docs/accelerate)
 package:
 
 ```bash
@@ -131,13 +131,13 @@ Note that if  `device_map="auto"` is passed, there is no need to add the argumen
 
 ### Batch size
 
-By default, pipelines will not batch inference for reasons explained in detail [here](https://hf-mirror.com/docs/transformers/main_classes/pipelines#pipeline-batching). The reason is that batching is not necessarily faster, and can actually be quite slower in some cases.
+By default, pipelines will not batch inference for reasons explained in detail [here](https://huggingface.co/docs/transformers/main_classes/pipelines#pipeline-batching). The reason is that batching is not necessarily faster, and can actually be quite slower in some cases.
 
 But if it works in your use case, you can use:
 
 ```py
 transcriber = pipeline(model="openai/whisper-large-v2", device=0, batch_size=2)
-audio_filenames = [f"https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/{i}.flac" for i in range(1, 5)]
+audio_filenames = [f"https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/{i}.flac" for i in range(1, 5)]
 texts = transcriber(audio_filenames)
 ```
 
@@ -155,7 +155,7 @@ For instance, the [`transformers.AutomaticSpeechRecognitionPipeline.__call__`] m
 
 ```py
 >>> transcriber = pipeline(model="openai/whisper-large-v2", return_timestamps=True)
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.', 'chunks': [{'timestamp': (0.0, 11.88), 'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its'}, {'timestamp': (11.88, 12.38), 'text': ' creed.'}]}
 ```
 
@@ -168,7 +168,7 @@ cannot handle on its own:
 
 ```python
 >>> transcriber = pipeline(model="openai/whisper-large-v2", chunk_length_s=30, return_timestamps=True)
->>> transcriber("https://hf-mirror.com/datasets/sanchit-gandhi/librispeech_long/resolve/main/audio.wav")
+>>> transcriber("https://huggingface.co/datasets/sanchit-gandhi/librispeech_long/resolve/main/audio.wav")
 {'text': " Chapter 16. I might have told you of the beginning of this liaison in a few lines, but I wanted you to see every step by which we came.  I, too, agree to whatever Marguerite wished, Marguerite to be unable to live apart from me. It was the day after the evening...
 ```
 
@@ -229,14 +229,14 @@ Using a [`pipeline`] for vision tasks is practically identical.
 
 Specify your task and pass your image to the classifier. The image can be a link, a local path or a base64-encoded image. For example, what species of cat is shown below?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
@@ -264,14 +264,14 @@ Using a [`pipeline`] for NLP tasks is practically identical.
 
 The [`pipeline`] supports more than one modality. For example, a visual question answering (VQA) task combines text and image. Feel free to use any image link you like and a question you want to ask about the image. The image can be a URL or a local path to the image.
 
-For example, if you use this [invoice image](https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png):
+For example, if you use this [invoice image](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png):
 
 ```py
 >>> from transformers import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> vqa(
-...     image="https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
+...     image="https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
 ...     question="What is the invoice number?",
 ... )
 [{'score': 0.42515, 'answer': 'us-001', 'start': 16, 'end': 16}]

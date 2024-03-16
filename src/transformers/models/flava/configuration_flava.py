@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 FLAVA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/flava-full": "https://hf-mirror.com/facebook/flava-full/resolve/main/config.json",
+    "facebook/flava-full": "https://huggingface.co/facebook/flava-full/resolve/main/config.json",
 }
 
 
@@ -34,7 +34,7 @@ class FlavaImageConfig(PretrainedConfig):
     FLAVA model according to the specified arguments, defining the model architecture.
 
     Instantiating a configuration with the defaults will yield a similar configuration to that of the FLAVA
-    [facebook/flava-full](https://hf-mirror.com/facebook/flava-full) architecture.
+    [facebook/flava-full](https://huggingface.co/facebook/flava-full) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -153,7 +153,7 @@ class FlavaTextConfig(PretrainedConfig):
     FLAVA model according to the specified arguments, defining the model architecture.
 
     Instantiating a configuration with the defaults will yield a similar configuration to that of the FLAVA
-    [facebook/flava-full](https://hf-mirror.com/facebook/flava-full) architecture.
+    [facebook/flava-full](https://huggingface.co/facebook/flava-full) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -283,7 +283,7 @@ class FlavaMultimodalConfig(PretrainedConfig):
     an FLAVA model according to the specified arguments, defining the model architecture.
 
     Instantiating a configuration with the defaults will yield a similar configuration to that of the FLAVA
-    [facebook/flava-full](https://hf-mirror.com/facebook/flava-full) architecture.
+    [facebook/flava-full](https://huggingface.co/facebook/flava-full) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -387,7 +387,7 @@ class FlavaImageCodebookConfig(PretrainedConfig):
     [`FlavaImageCodebookConfig`] is the configuration class to store the configuration of a [`FlavaImageCodebook`]. It
     is used to instantiate an FLAVA model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the FLAVA
-    [facebook/flava-image-codebook](https://hf-mirror.com/facebook/flava-image-codebook) architecture.
+    [facebook/flava-image-codebook](https://huggingface.co/facebook/flava-image-codebook) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -470,7 +470,7 @@ class FlavaConfig(PretrainedConfig):
     [`FlavaConfig`] is the configuration class to store the configuration of a [`FlavaModel`]. It is used to
     instantiate FLAVA model according to the specified arguments, defining the text model, image model, image codebook
     and multimodal model configs. Instantiating a configuration with the defaults will yield a similar configuration to
-    that of the FLAVA [facebook/flava-full](https://hf-mirror.com/facebook/flava-full) architecture.
+    that of the FLAVA [facebook/flava-full](https://huggingface.co/facebook/flava-full) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -23,8 +23,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 LED_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "allenai/led-base-16384": "https://hf-mirror.com/allenai/led-base-16384/resolve/main/config.json",
-    # See all LED models at https://hf-mirror.com/models?filter=led
+    "allenai/led-base-16384": "https://huggingface.co/allenai/led-base-16384/resolve/main/config.json",
+    # See all LED models at https://huggingface.co/models?filter=led
 }
 
 
@@ -33,7 +33,7 @@ class LEDConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LEDModel`]. It is used to instantiate an LED
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the LED
-    [allenai/led-base-16384](https://hf-mirror.com/allenai/led-base-16384) architecture.
+    [allenai/led-base-16384](https://huggingface.co/allenai/led-base-16384) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -38,7 +38,7 @@ _CHECKPOINT_FOR_DOC = "facebook/timesformer"
 
 TIMESFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/timesformer-base-finetuned-k400",
-    # See all TimeSformer models at https://hf-mirror.com/models?filter=timesformer
+    # See all TimeSformer models at https://huggingface.co/models?filter=timesformer
 ]
 
 

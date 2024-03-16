@@ -21,9 +21,9 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 PEGASUS_X_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/pegasus-x-base": "https://hf-mirror.com/google/pegasus-x-base/resolve/main/config.json",
-    "google/pegasus-x-large": "https://hf-mirror.com/google/pegasus-x-large/resolve/main/config.json",
-    # See all PEGASUS-X models at https://hf-mirror.com/models?filter=pegasus-x
+    "google/pegasus-x-base": "https://huggingface.co/google/pegasus-x-base/resolve/main/config.json",
+    "google/pegasus-x-large": "https://huggingface.co/google/pegasus-x-large/resolve/main/config.json",
+    # See all PEGASUS-X models at https://huggingface.co/models?filter=pegasus-x
 }
 
 
@@ -32,7 +32,7 @@ class PegasusXConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`PegasusXModel`]. It is used to instantiate a
     PEGASUS-X model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the PEGASUS-X
-    [google/pegasus-x-large](https://hf-mirror.com/google/pegasus-x-large) architecture.
+    [google/pegasus-x-large](https://huggingface.co/google/pegasus-x-large) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

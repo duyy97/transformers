@@ -209,7 +209,7 @@ configuration 파일을 딕셔너리로 저장하거나 사용자 정의 configu
 텍스트 데이터에 모델을 사용하기 전에 마지막으로 필요한 기본 클래스는 원시 텍스트를 텐서로 변환하는 [토크나이저](main_classes/tokenizer)입니다. 🤗 Transformers에 사용할 수 있는 토크나이저는 두 가지 유형이 있습니다:
 
 - [`PreTrainedTokenizer`]: 파이썬으로 구현된 토크나이저입니다.
-- [`PreTrainedTokenizerFast`]: Rust 기반 [🤗 Tokenizer](https://hf-mirror.com/docs/tokenizers/python/latest/) 라이브러리로 만들어진 토크나이저입니다. 이 토크나이저는 Rust로 구현되어 배치 토큰화에서 특히 빠릅니다. 빠른 토크나이저는 토큰을 원래 단어나 문자에 매핑하는 *오프셋 매핑*과 같은 추가 메소드도 제공합니다.
+- [`PreTrainedTokenizerFast`]: Rust 기반 [🤗 Tokenizer](https://huggingface.co/docs/tokenizers/python/latest/) 라이브러리로 만들어진 토크나이저입니다. 이 토크나이저는 Rust로 구현되어 배치 토큰화에서 특히 빠릅니다. 빠른 토크나이저는 토큰을 원래 단어나 문자에 매핑하는 *오프셋 매핑*과 같은 추가 메소드도 제공합니다.
 두 토크나이저 모두 인코딩 및 디코딩, 새 토큰 추가, 특수 토큰 관리와 같은 일반적인 방법을 지원합니다.
 
 <Tip warning={true}>

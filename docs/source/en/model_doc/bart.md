@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # BART
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=bart">
+<a href="https://huggingface.co/models?filter=bart">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-bart-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/bart-large-mnli">
+<a href="https://huggingface.co/spaces/docs-demos/bart-large-mnli">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -42,7 +42,7 @@ According to the abstract,
   state-of-the-art results on a range of abstractive dialogue, question answering, and summarization tasks, with gains
   of up to 6 ROUGE.
 
-This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer). The authors' code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/bart).
+This model was contributed by [sshleifer](https://huggingface.co/sshleifer). The authors' code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/bart).
 
 ## Usage tips:
 
@@ -93,14 +93,14 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="summarization"/>
 
-- A blog post on [Distributed Training: Train BART/T5 for Summarization using 🤗 Transformers and Amazon SageMaker](https://hf-mirror.com/blog/sagemaker-distributed-training-seq2seq).
+- A blog post on [Distributed Training: Train BART/T5 for Summarization using 🤗 Transformers and Amazon SageMaker](https://huggingface.co/blog/sagemaker-distributed-training-seq2seq).
 - A notebook on how to [finetune BART for summarization with fastai using blurr](https://colab.research.google.com/github/ohmeow/ohmeow_website/blob/master/posts/2021-05-25-mbart-sequence-classification-with-blurr.ipynb). 🌎
 - A notebook on how to [finetune BART for summarization in two languages with Trainer class](https://colab.research.google.com/github/elsanns/xai-nlp-notebooks/blob/master/fine_tune_bart_summarization_two_langs.ipynb). 🌎
 - [`BartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/summarization.ipynb).
 - [`TFBartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/summarization-tf.ipynb).
 - [`FlaxBartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/summarization).
-- An example of how to train [`BartForConditionalGeneration`] with a Hugging Face `datasets` object can be found in this [forum discussion](https://discuss.hf-mirror.com/t/train-bart-for-conditional-generation-e-g-summarization/1904)
-- [Summarization](https://hf-mirror.com/course/chapter7/5?fw=pt#summarization) chapter of the 🤗 Hugging Face course.
+- An example of how to train [`BartForConditionalGeneration`] with a Hugging Face `datasets` object can be found in this [forum discussion](https://discuss.huggingface.co/t/train-bart-for-conditional-generation-e-g-summarization/1904)
+- [Summarization](https://huggingface.co/course/chapter7/5?fw=pt#summarization) chapter of the 🤗 Hugging Face course.
 - [Summarization task guide](../tasks/summarization)
 
 <PipelineTag pipeline="fill-mask"/>
@@ -108,7 +108,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 - [`BartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFBartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxBartForConditionalGeneration`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb).
-- [Masked language modeling](https://hf-mirror.com/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Masked language modeling](https://huggingface.co/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Masked language modeling task guide](../tasks/masked_language_modeling)
 
 <PipelineTag pipeline="translation"/>
@@ -122,7 +122,7 @@ See also:
 - [Text classification task guide](../tasks/sequence_classification)
 - [Question answering task guide](../tasks/question_answering)
 - [Causal language modeling task guide](../tasks/language_modeling)
-- [Distilled checkpoints](https://hf-mirror.com/models?search=distilbart) are described in this [paper](https://arxiv.org/abs/2010.13002).
+- [Distilled checkpoints](https://huggingface.co/models?search=distilbart) are described in this [paper](https://arxiv.org/abs/2010.13002).
 
 ## BartConfig
 

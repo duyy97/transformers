@@ -37,7 +37,7 @@ rendered properly in your Markdown viewer.
 事前学習済みモデルをファインチューニングする前に、データセットをダウンロードしてトレーニング用に準備する必要があります。
 前のチュートリアルでは、トレーニングデータの処理方法を説明しましたが、これからはそれらのスキルを活かす機会があります！
 
-まず、[Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full)データセットを読み込んでみましょう：
+まず、[Yelp Reviews](https://huggingface.co/datasets/yelp_review_full)データセットを読み込んでみましょう：
 
 ```python
 >>> from datasets import load_dataset
@@ -49,7 +49,7 @@ rendered properly in your Markdown viewer.
 ```
 
 トークナイザがテキストを処理し、可変のシーケンス長を処理するためのパディングと切り捨て戦略を含める必要があることをご存知の通り、
-データセットを1つのステップで処理するには、🤗 Datasets の [`map`](https://hf-mirror.com/docs/datasets/process#map) メソッドを使用して、
+データセットを1つのステップで処理するには、🤗 Datasets の [`map`](https://huggingface.co/docs/datasets/process#map) メソッドを使用して、
 データセット全体に前処理関数を適用します：
 
 ```py
@@ -86,7 +86,7 @@ rendered properly in your Markdown viewer.
 🤗 Transformersは、🤗 Transformersモデルのトレーニングを最適化した[`Trainer`]クラスを提供し、独自のトレーニングループを手動で記述せずにトレーニングを開始しやすくしています。
 [`Trainer`] APIは、ログ記録、勾配累積、混合精度など、さまざまなトレーニングオプションと機能をサポートしています。
 
-まず、モデルをロードし、予想されるラベルの数を指定します。Yelp Review [dataset card](https://hf-mirror.com/datasets/yelp_review_full#data-fields)から、5つのラベルがあることがわかります：
+まず、モデルをロードし、予想されるラベルの数を指定します。Yelp Review [dataset card](https://huggingface.co/datasets/yelp_review_full#data-fields)から、5つのラベルがあることがわかります：
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -104,7 +104,7 @@ BERTモデルの事前学習済みのヘッドは破棄され、ランダムに�
 ### Training Hyperparameters
 
 次に、トレーニングオプションをアクティベートするためのすべてのハイパーパラメータと、調整できるハイパーパラメータを含む[`TrainingArguments`]クラスを作成します。
-このチュートリアルでは、デフォルトのトレーニング[ハイパーパラメータ](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments)を使用して開始できますが、最適な設定を見つけるためにこれらを実験しても構いません。
+このチュートリアルでは、デフォルトのトレーニング[ハイパーパラメータ](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)を使用して開始できますが、最適な設定を見つけるためにこれらを実験しても構いません。
 
 トレーニングのチェックポイントを保存する場所を指定します：
 
@@ -117,7 +117,7 @@ BERTモデルの事前学習済みのヘッドは破棄され、ランダムに�
 ### Evaluate
 
 [`Trainer`]はトレーニング中に自動的にモデルのパフォーマンスを評価しません。メトリクスを計算して報告する関数を[`Trainer`]に渡す必要があります。
-[🤗 Evaluate](https://hf-mirror.com/docs/evaluate/index)ライブラリでは、[`evaluate.load`]関数を使用して読み込むことができるシンプルな[`accuracy`](https://hf-mirror.com/spaces/evaluate-metric/accuracy)関数が提供されています（詳細については[こちらのクイックツアー](https://hf-mirror.com/docs/evaluate/a_quick_tour)を参照してください）：
+[🤗 Evaluate](https://huggingface.co/docs/evaluate/index)ライブラリでは、[`evaluate.load`]関数を使用して読み込むことができるシンプルな[`accuracy`](https://huggingface.co/spaces/evaluate-metric/accuracy)関数が提供されています（詳細については[こちらのクイックツアー](https://huggingface.co/docs/evaluate/a_quick_tour)を参照してください）：
 
 ```python
 >>> import numpy as np
@@ -180,7 +180,7 @@ Keras APIを使用して🤗 TransformersモデルをTensorFlowでトレーニ�
 複雑なことをする前に、まずそれを試してみましょう。
 
 まず、データセットを読み込みます。GLUEベンチマークからCoLAデータセットを使用します
-([GLUE Banchmark](https://hf-mirror.com/datasets/glue))、これは単純なバイナリテキスト分類タスクです。今のところトレーニング分割のみを使用します。
+([GLUE Banchmark](https://huggingface.co/datasets/glue))、これは単純なバイナリテキスト分類タスクです。今のところトレーニング分割のみを使用します。
 
 ```py
 from datasets import load_dataset
@@ -259,7 +259,7 @@ Hugging Faceのデータセットはデフォルトでディスクに保存さ�
 代わりに`collate_fn`引数を使用して、サンプルのリストをバッチに変換し、必要な前処理を適用する関数を渡すことができます。
 このアプローチを実際に使用した例については、
 [examples](https://github.com/huggingface/transformers/tree/main/examples)や
-[notebooks](https://hf-mirror.com/docs/transformers/notebooks)をご覧ください。
+[notebooks](https://huggingface.co/docs/transformers/notebooks)をご覧ください。
 
 `tf.data.Dataset`を作成したら、以前と同様にモデルをコンパイルし、適合させることができます：
 

@@ -43,7 +43,7 @@ _CHECKPOINT_FOR_DOC = "microsoft/xclip-base-patch32"
 
 XCLIP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/xclip-base-patch32",
-    # See all X-CLIP models at https://hf-mirror.com/models?filter=x-clip
+    # See all X-CLIP models at https://huggingface.co/models?filter=x-clip
 ]
 
 

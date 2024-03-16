@@ -25,12 +25,12 @@ The abstract from the paper is the following:
 
 *Pre-training video transformers on extra large-scale datasets is generally required to achieve premier performance on relatively small datasets. In this paper, we show that video masked autoencoders (VideoMAE) are data-efficient learners for self-supervised video pre-training (SSVP). We are inspired by the recent ImageMAE and propose customized video tube masking and reconstruction. These simple designs turn out to be effective for overcoming information leakage caused by the temporal correlation during video reconstruction. We obtain three important findings on SSVP: (1) An extremely high proportion of masking ratio (i.e., 90% to 95%) still yields favorable performance of VideoMAE. The temporally redundant video content enables higher masking ratio than that of images. (2) VideoMAE achieves impressive results on very small datasets (i.e., around 3k-4k videos) without using any extra data. This is partially ascribed to the challenging task of video reconstruction to enforce high-level structure learning. (3) VideoMAE shows that data quality is more important than data quantity for SSVP. Domain shift between pre-training and target datasets are important issues in SSVP. Notably, our VideoMAE with the vanilla ViT backbone can achieve 83.9% on Kinects-400, 75.3% on Something-Something V2, 90.8% on UCF101, and 61.1% on HMDB51 without using any extra data.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/videomae_architecture.jpeg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/videomae_architecture.jpeg"
 alt="drawing" width="600"/>
 
 <small> VideoMAE pre-training. Taken from the <a href="https://arxiv.org/abs/2203.12602">original paper</a>. </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr).
+This model was contributed by [nielsr](https://huggingface.co/nielsr).
 The original code can be found [here](https://github.com/MCG-NJU/VideoMAE).
 
 ## Resources
@@ -43,7 +43,7 @@ review it! The resource should ideally demonstrate something new instead of dupl
 - [A notebook](https://github.com/huggingface/notebooks/blob/main/examples/video_classification.ipynb) that shows how
 to fine-tune a VideoMAE model on a custom dataset.
 - [Video classification task guide](../tasks/video_classification)
-- [A 🤗 Space](https://hf-mirror.com/spaces/sayakpaul/video-classification-ucf101-subset) showing how to perform inference with a video classification model.
+- [A 🤗 Space](https://huggingface.co/spaces/sayakpaul/video-classification-ucf101-subset) showing how to perform inference with a video classification model.
 
 ## VideoMAEConfig
 

@@ -44,7 +44,7 @@ TF_SAM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/sam-vit-huge",
     "facebook/sam-vit-large",
     "facebook/sam-vit-base",
-    # See all SAM models at https://hf-mirror.com/models?filter=sam
+    # See all SAM models at https://huggingface.co/models?filter=sam
 ]
 
 

@@ -34,7 +34,7 @@ language model, which could facilitate several downstream Chinese NLP tasks, suc
 cloze test, and language understanding. Extensive experiments demonstrate that CPM achieves strong performance on many
 NLP tasks in the settings of few-shot (even zero-shot) learning.*
 
-This model was contributed by [canwenxu](https://hf-mirror.com/canwenxu). The original implementation can be found
+This model was contributed by [canwenxu](https://huggingface.co/canwenxu). The original implementation can be found
 here: https://github.com/TsinghuaAI/CPM-Generate
 
 

@@ -29,7 +29,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "prophetnet.tokenizer"}
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "microsoft/prophetnet-large-uncased": (
-            "https://hf-mirror.com/microsoft/prophetnet-large-uncased/resolve/main/prophetnet.tokenizer"
+            "https://huggingface.co/microsoft/prophetnet-large-uncased/resolve/main/prophetnet.tokenizer"
         ),
     }
 }

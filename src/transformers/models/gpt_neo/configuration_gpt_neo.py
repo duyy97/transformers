@@ -26,8 +26,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 GPT_NEO_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "EleutherAI/gpt-neo-1.3B": "https://hf-mirror.com/EleutherAI/gpt-neo-1.3B/resolve/main/config.json",
-    # See all GPTNeo models at https://hf-mirror.com/models?filter=gpt_neo
+    "EleutherAI/gpt-neo-1.3B": "https://huggingface.co/EleutherAI/gpt-neo-1.3B/resolve/main/config.json",
+    # See all GPTNeo models at https://huggingface.co/models?filter=gpt_neo
 }
 
 
@@ -36,7 +36,7 @@ class GPTNeoConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GPTNeoModel`]. It is used to instantiate a GPT
     Neo model according to the specified arguments, defining the model architecture. Instantiating a configuration with
     the defaults will yield a similar configuration to that of the GPTNeo
-    [EleutherAI/gpt-neo-1.3B](https://hf-mirror.com/EleutherAI/gpt-neo-1.3B) architecture.
+    [EleutherAI/gpt-neo-1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

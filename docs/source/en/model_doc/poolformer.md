@@ -28,11 +28,11 @@ The figure below illustrates the architecture of PoolFormer. Taken from the [ori
 
 <img width="600" src="https://user-images.githubusercontent.com/15921929/142746124-1ab7635d-2536-4a0e-ad43-b4fe2c5a525d.png"/>
 
-This model was contributed by [heytanay](https://hf-mirror.com/heytanay). The original code can be found [here](https://github.com/sail-sg/poolformer).
+This model was contributed by [heytanay](https://huggingface.co/heytanay). The original code can be found [here](https://github.com/sail-sg/poolformer).
 
 ## Usage tips
 
-- PoolFormer has a hierarchical architecture, where instead of Attention, a simple Average Pooling layer is present. All checkpoints of the model can be found on the [hub](https://hf-mirror.com/models?other=poolformer).
+- PoolFormer has a hierarchical architecture, where instead of Attention, a simple Average Pooling layer is present. All checkpoints of the model can be found on the [hub](https://huggingface.co/models?other=poolformer).
 - One can use [`PoolFormerImageProcessor`] to prepare images for the model.
 - As most models, PoolFormer comes in different sizes, the details of which can be found in the table below.
 

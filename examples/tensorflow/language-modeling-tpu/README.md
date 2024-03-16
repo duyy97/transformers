@@ -1,10 +1,10 @@
 # Training a masked language model end-to-end from scratch on TPUs
 
 In this example, we're going to demonstrate how to train a TensorFlow model from 🤗 Transformers from scratch. If you're interested in some background theory on training Hugging Face models with TensorFlow on TPU, please check out our 
-[tutorial doc](https://hf-mirror.com/docs/transformers/main/perf_train_tpu_tf) on this topic!
+[tutorial doc](https://huggingface.co/docs/transformers/main/perf_train_tpu_tf) on this topic!
 If you're interested in smaller-scale TPU training from a pre-trained checkpoint, you can also check out the  [TPU fine-tuning example](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb).
 
-This example will demonstrate pre-training language models at the 100M-1B parameter scale, similar to BERT or GPT-2. More concretely, we will show how to train a [RoBERTa](https://hf-mirror.com/docs/transformers/model_doc/roberta) (base model) from scratch on the [WikiText dataset (v1)](https://hf-mirror.com/datasets/wikitext).
+This example will demonstrate pre-training language models at the 100M-1B parameter scale, similar to BERT or GPT-2. More concretely, we will show how to train a [RoBERTa](https://huggingface.co/docs/transformers/model_doc/roberta) (base model) from scratch on the [WikiText dataset (v1)](https://huggingface.co/datasets/wikitext).
 
 We've tried to ensure that all the practices we show you here are scalable, though - with relatively few changes, the code could be scaled up to much larger models. 
 
@@ -33,7 +33,7 @@ To train a language model from scratch, the first step is to tokenize text. In m
 python train_unigram.py --batch_size 1000 --vocab_size 25000 --export_to_hub
 ```
 
-The script will automatically load the `train` split of the WikiText dataset and train a [Unigram tokenizer](https://hf-mirror.com/course/chapter6/7?fw=pt) on it.
+The script will automatically load the `train` split of the WikiText dataset and train a [Unigram tokenizer](https://huggingface.co/course/chapter6/7?fw=pt) on it.
 
 > 💡 **Note**: In order for `export_to_hub` to work, you must authenticate yourself with the `huggingface-cli`. Run `huggingface-cli login` and follow the on-screen instructions.
 
@@ -72,7 +72,7 @@ python3 run_mlm.py \
 ```
 
 If you had specified a `hub_model_id` while launching training, then your model will be pushed to a model repository on the Hugging Face Hub. You can find such an example repository here:
-[tf-tpu/roberta-base-epochs-500-no-wd](https://hf-mirror.com/tf-tpu/roberta-base-epochs-500-no-wd).
+[tf-tpu/roberta-base-epochs-500-no-wd](https://huggingface.co/tf-tpu/roberta-base-epochs-500-no-wd).
 
 ## Inference
 
@@ -107,4 +107,4 @@ unmasker("Goal of my life is to [MASK].")
   'sequence': 'Goal of my life is to have.'}]
 ```
 
-You can also try out inference using the [Inference Widget](https://hf-mirror.com/tf-tpu/roberta-base-epochs-500-no-wd?text=Goal+of+my+life+is+to+%5BMASK%5D.) from the model page.
+You can also try out inference using the [Inference Widget](https://huggingface.co/tf-tpu/roberta-base-epochs-500-no-wd?text=Goal+of+my+life+is+to+%5BMASK%5D.) from the model page.

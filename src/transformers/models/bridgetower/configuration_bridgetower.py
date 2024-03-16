@@ -24,9 +24,9 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 BRIDGETOWER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "BridgeTower/bridgetower-base": "https://hf-mirror.com/BridgeTower/bridgetower-base/blob/main/config.json",
+    "BridgeTower/bridgetower-base": "https://huggingface.co/BridgeTower/bridgetower-base/blob/main/config.json",
     "BridgeTower/bridgetower-base-itm-mlm": (
-        "https://hf-mirror.com/BridgeTower/bridgetower-base-itm-mlm/blob/main/config.json"
+        "https://huggingface.co/BridgeTower/bridgetower-base-itm-mlm/blob/main/config.json"
     ),
 }
 
@@ -35,7 +35,7 @@ class BridgeTowerVisionConfig(PretrainedConfig):
     r"""
     This is the configuration class to store the vision configuration of a [`BridgeTowerModel`]. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the bridgetower-base
-    [BridgeTower/bridgetower-base](https://hf-mirror.com/BridgeTower/bridgetower-base/) architecture.
+    [BridgeTower/bridgetower-base](https://huggingface.co/BridgeTower/bridgetower-base/) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -122,7 +122,7 @@ class BridgeTowerTextConfig(PretrainedConfig):
     r"""
     This is the configuration class to store the text configuration of a [`BridgeTowerModel`]. The default values here
     are copied from RoBERTa. Instantiating a configuration with the defaults will yield a similar configuration to that
-    of the bridgetower-base [BridegTower/bridgetower-base](https://hf-mirror.com/BridgeTower/bridgetower-base/)
+    of the bridgetower-base [BridegTower/bridgetower-base](https://huggingface.co/BridgeTower/bridgetower-base/)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
@@ -245,7 +245,7 @@ class BridgeTowerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BridgeTowerModel`]. It is used to instantiate a
     BridgeTower model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the bridgetower-base
-    [BridgeTower/bridgetower-base](https://hf-mirror.com/BridgeTower/bridgetower-base/) architecture.
+    [BridgeTower/bridgetower-base](https://huggingface.co/BridgeTower/bridgetower-base/) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

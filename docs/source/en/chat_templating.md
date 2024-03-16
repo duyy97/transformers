@@ -414,7 +414,7 @@ to these roles - templating is extremely flexible, and any string can be a role.
 If you have any chat models, you should set their `tokenizer.chat_template` attribute and test it using
 [`~PreTrainedTokenizer.apply_chat_template`], then push the updated tokenizer to the Hub. This applies even if you're
 not the model owner - if you're using a model with an empty chat template, or one that's still using the default class
-template, please open a [pull request](https://hf-mirror.com/docs/hub/repositories-pull-requests-discussions) to the model repository so that this attribute can be set properly!
+template, please open a [pull request](https://huggingface.co/docs/hub/repositories-pull-requests-discussions) to the model repository so that this attribute can be set properly!
 
 Once the attribute is set, that's it, you're done! `tokenizer.apply_chat_template` will now work correctly for that
 model, which means it is also automatically supported in places like `TextGenerationPipeline`!

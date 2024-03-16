@@ -72,15 +72,15 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     tokenizer_name_or_path: Optional[str] = field(
         default=None,
-        metadata={"help": "Path to pretrained tokenizer or tokenizer identifier from hf-mirror.com/models"},
+        metadata={"help": "Path to pretrained tokenizer or tokenizer identifier from huggingface.co/models"},
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     final_dropout: float = field(
         default=0.0,

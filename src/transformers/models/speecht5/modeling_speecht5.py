@@ -51,7 +51,7 @@ SPEECHT5_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/speecht5_asr",
     "microsoft/speecht5_tts",
     "microsoft/speecht5_vc",
-    # See all SpeechT5 models at https://hf-mirror.com/models?filter=speecht5
+    # See all SpeechT5 models at https://huggingface.co/models?filter=speecht5
 ]
 
 
@@ -2472,7 +2472,7 @@ def _generate_speech(
         raise ValueError(
             """`speaker_embeddings` must be specified. For example, you can use a speaker embeddings by following
                     the code snippet provided in this link:
-                    https://hf-mirror.com/datasets/Matthijs/cmu-arctic-xvectors
+                    https://huggingface.co/datasets/Matthijs/cmu-arctic-xvectors
                     """
         )
 

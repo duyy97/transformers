@@ -89,7 +89,7 @@ Importa [`pipeline`] e specifica il compito che vuoi completare:
 >>> classificatore = pipeline("sentiment-analysis", model="MilaNLProc/feel-it-italian-sentiment")
 ```
 
-La pipeline scarica e salva il [modello pre-allenato](https://hf-mirror.com/MilaNLProc/feel-it-italian-sentiment) e il tokenizer per l'analisi del sentimento. Se non avessimo scelto un modello, la pipeline ne avrebbe scelto uno di default. Ora puoi utilizzare il `classifier` sul tuo testo obiettivo:
+La pipeline scarica e salva il [modello pre-allenato](https://huggingface.co/MilaNLProc/feel-it-italian-sentiment) e il tokenizer per l'analisi del sentimento. Se non avessimo scelto un modello, la pipeline ne avrebbe scelto uno di default. Ora puoi utilizzare il `classifier` sul tuo testo obiettivo:
 
 ```py
 >>> classificatore("Siamo molto felici di mostrarti la libreria 🤗 Transformers.")
@@ -108,7 +108,7 @@ etichetta: positive, con punteggio: 0.9998
 etichetta: negative, con punteggio: 0.9998
 ```
 
-La [`pipeline`] può anche iterare su un dataset intero. Inizia installando la libreria [🤗 Datasets](https://hf-mirror.com/docs/datasets/):
+La [`pipeline`] può anche iterare su un dataset intero. Inizia installando la libreria [🤗 Datasets](https://huggingface.co/docs/datasets/):
 
 ```bash
 pip install datasets 
@@ -125,7 +125,7 @@ Crea una [`pipeline`] con il compito che vuoi risolvere e con il modello che vuo
 ... )
 ```
 
-Poi, carica un dataset (vedi 🤗 Datasets [Quick Start](https://hf-mirror.com/docs/datasets/quickstart) per maggiori dettagli) sul quale vuoi iterare. Per esempio, carichiamo il dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14):
+Poi, carica un dataset (vedi 🤗 Datasets [Quick Start](https://huggingface.co/docs/datasets/quickstart) per maggiori dettagli) sul quale vuoi iterare. Per esempio, carichiamo il dataset [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14):
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -152,7 +152,7 @@ Per un dataset più grande dove gli input sono di dimensione maggiore (come nel 
 
 ### Utilizzare un altro modello e tokenizer nella pipeline
 
-La [`pipeline`] può ospitare qualsiasi modello del [Model Hub](https://hf-mirror.com/models), rendendo semplice l'adattamento della [`pipeline`] per altri casi d'uso. Per esempio, se si vuole un modello capace di trattare testo in francese, usa i tag presenti nel Model Hub in modo da filtrare per ottenere un modello appropriato. Il miglior risultato filtrato restituisce un modello multi-lingua [BERT model](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment) fine-tuned per l'analisi del sentimento. Ottimo, utilizziamo questo modello!
+La [`pipeline`] può ospitare qualsiasi modello del [Model Hub](https://huggingface.co/models), rendendo semplice l'adattamento della [`pipeline`] per altri casi d'uso. Per esempio, se si vuole un modello capace di trattare testo in francese, usa i tag presenti nel Model Hub in modo da filtrare per ottenere un modello appropriato. Il miglior risultato filtrato restituisce un modello multi-lingua [BERT model](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) fine-tuned per l'analisi del sentimento. Ottimo, utilizziamo questo modello!
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

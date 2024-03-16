@@ -25,7 +25,7 @@ logger = logging.get_logger(__name__)
 
 WAV2VEC2_CONFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/wav2vec2-conformer-rel-pos-large": (
-        "https://hf-mirror.com/facebook/wav2vec2-conformer-rel-pos-large/resolve/main/config.json"
+        "https://huggingface.co/facebook/wav2vec2-conformer-rel-pos-large/resolve/main/config.json"
     ),
 }
 
@@ -35,7 +35,7 @@ class Wav2Vec2ConformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Wav2Vec2ConformerModel`]. It is used to
     instantiate an Wav2Vec2Conformer model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Wav2Vec2Conformer
-    [facebook/wav2vec2-conformer-rel-pos-large](https://hf-mirror.com/facebook/wav2vec2-conformer-rel-pos-large)
+    [facebook/wav2vec2-conformer-rel-pos-large](https://huggingface.co/facebook/wav2vec2-conformer-rel-pos-large)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

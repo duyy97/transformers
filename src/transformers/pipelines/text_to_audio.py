@@ -70,7 +70,7 @@ class TextToAudioPipeline(Pipeline):
     This pipeline can currently be loaded from [`pipeline`] using the following task identifiers: `"text-to-speech"` or
     `"text-to-audio"`.
 
-    See the list of available models on [hf-mirror.com/models](https://hf-mirror.com/models?filter=text-to-speech).
+    See the list of available models on [huggingface.co/models](https://huggingface.co/models?filter=text-to-speech).
     """
 
     def __init__(self, *args, vocoder=None, sampling_rate=None, **kwargs):
@@ -170,7 +170,7 @@ class TextToAudioPipeline(Pipeline):
             generate_kwargs (`dict`, *optional*):
                 The dictionary of ad-hoc parametrization of `generate_config` to be used for the generation call. For a
                 complete overview of generate, check the [following
-                guide](https://hf-mirror.com/docs/transformers/en/main_classes/text_generation). `generate_kwargs` are
+                guide](https://huggingface.co/docs/transformers/en/main_classes/text_generation). `generate_kwargs` are
                 only passed to the underlying model if the latter is a generative model.
 
         Return:

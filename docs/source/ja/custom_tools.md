@@ -235,7 +235,7 @@ Human: <user-input>\n\nAssistant:
 ```py
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 
 agent.run("Show me a tree", return_code=True)
 ```
@@ -397,7 +397,7 @@ agent = HfAgent(url_endpoint=your_endpoint, chat_prompt_template=template)
 
 </Tip>
 
-両方の場合、プロンプトテンプレートの代わりに、コミュニティの誰かがホストしたテンプレートを使用したい場合は、リポジトリIDを渡すことができます。デフォルトのプロンプトは、[このリポジトリ](https://hf-mirror.com/datasets/huggingface-tools/default-prompts) にありますので、参考になります。
+両方の場合、プロンプトテンプレートの代わりに、コミュニティの誰かがホストしたテンプレートを使用したい場合は、リポジトリIDを渡すことができます。デフォルトのプロンプトは、[このリポジトリ](https://huggingface.co/datasets/huggingface-tools/default-prompts) にありますので、参考になります。
 
 カスタムプロンプトをHubのリポジトリにアップロードしてコミュニティと共有する場合は、次のことを確認してください：
 - データセットリポジトリを使用すること
@@ -408,8 +408,8 @@ agent = HfAgent(url_endpoint=your_endpoint, chat_prompt_template=template)
 
 このセクションでは、画像生成に特化した2つの既存のカスタムツールを利用します：
 
-- [huggingface-tools/image-transformation](https://hf-mirror.com/spaces/huggingface-tools/image-transformation) をより多くの画像変更を可能にするために [diffusers/controlnet-canny-tool](https://hf-mirror.com/spaces/diffusers/controlnet-canny-tool) に置き換えます。
-- 画像のアップスケーリング用の新しいツールをデフォルトのツールボックスに追加します：[diffusers/latent-upscaler-tool](https://hf-mirror.com/spaces/diffusers/latent-upscaler-tool) は既存の画像変換ツールを置き換えます。
+- [huggingface-tools/image-transformation](https://huggingface.co/spaces/huggingface-tools/image-transformation) をより多くの画像変更を可能にするために [diffusers/controlnet-canny-tool](https://huggingface.co/spaces/diffusers/controlnet-canny-tool) に置き換えます。
+- 画像のアップスケーリング用の新しいツールをデフォルトのツールボックスに追加します：[diffusers/latent-upscaler-tool](https://huggingface.co/spaces/diffusers/latent-upscaler-tool) は既存の画像変換ツールを置き換えます。
 
 便利な [`load_tool`] 関数を使用してカスタムツールをロードします：
 
@@ -444,7 +444,7 @@ Name: 'image_transformer'
 
 ```py
 tools = [controlnet_transformer, upscaler]
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=tools)
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=tools)
 
 ```
 
@@ -499,11 +499,11 @@ print("\n".join([f"- {a}" for a in agent.toolbox.keys()]))
 from diffusers.utils import load_image
 
 image = load_image(
-    "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
+    "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
 )
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
 
 美しい冬の風景にこの画像を変身させましょう：
 
@@ -520,7 +520,7 @@ I will use the following tool: `image_transformer` to transform the image.
 image = image_transformer(image, prompt="A frozen lake and snowy forest")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
 
 新しい画像処理ツールは、非常に強力な画像の変更を行うことができるControlNetに基づいています。
 デフォルトでは、画像処理ツールはサイズが512x512ピクセルの画像を返します。それを拡大できるか見てみましょう。
@@ -539,7 +539,7 @@ I will use the following tool: `image_upscaler` to upscale the image.
 upscaled_image = image_upscaler(image)
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
 
 
 エージェントは、プロンプト「画像の拡大」を、その説明とツールの名前だけを基に、新たに追加されたアップスケーリングツールに自動的にマッピングし、正しく実行できました。
@@ -644,7 +644,7 @@ tool = load_tool("lysandre/hf-model-downloads")
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run(
     "Can you read out loud the name of the model that has the most downloads in the 'text-to-video' task on the Hugging Face Hub?"
@@ -668,7 +668,7 @@ The model with the most downloads is damo-vilab/text-to-video-ms-1.7b.
 
 **Audio**                                                                                                                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <audio controls><source src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
+| <audio controls><source src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
 
 
 <Tip>
@@ -684,7 +684,7 @@ The model with the most downloads is damo-vilab/text-to-video-ms-1.7b.
 ```python
 from transformers import HfAgent, load_tool
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 agent.toolbox["image-transformation"] = load_tool("diffusers/controlnet-canny-tool")
 ```
 
@@ -723,7 +723,7 @@ tool = Tool.from_gradio(gradio_tool)
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run("Generate an image of the `prompt` after improving it.", prompt="A rabbit wearing a space suit")
 ```
@@ -742,9 +742,9 @@ image = image_generator(improved_prompt)
 
 最終的に画像を生成する前に：
 
-![画像](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png)
+![画像](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png)
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
 
 <Tip warning={true}>
 

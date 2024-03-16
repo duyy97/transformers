@@ -33,7 +33,7 @@ from .configuration_vitmatte import VitMatteConfig
 
 VITMATTE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "hustvl/vitmatte-small-composition-1k",
-    # See all VitMatte models at https://hf-mirror.com/models?filter=vitmatte
+    # See all VitMatte models at https://huggingface.co/models?filter=vitmatte
 ]
 
 

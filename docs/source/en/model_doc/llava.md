@@ -26,12 +26,12 @@ The abstract from the paper is the following:
 
 *Large multimodal models (LMM) have recently shown encouraging progress with visual instruction tuning. In this note, we show that the fully-connected vision-language cross-modal connector in LLaVA is surprisingly powerful and data-efficient. With simple modifications to LLaVA, namely, using CLIP-ViT-L-336px with an MLP projection and adding academic-task-oriented VQA data with simple response formatting prompts, we establish stronger baselines that achieve state-of-the-art across 11 benchmarks. Our final 13B checkpoint uses merely 1.2M publicly available data, and finishes full training in ∼1 day on a single 8-A100 node. We hope this can make state-of-the-art LMM research more accessible. Code and model will be publicly available*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/llava_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/llava_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> LLaVa architecture. Taken from the <a href="https://arxiv.org/abs/2304.08485">original paper.</a> </small>
 
-This model was contributed by [ArthurZ](https://hf-mirror.com/ArthurZ) and [ybelkada](https://hf-mirror.com/ybelkada).
+This model was contributed by [ArthurZ](https://huggingface.co/ArthurZ) and [ybelkada](https://huggingface.co/ybelkada).
 The original code can be found [here](https://github.com/haotian-liu/LLaVA/tree/main/llava).
 
 ## Usage tips
@@ -54,7 +54,7 @@ For multiple turns conversation:
 
 ### Using Flash Attention 2
 
-Flash Attention 2 is an even faster, optimized version of the previous optimization, please refer to the [Flash Attention 2 section of performance docs](https://hf-mirror.com/docs/transformers/perf_infer_gpu_one).
+Flash Attention 2 is an even faster, optimized version of the previous optimization, please refer to the [Flash Attention 2 section of performance docs](https://huggingface.co/docs/transformers/perf_infer_gpu_one).
 
 ## Resources
 

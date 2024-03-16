@@ -31,5 +31,5 @@ done
 
 
 # Having run this script, you should create a suitable config.json, *e.g.* by 
-# looking at `https://hf-mirror.com/t5-small`.
+# looking at `https://huggingface.co/t5-small`.
 # Then you can run `python convert_t5_original_tf_checkpoint_to_pytorch.py --tf_checkpoint_path "${folder_to_store_downloads}" --config_file "config.json" --pytorch_dump_path "/path/to/store/pytorch/weights"

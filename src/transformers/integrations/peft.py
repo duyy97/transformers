@@ -44,12 +44,12 @@ class PeftAdapterMixin:
     """
     A class containing all functions for loading and using adapters weights that are supported in PEFT library. For
     more details about adapters and injecting them on a transformer-based model, check out the documentation of PEFT
-    library: https://hf-mirror.com/docs/peft/index
+    library: https://huggingface.co/docs/peft/index
 
     Currently supported PEFT methods are all non-prefix tuning methods. Below is the list of supported PEFT methods
     that anyone can load, train and run with this mixin class:
-    - Low Rank Adapters (LoRA): https://hf-mirror.com/docs/peft/conceptual_guides/lora
-    - IA3: https://hf-mirror.com/docs/peft/conceptual_guides/ia3
+    - Low Rank Adapters (LoRA): https://huggingface.co/docs/peft/conceptual_guides/lora
+    - IA3: https://huggingface.co/docs/peft/conceptual_guides/ia3
     - AdaLora: https://arxiv.org/abs/2303.10512
 
     Other PEFT models such as prompt tuning, prompt learning are out of scope as these adapters are not "injectable"
@@ -82,7 +82,7 @@ class PeftAdapterMixin:
     ) -> None:
         """
         Load adapter weights from file or remote Hub folder. If you are not familiar with adapters and PEFT methods, we
-        invite you to read more about them on PEFT official documentation: https://hf-mirror.com/docs/peft
+        invite you to read more about them on PEFT official documentation: https://huggingface.co/docs/peft
 
         Requires peft as a backend to load the adapter weights.
 
@@ -94,7 +94,7 @@ class PeftAdapterMixin:
                 The adapter name to use. If not set, will use the default adapter.
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
                 <Tip>
@@ -229,7 +229,7 @@ class PeftAdapterMixin:
     def add_adapter(self, adapter_config, adapter_name: Optional[str] = None) -> None:
         r"""
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Adds a fresh new adapter to the current model for training purpose. If no adapter name is passed, a default
         name is assigned to the adapter to follow the convention of PEFT library (in PEFT we use "default" as the
@@ -268,7 +268,7 @@ class PeftAdapterMixin:
     def set_adapter(self, adapter_name: Union[List[str], str]) -> None:
         """
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Sets a specific adapter by forcing the model to use a that adapter and disable the other adapters.
 
@@ -313,7 +313,7 @@ class PeftAdapterMixin:
     def disable_adapters(self) -> None:
         r"""
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Disable all adapters that are attached to the model. This leads to inferring with the base model only.
         """
@@ -336,7 +336,7 @@ class PeftAdapterMixin:
     def enable_adapters(self) -> None:
         """
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Enable adapters that are attached to the model. The model will use `self.active_adapter()`
         """
@@ -358,7 +358,7 @@ class PeftAdapterMixin:
     def active_adapters(self) -> List[str]:
         """
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Gets the current active adapters of the model. In case of multi-adapter inference (combining multiple adapters
         for inference) returns the list of all active adapters so that users can deal with them accordingly.
@@ -397,7 +397,7 @@ class PeftAdapterMixin:
     def get_adapter_state_dict(self, adapter_name: Optional[str] = None) -> dict:
         """
         If you are not familiar with adapters and PEFT methods, we invite you to read more about them on the PEFT
-        official documentation: https://hf-mirror.com/docs/peft
+        official documentation: https://huggingface.co/docs/peft
 
         Gets the adapter state dict that should only contain the weights tensors of the specified adapter_name adapter.
         If no adapter_name is passed, the active adapter is used.

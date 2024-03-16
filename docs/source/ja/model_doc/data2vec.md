@@ -35,7 +35,7 @@ NLP またはコンピューター ビジョン。中心となるアイデアは
 自然言語理解は、新しい最先端技術や、主流のアプローチに匹敵するパフォーマンスを実証します。
 モデルとコードは、www.github.com/pytorch/fairseq/tree/master/examples/data2vec.* で入手できます。
 
-このモデルは、[edugp](https://hf-mirror.com/edugp) および [patrickvonplaten](https://hf-mirror.com/patrickvonplaten) によって提供されました。
+このモデルは、[edugp](https://huggingface.co/edugp) および [patrickvonplaten](https://huggingface.co/patrickvonplaten) によって提供されました。
 [sayakpaul](https://github.com/sayakpaul) と [Rocketknight1](https://github.com/Rocketknight1) は、TensorFlow のビジョンに Data2Vec を提供しました。
 
 元のコード (NLP および音声用) は、[こちら](https://github.com/pytorch/fairseq/tree/main/examples/data2vec) にあります。

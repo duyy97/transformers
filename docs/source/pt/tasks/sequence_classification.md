@@ -20,11 +20,11 @@ rendered properly in your Markdown viewer.
 
 A classificação de texto é uma tarefa comum de NLP que atribui um rótulo ou classe a um texto. Existem muitas aplicações práticas de classificação de texto amplamente utilizadas em produção por algumas das maiores empresas da atualidade. Uma das formas mais populares de classificação de texto é a análise de sentimento, que atribui um rótulo como positivo, negativo ou neutro a um texto.
 
-Este guia mostrará como realizar o fine-tuning do [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) no conjunto de dados [IMDb](https://hf-mirror.com/datasets/imdb) para determinar se a crítica de filme é positiva ou negativa.
+Este guia mostrará como realizar o fine-tuning do [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) no conjunto de dados [IMDb](https://huggingface.co/datasets/imdb) para determinar se a crítica de filme é positiva ou negativa.
 
 <Tip>
 
-Consulte a [página de tarefas de classificação de texto](https://hf-mirror.com/tasks/text-classification) para obter mais informações sobre outras formas de classificação de texto e seus modelos, conjuntos de dados e métricas associados.
+Consulte a [página de tarefas de classificação de texto](https://huggingface.co/tasks/text-classification) para obter mais informações sobre outras formas de classificação de texto e seus modelos, conjuntos de dados e métricas associados.
 
 </Tip>
 
@@ -70,7 +70,7 @@ Crie uma função de pré-processamento para tokenizar o campo `text` e truncar 
 ...     return tokenizer(examples["text"], truncation=True)
 ```
 
-Use a função [`map`](https://hf-mirror.com/docs/datasets/process#map) do 🤗 Datasets para aplicar a função de pré-processamento em todo o conjunto de dados. Você pode acelerar a função `map` definindo `batched=True` para processar vários elementos do conjunto de dados de uma só vez:
+Use a função [`map`](https://huggingface.co/docs/datasets/process#map) do 🤗 Datasets para aplicar a função de pré-processamento em todo o conjunto de dados. Você pode acelerar a função `map` definindo `batched=True` para processar vários elementos do conjunto de dados de uma só vez:
 
 ```py
 tokenized_imdb = imdb.map(preprocess_function, batched=True)
@@ -148,7 +148,7 @@ O [`Trainer`] aplicará o preenchimento dinâmico por padrão quando você defin
 </Tip>
 </pt>
 <tf>
-Para executar o fine-tuning de um modelo no TensorFlow, comece convertendo seu conjunto de dados para o formato `tf.data.Dataset` com [`to_tf_dataset`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Nessa execução você deverá especificar as entradas e rótulos (no parâmetro `columns`), se deseja embaralhar o conjunto de dados, o tamanho do batch e o data collator:
+Para executar o fine-tuning de um modelo no TensorFlow, comece convertendo seu conjunto de dados para o formato `tf.data.Dataset` com [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Nessa execução você deverá especificar as entradas e rótulos (no parâmetro `columns`), se deseja embaralhar o conjunto de dados, o tamanho do batch e o data collator:
 
 ```py
 >>> tf_train_set = tokenized_imdb["train"].to_tf_dataset(

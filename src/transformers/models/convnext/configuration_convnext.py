@@ -28,8 +28,8 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 CONVNEXT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/convnext-tiny-224": "https://hf-mirror.com/facebook/convnext-tiny-224/resolve/main/config.json",
-    # See all ConvNeXT models at https://hf-mirror.com/models?filter=convnext
+    "facebook/convnext-tiny-224": "https://huggingface.co/facebook/convnext-tiny-224/resolve/main/config.json",
+    # See all ConvNeXT models at https://huggingface.co/models?filter=convnext
 }
 
 
@@ -38,7 +38,7 @@ class ConvNextConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`ConvNextModel`]. It is used to instantiate an
     ConvNeXT model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the ConvNeXT
-    [facebook/convnext-tiny-224](https://hf-mirror.com/facebook/convnext-tiny-224) architecture.
+    [facebook/convnext-tiny-224](https://huggingface.co/facebook/convnext-tiny-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

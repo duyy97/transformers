@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MEGA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "mnaylor/mega-base-wikitext": "https://hf-mirror.com/mnaylor/mega-base-wikitext/resolve/main/config.json",
+    "mnaylor/mega-base-wikitext": "https://huggingface.co/mnaylor/mega-base-wikitext/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class MegaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MegaModel`]. It is used to instantiate a Mega
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Mega
-    [mnaylor/mega-base-wikitext](https://hf-mirror.com/mnaylor/mega-base-wikitext) architecture.
+    [mnaylor/mega-base-wikitext](https://huggingface.co/mnaylor/mega-base-wikitext) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

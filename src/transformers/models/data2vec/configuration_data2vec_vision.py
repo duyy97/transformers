@@ -27,7 +27,7 @@ logger = logging.get_logger(__name__)
 
 DATA2VEC_VISION_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/data2vec-vision-base-ft": (
-        "https://hf-mirror.com/facebook/data2vec-vision-base-ft/resolve/main/config.json"
+        "https://huggingface.co/facebook/data2vec-vision-base-ft/resolve/main/config.json"
     ),
 }
 
@@ -37,7 +37,7 @@ class Data2VecVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Data2VecVisionModel`]. It is used to instantiate
     an Data2VecVision model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Data2VecVision
-    [facebook/data2vec-vision-base](https://hf-mirror.com/facebook/data2vec-vision-base) architecture.
+    [facebook/data2vec-vision-base](https://huggingface.co/facebook/data2vec-vision-base) architecture.
 
     Args:
         hidden_size (`int`, *optional*, defaults to 768):

@@ -157,7 +157,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -167,7 +167,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -282,7 +282,7 @@ def main():
             # Loading a dataset from local json files
             datasets = load_dataset("json", data_files=data_files)
     # See more about loading any type of standard or custom dataset at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # Labels
     if data_args.task_name is not None:
@@ -299,7 +299,7 @@ def main():
             num_labels = 1
         else:
             # A useful fast method:
-            # https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.unique
+            # https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.unique
             label_list = datasets["train"].unique("label")
             label_list.sort()  # Let's sort it for determinism
             num_labels = len(label_list)

@@ -13,16 +13,16 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-[Parameter-Efficient Fine Tuning (PEFT)](https://hf-mirror.com/blog/peft) 방법은 사전훈련된 모델의 매개변수를 미세 조정 중 고정시키고, 그 위에 훈련할 수 있는 매우 적은 수의 매개변수(어댑터)를 추가합니다. 어댑터는 작업별 정보를 학습하도록 훈련됩니다. 이 접근 방식은 완전히 미세 조정된 모델에 필적하는 결과를 생성하면서, 메모리 효율적이고 비교적 적은 컴퓨팅 리소스를 사용합니다.
+[Parameter-Efficient Fine Tuning (PEFT)](https://huggingface.co/blog/peft) 방법은 사전훈련된 모델의 매개변수를 미세 조정 중 고정시키고, 그 위에 훈련할 수 있는 매우 적은 수의 매개변수(어댑터)를 추가합니다. 어댑터는 작업별 정보를 학습하도록 훈련됩니다. 이 접근 방식은 완전히 미세 조정된 모델에 필적하는 결과를 생성하면서, 메모리 효율적이고 비교적 적은 컴퓨팅 리소스를 사용합니다.
 
 또한 PEFT로 훈련된 어댑터는 일반적으로 전체 모델보다 훨씬 작기 때문에 공유, 저장 및 가져오기가 편리합니다.
 
 <div class="flex flex-col justify-center">
-  <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
+  <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
   <figcaption class="text-center">Hub에 저장된 OPTForCausalLM 모델의 어댑터 가중치는 최대 700MB에 달하는 모델 가중치의 전체 크기에 비해 약 6MB에 불과합니다.</figcaption>
 </div>
 
-🤗 PEFT 라이브러리에 대해 자세히 알아보려면 [문서](https://hf-mirror.com/docs/peft/index)를 확인하세요.
+🤗 PEFT 라이브러리에 대해 자세히 알아보려면 [문서](https://huggingface.co/docs/peft/index)를 확인하세요.
 
 ## 설정 [[setup]]
 
@@ -42,11 +42,11 @@ pip install git+https://github.com/huggingface/peft.git
 
 🤗 Transformers는 기본적으로 일부 PEFT 방법을 지원하며, 로컬이나 Hub에 저장된 어댑터 가중치를 가져오고 몇 줄의 코드만으로 쉽게 실행하거나 훈련할 수 있습니다. 다음 방법을 지원합니다:
 
-- [Low Rank Adapters](https://hf-mirror.com/docs/peft/conceptual_guides/lora)
-- [IA3](https://hf-mirror.com/docs/peft/conceptual_guides/ia3)
+- [Low Rank Adapters](https://huggingface.co/docs/peft/conceptual_guides/lora)
+- [IA3](https://huggingface.co/docs/peft/conceptual_guides/ia3)
 - [AdaLoRA](https://arxiv.org/abs/2303.10512)
 
-🤗 PEFT와 관련된 다른 방법(예: 프롬프트 훈련 또는 프롬프트 튜닝) 또는 일반적인 🤗 PEFT 라이브러리에 대해 자세히 알아보려면 [문서](https://hf-mirror.com/docs/peft/index)를 참조하세요.
+🤗 PEFT와 관련된 다른 방법(예: 프롬프트 훈련 또는 프롬프트 튜닝) 또는 일반적인 🤗 PEFT 라이브러리에 대해 자세히 알아보려면 [문서](https://huggingface.co/docs/peft/index)를 참조하세요.
 
 
 ## PEFT 어댑터 가져오기 [[load-a-peft-adapter]]

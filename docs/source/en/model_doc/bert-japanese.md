@@ -67,7 +67,7 @@ Example of using a model with Character tokenization:
 >>> outputs = bertjapanese(**inputs)
 ```
 
-This model was contributed by [cl-tohoku](https://hf-mirror.com/cl-tohoku).
+This model was contributed by [cl-tohoku](https://huggingface.co/cl-tohoku).
 
 <Tip> 
 

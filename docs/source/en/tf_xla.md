@@ -24,7 +24,7 @@ XLA (Accelerated Linear Algebra) is a domain-specific compiler for linear algebr
 
 Using XLA in TensorFlow is simple – it comes packaged inside the `tensorflow` library, and it can be triggered with the `jit_compile` argument in any graph-creating function such as [`tf.function`](https://www.tensorflow.org/guide/intro_to_graphs). When using Keras methods like `fit()` and `predict()`, you can enable XLA simply by passing the `jit_compile` argument to `model.compile()`. However, XLA is not limited to these methods - it can also be used to accelerate any arbitrary `tf.function`.
 
-Several TensorFlow methods in 🤗 Transformers have been rewritten to be XLA-compatible, including text generation for models such as [GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2), [T5](https://hf-mirror.com/docs/transformers/model_doc/t5) and [OPT](https://hf-mirror.com/docs/transformers/model_doc/opt), as well as speech processing for models such as [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper).
+Several TensorFlow methods in 🤗 Transformers have been rewritten to be XLA-compatible, including text generation for models such as [GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2), [T5](https://huggingface.co/docs/transformers/model_doc/t5) and [OPT](https://huggingface.co/docs/transformers/model_doc/opt), as well as speech processing for models such as [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper).
 
 While the exact amount of speed-up is very much model-dependent, for TensorFlow text generation models inside 🤗 Transformers, we noticed a speed-up of ~100x. This document will explain how you can use XLA for these models to get the maximum amount of performance. We’ll also provide links to additional resources if you’re interested to learn more about the benchmarks and our design philosophy behind the XLA integration.
 
@@ -165,8 +165,8 @@ We didn’t cover all the text generation options 🤗 Transformers provides in 
 
 Here, we leave you with some additional resources if you want to delve deeper into XLA in 🤗 Transformers and in general. 
  
-* [This Colab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb) provides an interactive demonstration if you want to fiddle with the XLA-compatible encoder-decoder (like [T5](https://hf-mirror.com/docs/transformers/model_doc/t5)) and decoder-only (like [GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2)) text generation models. 
-* [This blog post](https://hf-mirror.com/blog/tf-xla-generate) provides an overview of the comparison benchmarks for XLA-compatible models along with a friendly introduction to XLA in TensorFlow. 
+* [This Colab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb) provides an interactive demonstration if you want to fiddle with the XLA-compatible encoder-decoder (like [T5](https://huggingface.co/docs/transformers/model_doc/t5)) and decoder-only (like [GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2)) text generation models. 
+* [This blog post](https://huggingface.co/blog/tf-xla-generate) provides an overview of the comparison benchmarks for XLA-compatible models along with a friendly introduction to XLA in TensorFlow. 
 * [This blog post](https://blog.tensorflow.org/2022/11/how-hugging-face-improved-text-generation-performance-with-xla.html) discusses our design philosophy behind adding XLA support to the TensorFlow models in 🤗 Transformers. 
 * Recommended posts for learning more about XLA and TensorFlow graphs in general:
     * [XLA: Optimizing Compiler for Machine Learning](https://www.tensorflow.org/xla)

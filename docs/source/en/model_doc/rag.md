@@ -17,7 +17,7 @@ rendered properly in your Markdown viewer.
 # RAG
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=rag">
+<a href="https://huggingface.co/models?filter=rag">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-rag-blueviolet">
 </a>
 </div>
@@ -50,7 +50,7 @@ outperforming parametric seq2seq models and task-specific retrieve-and-extract a
 tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art
 parametric-only seq2seq baseline.*
 
-This model was contributed by [ola13](https://hf-mirror.com/ola13).
+This model was contributed by [ola13](https://huggingface.co/ola13).
 
 ## Usage tips
 

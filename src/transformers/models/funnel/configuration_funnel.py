@@ -21,20 +21,20 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 FUNNEL_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "funnel-transformer/small": "https://hf-mirror.com/funnel-transformer/small/resolve/main/config.json",
-    "funnel-transformer/small-base": "https://hf-mirror.com/funnel-transformer/small-base/resolve/main/config.json",
-    "funnel-transformer/medium": "https://hf-mirror.com/funnel-transformer/medium/resolve/main/config.json",
-    "funnel-transformer/medium-base": "https://hf-mirror.com/funnel-transformer/medium-base/resolve/main/config.json",
+    "funnel-transformer/small": "https://huggingface.co/funnel-transformer/small/resolve/main/config.json",
+    "funnel-transformer/small-base": "https://huggingface.co/funnel-transformer/small-base/resolve/main/config.json",
+    "funnel-transformer/medium": "https://huggingface.co/funnel-transformer/medium/resolve/main/config.json",
+    "funnel-transformer/medium-base": "https://huggingface.co/funnel-transformer/medium-base/resolve/main/config.json",
     "funnel-transformer/intermediate": (
-        "https://hf-mirror.com/funnel-transformer/intermediate/resolve/main/config.json"
+        "https://huggingface.co/funnel-transformer/intermediate/resolve/main/config.json"
     ),
     "funnel-transformer/intermediate-base": (
-        "https://hf-mirror.com/funnel-transformer/intermediate-base/resolve/main/config.json"
+        "https://huggingface.co/funnel-transformer/intermediate-base/resolve/main/config.json"
     ),
-    "funnel-transformer/large": "https://hf-mirror.com/funnel-transformer/large/resolve/main/config.json",
-    "funnel-transformer/large-base": "https://hf-mirror.com/funnel-transformer/large-base/resolve/main/config.json",
-    "funnel-transformer/xlarge": "https://hf-mirror.com/funnel-transformer/xlarge/resolve/main/config.json",
-    "funnel-transformer/xlarge-base": "https://hf-mirror.com/funnel-transformer/xlarge-base/resolve/main/config.json",
+    "funnel-transformer/large": "https://huggingface.co/funnel-transformer/large/resolve/main/config.json",
+    "funnel-transformer/large-base": "https://huggingface.co/funnel-transformer/large-base/resolve/main/config.json",
+    "funnel-transformer/xlarge": "https://huggingface.co/funnel-transformer/xlarge/resolve/main/config.json",
+    "funnel-transformer/xlarge-base": "https://huggingface.co/funnel-transformer/xlarge-base/resolve/main/config.json",
 }
 
 
@@ -43,7 +43,7 @@ class FunnelConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`FunnelModel`] or a [`TFBertModel`]. It is used to
     instantiate a Funnel Transformer model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Funnel
-    Transformer [funnel-transformer/small](https://hf-mirror.com/funnel-transformer/small) architecture.
+    Transformer [funnel-transformer/small](https://huggingface.co/funnel-transformer/small) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

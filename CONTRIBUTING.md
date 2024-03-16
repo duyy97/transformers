@@ -61,7 +61,7 @@ feedback.
 The 🤗 Transformers library is robust and reliable thanks to users who report the problems they encounter.
 
 Before you report an issue, we would really appreciate it if you could **make sure the bug was not
-already reported** (use the search bar on GitHub under Issues). Your issue should also be related to bugs in the library itself, and not your code. If you're unsure whether the bug is in your code or the library, please ask in the [forum](https://discuss.hf-mirror.com/) first. This helps us respond quicker to fixing issues related to the library versus general questions.
+already reported** (use the search bar on GitHub under Issues). Your issue should also be related to bugs in the library itself, and not your code. If you're unsure whether the bug is in your code or the library, please ask in the [forum](https://discuss.huggingface.co/) first. This helps us respond quicker to fixing issues related to the library versus general questions.
 
 Once you've confirmed the bug hasn't already been reported, please include the following information in your issue so we can quickly resolve it:
 
@@ -110,7 +110,7 @@ New models are constantly released and if you want to implement a new model, ple
 
 If you are willing to contribute the model yourself, let us know so we can help you add it to 🤗 Transformers!
 
-We have added a [detailed guide and templates](https://github.com/huggingface/transformers/tree/main/templates) to help you get started with adding a new model, and we also have a more technical guide for [how to add a model to 🤗 Transformers](https://hf-mirror.com/docs/transformers/add_new_model).
+We have added a [detailed guide and templates](https://github.com/huggingface/transformers/tree/main/templates) to help you get started with adding a new model, and we also have a more technical guide for [how to add a model to 🤗 Transformers](https://huggingface.co/docs/transformers/add_new_model).
 
 ## Do you want to add documentation?
 
@@ -181,7 +181,7 @@ You'll need **[Python 3.8](https://github.com/huggingface/transformers/blob/main
    ```
 
    For more information about tests, check out the
-   [Testing](https://hf-mirror.com/docs/transformers/testing) guide.
+   [Testing](https://huggingface.co/docs/transformers/testing) guide.
 
    🤗 Transformers relies on `black` and `ruff` to format its source code
    consistently. After you make changes, apply automatic style corrections and code verifications
@@ -215,7 +215,7 @@ You'll need **[Python 3.8](https://github.com/huggingface/transformers/blob/main
    ```
 
    To learn more about those checks and how to fix any issues with them, check out the
-   [Checks on a Pull Request](https://hf-mirror.com/docs/transformers/pr_checks) guide.
+   [Checks on a Pull Request](https://huggingface.co/docs/transformers/pr_checks) guide.
 
    If you're modifying documents under the `docs/source` directory, make sure the documentation can still be built. This check will also run in the CI when you open a pull request. To run a local check
    make sure you install the documentation builder:
@@ -290,13 +290,13 @@ useful to avoid duplicated work, and to differentiate it from PRs ready to be me
 for an example).<br>
 ☐ Due to the rapidly growing repository, don't add any images, videos and other
 non-text files that'll significantly weigh down the repository. Instead, use a Hub
-repository such as [`hf-internal-testing`](https://hf-mirror.com/hf-internal-testing)
+repository such as [`hf-internal-testing`](https://huggingface.co/hf-internal-testing)
 to host these files and reference them by URL. We recommend placing documentation
 related images in the following repository:
-[huggingface/documentation-images](https://hf-mirror.com/datasets/huggingface/documentation-images).
+[huggingface/documentation-images](https://huggingface.co/datasets/huggingface/documentation-images).
 You can open a PR on this dataset repository and ask a Hugging Face member to merge it.
 
-For more information about the checks run on a pull request, take a look at our [Checks on a Pull Request](https://hf-mirror.com/docs/transformers/pr_checks) guide.
+For more information about the checks run on a pull request, take a look at our [Checks on a Pull Request](https://huggingface.co/docs/transformers/pr_checks) guide.
 
 ### Tests
 

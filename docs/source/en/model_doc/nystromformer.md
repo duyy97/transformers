@@ -35,7 +35,7 @@ sequence length, and find that our Nyströmformer performs comparably, or in a f
 standard self-attention. On longer sequence tasks in the Long Range Arena (LRA) benchmark, Nyströmformer performs
 favorably relative to other efficient self-attention methods. Our code is available at this https URL.*
 
-This model was contributed by [novice03](https://hf-mirror.com/novice03). The original code can be found [here](https://github.com/mlpen/Nystromformer).
+This model was contributed by [novice03](https://huggingface.co/novice03). The original code can be found [here](https://github.com/mlpen/Nystromformer).
 
 ## Resources
 

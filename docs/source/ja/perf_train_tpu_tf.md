@@ -25,7 +25,7 @@ rendered properly in your Markdown viewer.
 
 TPUは**Tensor Processing Unit（テンソル処理ユニット）**の略です。これらはGoogleが設計したハードウェアで、ニューラルネットワーク内のテンソル計算を大幅に高速化するために使用されます。これはGPUのようなものです。ネットワークのトレーニングと推論の両方に使用できます。一般的にはGoogleのクラウドサービスを介してアクセスされますが、Google ColabとKaggle Kernelsを通じても無料で小規模のTPUに直接アクセスできます。
 
-[🤗 TransformersのすべてのTensorFlowモデルはKerasモデルです](https://hf-mirror.com/blog/tensorflow-philosophy)ので、この文書のほとんどの方法は一般的にKerasモデル用のTPUトレーニングに適用できます！ただし、TransformersとDatasetsのHuggingFaceエコシステム（hug-o-system？）に固有のポイントもいくつかあり、それについては適用するときにそれを示します。
+[🤗 TransformersのすべてのTensorFlowモデルはKerasモデルです](https://huggingface.co/blog/tensorflow-philosophy)ので、この文書のほとんどの方法は一般的にKerasモデル用のTPUトレーニングに適用できます！ただし、TransformersとDatasetsのHuggingFaceエコシステム（hug-o-system？）に固有のポイントもいくつかあり、それについては適用するときにそれを示します。
 
 ### What kinds of TPU are available?
 

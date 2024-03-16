@@ -57,7 +57,7 @@ _CONFIG_FOR_DOC = "OpenAIGPTConfig"
 
 TF_OPENAI_GPT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai-community/openai-gpt",
-    # See all OpenAI GPT models at https://hf-mirror.com/models?filter=openai-community/openai-gpt
+    # See all OpenAI GPT models at https://huggingface.co/models?filter=openai-community/openai-gpt
 ]
 
 

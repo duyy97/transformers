@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 WAVLM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/wavlm-base": "https://hf-mirror.com/microsoft/wavlm-base/resolve/main/config.json",
-    # See all WavLM models at https://hf-mirror.com/models?filter=wavlm
+    "microsoft/wavlm-base": "https://huggingface.co/microsoft/wavlm-base/resolve/main/config.json",
+    # See all WavLM models at https://huggingface.co/models?filter=wavlm
 }
 
 
@@ -34,7 +34,7 @@ class WavLMConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`WavLMModel`]. It is used to instantiate an WavLM
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the WavLM
-    [microsoft/wavlm-base](https://hf-mirror.com/microsoft/wavlm-base) architecture.
+    [microsoft/wavlm-base](https://huggingface.co/microsoft/wavlm-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

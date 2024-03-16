@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 Gli ultimi due tutorial ti hanno mostrato come puoi fare fine-tuning di un modello con PyTorch, Keras e 🤗 Accelerate per configurazioni distribuite. Il prossimo passo è quello di condividere il tuo modello con la community! In Hugging Face, crediamo nella condivisione della conoscenza e delle risorse in modo da democratizzare l'intelligenza artificiale per chiunque. Ti incoraggiamo a considerare di condividere il tuo modello con la community per aiutare altre persone a risparmiare tempo e risorse.
 
-In questo tutorial, imparerai due metodi per la condivisione di un modello trained o fine-tuned nel [Model Hub](https://hf-mirror.com/models):
+In questo tutorial, imparerai due metodi per la condivisione di un modello trained o fine-tuned nel [Model Hub](https://huggingface.co/models):
 
 - Condividi in modo programmatico i tuoi file nell'Hub.
 - Trascina i tuoi file nell'Hub mediante interfaccia grafica.
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-Per condividere un modello con la community, hai bisogno di un account su [hf-mirror.com](https://hf-mirror.com/join). Puoi anche unirti ad un'organizzazione esistente o crearne una nuova.
+Per condividere un modello con la community, hai bisogno di un account su [huggingface.co](https://huggingface.co/join). Puoi anche unirti ad un'organizzazione esistente o crearne una nuova.
 
 </Tip>
 
@@ -49,7 +49,7 @@ Come risultato, puoi caricare una specifica versione di un modello con il parame
 
 Anche i file possono essere modificati facilmente in un repository ed è possibile visualizzare la cronologia dei commit e le differenze:
 
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## Configurazione
 
@@ -59,13 +59,13 @@ Prima di condividere un modello nell'Hub, hai bisogno delle tue credenziali di H
 huggingface-cli login
 ```
 
-Se stai usando un notebook come Jupyter o Colaboratory, assicurati di avere la libreria [`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library) installata. Questa libreria ti permette di interagire in maniera programmatica con l'Hub.
+Se stai usando un notebook come Jupyter o Colaboratory, assicurati di avere la libreria [`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library) installata. Questa libreria ti permette di interagire in maniera programmatica con l'Hub.
 
 ```bash
 pip install huggingface_hub
 ```
 
-Utilizza `notebook_login` per accedere all'Hub, e segui il link [qui](https://hf-mirror.com/settings/token) per generare un token con cui effettuare il login:
+Utilizza `notebook_login` per accedere all'Hub, e segui il link [qui](https://huggingface.co/settings/token) per generare un token con cui effettuare il login:
 
 ```py
 >>> from huggingface_hub import notebook_login
@@ -209,13 +209,13 @@ O magari potresti voler aggiungere la versione di TensorFlow del tuo modello PyT
 
 Ora quando navighi nel tuo profilo Hugging Face, dovresti vedere il tuo repository del modello appena creato. Premendo sulla scheda **Files** vengono visualizzati tutti i file caricati nel repository.
 
-Per maggiori dettagli su come creare e caricare file ad un repository, fai riferimento alla documentazione [qui](https://hf-mirror.com/docs/hub/how-to-upstream).
+Per maggiori dettagli su come creare e caricare file ad un repository, fai riferimento alla documentazione [qui](https://huggingface.co/docs/hub/how-to-upstream).
 
 ## Carica un modello utilizzando l'interfaccia web
 
-Chi preferisce un approccio senza codice può caricare un modello tramite l'interfaccia web dell'hub. Visita [hf-mirror.com/new](https://hf-mirror.com/new) per creare un nuovo repository:
+Chi preferisce un approccio senza codice può caricare un modello tramite l'interfaccia web dell'hub. Visita [huggingface.co/new](https://huggingface.co/new) per creare un nuovo repository:
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 Da qui, aggiungi alcune informazioni sul tuo modello:
 
@@ -226,7 +226,7 @@ Da qui, aggiungi alcune informazioni sul tuo modello:
 
 Ora premi sulla scheda **Files** e premi sul pulsante **Add file** per caricare un nuovo file al tuo repository. Trascina poi un file per caricarlo e aggiungere un messaggio di commit.
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## Aggiungi una scheda del modello
 
@@ -235,4 +235,4 @@ Per assicurarti che chiunque possa comprendere le abilità, limitazioni, i poten
 * Creando manualmente e caricando un file `README.md`.
 * Premendo sul pulsante **Edit model card** nel repository del tuo modello.
 
-Dai un'occhiata alla [scheda del modello](https://hf-mirror.com/distilbert/distilbert-base-uncased) di DistilBert per avere un buon esempio del tipo di informazioni che una scheda di un modello deve includere. Per maggiori dettagli legati ad altre opzioni che puoi controllare nel file `README.md`, come l'impatto ambientale o widget di esempio, fai riferimento alla documentazione [qui](https://hf-mirror.com/docs/hub/models-cards).
+Dai un'occhiata alla [scheda del modello](https://huggingface.co/distilbert/distilbert-base-uncased) di DistilBert per avere un buon esempio del tipo di informazioni che una scheda di un modello deve includere. Per maggiori dettagli legati ad altre opzioni che puoi controllare nel file `README.md`, come l'impatto ambientale o widget di esempio, fai riferimento alla documentazione [qui](https://huggingface.co/docs/hub/models-cards).

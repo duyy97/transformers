@@ -37,7 +37,7 @@ state-of-the-art results on five well-known datasets: Open Entity (entity typing
 CoNLL-2003 (named entity recognition), ReCoRD (cloze-style question answering), and SQuAD 1.1 (extractive question
 answering).*
 
-This model was contributed by [ikuyamada](https://hf-mirror.com/ikuyamada) and [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/studio-ousia/luke).
+This model was contributed by [ikuyamada](https://huggingface.co/ikuyamada) and [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/studio-ousia/luke).
 
 ## Usage tips
 

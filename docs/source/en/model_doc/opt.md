@@ -25,7 +25,7 @@ The abstract from the paper is the following:
 
 *Large language models, which are often trained for hundreds of thousands of compute days, have shown remarkable capabilities for zero- and few-shot learning. Given their computational cost, these models are difficult to replicate without significant capital. For the few that are available through APIs, no access is granted to the full model weights, making them difficult to study. We present Open Pre-trained Transformers (OPT), a suite of decoder-only pre-trained transformers ranging from 125M to 175B parameters, which we aim to fully and responsibly share with interested researchers. We show that OPT-175B is comparable to GPT-3, while requiring only 1/7th the carbon footprint to develop. We are also releasing our logbook detailing the infrastructure challenges we faced, along with code for experimenting with all of the released models.*
 
-This model was contributed by [Arthur Zucker](https://hf-mirror.com/ArthurZ), [Younes Belkada](https://hf-mirror.com/ybelkada), and [Patrick Von Platen](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [Arthur Zucker](https://huggingface.co/ArthurZ), [Younes Belkada](https://huggingface.co/ybelkada), and [Patrick Von Platen](https://huggingface.co/patrickvonplaten).
 The original code can be found [here](https://github.com/facebookresearch/metaseq).
 
 Tips:
@@ -41,8 +41,8 @@ The resource should ideally demonstrate something new instead of duplicating an 
 <PipelineTag pipeline="text-generation" />
 
 - A notebook on [fine-tuning OPT with PEFT, bitsandbytes, and Transformers](https://colab.research.google.com/drive/1jCkpikz0J2o20FBQmYmAGdiKmJGOMo-o?usp=sharing). 🌎
-- A blog post on [decoding strategies with OPT](https://hf-mirror.com/blog/introducing-csearch#62-example-two---opt).
-- [Causal language modeling](https://hf-mirror.com/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
+- A blog post on [decoding strategies with OPT](https://huggingface.co/blog/introducing-csearch#62-example-two---opt).
+- [Causal language modeling](https://huggingface.co/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
 - [`OPTForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#gpt-2gpt-and-causal-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFOPTForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_clmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxOPTForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#causal-language-modeling).
@@ -55,12 +55,12 @@ The resource should ideally demonstrate something new instead of duplicating an 
 <PipelineTag pipeline="question-answering" />
 
 - [`OPTForQuestionAnswering`] is supported by this [question answering example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb).
-- [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt) chapter
+- [Question answering](https://huggingface.co/course/chapter7/7?fw=pt) chapter
   of the 🤗 Hugging Face Course.
 
 ⚡️ Inference
 
-- A blog post on [How 🤗 Accelerate runs very large models thanks to PyTorch](https://hf-mirror.com/blog/accelerate-large-models) with OPT.
+- A blog post on [How 🤗 Accelerate runs very large models thanks to PyTorch](https://huggingface.co/blog/accelerate-large-models) with OPT.
 
 
 ## Combining OPT and Flash Attention 2

@@ -31,7 +31,7 @@ La biblioteca fue diseñada con dos fuertes objetivos en mente:
   - Todas estas clases pueden ser inicializadas de forma simple y unificada a partir de ejemplos pre-entrenados mediante el uso de un método
     `from_pretrained()` común de solicitud que se encargará de descargar (si es necesario), almacenar y cargar la solicitud de clase relacionada y datos asociados
     (configurations' hyper-parameters, tokenizers' vocabulary, and models' weights) a partir de un control pre-entrenado proporcionado en
-    [Hugging Face Hub](https://hf-mirror.com/models) o de tu propio control guardado.
+    [Hugging Face Hub](https://huggingface.co/models) o de tu propio control guardado.
   - Por encima de esas tres clases estándar, la biblioteca proporciona dos APIs: [`pipeline`] para usar rápidamente un modelo (junto a su configuracion y tokenizer asociados)
     sobre una tarea dada, y [`Trainer`]/`Keras.fit` para entrenar u optimizar de forma rápida un modelo dado.
   - Como consecuencia, esta biblioteca NO es una caja de herramientas modular de bloques individuales para redes neuronales. Si quieres extender/construir sobre la biblioteca,
@@ -73,7 +73,7 @@ La biblioteca está construida alrededor de tres tipos de clases para cada model
 Todas estas clases pueden ser generadas a partir de ejemplos pre-entrenados, y guardados localmente usando dos métodos:
 
 - `from_pretrained()` permite generar un modelo/configuración/tokenizer a partir de una versión pre-entrenada proporcionada ya sea por
-  la propia biblioteca (los modelos compatibles se pueden encontrar en [Model Hub](https://hf-mirror.com/models)) o
+  la propia biblioteca (los modelos compatibles se pueden encontrar en [Model Hub](https://huggingface.co/models)) o
   guardados localmente (o en un servidor) por el usuario. 
 - `save_pretrained()` permite guardar un modelo/configuración/tokenizer localmente, de forma que puede ser empleado de nuevo usando
   `from_pretrained()`.

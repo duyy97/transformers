@@ -46,7 +46,7 @@ logger = logging.get_logger(__name__)
 
 _CHECKPOINT_FOR_DOC = "google/owlvit-base-patch32"
 
-# See all OwlViT models at https://hf-mirror.com/models?filter=owlvit
+# See all OwlViT models at https://huggingface.co/models?filter=owlvit
 OWLVIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/owlvit-base-patch32",
     "google/owlvit-base-patch16",

@@ -35,7 +35,7 @@ agent.run("Caption the following image", image=image)
 
 | **输入**                                                                                                                      | **输出**                            |
 |-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/beaver.png" width=200> | A beaver is swimming in the water |
+| <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/beaver.png" width=200> | A beaver is swimming in the water |
 
 ---
 
@@ -44,7 +44,7 @@ agent.run("Read the following text out loud", text=text)
 ```
 | **输入**                            | **输出**                                                                                                                                                                                                               |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A beaver is swimming in the water | <audio controls><source src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tts_example.wav" type="audio/wav"> your browser does not support the audio element. </audio> 
+| A beaver is swimming in the water | <audio controls><source src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tts_example.wav" type="audio/wav"> your browser does not support the audio element. </audio> 
 
 ---
 
@@ -56,7 +56,7 @@ agent.run(
 ```
 | **输入**                                                                                                                   | **输出**     |
 |-----------------------------------------------------------------------------------------------------------------------------|----------------|
-| <img src="https://datasets-server.hf-mirror.com/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/0/image/image.jpg" width=200> | ballroom foyer |
+| <img src="https://datasets-server.huggingface.co/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/0/image/image.jpg" width=200> | ballroom foyer |
 
 ## 快速入门
 
@@ -95,11 +95,11 @@ login("<YOUR_TOKEN>")
 from transformers import HfAgent
 
 # Starcoder
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 # StarcoderBase
-# agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoderbase")
+# agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoderbase")
 # OpenAssistant
-# agent = HfAgent(url_endpoint="https://api-inference.hf-mirror.com/models/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5")
+# agent = HfAgent(url_endpoint="https://api-inference.huggingface.co/models/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5")
 ```
 
 此示例使用了目前Hugging Face免费提供的推理API。如果你有自己的推理端点用于此模型（或其他模型），你可以用你的URL替换上面的URL。
@@ -120,7 +120,7 @@ StarCoder和OpenAssistant可以免费使用，并且在简单任务上表现出�
 agent.run("Draw me a picture of rivers and lakes.")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200>
 
 它会自动选择适合您要执行的任务的`tool`（或`tools`），并以适当的方式运行它们。它可以在同一指令中执行一个或多个任务（尽管您的指令越复杂，`agent`失败的可能性就越大）。
 
@@ -129,7 +129,7 @@ agent.run("Draw me a picture of rivers and lakes.")
 agent.run("Draw me a picture of the sea then transform the picture to add an island")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/sea_and_island.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/sea_and_island.png" width=200>
 
 <br/>
 
@@ -174,13 +174,13 @@ agent.run("Draw me a picture of the `prompt`", prompt="a capybara swimming in th
 agent.chat("Generate a picture of rivers and lakes")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
 
 ```py
 agent.chat("Transform the picture so that there is a rock in there")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_and_beaver.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_and_beaver.png" width=200>
 
 <br/>
 
@@ -197,7 +197,7 @@ agent.chat("Transform the picture so that there is a rock in there")
 ### 这里发生了什么？什么是`tools`，什么是`agents`？
 
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/diagram.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/diagram.png">
 
 
 #### Agents
@@ -251,16 +251,16 @@ audio = tool("This is a text to speech tool")
 
 尽管我们确定了一组经过筛选的`tools`，但我们坚信，此实现提供的主要价值在于能够快速创建和共享自定义`tool`。
 
-通过将工具的代码上传到Hugging Face空间或模型repository，您可以直接通过`agent`使用`tools`。我们已经添加了一些**与transformers无关**的`tools`到[`huggingface-tools`组织](https://hf-mirror.com/huggingface-tools)中：
+通过将工具的代码上传到Hugging Face空间或模型repository，您可以直接通过`agent`使用`tools`。我们已经添加了一些**与transformers无关**的`tools`到[`huggingface-tools`组织](https://huggingface.co/huggingface-tools)中：
 
 - **文本下载器**：从Web URL下载文本
 - **文本到图像**：根据提示生成图像，利用`stable diffusion`
 - **图像转换**：根据初始图像和提示修改图像，利用`instruct pix2pix stable diffusion`
 - **文本到视频**：根据提示生成小视频，利用`damo-vilab`
 
-从一开始就一直在使用的文本到图像`tool`是一个远程`tool `，位于[*huggingface-tools/text-to-image*](https://hf-mirror.com/spaces/huggingface-tools/text-to-image)！我们将继续在此组织和其他组织上发布此类`tool`，以进一步增强此实现。
+从一开始就一直在使用的文本到图像`tool`是一个远程`tool `，位于[*huggingface-tools/text-to-image*](https://huggingface.co/spaces/huggingface-tools/text-to-image)！我们将继续在此组织和其他组织上发布此类`tool`，以进一步增强此实现。
 
-`agents`默认可以访问存储在[`huggingface-tools`](https://hf-mirror.com/huggingface-tools)上的`tools`。我们将在后续指南中解释如何编写和共享自定义`tools`，以及如何利用Hub上存在的任何自定义`tools`。
+`agents`默认可以访问存储在[`huggingface-tools`](https://huggingface.co/huggingface-tools)上的`tools`。我们将在后续指南中解释如何编写和共享自定义`tools`，以及如何利用Hub上存在的任何自定义`tools`。
 
 ### 代码生成
 

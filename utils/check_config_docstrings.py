@@ -30,7 +30,7 @@ transformers = direct_transformers_import(PATH_TO_TRANSFORMERS)
 CONFIG_MAPPING = transformers.models.auto.configuration_auto.CONFIG_MAPPING
 
 # Regex pattern used to find the checkpoint mentioned in the docstring of `config_class`.
-# For example, `[google-bert/bert-base-uncased](https://hf-mirror.com/google-bert/bert-base-uncased)`
+# For example, `[google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased)`
 _re_checkpoint = re.compile(r"\[(.+?)\]\((https://huggingface\.co/.+?)\)")
 
 
@@ -55,14 +55,14 @@ def get_checkpoint_from_config_class(config_class):
     checkpoints = _re_checkpoint.findall(config_source)
 
     # Each `checkpoint` is a tuple of a checkpoint name and a checkpoint link.
-    # For example, `('google-bert/bert-base-uncased', 'https://hf-mirror.com/google-bert/bert-base-uncased')`
+    # For example, `('google-bert/bert-base-uncased', 'https://huggingface.co/google-bert/bert-base-uncased')`
     for ckpt_name, ckpt_link in checkpoints:
         # allow the link to end with `/`
         if ckpt_link.endswith("/"):
             ckpt_link = ckpt_link[:-1]
 
         # verify the checkpoint name corresponds to the checkpoint link
-        ckpt_link_from_name = f"https://hf-mirror.com/{ckpt_name}"
+        ckpt_link_from_name = f"https://huggingface.co/{ckpt_name}"
         if ckpt_link == ckpt_link_from_name:
             checkpoint = ckpt_name
             break
@@ -89,7 +89,7 @@ def check_config_docstrings_have_checkpoints():
             f"The following configurations don't contain any valid checkpoint:\n{message}\n\n"
             "The requirement is to include a link pointing to one of the models of this architecture in the "
             "docstring of the config classes listed above. The link should have be a markdown format like "
-            "[myorg/mymodel](https://hf-mirror.com/myorg/mymodel)."
+            "[myorg/mymodel](https://huggingface.co/myorg/mymodel)."
         )
 
 

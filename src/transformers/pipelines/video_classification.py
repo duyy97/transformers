@@ -28,7 +28,7 @@ class VideoClassificationPipeline(Pipeline):
     `"video-classification"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=video-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=video-classification).
     """
 
     def __init__(self, *args, **kwargs):

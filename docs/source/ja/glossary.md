@@ -157,7 +157,7 @@ The encoded versions have different lengths:
 
 ファインチューニングは、事前にトレーニングされたモデルを取り、その重みを固定し、新しく追加された[model head](#head)で出力レイヤーを置き換える形式の転移学習です。モデルヘッドは対象のデータセットでトレーニングされます。
 
-詳細については、[Fine-tune a pretrained model](https://hf-mirror.com/docs/transformers/training) チュートリアルを参照して、🤗 Transformersを使用したモデルのファインチューニング方法を学びましょう。
+詳細については、[Fine-tune a pretrained model](https://huggingface.co/docs/transformers/training) チュートリアルを参照して、🤗 Transformersを使用したモデルのファインチューニング方法を学びましょう。
 
 ## H
 
@@ -177,7 +177,7 @@ The encoded versions have different lengths:
 
 ### inference
 
-推論は、トレーニングが完了した後に新しいデータでモデルを評価するプロセスです。 🤗 Transformers を使用して推論を実行する方法については、[推論のパイプライン](https://hf-mirror.com/docs/transformers/pipeline_tutorial) チュートリアルを参照してください。
+推論は、トレーニングが完了した後に新しいデータでモデルを評価するプロセスです。 🤗 Transformers を使用して推論を実行する方法については、[推論のパイプライン](https://huggingface.co/docs/transformers/pipeline_tutorial) チュートリアルを参照してください。
 
 ### input IDs
 
@@ -287,7 +287,7 @@ The encoded versions have different lengths:
 
 ### Natural language generation (NLG)
 
-テキストを生成する関連するすべてのタスク（たとえば、[Transformersで書く](https://transformer.hf-mirror.com/)、翻訳など）。
+テキストを生成する関連するすべてのタスク（たとえば、[Transformersで書く](https://transformer.huggingface.co/)、翻訳など）。
 
 ### Natural language processing (NLP)
 
@@ -303,7 +303,7 @@ The encoded versions have different lengths:
 
 🤗 Transformersのパイプラインは、データの前処理と変換を特定の順序で実行してデータを処理し、モデルから予測を返す一連のステップを指す抽象化です。パイプラインに見られるいくつかのステージの例には、データの前処理、特徴抽出、正規化などがあります。
 
-詳細については、[推論のためのパイプライン](https://hf-mirror.com/docs/transformers/pipeline_tutorial)を参照してください。
+詳細については、[推論のためのパイプライン](https://huggingface.co/docs/transformers/pipeline_tutorial)を参照してください。
 
 ### pixel values
 
@@ -324,7 +324,7 @@ The encoded versions have different lengths:
 
 ### preprocessing
 
-生データを機械学習モデルで簡単に処理できる形式に準備するタスクです。例えば、テキストは通常、トークン化によって前処理されます。他の入力タイプに対する前処理の具体的な方法を知りたい場合は、[Preprocess](https://hf-mirror.com/docs/transformers/preprocessing) チュートリアルをご覧ください。
+生データを機械学習モデルで簡単に処理できる形式に準備するタスクです。例えば、テキストは通常、トークン化によって前処理されます。他の入力タイプに対する前処理の具体的な方法を知りたい場合は、[Preprocess](https://huggingface.co/docs/transformers/preprocessing) チュートリアルをご覧ください。
 
 ### pretrained model
 

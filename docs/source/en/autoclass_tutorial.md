@@ -20,7 +20,7 @@ With so many different Transformer architectures, it can be challenging to creat
 
 <Tip>
 
-Remember, architecture refers to the skeleton of the model and checkpoints are the weights for a given architecture. For example, [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) is an architecture, while `google-bert/bert-base-uncased` is a checkpoint. Model is a general term that can mean either architecture or checkpoint.
+Remember, architecture refers to the skeleton of the model and checkpoints are the weights for a given architecture. For example, [BERT](https://huggingface.co/google-bert/bert-base-uncased) is an architecture, while `google-bert/bert-base-uncased` is a checkpoint. Model is a general term that can mean either architecture or checkpoint.
 
 </Tip>
 
@@ -68,7 +68,7 @@ For vision tasks, an image processor processes the image into the correct input 
 ## AutoBackbone
 
 <div style="text-align: center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/Swin%20Stages.png">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/Swin%20Stages.png">
     <figcaption class="mt-2 text-center text-sm text-gray-500">A Swin backbone with multiple stages for outputting a feature map.</figcaption>
 </div>
 
@@ -80,7 +80,7 @@ The [`AutoBackbone`] lets you use pretrained models as backbones to get feature 
 These parameters can be used interchangeably, but if you use both, make sure they're aligned with each other! If you don't pass any of these parameters, the backbone returns the feature map from the last layer.
 
 <div style="text-align: center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/Swin%20Stage%201.png">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/Swin%20Stage%201.png">
     <figcaption class="mt-2 text-center text-sm text-gray-500">A feature map from the first stage of the backbone. The patch partition refers to the model stem.</figcaption>
 </div>
 
@@ -156,7 +156,7 @@ Easily reuse the same checkpoint to load an architecture for a different task:
 
 <Tip warning={true}>
 
-For PyTorch models, the `from_pretrained()` method uses `torch.load()` which internally uses `pickle` and is known to be insecure. In general, never load a model that could have come from an untrusted source, or that could have been tampered with. This security risk is partially mitigated for public models hosted on the Hugging Face Hub, which are [scanned for malware](https://hf-mirror.com/docs/hub/security-malware) at each commit. See the [Hub documentation](https://hf-mirror.com/docs/hub/security) for best practices like [signed commit verification](https://hf-mirror.com/docs/hub/security-gpg#signing-commits-with-gpg) with GPG.
+For PyTorch models, the `from_pretrained()` method uses `torch.load()` which internally uses `pickle` and is known to be insecure. In general, never load a model that could have come from an untrusted source, or that could have been tampered with. This security risk is partially mitigated for public models hosted on the Hugging Face Hub, which are [scanned for malware](https://huggingface.co/docs/hub/security-malware) at each commit. See the [Hub documentation](https://huggingface.co/docs/hub/security) for best practices like [signed commit verification](https://huggingface.co/docs/hub/security-gpg#signing-commits-with-gpg) with GPG.
 
 TensorFlow and Flax checkpoints are not affected, and can be loaded within PyTorch architectures using the `from_tf` and `from_flax` kwargs for the `from_pretrained` method to circumvent this issue.
 

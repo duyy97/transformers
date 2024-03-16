@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ConvBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=convbert">
+<a href="https://huggingface.co/models?filter=convbert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-convbert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/conv-bert-base">
+<a href="https://huggingface.co/spaces/docs-demos/conv-bert-base">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -44,7 +44,7 @@ ConvBERT は、トレーニング コストが低く、さまざまな下流タ�
 モデルパラメータが少なくなります。注目すべきことに、ConvBERTbase モデルは 86.4 GLUE スコアを達成し、ELECTRAbase よりも 0.7 高いのに対し、
 トレーニングコストは 1/4 未満です。コードと事前トレーニングされたモデルがリリースされます。*
 
-このモデルは、[abhishek](https://hf-mirror.com/abhishek) によって提供されました。オリジナルの実装が見つかります
+このモデルは、[abhishek](https://huggingface.co/abhishek) によって提供されました。オリジナルの実装が見つかります
 ここ: https://github.com/yitu-opensource/ConvBert
 
 ## Usage tips

@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # 使用 🤗 Tokenizers 中的分词器
 
-[`PreTrainedTokenizerFast`] 依赖于 [🤗 Tokenizers](https://hf-mirror.com/docs/tokenizers) 库。从 🤗 Tokenizers 库获得的分词器可以被轻松地加载到 🤗 Transformers 中。
+[`PreTrainedTokenizerFast`] 依赖于 [🤗 Tokenizers](https://huggingface.co/docs/tokenizers) 库。从 🤗 Tokenizers 库获得的分词器可以被轻松地加载到 🤗 Transformers 中。
 
 在了解具体内容之前，让我们先用几行代码创建一个虚拟的分词器：
 

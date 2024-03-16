@@ -28,8 +28,8 @@ from ...utils import TensorType, logging
 logger = logging.get_logger(__name__)
 
 PERCEIVER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "deepmind/language-perceiver": "https://hf-mirror.com/deepmind/language-perceiver/resolve/main/config.json",
-    # See all Perceiver models at https://hf-mirror.com/models?filter=perceiver
+    "deepmind/language-perceiver": "https://huggingface.co/deepmind/language-perceiver/resolve/main/config.json",
+    # See all Perceiver models at https://huggingface.co/models?filter=perceiver
 }
 
 
@@ -38,7 +38,7 @@ class PerceiverConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`PerceiverModel`]. It is used to instantiate an
     Perceiver model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Perceiver
-    [deepmind/language-perceiver](https://hf-mirror.com/deepmind/language-perceiver) architecture.
+    [deepmind/language-perceiver](https://huggingface.co/deepmind/language-perceiver) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

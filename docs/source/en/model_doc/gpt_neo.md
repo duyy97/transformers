@@ -25,7 +25,7 @@ Black, Stella Biderman, Leo Gao, Phil Wang and Connor Leahy. It is a GPT2 like c
 The architecture is similar to GPT2 except that GPT Neo uses local attention in every other layer with a window size of
 256 tokens.
 
-This model was contributed by [valhalla](https://hf-mirror.com/valhalla).
+This model was contributed by [valhalla](https://huggingface.co/valhalla).
 
 ## Usage example
 
@@ -56,7 +56,7 @@ The `generate()` method can be used to generate text using GPT Neo model.
 
 ## Combining GPT-Neo and Flash Attention 2
 
-First, make sure to install the latest version of Flash Attention 2 to include the sliding window attention feature, and make sure your hardware is compatible with Flash-Attention 2. More details are available [here](https://hf-mirror.com/docs/transformers/perf_infer_gpu_one#flashattention-2) concerning the installation.
+First, make sure to install the latest version of Flash Attention 2 to include the sliding window attention feature, and make sure your hardware is compatible with Flash-Attention 2. More details are available [here](https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2) concerning the installation.
 
 Make sure as well to load your model in half-precision (e.g. `torch.float16`).
 
@@ -83,7 +83,7 @@ To load and run a model using Flash Attention 2, refer to the snippet below:
 ### Expected speedups
 
 Below is an expected speedup diagram that compares pure inference time between the native implementation in transformers using `EleutherAI/gpt-neo-2.7B` checkpoint and the Flash Attention 2 version of the model.
-Note that for GPT-Neo it is not possible to train / run on very long context as the max [position embeddings](https://hf-mirror.com/EleutherAI/gpt-neo-2.7B/blob/main/config.json#L58 ) is limited to 2048 - but this is applicable to all gpt-neo models and not specific to FA-2
+Note that for GPT-Neo it is not possible to train / run on very long context as the max [position embeddings](https://huggingface.co/EleutherAI/gpt-neo-2.7B/blob/main/config.json#L58 ) is limited to 2048 - but this is applicable to all gpt-neo models and not specific to FA-2
 
 <div style="text-align: center">
 <img src="https://user-images.githubusercontent.com/49240599/272241893-b1c66b75-3a48-4265-bc47-688448568b3d.png">

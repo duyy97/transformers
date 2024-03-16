@@ -20,7 +20,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 NLLB_MOE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/nllb-moe-54B": "https://hf-mirror.com/facebook/nllb-moe-54b/resolve/main/config.json",
+    "facebook/nllb-moe-54B": "https://huggingface.co/facebook/nllb-moe-54b/resolve/main/config.json",
 }
 
 
@@ -29,7 +29,7 @@ class NllbMoeConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`NllbMoeModel`]. It is used to instantiate an
     NLLB-MoE model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the NLLB-MoE
-    [facebook/nllb-moe-54b](https://hf-mirror.com/facebook/nllb-moe-54b) architecture.
+    [facebook/nllb-moe-54b](https://huggingface.co/facebook/nllb-moe-54b) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

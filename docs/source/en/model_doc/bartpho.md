@@ -29,7 +29,7 @@ on a downstream task of Vietnamese text summarization show that in both automati
 outperforms the strong baseline mBART and improves the state-of-the-art. We release BARTpho to facilitate future
 research and applications of generative Vietnamese NLP tasks.*
 
-This model was contributed by [dqnguyen](https://hf-mirror.com/dqnguyen). The original code can be found [here](https://github.com/VinAIResearch/BARTpho).
+This model was contributed by [dqnguyen](https://huggingface.co/dqnguyen). The original code can be found [here](https://github.com/VinAIResearch/BARTpho).
 
 ## Usage example
 

@@ -32,7 +32,7 @@ The metadata such as *artist, genre and timing* are passed to each prior, in the
 
 ![JukeboxModel](https://gist.githubusercontent.com/ArthurZucker/92c1acaae62ebf1b6a951710bdd8b6af/raw/c9c517bf4eff61393f6c7dec9366ef02bdd059a3/jukebox.svg)
 
-This model was contributed by [Arthur Zucker](https://hf-mirror.com/ArthurZ).
+This model was contributed by [Arthur Zucker](https://huggingface.co/ArthurZ).
 The original code can be found [here](https://github.com/openai/jukebox).
 
 ## Usage tips
@@ -42,7 +42,7 @@ The original code can be found [here](https://github.com/openai/jukebox).
 - Contrary to the paper, the order of the priors goes from `0` to `1` as it felt more intuitive : we sample starting from `0`.
 - Primed sampling (conditioning the sampling on raw audio) requires more memory than ancestral sampling and should be used with `fp16` set to `True`.
 
-This model was contributed by [Arthur Zucker](https://hf-mirror.com/ArthurZ).
+This model was contributed by [Arthur Zucker](https://huggingface.co/ArthurZ).
 The original code can be found [here](https://github.com/openai/jukebox).
 
 ## JukeboxConfig

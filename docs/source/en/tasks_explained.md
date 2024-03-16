@@ -31,7 +31,7 @@ To explain how tasks are solved, we'll walk through what goes on inside the mode
 
 <Tip>
 
-Before you go further, it is good to have some basic knowledge of the original Transformer architecture. Knowing how encoders, decoders, and attention work will aid you in understanding how different Transformer models work. If you're just getting started or need a refresher, check out our [course](https://hf-mirror.com/course/chapter1/4?fw=pt) for more information! 
+Before you go further, it is good to have some basic knowledge of the original Transformer architecture. Knowing how encoders, decoders, and attention work will aid you in understanding how different Transformer models work. If you're just getting started or need a refresher, check out our [course](https://huggingface.co/course/chapter1/4?fw=pt) for more information! 
 
 </Tip>
 
@@ -40,7 +40,7 @@ Before you go further, it is good to have some basic knowledge of the original T
 [Wav2Vec2](model_doc/wav2vec2) is a self-supervised model pretrained on unlabeled speech data and finetuned on labeled data for audio classification and automatic speech recognition. 
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
 </div>
 
 This model has four main components:
@@ -91,7 +91,7 @@ ViT and ConvNeXT can both be used for image classification; the main difference 
 [ViT](model_doc/vit) replaces convolutions entirely with a pure Transformer architecture. If you're familiar with the original Transformer, then you're already most of the way toward understanding ViT.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
 </div>
 
 The main change ViT introduced was in how images are fed to a Transformer:
@@ -117,7 +117,7 @@ This section briefly explains convolutions, but it'd be helpful to have a prior 
 [ConvNeXT](model_doc/convnext) is a CNN architecture that adopts new and modern network designs to improve performance. However, convolutions are still at the core of the model. From a high-level perspective, a [convolution](glossary#convolution) is an operation where a smaller matrix (*kernel*) is multiplied by a small window of the image pixels. It computes some features from it, such as a particular texture or curvature of a line. Then it slides over to the next window of pixels; the distance the convolution travels is known as the *stride*. 
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
 </div>
 
 <small>A basic convolution without padding or stride, taken from <a href="https://arxiv.org/abs/1603.07285">A guide to convolution arithmetic for deep learning.</a></small>
@@ -125,7 +125,7 @@ This section briefly explains convolutions, but it'd be helpful to have a prior 
 You can feed this output to another convolutional layer, and with each successive layer, the network learns more complex and abstract things like hotdogs or rockets. Between convolutional layers, it is common to add a pooling layer to reduce dimensionality and make the model more robust to variations of a feature's position.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
 </div>
 
 ConvNeXT modernizes a CNN in five ways:
@@ -147,7 +147,7 @@ The output from the convolution blocks is passed to a classification head which 
 [DETR](model_doc/detr), *DEtection TRansformer*, is an end-to-end object detection model that combines a CNN with a Transformer encoder-decoder.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
 </div>
 
 1. A pretrained CNN *backbone* takes an image, represented by its pixel values, and creates a low-resolution feature map of it. A 1x1 convolution is applied to the feature map to reduce dimensionality and it creates a new feature map with a high-level image representation. Since the Transformer is a sequential model, the feature map is flattened into a sequence of feature vectors that are combined with positional embeddings.
@@ -167,7 +167,7 @@ Ready to try your hand at object detection? Check out our complete [object detec
 [Mask2Former](model_doc/mask2former) is a universal architecture for solving all types of image segmentation tasks. Traditional segmentation models are typically tailored towards a particular subtask of image segmentation, like instance, semantic or panoptic segmentation. Mask2Former frames each of those tasks as a *mask classification* problem. Mask classification groups pixels into *N* segments, and predicts *N* masks and their corresponding class label for a given image. We'll explain how Mask2Former works in this section, and then you can try finetuning SegFormer at the end.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
 </div>
 
 There are three main components to Mask2Former:
@@ -189,7 +189,7 @@ Ready to try your hand at object detection? Check out our complete [image segmen
 [GLPN](model_doc/glpn), *Global-Local Path Network*, is a Transformer for depth estimation that combines a [SegFormer](model_doc/segformer) encoder with a lightweight decoder.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
 </div>
 
 1. Like ViT, an image is split into a sequence of patches, except these image patches are smaller. This is better for dense prediction tasks like segmentation or depth estimation. The image patches are transformed into patch embeddings (see the [image classification](#image-classification) section for more details about how patch embeddings are created), which are fed to the encoder.
@@ -241,7 +241,7 @@ Ready to try your hand at question answering? Check out our complete [question a
 [GPT-2](model_doc/gpt2) is a decoder-only model pretrained on a large amount of text. It can generate convincing (though not always true!) text given a prompt and complete other NLP tasks like question answering despite not being explicitly trained to.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
 </div>
 
 1. GPT-2 uses [byte pair encoding (BPE)](tokenizer_summary#bytepair-encoding-bpe) to tokenize words and generate a token embedding. Positional encodings are added to the token embeddings to indicate the position of each token in the sequence. The input embeddings are passed through multiple decoder blocks to output some final hidden state. Within each decoder block, GPT-2 uses a *masked self-attention* layer which means GPT-2 can't attend to future tokens. It is only allowed to attend to tokens on the left. This is different from BERT's [`mask`] token because, in masked self-attention, an attention mask is used to set the score to `0` for future tokens.
@@ -263,7 +263,7 @@ For more information about text generation, check out the [text generation strat
 Encoder-decoder models like [BART](model_doc/bart) and [T5](model_doc/t5) are designed for the sequence-to-sequence pattern of a summarization task. We'll explain how BART works in this section, and then you can try finetuning T5 at the end.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
 </div>
 
 1. BART's encoder architecture is very similar to BERT and accepts a token and positional embedding of the text. BART is pretrained by corrupting the input and then reconstructing it with the decoder. Unlike other encoders with specific corruption strategies, BART can apply any type of corruption. The *text infilling* corruption strategy works the best though. In text infilling, a number of text spans are replaced with a **single** [`mask`] token. This is important because the model has to predict the masked tokens, and it teaches the model to predict the number of missing tokens. The input embeddings and masked spans are passed through the encoder to output some final hidden states, but unlike BERT, BART doesn't add a final feedforward network at the end to predict a word.

@@ -362,7 +362,7 @@ and launch DeepSpeed:
  
 * For an in-depth guide on DeepSpeed integration with [`Trainer`], review [the corresponding documentation](main_classes/deepspeed), specifically the 
 [section for a single GPU](main_classes/deepspeed#deployment-with-one-gpu). Some adjustments are required to use DeepSpeed in a notebook; please take a look at the [corresponding guide](main_classes/deepspeed#deployment-in-notebooks).
-* If you prefer to use 🤗 Accelerate, refer to [🤗 Accelerate DeepSpeed guide](https://hf-mirror.com/docs/accelerate/en/usage_guides/deepspeed).
+* If you prefer to use 🤗 Accelerate, refer to [🤗 Accelerate DeepSpeed guide](https://huggingface.co/docs/accelerate/en/usage_guides/deepspeed).
 
 ## Using torch.compile
 
@@ -403,26 +403,26 @@ For an example of using `torch.compile` with 🤗 Transformers, check out this [
 
 ## Using 🤗 PEFT
 
-[Parameter-Efficient Fine Tuning (PEFT)](https://hf-mirror.com/blog/peft) methods freeze the pretrained model parameters during fine-tuning and add a small number of trainable parameters (the adapters) on top of it.
+[Parameter-Efficient Fine Tuning (PEFT)](https://huggingface.co/blog/peft) methods freeze the pretrained model parameters during fine-tuning and add a small number of trainable parameters (the adapters) on top of it.
 
-As a result the [memory associated to the optimizer states and gradients](https://hf-mirror.com/docs/transformers/model_memory_anatomy#anatomy-of-models-memory) are greatly reduced.
+As a result the [memory associated to the optimizer states and gradients](https://huggingface.co/docs/transformers/model_memory_anatomy#anatomy-of-models-memory) are greatly reduced.
 
 For example with a vanilla AdamW, the memory requirement for the optimizer state would be:
 * fp32 copy of parameters: 4 bytes/param
 * Momentum: 4 bytes/param
 * Variance: 4 bytes/param
 
-Suppose a model with 7B parameters and 200 millions parameters injected with [Low Rank Adapters](https://hf-mirror.com/docs/peft/conceptual_guides/lora).
+Suppose a model with 7B parameters and 200 millions parameters injected with [Low Rank Adapters](https://huggingface.co/docs/peft/conceptual_guides/lora).
 
 The memory requirement for the optimizer state of the plain model would be 12 * 7 = 84 GB (assuming 7B trainable parameters).
 
 Adding Lora increases slightly the memory associated to the model weights and substantially decreases memory requirement for the optimizer state to 12 * 0.2 = 2.4GB.
 
-Read more about PEFT and its detailed usage in [the PEFT documentation](https://hf-mirror.com/docs/peft/) or [PEFT repository](https://github.com/huggingface/peft).
+Read more about PEFT and its detailed usage in [the PEFT documentation](https://huggingface.co/docs/peft/) or [PEFT repository](https://github.com/huggingface/peft).
 
 ## Using 🤗 Accelerate
 
-With [🤗 Accelerate](https://hf-mirror.com/docs/accelerate/index) you can use the above methods while gaining full 
+With [🤗 Accelerate](https://huggingface.co/docs/accelerate/index) you can use the above methods while gaining full 
 control over the training loop and can essentially write the loop in pure PyTorch with some minor modifications. 
 
 Suppose you have combined the methods in the [`TrainingArguments`] like so:
@@ -463,9 +463,9 @@ for step, batch in enumerate(dataloader, start=1):
 
 First we wrap the dataset in a [`DataLoader`](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader). 
 Then we can enable gradient checkpointing by calling the model's [`~PreTrainedModel.gradient_checkpointing_enable`] method. 
-When we initialize the [`Accelerator`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator) 
+When we initialize the [`Accelerator`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator) 
 we can specify if we want to use mixed precision training and it will take care of it for us in the [`prepare`] call. 
-During the [`prepare`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare) 
+During the [`prepare`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare) 
 call the dataloader will also be distributed across workers should we use multiple GPUs. We use the same [8-bit optimizer](#8-bit-adam) from the earlier example.
 
 Finally, we can add the main training loop. Note that the `backward` call is handled by 🤗 Accelerate. We can also see
@@ -474,7 +474,7 @@ enough steps we run the optimization.
 
 Implementing these optimization techniques with 🤗 Accelerate only takes a handful of lines of code and comes with the 
 benefit of more flexibility in the training loop. For a full documentation of all features have a look at the 
-[Accelerate documentation](https://hf-mirror.com/docs/accelerate/index).
+[Accelerate documentation](https://huggingface.co/docs/accelerate/index).
 
 
 ## Efficient Software Prebuilds
@@ -506,7 +506,7 @@ number of parameters by an order of magnitude without increasing training costs.
 In this approach every other FFN layer is replaced with a MoE Layer which consists of many experts, with a gated function 
 that trains each expert in a balanced way depending on the input token's position in a sequence.
 
-![MoE Transformer 2x block](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/perf-moe-transformer.png)
+![MoE Transformer 2x block](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/perf-moe-transformer.png)
 
 (source: [GLAM](https://ai.googleblog.com/2021/12/more-efficient-in-context-learning-with.html))
 
@@ -529,6 +529,6 @@ And for Pytorch DeepSpeed has built one as well: [DeepSpeed-MoE: Advancing Mixtu
 
 ## Using PyTorch native attention and Flash Attention
 
-PyTorch's [`torch.nn.functional.scaled_dot_product_attention`](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention.html) (SDPA) can also call FlashAttention and memory-efficient attention kernels under the hood. SDPA support is currently being added natively in Transformers and is used by default for `torch>=2.1.1` when an implementation is available. Please refer to [PyTorch scaled dot product attention](https://hf-mirror.com/docs/transformers/perf_infer_gpu_one#pytorch-scaled-dot-product-attention) for a list of supported models and more details.
+PyTorch's [`torch.nn.functional.scaled_dot_product_attention`](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention.html) (SDPA) can also call FlashAttention and memory-efficient attention kernels under the hood. SDPA support is currently being added natively in Transformers and is used by default for `torch>=2.1.1` when an implementation is available. Please refer to [PyTorch scaled dot product attention](https://huggingface.co/docs/transformers/perf_infer_gpu_one#pytorch-scaled-dot-product-attention) for a list of supported models and more details.
 
 Check out this [blogpost](https://pytorch.org/blog/out-of-the-box-acceleration/) to learn more about acceleration and memory-savings with SDPA.

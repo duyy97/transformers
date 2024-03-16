@@ -44,9 +44,9 @@ For more details refer to the [release blog post](https://mistral.ai/news/announ
 
 The Mistral team has released 3 checkpoints:
 
-- a base model, [Mistral-7B-v0.1](https://hf-mirror.com/mistralai/Mistral-7B-v0.1), which has been pre-trained to predict the next token on internet-scale data.
-- an instruction tuned model, [Mistral-7B-Instruct-v0.1](https://hf-mirror.com/mistralai/Mistral-7B-Instruct-v0.1), which is the base model optimized for chat purposes using supervised fine-tuning (SFT) and direct preference optimization (DPO).
-- an improved instruction tuned model, [Mistral-7B-Instruct-v0.2](https://hf-mirror.com/mistralai/Mistral-7B-Instruct-v0.2), which improves upon v1.
+- a base model, [Mistral-7B-v0.1](https://huggingface.co/mistralai/Mistral-7B-v0.1), which has been pre-trained to predict the next token on internet-scale data.
+- an instruction tuned model, [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1), which is the base model optimized for chat purposes using supervised fine-tuning (SFT) and direct preference optimization (DPO).
+- an improved instruction tuned model, [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), which improves upon v1.
 
 The base model can be used as follows:
 
@@ -125,7 +125,7 @@ To load and run a model using Flash Attention-2, refer to the snippet below:
 Below is a expected speedup diagram that compares pure inference time between the native implementation in transformers using `mistralai/Mistral-7B-v0.1` checkpoint and the Flash Attention 2 version of the model.
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/mistral-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/mistral-7b-inference-large-seqlen.png">
 </div>
 
 ### Sliding window Attention
@@ -170,7 +170,7 @@ Quantizing a model is as simple as passing a `quantization_config` to the model.
 "The expected output"
 ```
 
-This model was contributed by [Younes Belkada](https://hf-mirror.com/ybelkada) and [Arthur Zucker](https://hf-mirror.com/ArthurZ) .
+This model was contributed by [Younes Belkada](https://huggingface.co/ybelkada) and [Arthur Zucker](https://huggingface.co/ArthurZ) .
 The original code can be found [here](https://github.com/mistralai/mistral-src).
 
 ## Resources

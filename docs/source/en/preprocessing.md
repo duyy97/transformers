@@ -226,7 +226,7 @@ In `fill-mask` pipelines, tokenizer arguments can be passed in the `tokenizer_kw
 
 For audio tasks, you'll need a [feature extractor](main_classes/feature_extractor) to prepare your dataset for the model. The feature extractor is designed to extract features from raw audio data, and convert them into tensors.
 
-Load the [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) dataset (see the 🤗 [Datasets tutorial](https://hf-mirror.com/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use a feature extractor with audio datasets:
+Load the [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) dataset (see the 🤗 [Datasets tutorial](https://huggingface.co/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use a feature extractor with audio datasets:
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -250,7 +250,7 @@ This returns three items:
 * `path` points to the location of the audio file.
 * `sampling_rate` refers to how many data points in the speech signal are measured per second.
 
-For this tutorial, you'll use the [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) model. Take a look at the model card, and you'll learn Wav2Vec2 is pretrained on 16kHz sampled speech audio. It is important your audio data's sampling rate matches the sampling rate of the dataset used to pretrain the model. If your data's sampling rate isn't the same, then you need to resample your data.
+For this tutorial, you'll use the [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) model. Take a look at the model card, and you'll learn Wav2Vec2 is pretrained on 16kHz sampled speech audio. It is important your audio data's sampling rate matches the sampling rate of the dataset used to pretrain the model. If your data's sampling rate isn't the same, then you need to resample your data.
 
 1. Use 🤗 Datasets' [`~datasets.Dataset.cast_column`] method to upsample the sampling rate to 16kHz:
 
@@ -346,7 +346,7 @@ You can use any library you like for image augmentation. For image preprocessing
 
 </Tip>
 
-Load the [food101](https://hf-mirror.com/datasets/food101) dataset (see the 🤗 [Datasets tutorial](https://hf-mirror.com/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use an image processor with computer vision datasets:
+Load the [food101](https://huggingface.co/datasets/food101) dataset (see the 🤗 [Datasets tutorial](https://huggingface.co/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use an image processor with computer vision datasets:
 
 <Tip>
 
@@ -360,14 +360,14 @@ Use 🤗 Datasets `split` parameter to only load a small sample from the trainin
 >>> dataset = load_dataset("food101", split="train[:100]")
 ```
 
-Next, take a look at the image with 🤗 Datasets [`Image`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=image#datasets.Image) feature:
+Next, take a look at the image with 🤗 Datasets [`Image`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=image#datasets.Image) feature:
 
 ```py
 >>> dataset[0]["image"]
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png"/>
 </div>
 
 Load the image processor with [`AutoImageProcessor.from_pretrained`]:
@@ -440,7 +440,7 @@ Here is what the image looks like after the transforms are applied. The image ha
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png"/>
 </div>
 
 <Tip>
@@ -473,7 +473,7 @@ from [`DetrImageProcessor`] and define a custom `collate_fn` to batch images tog
 
 For tasks involving multimodal inputs, you'll need a [processor](main_classes/processors) to prepare your dataset for the model. A processor couples together two processing objects such as as tokenizer and feature extractor.
 
-Load the [LJ Speech](https://hf-mirror.com/datasets/lj_speech) dataset (see the 🤗 [Datasets tutorial](https://hf-mirror.com/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use a processor for automatic speech recognition (ASR):
+Load the [LJ Speech](https://huggingface.co/datasets/lj_speech) dataset (see the 🤗 [Datasets tutorial](https://huggingface.co/docs/datasets/load_hub) for more details on how to load a dataset) to see how you can use a processor for automatic speech recognition (ASR):
 
 ```py
 >>> from datasets import load_dataset

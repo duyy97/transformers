@@ -45,7 +45,7 @@ _CONFIG_FOR_DOC = "DecisionTransformerConfig"
 
 DECISION_TRANSFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "edbeeching/decision-transformer-gym-hopper-medium",
-    # See all DecisionTransformer models at https://hf-mirror.com/models?filter=decision_transformer
+    # See all DecisionTransformer models at https://huggingface.co/models?filter=decision_transformer
 ]
 
 

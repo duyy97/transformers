@@ -16,7 +16,7 @@ limitations under the License.
 
 # Semantic segmentation examples
 
-This directory contains 2 scripts that showcase how to fine-tune any model supported by the [`AutoModelForSemanticSegmentation` API](https://hf-mirror.com/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForSemanticSegmentation) (such as [SegFormer](https://hf-mirror.com/docs/transformers/main/en/model_doc/segformer), [BEiT](https://hf-mirror.com/docs/transformers/main/en/model_doc/beit), [DPT](https://hf-mirror.com/docs/transformers/main/en/model_doc/dpt)) using PyTorch.
+This directory contains 2 scripts that showcase how to fine-tune any model supported by the [`AutoModelForSemanticSegmentation` API](https://huggingface.co/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForSemanticSegmentation) (such as [SegFormer](https://huggingface.co/docs/transformers/main/en/model_doc/segformer), [BEiT](https://huggingface.co/docs/transformers/main/en/model_doc/beit), [DPT](https://huggingface.co/docs/transformers/main/en/model_doc/dpt)) using PyTorch.
 
 ![segformer_inference_widget](https://user-images.githubusercontent.com/48327001/163667406-01f323a6-72ec-4e7e-bdeb-7d9da71b0697.gif)
 
@@ -33,7 +33,7 @@ In case you'd like to use the script with custom data, there are 2 things requir
 
 ### Creating a `DatasetDict`
 
-The script assumes that you have a `DatasetDict` with 2 columns, "image" and "label", both of type [Image](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Image). This can be created as follows:
+The script assumes that you have a `DatasetDict` with 2 columns, "image" and "label", both of type [Image](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Image). This can be created as follows:
 
 ```python
 from datasets import Dataset, DatasetDict, Image
@@ -73,11 +73,11 @@ dataset.push_to_hub("name of repo on the hub")
 # dataset.push_to_hub("name of repo on the hub", private=True)
 ```
 
-An example of such a dataset can be seen at [nielsr/ade20k-demo](https://hf-mirror.com/datasets/nielsr/ade20k-demo).
+An example of such a dataset can be seen at [nielsr/ade20k-demo](https://huggingface.co/datasets/nielsr/ade20k-demo).
 
 ### Creating an id2label mapping
 
-Besides that, the script also assumes the existence of an `id2label.json` file in the repo, containing a mapping from integers to actual class names. An example of that can be seen [here](https://hf-mirror.com/datasets/nielsr/ade20k-demo/blob/main/id2label.json). This can be created in Python as follows:
+Besides that, the script also assumes the existence of an `id2label.json` file in the repo, containing a mapping from integers to actual class names. An example of that can be seen [here](https://huggingface.co/datasets/nielsr/ade20k-demo/blob/main/id2label.json). This can be created in Python as follows:
 
 ```python
 import json
@@ -93,9 +93,9 @@ You can easily upload this by clicking on "Add file" in the "Files and versions"
 
 Based on the script [`run_semantic_segmentation.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/semantic-segmentation/run_semantic_segmentation.py).
 
-The script leverages the [🤗 Trainer API](https://hf-mirror.com/docs/transformers/main_classes/trainer) to automatically take care of the training for you, running on distributed environments right away.
+The script leverages the [🤗 Trainer API](https://huggingface.co/docs/transformers/main_classes/trainer) to automatically take care of the training for you, running on distributed environments right away.
 
-Here we show how to fine-tune a [SegFormer](https://hf-mirror.com/nvidia/mit-b0) model on the [segments/sidewalk-semantic](https://hf-mirror.com/datasets/segments/sidewalk-semantic) dataset:
+Here we show how to fine-tune a [SegFormer](https://huggingface.co/nvidia/mit-b0) model on the [segments/sidewalk-semantic](https://huggingface.co/datasets/segments/sidewalk-semantic) dataset:
 
 ```bash
 python run_semantic_segmentation.py \
@@ -120,11 +120,11 @@ python run_semantic_segmentation.py \
     --seed 1337
 ```
 
-The resulting model can be seen here: https://hf-mirror.com/nielsr/segformer-finetuned-sidewalk-10k-steps. The corresponding Weights and Biases report [here](https://wandb.ai/nielsrogge/huggingface/reports/SegFormer-fine-tuning--VmlldzoxODY5NTQ2). Note that it's always advised to check the original paper to know the details regarding training hyperparameters. E.g. from the SegFormer paper:
+The resulting model can be seen here: https://huggingface.co/nielsr/segformer-finetuned-sidewalk-10k-steps. The corresponding Weights and Biases report [here](https://wandb.ai/nielsrogge/huggingface/reports/SegFormer-fine-tuning--VmlldzoxODY5NTQ2). Note that it's always advised to check the original paper to know the details regarding training hyperparameters. E.g. from the SegFormer paper:
 
 > We trained the models using AdamW optimizer for 160K iterations on ADE20K, Cityscapes, and 80K iterations on COCO-Stuff. (...) We used a batch size of 16 for ADE20K and COCO-Stuff, and a batch size of 8 for Cityscapes. The learning rate was set to an initial value of 0.00006 and then used a “poly” LR schedule with factor 1.0 by default.
 
-Note that you can replace the model and dataset by simply setting the `model_name_or_path` and `dataset_name` arguments respectively, with any model or dataset from the [hub](https://hf-mirror.com/). For an overview of all possible arguments, we refer to the [docs](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) of the `TrainingArguments`, which can be passed as flags.
+Note that you can replace the model and dataset by simply setting the `model_name_or_path` and `dataset_name` arguments respectively, with any model or dataset from the [hub](https://huggingface.co/). For an overview of all possible arguments, we refer to the [docs](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) of the `TrainingArguments`, which can be passed as flags.
 
 ## PyTorch version, no Trainer
 
@@ -152,9 +152,9 @@ accelerate launch run_semantic_segmentation_no_trainer.py --output_dir segformer
 
 and boom, you're training, possibly on multiple GPUs, logging everything to all trackers found in your environment (like Weights and Biases, Tensorboard) and regularly pushing your model to the hub (with the repo name being equal to `args.output_dir` at your HF username) 🤗
 
-With the default settings, the script fine-tunes a [SegFormer]((https://hf-mirror.com/docs/transformers/main/en/model_doc/segformer)) model on the [segments/sidewalk-semantic](https://hf-mirror.com/datasets/segments/sidewalk-semantic) dataset.
+With the default settings, the script fine-tunes a [SegFormer]((https://huggingface.co/docs/transformers/main/en/model_doc/segformer)) model on the [segments/sidewalk-semantic](https://huggingface.co/datasets/segments/sidewalk-semantic) dataset.
 
-The resulting model can be seen here: https://hf-mirror.com/nielsr/segformer-finetuned-sidewalk. Note that the script usually requires quite a few epochs to achieve great results, e.g. the SegFormer authors fine-tuned their model for 160k steps (batches) on [`scene_parse_150`](https://hf-mirror.com/datasets/scene_parse_150).
+The resulting model can be seen here: https://huggingface.co/nielsr/segformer-finetuned-sidewalk. Note that the script usually requires quite a few epochs to achieve great results, e.g. the SegFormer authors fine-tuned their model for 160k steps (batches) on [`scene_parse_150`](https://huggingface.co/datasets/scene_parse_150).
 
 ## Reload and perform inference
 
@@ -199,6 +199,6 @@ For visualization of the segmentation maps, we refer to the [example notebook](h
 
 ## Important notes
 
-Some datasets, like [`scene_parse_150`](https://hf-mirror.com/datasets/scene_parse_150), contain a "background" label that is not part of the classes. The Scene Parse 150 dataset for instance contains labels between 0 and 150, with 0 being the background class, and 1 to 150 being actual class names (like "tree", "person", etc.). For these kind of datasets, one replaces the background label (0) by 255, which is the `ignore_index` of the PyTorch model's loss function, and reduces all labels by 1. This way, the `labels` are PyTorch tensors containing values between 0 and 149, and 255 for all background/padding.
+Some datasets, like [`scene_parse_150`](https://huggingface.co/datasets/scene_parse_150), contain a "background" label that is not part of the classes. The Scene Parse 150 dataset for instance contains labels between 0 and 150, with 0 being the background class, and 1 to 150 being actual class names (like "tree", "person", etc.). For these kind of datasets, one replaces the background label (0) by 255, which is the `ignore_index` of the PyTorch model's loss function, and reduces all labels by 1. This way, the `labels` are PyTorch tensors containing values between 0 and 149, and 255 for all background/padding.
 
 In case you're training on such a dataset, make sure to set the ``reduce_labels`` flag, which will take care of this.

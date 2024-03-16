@@ -113,7 +113,7 @@ class DocumentQuestionAnsweringPipeline(ChunkPipeline):
 
     >>> document_qa = pipeline(model="impira/layoutlm-document-qa")
     >>> document_qa(
-    ...     image="https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
+    ...     image="https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
     ...     question="What is the invoice number?",
     ... )
     [{'score': 0.425, 'answer': 'us-001', 'start': 16, 'end': 16}]
@@ -126,7 +126,7 @@ class DocumentQuestionAnsweringPipeline(ChunkPipeline):
 
     The models that this pipeline can use are models that have been fine-tuned on a document question answering task.
     See the up-to-date list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=document-question-answering).
+    [huggingface.co/models](https://huggingface.co/models?filter=document-question-answering).
     """
 
     def __init__(self, *args, **kwargs):
@@ -330,7 +330,7 @@ class DocumentQuestionAnsweringPipeline(ChunkPipeline):
 
         if self.model_type == ModelType.VisionEncoderDecoder:
             task_prompt = f'<s_docvqa><s_question>{input["question"]}</s_question><s_answer>'
-            # Adapted from https://hf-mirror.com/spaces/nielsr/donut-docvqa/blob/main/app.py
+            # Adapted from https://huggingface.co/spaces/nielsr/donut-docvqa/blob/main/app.py
             encoding = {
                 "inputs": image_features["pixel_values"],
                 "decoder_input_ids": self.tokenizer(

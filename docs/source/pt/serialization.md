@@ -136,7 +136,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -m MODEL, --model MODEL
-                        Model ID on hf-mirror.com or path on disk to load model from.
+                        Model ID on huggingface.co or path on disk to load model from.
   --feature {causal-lm, ...}
                         The type of features to export the model with.
   --opset OPSET         ONNX opset version to export the model with.
@@ -194,7 +194,7 @@ Os nomes de saída necessários (como `["last_hidden_state"]`) podem ser obtidos
 
 O processo é idêntico para os checkpoints do TensorFlow no Hub. Por exemplo, podemos
 exportar um checkpoint TensorFlow puro do [Keras
-](https://hf-mirror.com/keras-io) da seguinte forma:
+](https://huggingface.co/keras-io) da seguinte forma:
 
 ```bash
 python -m transformers.onnx --model=keras-io/transformers-qa onnx/

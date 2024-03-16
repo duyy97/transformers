@@ -25,7 +25,7 @@ Siri와 Alexa와 같은 가상 어시스턴트는 ASR 모델을 사용하여 일
 
 이 가이드에서 소개할 내용은 아래와 같습니다:
 
-1. [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 데이터 세트에서 [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base)를 미세 조정하여 오디오를 텍스트로 변환합니다.
+1. [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 데이터 세트에서 [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base)를 미세 조정하여 오디오를 텍스트로 변환합니다.
 2. 미세 조정한 모델을 추론에 사용합니다.
 
 <Tip>
@@ -55,7 +55,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 
 ## MInDS-14 데이터 세트 가져오기[[load-minds-14-dataset]]
 
-먼저, 🤗 Datasets 라이브러리에서 [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 데이터 세트의 일부분을 가져오세요. 
+먼저, 🤗 Datasets 라이브러리에서 [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 데이터 세트의 일부분을 가져오세요. 
 이렇게 하면 전체 데이터 세트에 대한 훈련에 시간을 들이기 전에 모든 것이 작동하는지 실험하고 검증할 수 있습니다.
 
 ```py
@@ -119,7 +119,7 @@ DatasetDict({
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-MInDS-14 데이터 세트의 샘플링 레이트는 8000kHz이므로([데이터 세트 카드](https://hf-mirror.com/datasets/PolyAI/minds14)에서 확인), 사전 훈련된 Wav2Vec2 모델을 사용하려면 데이터 세트를 16000kHz로 리샘플링해야 합니다:
+MInDS-14 데이터 세트의 샘플링 레이트는 8000kHz이므로([데이터 세트 카드](https://huggingface.co/datasets/PolyAI/minds14)에서 확인), 사전 훈련된 Wav2Vec2 모델을 사용하려면 데이터 세트를 16000kHz로 리샘플링해야 합니다:
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -203,9 +203,9 @@ MInDS-14 데이터 세트의 샘플링 레이트는 8000kHz이므로([데이터 
 
 ## 평가하기[[evaluate]]
 
-훈련 중에 평가 지표를 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하면 평가 방법을 빠르게 불러올 수 있습니다. 
-이 작업에서는 [단어 오류율(Word Error Rate, WER)](https://hf-mirror.com/spaces/evaluate-metric/wer) 평가 지표를 가져옵니다.
-(평가 지표를 불러오고 계산하는 방법은 🤗 Evaluate [둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하세요):
+훈련 중에 평가 지표를 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하면 평가 방법을 빠르게 불러올 수 있습니다. 
+이 작업에서는 [단어 오류율(Word Error Rate, WER)](https://huggingface.co/spaces/evaluate-metric/wer) 평가 지표를 가져옵니다.
+(평가 지표를 불러오고 계산하는 방법은 🤗 Evaluate [둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하세요):
 
 ```py
 >>> import evaluate
@@ -308,7 +308,7 @@ MInDS-14 데이터 세트의 샘플링 레이트는 8000kHz이므로([데이터 
 
 <Tip>
 
-자동 음성 인식을 위해 모델을 미세 조정하는 더 자세한 예제는 영어 자동 음성 인식을 위한 [블로그 포스트](https://hf-mirror.com/blog/fine-tune-wav2vec2-english)와 다국어 자동 음성 인식을 위한 [포스트](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2)를 참조하세요.
+자동 음성 인식을 위해 모델을 미세 조정하는 더 자세한 예제는 영어 자동 음성 인식을 위한 [블로그 포스트](https://huggingface.co/blog/fine-tune-wav2vec2-english)와 다국어 자동 음성 인식을 위한 [포스트](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)를 참조하세요.
 
 </Tip>
 

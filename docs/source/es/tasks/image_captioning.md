@@ -103,7 +103,7 @@ plot_images(sample_images_to_visualize, sample_captions)
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
 </div>
 
 ## Preprocesar el conjunto de datos
@@ -138,7 +138,7 @@ Con el conjunto de datos listo, ahora puedes configurar el modelo para el ajuste
 
 ## Cargar un modelo base
 
-Carga ["microsoft/git-base"](https://hf-mirror.com/microsoft/git-base) en un objeto [`AutoModelForCausalLM`](https://hf-mirror.com/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM).
+Carga ["microsoft/git-base"](https://huggingface.co/microsoft/git-base) en un objeto [`AutoModelForCausalLM`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM).
 
 ```python
 from transformers import AutoModelForCausalLM
@@ -148,9 +148,9 @@ model = AutoModelForCausalLM.from_pretrained(checkpoint)
 
 ## Evaluar
 
-Los modelos de subtítulos de imágenes se evalúan típicamente con el [Rouge Score](https://hf-mirror.com/spaces/evaluate-metric/rouge) o Tasa de Error de Palabra ([Word Error Rate](https://hf-mirror.com/spaces/evaluate-metric/wer), por sus siglas en inglés). Para esta guía, utilizarás la Tasa de Error de Palabra (WER).
+Los modelos de subtítulos de imágenes se evalúan típicamente con el [Rouge Score](https://huggingface.co/spaces/evaluate-metric/rouge) o Tasa de Error de Palabra ([Word Error Rate](https://huggingface.co/spaces/evaluate-metric/wer), por sus siglas en inglés). Para esta guía, utilizarás la Tasa de Error de Palabra (WER).
 
-Usamos la biblioteca 🤗 Evaluate para hacerlo. Para conocer las limitaciones potenciales y otros problemas del WER, consulta [esta guía](https://hf-mirror.com/spaces/evaluate-metric/wer).
+Usamos la biblioteca 🤗 Evaluate para hacerlo. Para conocer las limitaciones potenciales y otros problemas del WER, consulta [esta guía](https://huggingface.co/spaces/evaluate-metric/wer).
 
 ```python
 from evaluate import load
@@ -234,13 +234,13 @@ Toma una imagen de muestra de test_ds para probar el modelo.
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
 image = Image.open(requests.get(url, stream=True).raw)
 image
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
 </div>
 
 Prepara la imagen para el modelo.

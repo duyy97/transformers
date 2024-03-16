@@ -61,7 +61,7 @@ API リファレンス情報。
 
 </Tip>
 
-このモデルは [dqnguyen](https://hf-mirror.com/dqnguyen) によって提供されました。元のコードは [ここ](https://github.com/VinAIResearch/BERTweet) にあります。
+このモデルは [dqnguyen](https://huggingface.co/dqnguyen) によって提供されました。元のコードは [ここ](https://github.com/VinAIResearch/BERTweet) にあります。
 
 ## BertweetTokenizer
 

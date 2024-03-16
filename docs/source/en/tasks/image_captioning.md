@@ -108,7 +108,7 @@ plot_images(sample_images_to_visualize, sample_captions)
 ```
     
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
 </div>
 
 ## Preprocess the dataset
@@ -143,7 +143,7 @@ With the dataset ready, you can now set up the model for fine-tuning.
 
 ## Load a base model
 
-Load the ["microsoft/git-base"](https://hf-mirror.com/microsoft/git-base) into a [`AutoModelForCausalLM`](https://hf-mirror.com/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) object.
+Load the ["microsoft/git-base"](https://huggingface.co/microsoft/git-base) into a [`AutoModelForCausalLM`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) object.
 
 
 ```python
@@ -154,9 +154,9 @@ model = AutoModelForCausalLM.from_pretrained(checkpoint)
 
 ## Evaluate
 
-Image captioning models are typically evaluated with the [Rouge Score](https://hf-mirror.com/spaces/evaluate-metric/rouge) or [Word Error Rate](https://hf-mirror.com/spaces/evaluate-metric/wer). For this guide, you will use the Word Error Rate (WER). 
+Image captioning models are typically evaluated with the [Rouge Score](https://huggingface.co/spaces/evaluate-metric/rouge) or [Word Error Rate](https://huggingface.co/spaces/evaluate-metric/wer). For this guide, you will use the Word Error Rate (WER). 
 
-We use the 🤗 Evaluate library to do so. For potential limitations and other gotchas of the WER, refer to [this guide](https://hf-mirror.com/spaces/evaluate-metric/wer). 
+We use the 🤗 Evaluate library to do so. For potential limitations and other gotchas of the WER, refer to [this guide](https://huggingface.co/spaces/evaluate-metric/wer). 
 
 
 ```python
@@ -244,13 +244,13 @@ Take a sample image from `test_ds` to test the model.
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
 image = Image.open(requests.get(url, stream=True).raw)
 image
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
 </div>
     
 Prepare image for the model.

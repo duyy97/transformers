@@ -74,7 +74,7 @@ WAVLM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/wavlm-base",
     "microsoft/wavlm-base-plus",
     "microsoft/wavlm-large",
-    # See all WavLM models at https://hf-mirror.com/models?filter=wavlm
+    # See all WavLM models at https://huggingface.co/models?filter=wavlm
 ]
 
 

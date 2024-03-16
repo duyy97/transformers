@@ -19,7 +19,7 @@ rendered properly in your Markdown viewer.
 ## Overview
 
 The Time Series Transformer model is a vanilla encoder-decoder Transformer for time series forecasting.
-This model was contributed by [kashif](https://hf-mirror.com/kashif).
+This model was contributed by [kashif](https://huggingface.co/kashif).
 
 ## Usage tips
 
@@ -54,7 +54,7 @@ which is then fed to the decoder in order to make the next prediction (also call
 
 A list of official Hugging Face and community (indicated by 🌎) resources to help you get started. If you're interested in submitting a resource to be included here, please feel free to open a Pull Request and we'll review it! The resource should ideally demonstrate something new instead of duplicating an existing resource.
 
-- Check out the Time Series Transformer blog-post in HuggingFace blog: [Probabilistic Time Series Forecasting with 🤗 Transformers](https://hf-mirror.com/blog/time-series-transformers)
+- Check out the Time Series Transformer blog-post in HuggingFace blog: [Probabilistic Time Series Forecasting with 🤗 Transformers](https://huggingface.co/blog/time-series-transformers)
 
 
 ## TimeSeriesTransformerConfig

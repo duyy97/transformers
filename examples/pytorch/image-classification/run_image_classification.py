@@ -135,7 +135,7 @@ class ModelArguments:
 
     model_name_or_path: str = field(
         default="google/vit-base-patch16-224-in21k",
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"},
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"},
     )
     model_type: Optional[str] = field(
         default=None,

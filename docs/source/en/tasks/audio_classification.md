@@ -24,7 +24,7 @@ Audio classification - just like with text - assigns a class label output from t
 
 This guide will show you how to:
 
-1. Finetune [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) on the [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) dataset to classify speaker intent.
+1. Finetune [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) on the [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) dataset to classify speaker intent.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -133,7 +133,7 @@ The next step is to load a Wav2Vec2 feature extractor to process the audio signa
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-The MInDS-14 dataset has a sampling rate of 8000khz (you can find this information in it's [dataset card](https://hf-mirror.com/datasets/PolyAI/minds14)), which means you'll need to resample the dataset to 16000kHz to use the pretrained Wav2Vec2 model:
+The MInDS-14 dataset has a sampling rate of 8000khz (you can find this information in it's [dataset card](https://huggingface.co/datasets/PolyAI/minds14)), which means you'll need to resample the dataset to 16000kHz to use the pretrained Wav2Vec2 model:
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -148,7 +148,7 @@ The MInDS-14 dataset has a sampling rate of 8000khz (you can find this informati
 Now create a preprocessing function that:
 
 1. Calls the `audio` column to load, and if necessary, resample the audio file.
-2. Checks if the sampling rate of the audio file matches the sampling rate of the audio data a model was pretrained with. You can find this information in the Wav2Vec2 [model card](https://hf-mirror.com/facebook/wav2vec2-base).
+2. Checks if the sampling rate of the audio file matches the sampling rate of the audio data a model was pretrained with. You can find this information in the Wav2Vec2 [model card](https://huggingface.co/facebook/wav2vec2-base).
 3. Set a maximum input length to batch longer inputs without truncating them.
 
 ```py
@@ -169,7 +169,7 @@ To apply the preprocessing function over the entire dataset, use 🤗 Datasets [
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate

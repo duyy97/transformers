@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Verteiltes Training mit 🤗 Accelerate
 
-Da die Modelle immer größer werden, hat sich die Parallelität als Strategie zum Trainieren größerer Modelle auf begrenzter Hardware und zur Beschleunigung der Trainingsgeschwindigkeit um mehrere Größenordnungen erwiesen. Bei Hugging Face haben wir die Bibliothek [🤗 Accelerate](https://hf-mirror.com/docs/accelerate) entwickelt, um Nutzern zu helfen, ein 🤗 Transformers-Modell auf jeder Art von verteiltem Setup zu trainieren, egal ob es sich um mehrere GPUs auf einer Maschine oder mehrere GPUs auf mehreren Maschinen handelt. In diesem Tutorial lernen Sie, wie Sie Ihre native PyTorch-Trainingsschleife anpassen, um das Training in einer verteilten Umgebung zu ermöglichen.
+Da die Modelle immer größer werden, hat sich die Parallelität als Strategie zum Trainieren größerer Modelle auf begrenzter Hardware und zur Beschleunigung der Trainingsgeschwindigkeit um mehrere Größenordnungen erwiesen. Bei Hugging Face haben wir die Bibliothek [🤗 Accelerate](https://huggingface.co/docs/accelerate) entwickelt, um Nutzern zu helfen, ein 🤗 Transformers-Modell auf jeder Art von verteiltem Setup zu trainieren, egal ob es sich um mehrere GPUs auf einer Maschine oder mehrere GPUs auf mehreren Maschinen handelt. In diesem Tutorial lernen Sie, wie Sie Ihre native PyTorch-Trainingsschleife anpassen, um das Training in einer verteilten Umgebung zu ermöglichen.
 
 ## Einrichtung
 
@@ -133,4 +133,4 @@ accelerate launch train.py
 >>> notebook_launcher(training_function)
 ```
 
-Weitere Informationen über 🤗 Accelerate und seine umfangreichen Funktionen finden Sie in der [Dokumentation](https://hf-mirror.com/docs/accelerate).
+Weitere Informationen über 🤗 Accelerate und seine umfangreichen Funktionen finden Sie in der [Dokumentation](https://huggingface.co/docs/accelerate).

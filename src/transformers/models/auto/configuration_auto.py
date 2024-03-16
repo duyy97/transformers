@@ -1041,7 +1041,7 @@ class AutoConfig:
                 Can be either:
 
                     - A string, the *model id* of a pretrained model configuration hosted inside a model repo on
-                      hf-mirror.com.
+                      huggingface.co.
                     - A path to a *directory* containing a configuration file saved using the
                       [`~PretrainedConfig.save_pretrained`] method, or the [`~PreTrainedModel.save_pretrained`] method,
                       e.g., `./my_model_directory/`.
@@ -1061,7 +1061,7 @@ class AutoConfig:
                 'http://hostname': 'foo.bar:4012'}`. The proxies are used on each request.
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
             return_unused_kwargs (`bool`, *optional*, defaults to `False`):
                 If `False`, then this function returns just the final configuration object.
@@ -1083,10 +1083,10 @@ class AutoConfig:
         ```python
         >>> from transformers import AutoConfig
 
-        >>> # Download configuration from hf-mirror.com and cache.
+        >>> # Download configuration from huggingface.co and cache.
         >>> config = AutoConfig.from_pretrained("google-bert/bert-base-uncased")
 
-        >>> # Download configuration from hf-mirror.com (user-uploaded) and cache.
+        >>> # Download configuration from huggingface.co (user-uploaded) and cache.
         >>> config = AutoConfig.from_pretrained("dbmdz/bert-base-german-cased")
 
         >>> # If configuration file is in a directory (e.g., was saved using *save_pretrained('./test/saved_model/')*).

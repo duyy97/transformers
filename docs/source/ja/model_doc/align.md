@@ -24,7 +24,7 @@ ALIGNモデルは、「[Scaling Up Visual and Vision-Language Representation Lea
 
 *事前学習された表現は、多くの自然言語処理（NLP）および知覚タスクにとって重要になっています。NLPにおける表現学習は、人間のアノテーションのない生のテキストでの学習へと移行していますが、視覚および視覚言語の表現は依然として精巧な学習データセットに大きく依存しており、これは高価であったり専門知識を必要としたりします。視覚アプリケーションの場合、ImageNetやOpenImagesのような明示的なクラスラベルを持つデータセットを使用して学習されることがほとんどです。視覚言語の場合、Conceptual Captions、MSCOCO、CLIPなどの人気のあるデータセットはすべて、それぞれ無視できないデータ収集（およびクリーニング）プロセスを含みます。このコストのかかるキュレーションプロセスはデータセットのサイズを制限し、訓練されたモデルのスケーリングを妨げます。本論文では、Conceptual Captionsデータセットの高価なフィルタリングや後処理ステップなしで得られた、10億を超える画像alt-textペアのノイズの多いデータセットを活用します。シンプルなデュアルエンコーダーアーキテクチャは、対照損失を使用して画像とテキストペアの視覚的および言語的表現を整合させることを学習します。我々は、コーパスの規模がそのノイズを補い、このような単純な学習スキームでも最先端の表現につながることを示します。我々の視覚表現は、ImageNetやVTABなどの分類タスクへの転移において強力な性能を発揮します。整合した視覚的および言語的表現は、ゼロショット画像分類を可能にし、また、より洗練されたクロスアテンションモデルと比較しても、Flickr30KおよびMSCOCO画像テキスト検索ベンチマークにおいて新たな最先端の結果を達成します。また、これらの表現は、複雑なテキストおよびテキスト+画像のクエリを用いたクロスモーダル検索を可能にします。*
 
-このモデルは[Alara Dirik](https://hf-mirror.com/adirik)により提供されました。
+このモデルは[Alara Dirik](https://huggingface.co/adirik)により提供されました。
 オリジナルのコードは公開されておらず、この実装は元論文に基づいたKakao Brainの実装をベースにしています。
 
 ## 使用例
@@ -63,9 +63,9 @@ print(probs)
 
 ALIGNの使用を開始するのに役立つ公式のHugging Faceとコミュニティ（🌎で示されている）の参考資料の一覧です。
 
-- [ALIGNとCOYO-700Mデータセット](https://hf-mirror.com/blog/vit-align)に関するブログ投稿。
-- ゼロショット画像分類[デモ](https://hf-mirror.com/spaces/adirik/ALIGN-zero-shot-image-classification)。
-- `kakaobrain/align-base` モデルの[モデルカード](https://hf-mirror.com/kakaobrain/align-base)。
+- [ALIGNとCOYO-700Mデータセット](https://huggingface.co/blog/vit-align)に関するブログ投稿。
+- ゼロショット画像分類[デモ](https://huggingface.co/spaces/adirik/ALIGN-zero-shot-image-classification)。
+- `kakaobrain/align-base` モデルの[モデルカード](https://huggingface.co/kakaobrain/align-base)。
 
 ここに参考資料を提出したい場合は、気兼ねなくPull Requestを開いてください。私たちはそれをレビューいたします！参考資料は、既存のものを複製するのではなく、何か新しいことを示すことが理想的です。
 

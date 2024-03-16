@@ -28,7 +28,7 @@ al., 2019). Experiments show that BERTweet outperforms strong baselines RoBERTa-
 2020), producing better performance results than the previous state-of-the-art models on three Tweet NLP tasks:
 Part-of-speech tagging, Named-entity recognition and text classification.*
 
-This model was contributed by [dqnguyen](https://hf-mirror.com/dqnguyen). The original code can be found [here](https://github.com/VinAIResearch/BERTweet).
+This model was contributed by [dqnguyen](https://huggingface.co/dqnguyen). The original code can be found [here](https://github.com/VinAIResearch/BERTweet).
 
 ## Usage example
 

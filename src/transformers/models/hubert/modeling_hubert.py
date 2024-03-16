@@ -60,7 +60,7 @@ _SEQ_CLASS_EXPECTED_LOSS = 8.53
 
 HUBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/hubert-base-ls960",
-    # See all Hubert models at https://hf-mirror.com/models?filter=hubert
+    # See all Hubert models at https://huggingface.co/models?filter=hubert
 ]
 
 
@@ -947,7 +947,7 @@ HUBERT_INPUTS_DOCSTRING = r"""
 
             `attention_mask` should only be passed if the corresponding processor has `config.return_attention_mask ==
             True`. For all models whose processor has `config.return_attention_mask == False`, such as
-            [hubert-base](https://hf-mirror.com/facebook/hubert-base-ls960), `attention_mask` should **not** be passed
+            [hubert-base](https://huggingface.co/facebook/hubert-base-ls960), `attention_mask` should **not** be passed
             to avoid degraded performance when doing batched inference. For such models `input_values` should simply be
             padded with 0 and passed without `attention_mask`. Be aware that these models also yield slightly different
             results depending on whether `input_values` is padded or not.

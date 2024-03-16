@@ -38,12 +38,12 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model", "tokenizer_file": 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/nllb-200-distilled-600M": (
-            "https://hf-mirror.com/facebook/nllb-200-distilled-600M/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/facebook/nllb-200-distilled-600M/resolve/main/sentencepiece.bpe.model"
         ),
     },
     "tokenizer_file": {
         "facebook/nllb-200-distilled-600M": (
-            "https://hf-mirror.com/facebook/nllb-200-distilled-600M/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/nllb-200-distilled-600M/resolve/main/tokenizer.json"
         ),
     },
 }
@@ -59,7 +59,7 @@ FAIRSEQ_LANGUAGE_CODES = ['ace_Arab', 'ace_Latn', 'acm_Arab', 'acq_Arab', 'aeb_A
 class NllbTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" NLLB tokenizer (backed by HuggingFace's *tokenizers* library). Based on
-    [BPE](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
+    [BPE](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

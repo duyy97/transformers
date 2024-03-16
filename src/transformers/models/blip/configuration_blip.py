@@ -24,21 +24,21 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 BLIP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "Salesforce/blip-vqa-base": "https://hf-mirror.com/Salesforce/blip-vqa-base/resolve/main/config.json",
+    "Salesforce/blip-vqa-base": "https://huggingface.co/Salesforce/blip-vqa-base/resolve/main/config.json",
     "Salesforce/blip-vqa-capfit-large": (
-        "https://hf-mirror.com/Salesforce/blip-vqa-base-capfit/resolve/main/config.json"
+        "https://huggingface.co/Salesforce/blip-vqa-base-capfit/resolve/main/config.json"
     ),
     "Salesforce/blip-image-captioning-base": (
-        "https://hf-mirror.com/Salesforce/blip-image-captioning-base/resolve/main/config.json"
+        "https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/config.json"
     ),
     "Salesforce/blip-image-captioning-large": (
-        "https://hf-mirror.com/Salesforce/blip-image-captioning-large/resolve/main/config.json"
+        "https://huggingface.co/Salesforce/blip-image-captioning-large/resolve/main/config.json"
     ),
-    "Salesforce/blip-itm-base-coco": "https://hf-mirror.com/Salesforce/blip-itm-base-coco/resolve/main/config.json",
-    "Salesforce/blip-itm-large-coco": "https://hf-mirror.com/Salesforce/blip-itm-large-coco/resolve/main/config.json",
-    "Salesforce/blip-itm-base-flikr": "https://hf-mirror.com/Salesforce/blip-itm-base-flikr/resolve/main/config.json",
+    "Salesforce/blip-itm-base-coco": "https://huggingface.co/Salesforce/blip-itm-base-coco/resolve/main/config.json",
+    "Salesforce/blip-itm-large-coco": "https://huggingface.co/Salesforce/blip-itm-large-coco/resolve/main/config.json",
+    "Salesforce/blip-itm-base-flikr": "https://huggingface.co/Salesforce/blip-itm-base-flikr/resolve/main/config.json",
     "Salesforce/blip-itm-large-flikr": (
-        "https://hf-mirror.com/Salesforce/blip-itm-large-flikr/resolve/main/config.json"
+        "https://huggingface.co/Salesforce/blip-itm-large-flikr/resolve/main/config.json"
     ),
 }
 
@@ -48,7 +48,7 @@ class BlipTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BlipTextModel`]. It is used to instantiate a BLIP
     text model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the `BlipText` used by the [base
-    architectures](https://hf-mirror.com/Salesforce/blip-vqa-base).
+    architectures](https://huggingface.co/Salesforce/blip-vqa-base).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -189,7 +189,7 @@ class BlipVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BlipVisionModel`]. It is used to instantiate a
     BLIP vision model according to the specified arguments, defining the model architecture. Instantiating a
     configuration defaults will yield a similar configuration to that of the Blip-base
-    [Salesforce/blip-vqa-base](https://hf-mirror.com/Salesforce/blip-vqa-base) architecture.
+    [Salesforce/blip-vqa-base](https://huggingface.co/Salesforce/blip-vqa-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -288,7 +288,7 @@ class BlipConfig(PretrainedConfig):
     [`BlipConfig`] is the configuration class to store the configuration of a [`BlipModel`]. It is used to instantiate
     a BLIP model according to the specified arguments, defining the text model and vision model configs. Instantiating
     a configuration with the defaults will yield a similar configuration to that of the BLIP-base
-    [Salesforce/blip-vqa-base](https://hf-mirror.com/Salesforce/blip-vqa-base) architecture.
+    [Salesforce/blip-vqa-base](https://huggingface.co/Salesforce/blip-vqa-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

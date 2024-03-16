@@ -30,7 +30,7 @@ if TYPE_CHECKING:
 logger = logging.get_logger(__name__)
 
 WHISPER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "openai/whisper-base": "https://hf-mirror.com/openai/whisper-base/resolve/main/config.json",
+    "openai/whisper-base": "https://huggingface.co/openai/whisper-base/resolve/main/config.json",
 }
 
 # fmt: off
@@ -64,7 +64,7 @@ class WhisperConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`WhisperModel`]. It is used to instantiate a
     Whisper model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Whisper
-    [openai/whisper-tiny](https://hf-mirror.com/openai/whisper-tiny) architecture.
+    [openai/whisper-tiny](https://huggingface.co/openai/whisper-tiny) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

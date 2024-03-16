@@ -839,7 +839,7 @@ class Blip2ModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
 
 # We will verify our results on an image of cute cats
 def prepare_img():
-    url = "https://hf-mirror.com/hf-internal-testing/blip-test-image/resolve/main/demo.jpg"
+    url = "https://huggingface.co/hf-internal-testing/blip-test-image/resolve/main/demo.jpg"
     image = Image.open(requests.get(url, stream=True).raw)
     return image
 

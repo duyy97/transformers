@@ -46,7 +46,7 @@ IMAGEGPT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai/imagegpt-small",
     "openai/imagegpt-medium",
     "openai/imagegpt-large",
-    # See all Image GPT models at https://hf-mirror.com/models?filter=imagegpt
+    # See all Image GPT models at https://huggingface.co/models?filter=imagegpt
 ]
 
 

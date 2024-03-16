@@ -67,9 +67,9 @@ For issues with Flax/JAX, Transformers, Datasets or for questions that are speci
 
 - Flax: [Issues](https://github.com/google/flax/issues), [Questions](https://github.com/google/flax/discussions)
 - JAX: [Issues](https://github.com/google/jax/issues), [Questions](https://github.com/google/jax/discussions)
-- 🤗 Transformers: [Issues](https://github.com/huggingface/transformers/issues), [Questions](https://discuss.hf-mirror.com/c/transformers/9)
-- 🤗 Datasets: [Issues](https://github.com/huggingface/datasets/issues), [Questions](https://discuss.hf-mirror.com/c/datasets/10)
-- Project specific questions: [Forum](https://discuss.hf-mirror.com/c/flax-jax-projects/22)
+- 🤗 Transformers: [Issues](https://github.com/huggingface/transformers/issues), [Questions](https://discuss.huggingface.co/c/transformers/9)
+- 🤗 Datasets: [Issues](https://github.com/huggingface/datasets/issues), [Questions](https://discuss.huggingface.co/c/datasets/10)
+- Project specific questions: [Forum](https://discuss.huggingface.co/c/flax-jax-projects/22)
 - TPU related questions: [TODO]()
 
 Please do **not** post the complete issue/project-specific question in the Slack channel, but instead a link to your issue/question that we will try to answer as soon as possible. 
@@ -81,7 +81,7 @@ To be invited to the Slack channel, please make sure you have signed up [on the 
 
 ## Projects
 
-During the first week after the community week announcement, **23.06. - 30.06.**, teams will be formed around the most promising and interesting project ideas. Each team can consist of 2 to 10 participants. Projects can be accessed [here](https://discuss.hf-mirror.com/c/flax-jax-projects/22).
+During the first week after the community week announcement, **23.06. - 30.06.**, teams will be formed around the most promising and interesting project ideas. Each team can consist of 2 to 10 participants. Projects can be accessed [here](https://discuss.huggingface.co/c/flax-jax-projects/22).
 
 All officially defined projects can be seen [here](https://docs.google.com/spreadsheets/d/1GpHebL7qrwJOc9olTpIPgjf8vOS0jNb6zR_B8x_Jtik/edit?usp=sharing).
 
@@ -92,7 +92,7 @@ Check out the [HOW_TO_PROPOSE_PROJECT.md](https://github.com/huggingface/transfo
 
 ### How to form a team around a project
 
-You can check out all existing projects ideas on the forum under [Flax/JAX projects category](https://discuss.hf-mirror.com/c/flax-jax-projects/22).
+You can check out all existing projects ideas on the forum under [Flax/JAX projects category](https://discuss.huggingface.co/c/flax-jax-projects/22).
 Make sure to quickly check out each project idea and leave a ❤️  if you like an idea. 
 Feel free to leave comments, suggestions for improvement, or questions about more details directly on the discussion thread. 
 If you have found the project that you ❤️  the most, leave a message "I would like to join this project" on the discussion thread. 
@@ -119,7 +119,7 @@ Additionally, the organizers, other participants, or anybody in the community re
 - For project ideas that see a lot of interest, we are more than happy to create more than one team.
 - Participants are welcome to join multiple teams, even though we encourage them to only work on a single project.
 - Under special circumstances, participants can change/create new teams. Please note that we would like to keep this the exception. If however, you would like to change/leave existing teams, please leave a post on the project's thread where you ping the corresponding organizer that created the group.
- - It is often easy to propose/join a project that is done in your native language. Feel free to reach out to existing [language-specific groups](https://discuss.hf-mirror.com/c/languages-at-hugging-face/15) to look for community members that might be interested in joining your project.
+ - It is often easy to propose/join a project that is done in your native language. Feel free to reach out to existing [language-specific groups](https://discuss.huggingface.co/c/languages-at-hugging-face/15) to look for community members that might be interested in joining your project.
 
 ## Tips on how to organize the project
 
@@ -133,7 +133,7 @@ Once your team is defined, you can start working on the project as soon as possi
 ### Communication
 
 At first, it is always useful to get to know each other and to set up a means of communication.
-While we recommend that all technical aspects of work can be discussed directly on the [forum](https://discuss.hf-mirror.com/c/flax-jax-projects/22) under your project thread, 
+While we recommend that all technical aspects of work can be discussed directly on the [forum](https://discuss.huggingface.co/c/flax-jax-projects/22) under your project thread, 
 it can be very helpful to have a more direct way of communicating, *e.g.* in a channel. 
 For this we have created a discord that you can access [here](https://discord.com/channels/858019234139602994/858019234139602997). 
 This discord will not be managed by anybody and is just there so that you can communicate more effectively with your team members. 
@@ -159,8 +159,8 @@ to be used, but that everybody in team is on the same page on what type of model
 To give an example, a well-defined project would be the following:
 
 - task: summarization
-- model: [google-t5/t5-small](https://hf-mirror.com/google-t5/t5-small)
-- dataset: [CNN/Daily mail](https://hf-mirror.com/datasets/cnn_dailymail)
+- model: [google-t5/t5-small](https://huggingface.co/google-t5/t5-small)
+- dataset: [CNN/Daily mail](https://huggingface.co/datasets/cnn_dailymail)
 - training script: [run_summarization_flax.py](https://github.com/huggingface/transformers/blob/main/examples/flax/summarization/run_summarization_flax.py)
 - outcome: t5 model that can summarize news
 - work flow: adapt `run_summarization_flax.py` to work with `google-t5/t5-small`.
@@ -223,17 +223,17 @@ Here is a collection of some more tips:
 
 - We strongly recommend to work as publicly and collaboratively as possible during the week so that other teams 
 and the organizers can best help you. This includes publishing important discussions on 
-the forum and making use of the [🤗 hub](http://hf-mirror.com/) to have a version 
+the forum and making use of the [🤗 hub](http://huggingface.co/) to have a version 
 control for your models and training logs.
 - When debugging, it is important that the debugging cycle is kept as short as possible to 
 be able to effectively debug. *E.g.* if there is a problem with your training script, 
-you should run it with just a couple of hundreds of examples and not the whole dataset script. This can be done by either making use of [datasets streaming](https://hf-mirror.com/docs/datasets/master/dataset_streaming?highlight=streaming) or by selecting just the first 
+you should run it with just a couple of hundreds of examples and not the whole dataset script. This can be done by either making use of [datasets streaming](https://huggingface.co/docs/datasets/master/dataset_streaming?highlight=streaming) or by selecting just the first 
 X number of data samples after loading:
 
 ```python
 datasets["train"] = datasets["train"].select(range(1000))
 ```
-- Ask for help. If you are stuck, use the public Slack channel or the [forum](https://discuss.hf-mirror.com/c/flax-jax-projects/22) to ask for help.
+- Ask for help. If you are stuck, use the public Slack channel or the [forum](https://discuss.huggingface.co/c/flax-jax-projects/22) to ask for help.
 
 ## How to install relevant libraries
 
@@ -966,19 +966,19 @@ The advantages of using a repository on the 🤗 hub are:
 - integrated tensorboard functionality - uploaded tensorboard traces are automatically displayed on an integrated tensorboard tab
 
 We highly recommend each team to make use of the 🤗 hub during the event.
-To better understand how the repository and the hub in general functions, please take a look at the documentation and the videos [here](https://hf-mirror.com/docs/hub).
+To better understand how the repository and the hub in general functions, please take a look at the documentation and the videos [here](https://huggingface.co/docs/hub).
 
-Now let's explain in more detail how a project can be created on the hub. Having an officially defined project on [this](https://docs.google.com/spreadsheets/d/1GpHebL7qrwJOc9olTpIPgjf8vOS0jNb6zR_B8x_Jtik/edit?usp=sharing) Google Sheet you should be part of [the Flax Community organization on the hub](https://hf-mirror.com/flax-community). All repositories should be created under this organization so that write access can be shared and everybody can easily access other participants'
-work 🤗. Note that we are giving each team member access to all repositories created under [flax-community](https://hf-mirror.com/flax-community), but we encourage participants to only clone and edit repositories corresponding to one's teams. If you want to help other teams, please ask them before changing files in their repository! The integrated git version control keeps track of 
+Now let's explain in more detail how a project can be created on the hub. Having an officially defined project on [this](https://docs.google.com/spreadsheets/d/1GpHebL7qrwJOc9olTpIPgjf8vOS0jNb6zR_B8x_Jtik/edit?usp=sharing) Google Sheet you should be part of [the Flax Community organization on the hub](https://huggingface.co/flax-community). All repositories should be created under this organization so that write access can be shared and everybody can easily access other participants'
+work 🤗. Note that we are giving each team member access to all repositories created under [flax-community](https://huggingface.co/flax-community), but we encourage participants to only clone and edit repositories corresponding to one's teams. If you want to help other teams, please ask them before changing files in their repository! The integrated git version control keeps track of 
 all changes, so in case a file was deleted by mistake, it is trivial to re-create it.
 
 Awesome! Now, let's first go over a simple example where most of the required we'll pre-train a RoBERTa model on a low-resource language. To begin with, we create a repository 
-under [the Flax Community organization on the hub](https://hf-mirror.com/flax-community) by logging in to the hub and going to [*"Add model"*](https://hf-mirror.com/new). By default 
+under [the Flax Community organization on the hub](https://huggingface.co/flax-community) by logging in to the hub and going to [*"Add model"*](https://huggingface.co/new). By default 
 the username should be displayed under "*Owner*", which we want to change to *flax-community*. Next, we give our repository a fitting name for the project - here we'll just call it 
 *roberta-base-als* because we'll be pretraining a RoBERTa model on the super low-resource language *Alemannic* (`als`). We make sure that the model is a public repository and create it!
-It should then be displayed on [the Flax Community organization on the hub](https://hf-mirror.com/flax-community).
+It should then be displayed on [the Flax Community organization on the hub](https://huggingface.co/flax-community).
 
-Great, now we have a project directory with integrated git version control and a public model page, which we can access under [flax-community/roberta-base-als](https://hf-mirror.com/flax-community/roberta-base-als). Let's create a short README so that other participants know what this model is about. You can create the README.md directly on the model page as a markdown file.
+Great, now we have a project directory with integrated git version control and a public model page, which we can access under [flax-community/roberta-base-als](https://huggingface.co/flax-community/roberta-base-als). Let's create a short README so that other participants know what this model is about. You can create the README.md directly on the model page as a markdown file.
 Let's now make use of the repository for training.
 
 We assume that the 🤗 Transformers library and [git-lfs](https://git-lfs.github.com/) are correctly installed on our machine or the TPU attributed to us. 
@@ -993,7 +993,7 @@ $ huggingface-cli login
 Next we can clone the repo:
 
 ```bash
-$ git clone https://hf-mirror.com/flax-community/roberta-base-als
+$ git clone https://huggingface.co/flax-community/roberta-base-als
 ```
 
 We have now cloned the model's repository and it should be under `roberta-base-als`. As you can see,
@@ -1021,7 +1021,7 @@ Now we've added a `config.json` file and can upload it by running
 $ git add . && git commit -m "add config" && git push
 ```
 
-Cool! The file is now displayed on the model page under the [files tab](https://hf-mirror.com/flax-community/roberta-base-als/tree/main).
+Cool! The file is now displayed on the model page under the [files tab](https://huggingface.co/flax-community/roberta-base-als/tree/main).
 We encourage you to upload all files except maybe the actual data files to the repository. This includes training scripts, model weights,
 model configurations, training logs, etc...
 
@@ -1085,7 +1085,7 @@ Let's start training by running:
 
 Since the dataset is tiny this command should actually run in less than 5 minutes. Note that we attach 
 the flag ``--push_to_hub`` so that both model weights and tensorboard traces are automatically uploaded to the hub.
-You can see the tensorboard directly on the model page, under the [Training metrics tab](https://hf-mirror.com/flax-community/roberta-base-als/tensorboard).
+You can see the tensorboard directly on the model page, under the [Training metrics tab](https://huggingface.co/flax-community/roberta-base-als/tensorboard).
 
 As you can see, it is pretty simple to upload model weights and training logs to the model hub. Since the repository 
 has git version control, you & your team probably already have the necessary skills to collaborate. Thanks 
@@ -1122,7 +1122,7 @@ with repo.commit("My cool Flax model :)"):
     with open("flax_model.msgpack", "wb") as f:
         f.write(bytes_output)
 
-# Repo is created and available here: https://hf-mirror.com/flax-community/flax-model-dummy
+# Repo is created and available here: https://huggingface.co/flax-community/flax-model-dummy
 ```
 
 **Note**: Make sure to have `huggingface_hub >= 0.0.13` to make this command work.
@@ -1186,30 +1186,30 @@ Also feel free to install other `python` or `apt` packages on your machine if it
  
 ### Using the Hugging Face Widgets
 
-Hugging Face has over [15 widgets](https://huggingface-widgets.netlify.app/) for different use cases using 🤗 Transformers library. Some of them also support [3rd party libraries](https://hf-mirror.com/docs/hub/libraries) such as [Sentence Similarity](https://hf-mirror.com/sentence-transformers/paraphrase-xlm-r-multilingual-v1) with Sentence Transformers and [Text to Speech](https://hf-mirror.com/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train) with [ESPnet](https://github.com/espnet/espnet).
+Hugging Face has over [15 widgets](https://huggingface-widgets.netlify.app/) for different use cases using 🤗 Transformers library. Some of them also support [3rd party libraries](https://huggingface.co/docs/hub/libraries) such as [Sentence Similarity](https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1) with Sentence Transformers and [Text to Speech](https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train) with [ESPnet](https://github.com/espnet/espnet).
 
 All the widgets are open sourced in the `huggingface_hub` [repo](https://github.com/huggingface/huggingface_hub/tree/main/widgets). Here is a summary of existing widgets:
 
 **NLP**
-* **Conversational:** To have the best conversations!. [Example](https://hf-mirror.com/microsoft/DialoGPT-large?).
-* **Feature Extraction:** Retrieve the input embeddings. [Example](https://hf-mirror.com/sentence-transformers/distilbert-base-nli-mean-tokens?text=test).
-* **Fill Mask:** Predict potential words for a mask token. [Example](https://hf-mirror.com/google-bert/bert-base-uncased?).
-* **Question Answering:** Given a context and a question, predict the answer. [Example](https://hf-mirror.com/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad).
+* **Conversational:** To have the best conversations!. [Example](https://huggingface.co/microsoft/DialoGPT-large?).
+* **Feature Extraction:** Retrieve the input embeddings. [Example](https://huggingface.co/sentence-transformers/distilbert-base-nli-mean-tokens?text=test).
+* **Fill Mask:** Predict potential words for a mask token. [Example](https://huggingface.co/google-bert/bert-base-uncased?).
+* **Question Answering:** Given a context and a question, predict the answer. [Example](https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad).
 * **Sentence Simmilarity:** Predict how similar a set of sentences are. Useful for Sentence Transformers.
-* **Summarization:** Given a text, output a summary of it. [Example](https://hf-mirror.com/sshleifer/distilbart-cnn-12-6).
-* **Table Question Answering:** Given a table and a question, predict the answer. [Example](https://hf-mirror.com/google/tapas-base-finetuned-wtq).
-* **Text Generation:** Generate text based on a prompt. [Example](https://hf-mirror.com/openai-community/gpt2)
-* **Token Classification:** Useful for tasks such as Named Entity Recognition and Part of Speech. [Example](https://hf-mirror.com/dslim/bert-base-NER).
-* **Zero-Shot Classification:** Too cool to explain with words. Here is an [example](https://hf-mirror.com/typeform/distilbert-base-uncased-mnli)
+* **Summarization:** Given a text, output a summary of it. [Example](https://huggingface.co/sshleifer/distilbart-cnn-12-6).
+* **Table Question Answering:** Given a table and a question, predict the answer. [Example](https://huggingface.co/google/tapas-base-finetuned-wtq).
+* **Text Generation:** Generate text based on a prompt. [Example](https://huggingface.co/openai-community/gpt2)
+* **Token Classification:** Useful for tasks such as Named Entity Recognition and Part of Speech. [Example](https://huggingface.co/dslim/bert-base-NER).
+* **Zero-Shot Classification:** Too cool to explain with words. Here is an [example](https://huggingface.co/typeform/distilbert-base-uncased-mnli)
 * ([WIP](https://github.com/huggingface/huggingface_hub/issues/99)) **Table to Text Generation**.
 
 **Speech**
 * **Audio to Audio:** For tasks such as audio source separation or speech enhancement. 
-* **Automatic Speech Recognition:** Convert audio to text. [Example](https://hf-mirror.com/facebook/wav2vec2-base-960h)
+* **Automatic Speech Recognition:** Convert audio to text. [Example](https://huggingface.co/facebook/wav2vec2-base-960h)
 * **Text to Speech**: Convert text to audio.
 
 **Image**
-* **Image Classification:** Given an image, predict its class. [Example](https://hf-mirror.com/osanseviero/llamastic).
+* **Image Classification:** Given an image, predict its class. [Example](https://huggingface.co/osanseviero/llamastic).
 * ([WIP](https://github.com/huggingface/huggingface_hub/issues/100)) **Zero Shot Image Classification**
 * ([WIP](https://github.com/huggingface/huggingface_hub/issues/112)) **Image Captioning**
 * ([WIP](https://github.com/huggingface/huggingface_hub/issues/113)) **Text to Image Generation**
@@ -1254,7 +1254,7 @@ We'll provide more examples on Streamlit demos next week. Stay tuned!
 
 ### Using a Gradio demo
 
-You can also use [Gradio](https://gradio.app/) to share your demos! [Here](https://hf-mirror.com/blog/gradio) is an example using the Gradio library to create a GUI for a Hugging Face model.
+You can also use [Gradio](https://gradio.app/) to share your demos! [Here](https://huggingface.co/blog/gradio) is an example using the Gradio library to create a GUI for a Hugging Face model.
 
 More to come!
 

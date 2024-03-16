@@ -30,10 +30,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "tau/splinter-base": "https://hf-mirror.com/tau/splinter-base/resolve/main/vocab.txt",
-        "tau/splinter-base-qass": "https://hf-mirror.com/tau/splinter-base-qass/resolve/main/vocab.txt",
-        "tau/splinter-large": "https://hf-mirror.com/tau/splinter-large/resolve/main/vocab.txt",
-        "tau/splinter-large-qass": "https://hf-mirror.com/tau/splinter-large-qass/resolve/main/vocab.txt",
+        "tau/splinter-base": "https://huggingface.co/tau/splinter-base/resolve/main/vocab.txt",
+        "tau/splinter-base-qass": "https://huggingface.co/tau/splinter-base-qass/resolve/main/vocab.txt",
+        "tau/splinter-large": "https://huggingface.co/tau/splinter-large/resolve/main/vocab.txt",
+        "tau/splinter-large-qass": "https://huggingface.co/tau/splinter-large-qass/resolve/main/vocab.txt",
     }
 }
 

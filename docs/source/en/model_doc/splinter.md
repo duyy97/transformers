@@ -34,7 +34,7 @@ are replaced with a special token, viewed as a question representation, that is 
 the answer span. The resulting model obtains surprisingly good results on multiple benchmarks (e.g., 72.7 F1 on SQuAD
 with only 128 training examples), while maintaining competitive performance in the high-resource setting.
 
-This model was contributed by [yuvalkirstain](https://hf-mirror.com/yuvalkirstain) and [oriram](https://hf-mirror.com/oriram). The original code can be found [here](https://github.com/oriram/splinter).
+This model was contributed by [yuvalkirstain](https://huggingface.co/yuvalkirstain) and [oriram](https://huggingface.co/oriram). The original code can be found [here](https://github.com/oriram/splinter).
 
 ## Usage tips
 

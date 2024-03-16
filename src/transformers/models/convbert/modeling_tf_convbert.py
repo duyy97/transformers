@@ -64,7 +64,7 @@ TF_CONVBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "YituTech/conv-bert-base",
     "YituTech/conv-bert-medium-small",
     "YituTech/conv-bert-small",
-    # See all ConvBERT models at https://hf-mirror.com/models?filter=convbert
+    # See all ConvBERT models at https://huggingface.co/models?filter=convbert
 ]
 
 

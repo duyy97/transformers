@@ -42,12 +42,12 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/layoutlmv3-base": "https://hf-mirror.com/microsoft/layoutlmv3-base/raw/main/vocab.json",
-        "microsoft/layoutlmv3-large": "https://hf-mirror.com/microsoft/layoutlmv3-large/raw/main/vocab.json",
+        "microsoft/layoutlmv3-base": "https://huggingface.co/microsoft/layoutlmv3-base/raw/main/vocab.json",
+        "microsoft/layoutlmv3-large": "https://huggingface.co/microsoft/layoutlmv3-large/raw/main/vocab.json",
     },
     "merges_file": {
-        "microsoft/layoutlmv3-base": "https://hf-mirror.com/microsoft/layoutlmv3-base/raw/main/merges.txt",
-        "microsoft/layoutlmv3-large": "https://hf-mirror.com/microsoft/layoutlmv3-large/raw/main/merges.txt",
+        "microsoft/layoutlmv3-base": "https://huggingface.co/microsoft/layoutlmv3-base/raw/main/merges.txt",
+        "microsoft/layoutlmv3-large": "https://huggingface.co/microsoft/layoutlmv3-large/raw/main/merges.txt",
     },
 }
 

@@ -120,7 +120,7 @@ class BloomTokenizationTest(TokenizerTesterMixin, unittest.TestCase):
     def test_encodings_from_xnli_dataset(self):
         """
         Tests the tokenizer downloaded from here:
-            - https://hf-mirror.com/bigscience/tokenizer/
+            - https://huggingface.co/bigscience/tokenizer/
         """
         tokenizer = self.get_rust_tokenizer()
         ds = load_dataset("xnli", "all_languages", split="test", streaming=True)

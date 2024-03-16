@@ -39,8 +39,8 @@ DeBERTa モデルは、Pengcheng He、Xiaodong Liu、Jianfeng Gao、Weizhu Chen 
 事前トレーニングされたモデルは https://github.com/microsoft/DeBERTa で公開されます。*
 
 
-このモデルは [DeBERTa](https://hf-mirror.com/DeBERTa) によって寄稿されました。このモデルの TF 2.0 実装は、
-[kamalkraj](https://hf-mirror.com/kamalkraj) による寄稿。元のコードは [こちら](https://github.com/microsoft/DeBERTa) にあります。
+このモデルは [DeBERTa](https://huggingface.co/DeBERTa) によって寄稿されました。このモデルの TF 2.0 実装は、
+[kamalkraj](https://huggingface.co/kamalkraj) による寄稿。元のコードは [こちら](https://github.com/microsoft/DeBERTa) にあります。
 
 ## Resources
 
@@ -48,8 +48,8 @@ DeBERTa を使い始めるのに役立つ公式 Hugging Face およびコミュ�
 
 <PipelineTag pipeline="text-classification"/>
 
-- DeBERTa を使用して [DeepSpeed を使用して大規模モデルのトレーニングを加速する](https://hf-mirror.com/blog/accelerate-deepspeed) 方法に関するブログ投稿。
-- DeBERTa による [機械学習によるスーパーチャージされた顧客サービス](https://hf-mirror.com/blog/supercharge-customer-service-with-machine-learning) に関するブログ投稿。
+- DeBERTa を使用して [DeepSpeed を使用して大規模モデルのトレーニングを加速する](https://huggingface.co/blog/accelerate-deepspeed) 方法に関するブログ投稿。
+- DeBERTa による [機械学習によるスーパーチャージされた顧客サービス](https://huggingface.co/blog/supercharge-customer-service-with-machine-learning) に関するブログ投稿。
 - [`DebertaForSequenceClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification.ipynb)。
 - [`TFDebertaForSequenceClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification-tf.ipynb)。
 - [テキスト分類タスクガイド](../tasks/sequence_classification)
@@ -58,22 +58,22 @@ DeBERTa を使い始めるのに役立つ公式 Hugging Face およびコミュ�
 
 - [`DebertaForTokenClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb)。
 - [`TFDebertaForTokenClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb)。
-- [トークン分類](https://hf-mirror.com/course/chapter7/2?fw=pt) 🤗 ハグフェイスコースの章。
-- 🤗 ハグフェイスコースの [バイトペアエンコーディングのトークン化](https://hf-mirror.com/course/chapter6/5?fw=pt) の章。
+- [トークン分類](https://huggingface.co/course/chapter7/2?fw=pt) 🤗 ハグフェイスコースの章。
+- 🤗 ハグフェイスコースの [バイトペアエンコーディングのトークン化](https://huggingface.co/course/chapter6/5?fw=pt) の章。
 - [トークン分類タスクガイド](../tasks/token_classification)
 
 <PipelineTag pipeline="fill-mask"/>
 
 - [`DebertaForMaskedLM`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) でサポートされています。 [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb)。
 - [`TFDebertaForMaskedLM`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/lang-modeling#run_mlmpy) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb)。
-- [マスクされた言語モデリング](https://hf-mirror.com/course/chapter7/3?fw=pt) 🤗 顔のハグ コースの章。
+- [マスクされた言語モデリング](https://huggingface.co/course/chapter7/3?fw=pt) 🤗 顔のハグ コースの章。
 - [マスク言語モデリング タスク ガイド](../tasks/masked_language_modeling)
 
 <PipelineTag pipeline="question-answering"/>
 
 - [`DebertaForQuestionAnswering`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb)。
 - [`TFDebertaForQuestionAnswering`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb)。
-- [質問回答](https://hf-mirror.com/course/chapter7/7?fw=pt) 🤗 ハグフェイスコースの章。
+- [質問回答](https://huggingface.co/course/chapter7/7?fw=pt) 🤗 ハグフェイスコースの章。
 - [質問回答タスク ガイド](../tasks/question_answering)
 
 ## DebertaConfig

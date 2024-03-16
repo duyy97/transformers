@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # Reformer
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=reformer">
+<a href="https://huggingface.co/models?filter=reformer">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-reformer-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/reformer-crime-and-punishment">
+<a href="https://huggingface.co/spaces/docs-demos/reformer-crime-and-punishment">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -39,7 +39,7 @@ layers instead of the standard residuals, which allows storing activations only 
 N times, where N is the number of layers. The resulting model, the Reformer, performs on par with Transformer models
 while being much more memory-efficient and much faster on long sequences.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The Authors' code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The Authors' code can be
 found [here](https://github.com/google/trax/tree/master/trax/models/reformer).
 
 ## Usage tips

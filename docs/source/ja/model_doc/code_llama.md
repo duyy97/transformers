@@ -23,9 +23,9 @@ Code Llama モデルはによって [Code Llama: Open Foundation Models for Code
 
 *私たちは Code Llama をリリースします。これは Llama 2 に基づくコードの大規模言語モデル ファミリであり、オープン モデルの中で最先端のパフォーマンス、埋め込み機能、大規模な入力コンテキストのサポート、プログラミング タスクのゼロショット命令追従機能を提供します。 。幅広いアプリケーションをカバーするための複数のフレーバーを提供しています。基盤モデル (Code Llama)、Python 特化 (Code Llama - Python)、およびそれぞれ 7B、13B、および 34B パラメーターを備えた命令追従モデル (Code Llama - Instruct) です。すべてのモデルは 16,000 トークンのシーケンスでトレーニングされ、最大 100,000 トークンの入力で改善が見られます。 7B および 13B コード ラマとコード ラマ - 命令バリアントは、周囲のコンテンツに基づいた埋め込みをサポートします。 Code Llama は、いくつかのコード ベンチマークでオープン モデルの中で最先端のパフォーマンスに達し、HumanEval と MBPP でそれぞれ最大 53% と 55% のスコアを獲得しました。特に、Code Llama - Python 7B は HumanEval および MBPP 上で Llama 2 70B よりも優れたパフォーマンスを示し、すべてのモデルは MultiPL-E 上で公開されている他のすべてのモデルよりも優れています。私たちは、研究と商業利用の両方を許可する寛容なライセンスに基づいて Code Llama をリリースしています。*
 
-すべての Code Llama モデル チェックポイントを [こちら](https://hf-mirror.com/models?search=code_llama) で確認し、[codellama org](https://hf-mirror.com/codellama) で正式にリリースされたチェックポイントを確認してください。
+すべての Code Llama モデル チェックポイントを [こちら](https://huggingface.co/models?search=code_llama) で確認し、[codellama org](https://huggingface.co/codellama) で正式にリリースされたチェックポイントを確認してください。
 
-このモデルは [ArthurZucker](https://hf-mirror.com/ArthurZ) によって提供されました。著者のオリジナルのコードは [こちら](https://github.com/facebookresearch/llama) にあります。
+このモデルは [ArthurZucker](https://huggingface.co/ArthurZ) によって提供されました。著者のオリジナルのコードは [こちら](https://github.com/facebookresearch/llama) にあります。
 
 ## Usage tips and examples
 
@@ -97,7 +97,7 @@ def remove_non_ascii(s: str) -> str:
 >>> generator('def remove_non_ascii(s: str) -> str:\n    """ <FILL_ME>\n    return result', max_new_tokens = 128, return_type = 1)
 ```
 
-内部では、トークナイザーが [`<FILL_ME>` によって自動的に分割](https://hf-mirror.com/docs/transformers/main/model_doc/code_llama#transformers.CodeLlamaTokenizer.fill_token) して、[ に続く書式設定された入力文字列を作成します。オリジナルのトレーニング パターン](https://github.com/facebookresearch/codellama/blob/cb51c14ec761370ba2e2bc351374a79265d0465e/llama/generation.py#L402)。これは、パターンを自分で準備するよりも堅牢です。トークンの接着など、デバッグが非常に難しい落とし穴を回避できます。このモデルまたは他のモデルに必要な CPU および GPU メモリの量を確認するには、その値を決定するのに役立つ [この計算ツール](https://hf-mirror.com/spaces/hf-accelerate/model-memory-usage) を試してください。
+内部では、トークナイザーが [`<FILL_ME>` によって自動的に分割](https://huggingface.co/docs/transformers/main/model_doc/code_llama#transformers.CodeLlamaTokenizer.fill_token) して、[ に続く書式設定された入力文字列を作成します。オリジナルのトレーニング パターン](https://github.com/facebookresearch/codellama/blob/cb51c14ec761370ba2e2bc351374a79265d0465e/llama/generation.py#L402)。これは、パターンを自分で準備するよりも堅牢です。トークンの接着など、デバッグが非常に難しい落とし穴を回避できます。このモデルまたは他のモデルに必要な CPU および GPU メモリの量を確認するには、その値を決定するのに役立つ [この計算ツール](https://huggingface.co/spaces/hf-accelerate/model-memory-usage) を試してください。
 
 LLaMA トークナイザーは、[sentencepiece](https://github.com/google/sentencepiece) に基づく BPE モデルです。センテンスピースの癖の 1 つは、シーケンスをデコードするときに、最初のトークンが単語の先頭 (例: 「Banana」) である場合、トークナイザーは文字列の先頭にプレフィックス スペースを追加しないことです。
 

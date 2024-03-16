@@ -13,16 +13,16 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-[参数高效微调（PEFT）方法](https://hf-mirror.com/blog/peft)在微调过程中冻结预训练模型的参数，并在其顶部添加少量可训练参数（adapters）。adapters被训练以学习特定任务的信息。这种方法已被证明非常节省内存，同时具有较低的计算使用量，同时产生与完全微调模型相当的结果。
+[参数高效微调（PEFT）方法](https://huggingface.co/blog/peft)在微调过程中冻结预训练模型的参数，并在其顶部添加少量可训练参数（adapters）。adapters被训练以学习特定任务的信息。这种方法已被证明非常节省内存，同时具有较低的计算使用量，同时产生与完全微调模型相当的结果。
 
 使用PEFT训练的adapters通常比完整模型小一个数量级，使其方便共享、存储和加载。
 
 <div class="flex flex-col justify-center">
-  <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
+  <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
   <figcaption class="text-center">与完整尺寸的模型权重（约为700MB）相比，存储在Hub上的OPTForCausalLM模型的adapter权重仅为~6MB。</figcaption>
 </div>
 
-如果您对学习更多关于🤗 PEFT库感兴趣，请查看[文档](https://hf-mirror.com/docs/peft/index)。
+如果您对学习更多关于🤗 PEFT库感兴趣，请查看[文档](https://huggingface.co/docs/peft/index)。
 
 
 ## 设置
@@ -42,11 +42,11 @@ pip install git+https://github.com/huggingface/peft.git
 
 Transformers原生支持一些PEFT方法，这意味着你可以加载本地存储或在Hub上的adapter权重，并使用几行代码轻松运行或训练它们。以下是受支持的方法：
 
-- [Low Rank Adapters](https://hf-mirror.com/docs/peft/conceptual_guides/lora)
-- [IA3](https://hf-mirror.com/docs/peft/conceptual_guides/ia3)
+- [Low Rank Adapters](https://huggingface.co/docs/peft/conceptual_guides/lora)
+- [IA3](https://huggingface.co/docs/peft/conceptual_guides/ia3)
 - [AdaLoRA](https://arxiv.org/abs/2303.10512)
 
-如果你想使用其他PEFT方法，例如提示学习或提示微调，或者关于通用的 🤗 PEFT库，请参阅[文档](https://hf-mirror.com/docs/peft/index)。
+如果你想使用其他PEFT方法，例如提示学习或提示微调，或者关于通用的 🤗 PEFT库，请参阅[文档](https://huggingface.co/docs/peft/index)。
 
 ## 加载 PEFT adapter
 

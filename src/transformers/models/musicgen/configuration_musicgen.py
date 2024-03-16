@@ -22,8 +22,8 @@ from ..auto.configuration_auto import AutoConfig
 logger = logging.get_logger(__name__)
 
 MUSICGEN_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/musicgen-small": "https://hf-mirror.com/facebook/musicgen-small/resolve/main/config.json",
-    # See all Musicgen models at https://hf-mirror.com/models?filter=musicgen
+    "facebook/musicgen-small": "https://huggingface.co/facebook/musicgen-small/resolve/main/config.json",
+    # See all Musicgen models at https://huggingface.co/models?filter=musicgen
 }
 
 
@@ -32,7 +32,7 @@ class MusicgenDecoderConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`MusicgenDecoder`]. It is used to instantiate a
     MusicGen decoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the MusicGen
-    [facebook/musicgen-small](https://hf-mirror.com/facebook/musicgen-small) architecture.
+    [facebook/musicgen-small](https://huggingface.co/facebook/musicgen-small) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

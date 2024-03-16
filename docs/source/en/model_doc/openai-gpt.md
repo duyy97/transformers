@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # OpenAI GPT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=openai-gpt">
+<a href="https://huggingface.co/models?filter=openai-gpt">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-openai--gpt-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/openai-gpt">
+<a href="https://huggingface.co/spaces/docs-demos/openai-gpt">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -44,10 +44,10 @@ approach on a wide range of benchmarks for natural language understanding. Our g
 discriminatively trained models that use architectures specifically crafted for each task, significantly improving upon
 the state of the art in 9 out of the 12 tasks studied.*
 
-[Write With Transformer](https://transformer.hf-mirror.com/doc/gpt) is a webapp created and hosted by Hugging Face
+[Write With Transformer](https://transformer.huggingface.co/doc/gpt) is a webapp created and hosted by Hugging Face
 showcasing the generative capabilities of several models. GPT is one of them.
 
-This model was contributed by [thomwolf](https://hf-mirror.com/thomwolf). The original code can be found [here](https://github.com/openai/finetune-transformer-lm).
+This model was contributed by [thomwolf](https://huggingface.co/thomwolf). The original code can be found [here](https://github.com/openai/finetune-transformer-lm).
 
 ## Usage tips
 
@@ -83,20 +83,20 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 <PipelineTag pipeline="text-generation"/>
 
 - A blog on how to [Finetune a non-English GPT-2 Model with Hugging Face](https://www.philschmid.de/fine-tune-a-non-english-gpt-2-model-with-huggingface).
-- A blog on [How to generate text: using different decoding methods for language generation with Transformers](https://hf-mirror.com/blog/how-to-generate) with GPT-2.
-- A blog on [Training CodeParrot 🦜 from Scratch](https://hf-mirror.com/blog/codeparrot), a large GPT-2 model.
-- A blog on [Faster Text Generation with TensorFlow and XLA](https://hf-mirror.com/blog/tf-xla-generate) with GPT-2.
-- A blog on [How to train a Language Model with Megatron-LM](https://hf-mirror.com/blog/megatron-training) with a GPT-2 model.
+- A blog on [How to generate text: using different decoding methods for language generation with Transformers](https://huggingface.co/blog/how-to-generate) with GPT-2.
+- A blog on [Training CodeParrot 🦜 from Scratch](https://huggingface.co/blog/codeparrot), a large GPT-2 model.
+- A blog on [Faster Text Generation with TensorFlow and XLA](https://huggingface.co/blog/tf-xla-generate) with GPT-2.
+- A blog on [How to train a Language Model with Megatron-LM](https://huggingface.co/blog/megatron-training) with a GPT-2 model.
 - A notebook on how to [finetune GPT2 to generate lyrics in the style of your favorite artist](https://colab.research.google.com/github/AlekseyKorshuk/huggingartists/blob/master/huggingartists-demo.ipynb). 🌎
 - A notebook on how to [finetune GPT2 to generate tweets in the style of your favorite Twitter user](https://colab.research.google.com/github/borisdayma/huggingtweets/blob/master/huggingtweets-demo.ipynb). 🌎
-- [Causal language modeling](https://hf-mirror.com/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
+- [Causal language modeling](https://huggingface.co/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
 - [`OpenAIGPTLMHeadModel`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#gpt-2gpt-and-causal-language-modeling), [text generation example script](https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-generation/run_generation.py) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFOpenAIGPTLMHeadModel`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_clmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - See also: [Causal language modeling task guide](../tasks/language_modeling)
 
 <PipelineTag pipeline="token-classification"/>
 
-- A course material on [Byte-Pair Encoding tokenization](https://hf-mirror.com/course/en/chapter6/5).
+- A course material on [Byte-Pair Encoding tokenization](https://huggingface.co/course/en/chapter6/5).
 
 ## OpenAIGPTConfig
 

@@ -66,14 +66,14 @@ Porting models from PyTorch to JAX/Flax is an ongoing effort.
 Feel free to reach out if you are interested in contributing a model in JAX/Flax -- we'll 
 be adding a guide for porting models from PyTorch in the upcoming few weeks.
 
-For a complete overview of models that are supported in JAX/Flax, please have a look at [this](https://hf-mirror.com/transformers/main/index.html#supported-frameworks) table.
+For a complete overview of models that are supported in JAX/Flax, please have a look at [this](https://huggingface.co/transformers/main/index.html#supported-frameworks) table.
 
 Over 3000 pretrained checkpoints are supported in JAX/Flax as of May 2021.
-Click [here](https://hf-mirror.com/models?filter=jax) to see the full list on the 🤗 hub.
+Click [here](https://huggingface.co/models?filter=jax) to see the full list on the 🤗 hub.
 
 ## Upload the trained/fine-tuned model to the Hub
 
-All the example scripts support automatic upload of your final model to the [Model Hub](https://hf-mirror.com/models) by adding a `--push_to_hub` argument. It will then create a repository with your username slash the name of the folder you are using as `output_dir`. For instance, `"sgugger/test-mrpc"` if your username is `sgugger` and you are working in the folder `~/tmp/test-mrpc`.
+All the example scripts support automatic upload of your final model to the [Model Hub](https://huggingface.co/models) by adding a `--push_to_hub` argument. It will then create a repository with your username slash the name of the folder you are using as `output_dir`. For instance, `"sgugger/test-mrpc"` if your username is `sgugger` and you are working in the folder `~/tmp/test-mrpc`.
 
 To specify a given repository name, use the `--hub_model_id` argument. You will need to specify the whole repository name (including your username), for instance `--hub_model_id sgugger/finetuned-bert-mrpc`. To upload to an organization you are a member of, just use the name of that organization instead of your username: `--hub_model_id huggingface/finetuned-bert-mrpc`.
 

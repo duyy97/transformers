@@ -53,7 +53,7 @@ class ImageToTextPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> captioner = pipeline(model="ydshieh/vit-gpt2-coco-en")
-    >>> captioner("https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png")
+    >>> captioner("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
     [{'generated_text': 'two birds are standing next to each other '}]
     ```
 
@@ -63,7 +63,7 @@ class ImageToTextPipeline(Pipeline):
     "image-to-text".
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?pipeline_tag=image-to-text).
+    [huggingface.co/models](https://huggingface.co/models?pipeline_tag=image-to-text).
     """
 
     def __init__(self, *args, **kwargs):

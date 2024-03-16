@@ -55,7 +55,7 @@ _CHECKPOINT_FOR_DOC = "kamalkraj/deberta-base"
 
 TF_DEBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "kamalkraj/deberta-base",
-    # See all DeBERTa models at https://hf-mirror.com/models?filter=DeBERTa
+    # See all DeBERTa models at https://huggingface.co/models?filter=DeBERTa
 ]
 
 

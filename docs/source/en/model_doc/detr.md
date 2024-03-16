@@ -39,7 +39,7 @@ highly-optimized Faster RCNN baseline on the challenging COCO object detection d
 generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive
 baselines.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/facebookresearch/detr).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/facebookresearch/detr).
 
 ## How DETR works
 

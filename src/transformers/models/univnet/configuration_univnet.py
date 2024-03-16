@@ -21,7 +21,7 @@ logger = logging.get_logger(__name__)
 
 
 UNIVNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "dg845/univnet-dev": "https://hf-mirror.com/dg845/univnet-dev/resolve/main/config.json",
+    "dg845/univnet-dev": "https://huggingface.co/dg845/univnet-dev/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class UnivNetConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`UnivNetModel`]. It is used to instantiate a
     UnivNet vocoder model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the UnivNet
-    [dg845/univnet-dev](https://hf-mirror.com/dg845/univnet-dev) architecture, which corresponds to the 'c32'
+    [dg845/univnet-dev](https://huggingface.co/dg845/univnet-dev) architecture, which corresponds to the 'c32'
     architecture in [maum-ai/univnet](https://github.com/maum-ai/univnet/blob/master/config/default_c32.yaml).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

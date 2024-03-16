@@ -20,7 +20,7 @@ Steps:
 - Get a T5X checkpoint at https://github.com/google-research/t5x/blob/main/docs/models.md#t5-11-checkpoints Example:
     `gsutil -m cp -r gs://t5-data/pretrained_models/t5x/t5_1_1_small $HOME/`
 - Create or download a corresponding config for the downloaded model. E.g. for T5 v1.1 small, you can use
-    https://hf-mirror.com/google/t5-v1_1-small/blob/main/config.json
+    https://huggingface.co/google/t5-v1_1-small/blob/main/config.json
 - Convert:
     ```
     python3 convert_t5x_checkpoint_to_pytorch.py --t5x_checkpoint_path=$HOME/t5_1_1_small --config_file=config.json\

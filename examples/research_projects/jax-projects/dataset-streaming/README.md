@@ -23,7 +23,7 @@ JAX/Flax allows you to trace pure functions and compile them into efficient, fus
 Models written in JAX/Flax are **immutable** and updated in a purely functional
 way which enables simple and efficient model parallelism.
 
-All of the following examples make use of [dataset streaming](https://hf-mirror.com/docs/datasets/master/dataset_streaming), therefore allowing to train models on massive datasets\
+All of the following examples make use of [dataset streaming](https://huggingface.co/docs/datasets/master/dataset_streaming), therefore allowing to train models on massive datasets\
 without ever having to download the full dataset.
 
 ## Masked language modeling
@@ -31,7 +31,7 @@ without ever having to download the full dataset.
 In the following, we demonstrate how to train a bi-directional transformer model 
 using masked language modeling objective as introduced in [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805).
 More specifically, we demonstrate how JAX/Flax and dataset streaming can be leveraged 
-to pre-train [**`FacebookAI/roberta-base`**](https://hf-mirror.com/FacebookAI/roberta-base)
+to pre-train [**`FacebookAI/roberta-base`**](https://huggingface.co/FacebookAI/roberta-base)
 in English on a single TPUv3-8 pod for 10000 update steps.
 
 The example script uses the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
@@ -39,7 +39,7 @@ The example script uses the 🤗 Datasets library. You can easily customize them
 Let's start by creating a model repository to save the trained model and logs.
 Here we call the model `"english-roberta-base-dummy"`, but you can change the model name as you like.
 
-You can do this either directly on [hf-mirror.com](https://hf-mirror.com/new) (assuming that
+You can do this either directly on [huggingface.co](https://huggingface.co/new) (assuming that
 you are logged in) or via the command line:
 
 ```bash
@@ -49,7 +49,7 @@ huggingface-cli repo create english-roberta-base-dummy
 Next we clone the model repository to add the tokenizer and model files.
 
 ```bash
-git clone https://hf-mirror.com/<your-username>/english-roberta-base-dummy
+git clone https://huggingface.co/<your-username>/english-roberta-base-dummy
 ```
 
 To ensure that all tensorboard traces will be uploaded correctly, we need to 

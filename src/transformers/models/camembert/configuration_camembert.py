@@ -26,12 +26,12 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CAMEMBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "almanach/camembert-base": "https://hf-mirror.com/almanach/camembert-base/resolve/main/config.json",
+    "almanach/camembert-base": "https://huggingface.co/almanach/camembert-base/resolve/main/config.json",
     "umberto-commoncrawl-cased-v1": (
-        "https://hf-mirror.com/Musixmatch/umberto-commoncrawl-cased-v1/resolve/main/config.json"
+        "https://huggingface.co/Musixmatch/umberto-commoncrawl-cased-v1/resolve/main/config.json"
     ),
     "umberto-wikipedia-uncased-v1": (
-        "https://hf-mirror.com/Musixmatch/umberto-wikipedia-uncased-v1/resolve/main/config.json"
+        "https://huggingface.co/Musixmatch/umberto-wikipedia-uncased-v1/resolve/main/config.json"
     ),
 }
 
@@ -41,7 +41,7 @@ class CamembertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`CamembertModel`] or a [`TFCamembertModel`]. It is
     used to instantiate a Camembert model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Camembert
-    [almanach/camembert-base](https://hf-mirror.com/almanach/camembert-base) architecture.
+    [almanach/camembert-base](https://huggingface.co/almanach/camembert-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

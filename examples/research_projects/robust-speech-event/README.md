@@ -6,7 +6,7 @@ The goal of this event is to build **robust**, **real-world** speech recognition
 If necessary and available, free access to a V100S 32 GB GPU will kindly be provided by the [OVHcloud team](https://www.ovhcloud.com/) 🚀.
 This document summarizes all the relevant information required for the speech community event 📋.
 
-To sign-up, please see [this forum post](https://discuss.hf-mirror.com/t/open-to-the-community-robust-speech-recognition-challenge/13614) 🤗. Please make sure to:
+To sign-up, please see [this forum post](https://discuss.huggingface.co/t/open-to-the-community-robust-speech-recognition-challenge/13614) 🤗. Please make sure to:
 - Read it in detail
 - Fill the google form
 - Join our Discord server in the #join-sprint channel.
@@ -29,7 +29,7 @@ To sign-up, please see [this forum post](https://discuss.hf-mirror.com/t/open-to
 ## TLDR
 
 Participants are encouraged to leverage pre-trained speech recognition checkpoints,
-preferably [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53), 
+preferably [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53), 
 to train a speech recognition system in a language of their choice.
 
 Speech recognition systems should be trained using **PyTorch**, **🤗 Transformers**, and, **🤗 Datasets**.
@@ -77,7 +77,7 @@ know how to ask for help, etc...
 All important announcements will be made on discord. Please make sure that 
 you've joined [this discord channel](https://discord.gg/SHr5wC7m)
 
-Also, please make sure that you have been added to the [Speech Event Organization](https://hf-mirror.com/speech-recognition-community-v2). 
+Also, please make sure that you have been added to the [Speech Event Organization](https://huggingface.co/speech-recognition-community-v2). 
 You should have received an invite by email. If you didn't receive an invite, please contact the organizers, *e.g.* Anton, Patrick, or Omar directly on discord.
 
 ## Important dates
@@ -109,10 +109,10 @@ However, we strongly encourage participants to make use of Common Voice's other 
 For most languages, the Common Voice dataset offers already a decent amount of training data. It is usually 
 always advantageous to collect additional data. To do so, the participants are in a first step encouraged to search the
 Hugging Face Hub for additional audio data, for example by selecting the category 
-["speech-processing"](https://hf-mirror.com/datasets?task_categories=task_categories:speech-processing&sort=downloads).
+["speech-processing"](https://huggingface.co/datasets?task_categories=task_categories:speech-processing&sort=downloads).
 All datasets that are available on the Hub can be downloaded via the 🤗 Datasets library in the same way Common Voice is downloaded.
 If one wants to combine multiple datasets for training, it might make sense to take a look at 
-the [`interleave_datasets`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=interleave#datasets.interleave_datasets) function.
+the [`interleave_datasets`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=interleave#datasets.interleave_datasets) function.
 
 In addition, participants can also make use of their audio data. Here, please make sure that you **are allowed to use the audio data**. E.g., if audio data 
 is taken from media platforms, such as YouTube, it should be verified that the media platform and the owner of the data have given her/his approval to use the audio 
@@ -137,7 +137,7 @@ be given some consideration. As another example, it is fine to remove the "Hyphe
 meaning of a word to another one. *E.g.* "`fine-tuning`" would be changed to "`finetuning`" which has still the same meaning.
 
 Since those choices are not always obvious when in doubt feel free to ask on Discord or even better post your question on the forum, as was 
-done, *e.g.* [here](https://discuss.hf-mirror.com/t/spanish-asr-fine-tuning-wav2vec2/4586).
+done, *e.g.* [here](https://discuss.huggingface.co/t/spanish-asr-fine-tuning-wav2vec2/4586).
 
 ## How to install relevant libraries
 
@@ -251,21 +251,21 @@ assert logits.shape[-1] == 32
 
 ## How to finetune an acoustic model
 
-In this section, we show you how to fine-tune a pre-trained [XLS-R Model](https://hf-mirror.com/docs/transformers/model_doc/xls_r) on the [Common Voice 7 dataset](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_7_0). 
+In this section, we show you how to fine-tune a pre-trained [XLS-R Model](https://huggingface.co/docs/transformers/model_doc/xls_r) on the [Common Voice 7 dataset](https://huggingface.co/datasets/mozilla-foundation/common_voice_7_0). 
 
 We recommend fine-tuning one of the following pre-trained XLS-R checkpoints:
 
-- [300M parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)
-- [1B parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-1b)
-- [2B parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-2b)
+- [300M parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-300m)
+- [1B parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-1b)
+- [2B parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-2b)
 
 To begin with, please note that to use the Common Voice dataset, you 
 have to accept that **your email address** and **username** are shared with the 
-mozilla-foundation. To get access to the dataset please click on "*Access repository*" [here](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_7_0).
+mozilla-foundation. To get access to the dataset please click on "*Access repository*" [here](https://huggingface.co/datasets/mozilla-foundation/common_voice_7_0).
 
 Next, we recommended that you get familiar with the XLS-R model and its capabilities.
 In collaboration with [Fairseq's Wav2Vec2 team](https://github.com/pytorch/fairseq/tree/main/examples/wav2vec), 
-we've written ["Fine-tuning XLS-R for Multi-Lingual ASR with 🤗 Transformers"](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2) which gives an in-detail explanation of how XLS-R functions and how it can be fine-tuned.
+we've written ["Fine-tuning XLS-R for Multi-Lingual ASR with 🤗 Transformers"](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2) which gives an in-detail explanation of how XLS-R functions and how it can be fine-tuned.
 
 The blog can also be opened and directly fine-tuned in a google colab notebook.
 In this section, we will explain how to fine-tune the model on a local machine.
@@ -310,13 +310,13 @@ following command:
 huggingface-cli repo create xls-r-ab-test
 ```
 
-You can now see the model on the Hub, *e.g.* under https://hf-mirror.com/hf-test/xls-r-ab-test .
+You can now see the model on the Hub, *e.g.* under https://huggingface.co/hf-test/xls-r-ab-test .
 
 Let's clone the repository so that we can define our training script inside.
 
 ```bash
 git lfs install
-git clone https://hf-mirror.com/hf-test/xls-r-ab-test
+git clone https://huggingface.co/hf-test/xls-r-ab-test
 ```
 
 3. **Add your training script and `run`-command to the repository**
@@ -334,7 +334,7 @@ cp ~/transformers/examples/pytorch/speech-recognition/run_speech_recognition_ctc
 Next, we'll create a bash file to define the hyper-parameters and configurations 
 for training. More detailed information on different settings (single-GPU vs. multi-GPU) can be found [here](https://github.com/huggingface/transformers/tree/main/examples/pytorch/speech-recognition#connectionist-temporal-classification).
 
-For demonstration purposes, we will use a dummy XLS-R model `model_name_or_path="hf-test/xls-r-dummy"` on the very low-resource language of "Abkhaz" of [Common Voice 7](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_7_0): `dataset_config_name="ab"` for just a single epoch.
+For demonstration purposes, we will use a dummy XLS-R model `model_name_or_path="hf-test/xls-r-dummy"` on the very low-resource language of "Abkhaz" of [Common Voice 7](https://huggingface.co/datasets/mozilla-foundation/common_voice_7_0): `dataset_config_name="ab"` for just a single epoch.
 
 Before starting to train, let's make sure we have installed all the required libraries. You might want to run:
 
@@ -346,8 +346,8 @@ Alright, finally we can define the training script. We'll simply use some
 dummy hyper-parameters and configurations for demonstration purposes.
 
 Note that we add the flag `--use_auth_token` so that datasets requiring access, 
-such as [Common Voice 7](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_7_0) can be downloaded. In addition, we add the `--push_to_hub` flag to make use of the 
-[Trainers `push_to-hub` functionality](https://hf-mirror.com/docs/transformers/main/en/main_classes/trainer#transformers.Trainer.push_to_hub) so that your model will be automatically uploaded to the Hub.
+such as [Common Voice 7](https://huggingface.co/datasets/mozilla-foundation/common_voice_7_0) can be downloaded. In addition, we add the `--push_to_hub` flag to make use of the 
+[Trainers `push_to-hub` functionality](https://huggingface.co/docs/transformers/main/en/main_classes/trainer#transformers.Trainer.push_to_hub) so that your model will be automatically uploaded to the Hub.
 
 Let's copy the following code snippet in a file called `run.sh`
 
@@ -387,23 +387,23 @@ bash run.sh
 
 The training should not take more than a couple of minutes. 
 During the training intermediate saved checkpoints are automatically uploaded to
-your model repository as can be seen [on this commit](https://hf-mirror.com/hf-test/xls-r-ab-test/commit/0eb19a0fca4d7d163997b59663d98cd856022aa6) . 
+your model repository as can be seen [on this commit](https://huggingface.co/hf-test/xls-r-ab-test/commit/0eb19a0fca4d7d163997b59663d98cd856022aa6) . 
 
-At the end of the training, the [Trainer](https://hf-mirror.com/docs/transformers/main/en/main_classes/trainer) automatically creates a nice model card and all 
+At the end of the training, the [Trainer](https://huggingface.co/docs/transformers/main/en/main_classes/trainer) automatically creates a nice model card and all 
 relevant files are uploaded.
 
 5. **Tips for real model training**
 
 The above steps illustrate how a model can technically be fine-tuned.
-However as you can see on the model card [hf-test/xls-r-ab-test](https://hf-mirror.com/hf-test/xls-r-ab-test), our demonstration has a very poor performance which is
+However as you can see on the model card [hf-test/xls-r-ab-test](https://huggingface.co/hf-test/xls-r-ab-test), our demonstration has a very poor performance which is
 not surprising given that we trained for just 10 steps on a randomly initialized
 model.
 
 For real model training, it is recommended to use one of the actual pre-trained XLS-R models:
 
-- [300M parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)
-- [1B parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-1b)
-- [2B parameters version](https://hf-mirror.com/facebook/wav2vec2-xls-r-2b)
+- [300M parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-300m)
+- [1B parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-1b)
+- [2B parameters version](https://huggingface.co/facebook/wav2vec2-xls-r-2b)
 
 Also, the hyper-parameters should be carefully chosen depending on the dataset.
 As an example, we will fine-tune the 300M parameters model on Swedish on a single 
@@ -462,7 +462,7 @@ echo '''python run_speech_recognition_ctc.py \
 ```
 
 The training takes *ca.* 7 hours and yields a reasonable test word 
-error rate of 27% as can be seen on the automatically generated [model card](https://hf-mirror.com/hf-test/xls-r-300m-sv).
+error rate of 27% as can be seen on the automatically generated [model card](https://huggingface.co/hf-test/xls-r-300m-sv).
 
 The above-chosen hyperparameters probably work quite well on a range of different 
 datasets and languages but are by no means optimal. It is up to you to find a good set of 
@@ -518,7 +518,7 @@ with **n-gram-boosted** beam search decoding.
 N-gram language models can be built on CPU in just a few minutes. *N-gram-boosted* beam search decoding noticeably slows down the 
 inference time, but also yields significant word error rates improvements - usually between 10-40 %.
 
-You can find an in-detail blog post on how to build an *n-gram* [here](https://hf-mirror.com/blog/wav2vec2-with-ngram).
+You can find an in-detail blog post on how to build an *n-gram* [here](https://huggingface.co/blog/wav2vec2-with-ngram).
 The blog post can be opened in a google colab and by adapting three lines of the example for your use case, one can directly
 create an *n-gram* in the google colab.
 The blog post gives in-detail instructions on how to build an n-gram and how to add it to your trained speech recognition model.
@@ -527,7 +527,7 @@ The blog post gives in-detail instructions on how to build an n-gram and how to 
 - how to build an *n-gram*, and,
 - how to add the built *n-gram* the speech recognition system for seamless decoding
 
-Our previously trained model - [xls-r-300m-sv](https://hf-mirror.com/hf-test/xls-r-300m-sv) - enjoys a 30% word error rate reduction after 
+Our previously trained model - [xls-r-300m-sv](https://huggingface.co/hf-test/xls-r-300m-sv) - enjoys a 30% word error rate reduction after 
 having added an n-gram. As shown in the example of the blog post, we strongly advise participants to upload all files required for combining 
 the *n-gram* with a trained speech recognition model directly into the same model repository.
 
@@ -542,7 +542,7 @@ evaluation dataset, please contact the organizers on Discord so that we can work
 together to find some evaluation data.
 
 As a first step, one should copy the official `eval.py` script to her/his model 
-repository. Let's use our previously trained [xls-r-300m-sv](https://hf-mirror.com/hf-test/xls-r-300m-sv) again as an example.
+repository. Let's use our previously trained [xls-r-300m-sv](https://huggingface.co/hf-test/xls-r-300m-sv) again as an example.
 
 Assuming that we have a clone of the model's repo under `~/xls-r-300m-sv`, we can 
 copy the `eval.py` script to the repo.
@@ -571,7 +571,7 @@ already have been done for your acoustic model during training but in case you
 added an *n-gram* language model after having fine-tuned the acoustic model, you
 should now see a nice improvement.
 
-The command to evaluate our test model [xls-r-300m-sv](https://hf-mirror.com/hf-test/xls-r-300m-sv) on Common Voice 7's test data is the following:
+The command to evaluate our test model [xls-r-300m-sv](https://huggingface.co/hf-test/xls-r-300m-sv) on Common Voice 7's test data is the following:
 
 ```bash
 cd xls-r-300m-sv
@@ -587,7 +587,7 @@ both the word- and character error rate.
 
 In a few days, we will give everybody access to some real-world audio data for as many languages as possible.
 If your language has real-world audio data, it will most likely have audio input 
-of multiple minutes. 🤗Transformer's [ASR pipeline](https://hf-mirror.com/docs/transformers/main/en/main_classes/pipelines#transformers.AutomaticSpeechRecognitionPipeline) supports audio chunking out-of-the-box. You only need to specify 
+of multiple minutes. 🤗Transformer's [ASR pipeline](https://huggingface.co/docs/transformers/main/en/main_classes/pipelines#transformers.AutomaticSpeechRecognitionPipeline) supports audio chunking out-of-the-box. You only need to specify 
 how song each audio chunk should be (`chunk_length_s`) and how much audio stride 
 (`stride_length_s`) each chunk should use.
 For more information on the chunking works, please have a look at [this nice blog post](TODO: ).
@@ -603,7 +603,7 @@ Great, now you should have successfully evaluated your model. Finally, there is 
 **important** thing you should do so that your model is taken into account 
 for the final evaluation. You should add two tags to your model, one being `robust-speech-event`, one being the ISO code of your chosen language, *e.g.* `"sv"` for the 
 exemplary model we used above. You can find a list of all available languages and 
-their ISO code [here](https://hf-mirror.com/languages).
+their ISO code [here](https://huggingface.co/languages).
 
 To add the tags, simply edit the README.md of your model repository and add
 
@@ -612,10 +612,10 @@ To add the tags, simply edit the README.md of your model repository and add
 - "robust-speech-event"
 ```
 
-under `tags:` as done [here](https://hf-mirror.com/hf-test/xls-r-300m-sv/commit/a495fd70c96bb7d019729be9273a265c2557345e).
+under `tags:` as done [here](https://huggingface.co/hf-test/xls-r-300m-sv/commit/a495fd70c96bb7d019729be9273a265c2557345e).
 
 To verify that you've added the tags correctly make sure that your model 
-appears when clicking on [this link](https://hf-mirror.com/models?other=robust-speech-event).
+appears when clicking on [this link](https://huggingface.co/models?other=robust-speech-event).
 
 Great that's it! This should give you all the necessary information to evaluate
 your model. For the final evaluation, we will verify each evaluation result to 
@@ -653,7 +653,7 @@ The following table summarizes what platform to use for which problem.
 
 - Problem/question/bug with the 🤗 Datasets library that you think is a general problem that also impacts other people, please open an [Issues on Datasets](https://github.com/huggingface/datasets/issues/new?assignees=&labels=bug&template=bug-report.md&title=) and ping @anton-l and @patrickvonplaten.
 - Problem/question/bug with the 🤗 Transformers library that you think is a general problem that also impacts other people, please open an [Issues on Transformers](https://github.com/huggingface/transformers/issues/new?assignees=&labels=&template=bug-report.md&title=) and ping @anton-l and @patrickvonplaten.
-- Problem/question with a modified, customized training script that is less likely to impact other people, please post your problem/question [on the forum](https://discuss.hf-mirror.com/) and ping @anton-l and @patrickvonplaten.
+- Problem/question with a modified, customized training script that is less likely to impact other people, please post your problem/question [on the forum](https://discuss.huggingface.co/) and ping @anton-l and @patrickvonplaten.
 - Questions regarding access to the OVHcloud GPU, please ask in the Discord channel **#ovh-support**.
 - Other questions regarding the event, rules of the event, or if you are not sure where to post your question, please ask in the Discord channel **#sprint-discussions**.
 

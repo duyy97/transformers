@@ -127,7 +127,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -137,7 +137,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -308,7 +308,7 @@ def main():
 
     # region Load datasets
     # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
 
     # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -339,7 +339,7 @@ def main():
             token=model_args.token,
         )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # When using your own dataset or a different dataset from swag, you will probably need to change this.
     ending_names = [f"ending{i}" for i in range(4)]
@@ -522,8 +522,8 @@ def main():
             # yourself if you use this method, whereas they are automatically inferred from the model input names when
             # using model.prepare_tf_dataset()
             # For more info see the docs:
-            # https://hf-mirror.com/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
-            # https://hf-mirror.com/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
+            # https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
+            # https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
 
             tf_train_dataset = model.prepare_tf_dataset(
                 train_dataset,

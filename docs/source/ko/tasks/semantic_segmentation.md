@@ -25,7 +25,7 @@ rendered properly in your Markdown viewer.
 
 이번 가이드에서 배울 내용은 다음과 같습니다:
 
-1. [SceneParse150](https://hf-mirror.com/datasets/scene_parse_150) 데이터 세트를 이용해 [SegFormer](https://hf-mirror.com/docs/transformers/main/en/model_doc/segformer#segformer) 미세 조정하기.
+1. [SceneParse150](https://huggingface.co/datasets/scene_parse_150) 데이터 세트를 이용해 [SegFormer](https://huggingface.co/docs/transformers/main/en/model_doc/segformer#segformer) 미세 조정하기.
 2. 미세 조정된 모델을 추론에 사용하기.
 
 <Tip>
@@ -204,7 +204,7 @@ pip install -q datasets transformers evaluate
 
 ## 평가하기[[evaluate]]
 
-훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 로드할 수 있습니다. 이 태스크에서는 [mean Intersection over Union](https://hf-mirror.com/spaces/evaluate-metric/accuracy) (IoU) 메트릭을 로드하세요 (메트릭을 로드하고 계산하는 방법에 대해 자세히 알아보려면 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 살펴보세요).
+훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 로드할 수 있습니다. 이 태스크에서는 [mean Intersection over Union](https://huggingface.co/spaces/evaluate-metric/accuracy) (IoU) 메트릭을 로드하세요 (메트릭을 로드하고 계산하는 방법에 대해 자세히 알아보려면 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour)를 살펴보세요).
 
 ```py
 >>> import evaluate
@@ -458,7 +458,7 @@ TensorFlow에서 모델을 미세 조정하려면 다음 단계를 따르세요:
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/semantic-seg-image.png" alt="Image of bedroom"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/semantic-seg-image.png" alt="Image of bedroom"/>
 </div>
 
 <frameworkcontent>
@@ -587,5 +587,5 @@ TensorFlow에서 모델을 미세 조정하려면 다음 단계를 따르세요:
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/semantic-seg-preds.png" alt="Image of bedroom overlaid with segmentation map"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/semantic-seg-preds.png" alt="Image of bedroom overlaid with segmentation map"/>
 </div>

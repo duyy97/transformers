@@ -37,7 +37,7 @@ representations into the input allows us to extract more language-agnostic featu
 multilingual cloze prompt task with the mLAMA dataset. We show that entity-based prompt elicits correct factual
 knowledge more likely than using only word representations.*
 
-This model was contributed by [ryo0634](https://hf-mirror.com/ryo0634). The original code can be found [here](https://github.com/studio-ousia/luke).
+This model was contributed by [ryo0634](https://huggingface.co/ryo0634). The original code can be found [here](https://github.com/studio-ousia/luke).
 
 ## Usage tips
 

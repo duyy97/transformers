@@ -34,12 +34,12 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model", "tokenizer_file": "tokenizer.
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google/fnet-base": "https://hf-mirror.com/google/fnet-base/resolve/main/spiece.model",
-        "google/fnet-large": "https://hf-mirror.com/google/fnet-large/resolve/main/spiece.model",
+        "google/fnet-base": "https://huggingface.co/google/fnet-base/resolve/main/spiece.model",
+        "google/fnet-large": "https://huggingface.co/google/fnet-large/resolve/main/spiece.model",
     },
     "tokenizer_file": {
-        "google/fnet-base": "https://hf-mirror.com/google/fnet-base/resolve/main/tokenizer.json",
-        "google/fnet-large": "https://hf-mirror.com/google/fnet-large/resolve/main/tokenizer.json",
+        "google/fnet-base": "https://huggingface.co/google/fnet-base/resolve/main/tokenizer.json",
+        "google/fnet-large": "https://huggingface.co/google/fnet-large/resolve/main/tokenizer.json",
     },
 }
 
@@ -55,7 +55,7 @@ class FNetTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" FNetTokenizer (backed by HuggingFace's *tokenizers* library). Adapted from
     [`AlbertTokenizerFast`]. Based on
-    [Unigram](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=unigram#models). This
+    [Unigram](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=unigram#models). This
     tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should refer to
     this superclass for more information regarding those methods
 

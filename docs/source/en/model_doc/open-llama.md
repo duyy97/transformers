@@ -27,7 +27,7 @@ You can do so by running the following command: `pip install -U transformers==4.
 
 <Tip warning={true}>
 
-This model differs from the [OpenLLaMA models](https://hf-mirror.com/models?search=openllama) on the Hugging Face Hub, which primarily use the [LLaMA](llama) architecture.
+This model differs from the [OpenLLaMA models](https://huggingface.co/models?search=openllama) on the Hugging Face Hub, which primarily use the [LLaMA](llama) architecture.
 
 </Tip>
 
@@ -38,7 +38,7 @@ The Open-Llama model was proposed in the open source Open-Llama project by commu
 The model is mainly based on LLaMA with some modifications, incorporating memory-efficient attention from Xformers, stable embedding from Bloom, and shared input-output embedding from PaLM.
 And the model is pre-trained on both Chinese and English, which gives it better performance on Chinese language tasks.
 
-This model was contributed by [s-JoL](https://hf-mirror.com/s-JoL).
+This model was contributed by [s-JoL](https://huggingface.co/s-JoL).
 The original code was released on GitHub by [s-JoL](https://github.com/s-JoL), but is now removed.
 
 ## OpenLlamaConfig

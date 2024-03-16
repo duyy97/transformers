@@ -86,7 +86,7 @@ class TokenizerUtilTester(unittest.TestCase):
         try:
             tmp_file = tempfile.mktemp()
             with open(tmp_file, "wb") as f:
-                http_get("https://hf-mirror.com/albert/albert-base-v1/resolve/main/spiece.model", f)
+                http_get("https://huggingface.co/albert/albert-base-v1/resolve/main/spiece.model", f)
 
             _ = AlbertTokenizer.from_pretrained(tmp_file)
         finally:
@@ -99,7 +99,7 @@ class TokenizerUtilTester(unittest.TestCase):
             return
         try:
             with open("tokenizer.json", "wb") as f:
-                http_get("https://hf-mirror.com/hf-internal-testing/tiny-random-bert/blob/main/tokenizer.json", f)
+                http_get("https://huggingface.co/hf-internal-testing/tiny-random-bert/blob/main/tokenizer.json", f)
             tokenizer = AutoTokenizer.from_pretrained("hf-internal-testing/tiny-random-gpt2")
             # The tiny random BERT has a vocab size of 1024, tiny openai-community/gpt2 as a vocab size of 1000
             self.assertEqual(tokenizer.vocab_size, 1000)

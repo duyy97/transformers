@@ -45,7 +45,7 @@ class VideoClassificationPipelineTests(unittest.TestCase):
         video_classifier = VideoClassificationPipeline(model=model, image_processor=processor, top_k=2)
         examples = [
             example_video_filepath,
-            "https://hf-mirror.com/datasets/nateraw/video-demo/resolve/main/archery.mp4",
+            "https://huggingface.co/datasets/nateraw/video-demo/resolve/main/archery.mp4",
         ]
         return video_classifier, examples
 

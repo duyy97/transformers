@@ -39,7 +39,7 @@ _CHECKPOINT_FOR_DOC = "microsoft/trocr-base-handwritten"
 
 TROCR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/trocr-base-handwritten",
-    # See all TrOCR models at https://hf-mirror.com/models?filter=trocr
+    # See all TrOCR models at https://huggingface.co/models?filter=trocr
 ]
 
 

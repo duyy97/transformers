@@ -32,7 +32,7 @@ Let's begin by installing the necessary libraries.
 pip install transformers
 ```
 
-We can now initialize the pipeline with a [Swin2SR model](https://hf-mirror.com/caidas/swin2SR-lightweight-x2-64). We can then infer with the pipeline by calling it with an image. As of now, only [Swin2SR models](https://hf-mirror.com/models?sort=trending&search=swin2sr) are supported in this pipeline. 
+We can now initialize the pipeline with a [Swin2SR model](https://huggingface.co/caidas/swin2SR-lightweight-x2-64). We can then infer with the pipeline by calling it with an image. As of now, only [Swin2SR models](https://huggingface.co/models?sort=trending&search=swin2sr) are supported in this pipeline. 
 
 ```python
 from transformers import pipeline
@@ -47,7 +47,7 @@ Now, let's load an image.
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg"
+url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
 
 print(image.size)
@@ -56,7 +56,7 @@ print(image.size)
 # (532, 432)
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg" alt="Photo of a cat"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg" alt="Photo of a cat"/>
 </div>
 
 We can now do inference with the pipeline. We will get an upscaled version of the cat image. 
@@ -128,5 +128,5 @@ output = (output * 255.0).round().astype(np.uint8)
 Image.fromarray(output)
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat_upscaled.png" alt="Upscaled photo of a cat"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat_upscaled.png" alt="Upscaled photo of a cat"/>
 </div>

@@ -25,7 +25,7 @@ In the root of the repo run:
 conda create -n vqganclip python=3.8
 conda activate vqganclip
 git-lfs install
-git clone https://hf-mirror.com/datasets/erwann/face_editor_model_ckpt model_checkpoints
+git clone https://huggingface.co/datasets/erwann/face_editor_model_ckpt model_checkpoints
 pip install -r requirements.txt
 ```
 
@@ -38,7 +38,7 @@ vqgan_clip.generate("a picture of a smiling woman")
 
 ### Edit an image
 To get a test image, run 
-`git clone https://hf-mirror.com/datasets/erwann/vqgan-clip-pic test_images`
+`git clone https://huggingface.co/datasets/erwann/vqgan-clip-pic test_images`
 
 To edit:
 ```python

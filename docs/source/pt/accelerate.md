@@ -17,7 +17,7 @@ rendered properly in your Markdown viewer.
 # Treinamento distribuído com o 🤗 Accelerate
 
 O paralelismo surgiu como uma estratégia para treinar modelos grandes em hardware limitado e aumentar a velocidade
-de treinamento em várias órdens de magnitude. Na Hugging Face criamos a biblioteca [🤗 Accelerate](https://hf-mirror.com/docs/accelerate)
+de treinamento em várias órdens de magnitude. Na Hugging Face criamos a biblioteca [🤗 Accelerate](https://huggingface.co/docs/accelerate)
 para ajudar os usuários a treinar modelos 🤗 Transformers com qualquer configuração distribuída, seja em uma máquina
 com múltiplos GPUs ou em múltiplos GPUs distribuidos entre muitas máquinas. Neste tutorial, você irá aprender como
 personalizar seu laço de treinamento de PyTorch para poder treinar em ambientes distribuídos.
@@ -30,7 +30,7 @@ De início, instale o 🤗 Accelerate:
 pip install accelerate
 ```
 
-Logo, devemos importar e criar um objeto [`Accelerator`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator).
+Logo, devemos importar e criar um objeto [`Accelerator`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator).
 O `Accelerator` detectará automáticamente a configuração distribuída disponível e inicializará todos os
 componentes necessários para o treinamento. Não há necessidade portanto de especificar o dispositivo onde deve colocar seu modelo.
 
@@ -42,7 +42,7 @@ componentes necessários para o treinamento. Não há necessidade portanto de es
 
 ## Preparando a aceleração
 
-Passe todos os objetos relevantes ao treinamento para o método [`prepare`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare).
+Passe todos os objetos relevantes ao treinamento para o método [`prepare`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare).
 Isto inclui os DataLoaders de treino e evaluação, um modelo e um otimizador:
 
 ```py
@@ -53,7 +53,7 @@ Isto inclui os DataLoaders de treino e evaluação, um modelo e um otimizador:
 
 ## Backward
 
-Por último, substitua o `loss.backward()` padrão em seu laço de treinamento com o método [`backward`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) do 🤗 Accelerate:
+Por último, substitua o `loss.backward()` padrão em seu laço de treinamento com o método [`backward`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) do 🤗 Accelerate:
 
 ```py
 >>> for epoch in range(num_epochs):
@@ -142,4 +142,4 @@ Encapsule o código responsável pelo treinamento de uma função e passe-o ao `
 >>> notebook_launcher(training_function)
 ```
 
-Para obter mais informações sobre o 🤗 Accelerate e suas numerosas funções, consulte a [documentación](https://hf-mirror.com/docs/accelerate/index).
+Para obter mais informações sobre o 🤗 Accelerate e suas numerosas funções, consulte a [documentación](https://huggingface.co/docs/accelerate/index).

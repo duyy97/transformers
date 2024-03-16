@@ -31,7 +31,7 @@ pip install accelerate
 
 ## FSDP 配置
 
-首先，运行 [`accelerate config`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-config)
+首先，运行 [`accelerate config`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-config)
 命令为您的训练环境创建一个配置文件。Accelerate 使用此配置文件根据您在 `accelerate config`
 中选择的训练选项来自动搭建正确的训练环境。
 
@@ -41,7 +41,7 @@ accelerate config
 
 运行 `accelerate config` 时，您将被提示一系列选项来配置训练环境。
 本节涵盖了一些最重要的 FSDP 选项。要了解有关其他可用的 FSDP 选项的更多信息，
-请查阅 [fsdp_config](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments.fsdp_config) 参数。
+请查阅 [fsdp_config](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.fsdp_config) 参数。
 
 ### 分片策略
 
@@ -138,7 +138,7 @@ tpu_use_sudo: false
 use_cpu: false
 ```
 
-要启动训练，请运行 [`accelerate launch`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-launch)
+要启动训练，请运行 [`accelerate launch`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-launch)
 命令，它将自动使用您之前使用 `accelerate config` 创建的配置文件。
 
 ```bash
@@ -156,6 +156,6 @@ FSDP 在大规模模型训练方面是一个强大的工具，您可以使用多
 FSDP 可以减少大规模训练的高成本。如果您希望了解更多信息，下面的内容可能会有所帮助：
 
 - 深入参考 Accelerate 指南，了解有关
-  [FSDP](https://hf-mirror.com/docs/accelerate/usage_guides/fsdp)的更多信息。
+  [FSDP](https://huggingface.co/docs/accelerate/usage_guides/fsdp)的更多信息。
 - 阅读[介绍 PyTorch 完全分片数据并行（FSDP）API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) 博文。
 - 阅读[使用 FSDP 在云 TPU 上扩展 PyTorch 模型](https://pytorch.org/blog/scaling-pytorch-models-on-cloud-tpus-with-fsdp/)博文。

@@ -56,7 +56,7 @@ FLAUBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "flaubert/flaubert_base_uncased",
     "flaubert/flaubert_base_cased",
     "flaubert/flaubert_large_cased",
-    # See all Flaubert models at https://hf-mirror.com/models?filter=flaubert
+    # See all Flaubert models at https://huggingface.co/models?filter=flaubert
 ]
 
 

@@ -35,7 +35,7 @@ from transformers.models.marian.convert_marian_to_pytorch import (
 DEFAULT_REPO = "Tatoeba-Challenge"
 DEFAULT_MODEL_DIR = os.path.join(DEFAULT_REPO, "models")
 LANG_CODE_URL = "https://datahub.io/core/language-codes/r/language-codes-3b2.csv"
-ISO_URL = "https://cdn-datasets.hf-mirror.com/language_codes/iso-639-3.csv"
+ISO_URL = "https://cdn-datasets.huggingface.co/language_codes/iso-639-3.csv"
 ISO_PATH = "lang_code_data/iso-639-3.csv"
 LANG_CODE_PATH = "lang_code_data/language-codes-3b2.csv"
 TATOEBA_MODELS_URL = "https://object.pouta.csc.fi/Tatoeba-MT-models"
@@ -131,7 +131,7 @@ class TatoebaConverter:
     def write_model_card(self, model_dict, dry_run=False) -> str:
         """
         Construct card from data parsed from YAML and the model's name. upload command: aws s3 sync model_card_dir
-        s3://models.hf-mirror.com/bert/Helsinki-NLP/ --dryrun
+        s3://models.huggingface.co/bert/Helsinki-NLP/ --dryrun
         """
         model_dir_url = f"{TATOEBA_MODELS_URL}/{model_dict['release']}"
         long_pair = model_dict["_name"].split("-")

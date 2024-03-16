@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 NYSTROMFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "uw-madison/nystromformer-512": "https://hf-mirror.com/uw-madison/nystromformer-512/resolve/main/config.json",
-    # See all Nystromformer models at https://hf-mirror.com/models?filter=nystromformer
+    "uw-madison/nystromformer-512": "https://huggingface.co/uw-madison/nystromformer-512/resolve/main/config.json",
+    # See all Nystromformer models at https://huggingface.co/models?filter=nystromformer
 }
 
 
@@ -31,7 +31,7 @@ class NystromformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`NystromformerModel`]. It is used to instantiate
     an Nystromformer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Nystromformer
-    [uw-madison/nystromformer-512](https://hf-mirror.com/uw-madison/nystromformer-512) architecture.
+    [uw-madison/nystromformer-512](https://huggingface.co/uw-madison/nystromformer-512) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

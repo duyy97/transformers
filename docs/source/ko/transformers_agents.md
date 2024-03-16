@@ -39,7 +39,7 @@ agent.run("Caption the following image", image=image)
 
 | **Input**                                                                                                                   | **Output**                        |
 |-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/beaver.png" width=200> | A beaver is swimming in the water |
+| <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/beaver.png" width=200> | A beaver is swimming in the water |
 
 ---
 
@@ -48,7 +48,7 @@ agent.run("Read the following text out loud", text=text)
 ```
 | **Input**                                                                                                               | **Output**                                   |
 |-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| A beaver is swimming in the water | <audio controls><source src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tts_example.wav" type="audio/wav"> your browser does not support the audio element. </audio>
+| A beaver is swimming in the water | <audio controls><source src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tts_example.wav" type="audio/wav"> your browser does not support the audio element. </audio>
 
 ---
 
@@ -60,7 +60,7 @@ agent.run(
 ```
 | **Input**                                                                                                                   | **Output**     |
 |-----------------------------------------------------------------------------------------------------------------------------|----------------|
-| <img src="https://datasets-server.hf-mirror.com/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/0/image/image.jpg" width=200> | ballroom foyer |
+| <img src="https://datasets-server.huggingface.co/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/0/image/image.jpg" width=200> | ballroom foyer |
 
 ## 바로 시작하기 [[quickstart]]
 
@@ -101,11 +101,11 @@ login("<YOUR_TOKEN>")
 from transformers import HfAgent
 
 # Starcoder
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 # StarcoderBase
-# agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoderbase")
+# agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoderbase")
 # OpenAssistant
-# agent = HfAgent(url_endpoint="https://api-inference.hf-mirror.com/models/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5")
+# agent = HfAgent(url_endpoint="https://api-inference.huggingface.co/models/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5")
 ```
 
 현재 Hugging Face에서 무료로 제공하는 추론 API를 사용하고 있습니다. 
@@ -129,7 +129,7 @@ StarCoder와 OpenAssistant는 무료로 사용할 수 있으며 간단한 작업
 agent.run("Draw me a picture of rivers and lakes.")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200>
 
 수행하려는 작업에 적합한 도구를 자동으로 선택하여 적절하게 실행합니다. 
 동일한 명령어에서 하나 또는 여러 개의 작업을 수행할 수 있습니다
@@ -139,7 +139,7 @@ agent.run("Draw me a picture of rivers and lakes.")
 agent.run("Draw me a picture of the sea then transform the picture to add an island")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/sea_and_island.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/sea_and_island.png" width=200>
 
 <br/>
 
@@ -188,13 +188,13 @@ agent.run("Draw me a picture of the `prompt`", prompt="a capybara swimming in th
 agent.chat("Generate a picture of rivers and lakes")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
 
 ```py
 agent.chat("Transform the picture so that there is a rock in there")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_and_beaver.png" width=200>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_and_beaver.png" width=200>
 
 <br/>
 
@@ -208,7 +208,7 @@ agent.chat("Transform the picture so that there is a rock in there")
 
 데모 목적과 모든 설정에서 사용할 수 있도록 
 에이전트가 접근할 수 있는 몇 가지 기본 도구에 대한 원격 실행기를 만들었습니다. 
-이러한 도구는 [inference endpoints](https://hf-mirror.com/inference-endpoints)를 사용하여 만들어졌습니다. 
+이러한 도구는 [inference endpoints](https://huggingface.co/inference-endpoints)를 사용하여 만들어졌습니다. 
 원격 실행기 도구를 직접 설정하는 방법을 보려면 [사용자 정의 도구 가이드](./custom_tools)를 읽어보시기 바랍니다.
 
 원격 도구로 실행하려면 [`~Agent.run`] 또는 [`~Agent.chat`] 중 하나에 `remote=True`를 지정하기만 하면 됩니다.
@@ -227,7 +227,7 @@ agent.chat("Draw me a picture of rivers and lakes", remote=True)
 
 ### 여기서 무슨 일이 일어나는 거죠? 도구란 무엇이고, 에이전트란 무엇인가요? [[whats-happening-here-what-are-tools-and-what-are-agents]]
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/diagram.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/diagram.png">
 
 #### 에이전트 [[agents]]
 
@@ -294,16 +294,16 @@ audio = tool("This is a text to speech tool")
 
 엄선된 도구 세트도 있지만, 이 구현이 제공하는 가장 큰 가치는 사용자 지정 도구를 빠르게 만들고 공유할 수 있다는 점입니다.
 
-도구의 코드를 Hugging Face Space나 모델 저장소에 푸시하면 에이전트에게 직접 도구를 활용할 수 있습니다.  [`huggingface-tools` organization](https://hf-mirror.com/huggingface-tools)에 몇 가지 **트랜스포머에 구애받지 않는** 툴을 추가했습니다:
+도구의 코드를 Hugging Face Space나 모델 저장소에 푸시하면 에이전트에게 직접 도구를 활용할 수 있습니다.  [`huggingface-tools` organization](https://huggingface.co/huggingface-tools)에 몇 가지 **트랜스포머에 구애받지 않는** 툴을 추가했습니다:
 
 - **텍스트 다운로더**: 웹 URL에서 텍스트를 다운로드합니다.
 - **텍스트 이미지 변환**: 프롬프트에 따라 이미지를 생성하여 안정적인 확산을 활용합니다.
 - **이미지 변환**: 초기 이미지와 프롬프트가 주어진 이미지를 수정하고, 안정적인 확산을 활용하는 지시 픽셀 2 픽셀을 활용합니다.
 - **텍스트 비디오 변환**: 프롬프트에 따라 작은 비디오를 생성하며, damo-vilab을 활용합니다.
 
-저희가 처음부터 사용하고 있는 텍스트-이미지 변환 도구는 [*huggingface-tools/text-to-image*](https://hf-mirror.com/spaces/huggingface-tools/text-to-image)에 있는 원격 도구입니다! 저희는 이 도구와 다른 조직에 이러한 도구를 계속 출시하여 이 구현을 더욱 강화할 것입니다.
+저희가 처음부터 사용하고 있는 텍스트-이미지 변환 도구는 [*huggingface-tools/text-to-image*](https://huggingface.co/spaces/huggingface-tools/text-to-image)에 있는 원격 도구입니다! 저희는 이 도구와 다른 조직에 이러한 도구를 계속 출시하여 이 구현을 더욱 강화할 것입니다.
 
-에이전트는 기본적으로 [`huggingface-tools`](https://hf-mirror.com/huggingface-tools)에 있는 도구에 접근할 수 있습니다.
+에이전트는 기본적으로 [`huggingface-tools`](https://huggingface.co/huggingface-tools)에 있는 도구에 접근할 수 있습니다.
 [다음 가이드](custom_tools)에서 도구를 작성하고 공유하는 방법과 Hub에 있는 사용자 지정 도구를 활용하는 방법에 대해 설명합니다.
 
 ### 코드 생성[[code-generation]]

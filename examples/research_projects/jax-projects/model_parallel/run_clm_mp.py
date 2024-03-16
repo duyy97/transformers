@@ -269,7 +269,7 @@ def main():
     logger.info(f"Training/evaluation parameters {training_args}")
 
     # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -305,7 +305,7 @@ def main():
             extension = "text"
         dataset = load_dataset(extension, data_files=data_files, cache_dir=model_args.cache_dir)
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # Load pretrained config and tokenizer
     if model_args.config_name:
@@ -396,7 +396,7 @@ def main():
     # to preprocess.
     #
     # To speed up this part, we use multiprocessing. See the documentation of the map method for more information:
-    # https://hf-mirror.com/docs/datasets/process#map
+    # https://huggingface.co/docs/datasets/process#map
 
     lm_datasets = tokenized_datasets.map(
         group_texts,

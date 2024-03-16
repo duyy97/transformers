@@ -21,7 +21,7 @@ ERNIE is a series of powerful models proposed by baidu, especially in Chinese ta
 including [ERNIE1.0](https://arxiv.org/abs/1904.09223), [ERNIE2.0](https://ojs.aaai.org/index.php/AAAI/article/view/6428),
 [ERNIE3.0](https://arxiv.org/abs/2107.02137), [ERNIE-Gram](https://arxiv.org/abs/2010.12148), [ERNIE-health](https://arxiv.org/abs/2110.07244), etc.
 
-These models are contributed by [nghuyong](https://hf-mirror.com/nghuyong) and the official code can be found in [PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP) (in PaddlePaddle).
+These models are contributed by [nghuyong](https://huggingface.co/nghuyong) and the official code can be found in [PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP) (in PaddlePaddle).
 
 ### Usage example
 Take `ernie-1.0-base-zh` as an example:
@@ -47,7 +47,7 @@ model = AutoModel.from_pretrained("nghuyong/ernie-1.0-base-zh")
 |   ernie-health-zh   | Chinese  | Layer:12, Heads:12, Hidden:768  |
 |    ernie-gram-zh    | Chinese  | Layer:12, Heads:12, Hidden:768  |
 
-You can find all the supported models from huggingface's model hub: [hf-mirror.com/nghuyong](https://hf-mirror.com/nghuyong), and model details from paddle's official
+You can find all the supported models from huggingface's model hub: [huggingface.co/nghuyong](https://huggingface.co/nghuyong), and model details from paddle's official
 repo: [PaddleNLP](https://paddlenlp.readthedocs.io/zh/latest/model_zoo/transformers/ERNIE/contents.html)
 and [ERNIE](https://github.com/PaddlePaddle/ERNIE/blob/repro).
 

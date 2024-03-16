@@ -42,9 +42,9 @@ controls over the generated output. We conduct extensive empirical evaluation, c
 studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark.
 Through ablation studies, we shed light over the importance of each of the components comprising MusicGen.*
 
-This model was contributed by [sanchit-gandhi](https://hf-mirror.com/sanchit-gandhi). The original code can be found
+This model was contributed by [sanchit-gandhi](https://huggingface.co/sanchit-gandhi). The original code can be found
 [here](https://github.com/facebookresearch/audiocraft). The pre-trained checkpoints can be found on the
-[Hugging Face Hub](https://hf-mirror.com/models?sort=downloads&search=facebook%2Fmusicgen-).
+[Hugging Face Hub](https://huggingface.co/models?sort=downloads&search=facebook%2Fmusicgen-).
 
 ## Usage tips
 

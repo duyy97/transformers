@@ -22,7 +22,7 @@ SAM (Segment Anything Model) was proposed in [Segment Anything](https://arxiv.or
 
 The model can be used to predict segmentation masks of any object of interest given an input image. 
 
-![example image](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/sam-output.png)
+![example image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/sam-output.png)
 
 The abstract from the paper is the following:
 
@@ -37,7 +37,7 @@ Tips:
 - According to the paper, textual input should be also supported. However, at this time of writing this seems to be not supported according to [the official repository](https://github.com/facebookresearch/segment-anything/issues/4#issuecomment-1497626844). 
 
 
-This model was contributed by [ybelkada](https://hf-mirror.com/ybelkada) and [ArthurZ](https://hf-mirror.com/ArthurZ).
+This model was contributed by [ybelkada](https://huggingface.co/ybelkada) and [ArthurZ](https://huggingface.co/ArthurZ).
 The original code can be found [here](https://github.com/facebookresearch/segment-anything).
 
 Below is an example on how to run mask generation given an image and a 2D point:
@@ -52,7 +52,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = SamModel.from_pretrained("facebook/sam-vit-huge").to(device)
 processor = SamProcessor.from_pretrained("facebook/sam-vit-huge")
 
-img_url = "https://hf-mirror.com/ybelkada/segment-anything/resolve/main/assets/car.png"
+img_url = "https://huggingface.co/ybelkada/segment-anything/resolve/main/assets/car.png"
 raw_image = Image.open(requests.get(img_url, stream=True).raw).convert("RGB")
 input_points = [[[450, 600]]]  # 2D location of a window in the image
 
@@ -78,9 +78,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = SamModel.from_pretrained("facebook/sam-vit-huge").to(device)
 processor = SamProcessor.from_pretrained("facebook/sam-vit-huge")
 
-img_url = "https://hf-mirror.com/ybelkada/segment-anything/resolve/main/assets/car.png"
+img_url = "https://huggingface.co/ybelkada/segment-anything/resolve/main/assets/car.png"
 raw_image = Image.open(requests.get(img_url, stream=True).raw).convert("RGB")
-mask_url = "https://hf-mirror.com/ybelkada/segment-anything/resolve/main/assets/car.png"
+mask_url = "https://huggingface.co/ybelkada/segment-anything/resolve/main/assets/car.png"
 segmentation_map = Image.open(requests.get(mask_url, stream=True).raw).convert("RGB")
 input_points = [[[450, 600]]]  # 2D location of a window in the image
 
@@ -107,7 +107,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 SlimSAM, a pruned version of SAM, was proposed in [0.1% Data Makes Segment Anything Slim](https://arxiv.org/abs/2312.05284) by Zigeng Chen et al. SlimSAM reduces the size of the SAM models considerably while maintaining the same performance.
 
-Checkpoints can be found on the [hub](https://hf-mirror.com/models?other=slimsam), and they can be used as a drop-in replacement of SAM.
+Checkpoints can be found on the [hub](https://huggingface.co/models?other=slimsam), and they can be used as a drop-in replacement of SAM.
 
 ## SamConfig
 

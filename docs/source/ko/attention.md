@@ -38,7 +38,7 @@ rendered properly in your Markdown viewer.
 
 
 <div class="flex justify-center">
-    <img scale="50 %" align="center" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
+    <img scale="50 %" align="center" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
 </div>
 
 

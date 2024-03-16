@@ -31,16 +31,16 @@ logger = logging.get_logger(__name__)
 
 VOCAB_FILES_NAMES = {"vocab_file": "vocab.json", "merges_file": "merges.txt"}
 
-# See all LED models at https://hf-mirror.com/models?filter=LED
+# See all LED models at https://huggingface.co/models?filter=LED
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "allenai/led-base-16384": "https://hf-mirror.com/allenai/led-base-16384/resolve/main/vocab.json",
+        "allenai/led-base-16384": "https://huggingface.co/allenai/led-base-16384/resolve/main/vocab.json",
     },
     "merges_file": {
-        "allenai/led-base-16384": "https://hf-mirror.com/allenai/led-base-16384/resolve/main/merges.txt",
+        "allenai/led-base-16384": "https://huggingface.co/allenai/led-base-16384/resolve/main/merges.txt",
     },
     "tokenizer_file": {
-        "allenai/led-base-16384": "https://hf-mirror.com/allenai/led-base-16384/resolve/main/tokenizer.json",
+        "allenai/led-base-16384": "https://huggingface.co/allenai/led-base-16384/resolve/main/tokenizer.json",
     },
 }
 

@@ -62,7 +62,7 @@ _CHECKPOINT_FOR_DOC = "microsoft/conditional-detr-resnet-50"
 
 CONDITIONAL_DETR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/conditional-detr-resnet-50",
-    # See all Conditional DETR models at https://hf-mirror.com/models?filter=conditional_detr
+    # See all Conditional DETR models at https://huggingface.co/models?filter=conditional_detr
 ]
 
 

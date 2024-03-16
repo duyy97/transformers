@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 The last two tutorials showed how you can fine-tune a model with PyTorch, Keras, and 🤗 Accelerate for distributed setups. The next step is to share your model with the community! At Hugging Face, we believe in openly sharing knowledge and resources to democratize artificial intelligence for everyone. We encourage you to consider sharing your model with the community to help others save time and resources.
 
-In this tutorial, you will learn two methods for sharing a trained or fine-tuned model on the [Model Hub](https://hf-mirror.com/models):
+In this tutorial, you will learn two methods for sharing a trained or fine-tuned model on the [Model Hub](https://huggingface.co/models):
 
 - Programmatically push your files to the Hub.
 - Drag-and-drop your files to the Hub with the web interface.
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-To share a model with the community, you need an account on [hf-mirror.com](https://hf-mirror.com/join). You can also join an existing organization or create a new one.
+To share a model with the community, you need an account on [huggingface.co](https://huggingface.co/join). You can also join an existing organization or create a new one.
 
 </Tip>
 
@@ -49,7 +49,7 @@ As a result, you can load a specific model version with the `revision` parameter
 
 Files are also easily edited in a repository, and you can view the commit history as well as the difference:
 
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## Setup
 
@@ -59,13 +59,13 @@ Before sharing a model to the Hub, you will need your Hugging Face credentials. 
 huggingface-cli login
 ```
 
-If you are using a notebook like Jupyter or Colaboratory, make sure you have the [`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library) library installed. This library allows you to programmatically interact with the Hub.
+If you are using a notebook like Jupyter or Colaboratory, make sure you have the [`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library) library installed. This library allows you to programmatically interact with the Hub.
 
 ```bash
 pip install huggingface_hub
 ```
 
-Then use `notebook_login` to sign-in to the Hub, and follow the link [here](https://hf-mirror.com/settings/token) to generate a token to login with:
+Then use `notebook_login` to sign-in to the Hub, and follow the link [here](https://huggingface.co/settings/token) to generate a token to login with:
 
 ```py
 >>> from huggingface_hub import notebook_login
@@ -203,13 +203,13 @@ Or perhaps you'd like to add the TensorFlow version of your fine-tuned PyTorch m
 
 Now when you navigate to your Hugging Face profile, you should see your newly created model repository. Clicking on the **Files** tab will display all the files you've uploaded to the repository.
 
-For more details on how to create and upload files to a repository, refer to the Hub documentation [here](https://hf-mirror.com/docs/hub/how-to-upstream).
+For more details on how to create and upload files to a repository, refer to the Hub documentation [here](https://huggingface.co/docs/hub/how-to-upstream).
 
 ## Upload with the web interface
 
-Users who prefer a no-code approach are able to upload a model through the Hub's web interface. Visit [hf-mirror.com/new](https://hf-mirror.com/new) to create a new repository:
+Users who prefer a no-code approach are able to upload a model through the Hub's web interface. Visit [huggingface.co/new](https://huggingface.co/new) to create a new repository:
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 From here, add some information about your model:
 
@@ -220,7 +220,7 @@ From here, add some information about your model:
 
 Now click on the **Files** tab and click on the **Add file** button to upload a new file to your repository. Then drag-and-drop a file to upload and add a commit message.
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## Add a model card
 
@@ -229,4 +229,4 @@ To make sure users understand your model's capabilities, limitations, potential 
 * Manually creating and uploading a `README.md` file.
 * Clicking on the **Edit model card** button in your model repository.
 
-Take a look at the DistilBert [model card](https://hf-mirror.com/distilbert/distilbert-base-uncased) for a good example of the type of information a model card should include. For more details about other options you can control in the `README.md` file such as a model's carbon footprint or widget examples, refer to the documentation [here](https://hf-mirror.com/docs/hub/models-cards).
+Take a look at the DistilBert [model card](https://huggingface.co/distilbert/distilbert-base-uncased) for a good example of the type of information a model card should include. For more details about other options you can control in the `README.md` file such as a model's carbon footprint or widget examples, refer to the documentation [here](https://huggingface.co/docs/hub/models-cards).

@@ -29,13 +29,13 @@ rendered properly in your Markdown viewer.
 通过公开具有标准化运算符和数据类型的图，ONNX使得模型能够轻松在不同深度学习框架间切换。例如，在 PyTorch 中训练的模型可以被导出为 ONNX，然后再导入到 TensorFlow（反之亦然）。
 
 导出为 ONNX 后，模型可以：
-- 通过 [图优化（graph optimization）](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/optimization) 和 [量化（quantization）](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/quantization) 等技术进行推理优化。 
-- 通过 [`ORTModelForXXX` 类](https://hf-mirror.com/docs/optimum/onnxruntime/package_reference/modeling_ort) 使用 ONNX Runtime 运行，它同样遵循你熟悉的 Transformers 中的 `AutoModel` API。
-- 使用 [优化推理流水线（pipeline）](https://hf-mirror.com/docs/optimum/main/en/onnxruntime/usage_guides/pipelines) 运行，其 API 与 🤗 Transformers 中的 [`pipeline`] 函数相同。
+- 通过 [图优化（graph optimization）](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/optimization) 和 [量化（quantization）](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/quantization) 等技术进行推理优化。 
+- 通过 [`ORTModelForXXX` 类](https://huggingface.co/docs/optimum/onnxruntime/package_reference/modeling_ort) 使用 ONNX Runtime 运行，它同样遵循你熟悉的 Transformers 中的 `AutoModel` API。
+- 使用 [优化推理流水线（pipeline）](https://huggingface.co/docs/optimum/main/en/onnxruntime/usage_guides/pipelines) 运行，其 API 与 🤗 Transformers 中的 [`pipeline`] 函数相同。
 
 🤗 Optimum 通过利用配置对象提供对 ONNX 导出的支持。多种模型架构已经有现成的配置对象，并且配置对象也被设计得易于扩展以适用于其他架构。
 
-现有的配置列表请参考 [🤗 Optimum 文档](https://hf-mirror.com/docs/optimum/exporters/onnx/overview)。
+现有的配置列表请参考 [🤗 Optimum 文档](https://huggingface.co/docs/optimum/exporters/onnx/overview)。
 
 有两种方式可以将 🤗 Transformers 模型导出为 ONNX，这里我们展示这两种方法：
 
@@ -50,7 +50,7 @@ rendered properly in your Markdown viewer.
 pip install optimum[exporters]
 ```
 
-请参阅 [🤗 Optimum 文档](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli) 以查看所有可用参数，或者在命令行中查看帮助：
+请参阅 [🤗 Optimum 文档](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli) 以查看所有可用参数，或者在命令行中查看帮助：
 
 ```bash
 optimum-cli export onnx --help
@@ -76,7 +76,7 @@ Validating ONNX model distilbert_base_uncased_squad_onnx/model.onnx...
 The ONNX export succeeded and the exported model was saved at: distilbert_base_uncased_squad_onnx
 ```
 
-上面的示例说明了从 🤗 Hub 导出检查点的过程。导出本地模型时，首先需要确保将模型的权重和分词器文件保存在同一目录（`local_path`）中。在使用 CLI 时，将 `local_path` 传递给 `model` 参数，而不是 🤗 Hub 上的检查点名称，并提供 `--task` 参数。你可以在 [🤗 Optimum 文档](https://hf-mirror.com/docs/optimum/exporters/task_manager)中查看支持的任务列表。如果未提供 `task` 参数，将默认导出不带特定任务头的模型架构。
+上面的示例说明了从 🤗 Hub 导出检查点的过程。导出本地模型时，首先需要确保将模型的权重和分词器文件保存在同一目录（`local_path`）中。在使用 CLI 时，将 `local_path` 传递给 `model` 参数，而不是 🤗 Hub 上的检查点名称，并提供 `--task` 参数。你可以在 [🤗 Optimum 文档](https://huggingface.co/docs/optimum/exporters/task_manager)中查看支持的任务列表。如果未提供 `task` 参数，将默认导出不带特定任务头的模型架构。
 
 ```bash
 optimum-cli export onnx --model local_path --task question-answering distilbert_base_uncased_squad_onnx/
@@ -94,7 +94,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 >>> outputs = model(**inputs)
 ```
 
-从 Hub 导出 TensorFlow 检查点的过程也一样。例如，以下是从 [Keras 组织](https://hf-mirror.com/keras-io) 导出纯 TensorFlow 检查点的命令：
+从 Hub 导出 TensorFlow 检查点的过程也一样。例如，以下是从 [Keras 组织](https://huggingface.co/keras-io) 导出纯 TensorFlow 检查点的命令：
 
 ```bash
 optimum-cli export onnx --model keras-io/transformers-qa distilbert_base_cased_squad_onnx/
@@ -122,7 +122,7 @@ optimum-cli export onnx --model keras-io/transformers-qa distilbert_base_cased_s
 
 ### 导出尚未支持的架构的模型
 
-如果你想要为当前无法导出的模型添加支持，请先检查 [`optimum.exporters.onnx`](https://hf-mirror.com/docs/optimum/exporters/onnx/overview) 是否支持该模型，如果不支持，你可以 [直接为 🤗 Optimum 贡献代码](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/contribute)。
+如果你想要为当前无法导出的模型添加支持，请先检查 [`optimum.exporters.onnx`](https://huggingface.co/docs/optimum/exporters/onnx/overview) 是否支持该模型，如果不支持，你可以 [直接为 🤗 Optimum 贡献代码](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/contribute)。
 
 ### 使用 `transformers.onnx` 导出模型
 

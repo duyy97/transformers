@@ -697,7 +697,7 @@ accelerate launch --num_processes=2 \
 --overwrite_output_dir
 ```
 
-詳細については、🤗 Accelerate CLI ガイドを参照してください: [🤗 Accelerate スクリプトの起動](https://hf-mirror.com/docs/accelerate/basic_tutorials/launch)。
+詳細については、🤗 Accelerate CLI ガイドを参照してください: [🤗 Accelerate スクリプトの起動](https://huggingface.co/docs/accelerate/basic_tutorials/launch)。
 
 移動されたセクション:
 

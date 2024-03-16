@@ -99,7 +99,7 @@ def parse_args():
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        help="Path to pretrained model or model identifier from hf-mirror.com/models.",
+        help="Path to pretrained model or model identifier from huggingface.co/models.",
         required=True,
     )
     parser.add_argument(
@@ -292,7 +292,7 @@ def main():
         extension = (args.train_file if args.train_file is not None else args.validation_file).split(".")[-1]
         raw_datasets = load_dataset(extension, data_files=data_files)
     # See more about loading any type of standard or custom dataset at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # Labels
     if args.task_name is not None:
@@ -309,7 +309,7 @@ def main():
             num_labels = 1
         else:
             # A useful fast method:
-            # https://hf-mirror.com/docs/datasets/package_reference/main_classes.html#datasets.Dataset.unique
+            # https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.unique
             label_list = raw_datasets["train"].unique("label")
             label_list.sort()  # Let's sort it for determinism
             num_labels = len(label_list)

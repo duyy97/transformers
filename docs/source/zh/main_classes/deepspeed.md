@@ -1089,7 +1089,7 @@ ZeRO-Infinity 通过使用 NVMe 内存扩展 GPU 和 CPU 内存，从而允许�
 
 不要花费太多时间，但如果您即将开始一个为期3个月的训练 - 请花几天时间找到吞吐量方面最有效的设置。这样您的训练成本将最低，而且您会更快地完成训练。在当前快节奏的机器学习世界中，如果您花费一个额外的月份来训练某样东西，你很可能会错过一个黄金机会。当然，这只是我分享的一种观察，我并不是在催促你。在开始训练BLOOM-176B之前，我花了2天时间进行这个过程，成功将吞吐量从90 TFLOPs提高到150 TFLOPs！这一努力为我们节省了一个多月的训练时间。
 
-这些注释主要是为训练模式编写的，但它们在推理中也应该大部分适用。例如，在推理中，Gradient Checkpointing 是无用的，因为它只在训练过程中有用。此外，我们发现，如果你正在进行多GPU推理并且不使用 [DeepSpeed-Inference](https://www.deepspeed.ai/tutorials/inference-tutorial/)，[Accelerate](https://hf-mirror.com/blog/bloom-inference-pytorch-scripts) 应该提供更优越的性能。
+这些注释主要是为训练模式编写的，但它们在推理中也应该大部分适用。例如，在推理中，Gradient Checkpointing 是无用的，因为它只在训练过程中有用。此外，我们发现，如果你正在进行多GPU推理并且不使用 [DeepSpeed-Inference](https://www.deepspeed.ai/tutorials/inference-tutorial/)，[Accelerate](https://huggingface.co/blog/bloom-inference-pytorch-scripts) 应该提供更优越的性能。
 
 其他与性能相关的快速注释：
 - 如果您从头开始训练某个模型，请尽量确保张量的形状可以被16整除（例如隐藏层大小）。对于批量大小，至少尝试可被2整除。如果您想从GPU中挤取更高性能，还有一些硬件特定的[wave和tile量化](https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/)的可整除性。
@@ -1526,7 +1526,7 @@ bf16具有与fp32相同的动态范围，因此不需要损失缩放。
 
 **FP32权重：**
 
-虽然fp16权重适合恢复训练，但如果您完成了模型的微调并希望将其上传到[models hub](https://hf-mirror.com/models)或传递给其他人，您很可能想要获取fp32权重。这最好不要在训练期间完成，因为这需要大量内存，因此最好在训练完成后离线进行。但是，如果需要并且有充足的空闲CPU内存，可以在相同的训练脚本中完成。以下部分将讨论这两种方法。
+虽然fp16权重适合恢复训练，但如果您完成了模型的微调并希望将其上传到[models hub](https://huggingface.co/models)或传递给其他人，您很可能想要获取fp32权重。这最好不要在训练期间完成，因为这需要大量内存，因此最好在训练完成后离线进行。但是，如果需要并且有充足的空闲CPU内存，可以在相同的训练脚本中完成。以下部分将讨论这两种方法。
 
 **实时FP32权重恢复：**
 
@@ -1983,7 +1983,7 @@ train_batch_size = 1 * world_size
 # - which params should remain on gpus - the larger the value the smaller the offload size
 #
 # For in-depth info on Deepspeed config see
-# https://hf-mirror.com/docs/transformers/main/main_classes/deepspeed
+# https://huggingface.co/docs/transformers/main/main_classes/deepspeed
 
 # keeping the same format as json for consistency, except it uses lower case for true/false
 # fmt: off

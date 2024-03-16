@@ -70,7 +70,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tiger cat"
 
 NAT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "shi-labs/nat-mini-in1k-224",
-    # See all Nat models at https://hf-mirror.com/models?filter=nat
+    # See all Nat models at https://huggingface.co/models?filter=nat
 ]
 
 # drop_path and NatDropPath are from the timm library.

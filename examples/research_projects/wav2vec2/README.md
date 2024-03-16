@@ -3,13 +3,13 @@ follow the new instructions of fine-tuning Wav2Vec2 [here](https://github.com/hu
 
 ## Fine-tuning Wav2Vec2
 
-The `run_asr.py` script allows one to fine-tune pretrained Wav2Vec2 models that can be found [here](https://hf-mirror.com/models?search=facebook/wav2vec2).
+The `run_asr.py` script allows one to fine-tune pretrained Wav2Vec2 models that can be found [here](https://huggingface.co/models?search=facebook/wav2vec2).
 
 This finetuning script can also be run as a google colab [TODO: here]( ).
 
 ### Fine-Tuning with TIMIT
-Let's take a look at the [script](./finetune_base_timit_asr.sh) used to fine-tune [wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base)
-with the [TIMIT dataset](https://hf-mirror.com/datasets/timit_asr):
+Let's take a look at the [script](./finetune_base_timit_asr.sh) used to fine-tune [wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base)
+with the [TIMIT dataset](https://huggingface.co/datasets/timit_asr):
 
 ```bash
 #!/usr/bin/env bash
@@ -36,7 +36,7 @@ python run_asr.py \
 --verbose_logging \
 ```
 
-The resulting model and inference examples can be found [here](https://hf-mirror.com/elgeish/wav2vec2-base-timit-asr).
+The resulting model and inference examples can be found [here](https://huggingface.co/elgeish/wav2vec2-base-timit-asr).
 Some of the arguments above may look unfamiliar, let's break down what's going on:
 
 `--orthography="timit"` applies certain text preprocessing rules, for tokenization and normalization, to clean up the dataset.
@@ -61,9 +61,9 @@ logs references and predictions.
 
 ### Fine-Tuning with Arabic Speech Corpus
 
-Other datasets, like the [Arabic Speech Corpus dataset](https://hf-mirror.com/datasets/arabic_speech_corpus),
+Other datasets, like the [Arabic Speech Corpus dataset](https://huggingface.co/datasets/arabic_speech_corpus),
 require more work! Let's take a look at the [script](./finetune_large_xlsr_53_arabic_speech_corpus.sh)
-used to fine-tune [wav2vec2-large-xlsr-53](https://hf-mirror.com/elgeish/wav2vec2-large-xlsr-53-arabic):
+used to fine-tune [wav2vec2-large-xlsr-53](https://huggingface.co/elgeish/wav2vec2-large-xlsr-53-arabic):
 
 ```bash
 #!/usr/bin/env bash
@@ -131,7 +131,7 @@ which helps with capping GPU memory usage.
 
 ### DeepSpeed Integration
 
-To learn how to deploy Deepspeed Integration please refer to [this guide](https://hf-mirror.com/transformers/main/main_classes/deepspeed.html#deepspeed-trainer-integration).
+To learn how to deploy Deepspeed Integration please refer to [this guide](https://huggingface.co/transformers/main/main_classes/deepspeed.html#deepspeed-trainer-integration).
 
 But to get started quickly all you need is to install:
 ```bash
@@ -188,7 +188,7 @@ run_asr.py \
 ### Pretraining Wav2Vec2
 
 The `run_pretrain.py` script allows one to pretrain a Wav2Vec2 model from scratch using Wav2Vec2's contrastive loss objective (see official [paper](https://arxiv.org/abs/2006.11477) for more information). 
-It is recommended to pre-train Wav2Vec2 with Trainer + Deepspeed (please refer to [this guide](https://hf-mirror.com/transformers/main/main_classes/deepspeed.html#deepspeed-trainer-integration) for more information).
+It is recommended to pre-train Wav2Vec2 with Trainer + Deepspeed (please refer to [this guide](https://huggingface.co/transformers/main/main_classes/deepspeed.html#deepspeed-trainer-integration) for more information).
 
 Here is an example of how you can use DeepSpeed ZeRO-2 to pretrain a small Wav2Vec2 model:
 

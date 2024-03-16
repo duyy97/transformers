@@ -25,7 +25,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-- [DocVQA データセット](https://hf-mirror.com/datasets/nielsr/docvqa_1200_examples_donut) の [LayoutLMv2](../model_doc/layoutlmv2) を微調整します。
+- [DocVQA データセット](https://huggingface.co/datasets/nielsr/docvqa_1200_examples_donut) の [LayoutLMv2](../model_doc/layoutlmv2) を微調整します。
 - 微調整されたモデルを推論に使用します。
 
 <Tip>
@@ -84,7 +84,7 @@ pip install -q pytesseract
 
 このガイドでは、🤗 Hub にある前処理された DocVQA の小さなサンプルを使用します。フルに使いたい場合は、
 DocVQA データセットは、[DocVQA ホームページ](https://rrc.cvc.uab.es/?ch=17) で登録してダウンロードできます。そうすれば、
-このガイドを進めて、[🤗 データセットにファイルをロードする方法](https://hf-mirror.com/docs/datasets/loading#local-and-remote-files) を確認してください。
+このガイドを進めて、[🤗 データセットにファイルをロードする方法](https://huggingface.co/docs/datasets/loading#local-and-remote-files) を確認してください。
 
 
 ```py
@@ -130,7 +130,7 @@ DatasetDict({
 ```
 
 このガイドで使用する LayoutLMv2 チェックポイントは、`max_position_embeddings = 512` でトレーニングされていることに注意してください (
-この情報は、[チェックポイントの `config.json` ファイル](https://hf-mirror.com/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)) で見つけてください。
+この情報は、[チェックポイントの `config.json` ファイル](https://huggingface.co/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)) で見つけてください。
 例を省略することもできますが、答えが大きな文書の最後にあり、結局省略されてしまうという状況を避けるために、
 ここでは、埋め込みが 512 を超える可能性があるいくつかの例を削除します。
 データセット内のほとんどのドキュメントが長い場合は、スライディング ウィンドウ戦略を実装できます。詳細については、[このノートブック](https://github.com/huggingface/notebooks/blob/main/examples/question_answering.ipynb) を確認してください。 。
@@ -158,7 +158,7 @@ DatasetDict({
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
  </div>
 
 ## Preprocess the data
@@ -368,7 +368,7 @@ end_index 18
 文書の質問回答の評価には、大量の後処理が必要です。過剰摂取を避けるために
 現時点では、このガイドでは評価ステップを省略しています。 [`Trainer`] はトレーニング中に評価損失を計算するため、
 モデルのパフォーマンスについてまったくわからないわけではありません。抽出的質問応答は通常、F1/完全一致を使用して評価されます。
-自分で実装したい場合は、[質問応答の章](https://hf-mirror.com/course/chapter7/7?fw=pt#postprocessing) を確認してください。
+自分で実装したい場合は、[質問応答の章](https://huggingface.co/course/chapter7/7?fw=pt#postprocessing) を確認してください。
 インスピレーションを得るためにハグフェイスコースの。
 
 ## Train 

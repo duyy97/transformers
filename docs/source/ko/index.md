@@ -27,12 +27,12 @@ rendered properly in your Markdown viewer.
 
 🤗 Transformers는 PyTorch, TensorFlow와 JAX 간의 상호운용성을 지원합니다. 유연하게 모델의 각 단계마다 다른 프레임워크를 사용할 수도 있습니다. 예를 들어 코드 3줄만 써서 모델을 훈련시킨 다음, 다른 프레임워크 상에서 추론할 수 있습니다. 모델을 운영 환경에 배포하기 위해 ONNX나 TorchScript 형식으로 내보낼 수도 있습니다.
 
-커뮤니티에 참여하시려면 [Hub](https://hf-mirror.com/models), [포럼](https://discuss.hf-mirror.com/), [디스코드](https://discord.com/invite/JfAtkvEtRb)를 방문해주세요!
+커뮤니티에 참여하시려면 [Hub](https://huggingface.co/models), [포럼](https://discuss.huggingface.co/), [디스코드](https://discord.com/invite/JfAtkvEtRb)를 방문해주세요!
 
 ## Hugging Face 팀과 직접 대화하고 싶으신가요?[[hugging-face-team]]
 
-<a target="_blank" href="https://hf-mirror.com/support">
-    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.hf-mirror.com/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+<a target="_blank" href="https://huggingface.co/support">
+    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.huggingface.co/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
 </a>
 
 ## 콘텐츠[[contents]]
@@ -65,7 +65,7 @@ rendered properly in your Markdown viewer.
 1. **[BigBird-RoBERTa](model_doc/big_bird)** (from Google Research) released with the paper [Big Bird: Transformers for Longer Sequences](https://arxiv.org/abs/2007.14062) by Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, Amr Ahmed.
 1. **[Blenderbot](model_doc/blenderbot)** (from Facebook) released with the paper [Recipes for building an open-domain chatbot](https://arxiv.org/abs/2004.13637) by Stephen Roller, Emily Dinan, Naman Goyal, Da Ju, Mary Williamson, Yinhan Liu, Jing Xu, Myle Ott, Kurt Shuster, Eric M. Smith, Y-Lan Boureau, Jason Weston.
 1. **[BlenderbotSmall](model_doc/blenderbot-small)** (from Facebook) released with the paper [Recipes for building an open-domain chatbot](https://arxiv.org/abs/2004.13637) by Stephen Roller, Emily Dinan, Naman Goyal, Da Ju, Mary Williamson, Yinhan Liu, Jing Xu, Myle Ott, Kurt Shuster, Eric M. Smith, Y-Lan Boureau, Jason Weston.
-1. **[BLOOM](model_doc/bloom)** (from BigScience workshop) released by the [BigScience Workshop](https://bigscience.hf-mirror.com/).
+1. **[BLOOM](model_doc/bloom)** (from BigScience workshop) released by the [BigScience Workshop](https://bigscience.huggingface.co/).
 1. **[BORT](model_doc/bort)** (from Alexa) released with the paper [Optimal Subarchitecture Extraction For BERT](https://arxiv.org/abs/2010.10499) by Adrian de Wynter and Daniel J. Perry.
 1. **[ByT5](model_doc/byt5)** (from Google Research) released with the paper [ByT5: Towards a token-free future with pre-trained byte-to-byte models](https://arxiv.org/abs/2105.13626) by Linting Xue, Aditya Barua, Noah Constant, Rami Al-Rfou, Sharan Narang, Mihir Kale, Adam Roberts, Colin Raffel.
 1. **[CamemBERT](model_doc/camembert)** (from Inria/Facebook/Sorbonne) released with the paper [CamemBERT: a Tasty French Language Model](https://arxiv.org/abs/1911.03894) by Louis Martin*, Benjamin Muller*, Pedro Javier Ortiz Suárez*, Yoann Dupont, Laurent Romary, Éric Villemonte de la Clergerie, Djamé Seddah and Benoît Sagot.

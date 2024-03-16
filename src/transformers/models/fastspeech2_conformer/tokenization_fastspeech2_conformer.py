@@ -29,7 +29,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "espnet/fastspeech2_conformer": "https://hf-mirror.com/espnet/fastspeech2_conformer/raw/main/vocab.json",
+        "espnet/fastspeech2_conformer": "https://huggingface.co/espnet/fastspeech2_conformer/raw/main/vocab.json",
     },
 }
 

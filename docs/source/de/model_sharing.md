@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 Die letzten beiden Tutorials haben gezeigt, wie man ein Modell mit PyTorch, Keras und 🤗 Accelerate für verteilte Setups feinabstimmen kann. Der nächste Schritt besteht darin, Ihr Modell mit der Community zu teilen! Bei Hugging Face glauben wir an den offenen Austausch von Wissen und Ressourcen, um künstliche Intelligenz für alle zu demokratisieren. Wir ermutigen Sie, Ihr Modell mit der Community zu teilen, um anderen zu helfen, Zeit und Ressourcen zu sparen.
 
-In diesem Tutorial lernen Sie zwei Methoden kennen, wie Sie ein trainiertes oder verfeinertes Modell auf dem [Model Hub](https://hf-mirror.com/models) teilen können:
+In diesem Tutorial lernen Sie zwei Methoden kennen, wie Sie ein trainiertes oder verfeinertes Modell auf dem [Model Hub](https://huggingface.co/models) teilen können:
 
 - Programmgesteuertes Übertragen Ihrer Dateien auf den Hub.
 - Ziehen Sie Ihre Dateien per Drag-and-Drop über die Weboberfläche in den Hub.
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-Um ein Modell mit der Öffentlichkeit zu teilen, benötigen Sie ein Konto auf [hf-mirror.com](https://hf-mirror.com/join). Sie können auch einer bestehenden Organisation beitreten oder eine neue Organisation gründen.
+Um ein Modell mit der Öffentlichkeit zu teilen, benötigen Sie ein Konto auf [huggingface.co](https://huggingface.co/join). Sie können auch einer bestehenden Organisation beitreten oder eine neue Organisation gründen.
 
 </Tip>
 
@@ -49,7 +49,7 @@ Folglich können Sie eine bestimmte Modellversion mit dem Parameter "Revision" l
 
 Dateien lassen sich auch in einem Repository leicht bearbeiten, und Sie können die Commit-Historie sowie die Unterschiede einsehen:
 
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## Einrichtung
 
@@ -59,13 +59,13 @@ Bevor Sie ein Modell für den Hub freigeben, benötigen Sie Ihre Hugging Face-An
 huggingface-cli login
 ```
 
-Wenn Sie ein Notebook wie Jupyter oder Colaboratory verwenden, stellen Sie sicher, dass Sie die [`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library) Bibliothek installiert haben. Diese Bibliothek ermöglicht Ihnen die programmatische Interaktion mit dem Hub.
+Wenn Sie ein Notebook wie Jupyter oder Colaboratory verwenden, stellen Sie sicher, dass Sie die [`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library) Bibliothek installiert haben. Diese Bibliothek ermöglicht Ihnen die programmatische Interaktion mit dem Hub.
 
 ```bash
 pip install huggingface_hub
 ```
 
-Verwenden Sie dann `notebook_login`, um sich beim Hub anzumelden, und folgen Sie dem Link [hier](https://hf-mirror.com/settings/token), um ein Token für die Anmeldung zu generieren:
+Verwenden Sie dann `notebook_login`, um sich beim Hub anzumelden, und folgen Sie dem Link [hier](https://huggingface.co/settings/token), um ein Token für die Anmeldung zu generieren:
 
 ```py
 >>> from huggingface_hub import notebook_login
@@ -203,13 +203,13 @@ Oder vielleicht möchten Sie die TensorFlow-Version Ihres fein abgestimmten PyTo
 
 Wenn Sie nun zu Ihrem Hugging Face-Profil navigieren, sollten Sie Ihr neu erstelltes Modell-Repository sehen. Wenn Sie auf die Registerkarte **Dateien** klicken, werden alle Dateien angezeigt, die Sie in das Repository hochgeladen haben.
 
-Weitere Einzelheiten zum Erstellen und Hochladen von Dateien in ein Repository finden Sie in der Hub-Dokumentation [hier](https://hf-mirror.com/docs/hub/how-to-upstream).
+Weitere Einzelheiten zum Erstellen und Hochladen von Dateien in ein Repository finden Sie in der Hub-Dokumentation [hier](https://huggingface.co/docs/hub/how-to-upstream).
 
 ## Hochladen mit der Weboberfläche
 
-Benutzer, die einen no-code Ansatz bevorzugen, können ein Modell über das Webinterface des Hubs hochladen. Besuchen Sie [hf-mirror.com/new](https://hf-mirror.com/new) um ein neues Repository zu erstellen:
+Benutzer, die einen no-code Ansatz bevorzugen, können ein Modell über das Webinterface des Hubs hochladen. Besuchen Sie [huggingface.co/new](https://huggingface.co/new) um ein neues Repository zu erstellen:
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 Fügen Sie von hier aus einige Informationen über Ihr Modell hinzu:
 
@@ -220,7 +220,7 @@ Fügen Sie von hier aus einige Informationen über Ihr Modell hinzu:
 
 Klicken Sie nun auf die Registerkarte **Dateien** und klicken Sie auf die Schaltfläche **Datei hinzufügen**, um eine neue Datei in Ihr Repository hochzuladen. Ziehen Sie dann eine Datei per Drag-and-Drop hoch und fügen Sie eine Übergabemeldung hinzu.
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## Hinzufügen einer Modellkarte
 
@@ -229,4 +229,4 @@ Um sicherzustellen, dass die Benutzer die Fähigkeiten, Grenzen, möglichen Verz
 * Manuelles Erstellen und Hochladen einer "README.md"-Datei.
 * Klicken Sie auf die Schaltfläche **Modellkarte bearbeiten** in Ihrem Modell-Repository.
 
-Werfen Sie einen Blick auf die DistilBert [model card](https://hf-mirror.com/distilbert/distilbert-base-uncased) als gutes Beispiel für die Art von Informationen, die eine Modellkarte enthalten sollte. Weitere Details über andere Optionen, die Sie in der Datei "README.md" einstellen können, wie z.B. den Kohlenstoff-Fußabdruck eines Modells oder Beispiele für Widgets, finden Sie in der Dokumentation [hier](https://hf-mirror.com/docs/hub/models-cards).
+Werfen Sie einen Blick auf die DistilBert [model card](https://huggingface.co/distilbert/distilbert-base-uncased) als gutes Beispiel für die Art von Informationen, die eine Modellkarte enthalten sollte. Weitere Details über andere Optionen, die Sie in der Datei "README.md" einstellen können, wie z.B. den Kohlenstoff-Fußabdruck eines Modells oder Beispiele für Widgets, finden Sie in der Dokumentation [hier](https://huggingface.co/docs/hub/models-cards).

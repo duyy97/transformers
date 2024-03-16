@@ -119,7 +119,7 @@ def convert_seggpt_checkpoint(args):
     config = SegGptConfig()
 
     # Load original checkpoint
-    checkpoint_url = "https://hf-mirror.com/BAAI/SegGpt/blob/main/seggpt_vit_large.pth"
+    checkpoint_url = "https://huggingface.co/BAAI/SegGpt/blob/main/seggpt_vit_large.pth"
     original_state_dict = torch.hub.load_state_dict_from_url(checkpoint_url, map_location="cpu")["model"]
 
     # # Rename keys

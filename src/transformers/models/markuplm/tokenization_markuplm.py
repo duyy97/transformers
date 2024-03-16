@@ -41,12 +41,12 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json", "merges_file": "merges.txt", "t
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/markuplm-base": "https://hf-mirror.com/microsoft/markuplm-base/resolve/main/vocab.json",
-        "microsoft/markuplm-large": "https://hf-mirror.com/microsoft/markuplm-large/resolve/main/vocab.json",
+        "microsoft/markuplm-base": "https://huggingface.co/microsoft/markuplm-base/resolve/main/vocab.json",
+        "microsoft/markuplm-large": "https://huggingface.co/microsoft/markuplm-large/resolve/main/vocab.json",
     },
     "merges_file": {
-        "microsoft/markuplm-base": "https://hf-mirror.com/microsoft/markuplm-base/resolve/main/merges.txt",
-        "microsoft/markuplm-large": "https://hf-mirror.com/microsoft/markuplm-large/resolve/main/merges.txt",
+        "microsoft/markuplm-base": "https://huggingface.co/microsoft/markuplm-base/resolve/main/merges.txt",
+        "microsoft/markuplm-large": "https://huggingface.co/microsoft/markuplm-large/resolve/main/merges.txt",
     },
 }
 

@@ -27,8 +27,8 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を学習します。
 
- 1. Finetune [DETR](https://hf-mirror.com/docs/transformers/model_doc/detr)、畳み込みアルゴリズムを組み合わせたモデル
- [CPPE-5](https://hf-mirror.com/datasets/cppe-5) 上のエンコーダー/デコーダー トランスフォーマーを備えたバックボーン
+ 1. Finetune [DETR](https://huggingface.co/docs/transformers/model_doc/detr)、畳み込みアルゴリズムを組み合わせたモデル
+ [CPPE-5](https://huggingface.co/datasets/cppe-5) 上のエンコーダー/デコーダー トランスフォーマーを備えたバックボーン
  データセット。
  2. 微調整したモデルを推論に使用します。
 
@@ -64,7 +64,7 @@ pip install -q datasets transformers evaluate timm albumentations
 
 ## Load the CPPE-5 dataset
 
-[CPPE-5 データセット](https://hf-mirror.com/datasets/cppe-5) には、次の画像が含まれています。
+[CPPE-5 データセット](https://huggingface.co/datasets/cppe-5) には、次の画像が含まれています。
 新型コロナウイルス感染症のパンデミックにおける医療用個人保護具 (PPE) を識別する注釈。
 
 データセットをロードすることから始めます。
@@ -194,7 +194,7 @@ DETR モデルをトレーニングできる「ラベル」。画像プロセッ
 
 まず、モデルがトレーニング データにオーバーフィットしないようにするために、任意のデータ拡張ライブラリを使用して画像拡張を適用できます。ここでは[Albumentations](https://albumentations.ai/docs/)を使用します...
 このライブラリは、変換が画像に影響を与え、それに応じて境界ボックスを更新することを保証します。
-🤗 データセット ライブラリのドキュメントには、詳細な [物体検出用に画像を拡張する方法に関するガイド](https://hf-mirror.com/docs/datasets/object_detection) が記載されています。
+🤗 データセット ライブラリのドキュメントには、詳細な [物体検出用に画像を拡張する方法に関するガイド](https://huggingface.co/docs/datasets/object_detection) が記載されています。
 例としてまったく同じデータセットを使用しています。ここでも同じアプローチを適用し、各画像のサイズを (480, 480) に変更します。
 水平に反転して明るくします。
 

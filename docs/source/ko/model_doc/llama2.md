@@ -24,7 +24,7 @@ Llama2 모델은 Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Al
 
 *이 연구에서 우리는 70억에서 700억 파라미터의 범위에서 사전 훈련 및 미세 조정된 대규모 언어 모델(LLMs)의 모음인 Llama 2를 개발 및 공개합니다. Llama 2-Chat라고 불리는 미세 조정된 LLMs은 대화 사용 사례에 최적화되었습니다. 우리의 모델은 테스트한 대부분의 벤치마크에서 오픈 소스 채팅 모델보다 성능이 뛰어나며, 유용성과 안전성에 대한 인적 평가를 바탕으로 비공개 소스 모델을 대체할 수 있는 적절한 대안이 될 수 있습니다. 우리는 Llama 2-Chat의 미세 조정 및 안전성 향상의 접근 방식에 대한 자세한 설명을 제공하여 커뮤니티가 우리의 작업을 기반으로 LLMs의 책임있는 개발에 기여할 수 있도록 합니다.*
 
-[여기](https://hf-mirror.com/models?search=llama2)에서 모든 Llama2 모델을 확인할 수 있습니다.
+[여기](https://huggingface.co/models?search=llama2)에서 모든 Llama2 모델을 확인할 수 있습니다.
 
 <Tip warning={true}>
 
@@ -62,13 +62,13 @@ model = LlamaForCausalLM.from_pretrained("/output/path")
 
 - LLaMA 토크나이저는 [sentencepiece](https://github.com/google/sentencepiece)를 기반으로 한 BPE 모델입니다. sentencepiece의 특징 중 하나는 시퀀스를 디코딩할 때 첫 번째 토큰이 단어의 시작이면 (예: "Banana") 토크나이저는 문자열 앞에 접두사 공간을 추가하지 않는 것입니다.
 
-이 모델은 [Arthur Zucker](https://hf-mirror.com/ArthurZ)가 [Lysandre Debut](https://hf-mirror.com/lysandre)의 도움을 받아 제공하였습니다. Hugging Face에서의 구현 코드는 [여기](https://github.com/EleutherAI/gpt-neox)의 GPT-NeoX 를 기반으로 합니다. 저자의 원래 코드는 [여기](https://github.com/facebookresearch/llama)에서 찾을 수 있습니다.
+이 모델은 [Arthur Zucker](https://huggingface.co/ArthurZ)가 [Lysandre Debut](https://huggingface.co/lysandre)의 도움을 받아 제공하였습니다. Hugging Face에서의 구현 코드는 [여기](https://github.com/EleutherAI/gpt-neox)의 GPT-NeoX 를 기반으로 합니다. 저자의 원래 코드는 [여기](https://github.com/facebookresearch/llama)에서 찾을 수 있습니다.
 
 ## 리소스 [[resources]]
 
 LLaMA2를 시작하는 데 도움이 될 Hugging Face의 공식 및 커뮤니티(🌎로 표시) 리소스 목록입니다. 여기에 새로운 리소스를 추가하기 위해서 Pull Request를 열어 주시면 검토하겠습니다! 리소스는 기존 리소스와 중복되지 않는 새로운 것을 보여주는 것이 이상적입니다.
 
-- [Llama 2 is here - get it on Hugging Face](https://hf-mirror.com/blog/llama2), Llama 2에 관한 블로그 포스트와 🤗 Transformers 및 🤗 PEFT와 함께 사용하는 방법에 대한 내용입니다.
+- [Llama 2 is here - get it on Hugging Face](https://huggingface.co/blog/llama2), Llama 2에 관한 블로그 포스트와 🤗 Transformers 및 🤗 PEFT와 함께 사용하는 방법에 대한 내용입니다.
 - [LLaMA 2 - Every Resource you need](https://www.philschmid.de/llama-2), LLaMA 2에 대해 알아보고 빠르게 시작하는 데 필요한 관련 리소스의 모음입니다.
 
 <PipelineTag pipeline="text-generation"/>
@@ -77,7 +77,7 @@ LLaMA2를 시작하는 데 도움이 될 Hugging Face의 공식 및 커뮤니티
 - "Llama-v2-7b-guanaco" 모델을 4-bit QLoRA로 미세 조정하고 PDF에서 Q&A 데이터셋을 생성하는 방법에 대한 [노트북](https://colab.research.google.com/drive/134o_cXcMe_lsvl15ZE_4Y75Kstepsntu?usp=sharing)입니다. 🌎
 
 ⚗️ 최적화
-- [Llama 2를 DPO로 미세 조정하기](https://hf-mirror.com/blog/dpo-trl), TRL 라이브러리의 DPO 방법을 사용하여 특정 데이터셋에서 Llama 2를 미세 조정하는 방법을 안내하는 가이드입니다.
+- [Llama 2를 DPO로 미세 조정하기](https://huggingface.co/blog/dpo-trl), TRL 라이브러리의 DPO 방법을 사용하여 특정 데이터셋에서 Llama 2를 미세 조정하는 방법을 안내하는 가이드입니다.
 - [확장 가이드: Llama 2 명령어 조정](https://www.philschmid.de/instruction-tune-llama-2), 입력에서 명령어를 생성하도록 Llama 2를 훈련시키는 방법을 안내하는 가이드로, 명령어를 따르는 모델에서 명령어를 주는 모델로 변환합니다.
 - 개인 컴퓨터에서 QLoRA와 TRL을 사용하여 Llama 2 모델을 미세 조정하는 방법에 대한 [노트북](https://colab.research.google.com/drive/1SYpgFpcmtIUzdE7pxqknrM4ArCASfkFQ?usp=sharing)입니다. 🌎
 

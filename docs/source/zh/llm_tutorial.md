@@ -47,7 +47,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
     ></video>
     <figcaption>"LLM的前向传递"</figcaption>
 </figure>
@@ -59,7 +59,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
     ></video>
     <figcaption>"自回归生成迭代地从概率分布中选择下一个token以生成文本"</figcaption>
 </figure>
@@ -144,7 +144,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 
 ### 生成的输出太短/太长
 
-如果在[`~generation.GenerationConfig`]文件中没有指定，`generate`默认返回20个tokens。我们强烈建议在您的`generate`调用中手动设置`max_new_tokens`以控制它可以返回的最大新tokens数量。请注意，LLMs（更准确地说，仅[解码器模型](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)）也将输入提示作为输出的一部分返回。
+如果在[`~generation.GenerationConfig`]文件中没有指定，`generate`默认返回20个tokens。我们强烈建议在您的`generate`调用中手动设置`max_new_tokens`以控制它可以返回的最大新tokens数量。请注意，LLMs（更准确地说，仅[解码器模型](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)）也将输入提示作为输出的一部分返回。
 
 ```py
 >>> model_inputs = tokenizer(["A sequence of numbers: 1, 2"], return_tensors="pt").to("cuda")
@@ -162,7 +162,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 
 ### 错误的生成模式
 
-默认情况下，除非在[`~generation.GenerationConfig`]文件中指定，否则`generate`会在每个迭代中选择最可能的token（贪婪解码）。对于您的任务，这可能是不理想的；像聊天机器人或写作文章这样的创造性任务受益于采样。另一方面，像音频转录或翻译这样的基于输入的任务受益于贪婪解码。通过将`do_sample=True`启用采样，您可以在这篇[博客文章](https://hf-mirror.com/blog/how-to-generate)中了解更多关于这个话题的信息。
+默认情况下，除非在[`~generation.GenerationConfig`]文件中指定，否则`generate`会在每个迭代中选择最可能的token（贪婪解码）。对于您的任务，这可能是不理想的；像聊天机器人或写作文章这样的创造性任务受益于采样。另一方面，像音频转录或翻译这样的基于输入的任务受益于贪婪解码。通过将`do_sample=True`启用采样，您可以在这篇[博客文章](https://huggingface.co/blog/how-to-generate)中了解更多关于这个话题的信息。
 
 ```py
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
@@ -184,7 +184,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 
 ### 错误的填充位置
 
-LLMs是[仅解码器](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)架构，意味着它们会持续迭代您的输入提示。如果您的输入长度不相同，则需要对它们进行填充。由于LLMs没有接受过从`pad tokens`继续训练，因此您的输入需要左填充。确保在生成时不要忘记传递注意力掩码！
+LLMs是[仅解码器](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)架构，意味着它们会持续迭代您的输入提示。如果您的输入长度不相同，则需要对它们进行填充。由于LLMs没有接受过从`pad tokens`继续训练，因此您的输入需要左填充。确保在生成时不要忘记传递注意力掩码！
 
 ```py
 >>> # The tokenizer initialized above has right-padding active by default: the 1st sequence,
@@ -255,8 +255,8 @@ LLMs是[仅解码器](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)�
 
 ### LLM排行榜
 
-1. [Open LLM Leaderboard](https://hf-mirror.com/spaces/HuggingFaceH4/open_llm_leaderboard), 侧重于开源模型的质量;
-2. [Open LLM-Perf Leaderboard](https://hf-mirror.com/spaces/optimum/llm-perf-leaderboard), 侧重于LLM的吞吐量.
+1. [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), 侧重于开源模型的质量;
+2. [Open LLM-Perf Leaderboard](https://huggingface.co/spaces/optimum/llm-perf-leaderboard), 侧重于LLM的吞吐量.
 
 ### 延迟、吞吐量和内存利用率
 

@@ -34,7 +34,7 @@ logger = logging.get_logger(__name__)
 
 RETRIBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "yjernite/retribert-base-uncased",
-    # See all RetriBert models at https://hf-mirror.com/models?filter=retribert
+    # See all RetriBert models at https://huggingface.co/models?filter=retribert
 ]
 
 

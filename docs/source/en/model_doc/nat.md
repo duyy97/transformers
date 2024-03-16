@@ -37,13 +37,13 @@ NAT-Tiny reaches 83.2% top-1 accuracy on ImageNet, 51.4% mAP on MS-COCO and 48.4
 ImageNet accuracy, 1.0% COCO mAP, and 2.6% ADE20K mIoU improvement over a Swin model with similar size. *
 
 <img
-src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/neighborhood-attention-pattern.jpg"
+src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/neighborhood-attention-pattern.jpg"
 alt="drawing" width="600"/>
 
 <small> Neighborhood Attention compared to other attention patterns.
 Taken from the <a href="https://arxiv.org/abs/2204.07143">original paper</a>.</small>
 
-This model was contributed by [Ali Hassani](https://hf-mirror.com/alihassanijr).
+This model was contributed by [Ali Hassani](https://huggingface.co/alihassanijr).
 The original code can be found [here](https://github.com/SHI-Labs/Neighborhood-Attention-Transformer).
 
 ## Usage tips

@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 SIGLIP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/siglip-base-patch16-224": "https://hf-mirror.com/google/siglip-base-patch16-224/resolve/main/config.json",
+    "google/siglip-base-patch16-224": "https://huggingface.co/google/siglip-base-patch16-224/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class SiglipTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SiglipTextModel`]. It is used to instantiate a
     Siglip text encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the text encoder of the Siglip
-    [google/siglip-base-patch16-224](https://hf-mirror.com/google/siglip-base-patch16-224) architecture.
+    [google/siglip-base-patch16-224](https://huggingface.co/google/siglip-base-patch16-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -138,7 +138,7 @@ class SiglipVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SiglipVisionModel`]. It is used to instantiate a
     Siglip vision encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the vision encoder of the Siglip
-    [google/siglip-base-patch16-224](https://hf-mirror.com/google/siglip-base-patch16-224) architecture.
+    [google/siglip-base-patch16-224](https://huggingface.co/google/siglip-base-patch16-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -234,7 +234,7 @@ class SiglipConfig(PretrainedConfig):
     [`SiglipConfig`] is the configuration class to store the configuration of a [`SiglipModel`]. It is used to
     instantiate a Siglip model according to the specified arguments, defining the text model and vision model configs.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Siglip
-    [google/siglip-base-patch16-224](https://hf-mirror.com/google/siglip-base-patch16-224) architecture.
+    [google/siglip-base-patch16-224](https://huggingface.co/google/siglip-base-patch16-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

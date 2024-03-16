@@ -40,7 +40,7 @@ HTML/XML-based documents, where text and markup information is jointly pre-train
 pre-trained MarkupLM significantly outperforms the existing strong baseline models on several document understanding
 tasks. The pre-trained model and code will be publicly available.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/markuplm).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/markuplm).
 
 ## Usage tips
 
@@ -48,7 +48,7 @@ This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The origin
 These are the XPATH tags and subscripts respectively for each token in the input sequence.
 - One can use [`MarkupLMProcessor`] to prepare all data for the model. Refer to the [usage guide](#usage-markuplmprocessor) for more info.
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/markuplm_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/markuplm_architecture.jpg"
 alt="drawing" width="600"/> 
 
 <small> MarkupLM architecture. Taken from the <a href="https://arxiv.org/abs/2110.08518">original paper.</a> </small>

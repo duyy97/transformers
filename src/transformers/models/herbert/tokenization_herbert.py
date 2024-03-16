@@ -31,10 +31,10 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "allegro/herbert-base-cased": "https://hf-mirror.com/allegro/herbert-base-cased/resolve/main/vocab.json"
+        "allegro/herbert-base-cased": "https://huggingface.co/allegro/herbert-base-cased/resolve/main/vocab.json"
     },
     "merges_file": {
-        "allegro/herbert-base-cased": "https://hf-mirror.com/allegro/herbert-base-cased/resolve/main/merges.txt"
+        "allegro/herbert-base-cased": "https://huggingface.co/allegro/herbert-base-cased/resolve/main/merges.txt"
     },
 }
 

@@ -36,7 +36,7 @@ attention ideas from long-input transformers (ETC), and adopted pre-training str
 able to achieve state-of-the-art results on several summarization tasks and outperform the original T5 models on
 question answering tasks.*
 
-This model was contributed by [stancld](https://hf-mirror.com/stancld).
+This model was contributed by [stancld](https://huggingface.co/stancld).
 The original code can be found [here](https://github.com/google-research/longt5).
 
 ## Usage tips
@@ -58,7 +58,7 @@ also every global token like in the case of standard global attention (*transien
 are constructed dynamically within each attention operation).  As a consequence, *TGlobal* attention introduces
 a few new parameters -- global relative position biases and a layer normalization for global token's embedding.
 The complexity of this mechanism is `O(l(r + l/k))`.
-- An example showing how to evaluate a fine-tuned LongT5 model on the [pubmed dataset](https://hf-mirror.com/datasets/scientific_papers) is below.
+- An example showing how to evaluate a fine-tuned LongT5 model on the [pubmed dataset](https://huggingface.co/datasets/scientific_papers) is below.
 
 ```python
 >>> import evaluate

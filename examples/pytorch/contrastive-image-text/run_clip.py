@@ -19,8 +19,8 @@ Training a CLIP like dual encoder models using text and vision encoders in the l
 The script can be used to train CLIP like models for languages other than English by using
 a text encoder pre-trained in the desired language. Currently this script supports the following vision
 and text models:
-Vision models: ViT(https://hf-mirror.com/models?filter=vit), CLIP (https://hf-mirror.com/models?filter=clip)
-Text models: BERT, ROBERTa (https://hf-mirror.com/models?filter=fill-mask)
+Vision models: ViT(https://huggingface.co/models?filter=vit), CLIP (https://huggingface.co/models?filter=clip)
+Text models: BERT, ROBERTa (https://huggingface.co/models?filter=fill-mask)
 """
 
 import logging
@@ -67,7 +67,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"},
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"},
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -306,7 +306,7 @@ def main():
 
     # 4. Load dataset
     # Get the datasets: you can either provide your own CSV/JSON training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files this script will use the first column for the full image path and the second column for the
@@ -340,7 +340,7 @@ def main():
             token=model_args.token,
         )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # 5. Load pretrained model, tokenizer, and image processor
     if model_args.tokenizer_name:

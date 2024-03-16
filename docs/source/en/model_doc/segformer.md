@@ -38,10 +38,10 @@ Cityscapes validation set and shows excellent zero-shot robustness on Cityscapes
 
 The figure below illustrates the architecture of SegFormer. Taken from the [original paper](https://arxiv.org/abs/2105.15203).
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/segformer_architecture.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/segformer_architecture.png"/>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The TensorFlow version
-of the model was contributed by [sayakpaul](https://hf-mirror.com/sayakpaul). The original code can be found [here](https://github.com/NVlabs/SegFormer).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The TensorFlow version
+of the model was contributed by [sayakpaul](https://huggingface.co/sayakpaul). The original code can be found [here](https://github.com/NVlabs/SegFormer).
 
 ## Usage tips
 
@@ -53,11 +53,11 @@ of the model was contributed by [sayakpaul](https://hf-mirror.com/sayakpaul). Th
   authors of SegFormer first pre-trained the Transformer encoder on ImageNet-1k to classify images. Next, they throw
   away the classification head, and replace it by the all-MLP decode head. Next, they fine-tune the model altogether on
   ADE20K, Cityscapes and COCO-stuff, which are important benchmarks for semantic segmentation. All checkpoints can be
-  found on the [hub](https://hf-mirror.com/models?other=segformer).
+  found on the [hub](https://huggingface.co/models?other=segformer).
 - The quickest way to get started with SegFormer is by checking the [example notebooks](https://github.com/NielsRogge/Transformers-Tutorials/tree/master/SegFormer) (which showcase both inference and
-  fine-tuning on custom data). One can also check out the [blog post](https://hf-mirror.com/blog/fine-tune-segformer) introducing SegFormer and illustrating how it can be fine-tuned on custom data.
+  fine-tuning on custom data). One can also check out the [blog post](https://huggingface.co/blog/fine-tune-segformer) introducing SegFormer and illustrating how it can be fine-tuned on custom data.
 - TensorFlow users should refer to [this repository](https://github.com/deep-diver/segformer-tf-transformers) that shows off-the-shelf inference and fine-tuning.
-- One can also check out [this interactive demo on Hugging Face Spaces](https://hf-mirror.com/spaces/chansung/segformer-tf-transformers)
+- One can also check out [this interactive demo on Hugging Face Spaces](https://huggingface.co/spaces/chansung/segformer-tf-transformers)
   to try out a SegFormer model on custom images.
 - SegFormer works on any input size, as it pads the input to be divisible by `config.patch_sizes`.
 - One can use [`SegformerImageProcessor`] to prepare images and corresponding segmentation maps
@@ -100,7 +100,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 Semantic segmentation:
 
 - [`SegformerForSemanticSegmentation`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/semantic-segmentation).
-- A blog on fine-tuning SegFormer on a custom dataset can be found [here](https://hf-mirror.com/blog/fine-tune-segformer).
+- A blog on fine-tuning SegFormer on a custom dataset can be found [here](https://huggingface.co/blog/fine-tune-segformer).
 - More demo notebooks on SegFormer (both inference + fine-tuning on a custom dataset) can be found [here](https://github.com/NielsRogge/Transformers-Tutorials/tree/master/SegFormer).
 - [`TFSegformerForSemanticSegmentation`] is supported by this [example notebook](https://github.com/huggingface/notebooks/blob/main/examples/semantic_segmentation-tf.ipynb).
 - [Semantic segmentation task guide](../tasks/semantic_segmentation)

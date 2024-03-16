@@ -166,7 +166,7 @@ torchrun --nproc_per_node 2 examples/pytorch/language-modeling/run_clm.py \
 ## ZeRO 데이터 병렬화 [[zero-data-parallelism]]
 
 ZeRO를 기반으로 한 데이터 병렬화 (ZeRO-DP)는 다음 [블로그 글](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)의 다음 다이어그램에서 설명되고 있습니다.
-![DeepSpeed-Image-1](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png)
+![DeepSpeed-Image-1](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png)
 
 이 개념은 이해하기 어려울 수 있지만, 실제로는 매우 간단한 개념입니다. 이는 일반적인 `DataParallel` (DP)과 동일하지만, 전체 모델 매개변수, 그래디언트 및 옵티마이저 상태를 복제하는 대신 각 GPU는 그 중 일부만 저장합니다. 그리고 실행 시간에는 주어진 레이어에 대해 전체 레이어 매개변수가 필요할 때 각 GPU가 서로에게 필요한 부분을 제공하기 위해 동기화됩니다 - 그게 전부입니다.
 
@@ -270,7 +270,7 @@ Naive Model Parallelism (MP)은 모델 레이어 그룹을 다중 GPU에 분산�
 
 [GPipe 논문](https://ai.googleblog.com/2019/03/introducing-gpipe-open-source-library.html)에서 가져온 그림은 상단에 naive MP를, 하단에는 PP를 보여줍니다:
 
-![mp-pp](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png)
+![mp-pp](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png)
 
 하단 다이어그램에서 PP가 유휴 영역이 적은 것을 쉽게 볼 수 있습니다. 유휴 부분을 "bubble"이라고 합니다.
 
@@ -324,7 +324,7 @@ DP + PP 설정의 전역 배치 크기를 계산하려면 `mbs*chunks*dp_degree`
 기타 접근 방법:
 
 DeepSpeed, Varuna 및 SageMaker는 [교차 파이프라인(Interleaved Pipeline)](https://docs.aws.amazon.com/sagemaker/latest/dg/model-parallel-core-features.html) 개념을 사용합니다.
-![interleaved-pipeline-execution](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-sagemaker-interleaved-pipeline.png)
+![interleaved-pipeline-execution](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-sagemaker-interleaved-pipeline.png)
 
 여기서는 버블(유휴 시간)을 역방향 패스에 우선순위를 부여하여 최소화합니다.
 
@@ -343,16 +343,16 @@ Transformer의 주요 구성 요소는 fully connected `nn.Linear`와 비선형 
 Megatron 논문의 표기법을 따라 행렬의 점곱 부분을 `Y = GeLU(XA)`로 표현할 수 있습니다. 여기서 `X`와 `Y`는 입력 및 출력 벡터이고 `A`는 가중치 행렬입니다.
 
 행렬 형태로 계산을 살펴보면, 행렬 곱셈을 다중 GPU로 분할할 수 있는 방법을 쉽게 알 수 있습니다:
-![Parallel GEMM](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png)
+![Parallel GEMM](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png)
 
 가중치 행렬 `A`를 `N`개의 GPU에 대해 열별로 분할하고 병렬로 행렬 곱셈 `XA_1`에서 `XA_n`까지 수행하면 `N`개의 출력 벡터 `Y_1, Y_2, ..., Y_n`가 생성되며 독립적으로 `GeLU`에 전달될 수 있습니다:
-![independent GeLU](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png)
+![independent GeLU](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png)
 
 이 원리를 사용하여 동기화가 필요하지 않은 GPU 간의 임의 깊이의 MLP를 업데이트할 수 있습니다. 그러나 결과 벡터를 샤드로부터 재구성해야 하는 마지막 단계까지는 GPU 간의 동기화가 필요합니다. Megatron-LM 논문의 저자들은 이에 대한 유용한 그림을 제공합니다:
-![parallel shard processing](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png)
+![parallel shard processing](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png)
 
 다중 헤드 어텐션 레이어의 병렬화는 더욱 간단합니다. 이미 독립적인 다중 헤드를 가지고 있기 때문에 이미 병렬화되어 있습니다!
-![parallel self-attention](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png)
+![parallel self-attention](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png)
 
 특별 고려사항: TP는 매우 빠른 네트워크가 필요하므로 한 개 이상의 노드에서 TP를 수행하는 것은 권장되지 않습니다. 실제로 노드에 4개의 GPU가 있는 경우 TP의 최대 차수는 4입니다. TP 차수가 8인 경우 최소한 8개의 GPU가 있는 노드를 사용해야 합니다.
 
@@ -379,7 +379,7 @@ SageMaker는 더 효율적인 처리를 위해 TP와 DP를 결합합니다.
 
 DeepSpeed [pipeline tutorial](https://www.deepspeed.ai/tutorials/pipeline/)에서 다음 다이어그램은 DP와 PP를 결합하는 방법을 보여줍니다.
 
-![dp-pp-2d](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png)
+![dp-pp-2d](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png)
 
 여기서 DP 랭크 0은 GPU2를 보지 못하고, DP 랭크 1은 GPU3을 보지 못하는 것이 중요합니다. DP에게는 딱 2개의 GPU인 것처럼 데이터를 공급합니다. GPU0은 PP를 사용하여 GPU2에게 일부 작업을 "비밀리에" 할당합니다. 그리고 GPU1도 GPU3을 도움으로 삼아 같은 방식으로 작업합니다.
 
@@ -398,7 +398,7 @@ DeepSpeed [pipeline tutorial](https://www.deepspeed.ai/tutorials/pipeline/)에�
 
 더 효율적인 훈련을 위해 PP와 TP 및 DP를 결합하여 3D 병렬 처리를 사용합니다. 다음 다이어그램에서 이를 확인할 수 있습니다.
 
-![dp-pp-tp-3d](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png)
+![dp-pp-tp-3d](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png)
 
 이 다이어그램은 [3D parallelism: Scaling to trillion-parameter models](https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/)이라는 블로그 글에서 확인할 수 있습니다.
 
@@ -468,7 +468,7 @@ https://arxiv.org/abs/2201.11990)
 
 이는 tensor 모델 병렬화 또는 naive layer-wise 모델 병렬화와 유사합니다.
 
-![flex-flow-soap](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-flexflow.jpeg)
+![flex-flow-soap](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-flexflow.jpeg)
 
 이 프레임워크의 중요한 점은 (1) GPU/TPU/CPU 대 (2) RAM/DRAM 대 (3) 빠른 인트라-커넥트 대 느린 인터-커넥트와 같은 리소스를 고려하여 어디에서 어떤 병렬화를 사용할지를 알고리즘적으로 자동으로 최적화한다는 것입니다.
 

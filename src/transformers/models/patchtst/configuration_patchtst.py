@@ -23,8 +23,8 @@ from transformers.utils import logging
 logger = logging.get_logger(__name__)
 
 PATCHTST_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "ibm/patchtst-base": "https://hf-mirror.com/ibm/patchtst-base/resolve/main/config.json",
-    # See all PatchTST models at https://hf-mirror.com/ibm/models?filter=patchtst
+    "ibm/patchtst-base": "https://huggingface.co/ibm/patchtst-base/resolve/main/config.json",
+    # See all PatchTST models at https://huggingface.co/ibm/models?filter=patchtst
 }
 
 
@@ -32,7 +32,7 @@ class PatchTSTConfig(PretrainedConfig):
     r"""
     This is the configuration class to store the configuration of an [`PatchTSTModel`]. It is used to instantiate an
     PatchTST model according to the specified arguments, defining the model architecture.
-    [ibm/patchtst](https://hf-mirror.com/ibm/patchtst) architecture.
+    [ibm/patchtst](https://huggingface.co/ibm/patchtst) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

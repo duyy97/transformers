@@ -26,7 +26,7 @@ after a natural disaster, monitoring crop health, or helping screen medical imag
 
 This guide illustrates how to:
 
-1. Fine-tune [ViT](model_doc/vit) on the [Food-101](https://hf-mirror.com/datasets/food101) dataset to classify a food item in an image.
+1. Fine-tune [ViT](model_doc/vit) on the [Food-101](https://huggingface.co/datasets/food101) dataset to classify a food item in an image.
 2. Use your fine-tuned model for inference.
 
 <Tip>
@@ -246,8 +246,8 @@ As a final preprocessing step, create a batch of examples using `DefaultDataColl
 ## Evaluate
 
 Including a metric during training is often helpful for evaluating your model's performance. You can quickly load an
-evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load
-the [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load
+the [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate
@@ -464,7 +464,7 @@ Load an image you'd like to run inference on:
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png" alt="image of beignets"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png" alt="image of beignets"/>
 </div>
 
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for image classification with your model, and pass your image to it:

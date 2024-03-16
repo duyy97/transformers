@@ -446,7 +446,7 @@ class PretrainedConfig(PushToHubMixin):
         if len(non_default_generation_parameters) > 0:
             logger.warning(
                 "Some non-default generation parameters are set in the model config. These should go into a "
-                "GenerationConfig file (https://hf-mirror.com/docs/transformers/generation_strategies#save-a-custom-decoding-strategy-with-your-model) "
+                "GenerationConfig file (https://huggingface.co/docs/transformers/generation_strategies#save-a-custom-decoding-strategy-with-your-model) "
                 "instead. This warning will be raised to an exception in v4.41.\n"
                 f"Non-default generation parameters: {str(non_default_generation_parameters)}"
             )
@@ -525,7 +525,7 @@ class PretrainedConfig(PushToHubMixin):
                 This can be either:
 
                 - a string, the *model id* of a pretrained model configuration hosted inside a model repo on
-                  hf-mirror.com.
+                  huggingface.co.
                 - a path to a *directory* containing a configuration file saved using the
                   [`~PretrainedConfig.save_pretrained`] method, e.g., `./my_model_directory/`.
                 - a path or url to a saved configuration JSON *file*, e.g., `./my_model_directory/configuration.json`.
@@ -546,7 +546,7 @@ class PretrainedConfig(PushToHubMixin):
                 the token generated when running `huggingface-cli login` (stored in `~/.huggingface`).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
                 <Tip>
@@ -562,7 +562,7 @@ class PretrainedConfig(PushToHubMixin):
                 dictionary consisting of the key/value pairs whose keys are not configuration attributes: i.e., the
                 part of `kwargs` which has not been used to update `config` and is otherwise ignored.
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
             kwargs (`Dict[str, Any]`, *optional*):
                 The values in kwargs of any keys which are configuration attributes will be used to override the loaded
@@ -579,7 +579,7 @@ class PretrainedConfig(PushToHubMixin):
         # derived class: BertConfig
         config = BertConfig.from_pretrained(
             "google-bert/bert-base-uncased"
-        )  # Download configuration from hf-mirror.com and cache.
+        )  # Download configuration from huggingface.co and cache.
         config = BertConfig.from_pretrained(
             "./test/saved_model/"
         )  # E.g. config (or model) was saved using *save_pretrained('./test/saved_model/')*
@@ -706,7 +706,7 @@ class PretrainedConfig(PushToHubMixin):
                 # For any other exception, we throw a generic error.
                 raise EnvironmentError(
                     f"Can't load the configuration of '{pretrained_model_name_or_path}'. If you were trying to load it"
-                    " from 'https://hf-mirror.com/models', make sure you don't have a local directory with the same"
+                    " from 'https://huggingface.co/models', make sure you don't have a local directory with the same"
                     f" name. Otherwise, make sure '{pretrained_model_name_or_path}' is the correct path to a directory"
                     f" containing a {configuration_file} file"
                 )

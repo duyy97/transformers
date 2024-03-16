@@ -25,7 +25,7 @@ The abstract from the paper is the following:
 *In recent years, the field of image generation has been revolutionized by the application of autoregressive transformers and DDPMs. These approaches model the process of image generation as a step-wise probabilistic processes and leverage large amounts of compute and data to learn the image distribution. This methodology of improving performance need not be confined to images. This paper describes a way to apply advances in the image generative domain to speech synthesis. The result is TorToise - an expressive, multi-voice text-to-speech system.*
 
 
-This model was contributed by [Susnato Dhar](https://hf-mirror.com/susnato).
+This model was contributed by [Susnato Dhar](https://huggingface.co/susnato).
 The original code can be found [here](https://github.com/neonbjb/tortoise-tts).
 
 

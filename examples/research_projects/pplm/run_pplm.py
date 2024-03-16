@@ -45,18 +45,18 @@ SMALL_CONST = 1e-15
 BIG_CONST = 1e10
 
 BAG_OF_WORDS_ARCHIVE_MAP = {
-    "legal": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/legal.txt",
-    "military": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/military.txt",
-    "politics": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/politics.txt",
-    "religion": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/religion.txt",
-    "science": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/science.txt",
-    "space": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/space.txt",
-    "technology": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/bow/technology.txt",
+    "legal": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/legal.txt",
+    "military": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/military.txt",
+    "politics": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/politics.txt",
+    "religion": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/religion.txt",
+    "science": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/science.txt",
+    "space": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/space.txt",
+    "technology": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/technology.txt",
 }
 
 DISCRIMINATOR_MODELS_PARAMS = {
     "clickbait": {
-        "url": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/discriminators/clickbait_classifier_head.pt",
+        "url": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/discriminators/clickbait_classifier_head.pt",
         "class_size": 2,
         "embed_size": 1024,
         "class_vocab": {"non_clickbait": 0, "clickbait": 1},
@@ -64,7 +64,7 @@ DISCRIMINATOR_MODELS_PARAMS = {
         "pretrained_model": "openai-community/gpt2-medium",
     },
     "sentiment": {
-        "url": "https://s3.amazonaws.com/models.hf-mirror.com/bert/pplm/discriminators/SST_classifier_head.pt",
+        "url": "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/discriminators/SST_classifier_head.pt",
         "class_size": 5,
         "embed_size": 1024,
         "class_vocab": {"very_positive": 2, "very_negative": 3},

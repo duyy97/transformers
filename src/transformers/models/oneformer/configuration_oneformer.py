@@ -24,9 +24,9 @@ logger = logging.get_logger(__name__)
 
 ONEFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "shi-labs/oneformer_ade20k_swin_tiny": (
-        "https://hf-mirror.com/shi-labs/oneformer_ade20k_swin_tiny/blob/main/config.json"
+        "https://huggingface.co/shi-labs/oneformer_ade20k_swin_tiny/blob/main/config.json"
     ),
-    # See all OneFormer models at https://hf-mirror.com/models?filter=oneformer
+    # See all OneFormer models at https://huggingface.co/models?filter=oneformer
 }
 
 
@@ -35,8 +35,8 @@ class OneFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`OneFormerModel`]. It is used to instantiate a
     OneFormer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the OneFormer
-    [shi-labs/oneformer_ade20k_swin_tiny](https://hf-mirror.com/shi-labs/oneformer_ade20k_swin_tiny) architecture
-    trained on [ADE20k-150](https://hf-mirror.com/datasets/scene_parse_150).
+    [shi-labs/oneformer_ade20k_swin_tiny](https://huggingface.co/shi-labs/oneformer_ade20k_swin_tiny) architecture
+    trained on [ADE20k-150](https://huggingface.co/datasets/scene_parse_150).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -61,7 +61,7 @@ class ModelArguments:
 
     model_name_or_path: str = field(
         default="microsoft/layoutlmv3-base",
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"},
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"},
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -71,7 +71,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     model_revision: str = field(
         default="main",

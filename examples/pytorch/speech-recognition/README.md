@@ -38,10 +38,10 @@ limitations under the License.
 
 ## Connectionist Temporal Classification
 
-The script [`run_speech_recognition_ctc.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc.py) can be used to fine-tune any pretrained [Connectionist Temporal Classification Model](https://hf-mirror.com/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForCTC) for automatic speech 
-recognition on one of the [official speech recognition datasets](https://hf-mirror.com/datasets?task_ids=task_ids:automatic-speech-recognition) or a custom dataset.
+The script [`run_speech_recognition_ctc.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc.py) can be used to fine-tune any pretrained [Connectionist Temporal Classification Model](https://huggingface.co/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForCTC) for automatic speech 
+recognition on one of the [official speech recognition datasets](https://huggingface.co/datasets?task_ids=task_ids:automatic-speech-recognition) or a custom dataset.
 
-Speech recognition models that have been pretrained in unsupervised fashion on audio data alone, *e.g.* [Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/wav2vec2.html), [HuBERT](https://hf-mirror.com/transformers/main/model_doc/hubert.html), [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html), have shown to require only 
+Speech recognition models that have been pretrained in unsupervised fashion on audio data alone, *e.g.* [Wav2Vec2](https://huggingface.co/transformers/main/model_doc/wav2vec2.html), [HuBERT](https://huggingface.co/transformers/main/model_doc/hubert.html), [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html), have shown to require only 
 very little annotated data to yield good performance on automatic speech recognition datasets.
 
 In the script [`run_speech_recognition_ctc`], we first create a vocabulary from all unique characters of both the training data and evaluation data. Then, we preprocesses the speech recognition dataset, which includes correct resampling, normalization and padding. Finally, the pretrained speech recognition model is fine-tuned on the annotated speech recognition datasets using CTC loss.
@@ -62,7 +62,7 @@ If the environment variable is not set, the training script might freeze, *i.e.*
 
 ### Single GPU CTC
 
-The following command shows how to fine-tune [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://hf-mirror.com/datasets/common_voice) using a single GPU in half-precision.
+The following command shows how to fine-tune [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://huggingface.co/datasets/common_voice) using a single GPU in half-precision.
 
 ```bash
 python run_speech_recognition_ctc.py \
@@ -97,7 +97,7 @@ of **0.35**.
 
 ### Multi GPU CTC
 
-The following command shows how to fine-tune [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://hf-mirror.com/datasets/common_voice) using 8 GPUs in half-precision.
+The following command shows how to fine-tune [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://huggingface.co/datasets/common_voice) using 8 GPUs in half-precision.
 
 ```bash
 torchrun \
@@ -134,9 +134,9 @@ of **0.36**.
 
 ### Multi GPU CTC with Dataset Streaming
 
-The following command shows how to use [Dataset Streaming mode](https://hf-mirror.com/docs/datasets/dataset_streaming)
-to fine-tune [XLS-R](https://hf-mirror.com/transformers/main/model_doc/xls_r.html) 
-on [Common Voice](https://hf-mirror.com/datasets/common_voice) using 4 GPUs in half-precision.
+The following command shows how to use [Dataset Streaming mode](https://huggingface.co/docs/datasets/dataset_streaming)
+to fine-tune [XLS-R](https://huggingface.co/transformers/main/model_doc/xls_r.html) 
+on [Common Voice](https://huggingface.co/datasets/common_voice) using 4 GPUs in half-precision.
 
 Streaming mode imposes several constraints on training:
 1. We need to construct a tokenizer beforehand and define it via `--tokenizer_name_or_path`.
@@ -196,64 +196,64 @@ they can serve as a baseline to improve upon.
 
 #### TIMIT CTC
 
-- [TIMIT](https://hf-mirror.com/datasets/timit_asr)
+- [TIMIT](https://huggingface.co/datasets/timit_asr)
 
 | Dataset | Dataset Config | Pretrained Model | Word error rate on eval | Phoneme error rate on eval | GPU setup | Training time | Fine-tuned Model & Logs | Command to reproduce |
 |-------|------------------------------|-------------|---------------|---------------|----------------------|-------------| -------------| ------- |
-| [TIMIT](https://hf-mirror.com/datasets/timit_asr)| -  | [wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base) | 0.21 | - | 1 GPU TITAN RTX |  32min                      | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-base-timit-fine-tuned)  | [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-base-timit-fine-tuned/blob/main/run.sh) |
-| [TIMIT](https://hf-mirror.com/datasets/timit_asr)| -  | [wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base) | 0.21 | - | 1 GPU TITAN RTX |  32min                      | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-base-timit-fine-tuned)  | [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-base-timit-fine-tuned/blob/main/run.sh) |
-| [TIMIT](https://hf-mirror.com/datasets/timit_asr)| -  | [unispeech-large-1500h-cv](https://hf-mirror.com/microsoft/unispeech-large-1500h-cv) | 0.22 | - | 1 GPU TITAN RTX |  35min                      | [here](https://hf-mirror.com/patrickvonplaten/unispeech-large-1500h-cv-timit)  | [run.sh](https://hf-mirror.com/patrickvonplaten/unispeech-large-1500h-cv-timit/blob/main/run.sh) |
-| [TIMIT](https://hf-mirror.com/datasets/timit_asr)| -  | [asapp/sew-mid-100k](https://hf-mirror.com/asapp/sew-mid-100k) | 0.30 | - | 1 GPU TITAN RTX |  28min                      | [here](https://hf-mirror.com/patrickvonplaten/sew-small-100k-timit)  | [run.sh](https://hf-mirror.com/patrickvonplaten/sew-small-100k-timit/blob/main/run.sh) |
-| [TIMIT](https://hf-mirror.com/datasets/timit_asr)| -  | [ntu-spml/distilhubert](https://hf-mirror.com/ntu-spml/distilhubert) | 0.68 | - | 1 GPU TITAN RTX |  26min                      | [here](https://hf-mirror.com/patrickvonplaten/distilhubert-timit)  | [run.sh](https://hf-mirror.com/patrickvonplaten/distilhubert-timit/blob/main/run.sh) |
+| [TIMIT](https://huggingface.co/datasets/timit_asr)| -  | [wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base) | 0.21 | - | 1 GPU TITAN RTX |  32min                      | [here](https://huggingface.co/patrickvonplaten/wav2vec2-base-timit-fine-tuned)  | [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-base-timit-fine-tuned/blob/main/run.sh) |
+| [TIMIT](https://huggingface.co/datasets/timit_asr)| -  | [wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base) | 0.21 | - | 1 GPU TITAN RTX |  32min                      | [here](https://huggingface.co/patrickvonplaten/wav2vec2-base-timit-fine-tuned)  | [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-base-timit-fine-tuned/blob/main/run.sh) |
+| [TIMIT](https://huggingface.co/datasets/timit_asr)| -  | [unispeech-large-1500h-cv](https://huggingface.co/microsoft/unispeech-large-1500h-cv) | 0.22 | - | 1 GPU TITAN RTX |  35min                      | [here](https://huggingface.co/patrickvonplaten/unispeech-large-1500h-cv-timit)  | [run.sh](https://huggingface.co/patrickvonplaten/unispeech-large-1500h-cv-timit/blob/main/run.sh) |
+| [TIMIT](https://huggingface.co/datasets/timit_asr)| -  | [asapp/sew-mid-100k](https://huggingface.co/asapp/sew-mid-100k) | 0.30 | - | 1 GPU TITAN RTX |  28min                      | [here](https://huggingface.co/patrickvonplaten/sew-small-100k-timit)  | [run.sh](https://huggingface.co/patrickvonplaten/sew-small-100k-timit/blob/main/run.sh) |
+| [TIMIT](https://huggingface.co/datasets/timit_asr)| -  | [ntu-spml/distilhubert](https://huggingface.co/ntu-spml/distilhubert) | 0.68 | - | 1 GPU TITAN RTX |  26min                      | [here](https://huggingface.co/patrickvonplaten/distilhubert-timit)  | [run.sh](https://huggingface.co/patrickvonplaten/distilhubert-timit/blob/main/run.sh) |
 
 
 #### Librispeech CTC
 
-- [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)
+- [Librispeech](https://huggingface.co/datasets/librispeech_asr)
 
 | Dataset | Dataset Config | Pretrained Model | Word error rate on eval | Phoneme error rate on eval | GPU setup | Training time | Fine-tuned Model & Logs | Command to reproduce |
 |-------|------------------------------|-------------|---------------|---------------|----------------------|-------------| -------------| ------- |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [microsoft/wavlm-large](https://hf-mirror.com/microsoft/wavlm-large) | 0.049 | - | 8 GPU V100 | 1h30min  | [here](https://hf-mirror.com/patrickvonplaten/wavlm-libri-clean-100h-large) | [run.sh](https://hf-mirror.com/patrickvonplaten/wavlm-libri-clean-100h-large/blob/main/run.sh) |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [microsoft/wavlm-base-plus](https://hf-mirror.com/microsoft/wavlm-base-plus) | 0.068 | - | 8 GPU V100 | 1h30min  | [here](https://hf-mirror.com/patrickvonplaten/wavlm-libri-clean-100h-base-plus) | [run.sh](https://hf-mirror.com/patrickvonplaten/wavlm-libri-clean-100h-base-plus/blob/main/run.sh) |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/wav2vec2-large-lv60](https://hf-mirror.com/facebook/wav2vec2-large-lv60) | 0.042 | - | 8 GPU V100 | 1h30min  | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist) | [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/wav2vec2-large-lv60](https://hf-mirror.com/facebook/wav2vec2-large-lv60) | 0.042 | - | 8 GPU V100 | 1h30min  | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist) | [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/hubert-large-ll60k](https://hf-mirror.com/facebook/hubert-large-ll60k) | 0.088 | - | 8 GPU V100 | 1h30min  | [here](https://hf-mirror.com/patrickvonplaten/hubert-librispeech-clean-100h-demo-dist) | [run.sh](https://hf-mirror.com/patrickvonplaten/hubert-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [asapp/sew-mid-100k](https://hf-mirror.com/asapp/sew-mid-100k) | 0.167 | | 8 GPU V100 | 54min  | [here](https://hf-mirror.com/patrickvonplaten/sew-mid-100k-librispeech-clean-100h-ft) | [run.sh](https://hf-mirror.com/patrickvonplaten/sew-mid-100k-librispeech-clean-100h-ft/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [microsoft/wavlm-large](https://huggingface.co/microsoft/wavlm-large) | 0.049 | - | 8 GPU V100 | 1h30min  | [here](https://huggingface.co/patrickvonplaten/wavlm-libri-clean-100h-large) | [run.sh](https://huggingface.co/patrickvonplaten/wavlm-libri-clean-100h-large/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [microsoft/wavlm-base-plus](https://huggingface.co/microsoft/wavlm-base-plus) | 0.068 | - | 8 GPU V100 | 1h30min  | [here](https://huggingface.co/patrickvonplaten/wavlm-libri-clean-100h-base-plus) | [run.sh](https://huggingface.co/patrickvonplaten/wavlm-libri-clean-100h-base-plus/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/wav2vec2-large-lv60](https://huggingface.co/facebook/wav2vec2-large-lv60) | 0.042 | - | 8 GPU V100 | 1h30min  | [here](https://huggingface.co/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist) | [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/wav2vec2-large-lv60](https://huggingface.co/facebook/wav2vec2-large-lv60) | 0.042 | - | 8 GPU V100 | 1h30min  | [here](https://huggingface.co/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist) | [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [facebook/hubert-large-ll60k](https://huggingface.co/facebook/hubert-large-ll60k) | 0.088 | - | 8 GPU V100 | 1h30min  | [here](https://huggingface.co/patrickvonplaten/hubert-librispeech-clean-100h-demo-dist) | [run.sh](https://huggingface.co/patrickvonplaten/hubert-librispeech-clean-100h-demo-dist/blob/main/run.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr)| `"clean"` - `"train.100"` |  [asapp/sew-mid-100k](https://huggingface.co/asapp/sew-mid-100k) | 0.167 | | 8 GPU V100 | 54min  | [here](https://huggingface.co/patrickvonplaten/sew-mid-100k-librispeech-clean-100h-ft) | [run.sh](https://huggingface.co/patrickvonplaten/sew-mid-100k-librispeech-clean-100h-ft/blob/main/run.sh) |
 
 
 #### Common Voice CTC
 
-- [Common Voice](https://hf-mirror.com/datasets/common_voice)
+- [Common Voice](https://huggingface.co/datasets/common_voice)
 
 | Dataset | Dataset Config | Pretrained Model | Word error rate on eval | Phoneme error rate on eval | GPU setup | Training time | Fine-tuned Model & Logs | Command to reproduce |
 |-------|------------------------------|-------------|---------------|---------------|----------------------|-------------| -------------| ------- |
-| [Common Voice](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_3_0)| `"tr"`  | [facebook/wav2vec2-large-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | - |  0.099   | 8 GPU V100   |  23min                 | [here](https://hf-mirror.com/patrickvonplaten/xls-r-300m-tr-phoneme)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/xls-r-300m-tr-phoneme/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_3_0)| `"it"`  | [facebook/wav2vec2-large-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | - |  0.077   | 8 GPU V100   |  23min                 | [here](https://hf-mirror.com/patrickvonplaten/xls-r-300m-it-phoneme)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/xls-r-300m-it-phoneme/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_3_0)| `"sv-SE"`  | [facebook/wav2vec2-large-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | - |  0.099   | 8 GPU V100   |  23min                 | [here](https://hf-mirror.com/patrickvonplaten/xls-r-300m-sv-phoneme)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/xls-r-300m-sv-phoneme/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53)  | 0.36 |  -      | 8 GPU V100   |  18min                 | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-common_voice-tr-demo-dist)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-common_voice-tr-demo-dist/blob/main/run_dist.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53)  | 0.31  | -    | 8 GPU V100   |  1h05                 | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-xlsr-53-common_voice-tr-ft)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-xlsr-53-common_voice-tr-ft/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53) | 0.35 | - | 1 GPU V100   |  1h20min                      | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-common_voice-tr-demo)  | [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-common_voice-tr-demo/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | 0.31     | - | 8 GPU V100   |  1h05            | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-xls-r-300m-common_voice-tr-ft)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-xls-r-300m-common_voice-tr-ft/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-xls-r-1b](https://hf-mirror.com/facebook/wav2vec2-xls-r-1b)  | 0.21 | -  | 2 GPU Titan 24 GB RAM   |  15h10            | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-xls-r-1b-common_voice-tr-ft)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-xls-r-1b-common_voice-tr-ft/blob/main/run.sh) |
-| [Common Voice](https://hf-mirror.com/datasets/common_voice)| `"tr"` in streaming mode  | [facebook/wav2vec2-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | 0.29     | - | 4 GPU V100   |  3h31            | [here](https://hf-mirror.com/anton-l/wav2vec2-xls-r-common_voice-tr-ft-stream)      |  [run.sh](https://hf-mirror.com/anton-l/wav2vec2-xls-r-common_voice-tr-ft-stream/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_3_0)| `"tr"`  | [facebook/wav2vec2-large-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | - |  0.099   | 8 GPU V100   |  23min                 | [here](https://huggingface.co/patrickvonplaten/xls-r-300m-tr-phoneme)      |  [run.sh](https://huggingface.co/patrickvonplaten/xls-r-300m-tr-phoneme/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_3_0)| `"it"`  | [facebook/wav2vec2-large-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | - |  0.077   | 8 GPU V100   |  23min                 | [here](https://huggingface.co/patrickvonplaten/xls-r-300m-it-phoneme)      |  [run.sh](https://huggingface.co/patrickvonplaten/xls-r-300m-it-phoneme/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_3_0)| `"sv-SE"`  | [facebook/wav2vec2-large-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | - |  0.099   | 8 GPU V100   |  23min                 | [here](https://huggingface.co/patrickvonplaten/xls-r-300m-sv-phoneme)      |  [run.sh](https://huggingface.co/patrickvonplaten/xls-r-300m-sv-phoneme/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53)  | 0.36 |  -      | 8 GPU V100   |  18min                 | [here](https://huggingface.co/patrickvonplaten/wav2vec2-common_voice-tr-demo-dist)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-common_voice-tr-demo-dist/blob/main/run_dist.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53)  | 0.31  | -    | 8 GPU V100   |  1h05                 | [here](https://huggingface.co/patrickvonplaten/wav2vec2-large-xlsr-53-common_voice-tr-ft)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-large-xlsr-53-common_voice-tr-ft/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53) | 0.35 | - | 1 GPU V100   |  1h20min                      | [here](https://huggingface.co/patrickvonplaten/wav2vec2-common_voice-tr-demo)  | [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-common_voice-tr-demo/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | 0.31     | - | 8 GPU V100   |  1h05            | [here](https://huggingface.co/patrickvonplaten/wav2vec2-large-xls-r-300m-common_voice-tr-ft)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-large-xls-r-300m-common_voice-tr-ft/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"`  | [facebook/wav2vec2-xls-r-1b](https://huggingface.co/facebook/wav2vec2-xls-r-1b)  | 0.21 | -  | 2 GPU Titan 24 GB RAM   |  15h10            | [here](https://huggingface.co/patrickvonplaten/wav2vec2-xls-r-1b-common_voice-tr-ft)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-large-xls-r-1b-common_voice-tr-ft/blob/main/run.sh) |
+| [Common Voice](https://huggingface.co/datasets/common_voice)| `"tr"` in streaming mode  | [facebook/wav2vec2-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | 0.29     | - | 4 GPU V100   |  3h31            | [here](https://huggingface.co/anton-l/wav2vec2-xls-r-common_voice-tr-ft-stream)      |  [run.sh](https://huggingface.co/anton-l/wav2vec2-xls-r-common_voice-tr-ft-stream/blob/main/run.sh) |
 
 
 #### Multilingual Librispeech CTC
 
-- [Multilingual Librispeech](https://hf-mirror.com/datasets/multilingual_librispeech)
+- [Multilingual Librispeech](https://huggingface.co/datasets/multilingual_librispeech)
 
 | Dataset | Dataset Config | Pretrained Model | Word error rate on eval | Phoneme error rate on eval | GPU setup | Training time | Fine-tuned Model & Logs | Command to reproduce |
 |-------|------------------------------|-------------|---------------|---------------|----------------------|-------------| -------------| ------- |
-| [Multilingual Librispeech](https://hf-mirror.com/datasets/multilingual_librispeech)| `"german"`  | [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53)  | 0.13  | -     | 1 GPU Titan 24 GB RAM  |  15h04                 | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-xlsr-53-300m-mls-german-ft)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-xlsr-53-300m-mls-german-ft/blob/main/run.sh) |
-| [Multilingual Librispeech](https://hf-mirror.com/datasets/multilingual_librispeech)| `"german"`  | [facebook/wav2vec2-xls-r-300m](https://hf-mirror.com/facebook/wav2vec2-xls-r-300m)  | 0.15 | -     | 1 GPU Titan 24 GB RAM  |  15h04                 | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-300m-mls-german-ft)      |  [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-300m-mls-german-ft/blob/main/run.sh) |
+| [Multilingual Librispeech](https://huggingface.co/datasets/multilingual_librispeech)| `"german"`  | [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53)  | 0.13  | -     | 1 GPU Titan 24 GB RAM  |  15h04                 | [here](https://huggingface.co/patrickvonplaten/wav2vec2-xlsr-53-300m-mls-german-ft)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-xlsr-53-300m-mls-german-ft/blob/main/run.sh) |
+| [Multilingual Librispeech](https://huggingface.co/datasets/multilingual_librispeech)| `"german"`  | [facebook/wav2vec2-xls-r-300m](https://huggingface.co/facebook/wav2vec2-xls-r-300m)  | 0.15 | -     | 1 GPU Titan 24 GB RAM  |  15h04                 | [here](https://huggingface.co/patrickvonplaten/wav2vec2-300m-mls-german-ft)      |  [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-300m-mls-german-ft/blob/main/run.sh) |
 
 ## Connectionist Temporal Classification With Adapters
 
-The script [`run_speech_recognition_ctc_adapter.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc_adapter.py) can be used to fine-tune adapter layers for [Wav2Vec2-like models like MMS](https://hf-mirror.com/docs/transformers/main/en/model_doc/mms) for automatic speech recognition.
+The script [`run_speech_recognition_ctc_adapter.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc_adapter.py) can be used to fine-tune adapter layers for [Wav2Vec2-like models like MMS](https://huggingface.co/docs/transformers/main/en/model_doc/mms) for automatic speech recognition.
 
 ### MMS Model
 
-The [Massive Multilingual Speech (MMS) model](https://hf-mirror.com/facebook/mms-1b-all) has been pre-trained and fine-tuned
+The [Massive Multilingual Speech (MMS) model](https://huggingface.co/facebook/mms-1b-all) has been pre-trained and fine-tuned
 on 1000+ languages. The model makes use of adapter attention layers to fine-tune only a small part 
 of the model on a specific language. The model already comes with fine-tuned adapter layers for 1000+ languages and 
 can be used for inference for 1000+ languages out of the box.
@@ -267,7 +267,7 @@ model head layers.
 ### Examples CTC Adapter
 
 In the following we will look at how one can fine-tune adapter weights for any of the 
-[MMS CTC checkpoints](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition&other=mms&sort=downloads) in less than 1 hour.
+[MMS CTC checkpoints](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition&other=mms&sort=downloads) in less than 1 hour.
 
 #### Common Voice CTC Adapter
 
@@ -311,7 +311,7 @@ python run_speech_recognition_ctc.py \
 This should take less than 10 minutes on most GPUs and you should very quickly get word error rates 
 below 27%.
 
-For an example run, you can have a look at [`patrickvonplaten/wav2vec2-common_voice-tr-mms-demo`](https://hf-mirror.com/patrickvonplaten/wav2vec2-common_voice-tr-mms-demo).
+For an example run, you can have a look at [`patrickvonplaten/wav2vec2-common_voice-tr-mms-demo`](https://huggingface.co/patrickvonplaten/wav2vec2-common_voice-tr-mms-demo).
 
 
 If you'd like to train another adapter model with the same base model, you can simply re-use the same `--output_dir`,
@@ -354,14 +354,14 @@ respectively.
 
 ## Sequence to Sequence
 
-The script [`run_speech_recognition_seq2seq.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_seq2seq.py) can be used to fine-tune any [Speech Sequence-to-Sequence Model](https://hf-mirror.com/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForSpeechSeq2Seq) for automatic speech 
-recognition on one of the [official speech recognition datasets](https://hf-mirror.com/datasets?task_ids=task_ids:automatic-speech-recognition) or a custom dataset. This includes the Whisper model from OpenAI or a warm-started Speech-Encoder-Decoder Model, examples for which are included below.
+The script [`run_speech_recognition_seq2seq.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_seq2seq.py) can be used to fine-tune any [Speech Sequence-to-Sequence Model](https://huggingface.co/docs/transformers/main/en/model_doc/auto#transformers.AutoModelForSpeechSeq2Seq) for automatic speech 
+recognition on one of the [official speech recognition datasets](https://huggingface.co/datasets?task_ids=task_ids:automatic-speech-recognition) or a custom dataset. This includes the Whisper model from OpenAI or a warm-started Speech-Encoder-Decoder Model, examples for which are included below.
 
 ### Whisper Model
 We can load all components of the Whisper model directly from the pretrained checkpoint, including the pretrained model weights, feature extractor and tokenizer. We simply have to specify our fine-tuning dataset and training hyperparameters.
 
 #### Single GPU Whisper Training
-The following example shows how to fine-tune the [Whisper small](https://hf-mirror.com/openai/whisper-small) checkpoint on the Hindi subset of [Common Voice 11](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_11_0) using a single GPU device in half-precision:
+The following example shows how to fine-tune the [Whisper small](https://huggingface.co/openai/whisper-small) checkpoint on the Hindi subset of [Common Voice 11](https://huggingface.co/datasets/mozilla-foundation/common_voice_11_0) using a single GPU device in half-precision:
 ```bash
 python run_speech_recognition_seq2seq.py \
 	--model_name_or_path="openai/whisper-small" \
@@ -402,7 +402,7 @@ On a single V100, training should take approximately 8 hours, with a final cross
 If training on a different language, you should be sure to change the `language` argument. The `language` argument should be omitted for English speech recognition.
 
 #### Multi GPU Whisper Training
-The following example shows how to fine-tune the [Whisper small](https://hf-mirror.com/openai/whisper-small) checkpoint on the Hindi subset of [Common Voice 11](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_11_0) using 2 GPU devices in half-precision:
+The following example shows how to fine-tune the [Whisper small](https://huggingface.co/openai/whisper-small) checkpoint on the Hindi subset of [Common Voice 11](https://huggingface.co/datasets/mozilla-foundation/common_voice_11_0) using 2 GPU devices in half-precision:
 ```bash
 torchrun \
  	--nproc_per_node 2 run_speech_recognition_seq2seq.py \
@@ -442,7 +442,7 @@ On two V100s, training should take approximately 4 hours, with a final cross-ent
 
 ### Warm-Started Speech-Encoder-Decoder Model
 A very common use case is to leverage a pretrained speech encoder model,
-*e.g.* [Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/wav2vec2.html), [HuBERT](https://hf-mirror.com/transformers/main/model_doc/hubert.html) or [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html), with a pretrained text decoder model, *e.g.* [BART](https://hf-mirror.com/docs/transformers/main/en/model_doc/bart#transformers.BartForCausalLM) or [GPT-2](https://hf-mirror.com/docs/transformers/main/en/model_doc/gpt2#transformers.GPT2ForCausalLM), to create a [Speech-Encoder-Decoder Model](https://hf-mirror.com/docs/transformers/main/en/model_doc/speech-encoder-decoder#speech-encoder-decoder-models).
+*e.g.* [Wav2Vec2](https://huggingface.co/transformers/main/model_doc/wav2vec2.html), [HuBERT](https://huggingface.co/transformers/main/model_doc/hubert.html) or [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html), with a pretrained text decoder model, *e.g.* [BART](https://huggingface.co/docs/transformers/main/en/model_doc/bart#transformers.BartForCausalLM) or [GPT-2](https://huggingface.co/docs/transformers/main/en/model_doc/gpt2#transformers.GPT2ForCausalLM), to create a [Speech-Encoder-Decoder Model](https://huggingface.co/docs/transformers/main/en/model_doc/speech-encoder-decoder#speech-encoder-decoder-models).
 
 By pairing a pretrained speech model with a pretrained text model, the warm-started model has prior knowledge of both the source audio and target text domains. However, the cross-attention weights between the encoder and decoder are randomly initialised. Thus, the model requires fine-tuning to learn the cross-attention weights and align the encoder mapping with that of the decoder. We can perform this very fine-tuning procedure using the example script.
 
@@ -450,7 +450,7 @@ As an example, let's instantiate a *Wav2Vec2-2-Bart* model with the `SpeechEncod
 
 ```bash
 huggingface-cli repo create wav2vec2-2-bart-base
-git clone https://hf-mirror.com/<your-user-name>/wav2vec2-2-bart-base
+git clone https://huggingface.co/<your-user-name>/wav2vec2-2-bart-base
 cd wav2vec2-2-bart-base
 ```
 
@@ -505,8 +505,8 @@ Having warm-started the speech-encoder-decoder model under `<your-user-name>/wav
 
 In the script [`run_speech_recognition_seq2seq`], we load the warm-started model, 
 feature extractor, and tokenizer, process a speech recognition dataset, 
-and subsequently make use of the [`Seq2SeqTrainer`](https://hf-mirror.com/docs/transformers/main/en/main_classes/trainer#transformers.Seq2SeqTrainer) to train our system.
-Note that it is important to align the target transcriptions with the decoder's vocabulary. For example, the [`Librispeech`](https://hf-mirror.com/datasets/librispeech_asr) dataset only contains capitalized letters in the transcriptions,
+and subsequently make use of the [`Seq2SeqTrainer`](https://huggingface.co/docs/transformers/main/en/main_classes/trainer#transformers.Seq2SeqTrainer) to train our system.
+Note that it is important to align the target transcriptions with the decoder's vocabulary. For example, the [`Librispeech`](https://huggingface.co/datasets/librispeech_asr) dataset only contains capitalized letters in the transcriptions,
 whereas BART was pretrained mostly on normalized text. Thus, it is recommended to add the argument 
 `--do_lower_case` to the fine-tuning script when using a warm-started `SpeechEncoderDecoderModel`. 
 The model is fine-tuned on the standard cross-entropy language modeling
@@ -528,7 +528,7 @@ If the environment variable is not set, the training script might freeze, *i.e.*
 
 #### Single GPU Seq2Seq
 
-The following command shows how to fine-tune [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://hf-mirror.com/datasets/common_voice) using a single GPU in half-precision.
+The following command shows how to fine-tune [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://huggingface.co/datasets/common_voice) using a single GPU in half-precision.
 
 ```bash
 python run_speech_recognition_seq2seq.py \
@@ -569,7 +569,7 @@ cross-entropy loss of **0.405** and word error rate of **0.0728**.
 
 #### Multi GPU Seq2Seq
 
-The following command shows how to fine-tune [XLSR-Wav2Vec2](https://hf-mirror.com/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://hf-mirror.com/datasets/common_voice) using 8 GPUs in half-precision.
+The following command shows how to fine-tune [XLSR-Wav2Vec2](https://huggingface.co/transformers/main/model_doc/xlsr_wav2vec2.html) on [Common Voice](https://huggingface.co/datasets/common_voice) using 8 GPUs in half-precision.
 
 ```bash
 torchrun \
@@ -610,9 +610,9 @@ On 8 V100 GPUs, this script should run in *ca.* 45 minutes and yield a cross-ent
 
 #### Librispeech Seq2Seq
 
-- [Librispeech](https://hf-mirror.com/datasets/librispeech_asr)
+- [Librispeech](https://huggingface.co/datasets/librispeech_asr)
 
 | Dataset                                                        | Dataset Config            | Pretrained Model                                                                                                                                          | Word error rate on eval | Phoneme error rate on eval | GPU setup  | Training time | Fine-tuned Model & Logs                                               | Command to reproduce                                                                                                                                                                                              |
 |----------------------------------------------------------------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------|------------|---------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr) | `"clean"` - `"train.100"` | [facebook/wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base) and [facebook/bart-base](https://hf-mirror.com/facebook/bart-base)               | 0.0728                  | -                          | 8 GPU V100 | 45min         | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-base)  | [create_model.py](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-base/blob/main/create_model.py) & [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-base/blob/main/run_librispeech.sh)   |
-| [Librispeech](https://hf-mirror.com/datasets/librispeech_asr) | `"clean"` - `"train.100"` | [facebook/wav2vec2-large-lv60](https://hf-mirror.com/facebook/wav2vec2-large-lv60) and [facebook/bart-large](https://hf-mirror.com/facebook/bart-large) | 0.0486                  | -                          | 8 GPU V100 | 1h20min       | [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-large) | [create_model.py](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-large/blob/main/create_model.py) & [run.sh](https://hf-mirror.com/patrickvonplaten/wav2vec2-2-bart-large/blob/main/run_librispeech.sh) |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr) | `"clean"` - `"train.100"` | [facebook/wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base) and [facebook/bart-base](https://huggingface.co/facebook/bart-base)               | 0.0728                  | -                          | 8 GPU V100 | 45min         | [here](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-base)  | [create_model.py](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-base/blob/main/create_model.py) & [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-base/blob/main/run_librispeech.sh)   |
+| [Librispeech](https://huggingface.co/datasets/librispeech_asr) | `"clean"` - `"train.100"` | [facebook/wav2vec2-large-lv60](https://huggingface.co/facebook/wav2vec2-large-lv60) and [facebook/bart-large](https://huggingface.co/facebook/bart-large) | 0.0486                  | -                          | 8 GPU V100 | 1h20min       | [here](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-large) | [create_model.py](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-large/blob/main/create_model.py) & [run.sh](https://huggingface.co/patrickvonplaten/wav2vec2-2-bart-large/blob/main/run_librispeech.sh) |

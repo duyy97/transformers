@@ -16,11 +16,11 @@ limitations under the License.
 
 # Image classification examples
 
-This directory contains 2 scripts that showcase how to fine-tune any model supported by the [`TFAutoModelForImageClassification` API](https://hf-mirror.com/docs/transformers/main/en/model_doc/auto#transformers.TFAutoModelForImageClassification) (such as [ViT](https://hf-mirror.com/docs/transformers/main/en/model_doc/vit), [ConvNeXT](https://hf-mirror.com/docs/transformers/main/en/model_doc/convnext), [ResNet](https://hf-mirror.com/docs/transformers/main/en/model_doc/resnet), [Swin Transformer](https://hf-mirror.com/docs/transformers/main/en/model_doc/swin)...) using TensorFlow. They can be used to fine-tune models on both [datasets from the hub](#using-datasets-from-hub) as well as on [your own custom data](#using-your-own-data).
+This directory contains 2 scripts that showcase how to fine-tune any model supported by the [`TFAutoModelForImageClassification` API](https://huggingface.co/docs/transformers/main/en/model_doc/auto#transformers.TFAutoModelForImageClassification) (such as [ViT](https://huggingface.co/docs/transformers/main/en/model_doc/vit), [ConvNeXT](https://huggingface.co/docs/transformers/main/en/model_doc/convnext), [ResNet](https://huggingface.co/docs/transformers/main/en/model_doc/resnet), [Swin Transformer](https://huggingface.co/docs/transformers/main/en/model_doc/swin)...) using TensorFlow. They can be used to fine-tune models on both [datasets from the hub](#using-datasets-from-hub) as well as on [your own custom data](#using-your-own-data).
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/image_classification_inference_widget.png" height="400" />
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/image_classification_inference_widget.png" height="400" />
 
-Try out the inference widget here: https://hf-mirror.com/google/vit-base-patch16-224
+Try out the inference widget here: https://huggingface.co/google/vit-base-patch16-224
 
 ## TensorFlow
 
@@ -28,7 +28,7 @@ Based on the script [`run_image_classification.py`](https://github.com/huggingfa
 
 ### Using datasets from Hub
 
-Here we show how to fine-tune a Vision Transformer (`ViT`) on the [beans](https://hf-mirror.com/datasets/beans) dataset, to classify the disease type of bean leaves. The following will train a model and push it to the `amyeroberts/vit-base-beans` repo.
+Here we show how to fine-tune a Vision Transformer (`ViT`) on the [beans](https://huggingface.co/datasets/beans) dataset, to classify the disease type of bean leaves. The following will train a model and push it to the `amyeroberts/vit-base-beans` repo.
 
 ```bash
 python run_image_classification.py \
@@ -52,9 +52,9 @@ python run_image_classification.py \
     --seed 1337
 ```
 
-👀 See the results here: [amyeroberts/vit-base-beans](https://hf-mirror.com/amyeroberts/vit-base-beans).
+👀 See the results here: [amyeroberts/vit-base-beans](https://huggingface.co/amyeroberts/vit-base-beans).
 
-Note that you can replace the model and dataset by simply setting the `model_name_or_path` and `dataset_name` arguments respectively, with any model or dataset from the [hub](https://hf-mirror.com/). For an overview of all possible arguments, we refer to the [docs](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) of the `TrainingArguments`, which can be passed as flags.
+Note that you can replace the model and dataset by simply setting the `model_name_or_path` and `dataset_name` arguments respectively, with any model or dataset from the [hub](https://huggingface.co/). For an overview of all possible arguments, we refer to the [docs](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) of the `TrainingArguments`, which can be passed as flags.
 
 > If your model classification head dimensions do not fit the number of labels in the dataset, you can specify `--ignore_mismatched_sizes` to adapt it.
 
@@ -91,7 +91,7 @@ python run_image_classification.py \
     --do_eval
 ```
 
-Internally, the script will use the [`ImageFolder`](https://hf-mirror.com/docs/datasets/v2.0.0/en/image_process#imagefolder) feature which will automatically turn the folders into 🤗 Dataset objects.
+Internally, the script will use the [`ImageFolder`](https://huggingface.co/docs/datasets/v2.0.0/en/image_process#imagefolder) feature which will automatically turn the folders into 🤗 Dataset objects.
 
 ##### 💡 The above will split the train dir into training and evaluation sets
   - To control the split amount, use the `--train_val_split` flag.
@@ -99,7 +99,7 @@ Internally, the script will use the [`ImageFolder`](https://hf-mirror.com/docs/d
 
 #### Upload your data to the hub, as a (possibly private) repo
 
-To upload your image dataset to the hub you can use the [`ImageFolder`](https://hf-mirror.com/docs/datasets/v2.0.0/en/image_process#imagefolder) feature available in 🤗 Datasets. Simply do the following:
+To upload your image dataset to the hub you can use the [`ImageFolder`](https://huggingface.co/docs/datasets/v2.0.0/en/image_process#imagefolder) feature available in 🤗 Datasets. Simply do the following:
 
 ```python
 from datasets import load_dataset
@@ -131,11 +131,11 @@ dataset.push_to_hub("name_of_your_dataset", private=True)
 
 and that's it! You can now train your model by simply setting the `--dataset_name` argument to the name of your dataset on the hub (as explained in [Using datasets from the 🤗 hub](#using-datasets-from-hub)).
 
-More on this can also be found in [this blog post](https://hf-mirror.com/blog/image-search-datasets).
+More on this can also be found in [this blog post](https://huggingface.co/blog/image-search-datasets).
 
 ### Sharing your model on 🤗 Hub
 
-0. If you haven't already, [sign up](https://hf-mirror.com/join) for a 🤗 account
+0. If you haven't already, [sign up](https://huggingface.co/join) for a 🤗 account
 
 1. Make sure you have `git-lfs` installed and git set up.
 

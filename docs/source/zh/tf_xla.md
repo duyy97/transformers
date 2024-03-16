@@ -24,7 +24,7 @@ XLA（加速线性代数）是一种针对线性代数的特定领域编译器�
 
 在TensorFlow中使用XLA非常简单——它包含在`tensorflow`库中，并且可以使用任何图创建函数中的`jit_compile`参数来触发，例如[`tf.function`](https://www.tensorflow.org/guide/intro_to_graphs)。在使用Keras方法如`fit()`和`predict()`时，只需将`jit_compile`参数传递给`model.compile()`即可启用XLA。然而，XLA不仅限于这些方法 - 它还可以用于加速任何任意的`tf.function`。
 
-在🤗 Transformers中，几个TensorFlow方法已经被重写为与XLA兼容，包括[GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2)、[T5](https://hf-mirror.com/docs/transformers/model_doc/t5)和[OPT](https://hf-mirror.com/docs/transformers/model_doc/opt)等文本生成模型，以及[Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper)等语音处理模型。
+在🤗 Transformers中，几个TensorFlow方法已经被重写为与XLA兼容，包括[GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2)、[T5](https://huggingface.co/docs/transformers/model_doc/t5)和[OPT](https://huggingface.co/docs/transformers/model_doc/opt)等文本生成模型，以及[Whisper](https://huggingface.co/docs/transformers/model_doc/whisper)等语音处理模型。
 
 虽然确切的加速倍数很大程度上取决于模型，但对于🤗 Transformers中的TensorFlow文本生成模型，我们注意到速度提高了约100倍。本文档将解释如何在这些模型上使用XLA获得最大的性能。如果您有兴趣了解更多关于基准测试和我们在XLA集成背后的设计哲学的信息，我们还将提供额外的资源链接。
 
@@ -167,9 +167,9 @@ Execution time -- 78.9 ms
 
 以下是一些附加资源，如果您想深入了解在🤗 Transformers和其他库下使用XLA：
 
-* [这个Colab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb) 提供了一个互动演示，让您可以尝试使用XLA兼容的编码器-解码器（例如[T5](https://hf-mirror.com/docs/transformers/model_doc/t5)）和仅解码器（例如[GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2)）文本生成模型。
+* [这个Colab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb) 提供了一个互动演示，让您可以尝试使用XLA兼容的编码器-解码器（例如[T5](https://huggingface.co/docs/transformers/model_doc/t5)）和仅解码器（例如[GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2)）文本生成模型。
 
-* [这篇博客文章](https://hf-mirror.com/blog/tf-xla-generate) 提供了XLA兼容模型的比较基准概述，以及关于在TensorFlow中使用XLA的友好介绍。
+* [这篇博客文章](https://huggingface.co/blog/tf-xla-generate) 提供了XLA兼容模型的比较基准概述，以及关于在TensorFlow中使用XLA的友好介绍。
 
 * [这篇博客文章](https://blog.tensorflow.org/2022/11/how-hugging-face-improved-text-generation-performance-with-xla.html) 讨论了我们在🤗 Transformers中为TensorFlow模型添加XLA支持的设计理念。
 

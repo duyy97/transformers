@@ -59,7 +59,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "remote control, remote"
 
 DATA2VEC_VISION_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/data2vec-vision-base-ft1k",
-    # See all Data2VecVision models at https://hf-mirror.com/models?filter=data2vec-vision
+    # See all Data2VecVision models at https://huggingface.co/models?filter=data2vec-vision
 ]
 
 

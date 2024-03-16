@@ -53,7 +53,7 @@ _CHECKPOINT_FOR_DOC = "shi-labs/oneformer_ade20k_swin_tiny"
 
 ONEFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "shi-labs/oneformer_ade20k_swin_tiny",
-    # See all OneFormer models at https://hf-mirror.com/models?filter=oneformer
+    # See all OneFormer models at https://huggingface.co/models?filter=oneformer
 ]
 
 
@@ -3146,7 +3146,7 @@ class OneFormerForUniversalSegmentation(OneFormerPreTrainedModel):
         >>> model = OneFormerForUniversalSegmentation.from_pretrained("shi-labs/oneformer_ade20k_swin_tiny")
 
         >>> url = (
-        ...     "https://hf-mirror.com/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
+        ...     "https://huggingface.co/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
         ... )
         >>> image = Image.open(requests.get(url, stream=True).raw)
 

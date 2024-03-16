@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Pipeline per l'inferenza
 
-La [`pipeline`] rende semplice usare qualsiasi modello dal [Model Hub](https://hf-mirror.com/models) per fare inferenza su diversi compiti come generazione del testo, segmentazione di immagini e classificazione di audio. Anche se non hai esperienza con una modalità specifica o non comprendi bene il codice che alimenta i modelli, è comunque possibile utilizzarli con l'opzione [`pipeline`]! Questa esercitazione ti insegnerà a:
+La [`pipeline`] rende semplice usare qualsiasi modello dal [Model Hub](https://huggingface.co/models) per fare inferenza su diversi compiti come generazione del testo, segmentazione di immagini e classificazione di audio. Anche se non hai esperienza con una modalità specifica o non comprendi bene il codice che alimenta i modelli, è comunque possibile utilizzarli con l'opzione [`pipeline`]! Questa esercitazione ti insegnerà a:
 
 * Usare una [`pipeline`] per fare inferenza.
 * Usare uno specifico tokenizer o modello.
@@ -71,7 +71,7 @@ Qualsiasi parametro addizionale per il tuo compito può essere incluso nella [`p
 
 ### Scegliere modello e tokenizer
 
-La [`pipeline`] accetta qualsiasi modello dal [Model Hub](https://hf-mirror.com/models). Ci sono tag nel Model Hub che consentono di filtrare i modelli per attività. Una volta che avrai scelto il modello appropriato, caricalo usando la corrispondente classe `AutoModelFor` e [`AutoTokenizer`]. Ad esempio, carica la classe [`AutoModelForCausalLM`] per un compito di causal language modeling:
+La [`pipeline`] accetta qualsiasi modello dal [Model Hub](https://huggingface.co/models). Ci sono tag nel Model Hub che consentono di filtrare i modelli per attività. Una volta che avrai scelto il modello appropriato, caricalo usando la corrispondente classe `AutoModelFor` e [`AutoTokenizer`]. Ad esempio, carica la classe [`AutoModelForCausalLM`] per un compito di causal language modeling:
 
 ```py
 >>> from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -112,7 +112,7 @@ Per esempio, classifichiamo le emozioni in questo clip audio:
 >>> audio_file = ds[0]["audio"]["path"]
 ```
 
-Trova un modello per la [classificazione audio](https://hf-mirror.com/models?pipeline_tag=audio-classification) sul Model Hub per eseguire un compito di riconoscimento automatico delle emozioni e caricalo nella [`pipeline`]:
+Trova un modello per la [classificazione audio](https://huggingface.co/models?pipeline_tag=audio-classification) sul Model Hub per eseguire un compito di riconoscimento automatico delle emozioni e caricalo nella [`pipeline`]:
 
 ```py
 >>> from transformers import pipeline
@@ -137,14 +137,14 @@ Infine, usare la [`pipeline`] per le attività sulle immagini è praticamente la
 
 Specifica la tua attività e inserisci l'immagine nel classificatore. L'immagine può essere sia un link che un percorso sul tuo pc in locale. Per esempio, quale specie di gatto è raffigurata qui sotto?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(task="image-classification")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds

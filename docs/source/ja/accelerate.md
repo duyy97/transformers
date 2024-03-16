@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # 🤗 Accelerate を用いた分散学習
 
-モデルが大きくなるにつれて、限られたハードウェアでより大きなモデルを訓練し、訓練速度を大幅に上昇させるための方法として並列処理が浮上してきました。1台のマシンに複数のGPUがあっても、複数のマシンにまたがる複数のGPUがあっても、あらゆるタイプの分散処理セットアップ上でユーザーが簡単に 🤗 Transformers モデルを訓練できるように、 Hugging Face では [🤗 Accelerate](https://hf-mirror.com/docs/accelerate) ライブラリを作成しました。このチュートリアルでは、PyTorch の訓練ループをカスタマイズして、分散処理環境での訓練を可能にする方法について学びます。
+モデルが大きくなるにつれて、限られたハードウェアでより大きなモデルを訓練し、訓練速度を大幅に上昇させるための方法として並列処理が浮上してきました。1台のマシンに複数のGPUがあっても、複数のマシンにまたがる複数のGPUがあっても、あらゆるタイプの分散処理セットアップ上でユーザーが簡単に 🤗 Transformers モデルを訓練できるように、 Hugging Face では [🤗 Accelerate](https://huggingface.co/docs/accelerate) ライブラリを作成しました。このチュートリアルでは、PyTorch の訓練ループをカスタマイズして、分散処理環境での訓練を可能にする方法について学びます。
 
 ## セットアップ
 
@@ -133,4 +133,4 @@ Colaboratory の TPU の利用をお考えの場合、🤗 Accelerate はノー�
 >>> notebook_launcher(training_function)
 ```
 
-🤗 Accelerate と豊富な機能についてもっと知りたい方は[ドキュメント](https://hf-mirror.com/docs/accelerate)を参照してください。
+🤗 Accelerate と豊富な機能についてもっと知りたい方は[ドキュメント](https://huggingface.co/docs/accelerate)を参照してください。

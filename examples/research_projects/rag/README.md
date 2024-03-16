@@ -39,10 +39,10 @@ python examples/research_projects/rag/finetune_rag.py \
     --gpus 8
 ```
 We publish two `base` models which can serve as a starting point for finetuning on downstream tasks (use them as `model_name_or_path`):
-- [`facebook/rag-sequence-base`](https://hf-mirror.com/facebook/rag-sequence-base) - a base for finetuning `RagSequenceForGeneration` models,
-- [`facebook/rag-token-base`](https://hf-mirror.com/facebook/rag-token-base) - a base for finetuning `RagTokenForGeneration` models.
+- [`facebook/rag-sequence-base`](https://huggingface.co/facebook/rag-sequence-base) - a base for finetuning `RagSequenceForGeneration` models,
+- [`facebook/rag-token-base`](https://huggingface.co/facebook/rag-token-base) - a base for finetuning `RagTokenForGeneration` models.
 
-The `base` models initialize the question encoder with [`facebook/dpr-question_encoder-single-nq-base`](https://hf-mirror.com/facebook/dpr-question_encoder-single-nq-base) and the generator with [`facebook/bart-large`](https://hf-mirror.com/facebook/bart-large).
+The `base` models initialize the question encoder with [`facebook/dpr-question_encoder-single-nq-base`](https://huggingface.co/facebook/dpr-question_encoder-single-nq-base) and the generator with [`facebook/bart-large`](https://huggingface.co/facebook/bart-large).
 
 If you would like to initialize finetuning with a base model using different question encoder and generator architectures, you can build it with a consolidation script, e.g.:
 ```bash

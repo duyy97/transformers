@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CLIPSEG_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "CIDAS/clipseg-rd64": "https://hf-mirror.com/CIDAS/clipseg-rd64/resolve/main/config.json",
+    "CIDAS/clipseg-rd64": "https://huggingface.co/CIDAS/clipseg-rd64/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class CLIPSegTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`CLIPSegModel`]. It is used to instantiate an
     CLIPSeg model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the CLIPSeg
-    [CIDAS/clipseg-rd64](https://hf-mirror.com/CIDAS/clipseg-rd64) architecture.
+    [CIDAS/clipseg-rd64](https://huggingface.co/CIDAS/clipseg-rd64) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -145,7 +145,7 @@ class CLIPSegVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`CLIPSegModel`]. It is used to instantiate an
     CLIPSeg model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the CLIPSeg
-    [CIDAS/clipseg-rd64](https://hf-mirror.com/CIDAS/clipseg-rd64) architecture.
+    [CIDAS/clipseg-rd64](https://huggingface.co/CIDAS/clipseg-rd64) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -250,7 +250,7 @@ class CLIPSegConfig(PretrainedConfig):
     [`CLIPSegConfig`] is the configuration class to store the configuration of a [`CLIPSegModel`]. It is used to
     instantiate a CLIPSeg model according to the specified arguments, defining the text model and vision model configs.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the CLIPSeg
-    [CIDAS/clipseg-rd64](https://hf-mirror.com/CIDAS/clipseg-rd64) architecture.
+    [CIDAS/clipseg-rd64](https://huggingface.co/CIDAS/clipseg-rd64) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

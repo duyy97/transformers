@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-快来使用 🤗 Transformers 吧！无论你是开发人员还是日常用户，这篇快速上手教程都将帮助你入门并且向你展示如何使用 [`pipeline`] 进行推理，使用 [AutoClass](./model_doc/auto) 加载一个预训练模型和预处理器，以及使用 PyTorch 或 TensorFlow 快速训练一个模型。如果你是一个初学者，我们建议你接下来查看我们的教程或者[课程](https://hf-mirror.com/course/chapter1/1)，来更深入地了解在这里介绍到的概念。
+快来使用 🤗 Transformers 吧！无论你是开发人员还是日常用户，这篇快速上手教程都将帮助你入门并且向你展示如何使用 [`pipeline`] 进行推理，使用 [AutoClass](./model_doc/auto) 加载一个预训练模型和预处理器，以及使用 PyTorch 或 TensorFlow 快速训练一个模型。如果你是一个初学者，我们建议你接下来查看我们的教程或者[课程](https://huggingface.co/course/chapter1/1)，来更深入地了解在这里介绍到的概念。
 
 在开始之前，确保你已经安装了所有必要的库：
 
@@ -73,7 +73,7 @@ pip install tensorflow
 >>> classifier = pipeline("sentiment-analysis")
 ```
 
-[`pipeline`] 会下载并缓存一个用于情感分析的默认的[预训练模型](https://hf-mirror.com/distilbert/distilbert-base-uncased-finetuned-sst-2-english)和分词器。现在你可以在目标文本上使用 `classifier` 了：
+[`pipeline`] 会下载并缓存一个用于情感分析的默认的[预训练模型](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english)和分词器。现在你可以在目标文本上使用 `classifier` 了：
 
 ```py
 >>> classifier("We are very happy to show you the 🤗 Transformers library.")
@@ -99,7 +99,7 @@ label: NEGATIVE, with score: 0.5309
 >>> speech_recognizer = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 ```
 
-加载一个你想遍历的音频数据集（查阅 🤗 Datasets [快速开始](https://hf-mirror.com/docs/datasets/quickstart#audio) 获得更多信息）。比如，加载 [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 数据集：
+加载一个你想遍历的音频数据集（查阅 🤗 Datasets [快速开始](https://huggingface.co/docs/datasets/quickstart#audio) 获得更多信息）。比如，加载 [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 数据集：
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -107,7 +107,7 @@ label: NEGATIVE, with score: 0.5309
 >>> dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")  # doctest: +IGNORE_RESULT
 ```
 
-你需要确保数据集中的音频的采样率与 [`facebook/wav2vec2-base-960h`](https://hf-mirror.com/facebook/wav2vec2-base-960h) 训练用到的音频的采样率一致：
+你需要确保数据集中的音频的采样率与 [`facebook/wav2vec2-base-960h`](https://huggingface.co/facebook/wav2vec2-base-960h) 训练用到的音频的采样率一致：
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=speech_recognizer.feature_extractor.sampling_rate))
@@ -126,7 +126,7 @@ label: NEGATIVE, with score: 0.5309
 
 ### 在 pipeline 中使用另一个模型和分词器
 
-[`pipeline`] 可以容纳 [Hub](https://hf-mirror.com/models) 中的任何模型，这让 [`pipeline`] 更容易适用于其他用例。比如，你想要一个能够处理法语文本的模型，就可以使用 Hub 上的标记来筛选出合适的模型。靠前的筛选结果会返回一个为情感分析微调的多语言的 [BERT 模型](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment)，你可以将它用于法语文本：
+[`pipeline`] 可以容纳 [Hub](https://huggingface.co/models) 中的任何模型，这让 [`pipeline`] 更容易适用于其他用例。比如，你想要一个能够处理法语文本的模型，就可以使用 Hub 上的标记来筛选出合适的模型。靠前的筛选结果会返回一个为情感分析微调的多语言的 [BERT 模型](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment)，你可以将它用于法语文本：
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

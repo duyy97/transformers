@@ -81,7 +81,7 @@ This implementation contains the dense models available on release.
 
 **The sparse model NLLB-MoE (Mixture of Expert) is now available! More details [here](nllb-moe)**
 
-This model was contributed by [Lysandre](https://hf-mirror.com/lysandre). The authors' code can be found [here](https://github.com/facebookresearch/fairseq/tree/nllb).
+This model was contributed by [Lysandre](https://huggingface.co/lysandre). The authors' code can be found [here](https://github.com/facebookresearch/fairseq/tree/nllb).
 
 ## Generating with NLLB
 

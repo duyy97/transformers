@@ -80,7 +80,7 @@ _QA_EXPECTED_OUTPUT = "' nice puppet'"
 
 BART_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/bart-large",
-    # see all BART models at https://hf-mirror.com/models?filter=bart
+    # see all BART models at https://huggingface.co/models?filter=bart
 ]
 
 

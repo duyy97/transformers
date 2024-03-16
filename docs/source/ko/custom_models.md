@@ -295,9 +295,9 @@ resnet50d.push_to_hub("custom-resnet50d")
 
 On top of the modeling weights and the configuration in json format, this also copied the modeling and
 configuration `.py` files in the folder `custom-resnet50d` and uploaded the result to the Hub. You can check the result
-in this [model repo](https://hf-mirror.com/sgugger/custom-resnet50d).
+in this [model repo](https://huggingface.co/sgugger/custom-resnet50d).
 json 형식의 모델링 가중치와 구성 외에도 `custom-resnet50d` 폴더 안의 모델링과 구성 `.py` 파일을 복사하해 Hub에 업로드합니다.
-[모델 저장소](https://hf-mirror.com/sgugger/custom-resnet50d)에서 결과를 확인할 수 있습니다.
+[모델 저장소](https://huggingface.co/sgugger/custom-resnet50d)에서 결과를 확인할 수 있습니다.
 
 [sharing tutorial](model_sharing) 문서의 `push_to_hub` 메소드에서 자세한 내용을 확인할 수 있습니다.
 
@@ -305,7 +305,7 @@ json 형식의 모델링 가중치와 구성 외에도 `custom-resnet50d` 폴더
 ## 사용자 정의 코드로 모델 사용하기[[using-a-model-with-custom-code]]
 
 auto 클래스와 `from_pretrained` 메소드를 사용하여 사용자 지정 코드 파일과 함께 모든 구성, 모델, 토크나이저를 사용할 수 있습니다.
-Hub에 업로드된 모든 파일 및 코드는 멜웨어가 있는지 검사되지만 (자세한 내용은 [Hub 보안](https://hf-mirror.com/docs/hub/security#malware-scanning) 설명 참조),
+Hub에 업로드된 모든 파일 및 코드는 멜웨어가 있는지 검사되지만 (자세한 내용은 [Hub 보안](https://huggingface.co/docs/hub/security#malware-scanning) 설명 참조),
 자신의 컴퓨터에서 모델 코드와 작성자가 악성 코드를 실행하지 않는지 확인해야 합니다.
 사용자 정의 코드로 모델을 사용하려면 `trust_remote_code=True`로 설정하세요:
 

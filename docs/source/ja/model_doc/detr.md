@@ -39,7 +39,7 @@ DETR は、オブジェクトとグローバル イメージ コンテキスト�
 統一された方法でパノプティック セグメンテーションを生成するために一般化されました。競合他社を大幅に上回るパフォーマンスを示しています
 ベースライン*
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。元のコードは [こちら](https://github.com/facebookresearch/detr) にあります。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。元のコードは [こちら](https://github.com/facebookresearch/detr) にあります。
 
 ## How DETR works
 

@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드에서 학습할 내용은:
 
-1. [IMDb](https://hf-mirror.com/datasets/imdb) 데이터셋에서 [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased)를 파인 튜닝하여 영화 리뷰가 긍정적인지 부정적인지 판단합니다.
+1. [IMDb](https://huggingface.co/datasets/imdb) 데이터셋에서 [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased)를 파인 튜닝하여 영화 리뷰가 긍정적인지 부정적인지 판단합니다.
 2. 추론을 위해 파인 튜닝 모델을 사용합니다.
 
 <Tip>
@@ -122,7 +122,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 
 ## 평가하기[[evaluate]]
 
-훈련 중 모델의 성능을 평가하기 위해 메트릭을 포함하는 것이 유용합니다. 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하여 빠르게 평가 방법을 로드할 수 있습니다. 이 작업에서는 [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 메트릭을 가져옵니다. (메트릭을 가져오고 계산하는 방법에 대해서는 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하세요):
+훈련 중 모델의 성능을 평가하기 위해 메트릭을 포함하는 것이 유용합니다. 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하여 빠르게 평가 방법을 로드할 수 있습니다. 이 작업에서는 [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) 메트릭을 가져옵니다. (메트릭을 가져오고 계산하는 방법에 대해서는 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하세요):
 
 ```py
 >>> import evaluate

@@ -55,7 +55,7 @@ RWKV_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "RWKV/rwkv-raven-3b",
     "RWKV/rwkv-raven-7b",
     "RWKV/rwkv-raven-14b",
-    # See all RWKV models at https://hf-mirror.com/models?filter=rwkv
+    # See all RWKV models at https://huggingface.co/models?filter=rwkv
 ]
 
 
@@ -790,7 +790,7 @@ class RwkvForCausalLM(RwkvPreTrainedModel):
                 raise AttributeError(
                     "You tried to call `generate` with a decoding strategy that manipulates `past_key_values`. RWKV "
                     "doesn't have that attribute, try another generation strategy instead. For the available "
-                    "generation strategies, check this doc: https://hf-mirror.com/docs/transformers/en/generation_strategies#decoding-strategies"
+                    "generation strategies, check this doc: https://huggingface.co/docs/transformers/en/generation_strategies#decoding-strategies"
                 )
             else:
                 raise exc

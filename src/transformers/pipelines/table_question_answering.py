@@ -111,7 +111,7 @@ class TableQuestionAnsweringPipeline(Pipeline):
 
     The models that this pipeline can use are models that have been fine-tuned on a tabular question answering task.
     See the up-to-date list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=table-question-answering).
+    [huggingface.co/models](https://huggingface.co/models?filter=table-question-answering).
     """
 
     default_input_names = "table,query"

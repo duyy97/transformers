@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 BROS_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "jinho8345/bros-base-uncased": "https://hf-mirror.com/jinho8345/bros-base-uncased/blob/main/config.json",
-    "jinho8345/bros-large-uncased": "https://hf-mirror.com/jinho8345/bros-large-uncased/blob/main/config.json",
+    "jinho8345/bros-base-uncased": "https://huggingface.co/jinho8345/bros-base-uncased/blob/main/config.json",
+    "jinho8345/bros-large-uncased": "https://huggingface.co/jinho8345/bros-large-uncased/blob/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class BrosConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BrosModel`] or a [`TFBrosModel`]. It is used to
     instantiate a Bros model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Bros
-    [jinho8345/bros-base-uncased](https://hf-mirror.com/jinho8345/bros-base-uncased) architecture.
+    [jinho8345/bros-base-uncased](https://huggingface.co/jinho8345/bros-base-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

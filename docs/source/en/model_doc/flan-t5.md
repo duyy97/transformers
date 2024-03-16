@@ -34,19 +34,19 @@ One can directly use FLAN-T5 weights without finetuning the model:
 ['Pour a cup of bolognese into a large bowl and add the pasta']
 ```
 
-FLAN-T5 includes the same improvements as T5 version 1.1 (see [here](https://hf-mirror.com/docs/transformers/model_doc/t5v1.1) for the full details of the model's improvements.)
+FLAN-T5 includes the same improvements as T5 version 1.1 (see [here](https://huggingface.co/docs/transformers/model_doc/t5v1.1) for the full details of the model's improvements.)
 
 Google has released the following variants:
 
-- [google/flan-t5-small](https://hf-mirror.com/google/flan-t5-small)
+- [google/flan-t5-small](https://huggingface.co/google/flan-t5-small)
 
-- [google/flan-t5-base](https://hf-mirror.com/google/flan-t5-base)
+- [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
 
-- [google/flan-t5-large](https://hf-mirror.com/google/flan-t5-large)
+- [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
 
-- [google/flan-t5-xl](https://hf-mirror.com/google/flan-t5-xl)
+- [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
 
-- [google/flan-t5-xxl](https://hf-mirror.com/google/flan-t5-xxl).
+- [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl).
 
 The original checkpoints can be found [here](https://github.com/google-research/t5x/blob/main/docs/models.md#flan-t5-checkpoints).
 

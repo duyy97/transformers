@@ -193,7 +193,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     @require_torch
     def test_generation_pt_blip(self):
         pipe = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
-        url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+        url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
         image = Image.open(requests.get(url, stream=True).raw)
 
         outputs = pipe(image)
@@ -203,7 +203,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     @require_torch
     def test_generation_pt_git(self):
         pipe = pipeline("image-to-text", model="microsoft/git-base-coco")
-        url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+        url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
         image = Image.open(requests.get(url, stream=True).raw)
 
         outputs = pipe(image)
@@ -213,7 +213,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     @require_torch
     def test_conditional_generation_pt_blip(self):
         pipe = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
-        url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
+        url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
         image = Image.open(requests.get(url, stream=True).raw)
 
         prompt = "a photography of"
@@ -228,7 +228,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     @require_torch
     def test_conditional_generation_pt_git(self):
         pipe = pipeline("image-to-text", model="microsoft/git-base-coco")
-        url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
+        url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
         image = Image.open(requests.get(url, stream=True).raw)
 
         prompt = "a photo of a"
@@ -243,7 +243,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     @require_torch
     def test_conditional_generation_pt_pix2struct(self):
         pipe = pipeline("image-to-text", model="google/pix2struct-ai2d-base")
-        url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
+        url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg"
         image = Image.open(requests.get(url, stream=True).raw)
 
         prompt = "What does the label 15 represent? (1) lava (2) core (3) tunnel (4) ash cloud"
@@ -282,7 +282,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
         )
 
         outputs = pipe(
-            "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg",
+            "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/ai2d-demo.jpg",
             prompt=prompt,
             generate_kwargs={"max_new_tokens": 200},
         )
@@ -300,7 +300,7 @@ class ImageToTextPipelineTests(unittest.TestCase):
     def test_nougat(self):
         pipe = pipeline("image-to-text", "facebook/nougat-base")
 
-        outputs = pipe("https://hf-mirror.com/datasets/Xenova/transformers.js-docs/resolve/main/nougat_paper.png")
+        outputs = pipe("https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/nougat_paper.png")
 
         self.assertEqual(
             outputs,

@@ -39,7 +39,7 @@ _CHECKPOINT_FOR_DOC = "facebook/s2t-wav2vec2-large-en-de"
 
 SPEECH_TO_TEXT_2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/s2t-wav2vec2-large-en-de",
-    # See all Speech2Text2 models at https://hf-mirror.com/models?filter=speech2text2
+    # See all Speech2Text2 models at https://huggingface.co/models?filter=speech2text2
 ]
 
 

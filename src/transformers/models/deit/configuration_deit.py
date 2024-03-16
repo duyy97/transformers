@@ -28,9 +28,9 @@ logger = logging.get_logger(__name__)
 
 DEIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/deit-base-distilled-patch16-224": (
-        "https://hf-mirror.com/facebook/deit-base-patch16-224/resolve/main/config.json"
+        "https://huggingface.co/facebook/deit-base-patch16-224/resolve/main/config.json"
     ),
-    # See all DeiT models at https://hf-mirror.com/models?filter=deit
+    # See all DeiT models at https://huggingface.co/models?filter=deit
 }
 
 
@@ -39,7 +39,7 @@ class DeiTConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DeiTModel`]. It is used to instantiate an DeiT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the DeiT
-    [facebook/deit-base-distilled-patch16-224](https://hf-mirror.com/facebook/deit-base-distilled-patch16-224)
+    [facebook/deit-base-distilled-patch16-224](https://huggingface.co/facebook/deit-base-distilled-patch16-224)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

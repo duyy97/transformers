@@ -27,12 +27,12 @@ rendered properly in your Markdown viewer.
 
 🤗 Transformers 支持在 PyTorch、TensorFlow 和 JAX 上的互操作性. 这给在模型的每个阶段使用不同的框架带来了灵活性；在一个框架中使用几行代码训练一个模型，然后在另一个框架中加载它并进行推理。模型也可以被导出为 ONNX 和 TorchScript 格式，用于在生产环境中部署。
 
-马上加入在 [Hub](https://hf-mirror.com/models)、[论坛](https://discuss.hf-mirror.com/) 或者 [Discord](https://discord.com/invite/JfAtkvEtRb) 上正在快速发展的社区吧！
+马上加入在 [Hub](https://huggingface.co/models)、[论坛](https://discuss.huggingface.co/) 或者 [Discord](https://discord.com/invite/JfAtkvEtRb) 上正在快速发展的社区吧！
 
 ## 如果你需要来自 Hugging Face 团队的个性化支持
 
-<a target="_blank" href="https://hf-mirror.com/support">
-    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.hf-mirror.com/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+<a target="_blank" href="https://huggingface.co/support">
+    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.huggingface.co/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
 </a>
 
 ## 目录

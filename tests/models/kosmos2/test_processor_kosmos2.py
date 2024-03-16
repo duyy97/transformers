@@ -187,7 +187,7 @@ class Kosmos2ProcessorTest(unittest.TestCase):
 
     @require_torch
     def test_full_processor(self):
-        url = "https://hf-mirror.com/microsoft/kosmos-2-patch14-224/resolve/main/two_dogs.jpg"
+        url = "https://huggingface.co/microsoft/kosmos-2-patch14-224/resolve/main/two_dogs.jpg"
 
         processor = Kosmos2Processor.from_pretrained("microsoft/kosmos-2-patch14-224")
 

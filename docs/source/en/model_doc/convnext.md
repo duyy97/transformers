@@ -32,12 +32,12 @@ of a vision Transformer, and discover several key components that contribute to 
 dubbed ConvNeXt. Constructed entirely from standard ConvNet modules, ConvNeXts compete favorably with Transformers in terms of accuracy and scalability, achieving 87.8% ImageNet top-1 accuracy
 and outperforming Swin Transformers on COCO detection and ADE20K segmentation, while maintaining the simplicity and efficiency of standard ConvNets.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> ConvNeXT architecture. Taken from the <a href="https://arxiv.org/abs/2201.03545">original paper</a>.</small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). TensorFlow version of the model was contributed by [ariG23498](https://github.com/ariG23498),
+This model was contributed by [nielsr](https://huggingface.co/nielsr). TensorFlow version of the model was contributed by [ariG23498](https://github.com/ariG23498),
 [gante](https://github.com/gante), and [sayakpaul](https://github.com/sayakpaul) (equal contribution). The original code can be found [here](https://github.com/facebookresearch/ConvNeXt).
 
 ## Resources

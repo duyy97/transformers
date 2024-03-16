@@ -26,26 +26,26 @@ There is no limit to your creativity as long as the project is feasible and ethi
 The more creative & specific your project proposal, the more interesting it will be, 
 and the more likely will you find motivated team members to work on your project!
 To get an idea of how to formulate your project proposals, you can browse through 
-existing project proposals on the [forum](https://discuss.hf-mirror.com/c/flax-jax-projects/22).
+existing project proposals on the [forum](https://discuss.huggingface.co/c/flax-jax-projects/22).
 
 ## How to submit a project proposal
 
-First, you should make sure that you are [logged in](https://hf-mirror.com/login?sso=bm9uY2U9OTRlNjZjZmZhYjMwMmJmMWMyYjc5MmFiMTMyMzY5ODYmcmV0dXJuX3Nzb191cmw9aHR0cHMlM0ElMkYlMkZkaXNjdXNzLmh1Z2dpbmdmYWNlLmNvJTJGc2Vzc2lvbiUyRnNzb19sb2dpbg%3D%3D&sig=429ad8924bcb33c40f9823027ea749abb55d393f4f58924f36a2dba3ab0a48da) with your Hugging Face account on the forum. 
+First, you should make sure that you are [logged in](https://huggingface.co/login?sso=bm9uY2U9OTRlNjZjZmZhYjMwMmJmMWMyYjc5MmFiMTMyMzY5ODYmcmV0dXJuX3Nzb191cmw9aHR0cHMlM0ElMkYlMkZkaXNjdXNzLmh1Z2dpbmdmYWNlLmNvJTJGc2Vzc2lvbiUyRnNzb19sb2dpbg%3D%3D&sig=429ad8924bcb33c40f9823027ea749abb55d393f4f58924f36a2dba3ab0a48da) with your Hugging Face account on the forum. 
 
-Second, make sure that your project idea doesn't already exist by checking [existing projects](https://discuss.hf-mirror.com/c/flax-jax-projects/22). 
+Second, make sure that your project idea doesn't already exist by checking [existing projects](https://discuss.huggingface.co/c/flax-jax-projects/22). 
 If your project already exists - great! This means that you can comment and improve
 the existing idea and join the project to form a team! If your project idea already 
 exists for a different language, feel free to submit the same project idea, just in 
 a different language.
 
 Third, having ensured that your project doesn't exist, click on the *"New Topic"*
-button on the [Flax/JAX Projects Forum category](https://discuss.hf-mirror.com/c/flax-jax-projects/22) to create a new project proposal.
+button on the [Flax/JAX Projects Forum category](https://discuss.huggingface.co/c/flax-jax-projects/22) to create a new project proposal.
 
 Fourth, make sure that your project proposal includes the following information:
 
 1. *A clear description of the project*
 2. *In which language should the project be conducted?* English, German, Chinese, ...? It can also be a multi-lingual project
-3. *Which model should be used?* If you want to adapt an existing model, you can add the link to one of the 4000 available checkpoints in JAX [here](https://hf-mirror.com/models?filter=jax) If you want to train a model from scratch, you can simply state the model architecture to be used, *e.g.* BERT, CLIP, etc. You can also base your project on a model that is not part of transformers. For an overview of libraries based on JAX, you can take a look at [awesome-jax](https://github.com/n2cholas/awesome-jax#awesome-jax-). **Note** that for a project that is not based on Transformers it will be more difficult for the 🤗 team to help you. Also have a look at the section [Quickstart Flax & Jax in Transformers](https://github.com/huggingface/transformers/tree/main/examples/research_projects/jax-projects#quickstart-flax-and-jax-in-transformers) to see what model architectures are currently supported in 🤗 Transformers.
+3. *Which model should be used?* If you want to adapt an existing model, you can add the link to one of the 4000 available checkpoints in JAX [here](https://huggingface.co/models?filter=jax) If you want to train a model from scratch, you can simply state the model architecture to be used, *e.g.* BERT, CLIP, etc. You can also base your project on a model that is not part of transformers. For an overview of libraries based on JAX, you can take a look at [awesome-jax](https://github.com/n2cholas/awesome-jax#awesome-jax-). **Note** that for a project that is not based on Transformers it will be more difficult for the 🤗 team to help you. Also have a look at the section [Quickstart Flax & Jax in Transformers](https://github.com/huggingface/transformers/tree/main/examples/research_projects/jax-projects#quickstart-flax-and-jax-in-transformers) to see what model architectures are currently supported in 🤗 Transformers.
 4. *What data should be used?* It is important to state at least what kind of data you would like to use. Ideally, you can already point to publicly available data or a dataset in the 🤗 Datasets library.
 5. *Are similar training scripts available in Flax/JAX?* It would be important to find similar training scripts that already exist in Flax/JAX. *E.g.* if you are working on a Seq-to-Seq task, you can make use of the [`run_summarization_flax.py`](https://github.com/huggingface/transformers/blob/main/examples/flax/summarization/run_summarization_flax.py) script which is very similar to any seq2seq training. Also have a look at the section [Quickstart Flax & Jax in Transformers](https://github.com/huggingface/transformers/tree/main/examples/research_projects/jax-projects#quickstart-flax-and-jax-in-transformers) to see what training scripts are currently supported in 🤗 Transformers.
 6. *(Optionally) What are possible challenges?* List possible difficulties with your project. *E.g.* If you know that training convergence usually takes a lot of time, it is worth stating this here!
@@ -101,7 +101,7 @@ what has previously been done.
 ```
 
 To see how a proposed project looks like, please have a look at submitted project 
-proposals [here](https://discuss.hf-mirror.com/c/flax-jax-projects/22).
+proposals [here](https://discuss.huggingface.co/c/flax-jax-projects/22).
 
 ## Will my project proposal be selected?
 

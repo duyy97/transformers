@@ -44,7 +44,7 @@ _CONFIG_FOR_DOC = "TransfoXLConfig"
 
 TRANSFO_XL_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "transfo-xl/transfo-xl-wt103",
-    # See all Transformer XL models at https://hf-mirror.com/models?filter=transfo-xl
+    # See all Transformer XL models at https://huggingface.co/models?filter=transfo-xl
 ]
 
 

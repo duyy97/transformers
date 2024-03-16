@@ -35,7 +35,7 @@ This allows us to draw upon the simplicity and scalability of the Transformer ar
 
 This version of the model is for tasks where the state is a vector.
 
-This model was contributed by [edbeeching](https://hf-mirror.com/edbeeching). The original code can be found [here](https://github.com/kzl/decision-transformer).
+This model was contributed by [edbeeching](https://huggingface.co/edbeeching). The original code can be found [here](https://github.com/kzl/decision-transformer).
 
 ## DecisionTransformerConfig
 

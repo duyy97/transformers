@@ -33,7 +33,7 @@ if TYPE_CHECKING:
 logger = logging.get_logger(__name__)
 
 LAYOUTLMV3_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/layoutlmv3-base": "https://hf-mirror.com/microsoft/layoutlmv3-base/resolve/main/config.json",
+    "microsoft/layoutlmv3-base": "https://huggingface.co/microsoft/layoutlmv3-base/resolve/main/config.json",
 }
 
 
@@ -42,7 +42,7 @@ class LayoutLMv3Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LayoutLMv3Model`]. It is used to instantiate an
     LayoutLMv3 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the LayoutLMv3
-    [microsoft/layoutlmv3-base](https://hf-mirror.com/microsoft/layoutlmv3-base) architecture.
+    [microsoft/layoutlmv3-base](https://huggingface.co/microsoft/layoutlmv3-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

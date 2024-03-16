@@ -27,8 +27,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 VIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/vit-base-patch16-224": "https://hf-mirror.com/vit-base-patch16-224/resolve/main/config.json",
-    # See all ViT models at https://hf-mirror.com/models?filter=vit
+    "google/vit-base-patch16-224": "https://huggingface.co/vit-base-patch16-224/resolve/main/config.json",
+    # See all ViT models at https://huggingface.co/models?filter=vit
 }
 
 
@@ -37,7 +37,7 @@ class ViTConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ViTModel`]. It is used to instantiate an ViT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the ViT
-    [google/vit-base-patch16-224](https://hf-mirror.com/google/vit-base-patch16-224) architecture.
+    [google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

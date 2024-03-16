@@ -33,7 +33,7 @@ attack can be performed in all the three forms. Across 5 Chinese NLU tasks, ROCB
 three blackbox adversarial algorithms without sacrificing the performance on clean testset. It also performs the best
 in the toxic content detection task under human-made attacks.*
 
-This model was contributed by [weiweishi](https://hf-mirror.com/weiweishi).
+This model was contributed by [weiweishi](https://huggingface.co/weiweishi).
 
 ## Resources
 

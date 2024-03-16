@@ -52,7 +52,7 @@ _CONFIG_FOR_DOC = "PegasusConfig"
 
 PEGASUS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/pegasus-large",
-    # See all PEGASUS models at https://hf-mirror.com/models?filter=pegasus
+    # See all PEGASUS models at https://huggingface.co/models?filter=pegasus
 ]
 
 

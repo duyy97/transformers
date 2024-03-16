@@ -60,7 +60,7 @@ ELECTRA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/electra-small-discriminator",
     "google/electra-base-discriminator",
     "google/electra-large-discriminator",
-    # See all ELECTRA models at https://hf-mirror.com/models?filter=electra
+    # See all ELECTRA models at https://huggingface.co/models?filter=electra
 ]
 
 

@@ -194,7 +194,7 @@ Gli input audio sono processati in modo differente rispetto al testo, ma l'obiet
 pip install datasets
 ```
 
-Carica il dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) (vedi il 🤗 [Datasets tutorial](https://hf-mirror.com/docs/datasets/load_hub) per avere maggiori dettagli su come caricare un dataset):
+Carica il dataset [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) (vedi il 🤗 [Datasets tutorial](https://huggingface.co/docs/datasets/load_hub) per avere maggiori dettagli su come caricare un dataset):
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -220,9 +220,9 @@ Questo restituisce tre oggetti:
 
 ### Ricampionamento
 
-Per questo tutorial, puoi usare il modello [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base). Come puoi vedere dalla model card, il modello Wav2Vec2 è preaddestrato su un campionamento vocale a 16kHz.È importante che la frequenza di campionamento dei tuoi dati audio combaci con la frequenza di campionamento del dataset usato per preaddestrare il modello. Se la frequenza di campionamento dei tuoi dati non è uguale dovrai ricampionare i tuoi dati audio.
+Per questo tutorial, puoi usare il modello [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base). Come puoi vedere dalla model card, il modello Wav2Vec2 è preaddestrato su un campionamento vocale a 16kHz.È importante che la frequenza di campionamento dei tuoi dati audio combaci con la frequenza di campionamento del dataset usato per preaddestrare il modello. Se la frequenza di campionamento dei tuoi dati non è uguale dovrai ricampionare i tuoi dati audio.
 
-Per esempio, il dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) ha una frequenza di campionamento di 8000kHz. Utilizzando il modello Wav2Vec2 su questo dataset, alzala a 16kHz:
+Per esempio, il dataset [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) ha una frequenza di campionamento di 8000kHz. Utilizzando il modello Wav2Vec2 su questo dataset, alzala a 16kHz:
 
 ```py
 >>> dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")
@@ -233,7 +233,7 @@ Per esempio, il dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14
  'sampling_rate': 8000}
 ```
 
-1. Usa il metodo di 🤗 Datasets' [`cast_column`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.cast_column) per alzare la frequenza di campionamento a 16kHz:
+1. Usa il metodo di 🤗 Datasets' [`cast_column`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.cast_column) per alzare la frequenza di campionamento a 16kHz:
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=16_000))
@@ -321,7 +321,7 @@ La lunghezza dei campioni adesso coincide con la massima lunghezza impostata nel
 
 Un estrattore di caratteristiche si può usare anche per processare immagini e per compiti di visione. Ancora una volta, l'obiettivo è convertire l'immagine grezza in un lotto di tensori come input.
 
-Carica il dataset [food101](https://hf-mirror.com/datasets/food101) per questa esercitazione. Usa il parametro `split` di 🤗 Datasets  per caricare solo un piccolo campione dal dataset di addestramento poichè il set di dati è molto grande:
+Carica il dataset [food101](https://huggingface.co/datasets/food101) per questa esercitazione. Usa il parametro `split` di 🤗 Datasets  per caricare solo un piccolo campione dal dataset di addestramento poichè il set di dati è molto grande:
 
 ```py
 >>> from datasets import load_dataset
@@ -329,13 +329,13 @@ Carica il dataset [food101](https://hf-mirror.com/datasets/food101) per questa e
 >>> dataset = load_dataset("food101", split="train[:100]")
 ```
 
-Secondo passo, dai uno sguardo alle immagini usando la caratteristica [`Image`](https://hf-mirror.com/docs/datasets/package_reference/main_classes.html?highlight=image#datasets.Image) di 🤗 Datasets:
+Secondo passo, dai uno sguardo alle immagini usando la caratteristica [`Image`](https://huggingface.co/docs/datasets/package_reference/main_classes.html?highlight=image#datasets.Image) di 🤗 Datasets:
 
 ```py
 >>> dataset[0]["image"]
 ```
 
-![vision-preprocess-tutorial.png](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png)
+![vision-preprocess-tutorial.png](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vision-preprocess-tutorial.png)
 
 ### Feature extractor
 
@@ -370,7 +370,7 @@ Per le attività di visione, è usuale aggiungere alcuni tipi di data augmentati
 ...     return examples
 ```
 
-3. Poi utilizza 🤗 Datasets [`set_transform`](https://hf-mirror.com/docs/datasets/process#format-transform)per applicare al volo la trasformazione:
+3. Poi utilizza 🤗 Datasets [`set_transform`](https://huggingface.co/docs/datasets/process#format-transform)per applicare al volo la trasformazione:
 
 ```py
 >>> dataset.set_transform(transforms)
@@ -417,7 +417,7 @@ Di seguito come si vede l'immagine dopo la fase di preprocessing. Come ci si asp
 >>> plt.imshow(img.permute(1, 2, 0))
 ```
 
-![preprocessed_image](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png)
+![preprocessed_image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png)
 
 ## Multimodal
 
@@ -426,7 +426,7 @@ Per attività multimodali userai una combinazione di tutto quello che hai impara
 * Un estrattore delle caratteristiche per processare i dati audio.
 * Il Tokenizer per processare i testi.
 
-Ritorna sul datasere [LJ Speech](https://hf-mirror.com/datasets/lj_speech):
+Ritorna sul datasere [LJ Speech](https://huggingface.co/datasets/lj_speech):
 
 ```py
 >>> from datasets import load_dataset

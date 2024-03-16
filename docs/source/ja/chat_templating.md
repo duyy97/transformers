@@ -57,7 +57,7 @@ LLM（Language Model）のますます一般的な使用事例の1つは「チ�
 指定された通り、チャット全体が単一の文字列にまとめられています。デフォルトの設定である「tokenize=True」を使用すると、
 その文字列もトークン化されます。しかし、より複雑なテンプレートが実際にどのように機能するかを確認するために、
 「meta-llama/Llama-2-7b-chat-hf」モデルを使用してみましょう。ただし、このモデルはゲート付きアクセスを持っており、
-このコードを実行する場合は[リポジトリでアクセスをリクエスト](https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf)する必要があります。
+このコードを実行する場合は[リポジトリでアクセスをリクエスト](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)する必要があります。
 
 ```python
 >> from transformers import AutoTokenizer
@@ -239,7 +239,7 @@ I'm doing great!<|im_end|>
 
 チャットモデルを持っている場合、そのモデルの`tokenizer.chat_template`属性を設定し、[`~PreTrainedTokenizer.apply_chat_template`]を使用してテストする必要があります。
 これはモデルの所有者でない場合でも適用されます。モデルのリポジトリが空のチャットテンプレートを使用している場合、またはデフォルトのクラステンプレートを使用している場合でも、
-この属性を適切に設定できるように[プルリクエスト](https://hf-mirror.com/docs/hub/repositories-pull-requests-discussions)を開いてください。
+この属性を適切に設定できるように[プルリクエスト](https://huggingface.co/docs/hub/repositories-pull-requests-discussions)を開いてください。
 
 一度属性が設定されれば、それで完了です！ `tokenizer.apply_chat_template`は、そのモデルに対して正しく動作するようになります。これは、
 `ConversationalPipeline`などの場所でも自動的にサポートされます。

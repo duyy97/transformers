@@ -22,7 +22,7 @@ This model is in maintenance mode only, so we won't accept any new PRs changing 
 
 We recommend switching to more recent models for improved security.
 
-In case you would still like to use `TransfoXL` in your experiments, we recommend using the [Hub checkpoint](https://hf-mirror.com/transfo-xl/transfo-xl-wt103) with a specific revision to ensure you are downloading safe files from the Hub.
+In case you would still like to use `TransfoXL` in your experiments, we recommend using the [Hub checkpoint](https://huggingface.co/transfo-xl/transfo-xl-wt103) with a specific revision to ensure you are downloading safe files from the Hub.
 
 You will need to set the environment variable `TRUST_REMOTE_CODE` to `True` in order to allow the
 usage of `pickle.load()`:
@@ -46,10 +46,10 @@ You can do so by running the following command: `pip install -U transformers==4.
 </Tip>
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=transfo-xl">
+<a href="https://huggingface.co/models?filter=transfo-xl">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-transfo--xl-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/transfo-xl-wt103">
+<a href="https://huggingface.co/spaces/docs-demos/transfo-xl-wt103">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -74,7 +74,7 @@ bpc/perplexity to 0.99 on enwiki8, 1.08 on text8, 18.3 on WikiText-103, 21.8 on 
 Treebank (without finetuning). When trained only on WikiText-103, Transformer-XL manages to generate reasonably
 coherent, novel text articles with thousands of tokens.*
 
-This model was contributed by [thomwolf](https://hf-mirror.com/thomwolf). The original code can be found [here](https://github.com/kimiyoung/transformer-xl).
+This model was contributed by [thomwolf](https://huggingface.co/thomwolf). The original code can be found [here](https://github.com/kimiyoung/transformer-xl).
 
 ## Usage tips
 

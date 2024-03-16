@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-Soyez opérationnel avec 🤗 Transformers ! Que vous soyez un développeur ou un utilisateur lambda, cette visite rapide vous aidera à démarrer et vous montrera comment utiliser le [`pipeline`] pour l'inférence, charger un modèle pré-entraîné et un préprocesseur avec une [AutoClass](./model_doc/auto), et entraîner rapidement un modèle avec PyTorch ou TensorFlow. Si vous êtes un débutant, nous vous recommandons de consulter nos tutoriels ou notre [cours](https://hf-mirror.com/course/chapter1/1) suivant pour des explications plus approfondies des concepts présentés ici.
+Soyez opérationnel avec 🤗 Transformers ! Que vous soyez un développeur ou un utilisateur lambda, cette visite rapide vous aidera à démarrer et vous montrera comment utiliser le [`pipeline`] pour l'inférence, charger un modèle pré-entraîné et un préprocesseur avec une [AutoClass](./model_doc/auto), et entraîner rapidement un modèle avec PyTorch ou TensorFlow. Si vous êtes un débutant, nous vous recommandons de consulter nos tutoriels ou notre [cours](https://huggingface.co/course/chapter1/1) suivant pour des explications plus approfondies des concepts présentés ici.
 
 Avant de commencer, assurez-vous que vous avez installé toutes les bibliothèques nécessaires :
 
@@ -73,7 +73,7 @@ Commencez par créer une instance de [`pipeline`] et spécifiez la tâche pour l
 >>> classifier = pipeline("sentiment-analysis")
 ```
 
-Le [`pipeline`] télécharge et stocke en cache un [modèle pré-entraîné](https://hf-mirror.com/distilbert/distilbert-base-uncased-finetuned-sst-2-english) et un tokenizer par défaut pour l'analyse des sentiments. Vous pouvez maintenant utiliser le `classifier` sur le texte de votre choix :
+Le [`pipeline`] télécharge et stocke en cache un [modèle pré-entraîné](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english) et un tokenizer par défaut pour l'analyse des sentiments. Vous pouvez maintenant utiliser le `classifier` sur le texte de votre choix :
 
 ```py
 >>> classifier("We are very happy to show you the 🤗 Transformers library.")
@@ -99,7 +99,7 @@ Le [`pipeline`] peut aussi itérer sur un jeu de données entier pour n'importe 
 >>> speech_recognizer = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 ```
 
-Chargez un jeu de données audio (voir le 🤗 Datasets [Quick Start](https://hf-mirror.com/docs/datasets/quickstart#audio) pour plus de détails) sur lequel vous souhaitez itérer. Pour cet exemple, nous chargeons le jeu de données [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) :
+Chargez un jeu de données audio (voir le 🤗 Datasets [Quick Start](https://huggingface.co/docs/datasets/quickstart#audio) pour plus de détails) sur lequel vous souhaitez itérer. Pour cet exemple, nous chargeons le jeu de données [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) :
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -107,7 +107,7 @@ Chargez un jeu de données audio (voir le 🤗 Datasets [Quick Start](https://hf
 >>> dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")  # doctest: +IGNORE_RESULT
 ```
 
-Vous devez vous assurer que le taux d'échantillonnage de l'ensemble de données correspond au taux d'échantillonnage sur lequel [`facebook/wav2vec2-base-960h`](https://hf-mirror.com/facebook/wav2vec2-base-960h) a été entraîné :
+Vous devez vous assurer que le taux d'échantillonnage de l'ensemble de données correspond au taux d'échantillonnage sur lequel [`facebook/wav2vec2-base-960h`](https://huggingface.co/facebook/wav2vec2-base-960h) a été entraîné :
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=speech_recognizer.feature_extractor.sampling_rate))
@@ -126,7 +126,7 @@ Pour les ensembles de données plus importants où les entrées sont volumineuse
 
 ### Utiliser une autre modèle et tokenizer dans le pipeline
 
-Le [`pipeline`] peut être utilisé avec n'importe quel modèle du [Hub](https://hf-mirror.com/models), ce qui permet d'adapter facilement le [`pipeline`] à d'autres cas d'utilisation. Par exemple, si vous souhaitez un modèle capable de traiter du texte français, utilisez les filtres du Hub pour trouver un modèle approprié. Le premier résultat renvoie un [modèle BERT](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment) multilingue finetuné pour l'analyse des sentiments que vous pouvez utiliser pour le texte français :
+Le [`pipeline`] peut être utilisé avec n'importe quel modèle du [Hub](https://huggingface.co/models), ce qui permet d'adapter facilement le [`pipeline`] à d'autres cas d'utilisation. Par exemple, si vous souhaitez un modèle capable de traiter du texte français, utilisez les filtres du Hub pour trouver un modèle approprié. Le premier résultat renvoie un [modèle BERT](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) multilingue finetuné pour l'analyse des sentiments que vous pouvez utiliser pour le texte français :
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

@@ -59,7 +59,7 @@ logger = logging.get_logger(__name__)
 _CHECKPOINT_FOR_DOC = "facebook/wmt19-ru-en"
 _CONFIG_FOR_DOC = "FSMTConfig"
 
-# See all FSMT models at https://hf-mirror.com/models?filter=fsmt
+# See all FSMT models at https://huggingface.co/models?filter=fsmt
 
 # Porting notes:
 # this one is modeled after BartModel*

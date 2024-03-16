@@ -41,10 +41,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model", "tokenizer_file": "tokenizer.
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/udop-large": "https://hf-mirror.com/microsoft/udop-large/resolve/main/spiece.model",
+        "microsoft/udop-large": "https://huggingface.co/microsoft/udop-large/resolve/main/spiece.model",
     },
     "tokenizer_file": {
-        "microsoft/udop-large": "https://hf-mirror.com/microsoft/udop-large/resolve/main/tokenizer.json",
+        "microsoft/udop-large": "https://huggingface.co/microsoft/udop-large/resolve/main/tokenizer.json",
     },
 }
 
@@ -158,7 +158,7 @@ class UdopTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" UDOP tokenizer (backed by HuggingFace's *tokenizers* library). Adapted from
     [`LayoutXLMTokenizer`] and [`T5Tokenizer`]. Based on
-    [BPE](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
+    [BPE](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

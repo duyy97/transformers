@@ -228,7 +228,7 @@ Human: <user-input>\n\nAssistant:
 ```py
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 
 agent.run("Show me a tree", return_code=True)
 ```
@@ -386,7 +386,7 @@ agent = HfAgent(url_endpoint=your_endpoint, chat_prompt_template=template)
 </Tip>
 
 두 경우 모두 커뮤니티의 누군가가 호스팅하는 템플릿을 사용하려는 경우 프롬프트 템플릿 대신 저장소 ID를 전달할 수 있습니다. 
-기본 프롬프트는 [이 저장소](https://hf-mirror.com/datasets/huggingface-tools/default-prompts)를 예로 들 수 있습니다.
+기본 프롬프트는 [이 저장소](https://huggingface.co/datasets/huggingface-tools/default-prompts)를 예로 들 수 있습니다.
 
 Hub의 저장소에 사용자 정의 프롬프트를 업로드하여 커뮤니티와 공유하려면 다음을 확인하세요:
 - 데이터 세트 저장소를 사용하세요.
@@ -397,10 +397,10 @@ Hub의 저장소에 사용자 정의 프롬프트를 업로드하여 커뮤니�
 
 이 섹션에서는 이미지 생성에 특화된 두 가지 기존 사용자 정의 도구를 활용하겠습니다:
 
-- 더 많은 이미지 수정을 허용하기 위해 [huggingface-tools/image-transformation](https://hf-mirror.com/spaces/huggingface-tools/image-transformation)을 
-  [diffusers/controlnet-canny-tool](https://hf-mirror.com/spaces/diffusers/controlnet-canny-tool)로 대체합니다.
+- 더 많은 이미지 수정을 허용하기 위해 [huggingface-tools/image-transformation](https://huggingface.co/spaces/huggingface-tools/image-transformation)을 
+  [diffusers/controlnet-canny-tool](https://huggingface.co/spaces/diffusers/controlnet-canny-tool)로 대체합니다.
 - 기본 도구 상자에 이미지 업스케일링을 위한 새로운 도구가 추가되었습니다: 
-  [diffusers/latent-upscaler-tool](https://hf-mirror.com/spaces/diffusers/latent-upscaler-tool)가 기존 이미지 변환 도구를 대체합니다.
+  [diffusers/latent-upscaler-tool](https://huggingface.co/spaces/diffusers/latent-upscaler-tool)가 기존 이미지 변환 도구를 대체합니다.
 
 편리한 [`load_tool`] 함수를 사용하여 사용자 정의 도구를 가져오는 것으로 시작하겠습니다:
 
@@ -431,7 +431,7 @@ Name: 'image_transformer'
 다음으로, `controlnet_transformer`와 `upscaler`로 에이전트를 인스턴스화해 봅시다:
 ```py
 tools = [controlnet_transformer, upscaler]
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=tools)
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=tools)
 ```
 
 이 명령을 실행하면 다음 정보가 표시됩니다:
@@ -484,11 +484,11 @@ print("\n".join([f"- {a}" for a in agent.toolbox.keys()]))
 from diffusers.utils import load_image
 
 image = load_image(
-    "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
+    "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
 )
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
 
 이미지를 아름다운 겨울 풍경으로 바꿔 봅시다:
 
@@ -505,7 +505,7 @@ I will use the following tool: `image_transformer` to transform the image.
 image = image_transformer(image, prompt="A frozen lake and snowy forest")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
 
 새로운 이미지 처리 도구는 이미지를 매우 강력하게 수정할 수 있는 ControlNet을 기반으로 합니다.
 기본적으로 이미지 처리 도구는 512x512 픽셀 크기의 이미지를 반환합니다. 이를 업스케일링할 수 있는지 살펴봅시다.
@@ -523,7 +523,7 @@ I will use the following tool: `image_upscaler` to upscale the image.
 upscaled_image = image_upscaler(image)
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
 
 에이전트는 업스케일러 도구의 설명과 이름만 보고 방금 추가한 업스케일러 도구에 "이미지 업스케일링"이라는 프롬프트를 자동으로 매핑하여 올바르게 실행했습니다.
 
@@ -626,7 +626,7 @@ tool = load_tool("lysandre/hf-model-downloads")
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run(
     "Can you read out loud the name of the model that has the most downloads in the 'text-to-video' task on the Hugging Face Hub?"
@@ -648,7 +648,7 @@ and generates the following audio.
 
 | **Audio**                                                                                                                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <audio controls><source src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
+| <audio controls><source src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
 
 
 <Tip>
@@ -665,7 +665,7 @@ LLM에 따라 일부는 매우 취약하기 때문에 제대로 작동하려면 
 ```python
 from transformers import HfAgent, load_tool
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 agent.toolbox["image-transformation"] = load_tool("diffusers/controlnet-canny-tool")
 ```
 
@@ -707,7 +707,7 @@ tool = Tool.from_gradio(gradio_tool)
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run("Generate an image of the `prompt` after improving it.", prompt="A rabbit wearing a space suit")
 ```
@@ -726,7 +726,7 @@ image = image_generator(improved_prompt)
 
 마지막으로 이미지를 생성하기 전에:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
 
 <Tip warning={true}>
 

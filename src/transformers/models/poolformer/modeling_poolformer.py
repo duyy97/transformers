@@ -45,7 +45,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 POOLFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "sail/poolformer_s12",
-    # See all PoolFormer models at https://hf-mirror.com/models?filter=poolformer
+    # See all PoolFormer models at https://huggingface.co/models?filter=poolformer
 ]
 
 

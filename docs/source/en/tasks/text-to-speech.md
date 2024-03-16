@@ -42,14 +42,14 @@ Here's a code snippet you can use to listen to the resulting audio in a notebook
 ```
 
 For more examples on what Bark and other pretrained TTS models can do, refer to our 
-[Audio course](https://hf-mirror.com/learn/audio-course/chapter6/pre-trained_models). 
+[Audio course](https://huggingface.co/learn/audio-course/chapter6/pre-trained_models). 
 
 If you are looking to fine-tune a TTS model, the only text-to-speech models currently available in 🤗 Transformers 
 are [SpeechT5](model_doc/speecht5) and [FastSpeech2Conformer](model_doc/fastspeech2_conformer), though more will be added in the future. SpeechT5 is pre-trained on a combination of speech-to-text and text-to-speech data, allowing it to learn a unified space of hidden representations shared by both text and speech. This means that the same pre-trained model can be fine-tuned for different tasks. Furthermore, SpeechT5 supports multiple speakers through x-vector speaker embeddings. 
 
 The remainder of this guide illustrates how to:
 
-1. Fine-tune [SpeechT5](../model_doc/speecht5) that was originally trained on English speech on the Dutch (`nl`) language subset of the [VoxPopuli](https://hf-mirror.com/datasets/facebook/voxpopuli) dataset.
+1. Fine-tune [SpeechT5](../model_doc/speecht5) that was originally trained on English speech on the Dutch (`nl`) language subset of the [VoxPopuli](https://huggingface.co/datasets/facebook/voxpopuli) dataset.
 2. Use your refined model for inference in one of two ways: using a pipeline or directly.
 
 Before you begin, make sure you have all the necessary libraries installed:
@@ -90,7 +90,7 @@ We encourage you to log in to your Hugging Face account to upload and share your
 
 ## Load the dataset
 
-[VoxPopuli](https://hf-mirror.com/datasets/facebook/voxpopuli) is a large-scale multilingual speech corpus consisting of 
+[VoxPopuli](https://huggingface.co/datasets/facebook/voxpopuli) is a large-scale multilingual speech corpus consisting of 
 data sourced from 2009-2020 European Parliament event recordings. It contains labelled audio-transcription data for 15 
 European languages. In this guide, we are using the Dutch language subset, feel free to pick another subset. 
 
@@ -233,7 +233,7 @@ By plotting a histogram you can get a sense of how much data there is for each s
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_speakers_histogram.png" alt="Speakers histogram"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_speakers_histogram.png" alt="Speakers histogram"/>
 </div>
 
 The histogram reveals that approximately one-third of the speakers in the dataset have fewer than 100 examples, while 
@@ -272,7 +272,7 @@ time-consuming process that involves loading and decoding each audio file. As su
 
 To enable the TTS model to differentiate between multiple speakers, you'll need to create a speaker embedding for each example. 
 The speaker embedding is an additional input into the model that captures a particular speaker's voice characteristics.
-To generate these speaker embeddings, use the pre-trained [spkrec-xvect-voxceleb](https://hf-mirror.com/speechbrain/spkrec-xvect-voxceleb) 
+To generate these speaker embeddings, use the pre-trained [spkrec-xvect-voxceleb](https://huggingface.co/speechbrain/spkrec-xvect-voxceleb) 
 model from SpeechBrain. 
 
 Create a function `create_speaker_embedding()` that takes an input audio waveform and outputs a 512-element vector 
@@ -360,7 +360,7 @@ The labels should be a log-mel spectrogram with 80 mel bins.
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_1.png" alt="Log-mel spectrogram with 80 mel bins"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_1.png" alt="Log-mel spectrogram with 80 mel bins"/>
 </div>
 
 Side note: If you find this spectrogram confusing, it may be due to your familiarity with the convention of placing low frequencies 
@@ -609,7 +609,7 @@ Visualize the spectrogram, if you'd like to:
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_2.png" alt="Generated log-mel spectrogram"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_2.png" alt="Generated log-mel spectrogram"/>
 </div>
 
 Finally, use the vocoder to turn the spectrogram into sound.

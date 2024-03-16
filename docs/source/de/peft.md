@@ -13,16 +13,16 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-Die [Parameter-Efficient Fine Tuning (PEFT)](https://hf-mirror.com/blog/peft) Methoden frieren die vorab trainierten Modellparameter während der Feinabstimmung ein und fügen eine kleine Anzahl trainierbarer Parameter (die Adapter) hinzu. Die Adapter werden trainiert, um aufgabenspezifische Informationen zu lernen. Es hat sich gezeigt, dass dieser Ansatz sehr speichereffizient ist und weniger Rechenleistung beansprucht, während die Ergebnisse mit denen eines vollständig feinabgestimmten Modells vergleichbar sind. 
+Die [Parameter-Efficient Fine Tuning (PEFT)](https://huggingface.co/blog/peft) Methoden frieren die vorab trainierten Modellparameter während der Feinabstimmung ein und fügen eine kleine Anzahl trainierbarer Parameter (die Adapter) hinzu. Die Adapter werden trainiert, um aufgabenspezifische Informationen zu lernen. Es hat sich gezeigt, dass dieser Ansatz sehr speichereffizient ist und weniger Rechenleistung beansprucht, während die Ergebnisse mit denen eines vollständig feinabgestimmten Modells vergleichbar sind. 
 
 Adapter, die mit PEFT trainiert wurden, sind in der Regel um eine Größenordnung kleiner als das vollständige Modell, so dass sie bequem gemeinsam genutzt, gespeichert und geladen werden können.
 
 <div class="flex flex-col justify-center">
-  <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
+  <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/peft/PEFT-hub-screenshot.png"/>
   <figcaption class="text-center">Die Adaptergewichte für ein OPTForCausalLM-Modell, die auf dem Hub gespeichert sind, sind nur ~6MB groß, verglichen mit der vollen Größe der Modellgewichte, die ~700MB betragen können.</figcaption>
 </div>
 
-Wenn Sie mehr über die 🤗 PEFT-Bibliothek erfahren möchten, sehen Sie sich die [Dokumentation](https://hf-mirror.com/docs/peft/index) an.
+Wenn Sie mehr über die 🤗 PEFT-Bibliothek erfahren möchten, sehen Sie sich die [Dokumentation](https://huggingface.co/docs/peft/index) an.
 
 ## Setup
 
@@ -42,11 +42,11 @@ pip install git+https://github.com/huggingface/peft.git
 
 Transformers unterstützt nativ einige PEFT-Methoden, d.h. Sie können lokal oder auf dem Hub gespeicherte Adaptergewichte laden und sie mit wenigen Zeilen Code einfach ausführen oder trainieren. Die folgenden Methoden werden unterstützt:
 
-- [Low Rank Adapters](https://hf-mirror.com/docs/peft/conceptual_guides/lora)
-- [IA3](https://hf-mirror.com/docs/peft/conceptual_guides/ia3)
+- [Low Rank Adapters](https://huggingface.co/docs/peft/conceptual_guides/lora)
+- [IA3](https://huggingface.co/docs/peft/conceptual_guides/ia3)
 - [AdaLoRA](https://arxiv.org/abs/2303.10512)
 
-Wenn Sie andere PEFT-Methoden, wie z.B. Prompt Learning oder Prompt Tuning, verwenden möchten, oder über die 🤗 PEFT-Bibliothek im Allgemeinen, lesen Sie bitte die [Dokumentation](https://hf-mirror.com/docs/peft/index).
+Wenn Sie andere PEFT-Methoden, wie z.B. Prompt Learning oder Prompt Tuning, verwenden möchten, oder über die 🤗 PEFT-Bibliothek im Allgemeinen, lesen Sie bitte die [Dokumentation](https://huggingface.co/docs/peft/index).
 
 
 ## Laden Sie einen PEFT-Adapter

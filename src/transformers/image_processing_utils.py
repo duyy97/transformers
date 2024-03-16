@@ -111,7 +111,7 @@ class ImageProcessingMixin(PushToHubMixin):
                 This can be either:
 
                 - a string, the *model id* of a pretrained image_processor hosted inside a model repo on
-                  hf-mirror.com.
+                  huggingface.co.
                 - a path to a *directory* containing a image processor file saved using the
                   [`~image_processing_utils.ImageProcessingMixin.save_pretrained`] method, e.g.,
                   `./my_model_directory/`.
@@ -134,7 +134,7 @@ class ImageProcessingMixin(PushToHubMixin):
                 the token generated when running `huggingface-cli login` (stored in `~/.huggingface`).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
 
@@ -150,7 +150,7 @@ class ImageProcessingMixin(PushToHubMixin):
                 consisting of the key/value pairs whose keys are not image processor attributes: i.e., the part of
                 `kwargs` which has not been used to update `image_processor` and is otherwise ignored.
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
             kwargs (`Dict[str, Any]`, *optional*):
                 The values in kwargs of any keys which are image processor attributes will be used to override the
@@ -167,7 +167,7 @@ class ImageProcessingMixin(PushToHubMixin):
         # derived class: *CLIPImageProcessor*
         image_processor = CLIPImageProcessor.from_pretrained(
             "openai/clip-vit-base-patch32"
-        )  # Download image_processing_config from hf-mirror.com and cache.
+        )  # Download image_processing_config from huggingface.co and cache.
         image_processor = CLIPImageProcessor.from_pretrained(
             "./test/saved_model/"
         )  # E.g. image processor (or model) was saved using *save_pretrained('./test/saved_model/')*
@@ -279,7 +279,7 @@ class ImageProcessingMixin(PushToHubMixin):
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 The identifier of the pre-trained checkpoint from which we want the dictionary of parameters.
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
 
         Returns:
@@ -352,7 +352,7 @@ class ImageProcessingMixin(PushToHubMixin):
                 # For any other exception, we throw a generic error.
                 raise EnvironmentError(
                     f"Can't load image processor for '{pretrained_model_name_or_path}'. If you were trying to load"
-                    " it from 'https://hf-mirror.com/models', make sure you don't have a local directory with the"
+                    " it from 'https://huggingface.co/models', make sure you don't have a local directory with the"
                     f" same name. Otherwise, make sure '{pretrained_model_name_or_path}' is the correct path to a"
                     f" directory containing a {IMAGE_PROCESSOR_NAME} file"
                 )

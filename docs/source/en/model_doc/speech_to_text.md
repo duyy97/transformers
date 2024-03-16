@@ -25,7 +25,7 @@ fed into the encoder. The model is trained with standard autoregressive cross-en
 transcripts/translations autoregressively. Speech2Text has been fine-tuned on several datasets for ASR and ST:
 [LibriSpeech](http://www.openslr.org/12), [CoVoST 2](https://github.com/facebookresearch/covost), [MuST-C](https://ict.fbk.eu/must-c/).
 
-This model was contributed by [valhalla](https://hf-mirror.com/valhalla). The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text).
+This model was contributed by [valhalla](https://huggingface.co/valhalla). The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text).
 
 ## Inference
 
@@ -94,7 +94,7 @@ be installed as follows: `apt install libsndfile1-dev`
 ["(Vidéo) Si M. Kilder est l'apossible des classes moyennes, et nous sommes heureux d'être accueillis dans son évangile."]
 ```
 
-See the [model hub](https://hf-mirror.com/models?filter=speech_to_text) to look for Speech2Text checkpoints.
+See the [model hub](https://huggingface.co/models?filter=speech_to_text) to look for Speech2Text checkpoints.
 
 ## Speech2TextConfig
 

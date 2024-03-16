@@ -42,7 +42,7 @@ _CONFIG_FOR_DOC = "LiltConfig"
 
 LILT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "SCUT-DLVCLab/lilt-roberta-en-base",
-    # See all LiLT models at https://hf-mirror.com/models?filter=lilt
+    # See all LiLT models at https://huggingface.co/models?filter=lilt
 ]
 
 

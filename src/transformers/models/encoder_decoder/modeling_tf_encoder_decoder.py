@@ -326,7 +326,7 @@ class TFEncoderDecoderModel(TFPreTrainedModel, TFCausalLanguageModelingLoss):
             encoder_pretrained_model_name_or_path (`str`, *optional*):
                 Information necessary to initiate the encoder. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~TFPreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *pytorch index checkpoint file* (e.g, `./pt_model/`). In this case,
@@ -335,7 +335,7 @@ class TFEncoderDecoderModel(TFPreTrainedModel, TFCausalLanguageModelingLoss):
             decoder_pretrained_model_name_or_path (`str`, *optional*, defaults to `None`):
                 Information necessary to initiate the decoder. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~TFPreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *pytorch checkpoint file* (e.g, `./pt_model/`). In this case,

@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # DPR
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=dpr">
+<a href="https://huggingface.co/models?filter=dpr">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-dpr-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/dpr-question_encoder-bert-base-multilingual">
+<a href="https://huggingface.co/spaces/docs-demos/dpr-question_encoder-bert-base-multilingual">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -41,7 +41,7 @@ our dense retriever outperforms a strong Lucene-BM25 system largely by 9%-19% ab
 retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA
 benchmarks.*
 
-This model was contributed by [lhoestq](https://hf-mirror.com/lhoestq). The original code can be found [here](https://github.com/facebookresearch/DPR).
+This model was contributed by [lhoestq](https://huggingface.co/lhoestq). The original code can be found [here](https://github.com/facebookresearch/DPR).
 
 ## Usage tips
 

@@ -26,12 +26,12 @@ The abstract from the paper is the following:
 
 *Self-supervised pre-training techniques have achieved remarkable progress in Document AI. Most multimodal pre-trained models use a masked language modeling objective to learn bidirectional representations on the text modality, but they differ in pre-training objectives for the image modality. This discrepancy adds difficulty to multimodal representation learning. In this paper, we propose LayoutLMv3 to pre-train multimodal Transformers for Document AI with unified text and image masking. Additionally, LayoutLMv3 is pre-trained with a word-patch alignment objective to learn cross-modal alignment by predicting whether the corresponding image patch of a text word is masked. The simple unified architecture and training objectives make LayoutLMv3 a general-purpose pre-trained model for both text-centric and image-centric Document AI tasks. Experimental results show that LayoutLMv3 achieves state-of-the-art performance not only in text-centric tasks, including form understanding, receipt understanding, and document visual question answering, but also in image-centric tasks such as document image classification and document layout analysis.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/layoutlmv3_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/layoutlmv3_architecture.png"
 alt="drawing" width="600"/>
 
 <small> LayoutLMv3 architecture. Taken from the <a href="https://arxiv.org/abs/2204.08387">original paper</a>. </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The TensorFlow version of this model was added by [chriskoo](https://hf-mirror.com/chriskoo), [tokec](https://hf-mirror.com/tokec), and [lre](https://hf-mirror.com/lre). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/layoutlmv3).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The TensorFlow version of this model was added by [chriskoo](https://huggingface.co/chriskoo), [tokec](https://huggingface.co/tokec), and [lre](https://huggingface.co/lre). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/layoutlmv3).
 
 ## Usage tips
 

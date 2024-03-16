@@ -54,7 +54,7 @@ _CHECKPOINT_FOR_DOC = "google/rembert"
 
 REMBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/rembert",
-    # See all RemBERT models at https://hf-mirror.com/models?filter=rembert
+    # See all RemBERT models at https://huggingface.co/models?filter=rembert
 ]
 
 

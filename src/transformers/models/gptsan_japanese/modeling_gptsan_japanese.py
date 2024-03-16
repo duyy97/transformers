@@ -46,7 +46,7 @@ _CHECKPOINT_FOR_DOC = "Tanrei/GPTSAN-japanese"
 ####################################################
 GPTSAN_JAPANESE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Tanrei/GPTSAN-japanese",
-    # See all GPTSAN-japanese models at https://hf-mirror.com/models?filter=gptsan-japanese
+    # See all GPTSAN-japanese models at https://huggingface.co/models?filter=gptsan-japanese
 ]
 
 

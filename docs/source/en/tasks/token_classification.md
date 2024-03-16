@@ -24,7 +24,7 @@ Token classification assigns a label to individual tokens in a sentence. One of 
 
 This guide will show you how to:
 
-1. Finetune [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) on the [WNUT 17](https://hf-mirror.com/datasets/wnut_17) dataset to detect new entities.
+1. Finetune [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) on the [WNUT 17](https://huggingface.co/datasets/wnut_17) dataset to detect new entities.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -125,7 +125,7 @@ As you saw in the example `tokens` field above, it looks like the input has alre
 
 However, this adds some special tokens `[CLS]` and `[SEP]` and the subword tokenization creates a mismatch between the input and labels. A single word corresponding to a single label may now be split into two subwords. You'll need to realign the tokens and labels by:
 
-1. Mapping all tokens to their corresponding word with the [`word_ids`](https://hf-mirror.com/docs/transformers/main_classes/tokenizer#transformers.BatchEncoding.word_ids) method.
+1. Mapping all tokens to their corresponding word with the [`word_ids`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.BatchEncoding.word_ids) method.
 2. Assigning the label `-100` to the special tokens `[CLS]` and `[SEP]` so they're ignored by the PyTorch loss function (see [CrossEntropyLoss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)).
 3. Only labeling the first token of a given word. Assign `-100` to other subtokens from the same word.
 
@@ -181,7 +181,7 @@ Now create a batch of examples using [`DataCollatorWithPadding`]. It's more effi
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [seqeval](https://hf-mirror.com/spaces/evaluate-metric/seqeval) framework (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric). Seqeval actually produces several scores: precision, recall, F1, and accuracy.
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [seqeval](https://huggingface.co/spaces/evaluate-metric/seqeval) framework (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric). Seqeval actually produces several scores: precision, recall, F1, and accuracy.
 
 ```py
 >>> import evaluate

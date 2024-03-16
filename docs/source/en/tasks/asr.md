@@ -24,7 +24,7 @@ Automatic speech recognition (ASR) converts a speech signal to text, mapping a s
 
 This guide will show you how to:
 
-1. Finetune [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) on the [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) dataset to transcribe audio to text.
+1. Finetune [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) on the [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) dataset to transcribe audio to text.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -54,7 +54,7 @@ We encourage you to login to your Hugging Face account so you can upload and sha
 
 ## Load MInDS-14 dataset
 
-Start by loading a smaller subset of the [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) dataset from the 🤗 Datasets library. This'll give you a chance to experiment and make sure everything works before spending more time training on the full dataset.
+Start by loading a smaller subset of the [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) dataset from the 🤗 Datasets library. This'll give you a chance to experiment and make sure everything works before spending more time training on the full dataset.
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -117,7 +117,7 @@ The next step is to load a Wav2Vec2 processor to process the audio signal:
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-The MInDS-14 dataset has a sampling rate of 8000kHz (you can find this information in its [dataset card](https://hf-mirror.com/datasets/PolyAI/minds14)), which means you'll need to resample the dataset to 16000kHz to use the pretrained Wav2Vec2 model:
+The MInDS-14 dataset has a sampling rate of 8000kHz (you can find this information in its [dataset card](https://huggingface.co/datasets/PolyAI/minds14)), which means you'll need to resample the dataset to 16000kHz to use the pretrained Wav2Vec2 model:
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -201,7 +201,7 @@ Now instantiate your `DataCollatorForCTCWithPadding`:
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [word error rate](https://hf-mirror.com/spaces/evaluate-metric/wer) (WER) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [word error rate](https://huggingface.co/spaces/evaluate-metric/wer) (WER) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate
@@ -304,7 +304,7 @@ Once training is completed, share your model to the Hub with the [`~transformers
 
 <Tip>
 
-For a more in-depth example of how to finetune a model for automatic speech recognition, take a look at this blog [post](https://hf-mirror.com/blog/fine-tune-wav2vec2-english) for English ASR and this [post](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2) for multilingual ASR.
+For a more in-depth example of how to finetune a model for automatic speech recognition, take a look at this blog [post](https://huggingface.co/blog/fine-tune-wav2vec2-english) for English ASR and this [post](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2) for multilingual ASR.
 
 </Tip>
 

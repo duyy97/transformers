@@ -55,7 +55,7 @@ CAMEMBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "almanach/camembert-base",
     "Musixmatch/umberto-commoncrawl-cased-v1",
     "Musixmatch/umberto-wikipedia-uncased-v1",
-    # See all CamemBERT models at https://hf-mirror.com/models?filter=camembert
+    # See all CamemBERT models at https://huggingface.co/models?filter=camembert
 ]
 
 CAMEMBERT_START_DOCSTRING = r"""

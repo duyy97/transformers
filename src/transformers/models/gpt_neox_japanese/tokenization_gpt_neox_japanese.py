@@ -31,10 +31,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt", "emoji_file": "emoji.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "abeja/gpt-neox-japanese-2.7b": "https://hf-mirror.com/abeja/gpt-neox-japanese-2.7b/resolve/main/vocab.txt",
+        "abeja/gpt-neox-japanese-2.7b": "https://huggingface.co/abeja/gpt-neox-japanese-2.7b/resolve/main/vocab.txt",
     },
     "emoji_file": {
-        "abeja/gpt-neox-japanese-2.7b": "https://hf-mirror.com/abeja/gpt-neox-japanese-2.7b/resolve/main/emoji.json",
+        "abeja/gpt-neox-japanese-2.7b": "https://huggingface.co/abeja/gpt-neox-japanese-2.7b/resolve/main/emoji.json",
     },
 }
 
@@ -184,7 +184,7 @@ class GPTNeoXJapaneseTokenizer(PreTrainedTokenizer):
             "\nNo chat template is defined for this tokenizer - using the default template "
             f"for the {self.__class__.__name__} class. If the default is not appropriate for "
             "your model, please set `tokenizer.chat_template` to an appropriate template. "
-            "See https://hf-mirror.com/docs/transformers/main/chat_templating for more information.\n"
+            "See https://huggingface.co/docs/transformers/main/chat_templating for more information.\n"
         )
         return (
             "{% for message in messages %}"

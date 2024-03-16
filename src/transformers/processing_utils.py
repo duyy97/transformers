@@ -265,7 +265,7 @@ class ProcessorMixin(PushToHubMixin):
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 The identifier of the pre-trained checkpoint from which we want the dictionary of parameters.
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
 
         Returns:
@@ -327,7 +327,7 @@ class ProcessorMixin(PushToHubMixin):
                 # For any other exception, we throw a generic error.
                 raise EnvironmentError(
                     f"Can't load processor for '{pretrained_model_name_or_path}'. If you were trying to load"
-                    " it from 'https://hf-mirror.com/models', make sure you don't have a local directory with the"
+                    " it from 'https://huggingface.co/models', make sure you don't have a local directory with the"
                     f" same name. Otherwise, make sure '{pretrained_model_name_or_path}' is the correct path to a"
                     f" directory containing a {PROCESSOR_NAME} file"
                 )
@@ -432,7 +432,7 @@ class ProcessorMixin(PushToHubMixin):
                 This can be either:
 
                 - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
-                  hf-mirror.com.
+                  huggingface.co.
                 - a path to a *directory* containing a feature extractor file saved using the
                   [`~SequenceFeatureExtractor.save_pretrained`] method, e.g., `./my_model_directory/`.
                 - a path or url to a saved feature extractor JSON *file*, e.g.,

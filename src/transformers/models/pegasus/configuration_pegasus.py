@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 PEGASUS_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/pegasus-large": "https://hf-mirror.com/google/pegasus-large/resolve/main/config.json",
-    # See all PEGASUS models at https://hf-mirror.com/models?filter=pegasus
+    "google/pegasus-large": "https://huggingface.co/google/pegasus-large/resolve/main/config.json",
+    # See all PEGASUS models at https://huggingface.co/models?filter=pegasus
 }
 
 
@@ -31,7 +31,7 @@ class PegasusConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`PegasusModel`]. It is used to instantiate an
     PEGASUS model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the PEGASUS
-    [google/pegasus-large](https://hf-mirror.com/google/pegasus-large) architecture.
+    [google/pegasus-large](https://huggingface.co/google/pegasus-large) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

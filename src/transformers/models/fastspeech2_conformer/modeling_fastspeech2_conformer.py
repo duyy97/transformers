@@ -35,7 +35,7 @@ logger = logging.get_logger(__name__)
 
 FASTSPEECH2_CONFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "espnet/fastspeech2_conformer",
-    # See all FastSpeech2Conformer models at https://hf-mirror.com/models?filter=fastspeech2_conformer
+    # See all FastSpeech2Conformer models at https://huggingface.co/models?filter=fastspeech2_conformer
 ]
 
 

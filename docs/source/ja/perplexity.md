@@ -32,19 +32,19 @@ $$\text{PPL}(X) = \exp \left\{ {-\frac{1}{t}\sum_i^t \log p_\theta (x_i|x_{<i}) 
 
 モデルのコンテキストサイズに制約がない場合、モデルのパープレキシティを評価するためには、シーケンスを自己回帰的に因子分解し、各ステップで前のサブシーケンスに条件を付けることで計算します。以下に示すように。
 
-<img width="600" alt="完全なコンテキスト長のシーケンスの分解" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_full.gif"/>
+<img width="600" alt="完全なコンテキスト長のシーケンスの分解" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_full.gif"/>
 
 しかし、通常、近似モデルを使用する場合、モデルが処理できるトークン数に制約があります。例えば、最大の[GPT-2](model_doc/gpt2)のバージョンは1024トークンの固定長を持っているため、1024よりも大きい \\(t\\) に対して \\(p_\theta(x_t|x_{<t})\\) を直接計算することはできません。
 
 代わりに、通常、シーケンスはモデルの最大入力サイズに等しいサブシーケンスに分割されます。モデルの最大入力サイズが \\(k\\) の場合、トークン \\(x_t\\) の尤度を近似するには、完全なコンテキストではなく、それを先行する \\(k-1\\) トークンにのみ条件を付けることがあります。シーケンスのモデルのパープレキシティを評価する際、誘惑的ですが非効率な方法は、シーケンスを分割し、各セグメントの分解対数尤度を独立に合算することです。
 
-<img width="600" alt="利用可能な完全なコンテキストを活用しない非最適なPPL" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_chunked.gif"/>
+<img width="600" alt="利用可能な完全なコンテキストを活用しない非最適なPPL" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_chunked.gif"/>
 
 これは各セグメントのパープレキシティが1回のフォワードパスで計算できるため、計算が迅速ですが、通常、モデルはほとんどの予測ステップでコンテキストが少ないため、完全に因子分解されたパープレキシティの悪い近似となり、通常、より高い（悪い）PPLを返します。
 
 代わりに、固定長モデルのPPLはスライディングウィンドウ戦略を用いて評価するべきです。これには、モデルが各予測ステップでより多くのコンテキストを持つように、コンテキストウィンドウを繰り返しスライドさせるという方法が含まれます。
 
-<img width="600" alt="Sliding window PPL taking advantage of all available context" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_sliding.gif"/>
+<img width="600" alt="Sliding window PPL taking advantage of all available context" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_sliding.gif"/>
 
 これはシーケンスの確率のより正確な分解に近いものであり、通常はより有利なスコアを生成します。欠点は、コーパス内の各トークンに対して別個の前方パスが必要です。実用的な妥協案は、1トークンずつスライドする代わりに、より大きなストライドでコンテキストを移動するストライド型のスライディングウィンドウを使用することです。これにより、計算がはるかに高速に進行できる一方で、モデルには各ステップで予測を行うための大きなコンテキストが提供されます。
 

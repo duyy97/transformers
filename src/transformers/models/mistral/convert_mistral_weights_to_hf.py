@@ -251,7 +251,7 @@ def main():
     parser.add_argument(
         "--model_size",
         choices=["7B", "tokenizer_only"],
-        help="'f' models correspond to the finetuned versions, and are specific to the Mistral2 official release. For more details on Mistral2, checkout the original repo: https://hf-mirror.com/meta-mistral",
+        help="'f' models correspond to the finetuned versions, and are specific to the Mistral2 official release. For more details on Mistral2, checkout the original repo: https://huggingface.co/meta-mistral",
     )
     parser.add_argument(
         "--output_dir",

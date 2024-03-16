@@ -20,13 +20,13 @@ Fine-tuning (or training from scratch) the library models for language modeling 
 ALBERT, BERT, DistilBERT, RoBERTa, XLNet... GPT and GPT-2 are trained or fine-tuned using a causal language modeling
 (CLM) loss while ALBERT, BERT, DistilBERT and RoBERTa are trained or fine-tuned using a masked language modeling (MLM)
 loss. XLNet uses permutation language modeling (PLM), you can find more information about the differences between those
-objectives in our [model summary](https://hf-mirror.com/transformers/model_summary.html).
+objectives in our [model summary](https://huggingface.co/transformers/model_summary.html).
 
 There are two sets of scripts provided. The first set leverages the Trainer API. The second set with `no_trainer` in the suffix uses a custom training loop and leverages the 🤗 Accelerate library . Both sets use the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
 
 **Note:** The old script `run_language_modeling.py` is still available [here](https://github.com/huggingface/transformers/blob/main/examples/legacy/run_language_modeling.py).
 
-The following examples, will run on datasets hosted on our [hub](https://hf-mirror.com/datasets) or with your own
+The following examples, will run on datasets hosted on our [hub](https://huggingface.co/datasets) or with your own
 text files for training and validation. We give examples of both below.
 
 ### GPT-2/GPT and causal language modeling

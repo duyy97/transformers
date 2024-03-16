@@ -30,12 +30,12 @@ from ...utils import is_torch_available, logging
 logger = logging.get_logger(__name__)
 
 BLOOM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "bigscience/bloom": "https://hf-mirror.com/bigscience/bloom/resolve/main/config.json",
-    "bigscience/bloom-560m": "https://hf-mirror.com/bigscience/bloom-560m/blob/main/config.json",
-    "bigscience/bloom-1b1": "https://hf-mirror.com/bigscience/bloom-1b1/blob/main/config.json",
-    "bigscience/bloom-1b7": "https://hf-mirror.com/bigscience/bloom-1b7/blob/main/config.json",
-    "bigscience/bloom-3b": "https://hf-mirror.com/bigscience/bloom-3b/blob/main/config.json",
-    "bigscience/bloom-7b1": "https://hf-mirror.com/bigscience/bloom-7b1/blob/main/config.json",
+    "bigscience/bloom": "https://huggingface.co/bigscience/bloom/resolve/main/config.json",
+    "bigscience/bloom-560m": "https://huggingface.co/bigscience/bloom-560m/blob/main/config.json",
+    "bigscience/bloom-1b1": "https://huggingface.co/bigscience/bloom-1b1/blob/main/config.json",
+    "bigscience/bloom-1b7": "https://huggingface.co/bigscience/bloom-1b7/blob/main/config.json",
+    "bigscience/bloom-3b": "https://huggingface.co/bigscience/bloom-3b/blob/main/config.json",
+    "bigscience/bloom-7b1": "https://huggingface.co/bigscience/bloom-7b1/blob/main/config.json",
 }
 
 
@@ -44,7 +44,7 @@ class BloomConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BloomModel`]. It is used to instantiate a Bloom
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to the Bloom architecture
-    [bigscience/bloom](https://hf-mirror.com/bigscience/bloom).
+    [bigscience/bloom](https://huggingface.co/bigscience/bloom).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -54,7 +54,7 @@ class BloomConfig(PretrainedConfig):
         vocab_size (`int`, *optional*, defaults to 250880):
             Vocabulary size of the Bloom model. Defines the maximum number of different tokens that can be represented
             by the `inputs_ids` passed when calling [`BloomModel`]. Check [this
-            discussion](https://hf-mirror.com/bigscience/bloom/discussions/120#633d28389addb8530b406c2a) on how the
+            discussion](https://huggingface.co/bigscience/bloom/discussions/120#633d28389addb8530b406c2a) on how the
             `vocab_size` has been defined.
         hidden_size (`int`, *optional*, defaults to 64):
             Dimensionality of the embeddings and hidden states.
@@ -76,7 +76,7 @@ class BloomConfig(PretrainedConfig):
             Whether or not the model should return the last key/values attentions (not used by all models).
         pretraining_tp (`int`, *optional*, defaults to `1`):
             Experimental feature. Tensor parallelism rank used during pretraining with Megatron. Please refer to [this
-            document](https://hf-mirror.com/docs/transformers/parallelism) to understand more about it. This value is
+            document](https://huggingface.co/docs/transformers/parallelism) to understand more about it. This value is
             necessary to ensure exact reproducibility of the pretraining results. Please refer to [this
             issue](https://github.com/pytorch/pytorch/issues/76232). Note also that this is enabled only when
             `slow_but_exact=True`.

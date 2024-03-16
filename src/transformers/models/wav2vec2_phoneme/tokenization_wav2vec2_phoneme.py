@@ -56,12 +56,12 @@ VOCAB_FILES_NAMES = {
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/wav2vec2-lv-60-espeak-cv-ft": (
-            "https://hf-mirror.com/facebook/wav2vec2-lv-60-espeak-cv-ft/resolve/main/vocab.json"
+            "https://huggingface.co/facebook/wav2vec2-lv-60-espeak-cv-ft/resolve/main/vocab.json"
         ),
     },
     "tokenizer_config_file": {
         "facebook/wav2vec2-lv-60-espeak-cv-ft": (
-            "https://hf-mirror.com/facebook/wav2vec2-lv-60-espeak-cv-ft/resolve/main/tokenizer_config.json"
+            "https://huggingface.co/facebook/wav2vec2-lv-60-espeak-cv-ft/resolve/main/tokenizer_config.json"
         ),
     },
 }

@@ -17,13 +17,13 @@ rendered properly in your Markdown viewer.
 # DistilBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=distilbert">
+<a href="https://huggingface.co/models?filter=distilbert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-distilbert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/distilbert-base-uncased">
+<a href="https://huggingface.co/spaces/docs-demos/distilbert-base-uncased">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
-<a href="https://hf-mirror.com/papers/1910.01108">
+<a href="https://huggingface.co/papers/1910.01108">
 <img alt="Paper page" src="https://img.shields.io/badge/Paper%20page-1910.01108-green">
 </a>
 </div>
@@ -51,8 +51,8 @@ distillation and cosine-distance losses. Our smaller, faster and lighter model i
 demonstrate its capabilities for on-device computations in a proof-of-concept experiment and a comparative on-device
 study.*
 
-This model was contributed by [victorsanh](https://hf-mirror.com/victorsanh). This model jax version was
-contributed by [kamalkraj](https://hf-mirror.com/kamalkraj). The original code can be found [here](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation).
+This model was contributed by [victorsanh](https://huggingface.co/victorsanh). This model jax version was
+contributed by [kamalkraj](https://huggingface.co/kamalkraj). The original code can be found [here](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation).
 
 ## Usage tips
 
@@ -73,10 +73,10 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-classification"/>
 
-- A blog post on [Getting Started with Sentiment Analysis using Python](https://hf-mirror.com/blog/sentiment-analysis-python) with DistilBERT.
-- A blog post on how to [train DistilBERT with Blurr for sequence classification](https://hf-mirror.com/blog/fastai).
-- A blog post on how to use [Ray to tune DistilBERT hyperparameters](https://hf-mirror.com/blog/ray-tune).
-- A blog post on how to [train DistilBERT with Hugging Face and Amazon SageMaker](https://hf-mirror.com/blog/the-partnership-amazon-sagemaker-and-hugging-face).
+- A blog post on [Getting Started with Sentiment Analysis using Python](https://huggingface.co/blog/sentiment-analysis-python) with DistilBERT.
+- A blog post on how to [train DistilBERT with Blurr for sequence classification](https://huggingface.co/blog/fastai).
+- A blog post on how to use [Ray to tune DistilBERT hyperparameters](https://huggingface.co/blog/ray-tune).
+- A blog post on how to [train DistilBERT with Hugging Face and Amazon SageMaker](https://huggingface.co/blog/the-partnership-amazon-sagemaker-and-hugging-face).
 - A notebook on how to [finetune DistilBERT for multi-label classification](https://colab.research.google.com/github/DhavalTaunk08/Transformers_scripts/blob/master/Transformers_multilabel_distilbert.ipynb). 🌎
 - A notebook on how to [finetune DistilBERT for multiclass classification with PyTorch](https://colab.research.google.com/github/abhimishra91/transformers-tutorials/blob/master/transformers_multiclass_classification.ipynb). 🌎
 - A notebook on how to [finetune DistilBERT for text classification in TensorFlow](https://colab.research.google.com/github/peterbayerle/huggingface_notebook/blob/main/distilbert_tf.ipynb). 🌎
@@ -91,7 +91,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 - [`DistilBertForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb).
 - [`TFDistilBertForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb).
 - [`FlaxDistilBertForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/token-classification).
-- [Token classification](https://hf-mirror.com/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Token classification](https://huggingface.co/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Token classification task guide](../tasks/token_classification)
 
 
@@ -100,7 +100,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 - [`DistilBertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFDistilBertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxDistilBertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb).
-- [Masked language modeling](https://hf-mirror.com/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Masked language modeling](https://huggingface.co/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Masked language modeling task guide](../tasks/masked_language_modeling)
 
 <PipelineTag pipeline="question-answering"/>
@@ -108,7 +108,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 - [`DistilBertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb).
 - [`TFDistilBertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb).
 - [`FlaxDistilBertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/question-answering).
-- [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Question answering](https://huggingface.co/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Question answering task guide](../tasks/question_answering)
 
 **Multiple choice**
@@ -118,19 +118,19 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 ⚗️ Optimization
 
-- A blog post on how to [quantize DistilBERT with 🤗 Optimum and Intel](https://hf-mirror.com/blog/intel).
+- A blog post on how to [quantize DistilBERT with 🤗 Optimum and Intel](https://huggingface.co/blog/intel).
 - A blog post on how [Optimizing Transformers for GPUs with 🤗 Optimum](https://www.philschmid.de/optimizing-transformers-with-optimum-gpu).
 - A blog post on [Optimizing Transformers with Hugging Face Optimum](https://www.philschmid.de/optimizing-transformers-with-optimum).
 
 ⚡️ Inference
 
-- A blog post on how to [Accelerate BERT inference with Hugging Face Transformers and AWS Inferentia](https://hf-mirror.com/blog/bert-inferentia-sagemaker) with DistilBERT.
+- A blog post on how to [Accelerate BERT inference with Hugging Face Transformers and AWS Inferentia](https://huggingface.co/blog/bert-inferentia-sagemaker) with DistilBERT.
 - A blog post on [Serverless Inference with Hugging Face's Transformers, DistilBERT and Amazon SageMaker](https://www.philschmid.de/sagemaker-serverless-huggingface-distilbert).
 
 🚀 Deploy
 
-- A blog post on how to [deploy DistilBERT on Google Cloud](https://hf-mirror.com/blog/how-to-deploy-a-pipeline-to-google-clouds).
-- A blog post on how to [deploy DistilBERT with Amazon SageMaker](https://hf-mirror.com/blog/deploy-hugging-face-models-easily-with-amazon-sagemaker).
+- A blog post on how to [deploy DistilBERT on Google Cloud](https://huggingface.co/blog/how-to-deploy-a-pipeline-to-google-clouds).
+- A blog post on how to [deploy DistilBERT with Amazon SageMaker](https://huggingface.co/blog/deploy-hugging-face-models-easily-with-amazon-sagemaker).
 - A blog post on how to [Deploy BERT with Hugging Face Transformers, Amazon SageMaker and Terraform module](https://www.philschmid.de/terraform-huggingface-amazon-sagemaker).
 
 

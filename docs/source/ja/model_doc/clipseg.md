@@ -41,12 +41,12 @@ PhraseCut データセット、私たちのシステムは、フリーテキス�
 定式化することができる。最後に、システムがうまく適応していることがわかりました
 アフォーダンスまたはプロパティを含む一般化されたクエリ*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/clipseg_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/clipseg_architecture.png"
 alt="描画" width="600"/>
 
 <small> CLIPSeg の概要。 <a href="https://arxiv.org/abs/2112.10003">元の論文から抜粋。</a> </small>
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。
 元のコードは [ここ](https://github.com/timojl/clipseg) にあります。
 
 ## Usage tips

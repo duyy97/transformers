@@ -177,7 +177,7 @@ embeddings that are computed in parallel and thus defines the trade-off between 
 
 Finetuning is a form of transfer learning which involves taking a pretrained model, freezing its weights, and replacing the output layer with a newly added [model head](#head). The model head is trained on your target dataset.
 
-See the [Fine-tune a pretrained model](https://hf-mirror.com/docs/transformers/training) tutorial for more details, and learn how to fine-tune models with 🤗 Transformers.
+See the [Fine-tune a pretrained model](https://huggingface.co/docs/transformers/training) tutorial for more details, and learn how to fine-tune models with 🤗 Transformers.
 
 ## H
 
@@ -197,7 +197,7 @@ Vision-based Transformers models split an image into smaller patches which are l
 
 ### inference
 
-Inference is the process of evaluating a model on new data after training is complete. See the [Pipeline for inference](https://hf-mirror.com/docs/transformers/pipeline_tutorial) tutorial to learn how to perform inference with 🤗 Transformers.
+Inference is the process of evaluating a model on new data after training is complete. See the [Pipeline for inference](https://huggingface.co/docs/transformers/pipeline_tutorial) tutorial to learn how to perform inference with 🤗 Transformers.
 
 ### input IDs
 
@@ -325,7 +325,7 @@ A task that combines texts with another kind of inputs (for instance images).
 
 ### Natural language generation (NLG)
 
-All tasks related to generating text (for instance, [Write With Transformers](https://transformer.hf-mirror.com/), translation).
+All tasks related to generating text (for instance, [Write With Transformers](https://transformer.huggingface.co/), translation).
 
 ### Natural language processing (NLP)
 
@@ -342,7 +342,7 @@ whole text, individual words).
 
 A pipeline in 🤗 Transformers is an abstraction referring to a series of steps that are executed in a specific order to preprocess and transform data and return a prediction from a model. Some example stages found in a pipeline might be data preprocessing, feature extraction, and normalization.
 
-For more details, see [Pipelines for inference](https://hf-mirror.com/docs/transformers/pipeline_tutorial).
+For more details, see [Pipelines for inference](https://huggingface.co/docs/transformers/pipeline_tutorial).
 
 ### PipelineParallel (PP)
 
@@ -372,7 +372,7 @@ other types of positional embeddings, such as sinusoidal position embeddings or 
 
 ### preprocessing
 
-The task of preparing raw data into a format that can be easily consumed by machine learning models. For example, text is typically preprocessed by tokenization. To gain a better idea of what preprocessing looks like for other input types, check out the [Preprocess](https://hf-mirror.com/docs/transformers/preprocessing) tutorial.
+The task of preparing raw data into a format that can be easily consumed by machine learning models. For example, text is typically preprocessed by tokenization. To gain a better idea of what preprocessing looks like for other input types, check out the [Preprocess](https://huggingface.co/docs/transformers/preprocessing) tutorial.
 
 ### pretrained model
 

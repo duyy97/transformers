@@ -149,10 +149,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model", "tokenizer_file": "tokenizer.
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/udop-large": "https://hf-mirror.com/microsoft/udop-large/resolve/main/spiece.model",
+        "microsoft/udop-large": "https://huggingface.co/microsoft/udop-large/resolve/main/spiece.model",
     },
     "tokenizer_file": {
-        "microsoft/udop-large": "https://hf-mirror.com/microsoft/udop-large/resolve/main/tokenizer.json",
+        "microsoft/udop-large": "https://huggingface.co/microsoft/udop-large/resolve/main/tokenizer.json",
     },
 }
 

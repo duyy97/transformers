@@ -34,7 +34,7 @@ VOCAB_FILES_NAMES = {"tokenizer_file": "tokenizer.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "tokenizer_file": {
-        "Cohere/Command-nightly": "https://hf-mirror.com/Cohere/Command-nightly/blob/main/tokenizer.json",
+        "Cohere/Command-nightly": "https://huggingface.co/Cohere/Command-nightly/blob/main/tokenizer.json",
     },
 }
 
@@ -65,7 +65,7 @@ class CohereTokenizerFast(PreTrainedTokenizerFast):
     If you want to change the `bos_token` or the `eos_token`, make sure to specify them when initializing the model, or
     call `tokenizer.update_post_processor()` to make sure that the post-processing is correctly done (otherwise the
     values of the first token and final token of an encoded sequence will not be correct). For more details, checkout
-    [post-processors] (https://hf-mirror.com/docs/tokenizers/api/post-processors) documentation.
+    [post-processors] (https://huggingface.co/docs/tokenizers/api/post-processors) documentation.
 
     You can get around that behavior by passing `add_prefix_space=True` when instantiating this tokenizer, but since
     the model was not pretrained this way, it might yield a decrease in performance.
@@ -251,7 +251,7 @@ class CohereTokenizerFast(PreTrainedTokenizerFast):
             "\nNo chat template is defined for this tokenizer - using the default template "
             f"for the {self.__class__.__name__} class. If the default is not appropriate for "
             "your model, please set `tokenizer.chat_template` to an appropriate template. "
-            "See https://hf-mirror.com/docs/transformers/main/chat_templating for more information.\n"
+            "See https://huggingface.co/docs/transformers/main/chat_templating for more information.\n"
         )
         default_template = (
             "{{ bos_token }}"

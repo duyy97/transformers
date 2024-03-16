@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ALBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=albert">
+<a href="https://huggingface.co/models?filter=albert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-albert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/albert-base-v2">
+<a href="https://huggingface.co/spaces/docs-demos/albert-base-v2">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -36,7 +36,7 @@ ALBERTモデルは、「[ALBERT: A Lite BERT for Self-supervised Learning of Lan
 
 *自然言語表現の事前学習時にモデルのサイズを増やすと、下流タスクのパフォーマンスが向上することがしばしばあります。しかし、ある時点でさらなるモデルの増大は、GPU/TPUのメモリ制限、長い訓練時間、予期せぬモデルの劣化といった問題のために困難になります。これらの問題に対処するために、我々はBERTのメモリ消費を低減し、訓練速度を高めるための2つのパラメータ削減技術を提案します。包括的な実証的証拠は、我々の提案方法が元のBERTに比べてはるかによくスケールするモデルを生み出すことを示しています。また、文間の一貫性をモデリングに焦点を当てた自己教師あり損失を使用し、複数の文が含まれる下流タスクに一貫して助けとなることを示します。その結果、我々の最良のモデルは、BERT-largeに比べてパラメータが少ないにもかかわらず、GLUE、RACE、SQuADベンチマークで新たな最先端の結果を確立します。*
 
-このモデルは[lysandre](https://hf-mirror.com/lysandre)により提供されました。このモデルのjaxバージョンは[kamalkraj](https://hf-mirror.com/kamalkraj)により提供されました。オリジナルのコードは[こちら](https://github.com/google-research/ALBERT)で見ることができます。
+このモデルは[lysandre](https://huggingface.co/lysandre)により提供されました。このモデルのjaxバージョンは[kamalkraj](https://huggingface.co/kamalkraj)により提供されました。オリジナルのコードは[こちら](https://github.com/google-research/ALBERT)で見ることができます。
 
 ## 使用上のヒント
 

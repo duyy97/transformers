@@ -55,7 +55,7 @@ _REAL_CHECKPOINT_FOR_DOC = "facebook/nllb-moe-54b"
 ####################################################
 NLLB_MOE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/nllb-moe-54b",
-    # See all NLLB-MOE models at https://hf-mirror.com/models?filter=nllb-moe
+    # See all NLLB-MOE models at https://huggingface.co/models?filter=nllb-moe
 ]
 
 

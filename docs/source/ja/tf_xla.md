@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 
 TensorFlowでXLAを使用するのは簡単です。XLAは`tensorflow`ライブラリ内にパッケージ化されており、[`tf.function`](https://www.tensorflow.org/guide/intro_to_graphs)などのグラフを作成する関数内で`jit_compile`引数を使用してトリガーできます。`fit()`や`predict()`などのKerasメソッドを使用する場合、`model.compile()`に`jit_compile`引数を渡すだけでXLAを有効にできます。ただし、XLAはこれらのメソッドに限定されているわけではありません。任意の`tf.function`を高速化するためにも使用できます。
 
-🤗 Transformers内のいくつかのTensorFlowメソッドは、XLAと互換性があるように書き直されています。これには、[GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2)、[T5](https://hf-mirror.com/docs/transformers/model_doc/t5)、[OPT](https://hf-mirror.com/docs/transformers/model_doc/opt)などのテキスト生成モデルや、[Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper)などの音声処理モデルも含まれます。
+🤗 Transformers内のいくつかのTensorFlowメソッドは、XLAと互換性があるように書き直されています。これには、[GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2)、[T5](https://huggingface.co/docs/transformers/model_doc/t5)、[OPT](https://huggingface.co/docs/transformers/model_doc/opt)などのテキスト生成モデルや、[Whisper](https://huggingface.co/docs/transformers/model_doc/whisper)などの音声処理モデルも含まれます。
 
 速度向上の具体的な量はモデルに非常に依存しますが、🤗 Transformers内のTensorFlowテキスト生成モデルでは、約100倍の速度向上を確認しています。このドキュメントでは、これらのモデルにXLAを使用して最大のパフォーマンスを得る方法を説明します。また、ベンチマークとXLA統合のデザイン哲学について詳しく学びたい場合の追加リソースへのリンクも提供します。
 
@@ -170,8 +170,8 @@ Execution time -- 78.9 ms
 
 ここでは、🤗 Transformersと一般的なXLAについてさらに詳しく学びたい場合のいくつかの追加リソースを提供します。
 
-* [このColab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb)では、XLA対応のエンコーダーデコーダー（[T5](https://hf-mirror.com/docs/transformers/model_doc/t5)など）およびデコーダー専用（[GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2)など）テキスト生成モデルを試すための対話型デモが提供されています。
-* [このブログ記事](https://hf-mirror.com/blog/tf-xla-generate)では、XLA対応モデルの比較ベンチマークの概要と、TensorFlowでのXLAについての友好的な紹介が提供されています。
+* [このColab Notebook](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/91_tf_xla_generate.ipynb)では、XLA対応のエンコーダーデコーダー（[T5](https://huggingface.co/docs/transformers/model_doc/t5)など）およびデコーダー専用（[GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2)など）テキスト生成モデルを試すための対話型デモが提供されています。
+* [このブログ記事](https://huggingface.co/blog/tf-xla-generate)では、XLA対応モデルの比較ベンチマークの概要と、TensorFlowでのXLAについての友好的な紹介が提供されています。
 * [このブログ記事](https://blog.tensorflow.org/2022/11/how-hugging-face-improved-text-generation-performance-with-xla.html)では、🤗 TransformersのTensorFlowモデルにXLAサポートを追加する際の設計哲学について説明しています。
 * 一般的なXLAとTensorFlowグラフについて詳しく学ぶためのおすすめの投稿：
     * [XLA: 機械学習用の最適化コンパイラ](https://www.tensorflow.org/xla)

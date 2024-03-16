@@ -24,7 +24,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 XCLIP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/xclip-base-patch32": "https://hf-mirror.com/microsoft/xclip-base-patch32/resolve/main/config.json",
+    "microsoft/xclip-base-patch32": "https://huggingface.co/microsoft/xclip-base-patch32/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class XCLIPTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`XCLIPModel`]. It is used to instantiate an X-CLIP
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the X-CLIP
-    [microsoft/xclip-base-patch32](https://hf-mirror.com/microsoft/xclip-base-patch32) architecture.
+    [microsoft/xclip-base-patch32](https://huggingface.co/microsoft/xclip-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -140,7 +140,7 @@ class XCLIPVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`XCLIPModel`]. It is used to instantiate an X-CLIP
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the X-CLIP
-    [microsoft/xclip-base-patch32](https://hf-mirror.com/microsoft/xclip-base-patch32) architecture.
+    [microsoft/xclip-base-patch32](https://huggingface.co/microsoft/xclip-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -267,7 +267,7 @@ class XCLIPConfig(PretrainedConfig):
     [`XCLIPConfig`] is the configuration class to store the configuration of a [`XCLIPModel`]. It is used to
     instantiate X-CLIP model according to the specified arguments, defining the text model and vision model configs.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the X-CLIP
-    [microsoft/xclip-base-patch32](https://hf-mirror.com/microsoft/xclip-base-patch32) architecture.
+    [microsoft/xclip-base-patch32](https://huggingface.co/microsoft/xclip-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

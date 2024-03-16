@@ -24,13 +24,13 @@ XTREME-S covers speech recognition with Fleurs, Multilingual LibriSpeech (MLS) a
 
 Paper: [XTREME-S: Evaluating Cross-lingual Speech Representations](https://arxiv.org/abs/2203.10752)
 
-Dataset: [https://hf-mirror.com/datasets/google/xtreme_s](https://hf-mirror.com/datasets/google/xtreme_s)
+Dataset: [https://huggingface.co/datasets/google/xtreme_s](https://huggingface.co/datasets/google/xtreme_s)
 
 ## Fine-tuning for the XTREME-S tasks
 
 Based on the [`run_xtreme_s.py`](https://github.com/huggingface/transformers/blob/main/examples/research_projects/xtreme-s/run_xtreme_s.py) script.
 
-This script can fine-tune any of the pretrained speech models on the [hub](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition) on the [XTREME-S dataset](https://hf-mirror.com/datasets/google/xtreme_s) tasks.
+This script can fine-tune any of the pretrained speech models on the [hub](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition) on the [XTREME-S dataset](https://huggingface.co/datasets/google/xtreme_s) tasks.
 
 XTREME-S is made up of 7 different tasks. Here is how to run the script on each of them:
 
@@ -63,17 +63,17 @@ The corresponding training commands for each dataset are given in the sections b
 
 | Task                  | Dataset   | Result                | Fine-tuned model & logs                                            | Training time | GPUs   |
 |-----------------------|-----------|-----------------------|--------------------------------------------------------------------|---------------|--------|
-| Speech Recognition    | MLS       | 30.33 WER             | [here](https://hf-mirror.com/anton-l/xtreme_s_xlsr_300m_mls/)     | 18:47:25      | 8xV100 |
+| Speech Recognition    | MLS       | 30.33 WER             | [here](https://huggingface.co/anton-l/xtreme_s_xlsr_300m_mls/)     | 18:47:25      | 8xV100 |
 | Speech Recognition    | VoxPopuli | -                     | -                                                                  | -             | -      |
 | Speech Recognition    | FLEURS    | -                     | -                                                                  | -             | -      |
 | Speech Translation    | CoVoST-2  | -                     | -                                                                  | -             | -      |
-| Speech Classification | Minds-14  | 90.15 F1 / 90.33 Acc. | [here](https://hf-mirror.com/anton-l/xtreme_s_xlsr_300m_minds14/) | 2:54:21       | 2xA100 |
+| Speech Classification | Minds-14  | 90.15 F1 / 90.33 Acc. | [here](https://huggingface.co/anton-l/xtreme_s_xlsr_300m_minds14/) | 2:54:21       | 2xA100 |
 | Speech Classification | FLEURS    | -                     | -                                                                  | -             | -      |
 | Speech Retrieval      | FLEURS    | -                     | -                                                                  | -             | -      |
 
 ### Speech Recognition with MLS
 
-The following command shows how to fine-tune the [XLS-R](https://hf-mirror.com/docs/transformers/main/model_doc/xls_r) model on [XTREME-S MLS](https://hf-mirror.com/datasets/google/xtreme_s#multilingual-librispeech-mls) using 8 GPUs in half-precision.
+The following command shows how to fine-tune the [XLS-R](https://huggingface.co/docs/transformers/main/model_doc/xls_r) model on [XTREME-S MLS](https://huggingface.co/datasets/google/xtreme_s#multilingual-librispeech-mls) using 8 GPUs in half-precision.
 
 ```bash
 python -m torch.distributed.launch \
@@ -117,7 +117,7 @@ On 8 V100 GPUs, this script should run in ~19 hours and yield a cross-entropy lo
 
 ### Speech Classification with Minds-14
 
-The following command shows how to fine-tune the [XLS-R](https://hf-mirror.com/docs/transformers/main/model_doc/xls_r) model on [XTREME-S MLS](https://hf-mirror.com/datasets/google/xtreme_s#intent-classification---minds-14) using 2 GPUs in half-precision.
+The following command shows how to fine-tune the [XLS-R](https://huggingface.co/docs/transformers/main/model_doc/xls_r) model on [XTREME-S MLS](https://huggingface.co/datasets/google/xtreme_s#intent-classification---minds-14) using 2 GPUs in half-precision.
 
 ```bash
 python -m torch.distributed.launch \

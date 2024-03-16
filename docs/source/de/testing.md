@@ -992,7 +992,7 @@ grep tiny tests examples
 ```
 
 Hier ist ein Beispiel für ein [Skript](https://github.com/huggingface/transformers/tree/main/scripts/fsmt/fsmt-make-tiny-model.py), das das winzige Modell erstellt hat
-[stas/tiny-wmt19-en-de](https://hf-mirror.com/stas/tiny-wmt19-en-de). Sie können es ganz einfach an Ihre eigene
+[stas/tiny-wmt19-en-de](https://huggingface.co/stas/tiny-wmt19-en-de). Sie können es ganz einfach an Ihre eigene
 Architektur Ihres Modells anpassen.
 
 Es ist leicht, die Laufzeit falsch zu messen, wenn zum Beispiel ein großes Modell heruntergeladen wird, aber wenn

@@ -26,12 +26,12 @@ State-of-the-art Machine Learning for [PyTorch](https://pytorch.org/), [TensorFl
 
 🤗 Transformers support framework interoperability between PyTorch, TensorFlow, and JAX. This provides the flexibility to use a different framework at each stage of a model's life; train a model in three lines of code in one framework, and load it for inference in another. Models can also be exported to a format like ONNX and TorchScript for deployment in production environments.
 
-Join the growing community on the [Hub](https://hf-mirror.com/models), [forum](https://discuss.hf-mirror.com/), or [Discord](https://discord.com/invite/JfAtkvEtRb) today!
+Join the growing community on the [Hub](https://huggingface.co/models), [forum](https://discuss.huggingface.co/), or [Discord](https://discord.com/invite/JfAtkvEtRb) today!
 
 ## If you are looking for custom support from the Hugging Face team
 
-<a target="_blank" href="https://hf-mirror.com/support">
-    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.hf-mirror.com/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+<a target="_blank" href="https://huggingface.co/support">
+    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.huggingface.co/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
 </a>
 
 ## Contents

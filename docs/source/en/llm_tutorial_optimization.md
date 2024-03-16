@@ -12,7 +12,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-Large Language Models (LLMs) such as GPT3/4, [Falcon](https://hf-mirror.com/tiiuae/falcon-40b), and [Llama](https://hf-mirror.com/meta-llama/Llama-2-70b-hf) are rapidly advancing in their ability to tackle human-centric tasks, establishing themselves as essential tools in modern knowledge-based industries.
+Large Language Models (LLMs) such as GPT3/4, [Falcon](https://huggingface.co/tiiuae/falcon-40b), and [Llama](https://huggingface.co/meta-llama/Llama-2-70b-hf) are rapidly advancing in their ability to tackle human-centric tasks, establishing themselves as essential tools in modern knowledge-based industries.
 Deploying these models in real-world tasks remains challenging, however:
 
 -   To exhibit near-human text understanding and generation capabilities, LLMs currently require to be composed of billions of parameters (see [Kaplan et al](https://arxiv.org/abs/2001.08361), [Wei et. al](https://arxiv.org/abs/2206.07682)). This consequently amplifies the memory demands for inference.
@@ -47,18 +47,18 @@ For shorter text inputs (less than 1024 tokens), the memory requirement for infe
 To give some examples of how much VRAM it roughly takes to load a model in bfloat16:
 
 -   **GPT3** requires 2 \* 175 GB = **350 GB** VRAM
--   [**Bloom**](https://hf-mirror.com/bigscience/bloom) requires 2 \* 176 GB = **352 GB** VRAM
--   [**Llama-2-70b**](https://hf-mirror.com/meta-llama/Llama-2-70b-hf) requires 2 \* 70 GB = **140 GB** VRAM
--   [**Falcon-40b**](https://hf-mirror.com/tiiuae/falcon-40b) requires 2 \* 40 GB = **80 GB** VRAM
--   [**MPT-30b**](https://hf-mirror.com/mosaicml/mpt-30b) requires 2 \* 30 GB = **60 GB** VRAM
--   [**bigcode/starcoder**](https://hf-mirror.com/bigcode/starcoder) requires 2 \* 15.5 = **31 GB** VRAM
+-   [**Bloom**](https://huggingface.co/bigscience/bloom) requires 2 \* 176 GB = **352 GB** VRAM
+-   [**Llama-2-70b**](https://huggingface.co/meta-llama/Llama-2-70b-hf) requires 2 \* 70 GB = **140 GB** VRAM
+-   [**Falcon-40b**](https://huggingface.co/tiiuae/falcon-40b) requires 2 \* 40 GB = **80 GB** VRAM
+-   [**MPT-30b**](https://huggingface.co/mosaicml/mpt-30b) requires 2 \* 30 GB = **60 GB** VRAM
+-   [**bigcode/starcoder**](https://huggingface.co/bigcode/starcoder) requires 2 \* 15.5 = **31 GB** VRAM
 
-As of writing this document, the largest GPU chip on the market is the A100 & H100 offering 80GB of VRAM. Most of the models listed before require more than 80GB just to be loaded and therefore necessarily require [tensor parallelism](https://hf-mirror.com/docs/transformers/perf_train_gpu_many#tensor-parallelism) and/or [pipeline parallelism](https://hf-mirror.com/docs/transformers/perf_train_gpu_many#naive-model-parallelism-vertical-and-pipeline-parallelism).
+As of writing this document, the largest GPU chip on the market is the A100 & H100 offering 80GB of VRAM. Most of the models listed before require more than 80GB just to be loaded and therefore necessarily require [tensor parallelism](https://huggingface.co/docs/transformers/perf_train_gpu_many#tensor-parallelism) and/or [pipeline parallelism](https://huggingface.co/docs/transformers/perf_train_gpu_many#naive-model-parallelism-vertical-and-pipeline-parallelism).
 
 🤗 Transformers does not support tensor parallelism out of the box as it requires the model architecture to be written in a specific way. If you're interested in writing models in a tensor-parallelism-friendly way, feel free to have a look at [the text-generation-inference library](https://github.com/huggingface/text-generation-inference/tree/main/server/text_generation_server/models/custom_modeling).
 
-Naive pipeline parallelism is supported out of the box. For this, simply load the model with `device="auto"` which will automatically place the different layers on the available GPUs as explained [here](https://hf-mirror.com/docs/accelerate/v0.22.0/en/concept_guides/big_model_inference).
-Note, however that while very effective, this naive pipeline parallelism does not tackle the issues of GPU idling. For this more advanced pipeline parallelism is required as explained [here](https://hf-mirror.com/docs/transformers/en/perf_train_gpu_many#naive-model-parallelism-vertical-and-pipeline-parallelism).
+Naive pipeline parallelism is supported out of the box. For this, simply load the model with `device="auto"` which will automatically place the different layers on the available GPUs as explained [here](https://huggingface.co/docs/accelerate/v0.22.0/en/concept_guides/big_model_inference).
+Note, however that while very effective, this naive pipeline parallelism does not tackle the issues of GPU idling. For this more advanced pipeline parallelism is required as explained [here](https://huggingface.co/docs/transformers/en/perf_train_gpu_many#naive-model-parallelism-vertical-and-pipeline-parallelism).
 
 If you have access to an 8 x 80GB A100 node, you could load BLOOM as follows
 
@@ -73,11 +73,11 @@ model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="aut
 
 By using `device_map="auto"` the attention layers would be equally distributed over all available GPUs.
 
-In this guide, we will use [bigcode/octocoder](https://hf-mirror.com/bigcode/octocoder) as it can be run on a single 40 GB A100 GPU device chip. Note that all memory and speed optimizations that we will apply going forward, are equally applicable to models that require model or tensor parallelism.
+In this guide, we will use [bigcode/octocoder](https://huggingface.co/bigcode/octocoder) as it can be run on a single 40 GB A100 GPU device chip. Note that all memory and speed optimizations that we will apply going forward, are equally applicable to models that require model or tensor parallelism.
 
 Since the model is loaded in bfloat16 precision, using our rule of thumb above, we would expect the memory requirement to run inference with `bigcode/octocoder` to be around 31 GB VRAM. Let's give it a try.
 
-We first load the model and tokenizer and then pass both to Transformers' [pipeline](https://hf-mirror.com/docs/transformers/main_classes/pipelines) object.
+We first load the model and tokenizer and then pass both to Transformers' [pipeline](https://huggingface.co/docs/transformers/main_classes/pipelines) object.
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
@@ -124,7 +124,7 @@ Note that if we had tried to run the model in full float32 precision, a whopping
 
 > Almost all models are trained in bfloat16 nowadays, there is no reason to run the model in full float32 precision if [your GPU supports bfloat16](https://discuss.pytorch.org/t/bfloat16-native-support/117155/5). Float32 won't give better inference results than the precision that was used to train the model.
 
-If you are unsure in which format the model weights are stored on the Hub, you can always look into the checkpoint's config under `"torch_dtype"`, *e.g.* [here](https://hf-mirror.com/meta-llama/Llama-2-7b-hf/blob/6fdf2e60f86ff2481f2241aaee459f85b5b0bbb9/config.json#L21). It is recommended to set the model to the same precision type as written in the config when loading with `from_pretrained(..., torch_dtype=...)` except when the original type is float32 in which case one can use both `float16` or `bfloat16` for inference.
+If you are unsure in which format the model weights are stored on the Hub, you can always look into the checkpoint's config under `"torch_dtype"`, *e.g.* [here](https://huggingface.co/meta-llama/Llama-2-7b-hf/blob/6fdf2e60f86ff2481f2241aaee459f85b5b0bbb9/config.json#L21). It is recommended to set the model to the same precision type as written in the config when loading with `from_pretrained(..., torch_dtype=...)` except when the original type is float32 in which case one can use both `float16` or `bfloat16` for inference.
 
 
 Let's define a `flush(...)` function to free all allocated memory so that we can accurately measure the peak allocated GPU memory.
@@ -277,13 +277,13 @@ Overall, we saw that running OctoCoder in 8-bit precision reduced the required G
 
 4-bit quantization allows the model to be run on GPUs such as RTX3090, V100, and T4 which are quite accessible for most people.
 
-For more information on quantization and to see how one can quantize models to require even less GPU VRAM memory than 4-bit, we recommend looking into the [`AutoGPTQ`](https://hf-mirror.com/docs/transformers/main/en/main_classes/quantization#autogptq-integration%60) implementation.
+For more information on quantization and to see how one can quantize models to require even less GPU VRAM memory than 4-bit, we recommend looking into the [`AutoGPTQ`](https://huggingface.co/docs/transformers/main/en/main_classes/quantization#autogptq-integration%60) implementation.
 
 > As a conclusion, it is important to remember that model quantization trades improved memory efficiency against accuracy and in some cases inference time.
 
 If GPU memory is not a constraint for your use case, there is often no need to look into quantization. However many GPUs simply can't run LLMs without quantization methods and in this case, 4-bit and 8-bit quantization schemes are extremely useful tools.
 
-For more in-detail usage information, we strongly recommend taking a look at the [Transformers Quantization Docs](https://hf-mirror.com/docs/transformers/main_classes/quantization#general-usage).
+For more in-detail usage information, we strongly recommend taking a look at the [Transformers Quantization Docs](https://huggingface.co/docs/transformers/main_classes/quantization#general-usage).
 Next, let's look into how we can improve computational and memory efficiency by using better algorithms and an improved model architecture.
 
 ## 2. Flash Attention
@@ -441,7 +441,7 @@ flush()
 ```
 
 For comparison, let's run the same function, but enable Flash Attention instead.
-To do so, we convert the model to [BetterTransformer](https://hf-mirror.com/docs/optimum/bettertransformer/overview) and by doing so enabling PyTorch's [SDPA self-attention](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention) which in turn is able to use Flash Attention.
+To do so, we convert the model to [BetterTransformer](https://huggingface.co/docs/optimum/bettertransformer/overview) and by doing so enabling PyTorch's [SDPA self-attention](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention) which in turn is able to use Flash Attention.
 
 ```python
 model.to_bettertransformer()
@@ -485,7 +485,7 @@ We can observe that we only use roughly 100MB more GPU memory when passing a ver
 flush()
 ```
 
-For more information on how to use Flash Attention, please have a look at [this doc page](https://hf-mirror.com/docs/transformers/en/perf_infer_gpu_one#flashattention-2).
+For more information on how to use Flash Attention, please have a look at [this doc page](https://huggingface.co/docs/transformers/en/perf_infer_gpu_one#flashattention-2).
 
 ## 3. Architectural Innovations
 
@@ -554,7 +554,7 @@ $$ \mathbf{\hat{q}}_i^T \mathbf{\hat{x}}_j = \mathbf{{q}}_i^T \mathbf{R}_{\theta
 
 *RoPE* is used in multiple of today's most important LLMs, such as:
 
--   [**Falcon**](https://hf-mirror.com/tiiuae/falcon-40b)
+-   [**Falcon**](https://huggingface.co/tiiuae/falcon-40b)
 -   [**Llama**](https://arxiv.org/abs/2302.13971)
 -   [**PaLM**](https://arxiv.org/abs/2204.02311)
 
@@ -566,8 +566,8 @@ As shown in the [ALiBi](https://arxiv.org/abs/2108.12409) paper, this simple rel
 
 *ALiBi* is used in multiple of today's most important LLMs, such as:
 
--   [**MPT**](https://hf-mirror.com/mosaicml/mpt-30b)
--   [**BLOOM**](https://hf-mirror.com/bigscience/bloom)
+-   [**MPT**](https://huggingface.co/mosaicml/mpt-30b)
+-   [**BLOOM**](https://huggingface.co/bigscience/bloom)
 
 Both *RoPE* and *ALiBi* position encodings can extrapolate to input lengths not seen during training whereas it has been shown that extrapolation works much better out-of-the-box for *ALiBi* as compared to *RoPE*.
 For ALiBi, one simply increases the values of the lower triangular position matrix to match the length of the input sequence.
@@ -584,7 +584,7 @@ In conclusion, LLMs that are intended to be deployed in tasks that require handl
 
 Auto-regressive text generation with LLMs works by iteratively putting in an input sequence, sampling the next token, appending the next token to the input sequence, and continuing to do so until the LLM produces a token that signifies that the generation has finished.
 
-Please have a look at [Transformer's Generate Text Tutorial](https://hf-mirror.com/docs/transformers/llm_tutorial#generate-text) to get a more visual explanation of how auto-regressive generation works.
+Please have a look at [Transformer's Generate Text Tutorial](https://huggingface.co/docs/transformers/llm_tutorial#generate-text) to get a more visual explanation of how auto-regressive generation works.
 
 Let's run a quick code snippet to show how auto-regressive works in practice. We will simply take the most likely next token via `torch.argmax`.
 
@@ -614,7 +614,7 @@ shape of input_ids torch.Size([1, 25])
 
 As we can see every time we increase the text input tokens by the just sampled token.
 
-With very few exceptions, LLMs are trained using the [causal language modeling objective](https://hf-mirror.com/docs/transformers/tasks/language_modeling#causal-language-modeling) and therefore mask the upper triangle matrix of the attention score - this is why in the two diagrams above the attention scores are left blank (*a.k.a* have 0 probability). For a quick recap on causal language modeling you can refer to the [*Illustrated Self Attention blog*](https://jalammar.github.io/illustrated-gpt2/#part-2-illustrated-self-attention).
+With very few exceptions, LLMs are trained using the [causal language modeling objective](https://huggingface.co/docs/transformers/tasks/language_modeling#causal-language-modeling) and therefore mask the upper triangle matrix of the attention score - this is why in the two diagrams above the attention scores are left blank (*a.k.a* have 0 probability). For a quick recap on causal language modeling you can refer to the [*Illustrated Self Attention blog*](https://jalammar.github.io/illustrated-gpt2/#part-2-illustrated-self-attention).
 
 As a consequence, tokens *never* depend on previous tokens, more specifically the \\( \mathbf{q}_i \\) vector is never put in relation with any key, values vectors \\( \mathbf{k}_j, \mathbf{v}_j \\) if \\( j > i \\) . Instead \\( \mathbf{q}_i \\) only attends to previous key-value vectors \\( \mathbf{k}_{m < i}, \mathbf{v}_{m < i} \text{ , for } m \in \{0, \ldots i - 1\} \\). In order to reduce unnecessary computation, one can therefore cache each layer's key-value vectors for all previous timesteps.
 
@@ -662,7 +662,7 @@ Using the key-value cache has two advantages:
 -   Significant increase in computational efficiency as less computations are performed compared to computing the full \\( \mathbf{QK}^T \\) matrix. This leads to an increase in inference speed
 -   The maximum required memory is not increased quadratically with the number of generated tokens, but only increases linearly.
 
-> One should *always* make use of the key-value cache as it leads to identical results and a significant speed-up for longer input sequences. Transformers has the key-value cache enabled by default when making use of the text pipeline or the [`generate` method](https://hf-mirror.com/docs/transformers/main_classes/text_generation).
+> One should *always* make use of the key-value cache as it leads to identical results and a significant speed-up for longer input sequences. Transformers has the key-value cache enabled by default when making use of the text pipeline or the [`generate` method](https://huggingface.co/docs/transformers/main_classes/text_generation).
 
 <Tip warning={true}>
 
@@ -754,10 +754,10 @@ The important part to understand here is that reducing the number of key-value a
 
 MQA has seen wide adoption by the community and is now used by many of the most popular LLMs:
 
--   [**Falcon**](https://hf-mirror.com/tiiuae/falcon-40b)
+-   [**Falcon**](https://huggingface.co/tiiuae/falcon-40b)
 -   [**PaLM**](https://arxiv.org/abs/2204.02311)
--   [**MPT**](https://hf-mirror.com/mosaicml/mpt-30b)
--   [**BLOOM**](https://hf-mirror.com/bigscience/bloom)
+-   [**MPT**](https://huggingface.co/mosaicml/mpt-30b)
+-   [**BLOOM**](https://huggingface.co/bigscience/bloom)
 
 Also, the checkpoint used in this notebook - `bigcode/octocoder` - makes use of MQA.
 
@@ -768,14 +768,14 @@ Also, the checkpoint used in this notebook - `bigcode/octocoder` - makes use of 
 Moreover, the authors of GQA found out that existing model checkpoints can be *uptrained* to have a GQA architecture with as little as 5% of the original pre-training compute. While 5% of the original pre-training compute can still be a massive amount, GQA *uptraining* allows existing checkpoints to be useful for longer input sequences.
 
 GQA was only recently proposed which is why there is less adoption at the time of writing this notebook.
-The most notable application of GQA is [Llama-v2](https://hf-mirror.com/meta-llama/Llama-2-70b-hf).
+The most notable application of GQA is [Llama-v2](https://huggingface.co/meta-llama/Llama-2-70b-hf).
 
 > As a conclusion, it is strongly recommended to make use of either GQA or MQA if the LLM is deployed with auto-regressive decoding and is required to handle large input sequences as is the case for example for chat.
 
 
 ## Conclusion
 
-The research community is constantly coming up with new, nifty ways to speed up inference time for ever-larger LLMs. As an example, one such promising research direction is [speculative decoding](https://arxiv.org/abs/2211.17192) where "easy tokens" are generated by smaller, faster language models and only "hard tokens" are generated by the LLM itself. Going into more detail is out of the scope of this notebook, but can be read upon in this [nice blog post](https://hf-mirror.com/blog/assisted-generation).
+The research community is constantly coming up with new, nifty ways to speed up inference time for ever-larger LLMs. As an example, one such promising research direction is [speculative decoding](https://arxiv.org/abs/2211.17192) where "easy tokens" are generated by smaller, faster language models and only "hard tokens" are generated by the LLM itself. Going into more detail is out of the scope of this notebook, but can be read upon in this [nice blog post](https://huggingface.co/blog/assisted-generation).
 
-The reason massive LLMs such as GPT3/4, Llama-2-70b, Claude, PaLM can run so quickly in chat-interfaces such as [Hugging Face Chat](https://hf-mirror.com/chat/) or ChatGPT is to a big part thanks to the above-mentioned improvements in precision, algorithms, and architecture.
+The reason massive LLMs such as GPT3/4, Llama-2-70b, Claude, PaLM can run so quickly in chat-interfaces such as [Hugging Face Chat](https://huggingface.co/chat/) or ChatGPT is to a big part thanks to the above-mentioned improvements in precision, algorithms, and architecture.
 Going forward, accelerators such as GPUs, TPUs, etc... will only get faster and allow for more memory, but one should nevertheless always make sure to use the best available algorithms and architectures to get the most bang for your buck 🤗

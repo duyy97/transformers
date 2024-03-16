@@ -27,7 +27,7 @@ Summarization creates a shorter version of a document or an article that capture
 
 This guide will show you how to:
 
-1. Finetune [T5](https://hf-mirror.com/google-t5/t5-small) on the California state bill subset of the [BillSum](https://hf-mirror.com/datasets/billsum) dataset for abstractive summarization.
+1. Finetune [T5](https://huggingface.co/google-t5/t5-small) on the California state bill subset of the [BillSum](https://huggingface.co/datasets/billsum) dataset for abstractive summarization.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -145,7 +145,7 @@ Now create a batch of examples using [`DataCollatorForSeq2Seq`]. It's more effic
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [ROUGE](https://hf-mirror.com/spaces/evaluate-metric/rouge) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [ROUGE](https://huggingface.co/spaces/evaluate-metric/rouge) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate

@@ -10,12 +10,12 @@ way which enables simple and efficient model parallelism.
 
 `run_wav2vec2_pretrain_flax.py` is a lightweight example of how to download and preprocess a dataset from the 🤗 Datasets library or use your own files (jsonlines or csv), then pretrain the wav2vec2 architectures above on it.
 
-For custom datasets in `jsonlines` format please see: [the Datasets documentation](https://hf-mirror.com/docs/datasets/loading_datasets#json-files) and you also will find examples of these below.
+For custom datasets in `jsonlines` format please see: [the Datasets documentation](https://huggingface.co/docs/datasets/loading_datasets#json-files) and you also will find examples of these below.
 
 Let's start by creating a model repository to save the trained model and logs.
 Here we call the model `"wav2vec2-base-robust"`, but you can change the model name as you like.
 
-You can do this either directly on [hf-mirror.com](https://hf-mirror.com/new) (assuming that
+You can do this either directly on [huggingface.co](https://huggingface.co/new) (assuming that
 you are logged in) or via the command line:
 
 ```bash
@@ -25,7 +25,7 @@ huggingface-cli repo create wav2vec2-base-robust
 Next we clone the model repository to add the tokenizer and model files.
 
 ```bash
-git clone https://hf-mirror.com/<your-username>/wav2vec2-base-robust
+git clone https://huggingface.co/<your-username>/wav2vec2-base-robust
 ```
 
 To ensure that all tensorboard traces will be uploaded correctly, we need to 
@@ -81,7 +81,7 @@ config.save_pretrained(model_dir)
 Before we can start the training, we need to define 
 a feature extractor that takes care of normalization, etc...
 
-Here we can also re-use the feature extractor of [wav2vec2-base-960h](https://hf-mirror.com/facebook/wav2vec2-base) while making sure that padding is allowed.
+Here we can also re-use the feature extractor of [wav2vec2-base-960h](https://huggingface.co/facebook/wav2vec2-base) while making sure that padding is allowed.
 
 
 ```python

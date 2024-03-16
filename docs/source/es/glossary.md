@@ -155,7 +155,7 @@ Para modelos que utilizan la función [`apply_chunking_to_forward`], el `chunk_s
 
 El ajuste fino es una forma de transferencia de aprendizaje que implica tomar un modelo entrenado previamente, congelar sus pesos y reemplazar la capa de salida con una nueva [cabecera de modelo](#head) recién añadida. La cabecera del modelo se entrena en tu conjunto de datos objetivo.
 
-Consulta el tutorial [Ajustar finamente un modelo pre-entrenado](https://hf-mirror.com/docs/transformers/training) para obtener más detalles y aprende cómo ajustar finamente modelos con 🤗 Transformers.
+Consulta el tutorial [Ajustar finamente un modelo pre-entrenado](https://huggingface.co/docs/transformers/training) para obtener más detalles y aprende cómo ajustar finamente modelos con 🤗 Transformers.
 
 ## H
 
@@ -175,7 +175,7 @@ Los modelos de Transformers basados en visión dividen una imagen en parches má
 
 ### inference
 
-La inferencia es el proceso de evaluar un modelo en nuevos datos después de completar el entrenamiento. Consulta el tutorial [Pipeline for inference](https://hf-mirror.com/docs/transformers/pipeline_tutorial) para aprender cómo realizar inferencias con 🤗 Transformers.
+La inferencia es el proceso de evaluar un modelo en nuevos datos después de completar el entrenamiento. Consulta el tutorial [Pipeline for inference](https://huggingface.co/docs/transformers/pipeline_tutorial) para aprender cómo realizar inferencias con 🤗 Transformers.
 
 ### input IDs
 
@@ -288,7 +288,7 @@ Una tarea que combina textos con otro tipo de entradas (por ejemplo: imágenes).
 
 ### Natural language generation (NLG)
 
-Todas las tareas relacionadas con la generación de texto (por ejemplo: [Escribe con Transformers](https://transformer.hf-mirror.com/) o traducción).
+Todas las tareas relacionadas con la generación de texto (por ejemplo: [Escribe con Transformers](https://transformer.huggingface.co/) o traducción).
 
 ### Natural language processing (NLP)
 
@@ -305,7 +305,7 @@ texto completo o palabras individuales).
 
 Un pipeline en 🤗 Transformers es una abstracción que se refiere a una serie de pasos que se ejecutan en un orden específico para preprocesar y transformar datos y devolver una predicción de un modelo. Algunas etapas de ejemplo que se encuentran en un pipeline pueden ser el preprocesamiento de datos, la extracción de características y la normalización.
 
-Para obtener más detalles, consulta [Pipelines para inferencia](https://hf-mirror.com/docs/transformers/pipeline_tutorial).
+Para obtener más detalles, consulta [Pipelines para inferencia](https://huggingface.co/docs/transformers/pipeline_tutorial).
 
 ### PipelineParallel (PP)
 
@@ -329,7 +329,7 @@ Los embeddings de posición absolutas se seleccionan en el rango `[0, config.max
 
 ### preprocessing
 
-La tarea de preparar datos crudos en un formato que pueda ser fácilmente consumido por modelos de aprendizaje automático. Por ejemplo, el texto se preprocesa típicamente mediante la tokenización. Para tener una mejor idea de cómo es el preprocesamiento para otros tipos de entrada, consulta el tutorial [Pre-procesar](https://hf-mirror.com/docs/transformers/preprocessing).
+La tarea de preparar datos crudos en un formato que pueda ser fácilmente consumido por modelos de aprendizaje automático. Por ejemplo, el texto se preprocesa típicamente mediante la tokenización. Para tener una mejor idea de cómo es el preprocesamiento para otros tipos de entrada, consulta el tutorial [Pre-procesar](https://huggingface.co/docs/transformers/preprocessing).
 
 ### pretrained model
 

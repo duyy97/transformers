@@ -20,27 +20,27 @@ En [Lo que 🤗 Transformers puede hacer](task_summary), aprendiste sobre el pro
 
 Para explicar cómo se resuelven las tareas, caminaremos a través de lo que sucede dentro del modelo para generar predicciones útiles.
 
-- [Wav2Vec2](https://hf-mirror.com/docs/transformers/model_doc/wav2vec2) para clasificación de audio y reconocimiento automático de habla (ASR)
-- [Transformador de Visión (ViT)](https://hf-mirror.com/docs/transformers/model_doc/vit) y [ConvNeXT](https://hf-mirror.com/docs/transformers/model_doc/convnext) para clasificación de imágenes
-- [DETR](https://hf-mirror.com/docs/transformers/model_doc/detr) para detección de objetos
-- [Mask2Former](https://hf-mirror.com/docs/transformers/model_doc/mask2former) para segmentación de imagen
-- [GLPN](https://hf-mirror.com/docs/transformers/model_doc/glpn) para estimación de profundidad
-- [BERT](https://hf-mirror.com/docs/transformers/model_doc/bert) para tareas de NLP como clasificación de texto, clasificación de tokens y preguntas y respuestas que utilizan un codificador
-- [GPT2](https://hf-mirror.com/docs/transformers/model_doc/gpt2) para tareas de NLP como generación de texto que utilizan un descodificador
-- [BART](https://hf-mirror.com/docs/transformers/model_doc/bart) para tareas de NLP como resumen y traducción que utilizan un codificador-descodificador
+- [Wav2Vec2](https://huggingface.co/docs/transformers/model_doc/wav2vec2) para clasificación de audio y reconocimiento automático de habla (ASR)
+- [Transformador de Visión (ViT)](https://huggingface.co/docs/transformers/model_doc/vit) y [ConvNeXT](https://huggingface.co/docs/transformers/model_doc/convnext) para clasificación de imágenes
+- [DETR](https://huggingface.co/docs/transformers/model_doc/detr) para detección de objetos
+- [Mask2Former](https://huggingface.co/docs/transformers/model_doc/mask2former) para segmentación de imagen
+- [GLPN](https://huggingface.co/docs/transformers/model_doc/glpn) para estimación de profundidad
+- [BERT](https://huggingface.co/docs/transformers/model_doc/bert) para tareas de NLP como clasificación de texto, clasificación de tokens y preguntas y respuestas que utilizan un codificador
+- [GPT2](https://huggingface.co/docs/transformers/model_doc/gpt2) para tareas de NLP como generación de texto que utilizan un descodificador
+- [BART](https://huggingface.co/docs/transformers/model_doc/bart) para tareas de NLP como resumen y traducción que utilizan un codificador-descodificador
 
 <Tip>
 
-Antes de continuar, es bueno tener un conocimiento básico de la arquitectura original del Transformer. Saber cómo funcionan los codificadores, decodificadores y la atención te ayudará a entender cómo funcionan los diferentes modelos de Transformer. Si estás empezando o necesitas repasar, ¡echa un vistazo a nuestro [curso](https://hf-mirror.com/course/chapter1/4?fw=pt) para obtener más información!
+Antes de continuar, es bueno tener un conocimiento básico de la arquitectura original del Transformer. Saber cómo funcionan los codificadores, decodificadores y la atención te ayudará a entender cómo funcionan los diferentes modelos de Transformer. Si estás empezando o necesitas repasar, ¡echa un vistazo a nuestro [curso](https://huggingface.co/course/chapter1/4?fw=pt) para obtener más información!
 
 </Tip>
 
 ## Habla y audio
 
-[Wav2Vec2](https://hf-mirror.com/docs/transformers/model_doc/wav2vec2) es un modelo auto-supervisado preentrenado en datos de habla no etiquetados y ajustado en datos etiquetados para clasificación de audio y reconocimiento automático de voz. 
+[Wav2Vec2](https://huggingface.co/docs/transformers/model_doc/wav2vec2) es un modelo auto-supervisado preentrenado en datos de habla no etiquetados y ajustado en datos etiquetados para clasificación de audio y reconocimiento automático de voz. 
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
 </div>
 
 Este modelo tiene cuatro componentes principales:
@@ -59,7 +59,7 @@ Este modelo tiene cuatro componentes principales:
 
 Para usar el modelo preentrenado para la clasificación de audio, añade una capa de clasificación de secuencia encima del modelo base de Wav2Vec2. La capa de clasificación es una capa lineal que acepta los estados ocultos del codificador. Los estados ocultos representan las características aprendidas de cada fotograma de audio, que pueden tener longitudes variables. Para crear un vector de longitud fija, primero se agrupan los estados ocultos y luego se transforman en logits sobre las etiquetas de clase. La pérdida de entropía cruzada se calcula entre los logits y el objetivo para encontrar la clase más probable.
 
-¿Listo para probar la clasificación de audio? ¡Consulta nuestra guía completa de [clasificación de audio](https://hf-mirror.com/docs/transformers/tasks/audio_classification) para aprender cómo ajustar Wav2Vec2 y usarlo para inferencia!
+¿Listo para probar la clasificación de audio? ¡Consulta nuestra guía completa de [clasificación de audio](https://huggingface.co/docs/transformers/tasks/audio_classification) para aprender cómo ajustar Wav2Vec2 y usarlo para inferencia!
 
 ### Reconocimiento automático de voz
 
@@ -72,11 +72,11 @@ Para usar el modelo preentrenado para el reconocimiento automático de voz, aña
 Hay dos formas de abordar las tareas de visión por computadora:
 
 1. Dividir una imagen en una secuencia de parches y procesarlos en paralelo con un Transformer.
-2. Utilizar una CNN moderna, como [ConvNeXT](https://hf-mirror.com/docs/transformers/model_doc/convnext), que se basa en capas convolucionales pero adopta diseños de redes modernas.
+2. Utilizar una CNN moderna, como [ConvNeXT](https://huggingface.co/docs/transformers/model_doc/convnext), que se basa en capas convolucionales pero adopta diseños de redes modernas.
 
 <Tip>
 
-Un tercer enfoque combina Transformers con convoluciones (por ejemplo, [Convolutional Vision Transformer](https://hf-mirror.com/docs/transformers/model_doc/cvt) o [LeViT](https://hf-mirror.com/docs/transformers/model_doc/levit)). No discutiremos estos porque simplemente combinan los dos enfoques que examinamos aquí.
+Un tercer enfoque combina Transformers con convoluciones (por ejemplo, [Convolutional Vision Transformer](https://huggingface.co/docs/transformers/model_doc/cvt) o [LeViT](https://huggingface.co/docs/transformers/model_doc/levit)). No discutiremos estos porque simplemente combinan los dos enfoques que examinamos aquí.
 
 </Tip>
 
@@ -88,10 +88,10 @@ ViT y ConvNeXT pueden usarse ambos para la clasificación de imágenes; la difer
 
 #### Transformer
 
-[ViT](https://hf-mirror.com/docs/transformers/model_doc/vit) reemplaza completamente las convoluciones con una arquitectura de Transformer pura. Si estás familiarizado con el Transformer original, entonces ya estás en el camino para entender ViT.
+[ViT](https://huggingface.co/docs/transformers/model_doc/vit) reemplaza completamente las convoluciones con una arquitectura de Transformer pura. Si estás familiarizado con el Transformer original, entonces ya estás en el camino para entender ViT.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
 </div>
 
 El cambio principal que introdujo ViT fue en cómo se alimentan las imágenes a un Transformer:
@@ -114,10 +114,10 @@ Esta sección explica brevemente las convoluciones, pero sería útil tener un e
 
 </Tip>
 
-[ConvNeXT](https://hf-mirror.com/docs/transformers/model_doc/convnext) es una arquitectura de CNN que adopta diseños de redes nuevas y modernas para mejorar el rendimiento. Sin embargo, las convoluciones siguen siendo el núcleo del modelo. Desde una perspectiva de alto nivel, una [convolución](glossary#convolution) es una operación donde una matriz más pequeña (*kernel*) se multiplica por una pequeña ventana de píxeles de la imagen. Esta calcula algunas características de ella, como una textura particular o la curvatura de una línea. Luego, se desliza hacia la siguiente ventana de píxeles; la distancia que recorre la convolución se conoce como el *stride*. 
+[ConvNeXT](https://huggingface.co/docs/transformers/model_doc/convnext) es una arquitectura de CNN que adopta diseños de redes nuevas y modernas para mejorar el rendimiento. Sin embargo, las convoluciones siguen siendo el núcleo del modelo. Desde una perspectiva de alto nivel, una [convolución](glossary#convolution) es una operación donde una matriz más pequeña (*kernel*) se multiplica por una pequeña ventana de píxeles de la imagen. Esta calcula algunas características de ella, como una textura particular o la curvatura de una línea. Luego, se desliza hacia la siguiente ventana de píxeles; la distancia que recorre la convolución se conoce como el *stride*. 
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
 </div>
 
 <small>Una convolución básica sin relleno ni paso, tomada de <a href="https://arxiv.org/abs/1603.07285">Una guía para la aritmética de convoluciones para el aprendizaje profundo.</a></small>
@@ -125,7 +125,7 @@ Esta sección explica brevemente las convoluciones, pero sería útil tener un e
 Puedes alimentar esta salida a otra capa convolucional, y con cada capa sucesiva, la red aprende cosas más complejas y abstractas como perros calientes o cohetes. Entre capas convolucionales, es común añadir una capa de agrupación para reducir la dimensionalidad y hacer que el modelo sea más robusto a las variaciones de la posición de una característica.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
 </div>
 
 ConvNeXT moderniza una CNN de cinco maneras:
@@ -144,10 +144,10 @@ La salida de los bloques convolucionales se pasa a una cabecera de clasificació
 
 ### Object detection
 
-[DETR](https://hf-mirror.com/docs/transformers/model_doc/detr), *DEtection TRansformer*, es un modelo de detección de objetos de un extremo a otro que combina una CNN con un codificador-decodificador Transformer.
+[DETR](https://huggingface.co/docs/transformers/model_doc/detr), *DEtection TRansformer*, es un modelo de detección de objetos de un extremo a otro que combina una CNN con un codificador-decodificador Transformer.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
 </div>
 
 1. Una CNN preentrenada *backbone* toma una imagen, representada por sus valores de píxeles, y crea un mapa de características de baja resolución de la misma. A continuación, se aplica una convolución 1x1 al mapa de características para reducir la dimensionalidad y se crea un nuevo mapa de características con una representación de imagen de alto nivel. Dado que el Transformer es un modelo secuencial, el mapa de características se aplana en una secuencia de vectores de características que se combinan con incrustaciones posicionales.
@@ -160,19 +160,19 @@ La salida de los bloques convolucionales se pasa a una cabecera de clasificació
 
 Se añade una cabecera de detección de objetos encima de DETR para encontrar la etiqueta de clase y las coordenadas del cuadro delimitador. Hay dos componentes en la cabecera de detección de objetos: una capa lineal para transformar los estados ocultos del decodificador en logits sobre las etiquetas de clase, y una MLP para predecir el cuadro delimitador.
 
-¿Listo para probar la detección de objetos? ¡Consulta nuestra guía completa de [detección de objetos](https://hf-mirror.com/docs/transformers/tasks/object_detection) para aprender cómo ajustar DETR y usarlo para inferencia!
+¿Listo para probar la detección de objetos? ¡Consulta nuestra guía completa de [detección de objetos](https://huggingface.co/docs/transformers/tasks/object_detection) para aprender cómo ajustar DETR y usarlo para inferencia!
 
 ### Segmentación de imágenes
 
-[Mask2Former](https://hf-mirror.com/docs/transformers/model_doc/mask2former) es una arquitectura universal para resolver todos los tipos de tareas de segmentación de imágenes. Los modelos de segmentación tradicionales suelen estar adaptados a una tarea particular de segmentación de imágenes, como la segmentación de instancias, semántica o panóptica. Mask2Former enmarca cada una de esas tareas como un problema de *clasificación de máscaras*. La clasificación de máscaras agrupa píxeles en *N* segmentos, y predice *N* máscaras y su etiqueta de clase correspondiente para una imagen dada. Explicaremos cómo funciona Mask2Former en esta sección, y luego podrás probar el ajuste fino de SegFormer al final.
+[Mask2Former](https://huggingface.co/docs/transformers/model_doc/mask2former) es una arquitectura universal para resolver todos los tipos de tareas de segmentación de imágenes. Los modelos de segmentación tradicionales suelen estar adaptados a una tarea particular de segmentación de imágenes, como la segmentación de instancias, semántica o panóptica. Mask2Former enmarca cada una de esas tareas como un problema de *clasificación de máscaras*. La clasificación de máscaras agrupa píxeles en *N* segmentos, y predice *N* máscaras y su etiqueta de clase correspondiente para una imagen dada. Explicaremos cómo funciona Mask2Former en esta sección, y luego podrás probar el ajuste fino de SegFormer al final.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
 </div>
 
 Hay tres componentes principales en Mask2Former:
 
-1. Un [backbone Swin](https://hf-mirror.com/docs/transformers/model_doc/swin) acepta una imagen y crea un mapa de características de imagen de baja resolución a partir de 3 convoluciones consecutivas de 3x3.
+1. Un [backbone Swin](https://huggingface.co/docs/transformers/model_doc/swin) acepta una imagen y crea un mapa de características de imagen de baja resolución a partir de 3 convoluciones consecutivas de 3x3.
 
 2. El mapa de características se pasa a un *decodificador de píxeles* que aumenta gradualmente las características de baja resolución en incrustaciones de alta resolución por píxel. De hecho, el decodificador de píxeles genera características multiescala (contiene características de baja y alta resolución) con resoluciones de 1/32, 1/16 y 1/8 de la imagen original.
 
@@ -182,14 +182,14 @@ Hay tres componentes principales en Mask2Former:
 
     Las predicciones de máscara se generan combinando las incrustaciones de píxeles con los estados ocultos finales del decodificador. La pérdida de entropía cruzada sigmoidea y de la pérdida DICE se calcula entre los logits y la máscara de verdad básica para encontrar la máscara más probable.
 
-¿Listo para probar la detección de objetos? ¡Consulta nuestra guía completa de [segmentación de imágenes](https://hf-mirror.com/docs/transformers/tasks/semantic_segmentation) para aprender cómo ajustar SegFormer y usarlo para inferencia!
+¿Listo para probar la detección de objetos? ¡Consulta nuestra guía completa de [segmentación de imágenes](https://huggingface.co/docs/transformers/tasks/semantic_segmentation) para aprender cómo ajustar SegFormer y usarlo para inferencia!
 
 ### Estimación de profundidad
 
-[GLPN](https://hf-mirror.com/docs/transformers/model_doc/glpn), *Global-Local Path Network*, es un Transformer para la estimación de profundidad que combina un codificador [SegFormer](https://hf-mirror.com/docs/transformers/model_doc/segformer) con un decodificador ligero.
+[GLPN](https://huggingface.co/docs/transformers/model_doc/glpn), *Global-Local Path Network*, es un Transformer para la estimación de profundidad que combina un codificador [SegFormer](https://huggingface.co/docs/transformers/model_doc/segformer) con un decodificador ligero.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
 </div>
 
 1. Al igual que ViT, una imagen se divide en una secuencia de parches, excepto que estos parches de imagen son más pequeños. Esto es mejor para tareas de predicción densa como la segmentación o la estimación de profundidad. Los parches de imagen se transforman en incrustaciones de parches (ver la sección de [clasificación de imágenes](#clasificación-de-imágenes) para más detalles sobre cómo se crean las incrustaciones de parches), que se alimentan al codificador.
@@ -204,9 +204,9 @@ El Transformer fue diseñado inicialmente para la traducción automática, y des
 
 ### Clasificación de texto
 
-[BERT](https://hf-mirror.com/docs/transformers/model_doc/bert) es un modelo que solo tiene codificador y es el primer modelo en implementar efectivamente la bidireccionalidad profunda para aprender representaciones más ricas del texto al atender a las palabras en ambos lados.
+[BERT](https://huggingface.co/docs/transformers/model_doc/bert) es un modelo que solo tiene codificador y es el primer modelo en implementar efectivamente la bidireccionalidad profunda para aprender representaciones más ricas del texto al atender a las palabras en ambos lados.
 
-1. BERT utiliza la tokenización [WordPiece](https://hf-mirror.com/docs/transformers/tokenizer_summary#wordpiece) para generar una incrustación de tokens del texto. Para diferenciar entre una sola oración y un par de oraciones, se agrega un token especial `[SEP]` para diferenciarlos. También se agrega un token especial `[CLS]` al principio de cada secuencia de texto. La salida final con el token `[CLS]` se utiliza como la entrada a la cabeza de clasificación para tareas de clasificación. BERT también agrega una incrustación de segmento para indicar si un token pertenece a la primera o segunda oración en un par de oraciones.
+1. BERT utiliza la tokenización [WordPiece](https://huggingface.co/docs/transformers/tokenizer_summary#wordpiece) para generar una incrustación de tokens del texto. Para diferenciar entre una sola oración y un par de oraciones, se agrega un token especial `[SEP]` para diferenciarlos. También se agrega un token especial `[CLS]` al principio de cada secuencia de texto. La salida final con el token `[CLS]` se utiliza como la entrada a la cabeza de clasificación para tareas de clasificación. BERT también agrega una incrustación de segmento para indicar si un token pertenece a la primera o segunda oración en un par de oraciones.
 
 2. BERT se preentrena con dos objetivos: modelar el lenguaje enmascarado y predecir de próxima oración. En el modelado de lenguaje enmascarado, un cierto porcentaje de los tokens de entrada se enmascaran aleatoriamente, y el modelo necesita predecir estos. Esto resuelve el problema de la bidireccionalidad, donde el modelo podría hacer trampa y ver todas las palabras y "predecir" la siguiente palabra. Los estados ocultos finales de los tokens de máscara predichos se pasan a una red feedforward con una softmax sobre el vocabulario para predecir la palabra enmascarada.
 
@@ -216,13 +216,13 @@ El Transformer fue diseñado inicialmente para la traducción automática, y des
 
 Para usar el modelo preentrenado para clasificación de texto, se añade una cabecera de clasificación de secuencia encima del modelo base de BERT. La cabecera de clasificación de secuencia es una capa lineal que acepta los estados ocultos finales y realiza una transformación lineal para convertirlos en logits. Se calcula la pérdida de entropía cruzada entre los logits y el objetivo para encontrar la etiqueta más probable.
 
-¿Listo para probar la clasificación de texto? ¡Consulta nuestra guía completa de [clasificación de texto](https://hf-mirror.com/docs/transformers/tasks/sequence_classification) para aprender cómo ajustar DistilBERT y usarlo para inferencia!
+¿Listo para probar la clasificación de texto? ¡Consulta nuestra guía completa de [clasificación de texto](https://huggingface.co/docs/transformers/tasks/sequence_classification) para aprender cómo ajustar DistilBERT y usarlo para inferencia!
 
 ### Clasificación de tokens
 
 Para usar BERT en tareas de clasificación de tokens como el reconocimiento de entidades nombradas (NER), añade una cabecera de clasificación de tokens encima del modelo base de BERT. La cabecera de clasificación de tokens es una capa lineal que acepta los estados ocultos finales y realiza una transformación lineal para convertirlos en logits. Se calcula la pérdida de entropía cruzada entre los logits y cada token para encontrar la etiqueta más probable.
 
-¿Listo para probar la clasificación de tokens? ¡Consulta nuestra guía completa de [clasificación de tokens](https://hf-mirror.com/docs/transformers/tasks/token_classification) para aprender cómo ajustar DistilBERT y usarlo para inferencia!
+¿Listo para probar la clasificación de tokens? ¡Consulta nuestra guía completa de [clasificación de tokens](https://huggingface.co/docs/transformers/tasks/token_classification) para aprender cómo ajustar DistilBERT y usarlo para inferencia!
 
 ### Respuesta a preguntas
 
@@ -238,13 +238,13 @@ Para usar BERT en la respuesta a preguntas, añade una cabecera de clasificació
 
 ### Generación de texto
 
-[GPT-2](https://hf-mirror.com/docs/transformers/model_doc/gpt2) es un modelo que solo tiene decodificador y se preentrena en una gran cantidad de texto. Puede generar texto convincente (¡aunque no siempre verdadero!) dado un estímulo y completar otras tareas de procesamiento del lenguaje natural como responder preguntas, a pesar de no haber sido entrenado explícitamente para ello.
+[GPT-2](https://huggingface.co/docs/transformers/model_doc/gpt2) es un modelo que solo tiene decodificador y se preentrena en una gran cantidad de texto. Puede generar texto convincente (¡aunque no siempre verdadero!) dado un estímulo y completar otras tareas de procesamiento del lenguaje natural como responder preguntas, a pesar de no haber sido entrenado explícitamente para ello.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
 </div>
 
-1. GPT-2 utiliza [codificación de pares de bytes (BPE)](https://hf-mirror.com/docs/transformers/tokenizer_summary#bytepair-encoding-bpe) para tokenizar palabras y generar una incrustación de token. Se añaden incrustaciones posicionales a las incrustaciones de token para indicar la posición de cada token en la secuencia. Las incrustaciones de entrada se pasan a través de varios bloques decodificadores para producir algún estado oculto final. Dentro de cada bloque decodificador, GPT-2 utiliza una capa de *autoatención enmascarada*, lo que significa que GPT-2 no puede atender a los tokens futuros. Solo puede atender a los tokens a la izquierda. Esto es diferente al token [`mask`] de BERT porque, en la autoatención enmascarada, se utiliza una máscara de atención para establecer la puntuación en `0` para los tokens futuros.
+1. GPT-2 utiliza [codificación de pares de bytes (BPE)](https://huggingface.co/docs/transformers/tokenizer_summary#bytepair-encoding-bpe) para tokenizar palabras y generar una incrustación de token. Se añaden incrustaciones posicionales a las incrustaciones de token para indicar la posición de cada token en la secuencia. Las incrustaciones de entrada se pasan a través de varios bloques decodificadores para producir algún estado oculto final. Dentro de cada bloque decodificador, GPT-2 utiliza una capa de *autoatención enmascarada*, lo que significa que GPT-2 no puede atender a los tokens futuros. Solo puede atender a los tokens a la izquierda. Esto es diferente al token [`mask`] de BERT porque, en la autoatención enmascarada, se utiliza una máscara de atención para establecer la puntuación en `0` para los tokens futuros.
 
 2. La salida del decodificador se pasa a una cabecera de modelado de lenguaje, que realiza una transformación lineal para convertir los estados ocultos en logits. La etiqueta es el siguiente token en la secuencia, que se crea desplazando los logits a la derecha en uno. Se calcula la pérdida de entropía cruzada entre los logits desplazados y las etiquetas para obtener el siguiente token más probable.
 
@@ -254,16 +254,16 @@ El objetivo del preentrenamiento de GPT-2 se basa completamente en el [modelado 
 
 <Tip>
 
-Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://hf-mirror.com/docs/transformers/generation_strategies)!
+Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://huggingface.co/docs/transformers/generation_strategies)!
 
 </Tip>
 
 ### Resumir
 
-Los modelos codificador-decodificador como [BART](https://hf-mirror.com/docs/transformers/model_doc/bart) y [T5](https://hf-mirror.com/docs/transformers/model_doc/t5) están diseñados para el patrón de secuencia a secuencia de una tarea de resumen. Explicaremos cómo funciona BART en esta sección, y luego podrás probar el ajuste fino de T5 al final.
+Los modelos codificador-decodificador como [BART](https://huggingface.co/docs/transformers/model_doc/bart) y [T5](https://huggingface.co/docs/transformers/model_doc/t5) están diseñados para el patrón de secuencia a secuencia de una tarea de resumen. Explicaremos cómo funciona BART en esta sección, y luego podrás probar el ajuste fino de T5 al final.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
 </div>
 
 1. La arquitectura del codificador de BART es muy similar a la de BERT y acepta una incrustación de token y posicional del texto. BART se preentrena corrompiendo la entrada y luego reconstruyéndola con el decodificador. A diferencia de otros codificadores con estrategias específicas de corrupción, BART puede aplicar cualquier tipo de corrupción. Sin embargo, la estrategia de corrupción de *relleno de texto* funciona mejor. En el relleno de texto, varios fragmentos de texto se reemplazan con un **único** token [`mask`]. Esto es importante porque el modelo tiene que predecir los tokens enmascarados, y le enseña al modelo a predecir la cantidad de tokens faltantes. Las incrustaciones de entrada y los fragmentos enmascarados se pasan a través del codificador para producir algunos estados ocultos finales, pero a diferencia de BERT, BART no añade una red feedforward final al final para predecir una palabra.
@@ -274,22 +274,22 @@ Los modelos codificador-decodificador como [BART](https://hf-mirror.com/docs/tra
 
 <Tip>
 
-Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://hf-mirror.com/docs/transformers/generation_strategies)!
+Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://huggingface.co/docs/transformers/generation_strategies)!
 
 </Tip>
 
 ### Traducción
 
-La traducción es otro ejemplo de una tarea de secuencia a secuencia, lo que significa que puedes usar un modelo codificador-decodificador como [BART](https://hf-mirror.com/docs/transformers/model_doc/bart) o [T5](https://hf-mirror.com/docs/transformers/model_doc/t5) para hacerlo. Explicaremos cómo funciona BART en esta sección, y luego podrás probar el ajuste fino de T5 al final.
+La traducción es otro ejemplo de una tarea de secuencia a secuencia, lo que significa que puedes usar un modelo codificador-decodificador como [BART](https://huggingface.co/docs/transformers/model_doc/bart) o [T5](https://huggingface.co/docs/transformers/model_doc/t5) para hacerlo. Explicaremos cómo funciona BART en esta sección, y luego podrás probar el ajuste fino de T5 al final.
 
 BART se adapta a la traducción añadiendo un codificador separado inicializado aleatoriamente para mapear un idioma fuente a una entrada que pueda ser decodificada en el idioma objetivo. Las incrustaciones de este nuevo codificador se pasan al codificador preentrenado en lugar de las incrustaciones de palabras originales. El codificador de origen se entrena actualizando el codificador de origen, las incrustaciones posicionales y las incrustaciones de entrada con la pérdida de entropía cruzada de la salida del modelo. Los parámetros del modelo están congelados en este primer paso, y todos los parámetros del modelo se entrenan juntos en el segundo paso.
 
 Desde entonces, BART ha sido seguido por una versión multilingüe, mBART, destinada a la traducción y preentrenada en muchos idiomas diferentes.
 
-¿Listo para probar la traducción? ¡Consulta nuestra guía completa de [traducción](https://hf-mirror.com/docs/transformers/tasks/translation) para aprender cómo ajustar T5 y usarlo para inferencia!
+¿Listo para probar la traducción? ¡Consulta nuestra guía completa de [traducción](https://huggingface.co/docs/transformers/tasks/translation) para aprender cómo ajustar T5 y usarlo para inferencia!
 
 <Tip>
 
-Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://hf-mirror.com/docs/transformers/generation_strategies)!
+Para obtener más información sobre la generación de texto, ¡consulta la guía de [estrategias de generación de texto](https://huggingface.co/docs/transformers/generation_strategies)!
 
 </Tip>

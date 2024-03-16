@@ -42,7 +42,7 @@ SPLINTER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "tau/splinter-base-qass",
     "tau/splinter-large",
     "tau/splinter-large-qass",
-    # See all Splinter models at https://hf-mirror.com/models?filter=splinter
+    # See all Splinter models at https://huggingface.co/models?filter=splinter
 ]
 
 

@@ -33,7 +33,7 @@ For the old `finetune_trainer.py` and related utils, see [`examples/legacy/seq2s
 
 `run_translation.py` is a lightweight examples of how to download and preprocess a dataset from the [🤗 Datasets](https://github.com/huggingface/datasets) library or use your own files (jsonlines or csv), then fine-tune one of the architectures above on it.
 
-For custom datasets in `jsonlines` format please see: https://hf-mirror.com/docs/datasets/loading_datasets#json-files
+For custom datasets in `jsonlines` format please see: https://huggingface.co/docs/datasets/loading_datasets#json-files
 and you also will find examples of these below.
 
 
@@ -82,7 +82,7 @@ If you get a terrible BLEU score, make sure that you didn't forget to use the `-
 
 For the aforementioned group of T5 models it's important to remember that if you switch to a different language pair, make sure to adjust the source and target values in all 3 language-specific command line argument: `--source_lang`, `--target_lang` and `--source_prefix`.
 
-MBart models require a different format for `--source_lang` and `--target_lang` values, e.g. instead of `en` it expects `en_XX`, for `ro` it expects `ro_RO`. The full MBart specification for language codes can be found [here](https://hf-mirror.com/facebook/mbart-large-cc25). For example:
+MBart models require a different format for `--source_lang` and `--target_lang` values, e.g. instead of `en` it expects `en_XX`, for `ro` it expects `ro_RO`. The full MBart specification for language codes can be found [here](https://huggingface.co/facebook/mbart-large-cc25). For example:
 
 ```bash
 python examples/pytorch/translation/run_translation.py \

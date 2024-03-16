@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드에서 학습할 내용은:
 
-1. 영어 텍스트를 프랑스어로 번역하기 위해 [T5](https://hf-mirror.com/google-t5/t5-small) 모델을 OPUS Books 데이터세트의 영어-프랑스어 하위 집합으로 파인튜닝하는 방법과
+1. 영어 텍스트를 프랑스어로 번역하기 위해 [T5](https://huggingface.co/google-t5/t5-small) 모델을 OPUS Books 데이터세트의 영어-프랑스어 하위 집합으로 파인튜닝하는 방법과
 2. 파인튜닝된 모델을 추론에 사용하는 방법입니다.
 
 <Tip>
@@ -54,7 +54,7 @@ pip install transformers datasets evaluate sacrebleu
 
 ## OPUS Books 데이터세트 가져오기[[load-opus-books-dataset]]
 
-먼저 🤗 Datasets 라이브러리에서 [OPUS Books](https://hf-mirror.com/datasets/opus_books) 데이터세트의 영어-프랑스어 하위 집합을 가져오세요.
+먼저 🤗 Datasets 라이브러리에서 [OPUS Books](https://huggingface.co/datasets/opus_books) 데이터세트의 영어-프랑스어 하위 집합을 가져오세요.
 
 ```py
 >>> from datasets import load_dataset
@@ -139,7 +139,7 @@ pip install transformers datasets evaluate sacrebleu
 
 ## 평가[[evalulate]]
 
-훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 됩니다. 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리로 평가 방법(evaluation method)을 빠르게 가져올 수 있습니다. 현재 태스크에 적합한 SacreBLEU 메트릭을 가져오세요. (메트릭을 가져오고 계산하는 방법에 대해 자세히 알아보려면 🤗 Evaluate [둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하세요):
+훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 됩니다. 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리로 평가 방법(evaluation method)을 빠르게 가져올 수 있습니다. 현재 태스크에 적합한 SacreBLEU 메트릭을 가져오세요. (메트릭을 가져오고 계산하는 방법에 대해 자세히 알아보려면 🤗 Evaluate [둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하세요):
 
 ```py
 >>> import evaluate

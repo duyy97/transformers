@@ -65,7 +65,7 @@ SEW_D_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "asapp/sew-d-mid-400k",
     "asapp/sew-d-mid-k127-400k",
     "asapp/sew-d-base-plus-400k",
-    # See all SEW models at https://hf-mirror.com/models?filter=sew-d
+    # See all SEW models at https://huggingface.co/models?filter=sew-d
 ]
 
 

@@ -828,7 +828,7 @@ class NoRepeatNGramLogitsProcessor(LogitsProcessor):
 
     Use n-gram penalties with care. For instance, penalizing 2-grams (bigrams) in an article about the city of New York
     might lead to undesirable outcomes where the city's name appears only once in the entire text.
-    [Reference](https://hf-mirror.com/blog/how-to-generate)
+    [Reference](https://huggingface.co/blog/how-to-generate)
 
     </Tip>
 
@@ -952,7 +952,7 @@ class SequenceBiasLogitsProcessor(LogitsProcessor):
     In order to get the token ids of the sequences that you want to bias, make sure to set `add_prefix_space=True` when
     initializing the tokenizer, and use `tokenizer(bad_words, add_special_tokens=False).input_ids`. The
     `add_prefix_space` argument is only supported for some slow tokenizers, as fast tokenizers' prefixing behaviours
-    come from `pre tokenizers`. Read more [here](https://hf-mirror.com/docs/tokenizers/api/pre-tokenizers).
+    come from `pre tokenizers`. Read more [here](https://huggingface.co/docs/tokenizers/api/pre-tokenizers).
 
     </Tip>
 
@@ -1098,7 +1098,7 @@ class NoBadWordsLogitsProcessor(SequenceBiasLogitsProcessor):
     `add_prefix_space=True` when initializing the tokenizer, and use `tokenizer(bad_words,
     add_special_tokens=False).input_ids`. The `add_prefix_space` argument is only supported for some slow tokenizers,
     as fast tokenizers' prefixing behaviours come from `pre tokenizers`. Read more
-    [here](https://hf-mirror.com/docs/tokenizers/api/pre-tokenizers).
+    [here](https://huggingface.co/docs/tokenizers/api/pre-tokenizers).
 
     </Tip>
 
@@ -1625,7 +1625,7 @@ class SuppressTokensAtBeginLogitsProcessor(LogitsProcessor):
     [`SuppressTokensAtBeginLogitsProcessor`] supresses a list of tokens as soon as the `generate` function starts
     generating using `begin_index` tokens. This should ensure that the tokens defined by `begin_suppress_tokens` are
     not generated at the begining. Originally created for
-    [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper).
+    [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper).
 
     Examples:
 
@@ -1674,7 +1674,7 @@ class SuppressTokensLogitsProcessor(LogitsProcessor):
     r"""
     This processor can be used to suppress a list of tokens. The processor will set their log probs to `-inf` so
     that they are not generated. Originally created for
-    [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper).
+    [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper).
 
     Examples:
 
@@ -1713,7 +1713,7 @@ class ForceTokensLogitsProcessor(LogitsProcessor):
     This processor takes a list of pairs of integers which indicates a mapping from generation indices to token
     indices that will be forced before generation. The processor will set their log probs to `inf` so that they are
     sampled at their corresponding index. Originally created for
-    [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper).
+    [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper).
 
     Examples:
     ```python
@@ -1963,7 +1963,7 @@ class ClassifierFreeGuidanceLogitsProcessor(LogitsProcessor):
     <Tip warning={true}>
 
     This logits processor is exclusively compatible with
-    [MusicGen](https://hf-mirror.com/docs/transformers/main/en/model_doc/musicgen)
+    [MusicGen](https://huggingface.co/docs/transformers/main/en/model_doc/musicgen)
 
     </Tip>
 
@@ -2022,7 +2022,7 @@ class AlternatingCodebooksLogitsProcessor(LogitsProcessor):
     <Tip warning={true}>
 
     This logits processor is exclusively compatible with
-    [Bark](https://hf-mirror.com/docs/transformers/en/model_doc/bark)'s fine submodel. See the model documentation
+    [Bark](https://huggingface.co/docs/transformers/en/model_doc/bark)'s fine submodel. See the model documentation
     for examples.
 
     </Tip>
@@ -2183,7 +2183,7 @@ class BarkEosPrioritizerLogitsProcessor(LogitsProcessor):
     <Tip warning={true}>
 
     This logits processor is exclusively compatible with
-    [Bark](https://hf-mirror.com/docs/transformers/en/model_doc/bark). See the model documentation for examples.
+    [Bark](https://huggingface.co/docs/transformers/en/model_doc/bark). See the model documentation for examples.
 
     </Tip>
 

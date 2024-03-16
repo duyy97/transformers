@@ -31,7 +31,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google/rembert": "https://hf-mirror.com/google/rembert/resolve/main/sentencepiece.model",
+        "google/rembert": "https://huggingface.co/google/rembert/resolve/main/sentencepiece.model",
     },
 }
 

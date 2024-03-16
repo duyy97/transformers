@@ -19,7 +19,7 @@ limitations under the License.
 
 ## Wav2Vec2 Speech Pre-Training
 
-The script [`run_speech_wav2vec2_pretraining_no_trainer.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-pretraining/run_wav2vec2_pretraining_no_trainer.py) can be used to pre-train a [Wav2Vec2](https://hf-mirror.com/transformers/model_doc/wav2vec2.html?highlight=wav2vec2) model from scratch.
+The script [`run_speech_wav2vec2_pretraining_no_trainer.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-pretraining/run_wav2vec2_pretraining_no_trainer.py) can be used to pre-train a [Wav2Vec2](https://huggingface.co/transformers/model_doc/wav2vec2.html?highlight=wav2vec2) model from scratch.
 
 In the script [`run_speech_wav2vec2_pretraining_no_trainer`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-pretraining/run_wav2vec2_pretraining_no_trainer.py), a Wav2Vec2 model is pre-trained on audio data alone using [Wav2Vec2's contrastive loss objective](https://arxiv.org/abs/2006.11477).
 
@@ -51,7 +51,7 @@ can easily be loaded on each distributed device.
 ### Demo
 
 In this demo run we pre-train a `"base-sized"` Wav2Vec2 model simply only on the validation
-and test data of [librispeech_asr](https://hf-mirror.com/datasets/librispeech_asr).
+and test data of [librispeech_asr](https://huggingface.co/datasets/librispeech_asr).
 
 The demo is run on two Titan RTX (24 GB RAM each). In case you have less RAM available 
 per device, consider reducing `--batch_size` and/or the `--max_duration_in_seconds`.
@@ -87,8 +87,8 @@ The results of this run can be seen [here](https://wandb.ai/patrickvonplaten/wav
 
 ### Base
 
-To pre-train `"base-sized"` Wav2Vec2 model, *e.g.* [facebook/wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base) 
-on [librispeech_asr](https://hf-mirror.com/datasets/librispeech_asr), the following command can be run:
+To pre-train `"base-sized"` Wav2Vec2 model, *e.g.* [facebook/wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base) 
+on [librispeech_asr](https://huggingface.co/datasets/librispeech_asr), the following command can be run:
 
 ```bash
 accelerate launch run_wav2vec2_pretraining_no_trainer.py \
@@ -120,13 +120,13 @@ The experiment was run on 8 GPU V100 (16 GB RAM each) for 4 days.
 In case you have more than 8 GPUs available for a higher effective `batch_size`,
 it is recommended to increase the `learning_rate` to `0.005` for faster convergence.
 
-The results of this run can be seen [here](https://wandb.ai/patrickvonplaten/test/reports/Wav2Vec2-Base--VmlldzoxMTUyODQ0?accessToken=rg6e8u9yizx964k8q47zctq1m4afpvtn1i3qi9exgdmzip6xwkfzvagfajpzj55n) and the checkpoint pretrained for 85,000 steps can be accessed [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-base-repro-960h-libri-85k-steps)
+The results of this run can be seen [here](https://wandb.ai/patrickvonplaten/test/reports/Wav2Vec2-Base--VmlldzoxMTUyODQ0?accessToken=rg6e8u9yizx964k8q47zctq1m4afpvtn1i3qi9exgdmzip6xwkfzvagfajpzj55n) and the checkpoint pretrained for 85,000 steps can be accessed [here](https://huggingface.co/patrickvonplaten/wav2vec2-base-repro-960h-libri-85k-steps)
 
 
 ### Large
 
-To pre-train `"large-sized"` Wav2Vec2 model, *e.g.* [facebook/wav2vec2-large-lv60](https://hf-mirror.com/facebook/wav2vec2-large-lv60), 
-on [librispeech_asr](https://hf-mirror.com/datasets/librispeech_asr), the following command can be run:
+To pre-train `"large-sized"` Wav2Vec2 model, *e.g.* [facebook/wav2vec2-large-lv60](https://huggingface.co/facebook/wav2vec2-large-lv60), 
+on [librispeech_asr](https://huggingface.co/datasets/librispeech_asr), the following command can be run:
 
 ```bash
 accelerate launch run_wav2vec2_pretraining_no_trainer.py \ 
@@ -158,4 +158,4 @@ The experiment was run on 8 GPU V100 (16 GB RAM each) for 7 days.
 In case you have more than 8 GPUs available for a higher effective `batch_size`,
 it is recommended to increase the `learning_rate` to `0.005` for faster convergence.
 
-The results of this run can be seen [here](https://wandb.ai/patrickvonplaten/pretraining-wav2vec2/reports/Wav2Vec2-Large--VmlldzoxMTAwODM4?accessToken=wm3qzcnldrwsa31tkvf2pdmilw3f63d4twtffs86ou016xjbyilh55uoi3mo1qzc) and the checkpoint pretrained for 120,000 steps can be accessed [here](https://hf-mirror.com/patrickvonplaten/wav2vec2-large-repro-960h-libri-120k-steps)
+The results of this run can be seen [here](https://wandb.ai/patrickvonplaten/pretraining-wav2vec2/reports/Wav2Vec2-Large--VmlldzoxMTAwODM4?accessToken=wm3qzcnldrwsa31tkvf2pdmilw3f63d4twtffs86ou016xjbyilh55uoi3mo1qzc) and the checkpoint pretrained for 120,000 steps can be accessed [here](https://huggingface.co/patrickvonplaten/wav2vec2-large-repro-960h-libri-120k-steps)

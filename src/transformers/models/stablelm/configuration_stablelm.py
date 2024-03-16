@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 STABLELM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "stabilityai/stablelm-3b-4e1t": "https://hf-mirror.com/stabilityai/stablelm-3b-4e1t/resolve/main/config.json",
-    # See all StableLM models at https://hf-mirror.com/models?filter=stablelm
+    "stabilityai/stablelm-3b-4e1t": "https://huggingface.co/stabilityai/stablelm-3b-4e1t/resolve/main/config.json",
+    # See all StableLM models at https://huggingface.co/models?filter=stablelm
 }
 
 
@@ -31,7 +31,7 @@ class StableLmConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`~StableLmModel`].
     It is used to instantiate an StableLM model according to the specified arguments, defining the model
     architecture. Instantiating a configuration with the defaults will yield a similar configuration to that of
-    the StableLM [stabilityai/stablelm-3b-4e1t](https://hf-mirror.com/stabilityai/stablelm-3b-4e1t) architecture.
+    the StableLM [stabilityai/stablelm-3b-4e1t](https://huggingface.co/stabilityai/stablelm-3b-4e1t) architecture.
 
     Configuration objects inherit from  [`PretrainedConfig`] and can be used
     to control the model outputs. Read the documentation from  [`PretrainedConfig`]

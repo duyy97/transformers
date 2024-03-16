@@ -16,7 +16,7 @@ specific language governing permissions and limitations under the License.
 
 # Pipelines for inference
 
-[`pipeline`]を使用することで、[Hub](https://hf-mirror.com/models)からの任意のモデルを言語、コンピュータビジョン、音声、およびマルチモーダルタスクの推論に簡単に使用できます。
+[`pipeline`]を使用することで、[Hub](https://huggingface.co/models)からの任意のモデルを言語、コンピュータビジョン、音声、およびマルチモーダルタスクの推論に簡単に使用できます。
 特定のモダリティに関する経験がない場合や、モデルの背後にあるコードに精通していない場合でも、[`pipeline`]を使用して推論できます！
 このチュートリアルでは、次のことを学びます：
 
@@ -45,16 +45,16 @@ specific language governing permissions and limitations under the License.
 2. [`pipeline`]に入力テキストを渡します：
 
 ```python
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP LIVE UP THE TRUE MEANING OF ITS TREES'}
 ```
 
-チェックアウトできなかったか？ [Hubの最もダウンロードされた自動音声認識モデル](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition&sort=downloads) のいくつかを見て、より良い転写を得ることができるかどうかを確認してみてください。
-[openai/whisper-large](https://hf-mirror.com/openai/whisper-large) を試してみましょう：
+チェックアウトできなかったか？ [Hubの最もダウンロードされた自動音声認識モデル](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition&sort=downloads) のいくつかを見て、より良い転写を得ることができるかどうかを確認してみてください。
+[openai/whisper-large](https://huggingface.co/openai/whisper-large) を試してみましょう：
 
 ```python
 >>> generator = pipeline(model="openai/whisper-large")
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
@@ -68,8 +68,8 @@ Hubでは、ブラウザから直接モデルの結果をチェックして、�
 ```py
 generator(
     [
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac",
     ]
 )
 ```
@@ -105,7 +105,7 @@ out = generator(...)  # これは再び `my_parameter=1` を使用します。
 generator = pipeline(model="openai/whisper-large", device=0)
 ```
 
-もしモデルが単一のGPUには大きすぎる場合、`device_map="auto"`を設定して、🤗 [Accelerate](https://hf-mirror.com/docs/accelerate) にモデルの重みをどのようにロードし、保存するかを自動的に決定させることができます。
+もしモデルが単一のGPUには大きすぎる場合、`device_map="auto"`を設定して、🤗 [Accelerate](https://huggingface.co/docs/accelerate) にモデルの重みをどのようにロードし、保存するかを自動的に決定させることができます。
 
 ```python
 #!pip install accelerate
@@ -116,7 +116,7 @@ generator = pipeline(model="openai/whisper-large", device_map="auto")
 
 ### Batch size
 
-デフォルトでは、パイプラインは詳細について[こちら](https://hf-mirror.com/docs/transformers/main_classes/pipelines#pipeline-batching)で説明されている理由から、推論をバッチ処理しません。その理由は、バッチ処理が必ずしも速くないためであり、実際にはいくつかのケースでかなり遅くなることがあるからです。
+デフォルトでは、パイプラインは詳細について[こちら](https://huggingface.co/docs/transformers/main_classes/pipelines#pipeline-batching)で説明されている理由から、推論をバッチ処理しません。その理由は、バッチ処理が必ずしも速くないためであり、実際にはいくつかのケースでかなり遅くなることがあるからです。
 
 ただし、あなたのユースケースで機能する場合は、次のように使用できます：
 
@@ -142,7 +142,7 @@ texts = generator(audio_filenames)
 ```py
 >>> # Not using whisper, as it cannot provide timestamps.
 >>> generator = pipeline(model="facebook/wav2vec2-large-960h-lv60-self", return_timestamps="word")
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP AND LIVE OUT THE TRUE MEANING OF ITS CREED', 'chunks': [{'text': 'I', 'timestamp': (1.22, 1.24)}, {'text': 'HAVE', 'timestamp': (1.42, 1.58)}, {'text': 'A', 'timestamp': (1.66, 1.68)}, {'text': 'DREAM', 'timestamp': (1.76, 2.14)}, {'text': 'BUT', 'timestamp': (3.68, 3.8)}, {'text': 'ONE', 'timestamp': (3.94, 4.06)}, {'text': 'DAY', 'timestamp': (4.16, 4.3)}, {'text': 'THIS', 'timestamp': (6.36, 6.54)}, {'text': 'NATION', 'timestamp': (6.68, 7.1)}, {'text': 'WILL', 'timestamp': (7.32, 7.56)}, {'text': 'RISE', 'timestamp': (7.8, 8.26)}, {'text': 'UP', 'timestamp': (8.38, 8.48)}, {'text': 'AND', 'timestamp': (10.08, 10.18)}, {'text': 'LIVE', 'timestamp': (10.26, 10.48)}, {'text': 'OUT', 'timestamp': (10.58, 10.7)}, {'text': 'THE', 'timestamp': (10.82, 10.9)}, {'text': 'TRUE', 'timestamp': (10.98, 11.18)}, {'text': 'MEANING', 'timestamp': (11.26, 11.58)}, {'text': 'OF', 'timestamp': (11.66, 11.7)}, {'text': 'ITS', 'timestamp': (11.76, 11.88)}, {'text': 'CREED', 'timestamp': (12.0, 12.38)}]}
 ```
 
@@ -204,14 +204,14 @@ for out in pipe(KeyDataset(dataset, "audio")):
 
 タスクを指定し、画像をクラシファイアに渡します。画像はリンク、ローカルパス、またはBase64エンコードされた画像であることができます。例えば、以下の画像はどの種類の猫ですか？
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
@@ -240,14 +240,14 @@ for out in pipe(KeyDataset(dataset, "audio")):
 [`pipeline`]は、1つ以上のモダリティをサポートしています。たとえば、視覚的な質問応答（VQA）タスクはテキストと画像を組み合わせています。
 好きな画像リンクと画像に関する質問を自由に使ってください。画像はURLまたは画像のローカルパスで指定できます。
 
-例えば、この[請求書画像](https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)を使用する場合：
+例えば、この[請求書画像](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)を使用する場合：
 
 ```py
 >>> from transformers import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> vqa(
-...     image="https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
+...     image="https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
 ...     question="What is the invoice number?",
 ... )
 [{'score': 0.42515, 'answer': 'us-001', 'start': 16, 'end': 16}]

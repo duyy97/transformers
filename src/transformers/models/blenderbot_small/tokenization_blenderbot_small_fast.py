@@ -32,14 +32,14 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "facebook/blenderbot_small-90M": "https://hf-mirror.com/facebook/blenderbot_small-90M/resolve/main/vocab.json"
+        "facebook/blenderbot_small-90M": "https://huggingface.co/facebook/blenderbot_small-90M/resolve/main/vocab.json"
     },
     "merges_file": {
-        "facebook/blenderbot_small-90M": "https://hf-mirror.com/facebook/blenderbot_small-90M/resolve/main/merges.txt"
+        "facebook/blenderbot_small-90M": "https://huggingface.co/facebook/blenderbot_small-90M/resolve/main/merges.txt"
     },
     "tokenizer_config_file": {
         "facebook/blenderbot_small-90M": (
-            "https://hf-mirror.com/facebook/blenderbot_small-90M/resolve/main/tokenizer_config.json"
+            "https://huggingface.co/facebook/blenderbot_small-90M/resolve/main/tokenizer_config.json"
         )
     },
 }
@@ -128,7 +128,7 @@ class BlenderbotSmallTokenizerFast(PreTrainedTokenizerFast):
             "\nNo chat template is defined for this tokenizer - using the default template "
             f"for the {self.__class__.__name__} class. If the default is not appropriate for "
             "your model, please set `tokenizer.chat_template` to an appropriate template. "
-            "See https://hf-mirror.com/docs/transformers/main/chat_templating for more information.\n"
+            "See https://huggingface.co/docs/transformers/main/chat_templating for more information.\n"
         )
         return (
             "{% for message in messages %}"

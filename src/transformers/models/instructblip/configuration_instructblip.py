@@ -26,7 +26,7 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 INSTRUCTBLIP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "Salesforce/instruct-blip-flan-t5": "https://hf-mirror.com/Salesforce/instruct-blip-flan-t5/resolve/main/config.json",
+    "Salesforce/instruct-blip-flan-t5": "https://huggingface.co/Salesforce/instruct-blip-flan-t5/resolve/main/config.json",
 }
 
 
@@ -35,7 +35,7 @@ class InstructBlipVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`InstructBlipVisionModel`]. It is used to
     instantiate a InstructBLIP vision encoder according to the specified arguments, defining the model architecture.
     Instantiating a configuration defaults will yield a similar configuration to that of the InstructBLIP
-    [Salesforce/instruct-blip-flan-t5](https://hf-mirror.com/Salesforce/instruct-blip-flan-t5) architecture.
+    [Salesforce/instruct-blip-flan-t5](https://huggingface.co/Salesforce/instruct-blip-flan-t5) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -136,7 +136,7 @@ class InstructBlipQFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`InstructBlipQFormerModel`]. It is used to
     instantiate a InstructBLIP Querying Transformer (Q-Former) model according to the specified arguments, defining the
     model architecture. Instantiating a configuration with the defaults will yield a similar configuration to that of
-    the InstructBLIP [Salesforce/instruct-blip-flan-t5](https://hf-mirror.com/Salesforce/instruct-blip-flan-t5)
+    the InstructBLIP [Salesforce/instruct-blip-flan-t5](https://huggingface.co/Salesforce/instruct-blip-flan-t5)
     architecture. Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs.
     Read the documentation from [`PretrainedConfig`] for more information.
 
@@ -256,7 +256,7 @@ class InstructBlipConfig(PretrainedConfig):
     [`InstructBlipForConditionalGeneration`]. It is used to instantiate a InstructBLIP model according to the specified
     arguments, defining the vision model, Q-Former model and language model configs. Instantiating a configuration with
     the defaults will yield a similar configuration to that of the InstructBLIP
-    [Salesforce/instruct-blip-flan-t5](https://hf-mirror.com/Salesforce/instruct-blip-flan-t5) architecture.
+    [Salesforce/instruct-blip-flan-t5](https://huggingface.co/Salesforce/instruct-blip-flan-t5) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

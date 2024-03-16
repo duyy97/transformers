@@ -17,7 +17,7 @@
 Pretraining the library models for T5-like span-masked language modeling on a text file or a dataset.
 
 Here is the full list of checkpoints on the hub that can be pretrained by this script:
-https://hf-mirror.com/models?filter=t5
+https://huggingface.co/models?filter=t5
 """
 import json
 import logging
@@ -562,7 +562,7 @@ def main():
         repo_id = api.create_repo(repo_name, exist_ok=True, token=training_args.hub_token).repo_id
 
     # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -630,7 +630,7 @@ def main():
                 num_proc=data_args.preprocessing_num_workers,
             )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # Load pretrained model and tokenizer
 
@@ -724,7 +724,7 @@ def main():
     # might be slower to preprocess.
     #
     # To speed up this part, we use multiprocessing. See the documentation of the map method for more information:
-    # https://hf-mirror.com/docs/datasets/process#map
+    # https://huggingface.co/docs/datasets/process#map
     tokenized_datasets = tokenized_datasets.map(
         group_texts,
         batched=True,

@@ -43,7 +43,7 @@ _CONFIG_FOR_DOC = "TrajectoryTransformerConfig"
 
 TRAJECTORY_TRANSFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "CarlCochet/trajectory-transformer-halfcheetah-medium-v2",
-    # See all TrajectoryTransformer models at https://hf-mirror.com/models?filter=trajectory_transformer
+    # See all TrajectoryTransformer models at https://huggingface.co/models?filter=trajectory_transformer
 ]
 
 

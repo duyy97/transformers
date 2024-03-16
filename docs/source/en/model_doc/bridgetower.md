@@ -32,12 +32,12 @@ This enables effective bottom-up cross-modal alignment and fusion between visual
 In particular, on the VQAv2 test-std set, BRIDGETOWER achieves an accuracy of 78.73%, outperforming the previous state-of-the-art model METER by 1.09% with the same pre-training data and almost negligible additional parameters and computational costs.
 Notably, when further scaling the model, BRIDGETOWER achieves an accuracy of 81.15%, surpassing models that are pre-trained on orders-of-magnitude larger datasets.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/bridgetower_architecture%20.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/bridgetower_architecture%20.jpg"
 alt="drawing" width="600"/>
 
 <small> BridgeTower architecture. Taken from the <a href="https://arxiv.org/abs/2206.08657">original paper.</a> </small>
 
-This model was contributed by [Anahita Bhiwandiwalla](https://hf-mirror.com/anahita-b), [Tiep Le](https://hf-mirror.com/Tile) and [Shaoyen Tseng](https://hf-mirror.com/shaoyent). The original code can be found [here](https://github.com/microsoft/BridgeTower).
+This model was contributed by [Anahita Bhiwandiwalla](https://huggingface.co/anahita-b), [Tiep Le](https://huggingface.co/Tile) and [Shaoyen Tseng](https://huggingface.co/shaoyent). The original code can be found [here](https://github.com/microsoft/BridgeTower).
 
 ## Usage tips and examples
 
@@ -121,7 +121,7 @@ The following example shows how to run masked language modeling using [`BridgeTo
 Tips:
 
 - This implementation of BridgeTower uses [`RobertaTokenizer`] to generate text embeddings and OpenAI's CLIP/ViT model to compute visual embeddings.
-- Checkpoints for pre-trained [bridgeTower-base](https://hf-mirror.com/BridgeTower/bridgetower-base) and [bridgetower masked language modeling and image text matching](https://hf-mirror.com/BridgeTower/bridgetower-base-itm-mlm) are released.
+- Checkpoints for pre-trained [bridgeTower-base](https://huggingface.co/BridgeTower/bridgetower-base) and [bridgetower masked language modeling and image text matching](https://huggingface.co/BridgeTower/bridgetower-base-itm-mlm) are released.
 - Please refer to [Table 5](https://arxiv.org/pdf/2206.08657.pdf) for BridgeTower's performance on Image Retrieval and other down stream tasks.
 - The PyTorch version of this model is only available in torch 1.10 and higher.
 

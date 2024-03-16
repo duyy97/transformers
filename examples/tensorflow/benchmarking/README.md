@@ -18,7 +18,7 @@ limitations under the License.
 
 Here, you can find a list of the different benchmark results created by the community.
 
-If you would like to list benchmark results on your favorite models of the [model hub](https://hf-mirror.com/models) here, please open a Pull Request and add it below.
+If you would like to list benchmark results on your favorite models of the [model hub](https://huggingface.co/models) here, please open a Pull Request and add it below.
 
 | Benchmark description | Results | Environment info |      Author      |
 |:----------|:-------------|:-------------|------:|

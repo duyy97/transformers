@@ -53,7 +53,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 SEGFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "nvidia/segformer-b0-finetuned-ade-512-512",
-    # See all SegFormer models at https://hf-mirror.com/models?filter=segformer
+    # See all SegFormer models at https://huggingface.co/models?filter=segformer
 ]
 
 

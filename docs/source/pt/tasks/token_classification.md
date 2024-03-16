@@ -20,11 +20,11 @@ rendered properly in your Markdown viewer.
 
 A classificação de tokens atribui um rótulo a tokens individuais em uma frase. Uma das tarefas de classificação de tokens mais comuns é o Reconhecimento de Entidade Nomeada, também chamada de NER (sigla em inglês para Named Entity Recognition). O NER tenta encontrar um rótulo para cada entidade em uma frase, como uma pessoa, local ou organização.
 
-Este guia mostrará como realizar o fine-tuning do [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) no conjunto de dados [WNUT 17](https://hf-mirror.com/datasets/wnut_17) para detectar novas entidades.
+Este guia mostrará como realizar o fine-tuning do [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) no conjunto de dados [WNUT 17](https://huggingface.co/datasets/wnut_17) para detectar novas entidades.
 
 <Tip>
 
-Consulte a [página de tarefas de classificação de tokens](https://hf-mirror.com/tasks/token-classification) para obter mais informações sobre outras formas de classificação de tokens e seus modelos, conjuntos de dados e métricas associadas.
+Consulte a [página de tarefas de classificação de tokens](https://huggingface.co/tasks/token-classification) para obter mais informações sobre outras formas de classificação de tokens e seus modelos, conjuntos de dados e métricas associadas.
 
 </Tip>
 
@@ -99,7 +99,7 @@ Como a entrada já foi dividida em palavras, defina `is_split_into_words=True` p
 
 Ao adicionar os tokens especiais `[CLS]` e `[SEP]` e a tokenização de subpalavras uma incompatibilidade é gerada entre a entrada e os rótulos. Uma única palavra correspondente a um único rótulo pode ser dividida em duas subpalavras. Você precisará realinhar os tokens e os rótulos da seguinte forma:
 
-1. Mapeie todos os tokens para a palavra correspondente com o método [`word_ids`](https://hf-mirror.com/docs/tokenizers/python/latest/api/reference.html#tokenizers.Encoding.word_ids).
+1. Mapeie todos os tokens para a palavra correspondente com o método [`word_ids`](https://huggingface.co/docs/tokenizers/python/latest/api/reference.html#tokenizers.Encoding.word_ids).
 2. Atribuindo o rótulo `-100` aos tokens especiais `[CLS]` e `[SEP]` para que a função de loss do PyTorch ignore eles.
 3. Rotular apenas o primeiro token de uma determinada palavra. Atribuindo `-100` a outros subtokens da mesma palavra.
 
@@ -128,7 +128,7 @@ Aqui está como você pode criar uma função para realinhar os tokens e rótulo
 ...     return tokenized_inputs
 ```
 
-Use a função [`map`](https://hf-mirror.com/docs/datasets/process#map) do 🤗 Datasets para tokenizar e alinhar os rótulos em todo o conjunto de dados. Você pode acelerar a função `map` configurando `batched=True` para processar vários elementos do conjunto de dados de uma só vez:
+Use a função [`map`](https://huggingface.co/docs/datasets/process#map) do 🤗 Datasets para tokenizar e alinhar os rótulos em todo o conjunto de dados. Você pode acelerar a função `map` configurando `batched=True` para processar vários elementos do conjunto de dados de uma só vez:
 
 ```py
 >>> tokenized_wnut = wnut.map(tokenize_and_align_labels, batched=True)
@@ -201,7 +201,7 @@ Nesse ponto, restam apenas três passos:
 ```
 </pt>
 <tf>
-Para executar o fine-tuning de um modelo no TensorFlow, comece convertendo seu conjunto de dados para o formato `tf.data.Dataset` com [`to_tf_dataset`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Nessa execução você deverá especificar as entradas e rótulos (no parâmetro `columns`), se deseja embaralhar o conjunto de dados, o tamanho do batch e o data collator:
+Para executar o fine-tuning de um modelo no TensorFlow, comece convertendo seu conjunto de dados para o formato `tf.data.Dataset` com [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Nessa execução você deverá especificar as entradas e rótulos (no parâmetro `columns`), se deseja embaralhar o conjunto de dados, o tamanho do batch e o data collator:
 
 ```py
 >>> tf_train_set = tokenized_wnut["train"].to_tf_dataset(

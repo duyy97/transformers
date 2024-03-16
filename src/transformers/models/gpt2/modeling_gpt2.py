@@ -60,7 +60,7 @@ GPT2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai-community/gpt2-large",
     "openai-community/gpt2-xl",
     "distilbert/distilgpt2",
-    # See all GPT-2 models at https://hf-mirror.com/models?filter=gpt2
+    # See all GPT-2 models at https://huggingface.co/models?filter=gpt2
 ]
 
 

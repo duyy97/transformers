@@ -28,7 +28,7 @@ way which enables simple and efficient model parallelism.
 In the following, we demonstrate how to train a bi-directional transformer model 
 using masked language modeling objective as introduced in [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805).
 More specifically, we demonstrate how JAX/Flax can be leveraged 
-to pre-train [**`FacebookAI/roberta-base`**](https://hf-mirror.com/FacebookAI/roberta-base)
+to pre-train [**`FacebookAI/roberta-base`**](https://huggingface.co/FacebookAI/roberta-base)
 in Norwegian on a single TPUv3-8 pod.
 
 The example script uses the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
@@ -41,7 +41,7 @@ mkdir ./norwegian-roberta-base
 
 ### Train tokenizer
 
-In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://hf-mirror.com/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
+In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://huggingface.co/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
 The tokenizer is trained on the complete Norwegian dataset of OSCAR
 and consequently saved in the cloned model directory.
 This can take up to 10 minutes depending on your hardware ☕.
@@ -76,7 +76,7 @@ tokenizer.save("./norwegian-roberta-base/tokenizer.json")
 ### Create configuration
 
 Next, we create the model's configuration file. This is as simple 
-as loading and storing [`**FacebookAI/roberta-base**`](https://hf-mirror.com/FacebookAI/roberta-base)
+as loading and storing [`**FacebookAI/roberta-base**`](https://huggingface.co/FacebookAI/roberta-base)
 in the local model folder:
 
 ```python
@@ -129,8 +129,8 @@ look at [this](https://colab.research.google.com/github/huggingface/notebooks/bl
 
 In the following, we demonstrate how to train an auto-regressive causal transformer model 
 in JAX/Flax.
-More specifically, we pretrain a randomly initialized [**`openai-community/gpt2`**](https://hf-mirror.com/openai-community/gpt2) model in Norwegian on a single TPUv3-8.
-to pre-train 124M [**`openai-community/gpt2`**](https://hf-mirror.com/openai-community/gpt2)
+More specifically, we pretrain a randomly initialized [**`openai-community/gpt2`**](https://huggingface.co/openai-community/gpt2) model in Norwegian on a single TPUv3-8.
+to pre-train 124M [**`openai-community/gpt2`**](https://huggingface.co/openai-community/gpt2)
 in Norwegian on a single TPUv3-8 pod.
 
 The example script uses the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
@@ -144,7 +144,7 @@ mkdir ./norwegian-gpt2
 
 ### Train tokenizer
 
-In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://hf-mirror.com/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
+In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://huggingface.co/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
 The tokenizer is trained on the complete Norwegian dataset of OSCAR
 and consequently saved in the cloned model directory.
 This can take up to 10 minutes depending on your hardware ☕.
@@ -179,7 +179,7 @@ tokenizer.save("./norwegian-gpt2/tokenizer.json")
 ### Create configuration
 
 Next, we create the model's configuration file. This is as simple 
-as loading and storing [`**openai-community/gpt2**`](https://hf-mirror.com/openai-community/gpt2)
+as loading and storing [`**openai-community/gpt2**`](https://huggingface.co/openai-community/gpt2)
 in the local model folder:
 
 ```python
@@ -231,7 +231,7 @@ look at [this](https://colab.research.google.com/github/huggingface/notebooks/bl
 In the following, we demonstrate how to train a T5 model using the span-masked language model 
 objective as proposed in the [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683).
 More specifically, we demonstrate how JAX/Flax can be leveraged 
-to pre-train [**`google/t5-v1_1-base`**](https://hf-mirror.com/google/t5-v1_1-base)
+to pre-train [**`google/t5-v1_1-base`**](https://huggingface.co/google/t5-v1_1-base)
 in Norwegian on a single TPUv3-8 pod.
 
 The example script uses the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
@@ -294,7 +294,7 @@ tokenizer.save("./norwegian-t5-base/tokenizer.json")
 ### Create configuration
 
 Next, we create the model's configuration file. This is as simple 
-as loading and storing [`**google/t5-v1_1-base**`](https://hf-mirror.com/google/t5-v1_1-base)
+as loading and storing [`**google/t5-v1_1-base**`](https://huggingface.co/google/t5-v1_1-base)
 in the local model folder:
 
 ```python
@@ -336,14 +336,14 @@ python run_t5_mlm_flax.py \
 Training should converge at a loss and accuracy 
 of 2.36 and 57.0 respectively after 3 epochs on a single TPUv3-8.
 This should take around 4.5 hours.
-Training statistics can be accessed on directly on the 🤗 [hub](https://hf-mirror.com/patrickvonplaten/t5-base-norwegian/tensorboard)
+Training statistics can be accessed on directly on the 🤗 [hub](https://huggingface.co/patrickvonplaten/t5-base-norwegian/tensorboard)
 
 ## BART: Denoising language modeling
 
 In the following, we demonstrate how to train a BART model 
 using denoising language modeling objective as introduced in [BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension](https://arxiv.org/abs/1910.13461).
 More specifically, we demonstrate how JAX/Flax can be leveraged 
-to pre-train [**`bart-base`**](https://hf-mirror.com/facebook/bart-base)
+to pre-train [**`bart-base`**](https://huggingface.co/facebook/bart-base)
 in Norwegian on a single TPUv3-8 pod.
 
 The example script uses the 🤗 Datasets library. You can easily customize them to your needs if you need extra processing on your datasets.
@@ -355,7 +355,7 @@ mkdir ./norwegian-bart-base
 ```
 
 ### Train tokenizer
-In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://hf-mirror.com/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
+In the first step, we train a tokenizer to efficiently process the text input for the model. Similar to how it is shown in [How to train a new language model from scratch using Transformers and Tokenizers](https://huggingface.co/blog/how-to-train), we use a **`ByteLevelBPETokenizer`**.
 The tokenizer is trained on the complete Norwegian dataset of OSCAR
 and consequently saved in the cloned model directory.
 This can take up to 10 minutes depending on your hardware ☕.
@@ -390,7 +390,7 @@ tokenizer.save("./norwegian-bart-base/tokenizer.json")
 ### Create configuration
 
 Next, we create the model's configuration file. This is as simple 
-as loading and storing [`**facebook/bart-base**`](https://hf-mirror.com/facebook/bart-base)
+as loading and storing [`**facebook/bart-base**`](https://huggingface.co/facebook/bart-base)
 in the local model folder:
 
 ```python

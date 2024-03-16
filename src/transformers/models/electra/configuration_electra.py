@@ -26,17 +26,17 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 ELECTRA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/electra-small-generator": "https://hf-mirror.com/google/electra-small-generator/resolve/main/config.json",
-    "google/electra-base-generator": "https://hf-mirror.com/google/electra-base-generator/resolve/main/config.json",
-    "google/electra-large-generator": "https://hf-mirror.com/google/electra-large-generator/resolve/main/config.json",
+    "google/electra-small-generator": "https://huggingface.co/google/electra-small-generator/resolve/main/config.json",
+    "google/electra-base-generator": "https://huggingface.co/google/electra-base-generator/resolve/main/config.json",
+    "google/electra-large-generator": "https://huggingface.co/google/electra-large-generator/resolve/main/config.json",
     "google/electra-small-discriminator": (
-        "https://hf-mirror.com/google/electra-small-discriminator/resolve/main/config.json"
+        "https://huggingface.co/google/electra-small-discriminator/resolve/main/config.json"
     ),
     "google/electra-base-discriminator": (
-        "https://hf-mirror.com/google/electra-base-discriminator/resolve/main/config.json"
+        "https://huggingface.co/google/electra-base-discriminator/resolve/main/config.json"
     ),
     "google/electra-large-discriminator": (
-        "https://hf-mirror.com/google/electra-large-discriminator/resolve/main/config.json"
+        "https://huggingface.co/google/electra-large-discriminator/resolve/main/config.json"
     ),
 }
 
@@ -46,7 +46,7 @@ class ElectraConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ElectraModel`] or a [`TFElectraModel`]. It is
     used to instantiate a ELECTRA model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the ELECTRA
-    [google/electra-small-discriminator](https://hf-mirror.com/google/electra-small-discriminator) architecture.
+    [google/electra-small-discriminator](https://huggingface.co/google/electra-small-discriminator) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

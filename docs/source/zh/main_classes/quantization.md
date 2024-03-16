@@ -29,10 +29,10 @@ AWQ方法已经在[*AWQ: Activation-aware Weight Quantization for LLM Compressio
 
 - [`llm-awq`](https://github.com/mit-han-lab/llm-awq)，来自MIT Han Lab
 - [`autoawq`](https://github.com/casper-hansen/AutoAWQ)，来自[`casper-hansen`](https://github.com/casper-hansen)
-- Intel neural compressor，来自Intel - 通过[`optimum-intel`](https://hf-mirror.com/docs/optimum/main/en/intel/optimization_inc)使用
+- Intel neural compressor，来自Intel - 通过[`optimum-intel`](https://huggingface.co/docs/optimum/main/en/intel/optimization_inc)使用
 
 生态系统中可能存在许多其他工具，请随时提出PR将它们添加到列表中。
-目前与🤗 Transformers的集成仅适用于使用`autoawq`和`llm-awq`量化后的模型。大多数使用`auto-awq`量化的模型可以在🤗 Hub的[`TheBloke`](https://hf-mirror.com/TheBloke)命名空间下找到，要使用`llm-awq`对模型进行量化，请参阅[`llm-awq`](https://github.com/mit-han-lab/llm-awq/)的示例文件夹中的[`convert_to_hf.py`](https://github.com/mit-han-lab/llm-awq/blob/main/examples/convert_to_hf.py)脚本。
+目前与🤗 Transformers的集成仅适用于使用`autoawq`和`llm-awq`量化后的模型。大多数使用`auto-awq`量化的模型可以在🤗 Hub的[`TheBloke`](https://huggingface.co/TheBloke)命名空间下找到，要使用`llm-awq`对模型进行量化，请参阅[`llm-awq`](https://github.com/mit-han-lab/llm-awq/)的示例文件夹中的[`convert_to_hf.py`](https://github.com/mit-han-lab/llm-awq/blob/main/examples/convert_to_hf.py)脚本。
 
 
 ### 加载一个量化的模型
@@ -80,23 +80,23 @@ model = AutoModelForCausalLM.from_pretrained("TheBloke/zephyr-7B-alpha-AWQ", att
 
 请注意，在编写本文档部分时，可用的量化方法包括：`awq`、`gptq`和`bitsandbytes`。
 
-基准测试在一台NVIDIA-A100实例上运行，使用[`TheBloke/Mistral-7B-v0.1-AWQ`](https://hf-mirror.com/TheBloke/Mistral-7B-v0.1-AWQ)作为AWQ模型，[`TheBloke/Mistral-7B-v0.1-GPTQ`](https://hf-mirror.com/TheBloke/Mistral-7B-v0.1-GPTQ)作为GPTQ模型。我们还将其与`bitsandbytes`量化模型和`float16`模型进行了对比。以下是一些结果示例：
+基准测试在一台NVIDIA-A100实例上运行，使用[`TheBloke/Mistral-7B-v0.1-AWQ`](https://huggingface.co/TheBloke/Mistral-7B-v0.1-AWQ)作为AWQ模型，[`TheBloke/Mistral-7B-v0.1-GPTQ`](https://huggingface.co/TheBloke/Mistral-7B-v0.1-GPTQ)作为GPTQ模型。我们还将其与`bitsandbytes`量化模型和`float16`模型进行了对比。以下是一些结果示例：
 
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/forward_memory_plot.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/forward_memory_plot.png">
 </div>
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/generate_memory_plot.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/generate_memory_plot.png">
 </div>
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/generate_throughput_plot.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/generate_throughput_plot.png">
 </div>
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/forward_latency_plot.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/forward_latency_plot.png">
 </div>
 
 你可以在[此链接](https://github.com/huggingface/optimum-benchmark/tree/main/examples/running-mistrals)中找到完整的结果以及包版本。
@@ -119,7 +119,7 @@ model = AutoModelForCausalLM.from_pretrained("TheBloke/zephyr-7B-alpha-AWQ", att
 
 要了解更多关于量化模型的信息，请查看：
 - [GPTQ](https://arxiv.org/pdf/2210.17323.pdf)论文
-- `optimum`关于GPTQ量化的[指南](https://hf-mirror.com/docs/optimum/llm_quantization/usage_guides/quantization)
+- `optimum`关于GPTQ量化的[指南](https://huggingface.co/docs/optimum/llm_quantization/usage_guides/quantization)
 - 用作后端的[`AutoGPTQ`](https://github.com/PanQiWei/AutoGPTQ)库
 
 
@@ -186,7 +186,7 @@ from transformers import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", quantization_config=gptq_config)
 ```
 
-请注意，不支持磁盘卸载。此外，如果由于数据集而内存不足，您可能需要在`from_pretrained`中设置`max_memory`。查看这个[指南](https://hf-mirror.com/docs/accelerate/usage_guides/big_modeling#designing-a-device-map)以了解有关`device_map`和`max_memory`的更多信息。
+请注意，不支持磁盘卸载。此外，如果由于数据集而内存不足，您可能需要在`from_pretrained`中设置`max_memory`。查看这个[指南](https://huggingface.co/docs/accelerate/usage_guides/big_modeling#designing-a-device-map)以了解有关`device_map`和`max_memory`的更多信息。
 
 
 <Tip warning={true}>
@@ -276,11 +276,11 @@ model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq", de
 🤗 Transformers 与 `bitsandbytes` 上最常用的模块紧密集成。您可以使用几行代码以 8 位精度加载您的模型。
 自bitsandbytes的0.37.0版本发布以来，大多数GPU硬件都支持这一点。
 
-在[LLM.int8()](https://arxiv.org/abs/2208.07339)论文中了解更多关于量化方法的信息，或者在[博客文章](https://hf-mirror.com/blog/hf-bitsandbytes-integration)中了解关于合作的更多信息。
+在[LLM.int8()](https://arxiv.org/abs/2208.07339)论文中了解更多关于量化方法的信息，或者在[博客文章](https://huggingface.co/blog/hf-bitsandbytes-integration)中了解关于合作的更多信息。
 
 自其“0.39.0”版本发布以来，您可以使用FP4数据类型，通过4位量化加载任何支持“device_map”的模型。
 
-如果您想量化自己的 pytorch 模型，请查看 🤗 Accelerate 的[文档](https://hf-mirror.com/docs/accelerate/main/en/usage_guides/quantization)。
+如果您想量化自己的 pytorch 模型，请查看 🤗 Accelerate 的[文档](https://huggingface.co/docs/accelerate/main/en/usage_guides/quantization)。
 
 以下是您可以使用“bitsandbytes”集成完成的事情
 
@@ -568,5 +568,5 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 ## 使用 🤗 `optimum` 进行量化
 
-请查看[Optimum 文档](https://hf-mirror.com/docs/optimum/index)以了解更多关于`optimum`支持的量化方法，并查看这些方法是否适用于您的用例。
+请查看[Optimum 文档](https://huggingface.co/docs/optimum/index)以了解更多关于`optimum`支持的量化方法，并查看这些方法是否适用于您的用例。
 

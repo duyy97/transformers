@@ -33,9 +33,9 @@ The abstract from the paper is the following:
 
 The figure below illustrates the architecture of MaskFormer. Taken from the [original paper](https://arxiv.org/abs/2107.06278).
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/maskformer_architecture.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/maskformer_architecture.png"/>
 
-This model was contributed by [francesco](https://hf-mirror.com/francesco). The original code can be found [here](https://github.com/facebookresearch/MaskFormer).
+This model was contributed by [francesco](https://huggingface.co/francesco). The original code can be found [here](https://github.com/facebookresearch/MaskFormer).
 
 ## Usage tips
 

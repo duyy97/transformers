@@ -63,7 +63,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 CONVNEXTV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/convnextv2-tiny-1k-224",
-    # See all ConvNextV2 models at https://hf-mirror.com/models?filter=convnextv2
+    # See all ConvNextV2 models at https://huggingface.co/models?filter=convnextv2
 ]
 
 

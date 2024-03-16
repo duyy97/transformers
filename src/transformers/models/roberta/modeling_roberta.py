@@ -58,7 +58,7 @@ ROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "distilbert/distilroberta-base",
     "openai-community/roberta-base-openai-detector",
     "openai-community/roberta-large-openai-detector",
-    # See all RoBERTa models at https://hf-mirror.com/models?filter=roberta
+    # See all RoBERTa models at https://huggingface.co/models?filter=roberta
 ]
 
 

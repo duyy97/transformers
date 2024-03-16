@@ -46,10 +46,10 @@ logger = logging.get_logger(__name__)
 
 _CHECKPOINT_FOR_DOC = "google/owlv2-base-patch16-ensemble"
 
-# See all Owlv2 models at https://hf-mirror.com/models?filter=owlv2
+# See all Owlv2 models at https://huggingface.co/models?filter=owlv2
 OWLV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/owlv2-base-patch16-ensemble",
-    # See all OWLv2 models at https://hf-mirror.com/models?filter=owlv2
+    # See all OWLv2 models at https://huggingface.co/models?filter=owlv2
 ]
 
 

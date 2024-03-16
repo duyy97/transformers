@@ -47,7 +47,7 @@ tokenizer负责准备输入以供模型使用。该库包含所有模型的token
 
 ## PreTrainedTokenizerFast
 
-[`PreTrainedTokenizerFast`] 依赖于 [tokenizers](https://hf-mirror.com/docs/tokenizers) 库。可以非常简单地将从 🤗 tokenizers 库获取的tokenizers加载到 🤗 transformers 中。查看 [使用 🤗 tokenizers 的分词器](../fast_tokenizers) 页面以了解如何执行此操作。
+[`PreTrainedTokenizerFast`] 依赖于 [tokenizers](https://huggingface.co/docs/tokenizers) 库。可以非常简单地将从 🤗 tokenizers 库获取的tokenizers加载到 🤗 transformers 中。查看 [使用 🤗 tokenizers 的分词器](../fast_tokenizers) 页面以了解如何执行此操作。
 
 [[autodoc]] PreTrainedTokenizerFast
     - __call__

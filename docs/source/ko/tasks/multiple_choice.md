@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 
 진행하는 방법은 아래와 같습니다:
 
-1. [SWAG](https://hf-mirror.com/datasets/swag) 데이터 세트의 'regular' 구성으로 [BERT](https://hf-mirror.com/google-bert/bert-base-uncased)를 미세 조정하여 여러 옵션과 일부 컨텍스트가 주어졌을 때 가장 적합한 답을 선택합니다.
+1. [SWAG](https://huggingface.co/datasets/swag) 데이터 세트의 'regular' 구성으로 [BERT](https://huggingface.co/google-bert/bert-base-uncased)를 미세 조정하여 여러 옵션과 일부 컨텍스트가 주어졌을 때 가장 적합한 답을 선택합니다.
 2. 추론에 미세 조정된 모델을 사용합니다.
 
 <Tip>
@@ -216,7 +216,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 
 ## 평가 하기[[evaluate]]
 
-훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗[Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 가져올 수 있습니다. 이 작업에서는 [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 지표를 가져옵니다(🤗 Evaluate [둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하여 지표를 가져오고 계산하는 방법에 대해 자세히 알아보세요):
+훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗[Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 가져올 수 있습니다. 이 작업에서는 [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) 지표를 가져옵니다(🤗 Evaluate [둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하여 지표를 가져오고 계산하는 방법에 대해 자세히 알아보세요):
 
 ```py
 >>> import evaluate

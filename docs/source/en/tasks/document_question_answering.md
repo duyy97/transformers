@@ -25,7 +25,7 @@ text, the positions of words (bounding boxes), and the image itself.
 
 This guide illustrates how to:
 
-- Fine-tune [LayoutLMv2](../model_doc/layoutlmv2) on the [DocVQA dataset](https://hf-mirror.com/datasets/nielsr/docvqa_1200_examples_donut).
+- Fine-tune [LayoutLMv2](../model_doc/layoutlmv2) on the [DocVQA dataset](https://huggingface.co/datasets/nielsr/docvqa_1200_examples_donut).
 - Use your fine-tuned model for inference.
 
 <Tip>
@@ -83,7 +83,7 @@ Let's define some global variables.
 
 In this guide we use a small sample of preprocessed DocVQA that you can find on 🤗 Hub. If you'd like to use the full
 DocVQA dataset, you can register and download it on [DocVQA homepage](https://rrc.cvc.uab.es/?ch=17). If you do so, to
-proceed with this guide check out [how to load files into a 🤗 dataset](https://hf-mirror.com/docs/datasets/loading#local-and-remote-files).
+proceed with this guide check out [how to load files into a 🤗 dataset](https://huggingface.co/docs/datasets/loading#local-and-remote-files).
 
 ```py
 >>> from datasets import load_dataset
@@ -128,7 +128,7 @@ We'll also take the first of the answers from the set provided by the annotators
 ```
 
 Note that the LayoutLMv2 checkpoint that we use in this guide has been trained with `max_position_embeddings = 512` (you can
-find this information in the [checkpoint's `config.json` file](https://hf-mirror.com/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)).
+find this information in the [checkpoint's `config.json` file](https://huggingface.co/microsoft/layoutlmv2-base-uncased/blob/main/config.json#L18)).
 We can truncate the examples but to avoid the situation where the answer might be at the end of a large document and end up truncated,
 here we'll remove the few examples where the embedding is likely to end up longer than 512.
 If most of the documents in your dataset are long, you can implement a sliding window strategy - check out [this notebook](https://github.com/huggingface/notebooks/blob/main/examples/question_answering.ipynb) for details.
@@ -155,7 +155,7 @@ Finally, the data exploration won't be complete if we don't peek at an image exa
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/docvqa_example.jpg" alt="DocVQA Image Example"/>
  </div>
 
 ## Preprocess the data
@@ -364,7 +364,7 @@ Let's check what the features of the encoded dataset look like:
 Evaluation for document question answering requires a significant amount of postprocessing. To avoid taking up too much
 of your time, this guide skips the evaluation step. The [`Trainer`] still calculates the evaluation loss during training so
 you're not completely in the dark about your model's performance. Extractive question answering is typically evaluated using F1/exact match.
-If you'd like to implement it yourself, check out the [Question Answering chapter](https://hf-mirror.com/course/chapter7/7?fw=pt#postprocessing)
+If you'd like to implement it yourself, check out the [Question Answering chapter](https://huggingface.co/course/chapter7/7?fw=pt#postprocessing)
 of the Hugging Face course for inspiration.
 
 ## Train

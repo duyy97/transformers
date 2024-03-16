@@ -50,7 +50,7 @@ _CONFIG_FOR_DOC = "ChineseCLIPConfig"
 
 CHINESE_CLIP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "OFA-Sys/chinese-clip-vit-base-patch16",
-    # See all Chinese-CLIP models at https://hf-mirror.com/models?filter=chinese_clip
+    # See all Chinese-CLIP models at https://huggingface.co/models?filter=chinese_clip
 ]
 
 

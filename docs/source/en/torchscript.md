@@ -182,10 +182,10 @@ Inf1. The Neuron SDK provides:
 ### Implications
 
 Transformers models based on the [BERT (Bidirectional Encoder Representations from
-Transformers)](https://hf-mirror.com/docs/transformers/main/model_doc/bert)
+Transformers)](https://huggingface.co/docs/transformers/main/model_doc/bert)
 architecture, or its variants such as
-[distilBERT](https://hf-mirror.com/docs/transformers/main/model_doc/distilbert) and
-[roBERTa](https://hf-mirror.com/docs/transformers/main/model_doc/roberta) run best on
+[distilBERT](https://huggingface.co/docs/transformers/main/model_doc/distilbert) and
+[roBERTa](https://huggingface.co/docs/transformers/main/model_doc/roberta) run best on
 Inf1 for non-generative tasks such as extractive question answering, sequence
 classification, and token classification. However, text generation tasks can still be
 adapted to run on Inf1 according to this [AWS Neuron MarianMT

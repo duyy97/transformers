@@ -23,7 +23,7 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 VITDET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/vit-det-base": "https://hf-mirror.com/facebook/vit-det-base/resolve/main/config.json",
+    "facebook/vit-det-base": "https://huggingface.co/facebook/vit-det-base/resolve/main/config.json",
 }
 
 
@@ -32,7 +32,7 @@ class VitDetConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`VitDetModel`]. It is used to instantiate an
     VitDet model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the VitDet
-    [google/vitdet-base-patch16-224](https://hf-mirror.com/google/vitdet-base-patch16-224) architecture.
+    [google/vitdet-base-patch16-224](https://huggingface.co/google/vitdet-base-patch16-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

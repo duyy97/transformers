@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/vit-mae-base": "https://hf-mirror.com/facebook/vit-mae-base/resolve/main/config.json",
-    # See all ViT MAE models at https://hf-mirror.com/models?filter=vit-mae
+    "facebook/vit-mae-base": "https://huggingface.co/facebook/vit-mae-base/resolve/main/config.json",
+    # See all ViT MAE models at https://huggingface.co/models?filter=vit-mae
 }
 
 
@@ -31,7 +31,7 @@ class ViTMAEConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ViTMAEModel`]. It is used to instantiate an ViT
     MAE model according to the specified arguments, defining the model architecture. Instantiating a configuration with
     the defaults will yield a similar configuration to that of the ViT
-    [facebook/vit-mae-base](https://hf-mirror.com/facebook/vit-mae-base) architecture.
+    [facebook/vit-mae-base](https://huggingface.co/facebook/vit-mae-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -24,9 +24,9 @@ logger = logging.get_logger(__name__)
 
 INFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "huggingface/informer-tourism-monthly": (
-        "https://hf-mirror.com/huggingface/informer-tourism-monthly/resolve/main/config.json"
+        "https://huggingface.co/huggingface/informer-tourism-monthly/resolve/main/config.json"
     ),
-    # See all Informer models at https://hf-mirror.com/models?filter=informer
+    # See all Informer models at https://huggingface.co/models?filter=informer
 }
 
 
@@ -35,7 +35,7 @@ class InformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`InformerModel`]. It is used to instantiate an
     Informer model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Informer
-    [huggingface/informer-tourism-monthly](https://hf-mirror.com/huggingface/informer-tourism-monthly) architecture.
+    [huggingface/informer-tourism-monthly](https://huggingface.co/huggingface/informer-tourism-monthly) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

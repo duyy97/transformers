@@ -37,7 +37,7 @@ explicit and implicit knowledge storage on three popular Open-QA benchmarks, and
 methods by a significant margin (4-16% absolute accuracy), while also providing qualitative benefits such as
 interpretability and modularity.*
 
-This model was contributed by [qqaatw](https://hf-mirror.com/qqaatw). The original code can be found
+This model was contributed by [qqaatw](https://huggingface.co/qqaatw). The original code can be found
 [here](https://github.com/google-research/language/tree/master/language/realm).
 
 ## RealmConfig

@@ -158,7 +158,7 @@ Los modelos preentrenados se descargan y almacenan en caché localmente en: `~/.
 
 <Tip>
 
-Puedes añadir [🤗 Datasets](https://hf-mirror.com/docs/datasets/) al flujo de entrenamiento offline declarando la variable de entorno  `HF_DATASETS_OFFLINE=1`.
+Puedes añadir [🤗 Datasets](https://huggingface.co/docs/datasets/) al flujo de entrenamiento offline declarando la variable de entorno  `HF_DATASETS_OFFLINE=1`.
 
 </Tip>
 
@@ -181,9 +181,9 @@ El script ahora debería ejecutarse sin bloquearse ni esperar a que se agote el 
 
 Otra opción para usar 🤗 Transformers offline es descargando previamente los archivos y después apuntar al path local donde se encuentren. Hay tres maneras de hacer esto:
 
-* Descarga un archivo mediante la interfaz de usuario del [Model Hub](https://hf-mirror.com/models) haciendo click en el ícono ↓.
+* Descarga un archivo mediante la interfaz de usuario del [Model Hub](https://huggingface.co/models) haciendo click en el ícono ↓.
 
-    ![download-icon](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![download-icon](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
 
 * Utiliza el flujo de [`PreTrainedModel.from_pretrained`] y [`PreTrainedModel.save_pretrained`]:
@@ -219,7 +219,7 @@ Otra opción para usar 🤗 Transformers offline es descargando previamente los 
     python -m pip install huggingface_hub
     ```
 
-    2. Utiliza la función [`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub) para descargar un archivo a un path específico. Por ejemplo, el siguiente comando descarga el archivo `config.json` del modelo [T0](https://hf-mirror.com/bigscience/T0_3B) al path deseado:
+    2. Utiliza la función [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) para descargar un archivo a un path específico. Por ejemplo, el siguiente comando descarga el archivo `config.json` del modelo [T0](https://huggingface.co/bigscience/T0_3B) al path deseado:
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -237,6 +237,6 @@ Una vez que el archivo se descargue y se almacene en caché localmente, especifi
 
 <Tip>
 
-Para más detalles sobre cómo descargar archivos almacenados en el Hub consulta la sección [How to download files from the Hub](https://hf-mirror.com/docs/hub/how-to-downstream).
+Para más detalles sobre cómo descargar archivos almacenados en el Hub consulta la sección [How to download files from the Hub](https://huggingface.co/docs/hub/how-to-downstream).
 
 </Tip>

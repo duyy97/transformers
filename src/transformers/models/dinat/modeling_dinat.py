@@ -70,7 +70,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 DINAT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "shi-labs/dinat-mini-in1k-224",
-    # See all Dinat models at https://hf-mirror.com/models?filter=dinat
+    # See all Dinat models at https://huggingface.co/models?filter=dinat
 ]
 
 # drop_path and DinatDropPath are from the timm library.

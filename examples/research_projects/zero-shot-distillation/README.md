@@ -51,10 +51,10 @@ higher temperature results in a student with smoother (lower confidence) predict
 Does not affect training. Use `--per_device_train_batch_size` to change the training batch size.
 
 Any of the arguments in the 🤗 Trainer's
-[`TrainingArguments`](https://hf-mirror.com/transformers/main_classes/trainer.html?#trainingarguments) can also be
+[`TrainingArguments`](https://huggingface.co/transformers/main_classes/trainer.html?#trainingarguments) can also be
 modified, such as `--learning_rate`, `--fp16`, `--no_cuda`, `--warmup_steps`, etc. Run `python distill_classifier.py
 -h` for a full list of available arguments or consult the [Trainer
-documentation](https://hf-mirror.com/transformers/main_classes/trainer.html#trainingarguments).
+documentation](https://huggingface.co/transformers/main_classes/trainer.html#trainingarguments).
 
 > **Note**: Distributed and TPU training are not currently supported. Single-node multi-GPU is supported, however,
 and will run automatically if multiple GPUs are available.
@@ -64,7 +64,7 @@ and will run automatically if multiple GPUs are available.
 > A full colab demo notebook of this example can be found [here](https://colab.research.google.com/drive/1mjBjd0cR8G57ZpsnFCS3ngGyo5nCa9ya?usp=sharing).
 
 Let's say we're interested in classifying news articles into one of four topic categories: "the world", "sports",
-"business", or "science/tech". We have an unlabeled dataset, [AG's News](https://hf-mirror.com/datasets/ag_news),
+"business", or "science/tech". We have an unlabeled dataset, [AG's News](https://huggingface.co/datasets/ag_news),
 which corresponds to this problem (in reality AG's News is annotated, but we will pretend it is not for the sake of
 example).
 
@@ -150,6 +150,6 @@ original zero-shot model `roberta-large-mnli` gets an accuracy of 69.3% on the h
 student on the unlabeled training set, the distilled model gets a similar score of 70.4%.
 
 Lastly, you can share the distilled model with the community and/or use it with our inference API by [uploading it
-to the 🤗 Hub](https://hf-mirror.com/transformers/model_sharing.html). We've uploaded the distilled model from this
+to the 🤗 Hub](https://huggingface.co/transformers/model_sharing.html). We've uploaded the distilled model from this
 example at
-[joeddav/distilbert-base-uncased-agnews-student](https://hf-mirror.com/joeddav/distilbert-base-uncased-agnews-student).
+[joeddav/distilbert-base-uncased-agnews-student](https://huggingface.co/joeddav/distilbert-base-uncased-agnews-student).

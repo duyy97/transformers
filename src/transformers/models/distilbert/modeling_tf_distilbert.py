@@ -69,7 +69,7 @@ TF_DISTILBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "distilbert-base-cased-distilled-squad",
     "distilbert-base-multilingual-cased",
     "distilbert-base-uncased-finetuned-sst-2-english",
-    # See all DistilBERT models at https://hf-mirror.com/models?filter=distilbert
+    # See all DistilBERT models at https://huggingface.co/models?filter=distilbert
 ]
 
 

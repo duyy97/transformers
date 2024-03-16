@@ -37,17 +37,17 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "source_spm": {
-        "Helsinki-NLP/opus-mt-en-de": "https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/source.spm"
+        "Helsinki-NLP/opus-mt-en-de": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/source.spm"
     },
     "target_spm": {
-        "Helsinki-NLP/opus-mt-en-de": "https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/target.spm"
+        "Helsinki-NLP/opus-mt-en-de": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/target.spm"
     },
     "vocab": {
-        "Helsinki-NLP/opus-mt-en-de": "https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/vocab.json"
+        "Helsinki-NLP/opus-mt-en-de": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/vocab.json"
     },
     "tokenizer_config_file": {
         "Helsinki-NLP/opus-mt-en-de": (
-            "https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/tokenizer_config.json"
+            "https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/tokenizer_config.json"
         )
     },
 }
@@ -57,7 +57,7 @@ PRETRAINED_INIT_CONFIGURATION = {}
 
 SPIECE_UNDERLINE = "▁"
 
-# Example URL https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/vocab.json
+# Example URL https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/vocab.json
 
 
 class MarianTokenizer(PreTrainedTokenizer):

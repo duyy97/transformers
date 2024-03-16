@@ -32,7 +32,7 @@ Image-to-Image タスクは、アプリケーションが画像を受信し、�
 pip install transformers
 ```
 
-[Swin2SR モデル](https://hf-mirror.com/caidas/swin2SR-lightweight-x2-64) を使用してパイプラインを初期化できるようになりました。次に、イメージを使用してパイプラインを呼び出すことで、パイプラインを推論できます。現時点では、[Swin2SR モデル](https://hf-mirror.com/models?sort=trending&search=swin2sr) のみがこのパイプラインでサポートされています。
+[Swin2SR モデル](https://huggingface.co/caidas/swin2SR-lightweight-x2-64) を使用してパイプラインを初期化できるようになりました。次に、イメージを使用してパイプラインを呼び出すことで、パイプラインを推論できます。現時点では、[Swin2SR モデル](https://huggingface.co/models?sort=trending&search=swin2sr) のみがこのパイプラインでサポートされています。
 
 ```python
 from transformers import pipeline
@@ -47,7 +47,7 @@ pipe = pipeline(task="image-to-image", model="caidas/swin2SR-lightweight-x2-64",
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg"
+url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
 
 print(image.size)
@@ -56,7 +56,7 @@ print(image.size)
 # (532, 432)
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg" alt="Photo of a cat"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat.jpg" alt="Photo of a cat"/>
 </div>
 
 
@@ -131,5 +131,5 @@ output = (output * 255.0).round().astype(np.uint8)
 Image.fromarray(output)
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat_upscaled.png" alt="Upscaled photo of a cat"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/cat_upscaled.png" alt="Upscaled photo of a cat"/>
 </div>

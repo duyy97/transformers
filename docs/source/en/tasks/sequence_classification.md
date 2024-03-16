@@ -24,7 +24,7 @@ Text classification is a common NLP task that assigns a label or class to text. 
 
 This guide will show you how to:
 
-1. Finetune [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) on the [IMDb](https://hf-mirror.com/datasets/imdb) dataset to determine whether a movie review is positive or negative.
+1. Finetune [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) on the [IMDb](https://huggingface.co/datasets/imdb) dataset to determine whether a movie review is positive or negative.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -124,7 +124,7 @@ Now create a batch of examples using [`DataCollatorWithPadding`]. It's more effi
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate

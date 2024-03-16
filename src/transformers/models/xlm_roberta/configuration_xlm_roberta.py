@@ -25,19 +25,19 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 XLM_ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "FacebookAI/xlm-roberta-base": "https://hf-mirror.com/FacebookAI/xlm-roberta-base/resolve/main/config.json",
-    "FacebookAI/xlm-roberta-large": "https://hf-mirror.com/FacebookAI/xlm-roberta-large/resolve/main/config.json",
+    "FacebookAI/xlm-roberta-base": "https://huggingface.co/FacebookAI/xlm-roberta-base/resolve/main/config.json",
+    "FacebookAI/xlm-roberta-large": "https://huggingface.co/FacebookAI/xlm-roberta-large/resolve/main/config.json",
     "FacebookAI/xlm-roberta-large-finetuned-conll02-dutch": (
-        "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/config.json"
+        "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/config.json"
     ),
     "FacebookAI/xlm-roberta-large-finetuned-conll02-spanish": (
-        "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/config.json"
+        "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/config.json"
     ),
     "FacebookAI/xlm-roberta-large-finetuned-conll03-english": (
-        "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/config.json"
+        "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/config.json"
     ),
     "FacebookAI/xlm-roberta-large-finetuned-conll03-german": (
-        "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/config.json"
+        "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/config.json"
     ),
 }
 
@@ -47,7 +47,7 @@ class XLMRobertaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`XLMRobertaModel`] or a [`TFXLMRobertaModel`]. It
     is used to instantiate a XLM-RoBERTa model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the XLMRoBERTa
-    [FacebookAI/xlm-roberta-base](https://hf-mirror.com/FacebookAI/xlm-roberta-base) architecture.
+    [FacebookAI/xlm-roberta-base](https://huggingface.co/FacebookAI/xlm-roberta-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

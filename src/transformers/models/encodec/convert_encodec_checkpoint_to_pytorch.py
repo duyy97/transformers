@@ -28,7 +28,7 @@ from transformers import (
 
 # checkpoints downloaded from:
 # https://dl.fbaipublicfiles.com/encodec/v0/encodec_24khz-d7cc33bc.th
-# https://hf-mirror.com/facebook/musicgen-small/resolve/main/compression_state_dict.bin
+# https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin
 # https://dl.fbaipublicfiles.com/encodec/v0/encodec_48khz-7e698e3e.th
 
 

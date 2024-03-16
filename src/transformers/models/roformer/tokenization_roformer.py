@@ -29,19 +29,19 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "junnyu/roformer_chinese_small": "https://hf-mirror.com/junnyu/roformer_chinese_small/resolve/main/vocab.txt",
-        "junnyu/roformer_chinese_base": "https://hf-mirror.com/junnyu/roformer_chinese_base/resolve/main/vocab.txt",
+        "junnyu/roformer_chinese_small": "https://huggingface.co/junnyu/roformer_chinese_small/resolve/main/vocab.txt",
+        "junnyu/roformer_chinese_base": "https://huggingface.co/junnyu/roformer_chinese_base/resolve/main/vocab.txt",
         "junnyu/roformer_chinese_char_small": (
-            "https://hf-mirror.com/junnyu/roformer_chinese_char_small/resolve/main/vocab.txt"
+            "https://huggingface.co/junnyu/roformer_chinese_char_small/resolve/main/vocab.txt"
         ),
         "junnyu/roformer_chinese_char_base": (
-            "https://hf-mirror.com/junnyu/roformer_chinese_char_base/resolve/main/vocab.txt"
+            "https://huggingface.co/junnyu/roformer_chinese_char_base/resolve/main/vocab.txt"
         ),
         "junnyu/roformer_small_discriminator": (
-            "https://hf-mirror.com/junnyu/roformer_small_discriminator/resolve/main/vocab.txt"
+            "https://huggingface.co/junnyu/roformer_small_discriminator/resolve/main/vocab.txt"
         ),
         "junnyu/roformer_small_generator": (
-            "https://hf-mirror.com/junnyu/roformer_small_generator/resolve/main/vocab.txt"
+            "https://huggingface.co/junnyu/roformer_small_generator/resolve/main/vocab.txt"
         ),
     }
 }

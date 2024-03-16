@@ -67,7 +67,7 @@ _CTC_EXPECTED_LOSS = 64.21
 
 WAV2VEC2_CONFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/wav2vec2-conformer-rel-pos-large",
-    # See all Wav2Vec2Conformer models at https://hf-mirror.com/models?filter=wav2vec2-conformer
+    # See all Wav2Vec2Conformer models at https://huggingface.co/models?filter=wav2vec2-conformer
 ]
 
 
@@ -1206,7 +1206,7 @@ WAV2VEC2_CONFORMER_INPUTS_DOCSTRING = r"""
 
             `attention_mask` should only be passed if the corresponding processor has `config.return_attention_mask ==
             True`. For all models whose processor has `config.return_attention_mask == False`, such as
-            [wav2vec2-conformer-rel-pos-large](https://hf-mirror.com/facebook/wav2vec2-conformer-rel-pos-large),
+            [wav2vec2-conformer-rel-pos-large](https://huggingface.co/facebook/wav2vec2-conformer-rel-pos-large),
             `attention_mask` should **not** be passed to avoid degraded performance when doing batched inference. For
             such models `input_values` should simply be padded with 0 and passed without `attention_mask`. Be aware
             that these models also yield slightly different results depending on whether `input_values` is padded or

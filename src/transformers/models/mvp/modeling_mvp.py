@@ -69,7 +69,7 @@ MVP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "RUCAIBox/mtl-question-generation",
     "RUCAIBox/mtl-story",
     "RUCAIBox/mtl-summarization",
-    # See all MVP models at https://hf-mirror.com/models?filter=mvp
+    # See all MVP models at https://huggingface.co/models?filter=mvp
 ]
 
 

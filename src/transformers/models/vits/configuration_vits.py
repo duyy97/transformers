@@ -22,7 +22,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 VITS_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/mms-tts-eng": "https://hf-mirror.com/facebook/mms-tts-eng/resolve/main/config.json",
+    "facebook/mms-tts-eng": "https://huggingface.co/facebook/mms-tts-eng/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class VitsConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`VitsModel`]. It is used to instantiate a VITS
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the VITS
-    [facebook/mms-tts-eng](https://hf-mirror.com/facebook/mms-tts-eng) architecture.
+    [facebook/mms-tts-eng](https://huggingface.co/facebook/mms-tts-eng) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

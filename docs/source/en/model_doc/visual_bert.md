@@ -32,7 +32,7 @@ simpler. Further analysis demonstrates that VisualBERT can ground elements of la
 explicit supervision and is even sensitive to syntactic relationships, tracking, for example, associations between
 verbs and image regions corresponding to their arguments.*
 
-This model was contributed by [gchhablani](https://hf-mirror.com/gchhablani). The original code can be found [here](https://github.com/uclanlp/visualbert).
+This model was contributed by [gchhablani](https://huggingface.co/gchhablani). The original code can be found [here](https://github.com/uclanlp/visualbert).
 
 ## Usage tips
 

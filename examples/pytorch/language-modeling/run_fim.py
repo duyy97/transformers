@@ -18,7 +18,7 @@ Fine-tuning the library models for causal language modeling using
 Fill-in-the middle (FIM) objective on a text file or a dataset.
 
 Here is the full list of checkpoints on the hub that can be fine-tuned by this script:
-https://hf-mirror.com/models?filter=text-generation
+https://huggingface.co/models?filter=text-generation
 """
 # You should adapt this script on your own causal language modeling task. Pointers for this are left as comments.
 
@@ -104,7 +104,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -366,7 +366,7 @@ def main():
     np_rng = np.random.RandomState(seed=training_args.seed)
 
     # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -442,7 +442,7 @@ def main():
             )
 
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.html.
+    # https://huggingface.co/docs/datasets/loading_datasets.html.
 
     # Load pretrained model and tokenizer
     #
@@ -721,7 +721,7 @@ def main():
     # to preprocess.
     #
     # To speed up this part, we use multiprocessing. See the documentation of the map method for more information:
-    # https://hf-mirror.com/docs/datasets/process#map
+    # https://huggingface.co/docs/datasets/process#map
 
     # FIM transformations are only supposed to be applied before group_texts processing otherwise some sentences will
     # have 3-4 more tokens than others due to probabilistic addition of FIM-specific tokens which will raise errors

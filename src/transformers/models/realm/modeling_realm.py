@@ -51,7 +51,7 @@ REALM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/realm-orqa-nq-reader",
     "google/realm-orqa-wq-openqa",
     "google/realm-orqa-wq-reader",
-    # See all REALM models at https://hf-mirror.com/models?filter=realm
+    # See all REALM models at https://huggingface.co/models?filter=realm
 ]
 
 

@@ -59,7 +59,7 @@ _CHECKPOINT_FOR_DOC = "facebook/maskformer-swin-base-ade"
 
 MASKFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/maskformer-swin-base-ade",
-    # See all MaskFormer models at https://hf-mirror.com/models?filter=maskformer
+    # See all MaskFormer models at https://huggingface.co/models?filter=maskformer
 ]
 
 
@@ -1854,7 +1854,7 @@ class MaskFormerForInstanceSegmentation(MaskFormerPreTrainedModel):
         >>> model = MaskFormerForInstanceSegmentation.from_pretrained("facebook/maskformer-swin-base-ade")
 
         >>> url = (
-        ...     "https://hf-mirror.com/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
+        ...     "https://huggingface.co/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
         ... )
         >>> image = Image.open(requests.get(url, stream=True).raw)
         >>> inputs = image_processor(images=image, return_tensors="pt")

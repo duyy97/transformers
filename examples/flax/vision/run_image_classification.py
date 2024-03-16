@@ -17,7 +17,7 @@
 Pre-training/Fine-tuning ViT for image classification .
 
 Here is the full list of checkpoints on the hub that can be fine-tuned by this script:
-https://hf-mirror.com/models?filter=vit
+https://huggingface.co/models?filter=vit
 """
 
 import logging

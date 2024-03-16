@@ -38,15 +38,15 @@ SPIECE_UNDERLINE = "▁"
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "cl-tohoku/bert-base-japanese": "https://hf-mirror.com/cl-tohoku/bert-base-japanese/resolve/main/vocab.txt",
+        "cl-tohoku/bert-base-japanese": "https://huggingface.co/cl-tohoku/bert-base-japanese/resolve/main/vocab.txt",
         "cl-tohoku/bert-base-japanese-whole-word-masking": (
-            "https://hf-mirror.com/cl-tohoku/bert-base-japanese-whole-word-masking/resolve/main/vocab.txt"
+            "https://huggingface.co/cl-tohoku/bert-base-japanese-whole-word-masking/resolve/main/vocab.txt"
         ),
         "cl-tohoku/bert-base-japanese-char": (
-            "https://hf-mirror.com/cl-tohoku/bert-base-japanese-char/resolve/main/vocab.txt"
+            "https://huggingface.co/cl-tohoku/bert-base-japanese-char/resolve/main/vocab.txt"
         ),
         "cl-tohoku/bert-base-japanese-char-whole-word-masking": (
-            "https://hf-mirror.com/cl-tohoku/bert-base-japanese-char-whole-word-masking/resolve/main/vocab.txt"
+            "https://huggingface.co/cl-tohoku/bert-base-japanese-char-whole-word-masking/resolve/main/vocab.txt"
         ),
     }
 }

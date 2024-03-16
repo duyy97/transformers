@@ -49,7 +49,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 LEVIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/levit-128S",
-    # See all LeViT models at https://hf-mirror.com/models?filter=levit
+    # See all LeViT models at https://huggingface.co/models?filter=levit
 ]
 
 

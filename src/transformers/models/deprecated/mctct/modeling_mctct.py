@@ -54,7 +54,7 @@ _CTC_EXPECTED_LOSS = 1885.65
 
 MCTCT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "speechbrain/m-ctc-t-large",
-    # See all M-CTC-T models at https://hf-mirror.com/models?filter=mctct
+    # See all M-CTC-T models at https://huggingface.co/models?filter=mctct
 ]
 
 

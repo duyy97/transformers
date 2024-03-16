@@ -38,10 +38,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json", "merges_file": "merges.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/tapex-base": "https://hf-mirror.com/microsoft/tapex-base/resolve/main/vocab.json",
+        "microsoft/tapex-base": "https://huggingface.co/microsoft/tapex-base/resolve/main/vocab.json",
     },
     "merges_file": {
-        "microsoft/tapex-base": "https://hf-mirror.com/microsoft/tapex-base/resolve/main/merges.txt",
+        "microsoft/tapex-base": "https://huggingface.co/microsoft/tapex-base/resolve/main/merges.txt",
     },
 }
 

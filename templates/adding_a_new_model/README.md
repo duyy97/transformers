@@ -165,7 +165,7 @@ You will have to input the model type of the model you want to clone. The model 
 - inside the configuration of any checkpoint of that model
 - the name of the documentation page of that model
 
-For instance the doc page of `BigBirdPegasus` is `https://hf-mirror.com/docs/transformers/model_doc/bigbird_pegasus`
+For instance the doc page of `BigBirdPegasus` is `https://huggingface.co/docs/transformers/model_doc/bigbird_pegasus`
 so its model type is `"bigbird_pegasus"`.
 
 If you make a typo, the command will suggest you the closest model types it can find.

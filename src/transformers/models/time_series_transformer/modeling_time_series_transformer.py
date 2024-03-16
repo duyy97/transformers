@@ -48,7 +48,7 @@ _CONFIG_FOR_DOC = "TimeSeriesTransformerConfig"
 
 TIME_SERIES_TRANSFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "huggingface/time-series-transformer-tourism-monthly",
-    # See all TimeSeriesTransformer models at https://hf-mirror.com/models?filter=time_series_transformer
+    # See all TimeSeriesTransformer models at https://huggingface.co/models?filter=time_series_transformer
 ]
 
 

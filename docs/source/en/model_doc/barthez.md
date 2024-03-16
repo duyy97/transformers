@@ -36,7 +36,7 @@ summarization dataset, OrangeSum, that we release with this paper. We also conti
 pretrained multilingual BART on BARThez's corpus, and we show that the resulting model, which we call mBARTHez,
 provides a significant boost over vanilla BARThez, and is on par with or outperforms CamemBERT and FlauBERT.*
 
-This model was contributed by [moussakam](https://hf-mirror.com/moussakam). The Authors' code can be found [here](https://github.com/moussaKam/BARThez).
+This model was contributed by [moussakam](https://huggingface.co/moussakam). The Authors' code can be found [here](https://github.com/moussaKam/BARThez).
 
 <Tip> 
 

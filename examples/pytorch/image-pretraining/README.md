@@ -16,7 +16,7 @@ limitations under the License.
 
 # Image pretraining examples
 
-This directory contains Python scripts that allow you to pre-train Transformer-based vision models (like [ViT](https://hf-mirror.com/docs/transformers/model_doc/vit), [Swin Transformer](https://hf-mirror.com/docs/transformers/model_doc/swin)) on your own data, after which you can easily load the weights into a [`AutoModelForImageClassification`](https://hf-mirror.com/docs/transformers/model_doc/auto#transformers.AutoModelForImageClassification). It currently includes scripts for:
+This directory contains Python scripts that allow you to pre-train Transformer-based vision models (like [ViT](https://huggingface.co/docs/transformers/model_doc/vit), [Swin Transformer](https://huggingface.co/docs/transformers/model_doc/swin)) on your own data, after which you can easily load the weights into a [`AutoModelForImageClassification`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForImageClassification). It currently includes scripts for:
 - [SimMIM](#simmim) (by Microsoft Research)
 - [MAE](#mae) (by Facebook AI).
 
@@ -27,7 +27,7 @@ NOTE: If you encounter problems/have suggestions for improvement, open an issue 
 
 The `run_mim.py` script can be used to pre-train any Transformer-based vision model in the library (concretely, any model supported by the `AutoModelForMaskedImageModeling` API) for masked image modeling as proposed in [SimMIM: A Simple Framework for Masked Image Modeling](https://arxiv.org/abs/2111.09886) using PyTorch.
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/simmim_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/simmim_architecture.jpg"
 alt="drawing" width="300"/> 
 
 <small> SimMIM framework. Taken from the <a href="https://arxiv.org/abs/2111.09886">original paper</a>. </small>
@@ -36,9 +36,9 @@ The goal for the model is to predict raw pixel values for the masked patches, us
 
 ### Using datasets from 🤗 datasets
 
-Here we show how to pre-train a `ViT` from scratch for masked image modeling on the [cifar10](https://hf-mirror.com/datasets/cifar10) dataset.
+Here we show how to pre-train a `ViT` from scratch for masked image modeling on the [cifar10](https://huggingface.co/datasets/cifar10) dataset.
 
-Alternatively, one can decide to further pre-train an already pre-trained (or fine-tuned) checkpoint from the [hub](https://hf-mirror.com/). This can be done by setting the `model_name_or_path` argument to "google/vit-base-patch16-224-in21k" for example (and not specifying the `model_type` argument).
+Alternatively, one can decide to further pre-train an already pre-trained (or fine-tuned) checkpoint from the [hub](https://huggingface.co/). This can be done by setting the `model_name_or_path` argument to "google/vit-base-patch16-224-in21k" for example (and not specifying the `model_type` argument).
 
 ```bash
 !python run_mim.py \
@@ -63,7 +63,7 @@ Alternatively, one can decide to further pre-train an already pre-trained (or fi
     --seed 1337
 ```
 
-Here, we train for 100 epochs with a learning rate of 2e-5. Note that the SimMIM authors used a more sophisticated learning rate schedule, see the [config files](https://github.com/microsoft/SimMIM/blob/main/configs/vit_base__800ep/simmim_pretrain__vit_base__img224__800ep.yaml) for more info. One can easily tweak the script to include this learning rate schedule (several learning rate schedulers are supported via the [training arguments](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments)).
+Here, we train for 100 epochs with a learning rate of 2e-5. Note that the SimMIM authors used a more sophisticated learning rate schedule, see the [config files](https://github.com/microsoft/SimMIM/blob/main/configs/vit_base__800ep/simmim_pretrain__vit_base__img224__800ep.yaml) for more info. One can easily tweak the script to include this learning rate schedule (several learning rate schedulers are supported via the [training arguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)).
 
 We can also for instance replicate the pre-training of a Swin Transformer using the same architecture as used by the SimMIM authors. For this, we first create a custom configuration and save it locally:
 
@@ -151,7 +151,7 @@ The goal for the model is to predict raw pixel values for the masked patches. As
 
 ### Using datasets from 🤗 `datasets`
 
-One can use the following command to pre-train a `ViTMAEForPreTraining` model from scratch on the [cifar10](https://hf-mirror.com/datasets/cifar10) dataset:
+One can use the following command to pre-train a `ViTMAEForPreTraining` model from scratch on the [cifar10](https://huggingface.co/datasets/cifar10) dataset:
 
 ```bash
 python run_mae.py \
@@ -186,12 +186,12 @@ Here we set:
 
 This replicates the same hyperparameters as used in the original implementation, as shown in the table below.
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/mae_pretraining_setting.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mae_pretraining_setting.png"
 alt="drawing" width="300"/> 
 
 <small> Original hyperparameters. Taken from the <a href="https://arxiv.org/abs/2111.06377">original paper</a>. </small>
 
-Alternatively, one can decide to further pre-train an already pre-trained (or fine-tuned) checkpoint from the [hub](https://hf-mirror.com/). This can be done by setting the `model_name_or_path` argument to "facebook/vit-mae-base" for example.
+Alternatively, one can decide to further pre-train an already pre-trained (or fine-tuned) checkpoint from the [hub](https://huggingface.co/). This can be done by setting the `model_name_or_path` argument to "facebook/vit-mae-base" for example.
 
 
 ### Using your own data
@@ -229,7 +229,7 @@ python run_mae.py \
 
 ## Sharing your model on 🤗 Hub
 
-0. If you haven't already, [sign up](https://hf-mirror.com/join) for a 🤗 account
+0. If you haven't already, [sign up](https://huggingface.co/join) for a 🤗 account
 
 1. Make sure you have `git-lfs` installed and git set up.
 

@@ -22,7 +22,7 @@ logger = logging.get_logger(__name__)
 
 SWIN2SR_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "caidas/swin2sr-classicalsr-x2-64": (
-        "https://hf-mirror.com/caidas/swin2sr-classicalsr-x2-64/resolve/main/config.json"
+        "https://huggingface.co/caidas/swin2sr-classicalsr-x2-64/resolve/main/config.json"
     ),
 }
 
@@ -32,7 +32,7 @@ class Swin2SRConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Swin2SRModel`]. It is used to instantiate a Swin
     Transformer v2 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Swin Transformer v2
-    [caidas/swin2sr-classicalsr-x2-64](https://hf-mirror.com/caidas/swin2sr-classicalsr-x2-64) architecture.
+    [caidas/swin2sr-classicalsr-x2-64](https://huggingface.co/caidas/swin2sr-classicalsr-x2-64) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

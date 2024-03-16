@@ -26,7 +26,7 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 BLIP_2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "salesforce/blip2-opt-2.7b": "https://hf-mirror.com/salesforce/blip2-opt-2.7b/resolve/main/config.json",
+    "salesforce/blip2-opt-2.7b": "https://huggingface.co/salesforce/blip2-opt-2.7b/resolve/main/config.json",
 }
 
 
@@ -35,7 +35,7 @@ class Blip2VisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Blip2VisionModel`]. It is used to instantiate a
     BLIP-2 vision encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration defaults will yield a similar configuration to that of the BLIP-2
-    [Salesforce/blip2-opt-2.7b](https://hf-mirror.com/Salesforce/blip2-opt-2.7b) architecture.
+    [Salesforce/blip2-opt-2.7b](https://huggingface.co/Salesforce/blip2-opt-2.7b) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -134,7 +134,7 @@ class Blip2QFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Blip2QFormerModel`]. It is used to instantiate a
     BLIP-2 Querying Transformer (Q-Former) model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the BLIP-2
-    [Salesforce/blip2-opt-2.7b](https://hf-mirror.com/Salesforce/blip2-opt-2.7b) architecture. Configuration objects
+    [Salesforce/blip2-opt-2.7b](https://huggingface.co/Salesforce/blip2-opt-2.7b) architecture. Configuration objects
     inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the documentation from
     [`PretrainedConfig`] for more information.
 
@@ -253,7 +253,7 @@ class Blip2Config(PretrainedConfig):
     [`Blip2Config`] is the configuration class to store the configuration of a [`Blip2ForConditionalGeneration`]. It is
     used to instantiate a BLIP-2 model according to the specified arguments, defining the vision model, Q-Former model
     and language model configs. Instantiating a configuration with the defaults will yield a similar configuration to
-    that of the BLIP-2 [Salesforce/blip2-opt-2.7b](https://hf-mirror.com/Salesforce/blip2-opt-2.7b) architecture.
+    that of the BLIP-2 [Salesforce/blip2-opt-2.7b](https://huggingface.co/Salesforce/blip2-opt-2.7b) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

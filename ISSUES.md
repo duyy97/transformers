@@ -20,11 +20,11 @@ This is an Open Source Project so please be mindful that like in any other proje
 
 However, we want to encourage you to ask for help whenever you think it's needed! We are happy about every question we get because it allows us to better understand your needs, possible misunderstandings, and most importantly a way for you to help us make this library better. That being said, this document's main purpose is to provide guidelines at how you can formulate your requests to increase your chances to be understood and to get support.
 
-There are two main venues to receive support: [the forums](https://discuss.hf-mirror.com/) and [the GitHub issues](https://github.com/huggingface/transformers/issues).
+There are two main venues to receive support: [the forums](https://discuss.huggingface.co/) and [the GitHub issues](https://github.com/huggingface/transformers/issues).
 
 ## The Forums
 
-[The user forums](https://discuss.hf-mirror.com/) are supported by the wide community of the library users and backed up by developers when needed.
+[The user forums](https://discuss.huggingface.co/) are supported by the wide community of the library users and backed up by developers when needed.
 
 If you have a difficulty with deploying this library or some questions, or you'd like to discuss a new feature, please first consider discussing those things at the forums. Only when you feel your subject matter has been crystalized and you still need support from the library developers do proceed to file an [issue](https://github.com/huggingface/transformers/issues).
 
@@ -274,4 +274,4 @@ In general the best way to figure out what works the best is learn from issues p
 
 Thank you for reading this somewhat lengthy document. We would like to conclude that these are not absolute rules, but a friendly advice that will help maximize the chances for us to understand what you are trying to communicate, reproduce the problem then resolve it to your satisfaction and the benefit of the whole community.
 
-If after reading this document there are remaining questions on how and why or there is a need for further elucidation, please, don't hesitate to ask your question in [this thread](https://discuss.hf-mirror.com/t/how-to-request-support/3128).
+If after reading this document there are remaining questions on how and why or there is a need for further elucidation, please, don't hesitate to ask your question in [this thread](https://discuss.huggingface.co/t/how-to-request-support/3128).

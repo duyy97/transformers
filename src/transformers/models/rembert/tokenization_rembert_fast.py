@@ -34,10 +34,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.model", "tokenizer_file": "tok
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google/rembert": "https://hf-mirror.com/google/rembert/resolve/main/sentencepiece.model",
+        "google/rembert": "https://huggingface.co/google/rembert/resolve/main/sentencepiece.model",
     },
     "tokenizer_file": {
-        "google/rembert": "https://hf-mirror.com/google/rembert/resolve/main/tokenizer.json",
+        "google/rembert": "https://huggingface.co/google/rembert/resolve/main/tokenizer.json",
     },
 }
 
@@ -51,7 +51,7 @@ SPIECE_UNDERLINE = "▁"
 class RemBertTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" RemBert tokenizer (backed by HuggingFace's *tokenizers* library). Based on
-    [Unigram](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=unigram#models). This
+    [Unigram](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=unigram#models). This
     tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should refer to
     this superclass for more information regarding those methods
 

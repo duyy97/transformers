@@ -44,7 +44,7 @@ _CONFIG_FOR_DOC = "VitDetConfig"
 
 VITDET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/vit-det-base",
-    # See all ViTDet models at https://hf-mirror.com/models?filter=vitdet
+    # See all ViTDet models at https://huggingface.co/models?filter=vitdet
 ]
 
 

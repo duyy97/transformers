@@ -40,7 +40,7 @@ _CONFIG_FOR_DOC = "VipLlavaConfig"
 
 VIPLLAVA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "llava-hf/vip-llava-7b-hf",
-    # See all VipLlava models at https://hf-mirror.com/models?filter=vipllava
+    # See all VipLlava models at https://huggingface.co/models?filter=vipllava
 ]
 
 
@@ -394,7 +394,7 @@ class VipLlavaForConditionalGeneration(VipLlavaPreTrainedModel):
         >>> prompt = "A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.###Human: <image>\n{}###Assistant:"
         >>> question = "Can you please describe this image?"
         >>> prompt = prompt.format(question)
-        >>> url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/diffusers/compel-neg.png"
+        >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/compel-neg.png"
         >>> image = Image.open(requests.get(url, stream=True).raw)
 
         >>> inputs = processor(text=text, images=image, return_tensors="pt").to(0, torch.float16)

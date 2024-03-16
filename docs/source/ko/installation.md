@@ -161,7 +161,7 @@ conda install conda-forge::transformers
 
 <Tip>
 
-`HF_DATASETS_OFFLINE=1` 환경 변수를 설정하여 오프라인 훈련 과정에 [🤗 Datasets](https://hf-mirror.com/docs/datasets/)을 추가할 수 있습니다.
+`HF_DATASETS_OFFLINE=1` 환경 변수를 설정하여 오프라인 훈련 과정에 [🤗 Datasets](https://huggingface.co/docs/datasets/)을 추가할 수 있습니다.
 
 </Tip>
 
@@ -185,9 +185,9 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 Another option for using 🤗 Transformers offline is to download the files ahead of time, and then point to their local path when you need to use them offline. There are three ways to do this:
 🤗 Transformers를 오프라인으로 사용하는 또 다른 방법은 파일을 미리 다운로드한 다음, 오프라인일 때 사용할 로컬 경로를 지정해두는 것입니다. 3가지 중 편한 방법을 고르세요.
 
-* [Model Hub](https://hf-mirror.com/models)의 UI를 통해 파일을 다운로드하려면 ↓ 아이콘을 클릭하세요.
+* [Model Hub](https://huggingface.co/models)의 UI를 통해 파일을 다운로드하려면 ↓ 아이콘을 클릭하세요.
 
-    ![download-icon](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![download-icon](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
 * [`PreTrainedModel.from_pretrained`]와 [`PreTrainedModel.save_pretrained`] 워크플로를 활용하세요.
 
@@ -222,7 +222,7 @@ Another option for using 🤗 Transformers offline is to download the files ahea
     python -m pip install huggingface_hub
     ```
 
-    2. [`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub) 함수로 파일을 특정 위치에 다운로드할 수 있습니다. 예를 들어 아래 명령은 [T0](https://hf-mirror.com/bigscience/T0_3B) 모델의 `config.json` 파일을 지정된 경로에 다운로드합니다.
+    2. [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) 함수로 파일을 특정 위치에 다운로드할 수 있습니다. 예를 들어 아래 명령은 [T0](https://huggingface.co/bigscience/T0_3B) 모델의 `config.json` 파일을 지정된 경로에 다운로드합니다.
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -240,6 +240,6 @@ Another option for using 🤗 Transformers offline is to download the files ahea
 
 <Tip>
 
-Hub에 저장된 파일을 다운로드하는 방법을 더 자세히 알아보려면 [Hub에서 파일 다운로드하기](https://hf-mirror.com/docs/hub/how-to-downstream) 섹션을 참고해주세요.
+Hub에 저장된 파일을 다운로드하는 방법을 더 자세히 알아보려면 [Hub에서 파일 다운로드하기](https://huggingface.co/docs/hub/how-to-downstream) 섹션을 참고해주세요.
 
 </Tip>

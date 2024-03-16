@@ -50,7 +50,7 @@ FLAX_ROFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "junnyu/roformer_chinese_char_base",
     "junnyu/roformer_small_discriminator",
     "junnyu/roformer_small_generator",
-    # See all RoFormer models at https://hf-mirror.com/models?filter=roformer
+    # See all RoFormer models at https://huggingface.co/models?filter=roformer
 ]
 
 

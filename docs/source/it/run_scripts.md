@@ -22,7 +22,7 @@ Troverai anche script che abbiamo usato nei nostri [progetti di ricerca](https:/
 
 Non è dato per scontato che gli script di esempio funzionino senza apportare modifiche per ogni problema, bensì potrebbe essere necessario adattare lo script al tuo caso specifico. Per aiutarti in ciò, la maggioranza degli script espone le modalità di pre-processamento dei dati, consentendoti di modificare lo script come preferisci.
 
-Per qualsiasi feature che vorresti implementare in uno script d'esempio, per favore discutine nel [forum](https://discuss.hf-mirror.com/) o in un'[issue](https://github.com/huggingface/transformers/issues) prima di inviare una Pull Request. Mentre accogliamo con piacere la correzione di bug, è più improbabile che faremo la stessa con una PR che aggiunge funzionalità sacrificando la leggibilità. 
+Per qualsiasi feature che vorresti implementare in uno script d'esempio, per favore discutine nel [forum](https://discuss.huggingface.co/) o in un'[issue](https://github.com/huggingface/transformers/issues) prima di inviare una Pull Request. Mentre accogliamo con piacere la correzione di bug, è più improbabile che faremo la stessa con una PR che aggiunge funzionalità sacrificando la leggibilità. 
 
 Questa guida ti mostrerà come eseguire uno script di esempio relativo al task di summarization in [PyTorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization) e [TensorFlow](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization). Tutti gli esempi funzioneranno con entrambi i framework a meno che non sia specificato altrimenti. 
 
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 <frameworkcontent>
 <pt>
 
-Lo script di esempio scarica e pre-processa un dataset dalla libreria 🤗 [Datasets](https://hf-mirror.com/docs/datasets/). Successivamente, lo script esegue il fine-tuning su un dataset usando il [Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) su un'architettura che supporta la summarization. Il seguente esempio mostra come eseguire il fine-tuning di [T5-small](https://hf-mirror.com/google-t5/t5-small) sul dataset [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail). Il modello T5 richiede un parametro addizionale `source_prefix` a causa del modo in cui è stato addestrato. Questo prefisso permette a T5 di sapere che si tratta di un task di summarization.
+Lo script di esempio scarica e pre-processa un dataset dalla libreria 🤗 [Datasets](https://huggingface.co/docs/datasets/). Successivamente, lo script esegue il fine-tuning su un dataset usando il [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) su un'architettura che supporta la summarization. Il seguente esempio mostra come eseguire il fine-tuning di [T5-small](https://huggingface.co/google-t5/t5-small) sul dataset [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail). Il modello T5 richiede un parametro addizionale `source_prefix` a causa del modo in cui è stato addestrato. Questo prefisso permette a T5 di sapere che si tratta di un task di summarization.
 
 ```bash
 python examples/pytorch/summarization/run_summarization.py \
@@ -105,7 +105,7 @@ python examples/pytorch/summarization/run_summarization.py \
 ```
 </pt>
 <tf>
-Lo script di esempio scarica e pre-processa un dataset dalla libreria 🤗 [Datasets](https://hf-mirror.com/docs/datasets/). Successivamente, lo script esegue il fine-tuning su un dataset usando Keras su un'architettura che supporta la summarization. Il seguente esempio mostra come eseguire il fine-tuning di [T5-small](https://hf-mirror.com/google-t5/t5-small) sul dataset [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail). Il modello T5 richiede un parametro addizionale `source_prefix` a causa del modo in cui è stato addestrato. Questo prefisso permette a T5 di sapere che si tratta di un task di summarization.
+Lo script di esempio scarica e pre-processa un dataset dalla libreria 🤗 [Datasets](https://huggingface.co/docs/datasets/). Successivamente, lo script esegue il fine-tuning su un dataset usando Keras su un'architettura che supporta la summarization. Il seguente esempio mostra come eseguire il fine-tuning di [T5-small](https://huggingface.co/google-t5/t5-small) sul dataset [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail). Il modello T5 richiede un parametro addizionale `source_prefix` a causa del modo in cui è stato addestrato. Questo prefisso permette a T5 di sapere che si tratta di un task di summarization.
 
 ```bash
 python examples/tensorflow/summarization/run_summarization.py  \
@@ -124,7 +124,7 @@ python examples/tensorflow/summarization/run_summarization.py  \
 
 ## Addestramento distribuito e precisione mista
 
-Il [Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) supporta l'addestramento distribuito e la precisione mista, che significa che puoi anche usarla in uno script. Per abilitare entrambe le funzionalità:
+Il [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) supporta l'addestramento distribuito e la precisione mista, che significa che puoi anche usarla in uno script. Per abilitare entrambe le funzionalità:
 
 - Aggiunto l'argomento `fp16` per abilitare la precisione mista.
 - Imposta un numero di GPU da usare con l'argomento `nproc_per_node`.
@@ -191,7 +191,7 @@ python run_summarization.py  \
 
 ## Esegui uno script con 🤗 Accelerate
 
-🤗 [Accelerate](https://hf-mirror.com/docs/accelerate) è una libreria compatibile solo con PyTorch che offre un metodo unificato per addestrare modelli su diverse tipologie di configurazioni (CPU, multiple GPU, TPU) mantenendo una completa visibilità rispetto al ciclo di training di PyTorch. Assicurati di aver effettuato l'installazione di 🤗 Accelerate, nel caso non lo avessi fatto:
+🤗 [Accelerate](https://huggingface.co/docs/accelerate) è una libreria compatibile solo con PyTorch che offre un metodo unificato per addestrare modelli su diverse tipologie di configurazioni (CPU, multiple GPU, TPU) mantenendo una completa visibilità rispetto al ciclo di training di PyTorch. Assicurati di aver effettuato l'installazione di 🤗 Accelerate, nel caso non lo avessi fatto:
 
 > Nota: dato che Accelerate è in rapido sviluppo, è necessario installare la versione proveniente da git per eseguire gli script:
 ```bash
@@ -321,7 +321,7 @@ python examples/pytorch/summarization/run_summarization.py
 
 ## Condividi il tuo modello
 
-Tutti gli script possono caricare il tuo modello finale al [Model Hub](https://hf-mirror.com/models). Prima di iniziare, assicurati di aver effettuato l'accesso su Hugging Face:
+Tutti gli script possono caricare il tuo modello finale al [Model Hub](https://huggingface.co/models). Prima di iniziare, assicurati di aver effettuato l'accesso su Hugging Face:
 
 ```bash
 huggingface-cli login

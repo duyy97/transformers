@@ -62,7 +62,7 @@ def export_with_optimum(args):
     logger.info(
         "The export was done by optimum.exporters.onnx. We recommend using to use this package directly in future, as "
         "transformers.onnx is deprecated, and will be removed in v5. You can find more information here: "
-        "https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model."
+        "https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model."
     )
 
 
@@ -180,7 +180,7 @@ def export_with_transformers(args):
         warnings.warn(
             "The export was done by transformers.onnx which is deprecated and will be removed in v5. We recommend"
             " using optimum.exporters.onnx in future. You can find more information here:"
-            " https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model.",
+            " https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model.",
             FutureWarning,
         )
 
@@ -188,7 +188,7 @@ def export_with_transformers(args):
 def main():
     parser = ArgumentParser("Hugging Face Transformers ONNX exporter")
     parser.add_argument(
-        "-m", "--model", type=str, required=True, help="Model ID on hf-mirror.com or path on disk to load model from."
+        "-m", "--model", type=str, required=True, help="Model ID on huggingface.co or path on disk to load model from."
     )
     parser.add_argument(
         "--feature",

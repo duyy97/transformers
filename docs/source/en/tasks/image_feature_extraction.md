@@ -33,7 +33,7 @@ We have two images of cats sitting on top of fish nets, one of them is generated
 from PIL import Image
 import requests
 
-img_urls = ["https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/cats.png", "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/cats.jpeg"]
+img_urls = ["https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/cats.png", "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/cats.jpeg"]
 image_real = Image.open(requests.get(img_urls[0], stream=True).raw).convert("RGB")
 image_gen = Image.open(requests.get(img_urls[1], stream=True).raw).convert("RGB")
 ```

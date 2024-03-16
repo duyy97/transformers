@@ -34,7 +34,7 @@ GPT-3 の言語は主に英語であり、パラメーターは公開されて�
 クローゼテストと言語理解。広範な実験により、CPM が多くの環境で優れたパフォーマンスを達成できることが実証されています。
 少数ショット (ゼロショットでも) 学習の設定での NLP タスク。*
 
-このモデルは [canwenxu](https://hf-mirror.com/canwenxu) によって提供されました。オリジナルの実装が見つかります
+このモデルは [canwenxu](https://huggingface.co/canwenxu) によって提供されました。オリジナルの実装が見つかります
 ここ: https://github.com/TsinghuaAI/CPM-Generate
 
 

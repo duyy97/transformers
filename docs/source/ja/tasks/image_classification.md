@@ -27,7 +27,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [Food-101](https://hf-mirror.com/datasets/food101) データセットの [ViT](model_doc/vit) を微調整して、画像内の食品を分類します。
+1. [Food-101](https://huggingface.co/datasets/food101) データセットの [ViT](model_doc/vit) を微調整して、画像内の食品を分類します。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -252,8 +252,8 @@ food["test"].set_transform(preprocess_val)
 ## Evaluate
 
 トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。すぐにロードできます
-🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) ライブラリを使用した評価方法。このタスクでは、ロードします
-[accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 指標 (詳細については、🤗 評価 [クイック ツアー](https://hf-mirror.com/docs/evaluate/a_quick_tour) を参照してくださいメトリクスをロードして計算する方法):
+🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) ライブラリを使用した評価方法。このタスクでは、ロードします
+[accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) 指標 (詳細については、🤗 評価 [クイック ツアー](https://huggingface.co/docs/evaluate/a_quick_tour) を参照してくださいメトリクスをロードして計算する方法):
 
 ```py
 >>> import evaluate
@@ -472,7 +472,7 @@ Epoch 5/5
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png" alt="image of beignets"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/beignets-task-guide.png" alt="image of beignets"/>
 </div>
 
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用して画像分類用の`pipeline`をインスタンス化し、それに画像を渡します。

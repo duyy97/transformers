@@ -48,7 +48,7 @@ pip install -q transformers
 ## 깊이 추정 파이프라인[[depth-estimation-inference-by-hand]]
 
 깊이 추정을 추론하는 가장 간단한 방법은 해당 기능을 제공하는 [`pipeline`]을 사용하는 것입니다.
-[Hugging Face Hub 체크포인트](https://hf-mirror.com/models?pipeline_tag=depth-estimation&sort=downloads)에서 파이프라인을 초기화합니다:
+[Hugging Face Hub 체크포인트](https://huggingface.co/models?pipeline_tag=depth-estimation&sort=downloads)에서 파이프라인을 초기화합니다:
 
 ```py
 >>> from transformers import pipeline
@@ -70,7 +70,7 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
 </div>
 
 이미지를 파이프라인으로 전달합니다.
@@ -90,13 +90,13 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>
 
 ## 직접 깊이 추정 추론하기[[depth-estimation-inference-by-hand]]
 
 이제 깊이 추정 파이프라인 사용법을 살펴보았으니 동일한 결과를 복제하는 방법을 살펴보겠습니다.
-[Hugging Face Hub 체크포인트](https://hf-mirror.com/models?pipeline_tag=depth-estimation&sort=downloads)에서 모델과 관련 프로세서를 가져오는 것부터 시작합니다.
+[Hugging Face Hub 체크포인트](https://huggingface.co/models?pipeline_tag=depth-estimation&sort=downloads)에서 모델과 관련 프로세서를 가져오는 것부터 시작합니다.
 여기서 이전에 사용한 체크포인트와 동일한 것을 사용합니다:
 
 ```py
@@ -145,5 +145,5 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>

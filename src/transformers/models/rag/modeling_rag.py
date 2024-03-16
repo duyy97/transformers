@@ -259,7 +259,7 @@ class RagPreTrainedModel(PreTrainedModel):
             question_encoder_pretrained_model_name_or_path (`str`, *optional*, defaults to `None`):
                 Information necessary to initiate the question encoder. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~PreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *tensorflow index checkpoint file* (e.g, `./tf_model/model.ckpt.index`). In
@@ -270,7 +270,7 @@ class RagPreTrainedModel(PreTrainedModel):
             generator_pretrained_model_name_or_path (`str`, *optional*, defaults to `None`):
                 Information necessary to initiate the generator. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~PreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *tensorflow index checkpoint file* (e.g, `./tf_model/model.ckpt.index`). In

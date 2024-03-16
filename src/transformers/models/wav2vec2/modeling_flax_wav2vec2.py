@@ -268,7 +268,7 @@ WAV_2_VEC_2_INPUTS_DOCSTRING = r"""
             [What are attention masks?](../glossary#attention-mask) .. warning:: `attention_mask` should only be passed
             if the corresponding processor has `config.return_attention_mask == True`. For all models whose processor
             has `config.return_attention_mask == False`, such as
-            [wav2vec2-base](https://hf-mirror.com/facebook/wav2vec2-base-960h), `attention_mask` should **not** be
+            [wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base-960h), `attention_mask` should **not** be
             passed to avoid degraded performance when doing batched inference. For such models `input_values` should
             simply be padded with 0 and passed without `attention_mask`. Be aware that these models also yield slightly
             different results depending on whether `input_values` is padded or not.

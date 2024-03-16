@@ -25,7 +25,7 @@ The abstract from the paper is the following:
 
 *We present a convolution-free approach to video classification built exclusively on self-attention over space and time. Our method, named "TimeSformer," adapts the standard Transformer architecture to video by enabling spatiotemporal feature learning directly from a sequence of frame-level patches. Our experimental study compares different self-attention schemes and suggests that "divided attention," where temporal attention and spatial attention are separately applied within each block, leads to the best video classification accuracy among the design choices considered. Despite the radically new design, TimeSformer achieves state-of-the-art results on several action recognition benchmarks, including the best reported accuracy on Kinetics-400 and Kinetics-600. Finally, compared to 3D convolutional networks, our model is faster to train, it can achieve dramatically higher test efficiency (at a small drop in accuracy), and it can also be applied to much longer video clips (over one minute long). Code and models are available at: [this https URL](https://github.com/facebookresearch/TimeSformer).*
 
-This model was contributed by [fcakyon](https://hf-mirror.com/fcakyon).
+This model was contributed by [fcakyon](https://huggingface.co/fcakyon).
 The original code can be found [here](https://github.com/facebookresearch/TimeSformer).
 
 ## Usage tips

@@ -26,7 +26,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MPT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "mosaicml/mpt-7b": "https://hf-mirror.com/mosaicml/mpt-7b/resolve/main/config.json",
+    "mosaicml/mpt-7b": "https://huggingface.co/mosaicml/mpt-7b/resolve/main/config.json",
 }
 
 
@@ -35,7 +35,7 @@ class MptAttentionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MptAttention`] class. It is used to instantiate
     attention layers according to the specified arguments, defining the layers architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the MPT
-    [mosaicml/mpt-7b](https://hf-mirror.com/mosaicml/mpt-7b) architecture. Most of the arguments are kept for backward
+    [mosaicml/mpt-7b](https://huggingface.co/mosaicml/mpt-7b) architecture. Most of the arguments are kept for backward
     compatibility with previous MPT models that are hosted on the Hub (previously with `trust_remote_code=True`).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
@@ -123,7 +123,7 @@ class MptConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MptModel`]. It is used to instantiate a Mpt model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to the Mpt-7b architecture
-    [mosaicml/mpt-7b](https://hf-mirror.com/mosaicml/mpt-7b).
+    [mosaicml/mpt-7b](https://huggingface.co/mosaicml/mpt-7b).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -143,7 +143,7 @@ class MptConfig(PretrainedConfig):
         vocab_size (`int`, *optional*, defaults to 50368):
             Vocabulary size of the Mpt model. Defines the maximum number of different tokens that can be represented by
             the `inputs_ids` passed when calling [`MptModel`]. Check [this
-            discussion](https://hf-mirror.com/bigscience/mpt/discussions/120#633d28389addb8530b406c2a) on how the
+            discussion](https://huggingface.co/bigscience/mpt/discussions/120#633d28389addb8530b406c2a) on how the
             `vocab_size` has been defined.
         resid_pdrop (`float`, *optional*, defaults to 0.0):
             The dropout probability applied to the attention output before combining with residual.

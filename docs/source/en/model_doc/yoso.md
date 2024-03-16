@@ -37,7 +37,7 @@ length where we see favorable performance relative to a standard pretrained Tran
 for evaluating performance on long sequences, our method achieves results consistent with softmax self-attention but with sizable 
 speed-ups and memory savings and often outperforms other efficient self-attention methods. Our code is available at this https URL*
 
-This model was contributed by [novice03](https://hf-mirror.com/novice03). The original code can be found [here](https://github.com/mlpen/YOSO).
+This model was contributed by [novice03](https://huggingface.co/novice03). The original code can be found [here](https://github.com/mlpen/YOSO).
 
 ## Usage tips
 
@@ -49,7 +49,7 @@ hash codes, the `lsh_cumulation` function approximates self-attention via LSH-ba
 the user must install the correct version of PyTorch and cudatoolkit. By default, `config.use_expectation = True`, which uses YOSO-E and 
 does not require compiling CUDA kernels.
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/yoso_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/yoso_architecture.jpg"
 alt="drawing" width="600"/> 
 
 <small> YOSO Attention Algorithm. Taken from the <a href="https://arxiv.org/abs/2111.09714">original paper</a>.</small>

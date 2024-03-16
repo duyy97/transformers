@@ -20,7 +20,7 @@ Con tantas arquitecturas diferentes de Transformer puede ser retador crear una p
 
 <Tip>
 
-Recuerda, la arquitectura se refiere al esqueleto del modelo y los checkpoints son los pesos para una arquitectura dada. Por ejemplo, [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) es una arquitectura, mientras que `google-bert/bert-base-uncased` es un checkpoint. Modelo es un término general que puede significar una arquitectura o un checkpoint.
+Recuerda, la arquitectura se refiere al esqueleto del modelo y los checkpoints son los pesos para una arquitectura dada. Por ejemplo, [BERT](https://huggingface.co/google-bert/bert-base-uncased) es una arquitectura, mientras que `google-bert/bert-base-uncased` es un checkpoint. Modelo es un término general que puede significar una arquitectura o un checkpoint.
 
 </Tip>
 

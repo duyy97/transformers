@@ -62,7 +62,7 @@ _CHECKPOINT_FOR_DOC = "facebook/detr-resnet-50"
 
 DETR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/detr-resnet-50",
-    # See all DETR models at https://hf-mirror.com/models?filter=detr
+    # See all DETR models at https://huggingface.co/models?filter=detr
 ]
 
 

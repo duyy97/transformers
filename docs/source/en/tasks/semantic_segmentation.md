@@ -50,16 +50,16 @@ from transformers import pipeline
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg"
+url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
 image
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg" alt="Segmentation Input"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg" alt="Segmentation Input"/>
 </div>
 
-We will use [nvidia/segformer-b1-finetuned-cityscapes-1024-1024](https://hf-mirror.com/nvidia/segformer-b1-finetuned-cityscapes-1024-1024). 
+We will use [nvidia/segformer-b1-finetuned-cityscapes-1024-1024](https://huggingface.co/nvidia/segformer-b1-finetuned-cityscapes-1024-1024). 
 
 ```python
 semantic_segmentation = pipeline("image-segmentation", "nvidia/segformer-b1-finetuned-cityscapes-1024-1024")
@@ -107,10 +107,10 @@ Taking a look at the mask for the car class, we can see every car is classified 
 results[-1]["mask"]
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/semantic_segmentation_output.png" alt="Semantic Segmentation Output"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/semantic_segmentation_output.png" alt="Semantic Segmentation Output"/>
 </div>
 
-In instance segmentation, the goal is not to classify every pixel, but to predict a mask for **every instance of an object** in a given image. It works very similar to object detection, where there is a bounding box for every instance, there's a segmentation mask instead. We will use [facebook/mask2former-swin-large-cityscapes-instance](https://hf-mirror.com/facebook/mask2former-swin-large-cityscapes-instance) for this. 
+In instance segmentation, the goal is not to classify every pixel, but to predict a mask for **every instance of an object** in a given image. It works very similar to object detection, where there is a bounding box for every instance, there's a segmentation mask instead. We will use [facebook/mask2former-swin-large-cityscapes-instance](https://huggingface.co/facebook/mask2former-swin-large-cityscapes-instance) for this. 
 
 ```python
 instance_segmentation = pipeline("image-segmentation", "facebook/mask2former-swin-large-cityscapes-instance")
@@ -140,10 +140,10 @@ Checking out one of the car masks below.
 results[2]["mask"]
 ```
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/instance_segmentation_output.png" alt="Semantic Segmentation Output"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/instance_segmentation_output.png" alt="Semantic Segmentation Output"/>
 </div>
 
-Panoptic segmentation combines semantic segmentation and instance segmentation, where every pixel is classified into a class and an instance of that class, and there are multiple masks for each instance of a class. We can use [facebook/mask2former-swin-large-cityscapes-panoptic](https://hf-mirror.com/facebook/mask2former-swin-large-cityscapes-panoptic) for this.
+Panoptic segmentation combines semantic segmentation and instance segmentation, where every pixel is classified into a class and an instance of that class, and there are multiple masks for each instance of a class. We can use [facebook/mask2former-swin-large-cityscapes-panoptic](https://huggingface.co/facebook/mask2former-swin-large-cityscapes-panoptic) for this.
 
 ```python
 panoptic_segmentation = pipeline("image-segmentation", "facebook/mask2former-swin-large-cityscapes-panoptic")
@@ -185,7 +185,7 @@ As you can see below, we have more classes. We will later illustrate to see that
 Let's have a side by side comparison for all types of segmentation.
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation-comparison.png" alt="Segmentation Maps Compared"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation-comparison.png" alt="Segmentation Maps Compared"/>
 </div>
 
 Seeing all types of segmentation, let's have a deep dive on fine-tuning a model for semantic segmentation.
@@ -196,7 +196,7 @@ Common real-world applications of semantic segmentation include training self-dr
 
 We will now:
 
-1. Finetune [SegFormer](https://hf-mirror.com/docs/transformers/main/en/model_doc/segformer#segformer) on the [SceneParse150](https://hf-mirror.com/datasets/scene_parse_150) dataset.
+1. Finetune [SegFormer](https://huggingface.co/docs/transformers/main/en/model_doc/segformer#segformer) on the [SceneParse150](https://huggingface.co/datasets/scene_parse_150) dataset.
 2. Use your fine-tuned model for inference.
 
 <Tip>
@@ -306,7 +306,7 @@ You could also create and use your own dataset if you prefer to train with the [
      json.dump(id2label, fp)
      ```
 
-As an example, take a look at this [example dataset](https://hf-mirror.com/datasets/nielsr/ade20k-demo) which was created with the steps shown above.
+As an example, take a look at this [example dataset](https://huggingface.co/datasets/nielsr/ade20k-demo) which was created with the steps shown above.
 
 ### Preprocess
 
@@ -417,7 +417,7 @@ The transform is applied on the fly which is faster and consumes less disk space
 
 ### Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load an evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [mean Intersection over Union](https://hf-mirror.com/spaces/evaluate-metric/accuracy) (IoU) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load an evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [mean Intersection over Union](https://huggingface.co/spaces/evaluate-metric/accuracy) (IoU) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate
@@ -676,7 +676,7 @@ Load an image for inference:
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/semantic-seg-image.png" alt="Image of bedroom"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/semantic-seg-image.png" alt="Image of bedroom"/>
 </div>
 
 <frameworkcontent>
@@ -770,5 +770,5 @@ To visualize the results, load the [dataset color palette](https://github.com/te
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/semantic-seg-preds.png" alt="Image of bedroom overlaid with segmentation map"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/semantic-seg-preds.png" alt="Image of bedroom overlaid with segmentation map"/>
 </div>

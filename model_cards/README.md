@@ -1,4 +1,4 @@
-## 🔥 Model cards now live inside each hf-mirror.com model repo 🔥
+## 🔥 Model cards now live inside each huggingface.co model repo 🔥
 
 
 For consistency, ease of use and scalability, `README.md` model cards now live directly inside each model repo on the HuggingFace model hub.
@@ -15,8 +15,8 @@ You can either:
 
 **What if you want to create or update a model card for a model you don't have write access to?**
 
-In that case, you can open a [Hub pull request](https://hf-mirror.com/docs/hub/repositories-pull-requests-discussions)! Check out the [announcement](https://hf-mirror.com/blog/community-update) of this feature for more details 🤗.
+In that case, you can open a [Hub pull request](https://huggingface.co/docs/hub/repositories-pull-requests-discussions)! Check out the [announcement](https://huggingface.co/blog/community-update) of this feature for more details 🤗.
 
 ### What happened to the model cards here?
 
-We migrated every model card from the repo to its corresponding hf-mirror.com model repo. Individual commits were preserved, and they link back to the original commit on GitHub.
+We migrated every model card from the repo to its corresponding huggingface.co model repo. Individual commits were preserved, and they link back to the original commit on GitHub.

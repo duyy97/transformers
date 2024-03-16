@@ -53,7 +53,7 @@ _CHECKPOINT_FOR_DOC = "openai/clip-vit-base-patch32"
 
 TF_CLIP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai/clip-vit-base-patch32",
-    # See all CLIP models at https://hf-mirror.com/models?filter=clip
+    # See all CLIP models at https://huggingface.co/models?filter=clip
 ]
 
 

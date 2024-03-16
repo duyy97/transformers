@@ -23,7 +23,7 @@ TFLite는 연산 능력, 메모리, 전력 소비가 제한된 기기에서 모�
 TensorFlow Lite 모델은 `.tflite` 파일 확장자로 식별되는 특수하고 효율적인 휴대용 포맷으로 표현됩니다. 
 
 🤗 Optimum은 `exporters.tflite` 모듈로 🤗 Transformers 모델을 TFLite로 내보내는 기능을 제공합니다. 
-지원되는 모델 아키텍처 목록은 [🤗 Optimum 문서](https://hf-mirror.com/docs/optimum/exporters/tflite/overview)를 참고하세요. 
+지원되는 모델 아키텍처 목록은 [🤗 Optimum 문서](https://huggingface.co/docs/optimum/exporters/tflite/overview)를 참고하세요. 
 
 모델을 TFLite로 내보내려면, 필요한 종속성을 설치하세요:
  
@@ -31,7 +31,7 @@ TensorFlow Lite 모델은 `.tflite` 파일 확장자로 식별되는 특수하�
 pip install optimum[exporters-tf]
 ```
 
-모든 사용 가능한 인수를 확인하려면, [🤗 Optimum 문서](https://hf-mirror.com/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model)를 참고하거나 
+모든 사용 가능한 인수를 확인하려면, [🤗 Optimum 문서](https://huggingface.co/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model)를 참고하거나 
 터미널에서 도움말을 살펴보세요:
 
 ```bash

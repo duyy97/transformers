@@ -53,7 +53,7 @@ _CHECKPOINT_FOR_DOC = "Helsinki-NLP/opus-mt-en-de"
 
 MARIAN_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Helsinki-NLP/opus-mt-en-de",
-    # See all Marian models at https://hf-mirror.com/models?filter=marian
+    # See all Marian models at https://huggingface.co/models?filter=marian
 ]
 
 
@@ -510,7 +510,7 @@ MARIAN_START_DOCSTRING = r"""
 
 MARIAN_GENERATION_EXAMPLE = r"""
     Pytorch version of marian-nmt's transformer.h (c++). Designed for the OPUS-NMT translation checkpoints. Available
-    models are listed [here](https://hf-mirror.com/models?search=Helsinki-NLP).
+    models are listed [here](https://huggingface.co/models?search=Helsinki-NLP).
 
     Examples:
 

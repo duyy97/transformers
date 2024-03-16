@@ -37,10 +37,10 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "vinai/bertweet-base": "https://hf-mirror.com/vinai/bertweet-base/resolve/main/vocab.txt",
+        "vinai/bertweet-base": "https://huggingface.co/vinai/bertweet-base/resolve/main/vocab.txt",
     },
     "merges_file": {
-        "vinai/bertweet-base": "https://hf-mirror.com/vinai/bertweet-base/resolve/main/bpe.codes",
+        "vinai/bertweet-base": "https://huggingface.co/vinai/bertweet-base/resolve/main/bpe.codes",
     },
 }
 

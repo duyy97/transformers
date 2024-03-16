@@ -38,7 +38,7 @@ class ZeroShotObjectDetectionPipeline(ChunkPipeline):
     [{'score': 0.287, 'label': 'cat', 'box': {'xmin': 324, 'ymin': 20, 'xmax': 640, 'ymax': 373}}, {'score': 0.254, 'label': 'cat', 'box': {'xmin': 1, 'ymin': 55, 'xmax': 315, 'ymax': 472}}, {'score': 0.121, 'label': 'couch', 'box': {'xmin': 4, 'ymin': 0, 'xmax': 642, 'ymax': 476}}]
 
     >>> detector(
-    ...     "https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png",
+    ...     "https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png",
     ...     candidate_labels=["head", "bird"],
     ... )
     [{'score': 0.119, 'label': 'bird', 'box': {'xmin': 71, 'ymin': 170, 'xmax': 410, 'ymax': 508}}]
@@ -50,7 +50,7 @@ class ZeroShotObjectDetectionPipeline(ChunkPipeline):
     `"zero-shot-object-detection"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=zero-shot-object-detection).
+    [huggingface.co/models](https://huggingface.co/models?filter=zero-shot-object-detection).
     """
 
     def __init__(self, **kwargs):

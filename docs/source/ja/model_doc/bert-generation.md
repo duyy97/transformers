@@ -84,7 +84,7 @@ GPT-2 および RoBERTa チェックポイントを使用し、モデルの初�
 - 要約、文の分割、文の融合、および翻訳の場合、入力に特別なトークンは必要ありません。
   したがって、入力の末尾に EOS トークンを追加しないでください。
 
-このモデルは、[patrickvonplaten](https://hf-mirror.com/patrickvonplaten) によって提供されました。元のコードは次のとおりです
+このモデルは、[patrickvonplaten](https://huggingface.co/patrickvonplaten) によって提供されました。元のコードは次のとおりです
 [ここ](https://tfhub.dev/s?module-type=text-generation&subtype=module,placeholder) があります。
 
 ## BertGenerationConfig

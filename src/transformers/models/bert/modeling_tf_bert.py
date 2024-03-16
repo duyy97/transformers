@@ -110,7 +110,7 @@ TF_BERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "TurkuNLP/bert-base-finnish-cased-v1",
     "TurkuNLP/bert-base-finnish-uncased-v1",
     "wietsedv/bert-base-dutch-cased",
-    # See all BERT models at https://hf-mirror.com/models?filter=bert
+    # See all BERT models at https://huggingface.co/models?filter=bert
 ]
 
 

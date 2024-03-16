@@ -22,9 +22,9 @@ logger = logging.get_logger(__name__)
 
 SPEECH_TO_TEXT_2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/s2t-wav2vec2-large-en-de": (
-        "https://hf-mirror.com/facebook/s2t-wav2vec2-large-en-de/resolve/main/config.json"
+        "https://huggingface.co/facebook/s2t-wav2vec2-large-en-de/resolve/main/config.json"
     ),
-    # See all Speech2Text models at https://hf-mirror.com/models?filter=speech2text2
+    # See all Speech2Text models at https://huggingface.co/models?filter=speech2text2
 }
 
 
@@ -33,7 +33,7 @@ class Speech2Text2Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Speech2Text2ForCausalLM`]. It is used to
     instantiate an Speech2Text2 model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Speech2Text2
-    [facebook/s2t-wav2vec2-large-en-de](https://hf-mirror.com/facebook/s2t-wav2vec2-large-en-de) architecture.
+    [facebook/s2t-wav2vec2-large-en-de](https://huggingface.co/facebook/s2t-wav2vec2-large-en-de) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

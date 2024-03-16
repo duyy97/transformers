@@ -63,8 +63,8 @@ except ImportError:
 
 default_cache_path = os.path.join(torch_cache_home, "transformers")
 
-CLOUDFRONT_DISTRIB_PREFIX = "https://cdn.hf-mirror.com"
-S3_BUCKET_PREFIX = "https://s3.amazonaws.com/models.hf-mirror.com/bert"
+CLOUDFRONT_DISTRIB_PREFIX = "https://cdn.huggingface.co"
+S3_BUCKET_PREFIX = "https://s3.amazonaws.com/models.huggingface.co/bert"
 PATH = "/".join(str(Path(__file__).resolve()).split("/")[:-1])
 CONFIG = os.path.join(PATH, "config.yaml")
 ATTRIBUTES = os.path.join(PATH, "attributes.txt")

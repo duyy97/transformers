@@ -58,7 +58,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "Egyptian cat"
 
 SWINV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/swinv2-tiny-patch4-window8-256",
-    # See all Swinv2 models at https://hf-mirror.com/models?filter=swinv2
+    # See all Swinv2 models at https://huggingface.co/models?filter=swinv2
 ]
 
 

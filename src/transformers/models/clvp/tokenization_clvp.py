@@ -35,10 +35,10 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "clvp_dev": "https://hf-mirror.com/susnato/clvp_dev/blob/main/vocab.json",
+        "clvp_dev": "https://huggingface.co/susnato/clvp_dev/blob/main/vocab.json",
     },
     "merges_file": {
-        "clvp_dev": "https://hf-mirror.com/susnato/clvp_dev/blob/main/merges.txt",
+        "clvp_dev": "https://huggingface.co/susnato/clvp_dev/blob/main/merges.txt",
     },
 }
 

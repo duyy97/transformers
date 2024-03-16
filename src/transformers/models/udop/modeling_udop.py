@@ -48,7 +48,7 @@ logger = logging.getLogger(__name__)
 
 UDOP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/udop-large",
-    # See all UDOP models at https://hf-mirror.com/models?filter=udop
+    # See all UDOP models at https://huggingface.co/models?filter=udop
 ]
 
 

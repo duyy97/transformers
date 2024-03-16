@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 TIMESFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/timesformer": "https://hf-mirror.com/facebook/timesformer/resolve/main/config.json",
+    "facebook/timesformer": "https://huggingface.co/facebook/timesformer/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class TimesformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`TimesformerModel`]. It is used to instantiate a
     TimeSformer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the TimeSformer
-    [facebook/timesformer-base-finetuned-k600](https://hf-mirror.com/facebook/timesformer-base-finetuned-k600)
+    [facebook/timesformer-base-finetuned-k600](https://huggingface.co/facebook/timesformer-base-finetuned-k600)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

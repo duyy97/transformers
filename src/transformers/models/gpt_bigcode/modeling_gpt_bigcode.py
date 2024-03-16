@@ -54,7 +54,7 @@ _CONFIG_FOR_DOC = "GPTBigCodeConfig"
 
 GPT_BIGCODE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "bigcode/gpt_bigcode-santacoder",
-    # See all GPTBigCode models at https://hf-mirror.com/models?filter=gpt_bigcode
+    # See all GPTBigCode models at https://huggingface.co/models?filter=gpt_bigcode
 ]
 
 

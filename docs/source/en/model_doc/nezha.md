@@ -33,7 +33,7 @@ achieves the state-of-the-art performances when finetuned on several representat
 named entity recognition (People's Daily NER), sentence matching (LCQMC), Chinese sentiment classification (ChnSenti)
 and natural language inference (XNLI).*
 
-This model was contributed by [sijunhe](https://hf-mirror.com/sijunhe). The original code can be found [here](https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/NEZHA-PyTorch).
+This model was contributed by [sijunhe](https://huggingface.co/sijunhe). The original code can be found [here](https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/NEZHA-PyTorch).
 
 ## Resources
 

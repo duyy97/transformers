@@ -47,7 +47,7 @@ _CHECKPOINT_FOR_DOC = "laion/clap-htsat-fused"
 CLAP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "laion/clap-htsat-fused",
     "laion/clap-htsat-unfused",
-    # See all clap models at https://hf-mirror.com/models?filter=clap
+    # See all clap models at https://huggingface.co/models?filter=clap
 ]
 
 

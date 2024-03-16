@@ -25,8 +25,8 @@ Siri 和 Alexa 这类虚拟助手使用 ASR 模型来帮助用户日常生活，
 
 本指南将向您展示如何：
 
-1. 在 [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 数据集上对
-   [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) 进行微调，以将音频转录为文本。
+1. 在 [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 数据集上对
+   [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) 进行微调，以将音频转录为文本。
 2. 使用微调后的模型进行推断。
 
 <Tip>
@@ -58,7 +58,7 @@ pip install transformers datasets evaluate jiwer
 
 ## 加载 MInDS-14 数据集
 
-首先从🤗 Datasets 库中加载 [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14)
+首先从🤗 Datasets 库中加载 [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14)
 数据集的一个较小子集。这将让您有机会先进行实验，确保一切正常，然后再花更多时间在完整数据集上进行训练。
 
 ```py
@@ -123,7 +123,7 @@ DatasetDict({
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-MInDS-14 数据集的采样率为 8000kHz（您可以在其[数据集卡片](https://hf-mirror.com/datasets/PolyAI/minds14)中找到此信息），
+MInDS-14 数据集的采样率为 8000kHz（您可以在其[数据集卡片](https://huggingface.co/datasets/PolyAI/minds14)中找到此信息），
 这意味着您需要将数据集重新采样为 16000kHz 以使用预训练的 Wav2Vec2 模型：
 
 ```py
@@ -214,9 +214,9 @@ Wav2Vec2 分词器仅训练了大写字符，因此您需要确保文本与分�
 ## 评估
 
 在训练过程中包含一个指标通常有助于评估模型的性能。
-您可以通过🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 库快速加载一个评估方法。
-对于这个任务，加载 [word error rate](https://hf-mirror.com/spaces/evaluate-metric/wer)（WER）指标
-（请参阅🤗 Evaluate [快速上手](https://hf-mirror.com/docs/evaluate/a_quick_tour)以了解如何加载和计算指标）：
+您可以通过🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 库快速加载一个评估方法。
+对于这个任务，加载 [word error rate](https://huggingface.co/spaces/evaluate-metric/wer)（WER）指标
+（请参阅🤗 Evaluate [快速上手](https://huggingface.co/docs/evaluate/a_quick_tour)以了解如何加载和计算指标）：
 
 ```py
 >>> import evaluate
@@ -323,8 +323,8 @@ Wav2Vec2 分词器仅训练了大写字符，因此您需要确保文本与分�
 <Tip>
 
 要深入了解如何微调模型进行自动语音识别，
-请查看这篇博客[文章](https://hf-mirror.com/blog/fine-tune-wav2vec2-english)以了解英语 ASR，
-还可以参阅[这篇文章](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2)以了解多语言 ASR。
+请查看这篇博客[文章](https://huggingface.co/blog/fine-tune-wav2vec2-english)以了解英语 ASR，
+还可以参阅[这篇文章](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)以了解多语言 ASR。
 
 </Tip>
 

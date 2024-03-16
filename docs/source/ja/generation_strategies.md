@@ -144,7 +144,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 
 ## Decoding strategies
 
-特定の `generate()` パラメータの組み合わせ、そして最終的に `generation_config` は、特定のデコーディング戦略を有効にするために使用できます。このコンセプトが新しい場合、[このブログポスト](https://hf-mirror.com/blog/how-to-generate)を読むことをお勧めします。このブログポストでは、一般的なデコーディング戦略がどのように動作するかが説明されています。
+特定の `generate()` パラメータの組み合わせ、そして最終的に `generation_config` は、特定のデコーディング戦略を有効にするために使用できます。このコンセプトが新しい場合、[このブログポスト](https://huggingface.co/blog/how-to-generate)を読むことをお勧めします。このブログポストでは、一般的なデコーディング戦略がどのように動作するかが説明されています。
 
 ここでは、デコーディング戦略を制御するいくつかのパラメータを示し、それらをどのように使用できるかを説明します。
 
@@ -171,7 +171,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 ### Contrastive search
 
 コントラスティブ検索デコーディング戦略は、2022年の論文[A Contrastive Framework for Neural Text Generation](https://arxiv.org/abs/2202.06417)で提案されました。
-これは、非反復的でありながら一貫性のある長い出力を生成するために優れた結果を示しています。コントラスティブ検索の動作原理を学ぶには、[このブログポスト](https://hf-mirror.com/blog/introducing-csearch)をご覧ください。
+これは、非反復的でありながら一貫性のある長い出力を生成するために優れた結果を示しています。コントラスティブ検索の動作原理を学ぶには、[このブログポスト](https://huggingface.co/blog/introducing-csearch)をご覧ください。
 コントラスティブ検索の動作を有効にし、制御する2つの主要なパラメータは「penalty_alpha」と「top_k」です：
 
 ```python
@@ -299,7 +299,7 @@ culture, and they allow us to design the'
 
 ### Assisted Decoding
 
-アシストデコーディングは、上記のデコーディング戦略を変更したもので、同じトークナイザー（理想的にははるかに小さなモデル）を使用して、いくつかの候補トークンを貪欲に生成するアシスタントモデルを使用します。その後、主要なモデルは候補トークンを1つの前向きパスで検証し、デコーディングプロセスを高速化します。現在、アシストデコーディングでは貪欲検索とサンプリングのみがサポートされており、バッチ入力はサポートされていません。アシストデコーディングの詳細については、[このブログ記事](https://hf-mirror.com/blog/assisted-generation) をご覧ください。
+アシストデコーディングは、上記のデコーディング戦略を変更したもので、同じトークナイザー（理想的にははるかに小さなモデル）を使用して、いくつかの候補トークンを貪欲に生成するアシスタントモデルを使用します。その後、主要なモデルは候補トークンを1つの前向きパスで検証し、デコーディングプロセスを高速化します。現在、アシストデコーディングでは貪欲検索とサンプリングのみがサポートされており、バッチ入力はサポートされていません。アシストデコーディングの詳細については、[このブログ記事](https://huggingface.co/blog/assisted-generation) をご覧ください。
 
 アシストデコーディングを有効にするには、`assistant_model` 引数をモデルで設定します。
 

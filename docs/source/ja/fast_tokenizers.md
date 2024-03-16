@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Use tokenizers from 🤗 Tokenizers
 
-[`PreTrainedTokenizerFast`]は[🤗 Tokenizers](https://hf-mirror.com/docs/tokenizers)ライブラリに依存しています。🤗 Tokenizersライブラリから取得したトークナイザーは、非常に簡単に🤗 Transformersにロードできます。
+[`PreTrainedTokenizerFast`]は[🤗 Tokenizers](https://huggingface.co/docs/tokenizers)ライブラリに依存しています。🤗 Tokenizersライブラリから取得したトークナイザーは、非常に簡単に🤗 Transformersにロードできます。
 
 具体的な内容に入る前に、まずはいくつかの行でダミーのトークナイザーを作成することから始めましょう：
 

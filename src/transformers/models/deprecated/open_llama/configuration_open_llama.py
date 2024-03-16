@@ -26,7 +26,7 @@ from ....utils import logging
 logger = logging.get_logger(__name__)
 
 OPEN_LLAMA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "s-JoL/Open-Llama-V1": "https://hf-mirror.com/s-JoL/Open-Llama-V1/blob/main/config.json",
+    "s-JoL/Open-Llama-V1": "https://huggingface.co/s-JoL/Open-Llama-V1/blob/main/config.json",
 }
 
 
@@ -35,7 +35,7 @@ class OpenLlamaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`OpenLlamaModel`]. It is used to instantiate an
     Open-Llama model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the
-    [s-JoL/Open-Llama-V1](https://hf-mirror.com/s-JoL/Open-Llama-V1).
+    [s-JoL/Open-Llama-V1](https://huggingface.co/s-JoL/Open-Llama-V1).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

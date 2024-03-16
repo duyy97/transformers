@@ -23,11 +23,11 @@ La generación de resúmenes (summarization, en inglés) crea una versión más 
 - Extractiva: Extrae la información más relevante de un documento.
 - Abstractiva: Genera un texto nuevo que captura la información más importante.
 
-Esta guía te mostrará cómo puedes hacer fine-tuning del modelo [T5](https://hf-mirror.com/google-t5/t5-small) sobre el subset de proyectos de ley del estado de California, dentro del dataset [BillSum](https://hf-mirror.com/datasets/billsum) para hacer generación de resúmenes abstractiva.
+Esta guía te mostrará cómo puedes hacer fine-tuning del modelo [T5](https://huggingface.co/google-t5/t5-small) sobre el subset de proyectos de ley del estado de California, dentro del dataset [BillSum](https://huggingface.co/datasets/billsum) para hacer generación de resúmenes abstractiva.
 
 <Tip>
 
-Consulta la [página de la tarea](https://hf-mirror.com/tasks/summarization) de generación de resúmenes para obtener más información sobre sus modelos, datasets y métricas asociadas.
+Consulta la [página de la tarea](https://huggingface.co/tasks/summarization) de generación de resúmenes para obtener más información sobre sus modelos, datasets y métricas asociadas.
 
 </Tip>
 

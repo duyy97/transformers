@@ -36,7 +36,7 @@ if is_flax_available():
 
 
 MODEL_ID = DUMMY_UNKNOWN_IDENTIFIER
-# An actual model hosted on hf-mirror.com
+# An actual model hosted on huggingface.co
 
 REVISION_ID_DEFAULT = "main"
 # Default branch name

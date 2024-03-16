@@ -41,13 +41,13 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "artists_file": {
-        "jukebox": "https://hf-mirror.com/ArthurZ/jukebox/blob/main/artists.json",
+        "jukebox": "https://huggingface.co/ArthurZ/jukebox/blob/main/artists.json",
     },
     "genres_file": {
-        "jukebox": "https://hf-mirror.com/ArthurZ/jukebox/blob/main/genres.json",
+        "jukebox": "https://huggingface.co/ArthurZ/jukebox/blob/main/genres.json",
     },
     "lyrics_file": {
-        "jukebox": "https://hf-mirror.com/ArthurZ/jukebox/blob/main/lyrics.json",
+        "jukebox": "https://huggingface.co/ArthurZ/jukebox/blob/main/lyrics.json",
     },
 }
 

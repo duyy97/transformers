@@ -401,7 +401,7 @@ class Trainer:
                 f"The model you have picked ({model.__class__.__name__}) cannot be used as is for training: it only "
                 "computes hidden states and does not accept any labels. You should choose a model with a head "
                 "suitable for your task like any of the `AutoModelForXxx` listed at "
-                "https://hf-mirror.com/docs/transformers/model_doc/auto"
+                "https://huggingface.co/docs/transformers/model_doc/auto"
             )
 
         if hasattr(model, "is_parallelizable") and model.is_parallelizable and model.model_parallel:
@@ -442,7 +442,7 @@ class Trainer:
         if _is_quantized_and_base_model and not _is_peft_model(model):
             raise ValueError(
                 "You cannot perform fine-tuning on purely quantized models. Please attach trainable adapters on top of"
-                " the quantized model to correctly perform fine-tuning. Please see: https://hf-mirror.com/docs/transformers/peft"
+                " the quantized model to correctly perform fine-tuning. Please see: https://huggingface.co/docs/transformers/peft"
                 " for more details"
             )
         elif _is_quantized_and_base_model and not _quantization_method_supports_training:
@@ -2082,7 +2082,7 @@ class Trainer:
             # Clean the state at the end of training
             delattr(self, "_past")
 
-        logger.info("\n\nTraining completed. Do not forget to share your model on hf-mirror.com/models =)\n\n")
+        logger.info("\n\nTraining completed. Do not forget to share your model on huggingface.co/models =)\n\n")
         if args.load_best_model_at_end and self.state.best_model_checkpoint is not None:
             # Wait for everyone to get here so we are sure the model has been saved by process 0.
             if is_torch_xla_available():

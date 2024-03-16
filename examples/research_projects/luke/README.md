@@ -6,7 +6,7 @@ Fine-tuning (m)LUKE for token classification task such as Named Entity Recogniti
 tagging (POS) or phrase extraction (CHUNKS). You can easily
 customize it to your needs if you need extra processing on your datasets.
 
-It will either run on a datasets hosted on our [hub](https://hf-mirror.com/datasets) or with your own text files for
+It will either run on a datasets hosted on our [hub](https://huggingface.co/datasets) or with your own text files for
 training and validation, you might just need to add some tweaks in the data preprocessing.
 
 The script can be  run in a distributed setup, on TPU and supports mixed precision by

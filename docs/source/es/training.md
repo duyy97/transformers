@@ -32,7 +32,7 @@ El uso de un modelo pre-entrenado tiene importantes ventajas. Reduce los costos 
 
 Antes de aplicar fine-tuning a un modelo pre-entrenado, descarga un dataset y prepáralo para el entrenamiento. El tutorial anterior nos enseñó cómo procesar los datos para el entrenamiento, y ahora es la oportunidad de poner a prueba estas habilidades.
 
-Comienza cargando el dataset de [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full):
+Comienza cargando el dataset de [Yelp Reviews](https://huggingface.co/datasets/yelp_review_full):
 
 ```py
 >>> from datasets import load_dataset
@@ -73,7 +73,7 @@ Si lo deseas, puedes crear un subconjunto más pequeño del dataset completo par
 
 🤗 Transformers proporciona una clase [`Trainer`] optimizada para el entrenamiento de modelos de 🤗 Transformers, haciendo más fácil el inicio del entrenamiento sin necesidad de escribir manualmente tu propio ciclo. La API del [`Trainer`] soporta una amplia gama de opciones de entrenamiento y características como el logging, el gradient accumulation y el mixed precision.
 
-Comienza cargando tu modelo y especifica el número de labels previstas. A partir del [Card Dataset](https://hf-mirror.com/datasets/yelp_review_full#data-fields) de Yelp Review, que como ya sabemos tiene 5 labels:
+Comienza cargando tu modelo y especifica el número de labels previstas. A partir del [Card Dataset](https://huggingface.co/datasets/yelp_review_full#data-fields) de Yelp Review, que como ya sabemos tiene 5 labels:
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -90,7 +90,7 @@ El head/cabezal pre-entrenado del modelo BERT se descarta y se sustituye por un 
 
 ### Hiperparámetros de entrenamiento
 
-A continuación, crea una clase [`TrainingArguments`] que contenga todos los hiperparámetros que puedes ajustar así como los indicadores para activar las diferentes opciones de entrenamiento. Para este tutorial puedes empezar con los [hiperparámetros](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) de entrenamiento por defecto, pero siéntete libre de experimentar con ellos para encontrar tu configuración óptima.
+A continuación, crea una clase [`TrainingArguments`] que contenga todos los hiperparámetros que puedes ajustar así como los indicadores para activar las diferentes opciones de entrenamiento. Para este tutorial puedes empezar con los [hiperparámetros](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) de entrenamiento por defecto, pero siéntete libre de experimentar con ellos para encontrar tu configuración óptima.
 
 Especifica dónde vas a guardar los checkpoints de tu entrenamiento:
 
@@ -102,7 +102,7 @@ Especifica dónde vas a guardar los checkpoints de tu entrenamiento:
 
 ### Métricas
 
-El [`Trainer`] no evalúa automáticamente el rendimiento del modelo durante el entrenamiento. Tendrás que pasarle a [`Trainer`] una función para calcular y hacer un reporte de las métricas. La biblioteca de 🤗 Datasets proporciona una función de [`accuracy`](https://hf-mirror.com/metrics/accuracy) simple que puedes cargar con la función `load_metric` (ver este [tutorial](https://hf-mirror.com/docs/datasets/metrics) para más información):
+El [`Trainer`] no evalúa automáticamente el rendimiento del modelo durante el entrenamiento. Tendrás que pasarle a [`Trainer`] una función para calcular y hacer un reporte de las métricas. La biblioteca de 🤗 Datasets proporciona una función de [`accuracy`](https://huggingface.co/metrics/accuracy) simple que puedes cargar con la función `load_metric` (ver este [tutorial](https://huggingface.co/docs/datasets/metrics) para más información):
 
 ```py
 >>> import numpy as np
@@ -172,7 +172,7 @@ El [`DefaultDataCollator`] junta los tensores en un batch para que el modelo se 
 
 </Tip>
 
-A continuación, convierte los datasets tokenizados en datasets de TensorFlow con el método [`to_tf_dataset`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Especifica tus entradas en `columns` y tu etiqueta en `label_cols`:
+A continuación, convierte los datasets tokenizados en datasets de TensorFlow con el método [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset). Especifica tus entradas en `columns` y tu etiqueta en `label_cols`:
 
 ```py
 >>> tf_train_dataset = small_train_dataset.to_tf_dataset(
@@ -342,7 +342,7 @@ Para hacer un seguimiento al progreso del entrenamiento, utiliza la biblioteca [
 
 ### Métricas
 
-De la misma manera que necesitas añadir una función de evaluación al [`Trainer`], necesitas hacer lo mismo cuando escribas tu propio ciclo de entrenamiento. Pero en lugar de calcular y reportar la métrica al final de cada época, esta vez acumularás todos los batches con [`add_batch`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch) y calcularás la métrica al final.
+De la misma manera que necesitas añadir una función de evaluación al [`Trainer`], necesitas hacer lo mismo cuando escribas tu propio ciclo de entrenamiento. Pero en lugar de calcular y reportar la métrica al final de cada época, esta vez acumularás todos los batches con [`add_batch`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch) y calcularás la métrica al final.
 
 ```py
 >>> metric = load_metric("accuracy")

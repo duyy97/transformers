@@ -165,7 +165,7 @@ torchrun --nproc_per_node 2 examples/pytorch/language-modeling/run_clm.py \
 ## ZeRO Data Parallelism
 
 ZeROパワードデータ並列処理（ZeRO-DP）は、次の[ブログ投稿](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)のダイアグラムで説明されています。
-![DeepSpeed-Image-1](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png)
+![DeepSpeed-Image-1](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png)
 
 これは理解が難しいかもしれませんが、実際にはこの概念は非常にシンプルです。これは通常の`DataParallel`（DP）ですが、完全なモデルパラメータ、勾配、およびオプティマイザの状態を複製する代わりに、各GPUはそれぞれのスライスのみを保存します。そして、実行時に、特定のレイヤーに必要な完全なレイヤーパラメータが必要な場合、すべてのGPUが同期して、お互いに不足している部分を提供します。それがすべてです。
 
@@ -274,7 +274,7 @@ Implementations:
 
 以下は、[GPipe論文](https://ai.googleblog.com/2019/03/introducing-gpipe-open-source-library.html)からの図で、上部には単純なMP、下部にはPPが示されています：
 
-![mp-pp](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png)
+![mp-pp](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png)
 
 この図から、PPがGPUがアイドル状態の領域である「バブル」を少なく持つことがわかります。アイドル状態の部分は「バブル」と呼ばれます。
 
@@ -341,16 +341,16 @@ OSLOは、`nn.Sequential`の変換なしでTransformersに基づくパイプラ�
 Megatronの論文の表記法に従って、行列の乗算部分を`Y = GeLU(XA)`と書くことができます。ここで、`X`と`Y`は入力ベクトルと出力ベクトルで、`A`は重み行列です。
 
 行列の計算を行列形式で見ると、行列乗算を複数のGPUで分割できる方法が簡単に理解できます：
-![Parallel GEMM](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png)
+![Parallel GEMM](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png)
 
 重み行列`A`を`N`個のGPUに対して列ごとに分割し、並列で行列乗算`XA_1`から`XA_n`を実行すると、`N`個の出力ベクトル`Y_1、Y_2、...、Y_n`が得られ、それらを独立して`GeLU`に供給できます：
-![独立したGeLU](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png)
+![独立したGeLU](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png)
 
 この原理を使用して、最後まで同期が必要ないまま、任意の深さのMLPを更新できます。Megatron-LMの著者はそのための有用なイラストを提供しています：
-![並列シャード処理](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png)
+![並列シャード処理](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png)
 
 マルチヘッドアテンションレイヤーを並列化することはさらに簡単です。それらは既に複数の独立したヘッドを持っているため、本質的に並列です！
-![並列セルフアテンション](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png)
+![並列セルフアテンション](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png)
 
 特別な考慮事項：TPには非常に高速なネットワークが必要であり、したがって1つのノードを超えてTPを実行しないことがお勧めされません。実際には、1つのノードに4つのGPUがある場合、最大のTP度数は4です。TP度数8が必要な場合は、少なくとも8つのGPUを持つノードを使用する必要があります。
 
@@ -377,7 +377,7 @@ SageMakerは、より効率的な処理のためにTPとDPを組み合わせて�
 
 DeepSpeedの[パイプラインチュートリアル](https://www.deepspeed.ai/tutorials/pipeline/)からの次の図は、DPをPPと組み合わせる方法を示しています。
 
-![dp-pp-2d](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png)
+![dp-pp-2d](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png)
 
 ここで重要なのは、DPランク0がGPU2を見えなくし、DPランク1がGPU3を見えなくすることです。DPにとって、存在するのはGPU 0 と 1 のみで、それらの2つのGPUのようにデータを供給します。GPU0はPPを使用してGPU2に一部の負荷を「秘密裏に」オフロードし、GPU1も同様にGPU3を支援に引き入れます。
 
@@ -396,7 +396,7 @@ DeepSpeedの[パイプラインチュートリアル](https://www.deepspeed.ai/t
 
 さらに効率的なトレーニングを行うために、3Dパラレリズムを使用し、PPをTPとDPと組み合わせます。これは次の図で示されています。
 
-![dp-pp-tp-3d](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png)
+![dp-pp-tp-3d](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png)
 
 この図は[3Dパラレリズム：兆パラメータモデルへのスケーリング](https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/)というブログ投稿から取得されたもので、おすすめの読み物です。
 

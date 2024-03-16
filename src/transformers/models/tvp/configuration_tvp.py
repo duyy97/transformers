@@ -25,7 +25,7 @@ logger = logging.get_logger(__name__)
 
 
 TVP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "Intel/tvp-base": "https://hf-mirror.com/Intel/tvp-base/resolve/main/config.json",
+    "Intel/tvp-base": "https://huggingface.co/Intel/tvp-base/resolve/main/config.json",
 }
 
 
@@ -34,7 +34,7 @@ class TvpConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`TvpModel`]. It is used to instantiate an Tvp
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Tvp
-    [Intel/tvp-base](https://hf-mirror.com/Intel/tvp-base) architecture.
+    [Intel/tvp-base](https://huggingface.co/Intel/tvp-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

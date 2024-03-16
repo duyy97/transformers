@@ -62,7 +62,7 @@ Hugging Faceチームのメンバーがサポートを提供するので、一�
 
 以下をご覧ください：
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
 
 ご覧のように、🤗 Transformersでは継承を使用していますが、抽象化のレベルを最小限に保っています。
 ライブラリ内のどのモデルにも、抽象化のレベルが2つを超えることはありません。
@@ -103,8 +103,8 @@ model.config  # model has access to its config
 
 モデルを追加する方法は人それぞれ異なるため、他のコントリビューターが🤗 Transformersにモデルを追加する際の要約を確認することが非常に役立つ場合があります。以下は、他のコントリビューターが🤗 Transformersにモデルをポートする際のコミュニティブログ投稿のリストです。
 
-1. [GPT2モデルのポーティング](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) by [Thomas](https://hf-mirror.com/thomwolf)
-2. [WMT19 MTモデルのポーティング](https://hf-mirror.com/blog/porting-fsmt) by [Stas](https://hf-mirror.com/stas)
+1. [GPT2モデルのポーティング](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) by [Thomas](https://huggingface.co/thomwolf)
+2. [WMT19 MTモデルのポーティング](https://huggingface.co/blog/porting-fsmt) by [Stas](https://huggingface.co/stas)
 
 経験から言えることは、モデルを追加する際に最も重要なことは次のようになります：
 
@@ -147,7 +147,7 @@ BrandNewBertの論文がある場合、その説明を読むための時間を�
   [model_summary](model_summary)を参照して、これらの違いについて詳しく知りたい場合があります。
 - *brand_new_bert*の応用分野は何ですか？ テキスト分類ですか？ テキスト生成ですか？ Seq2Seqタスク、例えば要約ですか？
 - モデルをBERT/GPT-2/BARTとは異なるものにする新しい機能は何ですか？
-- 既存の[🤗 Transformersモデル](https://hf-mirror.com/transformers/#contents)の中で*brand_new_bert*に最も似ているモデルはどれですか？
+- 既存の[🤗 Transformersモデル](https://huggingface.co/transformers/#contents)の中で*brand_new_bert*に最も似ているモデルはどれですか？
 - 使用されているトークナイザの種類は何ですか？ SentencePieceトークナイザですか？ WordPieceトークナイザですか？ BERTやBARTで使用されているトークナイザと同じですか？
 
 モデルのアーキテクチャの良い概要を得たと感じたら、Hugging Faceチームに質問を送ることができます。

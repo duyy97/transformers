@@ -69,7 +69,7 @@ class MaskGenerationPipeline(ChunkPipeline):
     ... )
 
     >>> outputs = generator(
-    ...     "https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png", points_per_batch=128
+    ...     "https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png", points_per_batch=128
     ... )
     ```
 
@@ -78,7 +78,7 @@ class MaskGenerationPipeline(ChunkPipeline):
     This segmentation pipeline can currently be loaded from [`pipeline`] using the following task identifier:
     `"mask-generation"`.
 
-    See the list of available models on [hf-mirror.com/models](https://hf-mirror.com/models?filter=mask-generation).
+    See the list of available models on [huggingface.co/models](https://huggingface.co/models?filter=mask-generation).
     """
 
     def __init__(self, **kwargs):

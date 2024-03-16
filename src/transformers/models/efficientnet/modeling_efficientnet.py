@@ -54,7 +54,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 EFFICIENTNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/efficientnet-b7",
-    # See all EfficientNet models at https://hf-mirror.com/models?filter=efficientnet
+    # See all EfficientNet models at https://huggingface.co/models?filter=efficientnet
 ]
 
 

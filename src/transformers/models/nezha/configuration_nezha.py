@@ -2,7 +2,7 @@ from ... import PretrainedConfig
 
 
 NEZHA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "sijunhe/nezha-cn-base": "https://hf-mirror.com/sijunhe/nezha-cn-base/resolve/main/config.json",
+    "sijunhe/nezha-cn-base": "https://huggingface.co/sijunhe/nezha-cn-base/resolve/main/config.json",
 }
 
 
@@ -11,7 +11,7 @@ class NezhaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`NezhaModel`]. It is used to instantiate an Nezha
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Nezha
-    [sijunhe/nezha-cn-base](https://hf-mirror.com/sijunhe/nezha-cn-base) architecture.
+    [sijunhe/nezha-cn-base](https://huggingface.co/sijunhe/nezha-cn-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

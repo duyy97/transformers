@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # Longformer
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=longformer">
+<a href="https://huggingface.co/models?filter=longformer">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-longformer-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/longformer-base-4096-finetuned-squadv1">
+<a href="https://huggingface.co/spaces/docs-demos/longformer-base-4096-finetuned-squadv1">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -41,7 +41,7 @@ contrast to most prior work, we also pretrain Longformer and finetune it on a va
 pretrained Longformer consistently outperforms RoBERTa on long document tasks and sets new state-of-the-art results on
 WikiHop and TriviaQA.*
 
-This model was contributed by [beltagy](https://hf-mirror.com/beltagy). The Authors' code can be found [here](https://github.com/allenai/longformer).
+This model was contributed by [beltagy](https://huggingface.co/beltagy). The Authors' code can be found [here](https://github.com/allenai/longformer).
 
 ## Usage tips
 

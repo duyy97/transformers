@@ -22,7 +22,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 UDOP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/udop-large": "https://hf-mirror.com/microsoft/udop-large/resolve/main/config.json",
+    "microsoft/udop-large": "https://huggingface.co/microsoft/udop-large/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class UdopConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`UdopForConditionalGeneration`]. It is used to
     instantiate a UDOP model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the UDOP
-    [microsoft/udop-large](https://hf-mirror.com/microsoft/udop-large) architecture.
+    [microsoft/udop-large](https://huggingface.co/microsoft/udop-large) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

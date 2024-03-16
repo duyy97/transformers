@@ -23,7 +23,7 @@ logger = logging.get_logger(__name__)
 # TODO: upload to AWS
 RETRIBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "yjernite/retribert-base-uncased": (
-        "https://hf-mirror.com/yjernite/retribert-base-uncased/resolve/main/config.json"
+        "https://huggingface.co/yjernite/retribert-base-uncased/resolve/main/config.json"
     ),
 }
 
@@ -33,7 +33,7 @@ class RetriBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`RetriBertModel`]. It is used to instantiate a
     RetriBertModel model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the RetriBERT
-    [yjernite/retribert-base-uncased](https://hf-mirror.com/yjernite/retribert-base-uncased) architecture.
+    [yjernite/retribert-base-uncased](https://huggingface.co/yjernite/retribert-base-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -68,7 +68,7 @@ _CHECKPOINT_FOR_DOC = "nvidia/groupvit-gcc-yfcc"
 
 TF_GROUPVIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "nvidia/groupvit-gcc-yfcc",
-    # See all GroupViT models at https://hf-mirror.com/models?filter=groupvit
+    # See all GroupViT models at https://huggingface.co/models?filter=groupvit
 ]
 
 

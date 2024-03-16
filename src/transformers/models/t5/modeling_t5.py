@@ -65,7 +65,7 @@ T5_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google-t5/t5-large",
     "google-t5/t5-3b",
     "google-t5/t5-11b",
-    # See all T5 models at https://hf-mirror.com/models?filter=t5
+    # See all T5 models at https://huggingface.co/models?filter=t5
 ]
 
 

@@ -64,7 +64,7 @@ call the model to be added to 🤗 Transformers `BrandNewBert`.
 
 Let's take a look:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
 
 As you can see, we do make use of inheritance in 🤗 Transformers, but we keep the level of abstraction to an absolute
 minimum. There are never more than two levels of abstraction for any model in the library. `BrandNewBertModel`
@@ -120,8 +120,8 @@ Not quite ready yet :-( This section will be added soon!
 Everyone has different preferences of how to port a model so it can be very helpful for you to take a look at summaries
 of how other contributors ported models to Hugging Face. Here is a list of community blog posts on how to port a model:
 
-1. [Porting GPT2 Model](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) by [Thomas](https://hf-mirror.com/thomwolf)
-2. [Porting WMT19 MT Model](https://hf-mirror.com/blog/porting-fsmt) by [Stas](https://hf-mirror.com/stas)
+1. [Porting GPT2 Model](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) by [Thomas](https://huggingface.co/thomwolf)
+2. [Porting WMT19 MT Model](https://huggingface.co/blog/porting-fsmt) by [Stas](https://huggingface.co/stas)
 
 From experience, we can tell you that the most important things to keep in mind when adding a model are:
 
@@ -176,7 +176,7 @@ theoretical aspects, but rather focus on the practical ones, namely:
 -  What are the applications of *brand_new_bert*? Text classification? Text generation? Seq2Seq tasks, *e.g.,*
   summarization?
 -  What is the novel feature of the model that makes it different from BERT/GPT-2/BART?
--  Which of the already existing [🤗 Transformers models](https://hf-mirror.com/transformers/#contents) is most
+-  Which of the already existing [🤗 Transformers models](https://huggingface.co/transformers/#contents) is most
   similar to *brand_new_bert*?
 -  What type of tokenizer is used? A sentencepiece tokenizer? Word piece tokenizer? Is it the same tokenizer as used
   for BERT or BART?

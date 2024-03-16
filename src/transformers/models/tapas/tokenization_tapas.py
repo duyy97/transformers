@@ -52,81 +52,81 @@ PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         # large models
         "google/tapas-large-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-large-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-large-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-large-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-large-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-large-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-large-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-large-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-large-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-large-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-large-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-large-finetuned-tabfact/resolve/main/vocab.txt"
         ),
         # base models
         "google/tapas-base-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-base-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-base-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-base-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-base-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-base-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-base-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-base-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-base-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-base-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-base-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-base-finetuned-tabfact/resolve/main/vocab.txt"
         ),
         # medium models
         "google/tapas-medium-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-medium-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-medium-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-medium-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-medium-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-medium-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-medium-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-medium-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-medium-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-medium-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-medium-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-medium-finetuned-tabfact/resolve/main/vocab.txt"
         ),
         # small models
         "google/tapas-small-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-small-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-small-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-small-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-small-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-small-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-small-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-small-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-small-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-small-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-small-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-small-finetuned-tabfact/resolve/main/vocab.txt"
         ),
         # tiny models
         "google/tapas-tiny-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-tiny-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-tiny-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-tiny-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-tiny-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-tiny-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-tiny-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-tiny-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-tiny-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-tiny-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-tiny-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-tiny-finetuned-tabfact/resolve/main/vocab.txt"
         ),
         # mini models
         "google/tapas-mini-finetuned-sqa": (
-            "https://hf-mirror.com/google/tapas-mini-finetuned-sqa/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-mini-finetuned-sqa/resolve/main/vocab.txt"
         ),
         "google/tapas-mini-finetuned-wtq": (
-            "https://hf-mirror.com/google/tapas-mini-finetuned-wtq/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-mini-finetuned-wtq/resolve/main/vocab.txt"
         ),
         "google/tapas-mini-finetuned-wikisql-supervised": (
-            "https://hf-mirror.com/google/tapas-mini-finetuned-wikisql-supervised/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-mini-finetuned-wikisql-supervised/resolve/main/vocab.txt"
         ),
         "google/tapas-mini-finetuned-tabfact": (
-            "https://hf-mirror.com/google/tapas-mini-finetuned-tabfact/resolve/main/vocab.txt"
+            "https://huggingface.co/google/tapas-mini-finetuned-tabfact/resolve/main/vocab.txt"
         ),
     }
 }

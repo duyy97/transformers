@@ -46,7 +46,7 @@ _CHECKPOINT_FOR_DOC = "alibaba-damo/mgp-str-base"
 
 MGP_STR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "alibaba-damo/mgp-str-base",
-    # See all MGP-STR models at https://hf-mirror.com/models?filter=mgp-str
+    # See all MGP-STR models at https://huggingface.co/models?filter=mgp-str
 ]
 
 

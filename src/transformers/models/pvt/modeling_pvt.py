@@ -51,7 +51,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 PVT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Zetatech/pvt-tiny-224"
-    # See all PVT models at https://hf-mirror.com/models?filter=pvt
+    # See all PVT models at https://huggingface.co/models?filter=pvt
 ]
 
 

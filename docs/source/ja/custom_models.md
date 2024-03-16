@@ -287,13 +287,13 @@ notebook_login()
 resnet50d.push_to_hub("custom-resnet50d")
 ```
 
-モデリングの重みとJSON形式の構成に加えて、このフォルダー「custom-resnet50d」内のモデリングおよび構成「.py」ファイルもコピーされ、結果はHubにアップロードされました。結果はこの[model repo](https://hf-mirror.com/sgugger/custom-resnet50d)で確認できます。
+モデリングの重みとJSON形式の構成に加えて、このフォルダー「custom-resnet50d」内のモデリングおよび構成「.py」ファイルもコピーされ、結果はHubにアップロードされました。結果はこの[model repo](https://huggingface.co/sgugger/custom-resnet50d)で確認できます。
 
 詳細については、[Hubへのプッシュ方法](model_sharing)を参照してください。
 
 ## Using a model with custom code
 
-自動クラスと `from_pretrained` メソッドを使用して、リポジトリ内のカスタムコードファイルと共に任意の構成、モデル、またはトークナイザを使用できます。 Hubにアップロードされるすべてのファイルとコードはマルウェアのスキャンが実施されます（詳細は[Hubセキュリティ](https://hf-mirror.com/docs/hub/security#malware-scanning)ドキュメンテーションを参照してください）、しかし、依然として悪意のあるコードを実行しないために、モデルコードと作者を確認する必要があります。
+自動クラスと `from_pretrained` メソッドを使用して、リポジトリ内のカスタムコードファイルと共に任意の構成、モデル、またはトークナイザを使用できます。 Hubにアップロードされるすべてのファイルとコードはマルウェアのスキャンが実施されます（詳細は[Hubセキュリティ](https://huggingface.co/docs/hub/security#malware-scanning)ドキュメンテーションを参照してください）、しかし、依然として悪意のあるコードを実行しないために、モデルコードと作者を確認する必要があります。
 `trust_remote_code=True` を設定してカスタムコードを持つモデルを使用できます：
 
 

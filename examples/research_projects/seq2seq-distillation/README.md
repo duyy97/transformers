@@ -23,7 +23,7 @@ Author: Sam Shleifer (https://github.com/sshleifer)
 
 ```bash
 cd examples/contrib/pytorch-lightning/seq2seq
-wget https://cdn-datasets.hf-mirror.com/summarization/xsum.tar.gz
+wget https://cdn-datasets.huggingface.co/summarization/xsum.tar.gz
 tar -xzvf xsum.tar.gz
 export XSUM_DIR=${PWD}/xsum
 ```
@@ -34,7 +34,7 @@ To use your own data, copy that files format. Each article to be summarized is o
 
 ```bash
 cd examples/contrib/pytorch-lightning/seq2seq
-wget https://cdn-datasets.hf-mirror.com/summarization/cnn_dm_v2.tgz
+wget https://cdn-datasets.huggingface.co/summarization/cnn_dm_v2.tgz
 tar -xzvf cnn_dm_v2.tgz  # empty lines removed
 mv cnn_cln cnn_dm
 export CNN_DIR=${PWD}/cnn_dm
@@ -45,7 +45,7 @@ this should make a directory called `cnn_dm/` with 6 files.
 
 download with this command:
 ```bash
-wget https://cdn-datasets.hf-mirror.com/translation/wmt_en_ro.tar.gz
+wget https://cdn-datasets.huggingface.co/translation/wmt_en_ro.tar.gz
 tar -xzvf wmt_en_ro.tar.gz
 export ENRO_DIR=${PWD}/wmt_en_ro
 ```
@@ -54,7 +54,7 @@ this should make a directory called `wmt_en_ro/` with 6 files.
 #### WMT English-German
 
 ```bash
-wget https://cdn-datasets.hf-mirror.com/translation/wmt_en_de.tgz
+wget https://cdn-datasets.huggingface.co/translation/wmt_en_de.tgz
 tar -xzvf wmt_en_de.tgz
 export DATA_DIR=${PWD}/wmt_en_de
 ```
@@ -255,13 +255,13 @@ The feature is still experimental, because:
 <!---It should be called distilling bart and pegasus, but I don't want to break the link in the paper.-->
 This section describes all code and artifacts from our [Paper](http://arxiv.org/abs/2010.13002)
 
-![DBART](https://hf-mirror.com/front/thumbnails/distilbart_large.png)
+![DBART](https://huggingface.co/front/thumbnails/distilbart_large.png)
 
 + For the CNN/DailyMail dataset, (relatively longer, more extractive summaries), we found a simple technique that works, which we call "Shrink and Fine-tune", or SFT.
 you just copy alternating layers from `facebook/bart-large-cnn` and fine-tune more on the cnn/dm data. `sshleifer/distill-pegasus-cnn-16-4`, `sshleifer/distilbart-cnn-12-6` and all other checkpoints under `sshleifer` that start with `distilbart-cnn` were trained this way.
 + For the XSUM dataset, training on pseudo-labels worked best for Pegasus (`sshleifer/distill-pegasus-16-4`), while training with KD worked best for `distilbart-xsum-12-6`
 + For `sshleifer/dbart-xsum-12-3`
-+ We ran 100s experiments, and didn't want to document 100s of commands. If you want a command to replicate a figure from the paper that is not documented below, feel free to ask on the [forums](https://discuss.hf-mirror.com/t/seq2seq-distillation-methodology-questions/1270) and tag `@sshleifer`.
++ We ran 100s experiments, and didn't want to document 100s of commands. If you want a command to replicate a figure from the paper that is not documented below, feel free to ask on the [forums](https://discuss.huggingface.co/t/seq2seq-distillation-methodology-questions/1270) and tag `@sshleifer`.
 + You can see the performance tradeoffs of model sizes [here](https://docs.google.com/spreadsheets/d/1EkhDMwVO02m8jCD1cG3RoFPLicpcL1GQHTQjfvDYgIM/edit#gid=0).
 and more granular timing results [here](https://docs.google.com/spreadsheets/d/1EkhDMwVO02m8jCD1cG3RoFPLicpcL1GQHTQjfvDYgIM/edit#gid=1753259047&range=B2:I23).
 
@@ -304,7 +304,7 @@ deval 1 sshleifer/distill-pegasus-xsum-16-4 xsum dpx_xsum_eval
 
 #### Recommended Workflow
 + Get your dataset in the right format. (see 6 files above).
-+ Find a teacher model [Pegasus](https://hf-mirror.com/models?search=pegasus) (slower, better ROUGE) or `facebook/bart-large-xsum`/`facebook/bart-large-cnn` (faster, slightly lower.).
++ Find a teacher model [Pegasus](https://huggingface.co/models?search=pegasus) (slower, better ROUGE) or `facebook/bart-large-xsum`/`facebook/bart-large-cnn` (faster, slightly lower.).
 Choose the checkpoint where the corresponding dataset is most similar (or identical to) your dataset.
 + Follow the sections in order below. You can stop after SFT if you are satisfied, or move on to pseudo-labeling if you want more performance.
 + student size: If you want a close to free 50% speedup, cut the decoder in half. If you want a larger speedup, cut it in 4.
@@ -387,9 +387,9 @@ python finetune.py \
 
 To combine datasets, as in Section 6.2, try something like:
 ```bash
-curl -S https://cdn-datasets.hf-mirror.com/pseudo/xsum/bart_xsum_pl.tgz | tar -xvz -C .
-curl -S https://cdn-datasets.hf-mirror.com/pseudo/xsum/pegasus_xsum.tgz | tar -xvz -C .
-curl -S https://cdn-datasets.hf-mirror.com/summarization/xsum.tar.gz | tar -xvz -C .
+curl -S https://cdn-datasets.huggingface.co/pseudo/xsum/bart_xsum_pl.tgz | tar -xvz -C .
+curl -S https://cdn-datasets.huggingface.co/pseudo/xsum/pegasus_xsum.tgz | tar -xvz -C .
+curl -S https://cdn-datasets.huggingface.co/summarization/xsum.tar.gz | tar -xvz -C .
 mkdir all_pl
 cat bart_xsum_pl/train.source pegasus_xsum/train.source xsum/train.source > all_pl/train.source
 cat bart_xsum_pl/train.target pegasus_xsum/train.target xsum/train.target > all_pl/train.target

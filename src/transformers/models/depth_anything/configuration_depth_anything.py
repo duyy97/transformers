@@ -24,7 +24,7 @@ from ..auto.configuration_auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 DEPTH_ANYTHING_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "LiheYoung/depth-anything-small-hf": "https://hf-mirror.com/LiheYoung/depth-anything-small-hf/resolve/main/config.json",
+    "LiheYoung/depth-anything-small-hf": "https://huggingface.co/LiheYoung/depth-anything-small-hf/resolve/main/config.json",
 }
 
 
@@ -33,7 +33,7 @@ class DepthAnythingConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DepthAnythingModel`]. It is used to instantiate an DepthAnything
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the DepthAnything
-    [LiheYoung/depth-anything-small-hf](https://hf-mirror.com/LiheYoung/depth-anything-small-hf) architecture.
+    [LiheYoung/depth-anything-small-hf](https://huggingface.co/LiheYoung/depth-anything-small-hf) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

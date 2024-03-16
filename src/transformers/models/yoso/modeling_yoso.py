@@ -53,7 +53,7 @@ _CONFIG_FOR_DOC = "YosoConfig"
 
 YOSO_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "uw-madison/yoso-4096",
-    # See all YOSO models at https://hf-mirror.com/models?filter=yoso
+    # See all YOSO models at https://huggingface.co/models?filter=yoso
 ]
 
 lsh_cumulation = None

@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [OPUS Books](https://hf-mirror.com/datasets/opus_books) データセットの英語-フランス語サブセットの [T5](https://hf-mirror.com/google-t5/t5-small) を微調整して、英語のテキストを次の形式に翻訳します。フランス語。
+1. [OPUS Books](https://huggingface.co/datasets/opus_books) データセットの英語-フランス語サブセットの [T5](https://huggingface.co/google-t5/t5-small) を微調整して、英語のテキストを次の形式に翻訳します。フランス語。
 2. 微調整されたモデルを推論に使用します。
 
 <Tip>
@@ -53,7 +53,7 @@ pip install transformers datasets evaluate sacrebleu
 ```
 ## Load OPUS Books dataset
 
-まず、🤗 データセット ライブラリから [OPUS Books](https://hf-mirror.com/datasets/opus_books) データセットの英語とフランス語のサブセットを読み込みます。
+まず、🤗 データセット ライブラリから [OPUS Books](https://huggingface.co/datasets/opus_books) データセットの英語とフランス語のサブセットを読み込みます。
 
 ```py
 >>> from datasets import load_dataset
@@ -139,7 +139,7 @@ pip install transformers datasets evaluate sacrebleu
 
 ## Evaluate
 
-トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[SacreBLEU](https://hf-mirror.com/spaces/evaluate-metric/sacrebleu) メトリクスをロードします (🤗 Evaluate [クイック ツアー](https://hf-mirror.com/docs/evaluate/a_quick_tour) を参照してください) ) メトリクスの読み込みと計算方法の詳細については、次を参照してください)。
+トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[SacreBLEU](https://huggingface.co/spaces/evaluate-metric/sacrebleu) メトリクスをロードします (🤗 Evaluate [クイック ツアー](https://huggingface.co/docs/evaluate/a_quick_tour) を参照してください) ) メトリクスの読み込みと計算方法の詳細については、次を参照してください)。
 
 ```py
 >>> import evaluate

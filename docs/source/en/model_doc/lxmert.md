@@ -41,7 +41,7 @@ best result by 22% absolute (54% to 76%). Lastly, we demonstrate detailed ablati
 model components and pretraining strategies significantly contribute to our strong results; and also present several
 attention visualizations for the different encoders*
 
-This model was contributed by [eltoto1219](https://hf-mirror.com/eltoto1219). The original code can be found [here](https://github.com/airsplay/lxmert).
+This model was contributed by [eltoto1219](https://huggingface.co/eltoto1219). The original code can be found [here](https://github.com/airsplay/lxmert).
 
 ## Usage tips
 

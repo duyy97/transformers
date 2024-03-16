@@ -32,12 +32,12 @@ The abstract from the paper is the following:
 
 *Image Transformer has recently achieved significant progress for natural image understanding, either using supervised (ViT, DeiT, etc.) or self-supervised (BEiT, MAE, etc.) pre-training techniques. In this paper, we propose DiT, a self-supervised pre-trained Document Image Transformer model using large-scale unlabeled text images for Document AI tasks, which is essential since no supervised counterparts ever exist due to the lack of human labeled document images. We leverage DiT as the backbone network in a variety of vision-based Document AI tasks, including document image classification, document layout analysis, as well as table detection. Experiment results have illustrated that the self-supervised pre-trained DiT model achieves new state-of-the-art results on these downstream tasks, e.g. document image classification (91.11 → 92.69), document layout analysis (91.0 → 94.9) and table detection (94.23 → 96.55). *
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/dit_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/dit_architecture.jpg"
 alt="drawing" width="600"/> 
 
 <small> Summary of the approach. Taken from the [original paper](https://arxiv.org/abs/2203.02378). </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/dit).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/dit).
 
 ## Usage tips
 
@@ -59,7 +59,7 @@ from transformers import BeitForMaskedImageModeling
 model = BeitForMaskedImageModeling.from_pretrained("microsoft/dit-base")
 ```
 
-You can also load a fine-tuned model from the [hub](https://hf-mirror.com/models?other=dit), like so:
+You can also load a fine-tuned model from the [hub](https://huggingface.co/models?other=dit), like so:
 
 ```python
 from transformers import AutoModelForImageClassification

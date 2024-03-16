@@ -52,12 +52,12 @@ _CONFIG_FOR_DOC = "SeamlessM4Tv2Config"
 
 SEAMLESS_M4T_V2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/seamless-m4t-v2-large",
-    # See all SeamlessM4T-v2 models at https://hf-mirror.com/models?filter=seamless_m4t_v2
+    # See all SeamlessM4T-v2 models at https://huggingface.co/models?filter=seamless_m4t_v2
 ]
 
 
 SPEECHT5_PRETRAINED_HIFIGAN_CONFIG_ARCHIVE_MAP = {
-    "microsoft/speecht5_hifigan": "https://hf-mirror.com/microsoft/speecht5_hifigan/resolve/main/config.json",
+    "microsoft/speecht5_hifigan": "https://huggingface.co/microsoft/speecht5_hifigan/resolve/main/config.json",
 }
 
 

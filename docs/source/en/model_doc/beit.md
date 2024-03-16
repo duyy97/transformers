@@ -39,8 +39,8 @@ with previous pre-training methods. For example, base-size BEiT achieves 83.2% t
 significantly outperforming from-scratch DeiT training (81.8%) with the same setup. Moreover, large-size BEiT obtains
 86.3% only using ImageNet-1K, even outperforming ViT-L with supervised pre-training on ImageNet-22K (85.2%).*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The JAX/FLAX version of this model was
-contributed by [kamalkraj](https://hf-mirror.com/kamalkraj). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/beit).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The JAX/FLAX version of this model was
+contributed by [kamalkraj](https://huggingface.co/kamalkraj). The original code can be found [here](https://github.com/microsoft/unilm/tree/master/beit).
 
 ## Usage tips
 
@@ -55,7 +55,7 @@ contributed by [kamalkraj](https://hf-mirror.com/kamalkraj). The original code c
   [`BeitImageProcessor`] to resize (or rescale) and normalize images for the model.
 - Both the patch resolution and image resolution used during pre-training or fine-tuning are reflected in the name of
   each checkpoint. For example, `microsoft/beit-base-patch16-224` refers to a base-sized architecture with patch
-  resolution of 16x16 and fine-tuning resolution of 224x224. All checkpoints can be found on the [hub](https://hf-mirror.com/models?search=microsoft/beit).
+  resolution of 16x16 and fine-tuning resolution of 224x224. All checkpoints can be found on the [hub](https://huggingface.co/models?search=microsoft/beit).
 - The available checkpoints are either (1) pre-trained on [ImageNet-22k](http://www.image-net.org/) (a collection of
   14 million images and 22k classes) only, (2) also fine-tuned on ImageNet-22k or (3) also fine-tuned on [ImageNet-1k](http://www.image-net.org/challenges/LSVRC/2012/) (also referred to as ILSVRC 2012, a collection of 1.3 million
   images and 1,000 classes).
@@ -66,7 +66,7 @@ contributed by [kamalkraj](https://hf-mirror.com/kamalkraj). The original code c
   `use_relative_position_bias` attribute of [`BeitConfig`] to `True` in order to add
   position embeddings.
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/beit_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/beit_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> BEiT pre-training. Taken from the <a href="https://arxiv.org/abs/2106.08254">original paper.</a> </small>

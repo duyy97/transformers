@@ -57,7 +57,7 @@ _CHECKPOINT_FOR_DOC = "susnato/clvp_dev"
 
 CLVP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "susnato/clvp_dev",
-    # See all Clvp models at https://hf-mirror.com/models?filter=clvp
+    # See all Clvp models at https://huggingface.co/models?filter=clvp
 ]
 
 

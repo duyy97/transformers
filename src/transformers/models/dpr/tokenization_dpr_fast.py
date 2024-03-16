@@ -31,54 +31,54 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt", "tokenizer_file": "tokenizer.jso
 CONTEXT_ENCODER_PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/dpr-ctx_encoder-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-ctx_encoder-single-nq-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-ctx_encoder-single-nq-base/resolve/main/vocab.txt"
         ),
         "facebook/dpr-ctx_encoder-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-ctx_encoder-multiset-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-ctx_encoder-multiset-base/resolve/main/vocab.txt"
         ),
     },
     "tokenizer_file": {
         "facebook/dpr-ctx_encoder-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-ctx_encoder-single-nq-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-ctx_encoder-single-nq-base/resolve/main/tokenizer.json"
         ),
         "facebook/dpr-ctx_encoder-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-ctx_encoder-multiset-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-ctx_encoder-multiset-base/resolve/main/tokenizer.json"
         ),
     },
 }
 QUESTION_ENCODER_PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/dpr-question_encoder-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-question_encoder-single-nq-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-question_encoder-single-nq-base/resolve/main/vocab.txt"
         ),
         "facebook/dpr-question_encoder-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-question_encoder-multiset-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-question_encoder-multiset-base/resolve/main/vocab.txt"
         ),
     },
     "tokenizer_file": {
         "facebook/dpr-question_encoder-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-question_encoder-single-nq-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-question_encoder-single-nq-base/resolve/main/tokenizer.json"
         ),
         "facebook/dpr-question_encoder-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-question_encoder-multiset-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-question_encoder-multiset-base/resolve/main/tokenizer.json"
         ),
     },
 }
 READER_PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/dpr-reader-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-reader-single-nq-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-reader-single-nq-base/resolve/main/vocab.txt"
         ),
         "facebook/dpr-reader-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-reader-multiset-base/resolve/main/vocab.txt"
+            "https://huggingface.co/facebook/dpr-reader-multiset-base/resolve/main/vocab.txt"
         ),
     },
     "tokenizer_file": {
         "facebook/dpr-reader-single-nq-base": (
-            "https://hf-mirror.com/facebook/dpr-reader-single-nq-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-reader-single-nq-base/resolve/main/tokenizer.json"
         ),
         "facebook/dpr-reader-multiset-base": (
-            "https://hf-mirror.com/facebook/dpr-reader-multiset-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/facebook/dpr-reader-multiset-base/resolve/main/tokenizer.json"
         ),
     },
 }

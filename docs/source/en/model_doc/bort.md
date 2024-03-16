@@ -43,7 +43,7 @@ hardware. It is also 7.9x faster on a CPU, as well as being better performing th
 architecture, and some of the non-compressed variants: it obtains performance improvements of between 0.3% and 31%,
 absolute, with respect to BERT-large, on multiple public natural language understanding (NLU) benchmarks.*
 
-This model was contributed by [stefan-it](https://hf-mirror.com/stefan-it). The original code can be found [here](https://github.com/alexa/bort/).
+This model was contributed by [stefan-it](https://huggingface.co/stefan-it). The original code can be found [here](https://github.com/alexa/bort/).
 
 ## Usage tips
 

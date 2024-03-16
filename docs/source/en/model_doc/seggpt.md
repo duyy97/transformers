@@ -65,7 +65,7 @@ target_sizes = [image_input.size[::-1]]
 mask = image_processor.post_process_semantic_segmentation(outputs, target_sizes, num_labels=num_labels)[0]
 ```
 
-This model was contributed by [EduardoPacheco](https://hf-mirror.com/EduardoPacheco).
+This model was contributed by [EduardoPacheco](https://huggingface.co/EduardoPacheco).
 The original code can be found [here]([(https://github.com/baaivision/Painter/tree/main)).
 
 

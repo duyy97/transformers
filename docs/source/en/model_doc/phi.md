@@ -60,9 +60,9 @@ including hallucinations and the potential for toxic and biased generations –e
 are seeing improvement on that front thanks to the absence of web data. We open-source phi-1.5 to
 promote further research on these urgent topics.*
 
-This model was contributed by [Susnato Dhar](https://hf-mirror.com/susnato).
+This model was contributed by [Susnato Dhar](https://huggingface.co/susnato).
 
-The original code for Phi-1, Phi-1.5 and Phi-2 can be found [here](https://hf-mirror.com/microsoft/phi-1), [here](https://hf-mirror.com/microsoft/phi-1_5) and [here](https://hf-mirror.com/microsoft/phi-2), respectively.
+The original code for Phi-1, Phi-1.5 and Phi-2 can be found [here](https://huggingface.co/microsoft/phi-1), [here](https://huggingface.co/microsoft/phi-1_5) and [here](https://huggingface.co/microsoft/phi-2), respectively.
 
 ## Usage tips
 
@@ -155,7 +155,7 @@ To load and run a model using Flash Attention 2, refer to the snippet below:
 Below is an expected speedup diagram that compares pure inference time between the native implementation in transformers using `microsoft/phi-1` checkpoint and the Flash Attention 2 version of the model using a sequence length of 2048.
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/phi_1_speedup_plot.jpg">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/phi_1_speedup_plot.jpg">
 </div>
 
 ## PhiConfig

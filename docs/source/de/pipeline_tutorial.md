@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Pipelines für Inferenzen
 
-Die [`pipeline`] macht es einfach, jedes beliebige Modell aus dem [Hub](https://hf-mirror.com/models) für die Inferenz auf jede Sprache, Computer Vision, Sprache und multimodale Aufgaben zu verwenden. Selbst wenn Sie keine Erfahrung mit einer bestimmten Modalität haben oder nicht mit dem zugrundeliegenden Code hinter den Modellen vertraut sind, können Sie sie mit der [`pipeline`] für Inferenzen verwenden! In diesem Beispiel lernen Sie, wie:
+Die [`pipeline`] macht es einfach, jedes beliebige Modell aus dem [Hub](https://huggingface.co/models) für die Inferenz auf jede Sprache, Computer Vision, Sprache und multimodale Aufgaben zu verwenden. Selbst wenn Sie keine Erfahrung mit einer bestimmten Modalität haben oder nicht mit dem zugrundeliegenden Code hinter den Modellen vertraut sind, können Sie sie mit der [`pipeline`] für Inferenzen verwenden! In diesem Beispiel lernen Sie, wie:
 
 * Eine [`pipeline`] für Inferenz zu verwenden.
 * Einen bestimmten Tokenizer oder ein bestimmtes Modell zu verwenden.
@@ -71,7 +71,7 @@ Alle zusätzlichen Parameter für Ihre Aufgabe können auch in die [`pipeline`] 
 
 ### Wählen Sie ein Modell und einen Tokenizer
 
-Die [`pipeline`] akzeptiert jedes Modell aus dem [Hub](https://hf-mirror.com/models). Auf dem Hub gibt es Tags, mit denen Sie nach einem Modell filtern können, das Sie für Ihre Aufgabe verwenden möchten. Sobald Sie ein passendes Modell ausgewählt haben, laden Sie es mit der entsprechenden `AutoModelFor` und [`AutoTokenizer`] Klasse. Laden Sie zum Beispiel die Klasse [`AutoModelForCausalLM`] für eine kausale Sprachmodellierungsaufgabe:
+Die [`pipeline`] akzeptiert jedes Modell aus dem [Hub](https://huggingface.co/models). Auf dem Hub gibt es Tags, mit denen Sie nach einem Modell filtern können, das Sie für Ihre Aufgabe verwenden möchten. Sobald Sie ein passendes Modell ausgewählt haben, laden Sie es mit der entsprechenden `AutoModelFor` und [`AutoTokenizer`] Klasse. Laden Sie zum Beispiel die Klasse [`AutoModelForCausalLM`] für eine kausale Sprachmodellierungsaufgabe:
 
 ```py
 >>> from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -112,7 +112,7 @@ Lassen Sie uns zum Beispiel die Emotion in diesem Audioclip klassifizieren:
 >>> audio_file = ds[0]["audio"]["path"]
 ```
 
-Finden Sie ein [Audioklassifikation](https://hf-mirror.com/models?pipeline_tag=audio-classification) Modell auf dem Model Hub für Emotionserkennung und laden Sie es in die [`pipeline`]:
+Finden Sie ein [Audioklassifikation](https://huggingface.co/models?pipeline_tag=audio-classification) Modell auf dem Model Hub für Emotionserkennung und laden Sie es in die [`pipeline`]:
 
 ```py
 >>> from transformers import pipeline
@@ -137,14 +137,14 @@ Die Verwendung einer [`pipeline`] für Bildverarbeitungsaufgaben ist praktisch i
 
 Geben Sie Ihre Aufgabe an und übergeben Sie Ihr Bild an den Klassifikator. Das Bild kann ein Link oder ein lokaler Pfad zu dem Bild sein. Zum Beispiel: Welche Katzenart ist unten abgebildet?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(task="image-classification")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
@@ -158,7 +158,7 @@ Die [`pipeline`] unterstützt mehr als eine Modalität. Eine Aufgabe zur Beantwo
 Wenn Sie zum Beispiel das gleiche Bild wie in der obigen Vision-Pipeline verwenden:
 
 ```py
->>> image = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+>>> image = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 >>> question = "Where is the cat?"
 ```
 

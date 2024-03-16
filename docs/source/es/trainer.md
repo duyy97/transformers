@@ -99,7 +99,7 @@ trainer.train(resume_from_checkpoint=True)
 trainer.train(resume_from_checkpoint="your-model/checkpoint-1000")
 ```
 
-Puedes guardar tus puntos de control (por defecto, el estado del optimizador no se guarda) en el Hub configurando `push_to_hub=True` en [`TrainingArguments`] para confirmar y enviarlos. Otras opciones para decidir cómo se guardan tus puntos de control están configuradas en el parámetro [`hub_strategy`](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments.hub_strategy):
+Puedes guardar tus puntos de control (por defecto, el estado del optimizador no se guarda) en el Hub configurando `push_to_hub=True` en [`TrainingArguments`] para confirmar y enviarlos. Otras opciones para decidir cómo se guardan tus puntos de control están configuradas en el parámetro [`hub_strategy`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.hub_strategy):
 
 * hub_strategy="checkpoint" envía el último punto de control a una subcarpeta llamada "last-checkpoint" desde la cual puedes reanudar el entrenamiento.
 
@@ -184,9 +184,9 @@ Comprueba el API referencia [logging](./main_classes/logging) para mas informaci
 
 </Tip>
 
-El [`Trainer`] está configurado a `logging.INFO` de forma predeterminada el cual informa errores, advertencias y otra información basica. Un [`Trainer`] réplica - en entornos distributos - está configurado a `logging.WARNING` el cual solamente informa errores y advertencias. Puedes cambiar el nivel de logging con los parametros [`log_level`](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments.log_level) y [`log_level_replica`](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments.log_level_replica) en [`TrainingArguments`].
+El [`Trainer`] está configurado a `logging.INFO` de forma predeterminada el cual informa errores, advertencias y otra información basica. Un [`Trainer`] réplica - en entornos distributos - está configurado a `logging.WARNING` el cual solamente informa errores y advertencias. Puedes cambiar el nivel de logging con los parametros [`log_level`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.log_level) y [`log_level_replica`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.log_level_replica) en [`TrainingArguments`].
 
-Para configurar el nivel de registro para cada nodo, usa el parámetro [`log_on_each_node`](https://hf-mirror.com/docs/transformers/main/en/main_classes/trainer#transformers.TrainingArguments.log_on_each_node) para determinar si deseas utilizar el nivel de registro en cada nodo o solo en el nodo principal.
+Para configurar el nivel de registro para cada nodo, usa el parámetro [`log_on_each_node`](https://huggingface.co/docs/transformers/main/en/main_classes/trainer#transformers.TrainingArguments.log_on_each_node) para determinar si deseas utilizar el nivel de registro en cada nodo o solo en el nodo principal.
 
 <Tip>
 
@@ -259,7 +259,7 @@ Aprende más sobre las estrategias de fragmentación FSDP, descarga de CPU y má
 
 </Tip>
 
-Para usar Accelerate con [`Trainer`], ejecuta el comando [`accelerate.config`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-config) para configurar el entrenamiento para tu entorno de entrenamiento. Este comando crea un `config_file.yaml` que se utilizará cuando inicies tu script de entrenamiento. Por ejemplo, algunas configuraciones de ejemplo que puedes configurar son:
+Para usar Accelerate con [`Trainer`], ejecuta el comando [`accelerate.config`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-config) para configurar el entrenamiento para tu entorno de entrenamiento. Este comando crea un `config_file.yaml` que se utilizará cuando inicies tu script de entrenamiento. Por ejemplo, algunas configuraciones de ejemplo que puedes configurar son:
 
 <hfoptions id="config">
 <hfoption id="DistributedDataParallel">
@@ -364,7 +364,7 @@ use_cpu: false
 </hfoption>
 </hfoptions>
 
-El comando [`accelerate_launch`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-launch) es la forma recomendada de lanzar tu script de entrenamiento en un sistema distribuido con Accelerate y [`Trainer`] con los parámetros especificados en `config_file.yaml`. Este archivo se guarda en la carpeta de caché de Accelerate y se carga automáticamente cuando ejecutas `accelerate_launch`.
+El comando [`accelerate_launch`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-launch) es la forma recomendada de lanzar tu script de entrenamiento en un sistema distribuido con Accelerate y [`Trainer`] con los parámetros especificados en `config_file.yaml`. Este archivo se guarda en la carpeta de caché de Accelerate y se carga automáticamente cuando ejecutas `accelerate_launch`.
 
 Por ejemplo, para ejecutar el script de entrenamiento [`run_glue.py`](https://github.com/huggingface/transformers/blob/f4db565b695582891e43a5e042e5d318e28f20b8/examples/pytorch/text-classification/run_glue.py#L4) con la configuración de FSDP:
 
@@ -406,4 +406,4 @@ accelerate launch --num_processes=2 \
     --overwrite_output_dir
 ```
 
-Consulta el tutorial [Lanzamiento de tus scripts con Accelerate](https://hf-mirror.com/docs/accelerate/basic_tutorials/launch) para obtener más información sobre `accelerate_launch` y las configuraciones personalizadas.
+Consulta el tutorial [Lanzamiento de tus scripts con Accelerate](https://huggingface.co/docs/accelerate/basic_tutorials/launch) para obtener más información sobre `accelerate_launch` y las configuraciones personalizadas.

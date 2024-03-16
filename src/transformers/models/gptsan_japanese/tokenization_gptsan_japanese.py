@@ -39,10 +39,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt", "emoji_file": "emoji.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "Tanrei/GPTSAN-japanese": "https://hf-mirror.com/Tanrei/GPTSAN-japanese/blob/main/vocab.txt",
+        "Tanrei/GPTSAN-japanese": "https://huggingface.co/Tanrei/GPTSAN-japanese/blob/main/vocab.txt",
     },
     "emoji_file": {
-        "Tanrei/GPTSAN-japanese": "https://hf-mirror.com/Tanrei/GPTSAN-japanese/blob/main/emoji.json",
+        "Tanrei/GPTSAN-japanese": "https://huggingface.co/Tanrei/GPTSAN-japanese/blob/main/emoji.json",
     },
 }
 
@@ -265,7 +265,7 @@ class GPTSanJapaneseTokenizer(PreTrainedTokenizer):
             "\nNo chat template is defined for this tokenizer - using the default template "
             f"for the {self.__class__.__name__} class. If the default is not appropriate for "
             "your model, please set `tokenizer.chat_template` to an appropriate template. "
-            "See https://hf-mirror.com/docs/transformers/main/chat_templating for more information.\n"
+            "See https://huggingface.co/docs/transformers/main/chat_templating for more information.\n"
         )
         return (
             "{% for message in messages %}"

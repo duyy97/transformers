@@ -45,7 +45,7 @@ pip install -q transformers
 ## Zero-shot image classification pipeline
 
 The simplest way to try out inference with a model supporting zero-shot image classification is to use the corresponding [`pipeline`].
-Instantiate a pipeline from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?pipeline_tag=zero-shot-image-classification&sort=downloads):
+Instantiate a pipeline from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?pipeline_tag=zero-shot-image-classification&sort=downloads):
 
 ```python
 >>> from transformers import pipeline
@@ -67,7 +67,7 @@ Next, choose an image you'd like to classify.
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/owl.jpg" alt="Photo of an owl"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/owl.jpg" alt="Photo of an owl"/>
 </div>
 
 Pass the image and the candidate object labels to the pipeline. Here we pass the image directly; other suitable options
@@ -88,7 +88,7 @@ The candidate labels can be simple words like in this example, or more descripti
 Now that you've seen how to use the zero-shot image classification pipeline, let's take a look how you can run zero-shot
 image classification manually.
 
-Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?pipeline_tag=zero-shot-image-classification&sort=downloads).
+Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?pipeline_tag=zero-shot-image-classification&sort=downloads).
 Here we'll use the same checkpoint as before:
 
 ```py
@@ -111,7 +111,7 @@ Let's take a different image to switch things up.
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg" alt="Photo of a car"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg" alt="Photo of a car"/>
 </div>
 
 Use the processor to prepare the inputs for the model. The processor combines an image processor that prepares the

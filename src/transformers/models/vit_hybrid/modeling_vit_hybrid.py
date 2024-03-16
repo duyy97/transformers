@@ -49,7 +49,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 VIT_HYBRID_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/vit-hybrid-base-bit-384",
-    # See all ViT hybrid models at https://hf-mirror.com/models?filter=vit-hybrid
+    # See all ViT hybrid models at https://huggingface.co/models?filter=vit-hybrid
 ]
 
 

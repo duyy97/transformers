@@ -25,7 +25,7 @@ class TestMbartCc25Enro(TestCasePlus):
         super().setUp()
 
         data_cached = cached_path(
-            "https://cdn-datasets.hf-mirror.com/translation/wmt_en_ro-tr40k-va0.5k-te0.5k.tar.gz",
+            "https://cdn-datasets.huggingface.co/translation/wmt_en_ro-tr40k-va0.5k-te0.5k.tar.gz",
             extract_compressed_file=True,
         )
         self.data_dir = f"{data_cached}/wmt_en_ro-tr40k-va0.5k-te0.5k"

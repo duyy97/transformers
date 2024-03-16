@@ -27,7 +27,7 @@ class VisualQuestionAnsweringPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> oracle = pipeline(model="dandelin/vilt-b32-finetuned-vqa")
-    >>> image_url = "https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/lena.png"
+    >>> image_url = "https://huggingface.co/datasets/Narsil/image_dummy/raw/main/lena.png"
     >>> oracle(question="What is she wearing ?", image=image_url)
     [{'score': 0.948, 'answer': 'hat'}, {'score': 0.009, 'answer': 'fedora'}, {'score': 0.003, 'answer': 'clothes'}, {'score': 0.003, 'answer': 'sun hat'}, {'score': 0.002, 'answer': 'nothing'}]
 
@@ -48,7 +48,7 @@ class VisualQuestionAnsweringPipeline(Pipeline):
 
     The models that this pipeline can use are models that have been fine-tuned on a visual question answering task. See
     the up-to-date list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=visual-question-answering).
+    [huggingface.co/models](https://huggingface.co/models?filter=visual-question-answering).
     """
 
     def __init__(self, *args, **kwargs):

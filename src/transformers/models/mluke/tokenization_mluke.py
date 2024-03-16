@@ -54,13 +54,13 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model", "entity_vocab_file
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "studio-ousia/mluke-base": "https://hf-mirror.com/studio-ousia/mluke-base/resolve/main/vocab.json",
+        "studio-ousia/mluke-base": "https://huggingface.co/studio-ousia/mluke-base/resolve/main/vocab.json",
     },
     "merges_file": {
-        "studio-ousia/mluke-base": "https://hf-mirror.com/studio-ousia/mluke-base/resolve/main/merges.txt",
+        "studio-ousia/mluke-base": "https://huggingface.co/studio-ousia/mluke-base/resolve/main/merges.txt",
     },
     "entity_vocab_file": {
-        "studio-ousia/mluke-base": "https://hf-mirror.com/studio-ousia/mluke-base/resolve/main/entity_vocab.json",
+        "studio-ousia/mluke-base": "https://huggingface.co/studio-ousia/mluke-base/resolve/main/entity_vocab.json",
     },
 }
 

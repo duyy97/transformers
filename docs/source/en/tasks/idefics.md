@@ -24,11 +24,11 @@ For instance, large language models can handle such NLP tasks as summarization, 
 This approach is no longer limited to a single modality, such as text, and in this guide, we will illustrate how you can 
 solve image-text tasks with a large multimodal model called IDEFICS. 
 
-[IDEFICS](../model_doc/idefics) is an open-access vision and language model based on [Flamingo](https://hf-mirror.com/papers/2204.14198), 
+[IDEFICS](../model_doc/idefics) is an open-access vision and language model based on [Flamingo](https://huggingface.co/papers/2204.14198), 
 a state-of-the-art visual language model initially developed by DeepMind. The model accepts arbitrary sequences of image 
 and text inputs and generates coherent text as output. It can answer questions about images, describe visual content, 
-create stories grounded in multiple images, and so on. IDEFICS comes in two variants - [80 billion parameters](https://hf-mirror.com/HuggingFaceM4/idefics-80b) 
-and [9 billion parameters](https://hf-mirror.com/HuggingFaceM4/idefics-9b), both of which are available on the 🤗 Hub. For each variant, you can also find fine-tuned instructed 
+create stories grounded in multiple images, and so on. IDEFICS comes in two variants - [80 billion parameters](https://huggingface.co/HuggingFaceM4/idefics-80b) 
+and [9 billion parameters](https://huggingface.co/HuggingFaceM4/idefics-9b), both of which are available on the 🤗 Hub. For each variant, you can also find fine-tuned instructed 
 versions of the model adapted for conversational use cases.
 
 This model is exceptionally versatile and can be used for a wide range of image and multimodal tasks. However, 
@@ -115,7 +115,7 @@ people navigate through different situations, for instance, explore image conten
 To illustrate the task, get an image to be captioned, e.g.:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-im-captioning.jpg" alt="Image of a puppy in a flower bed"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-im-captioning.jpg" alt="Image of a puppy in a flower bed"/>
 </div>
 
 Photo by [Hendo Wang](https://unsplash.com/@hendoo). 
@@ -154,7 +154,7 @@ You can extend image captioning by providing a text prompt, which the model will
 another image to illustrate:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-prompted-im-captioning.jpg" alt="Image of the Eiffel Tower at night"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-prompted-im-captioning.jpg" alt="Image of the Eiffel Tower at night"/>
 </div>
 
 Photo by [Denys Nevozhai](https://unsplash.com/@dnevozhai).
@@ -187,7 +187,7 @@ that in addition to learning what the object in an image is, we would also like 
 Then, let's see, if we can get the same response format for an image of the Statue of Liberty:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg" alt="Image of the Statue of Liberty"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg" alt="Image of the Statue of Liberty"/>
 </div>
 
 Photo by [Juan Mayobre](https://unsplash.com/@jmayobres).
@@ -225,7 +225,7 @@ service (questions about products based on images), and image retrieval.
 Let's get a new image for this task: 
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-vqa.jpg" alt="Image of a couple having a picnic"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-vqa.jpg" alt="Image of a couple having a picnic"/>
 </div>
 
 Photo by [Jarritos Mexican Soda](https://unsplash.com/@jarritos). 
@@ -258,7 +258,7 @@ capabilities, the model can infer which category the image likely belongs to.
 Say, we have this image of a vegetable stand: 
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-classification.jpg" alt="Image of a vegetable stand"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-classification.jpg" alt="Image of a vegetable stand"/>
 </div>
 
 Photo by [Peter Wendt](https://unsplash.com/@peterwendt).
@@ -292,7 +292,7 @@ useful to create descriptions of products, ads, descriptions of a scene, etc.
 Let's prompt IDEFICS to write a story based on a simple image of a red door: 
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-story-generation.jpg" alt="Image of a red door with a pumpkin on the steps"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-story-generation.jpg" alt="Image of a red door with a pumpkin on the steps"/>
 </div>
 
 Photo by [Craig Tidball](https://unsplash.com/@devonshiremedia).

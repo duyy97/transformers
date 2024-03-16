@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ELECTRA
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=electra">
+<a href="https://huggingface.co/models?filter=electra">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-electra-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/electra_large_discriminator_squad2_512">
+<a href="https://huggingface.co/spaces/docs-demos/electra_large_discriminator_squad2_512">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -50,7 +50,7 @@ using 30x more compute) on the GLUE natural language understanding benchmark. Ou
 where it performs comparably to RoBERTa and XLNet while using less than 1/4 of their compute and outperforms them when
 using the same amount of compute.*
 
-This model was contributed by [lysandre](https://hf-mirror.com/lysandre). The original code can be found [here](https://github.com/google-research/electra).
+This model was contributed by [lysandre](https://huggingface.co/lysandre). The original code can be found [here](https://github.com/google-research/electra).
 
 ## Usage tips
 

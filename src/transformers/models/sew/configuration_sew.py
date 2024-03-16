@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 SEW_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "asapp/sew-tiny-100k": "https://hf-mirror.com/asapp/sew-tiny-100k/resolve/main/config.json",
-    # See all SEW models at https://hf-mirror.com/models?filter=sew
+    "asapp/sew-tiny-100k": "https://huggingface.co/asapp/sew-tiny-100k/resolve/main/config.json",
+    # See all SEW models at https://huggingface.co/models?filter=sew
 }
 
 
@@ -34,7 +34,7 @@ class SEWConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SEWModel`]. It is used to instantiate a SEW model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the SEW
-    [asapp/sew-tiny-100k](https://hf-mirror.com/asapp/sew-tiny-100k) architecture.
+    [asapp/sew-tiny-100k](https://huggingface.co/asapp/sew-tiny-100k) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

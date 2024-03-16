@@ -66,4 +66,4 @@ Vedi un sempio di un caso d'uso [Transformers question-answering](https://github
 
 ### Esempi pratici
 
-Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://hf-mirror.com/blog/intel-sapphire-rapids)
+Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://huggingface.co/blog/intel-sapphire-rapids)

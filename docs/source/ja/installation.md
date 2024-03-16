@@ -161,7 +161,7 @@ conda install conda-forge::transformers
 
 <Tip>
 
-環境変数`HF_DATASETS_OFFLINE=1`を設定し、オフライントレーニングワークフローに[🤗 Datasets](https://hf-mirror.com/docs/datasets/)を追加します。
+環境変数`HF_DATASETS_OFFLINE=1`を設定し、オフライントレーニングワークフローに[🤗 Datasets](https://huggingface.co/docs/datasets/)を追加します。
 
 </Tip>
 
@@ -184,9 +184,9 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 
 オフラインで🤗 Transformersを使用するもう1つの方法は、前もってファイルをダウンロードしておき、オフラインで使用する必要があるときにそのローカルパスを指定することです。これには3つの方法があります:
 
-* [Model Hub](https://hf-mirror.com/models)のユーザーインターフェース上から↓アイコンをクリックしてファイルをダウンロードする方法。
+* [Model Hub](https://huggingface.co/models)のユーザーインターフェース上から↓アイコンをクリックしてファイルをダウンロードする方法。
 
-    ![download-icon](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![download-icon](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
 * [`PreTrainedModel.from_pretrained`]および[`PreTrainedModel.save_pretrained`]のワークフローを使用する方法:
 
@@ -221,7 +221,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
     python -m pip install huggingface_hub
     ```
 
-    2. 指定のパスにファイルをダウンロードするために、[`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub)関数を使用します。例えば、以下のコマンドで、[T0](https://hf-mirror.com/bigscience/T0_3B)モデルの`config.json`ファイルを指定のパスにダウンロードできます:
+    2. 指定のパスにファイルをダウンロードするために、[`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub)関数を使用します。例えば、以下のコマンドで、[T0](https://huggingface.co/bigscience/T0_3B)モデルの`config.json`ファイルを指定のパスにダウンロードできます:
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -239,6 +239,6 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 
 <Tip>
 
-Hubに保存されているファイルをダウンロードする方法の詳細については、[How to download files from the Hub](https://hf-mirror.com/docs/hub/how-to-downstream)セクションを参照してください。
+Hubに保存されているファイルをダウンロードする方法の詳細については、[How to download files from the Hub](https://huggingface.co/docs/hub/how-to-downstream)セクションを参照してください。
 
 </Tip>

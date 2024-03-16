@@ -26,8 +26,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 POOLFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "sail/poolformer_s12": "https://hf-mirror.com/sail/poolformer_s12/resolve/main/config.json",
-    # See all PoolFormer models at https://hf-mirror.com/models?filter=poolformer
+    "sail/poolformer_s12": "https://huggingface.co/sail/poolformer_s12/resolve/main/config.json",
+    # See all PoolFormer models at https://huggingface.co/models?filter=poolformer
 }
 
 
@@ -36,7 +36,7 @@ class PoolFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of [`PoolFormerModel`]. It is used to instantiate a
     PoolFormer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the PoolFormer
-    [sail/poolformer_s12](https://hf-mirror.com/sail/poolformer_s12) architecture.
+    [sail/poolformer_s12](https://huggingface.co/sail/poolformer_s12) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

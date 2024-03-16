@@ -25,12 +25,12 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CONVBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "YituTech/conv-bert-base": "https://hf-mirror.com/YituTech/conv-bert-base/resolve/main/config.json",
+    "YituTech/conv-bert-base": "https://huggingface.co/YituTech/conv-bert-base/resolve/main/config.json",
     "YituTech/conv-bert-medium-small": (
-        "https://hf-mirror.com/YituTech/conv-bert-medium-small/resolve/main/config.json"
+        "https://huggingface.co/YituTech/conv-bert-medium-small/resolve/main/config.json"
     ),
-    "YituTech/conv-bert-small": "https://hf-mirror.com/YituTech/conv-bert-small/resolve/main/config.json",
-    # See all ConvBERT models at https://hf-mirror.com/models?filter=convbert
+    "YituTech/conv-bert-small": "https://huggingface.co/YituTech/conv-bert-small/resolve/main/config.json",
+    # See all ConvBERT models at https://huggingface.co/models?filter=convbert
 }
 
 
@@ -39,7 +39,7 @@ class ConvBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ConvBertModel`]. It is used to instantiate an
     ConvBERT model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the ConvBERT
-    [YituTech/conv-bert-base](https://hf-mirror.com/YituTech/conv-bert-base) architecture.
+    [YituTech/conv-bert-base](https://huggingface.co/YituTech/conv-bert-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

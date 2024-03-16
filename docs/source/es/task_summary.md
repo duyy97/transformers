@@ -39,7 +39,7 @@ La clasificación de audio es una tarea que etiqueta datos de audio con un conju
 >>> from transformers import pipeline
 
 >>> classifier = pipeline(task="audio-classification", model="superb/hubert-base-superb-er")
->>> preds = classifier("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> preds = classifier("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
 [{'score': 0.4532, 'label': 'hap'},
@@ -58,7 +58,7 @@ Pero uno de los desafíos clave que las arquitecturas Transformer han ayudado a 
 >>> from transformers import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition", model="openai/whisper-small")
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
@@ -85,7 +85,7 @@ La clasificación de imágenes etiqueta una imagen completa con un conjunto pred
 
 >>> classifier = pipeline(task="image-classification")
 >>> preds = classifier(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> print(*preds, sep="\n")
@@ -109,7 +109,7 @@ A diferencia de la clasificación de imágenes, la detección de objetos identif
 
 >>> detector = pipeline(task="object-detection")
 >>> preds = detector(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"], "box": pred["box"]} for pred in preds]
 >>> preds
@@ -132,7 +132,7 @@ Las tareas de segmentación son útiles en vehículos autónomos para crear un m
 
 >>> segmenter = pipeline(task="image-segmentation")
 >>> preds = segmenter(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> print(*preds, sep="\n")
@@ -155,7 +155,7 @@ Hay dos enfoques para la estimación de profundidad:
 
 >>> depth_estimator = pipeline(task="depth-estimation")
 >>> preds = depth_estimator(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 ```
 
@@ -325,7 +325,7 @@ Las respuestas a preguntas de documentos es una tarea que responde preguntas en 
 >>> from PIL import Image
 >>> import requests
 
->>> url = "https://datasets-server.hf-mirror.com/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/2/image/image.jpg"
+>>> url = "https://datasets-server.huggingface.co/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/2/image/image.jpg"
 >>> image = Image.open(requests.get(url, stream=True).raw)
 
 >>> doc_question_answerer = pipeline("document-question-answering", model="magorshunov/layoutlm-invoices")

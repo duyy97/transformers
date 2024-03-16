@@ -56,7 +56,7 @@ _CONFIG_FOR_DOC = "LayoutLMv2Config"
 LAYOUTLMV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/layoutlmv2-base-uncased",
     "microsoft/layoutlmv2-large-uncased",
-    # See all LayoutLMv2 models at https://hf-mirror.com/models?filter=layoutlmv2
+    # See all LayoutLMv2 models at https://huggingface.co/models?filter=layoutlmv2
 ]
 
 

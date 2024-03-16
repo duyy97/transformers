@@ -1026,9 +1026,9 @@ def check_model_list_copy(overwrite: bool = False):
     # Fix potential doc links in the README
     with open(os.path.join(REPO_PATH, "README.md"), "r", encoding="utf-8", newline="\n") as f:
         readme = f.read()
-    new_readme = readme.replace("https://hf-mirror.com/transformers", "https://hf-mirror.com/docs/transformers")
+    new_readme = readme.replace("https://huggingface.co/transformers", "https://huggingface.co/docs/transformers")
     new_readme = new_readme.replace(
-        "https://hf-mirror.com/docs/main/transformers", "https://hf-mirror.com/docs/transformers/main"
+        "https://huggingface.co/docs/main/transformers", "https://huggingface.co/docs/transformers/main"
     )
     if new_readme != readme:
         if overwrite:
@@ -1115,7 +1115,7 @@ MODELS_NOT_IN_README = [
 
 # Template for new entries to add in the main README when we have missing models.
 README_TEMPLATE = (
-    "1. **[{model_name}](https://hf-mirror.com/docs/main/transformers/model_doc/{model_type})** (from "
+    "1. **[{model_name}](https://huggingface.co/docs/main/transformers/model_doc/{model_type})** (from "
     "<FILL INSTITUTION>) released with the paper [<FILL PAPER TITLE>](<FILL ARKIV LINK>) by <FILL AUTHORS>."
 )
 

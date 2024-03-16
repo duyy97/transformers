@@ -251,7 +251,7 @@ the code to analyze it.
 ```py
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 
 agent.run("Show me a tree", return_code=True)
 ```
@@ -418,7 +418,7 @@ of the tools, it has available to it.
 
 </Tip>
 
-In both cases, you can pass a repo ID instead of the prompt template if you would like to use a template hosted by someone in the community. The default prompts live in [this repo](https://hf-mirror.com/datasets/huggingface-tools/default-prompts) as an example.
+In both cases, you can pass a repo ID instead of the prompt template if you would like to use a template hosted by someone in the community. The default prompts live in [this repo](https://huggingface.co/datasets/huggingface-tools/default-prompts) as an example.
 
 To upload your custom prompt on a repo on the Hub and share it with the community just make sure:
 - to use a dataset repository
@@ -438,11 +438,11 @@ installing a package using pip/npm/apt.
 
 In this section, we'll be leveraging two existing custom tools that are specific to image generation:
 
-- We replace [huggingface-tools/image-transformation](https://hf-mirror.com/spaces/huggingface-tools/image-transformation),
-  with [diffusers/controlnet-canny-tool](https://hf-mirror.com/spaces/diffusers/controlnet-canny-tool) 
+- We replace [huggingface-tools/image-transformation](https://huggingface.co/spaces/huggingface-tools/image-transformation),
+  with [diffusers/controlnet-canny-tool](https://huggingface.co/spaces/diffusers/controlnet-canny-tool) 
   to allow for more image modifications.
 - We add a new tool for image upscaling to the default toolbox: 
-  [diffusers/latent-upscaler-tool](https://hf-mirror.com/spaces/diffusers/latent-upscaler-tool) replace the existing image-transformation tool.
+  [diffusers/latent-upscaler-tool](https://huggingface.co/spaces/diffusers/latent-upscaler-tool) replace the existing image-transformation tool.
 
 We'll start by loading the custom tools with the convenient [`load_tool`] function:
 
@@ -475,7 +475,7 @@ Next, let's instantiate an agent with `controlnet_transformer` and `upscaler`:
 
 ```py
 tools = [controlnet_transformer, upscaler]
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=tools)
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=tools)
 ```
 
 This command should give you the following info:
@@ -529,11 +529,11 @@ Let's now try out the new tools! We will re-use the image we generated in [Trans
 from diffusers.utils import load_image
 
 image = load_image(
-    "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
+    "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png"
 )
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes.png" width=200> 
 
 Let's transform the image into a beautiful winter landscape:
 
@@ -550,7 +550,7 @@ I will use the following tool: `image_transformer` to transform the image.
 image = image_transformer(image, prompt="A frozen lake and snowy forest")
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter.png" width=200> 
 
 The new image processing tool is based on ControlNet which can make very strong modifications to the image.
 By default the image processing tool returns an image of size 512x512 pixels. Let's see if we can upscale it.
@@ -568,7 +568,7 @@ I will use the following tool: `image_upscaler` to upscale the image.
 upscaled_image = image_upscaler(image)
 ```
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rivers_and_lakes_winter_upscale.png" width=400> 
 
 The agent automatically mapped our prompt "Upscale the image" to the just added upscaler tool purely based on the description and name of the upscaler tool 
 and was able to correctly run it.
@@ -673,7 +673,7 @@ In order to use it in the agent, simply pass it in the `additional_tools` parame
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run(
     "Can you read out loud the name of the model that has the most downloads in the 'text-to-video' task on the Hugging Face Hub?"
@@ -695,7 +695,7 @@ and generates the following audio.
 
 | **Audio**                                                                                                                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <audio controls><source src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
+| <audio controls><source src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/damo.wav" type="audio/wav"/> |
 
 
 <Tip>
@@ -712,7 +712,7 @@ Replacing existing tools can be done simply by assigning a new item to the agent
 ```python
 from transformers import HfAgent, load_tool
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 agent.toolbox["image-transformation"] = load_tool("diffusers/controlnet-canny-tool")
 ```
 
@@ -755,7 +755,7 @@ Now we can manage it exactly as we would a usual custom tool. We leverage it to 
 ```python
 from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder", additional_tools=[tool])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", additional_tools=[tool])
 
 agent.run("Generate an image of the `prompt` after improving it.", prompt="A rabbit wearing a space suit")
 ```
@@ -774,7 +774,7 @@ image = image_generator(improved_prompt)
 
 Before finally generating the image:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/rabbit.png">
 
 <Tip warning={true}>
 

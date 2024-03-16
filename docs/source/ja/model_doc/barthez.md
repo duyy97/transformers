@@ -36,7 +36,7 @@ CamemBERT と FlauBERT、BARThez は、エンコーダだけでなく、
 BARTHez のコーパス上で多言語 BART を事前訓練し、結果として得られるモデル (mBARTHez と呼ぶ) が次のことを示します。
 バニラの BARThez を大幅に強化し、CamemBERT や FlauBERT と同等かそれを上回ります。*
 
-このモデルは [moussakam](https://hf-mirror.com/moussakam) によって寄稿されました。著者のコードは[ここ](https://github.com/moussaKam/BARThez)にあります。
+このモデルは [moussakam](https://huggingface.co/moussakam) によって寄稿されました。著者のコードは[ここ](https://github.com/moussaKam/BARThez)にあります。
 
 <Tip>
 

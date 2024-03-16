@@ -74,7 +74,7 @@ _QA_TARGET_END_INDEX = 15
 # Maske language modeling
 ROC_BERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "weiweishi/roc-bert-base-zh",
-    # See all RoCBert models at https://hf-mirror.com/models?filter=roc_bert
+    # See all RoCBert models at https://huggingface.co/models?filter=roc_bert
 ]
 
 

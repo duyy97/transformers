@@ -31,7 +31,7 @@ that are significantly larger, and report the results on different domains. In a
 translation. We make the baseline models 1
 available to the research community.*
 
-This model was added by [Juarez Bochi](https://hf-mirror.com/jbochi). The original checkpoints can be found [here](https://github.com/google-research/google-research/tree/master/madlad_400). 
+This model was added by [Juarez Bochi](https://huggingface.co/jbochi). The original checkpoints can be found [here](https://github.com/google-research/google-research/tree/master/madlad_400). 
 
 This is a machine translation model that supports many low-resource languages, and that is competitive with models that are significantly larger.
 
@@ -51,13 +51,13 @@ One can directly use MADLAD-400 weights without finetuning the model:
 
 Google has released the following variants:
 
-- [google/madlad400-3b-mt](https://hf-mirror.com/google/madlad400-3b-mt)
+- [google/madlad400-3b-mt](https://huggingface.co/google/madlad400-3b-mt)
 
-- [google/madlad400-7b-mt](https://hf-mirror.com/google/madlad400-7b-mt)
+- [google/madlad400-7b-mt](https://huggingface.co/google/madlad400-7b-mt)
 
-- [google/madlad400-7b-mt-bt](https://hf-mirror.com/google/madlad400-7b-mt-bt)
+- [google/madlad400-7b-mt-bt](https://huggingface.co/google/madlad400-7b-mt-bt)
 
-- [google/madlad400-10b-mt](https://hf-mirror.com/google/madlad400-10b-mt)
+- [google/madlad400-10b-mt](https://huggingface.co/google/madlad400-10b-mt)
 
 The original checkpoints can be found [here](https://github.com/google-research/google-research/tree/master/madlad_400).
 

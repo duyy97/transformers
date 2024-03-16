@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) データセットの [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) を微調整して、音声をテキストに書き起こします。
+1. [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) データセットの [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) を微調整して、音声をテキストに書き起こします。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -54,7 +54,7 @@ pip install transformers datasets evaluate jiwer
 
 ## Load MInDS-14 dataset
 
-まず、🤗 データセット ライブラリから [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) データセットの小さいサブセットをロードします。これにより、完全なデータセットのトレーニングにさらに時間を費やす前に、実験してすべてが機能することを確認する機会が得られます。
+まず、🤗 データセット ライブラリから [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) データセットの小さいサブセットをロードします。これにより、完全なデータセットのトレーニングにさらに時間を費やす前に、実験してすべてが機能することを確認する機会が得られます。
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -117,7 +117,7 @@ DatasetDict({
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-MInDS-14 データセットのサンプリング レートは 8000kHz です (この情報は [データセット カード](https://hf-mirror.com/datasets/PolyAI/minds14) で確認できます)。つまり、データセットを再サンプリングする必要があります。事前トレーニングされた Wav2Vec2 モデルを使用するには、16000kHz に設定します。
+MInDS-14 データセットのサンプリング レートは 8000kHz です (この情報は [データセット カード](https://huggingface.co/datasets/PolyAI/minds14) で確認できます)。つまり、データセットを再サンプリングする必要があります。事前トレーニングされた Wav2Vec2 モデルを使用するには、16000kHz に設定します。
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -201,7 +201,7 @@ MInDS-14 データセットのサンプリング レートは 8000kHz です (�
 
 ## Evaluate
 
-トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[単語エラー率](https://hf-mirror.com/spaces/evaluate-metric/wer) (WER) メトリクスを読み込みます (🤗 Evaluate [クイック ツアー](https://hf-mirror.com/docs/evaluate/a_quick_tour) を参照して、メトリクスをロードして計算する方法の詳細を確認してください)。
+トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[単語エラー率](https://huggingface.co/spaces/evaluate-metric/wer) (WER) メトリクスを読み込みます (🤗 Evaluate [クイック ツアー](https://huggingface.co/docs/evaluate/a_quick_tour) を参照して、メトリクスをロードして計算する方法の詳細を確認してください)。
 
 ```py
 >>> import evaluate
@@ -305,7 +305,7 @@ MInDS-14 データセットのサンプリング レートは 8000kHz です (�
 
 <Tip>
 
-自動音声認識用にモデルを微調整する方法のより詳細な例については、英語 ASR および英語のこのブログ [投稿](https://hf-mirror.com/blog/fine-tune-wav2vec2-english) を参照してください。多言語 ASR については、この [投稿](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2) を参照してください。
+自動音声認識用にモデルを微調整する方法のより詳細な例については、英語 ASR および英語のこのブログ [投稿](https://huggingface.co/blog/fine-tune-wav2vec2-english) を参照してください。多言語 ASR については、この [投稿](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2) を参照してください。
 
 </Tip>
 

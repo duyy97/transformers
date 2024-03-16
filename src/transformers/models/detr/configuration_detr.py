@@ -28,8 +28,8 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 DETR_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/detr-resnet-50": "https://hf-mirror.com/facebook/detr-resnet-50/resolve/main/config.json",
-    # See all DETR models at https://hf-mirror.com/models?filter=detr
+    "facebook/detr-resnet-50": "https://huggingface.co/facebook/detr-resnet-50/resolve/main/config.json",
+    # See all DETR models at https://huggingface.co/models?filter=detr
 }
 
 
@@ -38,7 +38,7 @@ class DetrConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DetrModel`]. It is used to instantiate a DETR
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the DETR
-    [facebook/detr-resnet-50](https://hf-mirror.com/facebook/detr-resnet-50) architecture.
+    [facebook/detr-resnet-50](https://huggingface.co/facebook/detr-resnet-50) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

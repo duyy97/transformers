@@ -18,7 +18,7 @@ limitations under the License.
 
 ## Fine-tuning on SWAG with the Trainer
 
-`run_swag` allows you to fine-tune any model from our [hub](https://hf-mirror.com/models) (as long as its architecture as a `ForMultipleChoice` version in the library) on the SWAG dataset or your own csv/jsonlines files as long as they are structured the same way. To make it works on another dataset, you will need to tweak the `preprocess_function` inside the script.
+`run_swag` allows you to fine-tune any model from our [hub](https://huggingface.co/models) (as long as its architecture as a `ForMultipleChoice` version in the library) on the SWAG dataset or your own csv/jsonlines files as long as they are structured the same way. To make it works on another dataset, you will need to tweak the `preprocess_function` inside the script.
 
 ```bash
 python examples/multiple-choice/run_swag.py \
@@ -43,7 +43,7 @@ eval_loss = 0.44457291918821606
 
 Based on the script [run_swag_no_trainer.py](https://github.com/huggingface/transformers/blob/main/examples/pytorch/multiple-choice/run_swag_no_trainer.py).
 
-Like `run_swag.py`, this script allows you to fine-tune any of the models on the [hub](https://hf-mirror.com/models) (as long as its architecture as a `ForMultipleChoice` version in the library) on
+Like `run_swag.py`, this script allows you to fine-tune any of the models on the [hub](https://huggingface.co/models) (as long as its architecture as a `ForMultipleChoice` version in the library) on
 the SWAG dataset or your own data in a csv or a JSON file. The main difference is that this
 script exposes the bare training loop, to allow you to quickly experiment and add any customization you would like.
 

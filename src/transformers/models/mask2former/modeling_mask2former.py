@@ -56,7 +56,7 @@ _IMAGE_PROCESSOR_FOR_DOC = "Mask2FormerImageProcessor"
 
 MASK2FORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/mask2former-swin-small-coco-instance",
-    # See all mask2former models at https://hf-mirror.com/models?filter=mask2former
+    # See all mask2former models at https://huggingface.co/models?filter=mask2former
 ]
 
 
@@ -2439,7 +2439,7 @@ class Mask2FormerForUniversalSegmentation(Mask2FormerPreTrainedModel):
         >>> model = Mask2FormerForUniversalSegmentation.from_pretrained("facebook/mask2former-swin-small-ade-semantic")
 
         >>> url = (
-        ...     "https://hf-mirror.com/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
+        ...     "https://huggingface.co/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg"
         ... )
         >>> image = Image.open(requests.get(url, stream=True).raw)
         >>> inputs = image_processor(image, return_tensors="pt")
@@ -2474,7 +2474,7 @@ class Mask2FormerForUniversalSegmentation(Mask2FormerPreTrainedModel):
         ...     "facebook/mask2former-swin-small-cityscapes-panoptic"
         ... )
 
-        >>> url = "https://cdn-media.hf-mirror.com/Inference-API/Sample-results-on-the-Cityscapes-dataset-The-above-images-show-how-our-method-can-handle.png"
+        >>> url = "https://cdn-media.huggingface.co/Inference-API/Sample-results-on-the-Cityscapes-dataset-The-above-images-show-how-our-method-can-handle.png"
         >>> image = Image.open(requests.get(url, stream=True).raw)
         >>> inputs = image_processor(image, return_tensors="pt")
 

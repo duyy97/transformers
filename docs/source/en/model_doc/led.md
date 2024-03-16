@@ -55,7 +55,7 @@ dataset.*
 - LED is a model with absolute position embeddings so it's usually advised to pad the inputs on the right rather than
   the left.
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten).
 
 ## Resources
 

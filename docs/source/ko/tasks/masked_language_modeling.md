@@ -26,7 +26,7 @@ rendered properly in your Markdown viewer.
 
 이번 가이드에서 다룰 내용은 다음과 같습니다:
 
-1. [ELI5](https://hf-mirror.com/datasets/eli5) 데이터 세트에서 [r/askscience](https://www.reddit.com/r/askscience/) 부분을 사용해 [DistilRoBERTa](https://hf-mirror.com/distilbert/distilroberta-base) 모델을 미세 조정합니다.
+1. [ELI5](https://huggingface.co/datasets/eli5) 데이터 세트에서 [r/askscience](https://www.reddit.com/r/askscience/) 부분을 사용해 [DistilRoBERTa](https://huggingface.co/distilbert/distilroberta-base) 모델을 미세 조정합니다.
 2. 추론 시에 직접 미세 조정한 모델을 사용합니다.
 
 <Tip>
@@ -107,7 +107,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티와
 ```
 
 위의 예제에서와 마찬가지로, `text` 필드는 `answers` 안에 중첩되어 있습니다. 
-따라서 중첩된 구조에서 [`flatten`](https://hf-mirror.com/docs/datasets/process#flatten) 메소드를 사용하여 `text` 하위 필드를 추출합니다:
+따라서 중첩된 구조에서 [`flatten`](https://huggingface.co/docs/datasets/process#flatten) 메소드를 사용하여 `text` 하위 필드를 추출합니다:
 
 ```py
 >>> eli5 = eli5.flatten()

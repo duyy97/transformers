@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [`BlenderbotSmallModel`] と
 [`BlenderbotSmallForConditionalGeneration`] はチェックポイントと組み合わせてのみ使用されます
-[facebook/blenderbot-90M](https://hf-mirror.com/facebook/blenderbot-90M)。より大規模な Blenderbot チェックポイントは、
+[facebook/blenderbot-90M](https://huggingface.co/facebook/blenderbot-90M)。より大規模な Blenderbot チェックポイントは、
 代わりに [`BlenderbotModel`] とともに使用してください。
 [`BlenderbotForConditionalGeneration`]
 
@@ -45,7 +45,7 @@ Blender チャットボット モデルは、[Recipes for building an open-domai
 - Blenderbot Small は絶対位置埋め込みを備えたモデルなので、通常は入力を右側にパディングすることをお勧めします。
   左。
 
-このモデルは、[patrickvonplaten](https://hf-mirror.com/patrickvonplaten) によって提供されました。著者のコードは次のとおりです
+このモデルは、[patrickvonplaten](https://huggingface.co/patrickvonplaten) によって提供されました。著者のコードは次のとおりです
 [ここ](https://github.com/facebookresearch/ParlAI) をご覧ください。
 
 ## Documentation resources

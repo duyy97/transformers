@@ -34,12 +34,12 @@ Vision-and-Language Transformer (ViLT), monolithic in the sense that the process
 simplified to just the same convolution-free manner that we process textual inputs. We show that ViLT is up to tens of
 times faster than previous VLP models, yet with competitive or better downstream task performance.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vilt_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vilt_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> ViLT architecture. Taken from the <a href="https://arxiv.org/abs/2102.03334">original paper</a>. </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/dandelin/ViLT).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/dandelin/ViLT).
 
 ## Usage tips
 

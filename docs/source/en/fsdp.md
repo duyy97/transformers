@@ -26,13 +26,13 @@ pip install accelerate
 
 ## FSDP configuration
 
-To start, run the [`accelerate config`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-config) command to create a configuration file for your training environment. Accelerate uses this configuration file to automatically setup the correct training environment based on your selected training options in `accelerate config`.
+To start, run the [`accelerate config`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-config) command to create a configuration file for your training environment. Accelerate uses this configuration file to automatically setup the correct training environment based on your selected training options in `accelerate config`.
 
 ```bash
 accelerate config
 ```
 
-When you run `accelerate config`, you'll be prompted with a series of options to configure your training environment. This section covers some of the most important FSDP options. To learn more about the other available FSDP options, take a look at the [fsdp_config](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments.fsdp_config) parameters.
+When you run `accelerate config`, you'll be prompted with a series of options to configure your training environment. This section covers some of the most important FSDP options. To learn more about the other available FSDP options, take a look at the [fsdp_config](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.fsdp_config) parameters.
 
 ### Sharding strategy
 
@@ -119,7 +119,7 @@ tpu_use_sudo: false
 use_cpu: false
 ```
 
-To launch training, run the [`accelerate launch`](https://hf-mirror.com/docs/accelerate/package_reference/cli#accelerate-launch) command and it'll automatically use the configuration file you previously created with `accelerate config`.
+To launch training, run the [`accelerate launch`](https://huggingface.co/docs/accelerate/package_reference/cli#accelerate-launch) command and it'll automatically use the configuration file you previously created with `accelerate config`.
 
 ```bash
 accelerate launch my-trainer-script.py
@@ -133,6 +133,6 @@ accelerate launch --fsdp="full shard" --fsdp_config="path/to/fsdp_config/ my-tra
 
 FSDP can be a powerful tool for training really large models and you have access to more than one GPU or TPU. By sharding the model parameters, optimizer and gradient states, and even offloading them to the CPU when they're inactive, FSDP can reduce the high cost of large-scale training. If you're interested in learning more, the following may be helpful:
 
-* Follow along with the more in-depth Accelerate guide for [FSDP](https://hf-mirror.com/docs/accelerate/usage_guides/fsdp).
+* Follow along with the more in-depth Accelerate guide for [FSDP](https://huggingface.co/docs/accelerate/usage_guides/fsdp).
 * Read the [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) blog post.
 * Read the [Scaling PyTorch models on Cloud TPUs with FSDP](https://pytorch.org/blog/scaling-pytorch-models-on-cloud-tpus-with-fsdp/) blog post.

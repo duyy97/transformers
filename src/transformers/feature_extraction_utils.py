@@ -281,7 +281,7 @@ class FeatureExtractionMixin(PushToHubMixin):
                 This can be either:
 
                 - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
-                  hf-mirror.com.
+                  huggingface.co.
                 - a path to a *directory* containing a feature extractor file saved using the
                   [`~feature_extraction_utils.FeatureExtractionMixin.save_pretrained`] method, e.g.,
                   `./my_model_directory/`.
@@ -304,7 +304,7 @@ class FeatureExtractionMixin(PushToHubMixin):
                 the token generated when running `huggingface-cli login` (stored in `~/.huggingface`).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
 
@@ -334,7 +334,7 @@ class FeatureExtractionMixin(PushToHubMixin):
         # derived class: *Wav2Vec2FeatureExtractor*
         feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(
             "facebook/wav2vec2-base-960h"
-        )  # Download feature_extraction_config from hf-mirror.com and cache.
+        )  # Download feature_extraction_config from huggingface.co and cache.
         feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(
             "./test/saved_model/"
         )  # E.g. feature_extractor (or model) was saved using *save_pretrained('./test/saved_model/')*
@@ -516,7 +516,7 @@ class FeatureExtractionMixin(PushToHubMixin):
                 # For any other exception, we throw a generic error.
                 raise EnvironmentError(
                     f"Can't load feature extractor for '{pretrained_model_name_or_path}'. If you were trying to load"
-                    " it from 'https://hf-mirror.com/models', make sure you don't have a local directory with the"
+                    " it from 'https://huggingface.co/models', make sure you don't have a local directory with the"
                     f" same name. Otherwise, make sure '{pretrained_model_name_or_path}' is the correct path to a"
                     f" directory containing a {FEATURE_EXTRACTOR_NAME} file"
                 )

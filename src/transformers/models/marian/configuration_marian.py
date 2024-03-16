@@ -26,8 +26,8 @@ from ...utils import TensorType, is_torch_available, logging
 logger = logging.get_logger(__name__)
 
 MARIAN_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "Helsinki-NLP/opus-mt-en-de": "https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de/resolve/main/config.json",
-    # See all Marian models at https://hf-mirror.com/models?filter=marian
+    "Helsinki-NLP/opus-mt-en-de": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de/resolve/main/config.json",
+    # See all Marian models at https://huggingface.co/models?filter=marian
 }
 
 
@@ -36,7 +36,7 @@ class MarianConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MarianModel`]. It is used to instantiate an
     Marian model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Marian
-    [Helsinki-NLP/opus-mt-en-de](https://hf-mirror.com/Helsinki-NLP/opus-mt-en-de) architecture.
+    [Helsinki-NLP/opus-mt-en-de](https://huggingface.co/Helsinki-NLP/opus-mt-en-de) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

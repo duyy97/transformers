@@ -45,7 +45,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
     ></video>
     <figcaption>"LLM의 전방 패스"</figcaption>
 </figure>
@@ -57,7 +57,7 @@ LLM과 자기회귀 생성을 함께 사용할 때 핵심적인 부분은 이 �
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
     ></video>
     <figcaption>"자기회귀 생성은 확률 분포에서 다음 토큰을 반복적으로 선택하여 텍스트를 생성합니다."</figcaption>
 </figure>
@@ -131,7 +131,7 @@ LLM과 자기회귀 생성을 함께 사용할 때 핵심적인 부분은 이 �
 
 ### 생성된 출력이 너무 짧거나 길다 [[generated-output-is-too-shortlong]]
 
-[`~generation.GenerationConfig`] 파일에서 별도로 지정하지 않으면, `generate`는 기본적으로 최대 20개의 토큰을 반환합니다. `generate` 호출에서 `max_new_tokens`을 수동으로 설정하여 반환할 수 있는 새 토큰의 최대 수를 설정하는 것이 좋습니다. LLM(정확하게는 [디코더 전용 모델](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt))은 입력 프롬프트도 출력의 일부로 반환합니다.
+[`~generation.GenerationConfig`] 파일에서 별도로 지정하지 않으면, `generate`는 기본적으로 최대 20개의 토큰을 반환합니다. `generate` 호출에서 `max_new_tokens`을 수동으로 설정하여 반환할 수 있는 새 토큰의 최대 수를 설정하는 것이 좋습니다. LLM(정확하게는 [디코더 전용 모델](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt))은 입력 프롬프트도 출력의 일부로 반환합니다.
 
 
 ```py
@@ -150,7 +150,7 @@ LLM과 자기회귀 생성을 함께 사용할 때 핵심적인 부분은 이 �
 
 ### 잘못된 생성 모드 [[incorrect-generation-mode]]
 
-기본적으로 [`~generation.GenerationConfig`] 파일에서 별도로 지정하지 않으면, `generate`는 각 반복에서 가장 확률이 높은 토큰을 선택합니다(그리디 디코딩). 하려는 작업에 따라 이 방법은 바람직하지 않을 수 있습니다. 예를 들어, 챗봇이나 에세이 작성과 같은 창의적인 작업은 샘플링이 적합할 수 있습니다. 반면, 오디오를 텍스트로 변환하거나 번역과 같은 입력 기반 작업은 그리디 디코딩이 더 적합할 수 있습니다. `do_sample=True`로 샘플링을 활성화할 수 있으며, 이 주제에 대한 자세한 내용은 이 [블로그 포스트](https://hf-mirror.com/blog/how-to-generate)에서 볼 수 있습니다.
+기본적으로 [`~generation.GenerationConfig`] 파일에서 별도로 지정하지 않으면, `generate`는 각 반복에서 가장 확률이 높은 토큰을 선택합니다(그리디 디코딩). 하려는 작업에 따라 이 방법은 바람직하지 않을 수 있습니다. 예를 들어, 챗봇이나 에세이 작성과 같은 창의적인 작업은 샘플링이 적합할 수 있습니다. 반면, 오디오를 텍스트로 변환하거나 번역과 같은 입력 기반 작업은 그리디 디코딩이 더 적합할 수 있습니다. `do_sample=True`로 샘플링을 활성화할 수 있으며, 이 주제에 대한 자세한 내용은 이 [블로그 포스트](https://huggingface.co/blog/how-to-generate)에서 볼 수 있습니다.
 
 ```python
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
@@ -172,7 +172,7 @@ LLM과 자기회귀 생성을 함께 사용할 때 핵심적인 부분은 이 �
 
 ### 잘못된 패딩 [[wrong-padding-side]]
 
-LLM은 [디코더 전용](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt) 구조를 가지고 있어, 입력 프롬프트에 대해 지속적으로 반복 처리를 합니다. 입력 데이터의 길이가 다르면 패딩 작업이 필요합니다. LLM은 패딩 토큰에서 작동을 이어가도록 설계되지 않았기 때문에, 입력 왼쪽에 패딩이 추가 되어야 합니다. 그리고 어텐션 마스크도 꼭 `generate` 함수에 전달되어야 합니다!
+LLM은 [디코더 전용](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt) 구조를 가지고 있어, 입력 프롬프트에 대해 지속적으로 반복 처리를 합니다. 입력 데이터의 길이가 다르면 패딩 작업이 필요합니다. LLM은 패딩 토큰에서 작동을 이어가도록 설계되지 않았기 때문에, 입력 왼쪽에 패딩이 추가 되어야 합니다. 그리고 어텐션 마스크도 꼭 `generate` 함수에 전달되어야 합니다!
 
 ```python
 >>> # The tokenizer initialized above has right-padding active by default: the 1st sequence,
@@ -209,8 +209,8 @@ LLM은 [디코더 전용](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=p
 
 ### LLM 리더보드 [[llm-leaderboards]]
 
-1. [Open LLM Leaderboard](https://hf-mirror.com/spaces/HuggingFaceH4/open_llm_leaderboard)는 오픈 소스 모델의 품질에 중점을 둡니다.
-2. [Open LLM-Perf Leaderboard](https://hf-mirror.com/spaces/optimum/llm-perf-leaderboard)는 LLM 처리량에 중점을 둡니다.
+1. [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)는 오픈 소스 모델의 품질에 중점을 둡니다.
+2. [Open LLM-Perf Leaderboard](https://huggingface.co/spaces/optimum/llm-perf-leaderboard)는 LLM 처리량에 중점을 둡니다.
 
 ### 지연 시간 및 처리량 [[latency-and-throughput]]
 

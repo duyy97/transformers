@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CVT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/cvt-13": "https://hf-mirror.com/microsoft/cvt-13/resolve/main/config.json",
-    # See all Cvt models at https://hf-mirror.com/models?filter=cvt
+    "microsoft/cvt-13": "https://huggingface.co/microsoft/cvt-13/resolve/main/config.json",
+    # See all Cvt models at https://huggingface.co/models?filter=cvt
 }
 
 
@@ -31,7 +31,7 @@ class CvtConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`CvtModel`]. It is used to instantiate a CvT model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the CvT
-    [microsoft/cvt-13](https://hf-mirror.com/microsoft/cvt-13) architecture.
+    [microsoft/cvt-13](https://huggingface.co/microsoft/cvt-13) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

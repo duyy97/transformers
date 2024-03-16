@@ -64,7 +64,7 @@ das Modell, das zu 🤗 Transformers hinzugefügt werden soll, `BrandNewBert` ne
 
 Schauen wir uns das mal an:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
 
 Wie Sie sehen, machen wir in 🤗 Transformers von der Vererbung Gebrauch, aber wir beschränken die Abstraktionsebene auf ein absolutes Minimum.
 Minimum. Es gibt nie mehr als zwei Abstraktionsebenen für ein Modell in der Bibliothek. `BrandNewBertModel`
@@ -120,8 +120,8 @@ Noch nicht ganz fertig :-( Dieser Abschnitt wird bald hinzugefügt!
 Jeder hat andere Vorlieben, was die Portierung eines Modells angeht. Daher kann es sehr hilfreich sein, wenn Sie sich Zusammenfassungen ansehen
 wie andere Mitwirkende Modelle auf Hugging Face portiert haben. Hier ist eine Liste von Blogbeiträgen aus der Community, wie man ein Modell portiert:
 
-1. [Portierung eines GPT2-Modells](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) von [Thomas](https://hf-mirror.com/thomwolf)
-2. [Portierung des WMT19 MT-Modells](https://hf-mirror.com/blog/porting-fsmt) von [Stas](https://hf-mirror.com/stas)
+1. [Portierung eines GPT2-Modells](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) von [Thomas](https://huggingface.co/thomwolf)
+2. [Portierung des WMT19 MT-Modells](https://huggingface.co/blog/porting-fsmt) von [Stas](https://huggingface.co/stas)
 
 Aus Erfahrung können wir Ihnen sagen, dass die wichtigsten Dinge, die Sie beim Hinzufügen eines Modells beachten müssen, sind:
 
@@ -176,7 +176,7 @@ theoretischen Aspekten verbringen, sondern sich lieber auf die praktischen Aspek
 - Was sind die Anwendungen von *brand_new_bert*? Textklassifizierung? Texterzeugung? Seq2Seq-Aufgaben, *z.B.,*
   Zusammenfassungen?
 - Was ist die neue Eigenschaft des Modells, die es von BERT/GPT-2/BART unterscheidet?
-- Welches der bereits existierenden [🤗 Transformers-Modelle](https://hf-mirror.com/transformers/#contents) ist am ähnlichsten
+- Welches der bereits existierenden [🤗 Transformers-Modelle](https://huggingface.co/transformers/#contents) ist am ähnlichsten
   ähnlich wie *brand_new_bert*?
 - Welche Art von Tokenizer wird verwendet? Ein Satzteil-Tokenisierer? Ein Wortstück-Tokenisierer? Ist es derselbe Tokenisierer, der für
   für BERT oder BART?

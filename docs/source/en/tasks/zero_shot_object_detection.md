@@ -47,7 +47,7 @@ pip install -q transformers
 ## Zero-shot object detection pipeline
 
 The simplest way to try out inference with OWL-ViT is to use it in a [`pipeline`]. Instantiate a pipeline
-for zero-shot object detection from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?other=owlvit):
+for zero-shot object detection from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?other=owlvit):
 
 ```python
 >>> from transformers import pipeline
@@ -71,7 +71,7 @@ a part of the [NASA](https://www.nasa.gov/multimedia/imagegallery/index.html) Gr
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
 </div>
 
 Pass the image and the candidate object labels to look for to the pipeline.
@@ -123,7 +123,7 @@ Let's visualize the predictions:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
 </div>
 
 ## Text-prompted zero-shot object detection by hand
@@ -131,7 +131,7 @@ Let's visualize the predictions:
 Now that you've seen how to use the zero-shot object detection pipeline, let's replicate the same
 result manually.
 
-Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?other=owlvit).
+Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?other=owlvit).
 Here we'll use the same checkpoint as before:
 
 ```py
@@ -152,7 +152,7 @@ Let's take a different image to switch things up.
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
 </div>
 
 Use the processor to prepare the inputs for the model. The processor combines an image processor that prepares the
@@ -190,7 +190,7 @@ boxes have the correct coordinates relative to the original image:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## Batch processing
@@ -234,7 +234,7 @@ of several images, a list of tuples. Let's create predictions for the two exampl
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## Image-guided object detection
@@ -265,7 +265,7 @@ Let's take a quick look at the images:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
 </div>
 
 In the preprocessing step, instead of text queries, you now need to use `query_images`:
@@ -296,6 +296,6 @@ as before except now there are no labels.
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
 </div>
 

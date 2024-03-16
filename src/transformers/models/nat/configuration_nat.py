@@ -22,8 +22,8 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 NAT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "shi-labs/nat-mini-in1k-224": "https://hf-mirror.com/shi-labs/nat-mini-in1k-224/resolve/main/config.json",
-    # See all Nat models at https://hf-mirror.com/models?filter=nat
+    "shi-labs/nat-mini-in1k-224": "https://huggingface.co/shi-labs/nat-mini-in1k-224/resolve/main/config.json",
+    # See all Nat models at https://huggingface.co/models?filter=nat
 }
 
 
@@ -32,7 +32,7 @@ class NatConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`NatModel`]. It is used to instantiate a Nat model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Nat
-    [shi-labs/nat-mini-in1k-224](https://hf-mirror.com/shi-labs/nat-mini-in1k-224) architecture.
+    [shi-labs/nat-mini-in1k-224](https://huggingface.co/shi-labs/nat-mini-in1k-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -34,7 +34,7 @@ and code publicly available. Human evaluations show our best models are superior
 dialogue in terms of engagingness and humanness measurements. We then discuss the limitations of this work by analyzing
 failure cases of our models.*
 
-This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer). The authors' code can be found [here](https://github.com/facebookresearch/ParlAI) .
+This model was contributed by [sshleifer](https://huggingface.co/sshleifer). The authors' code can be found [here](https://github.com/facebookresearch/ParlAI) .
 
 ## Usage tips and example
 
@@ -59,7 +59,7 @@ An example:
 ## Implementation Notes
 
 - Blenderbot uses a standard [seq2seq model transformer](https://arxiv.org/pdf/1706.03762.pdf) based architecture.
-- Available checkpoints can be found in the [model hub](https://hf-mirror.com/models?search=blenderbot).
+- Available checkpoints can be found in the [model hub](https://huggingface.co/models?search=blenderbot).
 - This is the *default* Blenderbot model class. However, some smaller checkpoints, such as
   `facebook/blenderbot_small_90M`, have a different architecture and consequently should be used with
   [BlenderbotSmall](blenderbot-small).

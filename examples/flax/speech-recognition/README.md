@@ -19,8 +19,8 @@ limitations under the License.
 ## Sequence to Sequence
 
 The script [`run_flax_speech_recognition_seq2seq.py`](https://github.com/huggingface/transformers/blob/main/examples/flax/speech-recognition/run_flax_speech_recognition_seq2seq.py) 
-can be used to fine-tune any [Flax Speech Sequence-to-Sequence Model](https://hf-mirror.com/docs/transformers/main/en/model_doc/auto#transformers.FlaxAutoModelForSpeechSeq2Seq) 
-for automatic speech recognition on one of the [official speech recognition datasets](https://hf-mirror.com/datasets?task_ids=task_ids:automatic-speech-recognition) 
+can be used to fine-tune any [Flax Speech Sequence-to-Sequence Model](https://huggingface.co/docs/transformers/main/en/model_doc/auto#transformers.FlaxAutoModelForSpeechSeq2Seq) 
+for automatic speech recognition on one of the [official speech recognition datasets](https://huggingface.co/datasets?task_ids=task_ids:automatic-speech-recognition) 
 or a custom dataset. This includes the Whisper model from OpenAI, or a warm-started Speech-Encoder-Decoder Model, 
 an example for which is included below.
 
@@ -30,9 +30,9 @@ We can load all components of the Whisper model directly from the pretrained che
 weights, feature extractor and tokenizer. We simply have to specify the id of fine-tuning dataset and the necessary
 training hyperparameters.
 
-The following example shows how to fine-tune the [Whisper small](https://hf-mirror.com/openai/whisper-small) checkpoint 
-on the Hindi subset of the [Common Voice 13](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_13_0) dataset.
-Note that before running this script you must accept the dataset's [terms of use](https://hf-mirror.com/datasets/mozilla-foundation/common_voice_13_0) 
+The following example shows how to fine-tune the [Whisper small](https://huggingface.co/openai/whisper-small) checkpoint 
+on the Hindi subset of the [Common Voice 13](https://huggingface.co/datasets/mozilla-foundation/common_voice_13_0) dataset.
+Note that before running this script you must accept the dataset's [terms of use](https://huggingface.co/datasets/mozilla-foundation/common_voice_13_0) 
 and register your Hugging Face Hub token on your device by running `huggingface-hub login`.
 
 ```bash
@@ -64,5 +64,5 @@ python run_flax_speech_recognition_seq2seq.py \
 ```
 
 On a TPU v4-8, training should take approximately 25 minutes, with a final cross-entropy loss of 0.02 and word error 
-rate of **34%**. See the checkpoint [sanchit-gandhi/whisper-small-hi-flax](https://hf-mirror.com/sanchit-gandhi/whisper-small-hi-flax)
+rate of **34%**. See the checkpoint [sanchit-gandhi/whisper-small-hi-flax](https://huggingface.co/sanchit-gandhi/whisper-small-hi-flax)
 for an example training run.

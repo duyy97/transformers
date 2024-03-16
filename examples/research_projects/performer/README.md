@@ -18,8 +18,8 @@ Here are a few key arguments:
   
 - Add `--reinitialize` to start from a blank model rather than a Bert checkpoint. 
   
-- You may change the Bert size by passing a different [checkpoint](https://hf-mirror.com/transformers/pretrained_models.html) to the `--model_name_or_path` argument.
+- You may change the Bert size by passing a different [checkpoint](https://huggingface.co/transformers/pretrained_models.html) to the `--model_name_or_path` argument.
 
 - Passing your user name to the `--wandb_user_name` argument will trigger weights and biases logging.
 
-- You can choose a dataset with `--dataset_name` and `--dataset_config`. Our [viewer](https://hf-mirror.com/datasets/viewer/) will help you find what you need.
+- You can choose a dataset with `--dataset_name` and `--dataset_config`. Our [viewer](https://huggingface.co/datasets/viewer/) will help you find what you need.

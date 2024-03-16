@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-Existen varios modelos multilingües en 🤗 Transformers y su uso para inferencia difiere de los modelos monolingües. Sin embargo, no *todos* los usos de los modelos multilingües son diferentes. Algunos modelos, como [google-bert/bert-base-multilingual-uncased](https://hf-mirror.com/google-bert/bert-base-multilingual-uncased), pueden utilizarse igual que un modelo monolingüe. Esta guía te enseñará cómo utilizar modelos multilingües cuyo uso difiere en la inferencia.
+Existen varios modelos multilingües en 🤗 Transformers y su uso para inferencia difiere de los modelos monolingües. Sin embargo, no *todos* los usos de los modelos multilingües son diferentes. Algunos modelos, como [google-bert/bert-base-multilingual-uncased](https://huggingface.co/google-bert/bert-base-multilingual-uncased), pueden utilizarse igual que un modelo monolingüe. Esta guía te enseñará cómo utilizar modelos multilingües cuyo uso difiere en la inferencia.
 
 ## XLM
 

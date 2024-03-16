@@ -40,8 +40,8 @@ iPhone 12 (compiled with CoreML), which { runs as fast as MobileNetV2×1.4 (1.6 
 EfficientFormer-L7, obtains 83.3% accuracy with only 7.0 ms latency. Our work proves that properly designed transformers can 
 reach extremely low latency on mobile devices while maintaining high performance.*
 
-This model was contributed by [novice03](https://hf-mirror.com/novice03) and [Bearnardd](https://hf-mirror.com/Bearnardd).
-The original code can be found [here](https://github.com/snap-research/EfficientFormer). The TensorFlow version of this model was added by [D-Roberts](https://hf-mirror.com/D-Roberts).
+This model was contributed by [novice03](https://huggingface.co/novice03) and [Bearnardd](https://huggingface.co/Bearnardd).
+The original code can be found [here](https://github.com/snap-research/EfficientFormer). The TensorFlow version of this model was added by [D-Roberts](https://huggingface.co/D-Roberts).
 
 ## Documentation resources
 

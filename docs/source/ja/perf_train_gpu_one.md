@@ -293,7 +293,7 @@ DeepSpeedは、🤗 Transformersと🤗 Accelerateと統合されたオープン
 モデルが単一のGPUに収まり、小さなバッチサイズを収めるスペースがある場合、DeepSpeedを使用する必要はありません。それはむしろ遅くなります。ただし、モデルが単一のGPUに収まらない場合、または小さなバッチを収めることができない場合、DeepSpeed ZeRO + CPU OffloadまたはNVMe Offloadを利用できます。この場合、[ライブラリを別途インストール](main_classes/deepspeed#installation)し、設定ファイルを作成し、DeepSpeedを起動するためのガイドをフォローする必要があります：
 
 * [`Trainer`]とのDeepSpeed統合の詳細ガイドについては、[該当するドキュメンテーション](main_classes/deepspeed)を確認してください。特に、[単一GPU用のデプロイメント](main_classes/deepspeed#deployment-with-one-gpu)に関するセクションです。DeepSpeedをノートブックで使用するにはいくつかの調整が必要ですので、[該当するガイド](main_classes/deepspeed#deployment-in-notebooks)もご覧ください。
-* 🤗 Accelerateを使用する場合は、[🤗 Accelerate DeepSpeedガイド](https://hf-mirror.com/docs/accelerate/en/usage_guides/deepspeed)を参照してください。
+* 🤗 Accelerateを使用する場合は、[🤗 Accelerate DeepSpeedガイド](https://huggingface.co/docs/accelerate/en/usage_guides/deepspeed)を参照してください。
 
 ## torch.compileの使用
 
@@ -331,7 +331,7 @@ training_args = TrainingArguments(torch_compile=True, **default_args)
 
 ## Using 🤗 Accelerate
 
-[🤗 Accelerate](https://hf-mirror.com/docs/accelerate/index)を使用すると、上記の方法を使用しながらトレーニングループを完全に制御でき、基本的には純粋なPyTorchでループを書くことができます。
+[🤗 Accelerate](https://huggingface.co/docs/accelerate/index)を使用すると、上記の方法を使用しながらトレーニングループを完全に制御でき、基本的には純粋なPyTorchでループを書くことができます。
 
 次に、[`TrainingArguments`]内で方法を組み合わせた場合を想
 
@@ -371,11 +371,11 @@ for step, batch in enumerate(dataloader, start=1):
 
 まず、データセットを[`DataLoader`](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader)でラップします。
 次に、モデルの[`~PreTrainedModel.gradient_checkpointing_enable`]メソッドを呼び出すことで勾配チェックポイントを有効にできます。
-[`Accelerator`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator)を初期化する際に、混合精度トレーニングを使用するかどうかを[`prepare`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare)の呼び出しで指定し、複数のGPUを使用する場合、`prepare`の間にデータローダーもワーカー間で分散されます。同じ[8ビットオプティマイザ](#8-bit-adam)を前の例から使用します。
+[`Accelerator`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator)を初期化する際に、混合精度トレーニングを使用するかどうかを[`prepare`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare)の呼び出しで指定し、複数のGPUを使用する場合、`prepare`の間にデータローダーもワーカー間で分散されます。同じ[8ビットオプティマイザ](#8-bit-adam)を前の例から使用します。
 
 最後に、主要なトレーニングループを追加できます。`backward`の呼び出しは🤗 Accelerateによって処理されることに注意してください。また、勾配の蓄積がどのように機能するかも確認できます。損失を正規化しているため、蓄積の最後に平均を得て、十分なステップがあると最適化が実行されます。
 
-これらの最適化技術を🤗 Accelerateを使用して実装するのは、わずかなコード行で行うことができ、トレーニングループの柔軟性が向上します。すべての機能の詳細については、[Accelerateのドキュメント](https://hf-mirror.com/docs/accelerate/index)を参照してください。
+これらの最適化技術を🤗 Accelerateを使用して実装するのは、わずかなコード行で行うことができ、トレーニングループの柔軟性が向上します。すべての機能の詳細については、[Accelerateのドキュメント](https://huggingface.co/docs/accelerate/index)を参照してください。
 
 ## Efficient Software Prebuilds
 
@@ -397,7 +397,7 @@ PyTorchの[pipとcondaビルド](https://pytorch.org/get-started/locally/#start-
 
 このアプローチでは、他のFFN層の代わりにMoE層が配置され、各専門家をトークンの位置に応じてバランスよくトレーニングするゲート関数で構成されます。
 
-![MoE Transformer 2x block](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/perf-moe-transformer.png)
+![MoE Transformer 2x block](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/perf-moe-transformer.png)
 
 （出典: [GLAM](https://ai.googleblog.com/2021/12/more-efficient-in-context-learning-with.html)）
 

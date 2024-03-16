@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드에서는 다음을 수행하는 방법을 보여줍니다:
 
-1. [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) 데이터 세트의 하위 집합을 통해 [VideoMAE](https://hf-mirror.com/docs/transformers/main/en/model_doc/videomae) 모델을 미세 조정하기.
+1. [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) 데이터 세트의 하위 집합을 통해 [VideoMAE](https://huggingface.co/docs/transformers/main/en/model_doc/videomae) 모델을 미세 조정하기.
 2. 미세 조정한 모델을 추론에 사용하기.
 
 <Tip>
@@ -174,7 +174,7 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 
 위 경고는 우리가 일부 가중치(예: `classifier` 층의 가중치와 편향)를 버리고 새로운 `classifier` 층의 가중치와 편향을 무작위로 초기화하고 있다는 것을 알려줍니다. 이 경우에는 미리 학습된 가중치가 없는 새로운 헤드를 추가하고 있으므로, 라이브러리가 모델을 추론에 사용하기 전에 미세 조정하라고 경고를 보내는 것은 당연합니다. 그리고 이제 우리는 이 모델을 미세 조정할 예정입니다.
 
-**참고** 이 [체크포인트](https://hf-mirror.com/MCG-NJU/videomae-base-finetuned-kinetics)는 도메인이 많이 중첩된 유사한 다운스트림 작업에 대해 미세 조정하여 얻은 체크포인트이므로 이 작업에서 더 나은 성능을 보일 수 있습니다. `MCG-NJU/videomae-base-finetuned-kinetics` 데이터 세트를 미세 조정하여 얻은 [체크포인트](https://hf-mirror.com/sayakpaul/videomae-base-finetuned-kinetics-finetuned-ucf101-subset)도 있습니다.
+**참고** 이 [체크포인트](https://huggingface.co/MCG-NJU/videomae-base-finetuned-kinetics)는 도메인이 많이 중첩된 유사한 다운스트림 작업에 대해 미세 조정하여 얻은 체크포인트이므로 이 작업에서 더 나은 성능을 보일 수 있습니다. `MCG-NJU/videomae-base-finetuned-kinetics` 데이터 세트를 미세 조정하여 얻은 [체크포인트](https://huggingface.co/sayakpaul/videomae-base-finetuned-kinetics-finetuned-ucf101-subset)도 있습니다.
 
 ## 훈련을 위한 데이터 세트 준비하기[[prepare-the-datasets-for-training]]
 
@@ -339,12 +339,12 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif.gif" alt="Person playing basketball"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif.gif" alt="Person playing basketball"/>
 </div>
 
 ## 모델 훈련하기[[train-the-model]] 
 
-🤗 Transformers의 [`Trainer`](https://hf-mirror.com/docs/transformers/main_classes/trainer)를 사용하여 모델을 훈련시켜보세요. `Trainer`를 인스턴스화하려면 훈련 설정과 평가 지표를 정의해야 합니다.  가장 중요한 것은 [`TrainingArguments`](https://hf-mirror.com/transformers/main_classes/trainer.html#transformers.TrainingArguments)입니다. 이 클래스는 훈련을 구성하는 모든 속성을 포함하며, 훈련 중 체크포인트를 저장할 출력 폴더 이름을 필요로 합니다. 또한 🤗 Hub의 모델 저장소의 모든 정보를 동기화하는 데 도움이 됩니다.
+🤗 Transformers의 [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer)를 사용하여 모델을 훈련시켜보세요. `Trainer`를 인스턴스화하려면 훈련 설정과 평가 지표를 정의해야 합니다.  가장 중요한 것은 [`TrainingArguments`](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments)입니다. 이 클래스는 훈련을 구성하는 모든 속성을 포함하며, 훈련 중 체크포인트를 저장할 출력 폴더 이름을 필요로 합니다. 또한 🤗 Hub의 모델 저장소의 모든 정보를 동기화하는 데 도움이 됩니다.
 
 대부분의 훈련 인수는 따로 설명할 필요는 없습니다. 하지만 여기에서 중요한 인수는 `remove_unused_columns=False` 입니다. 이 인자는 모델의 호출 함수에서 사용되지 않는 모든 속성 열(columns)을 삭제합니다. 기본값은 일반적으로 True입니다. 이는 사용되지 않는 기능 열을 삭제하는 것이 이상적이며, 입력을 모델의 호출 함수로 풀기(unpack)가 쉬워지기 때문입니다. 하지만 이 경우에는 `pixel_values`(모델의 입력으로 필수적인 키)를 생성하기 위해 사용되지 않는 기능('video'가 특히 그렇습니다)이 필요합니다. 따라서 remove_unused_columns을 False로 설정해야 합니다.
 
@@ -440,16 +440,16 @@ def compute_metrics(eval_pred):
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif_two.gif" alt="Teams playing basketball"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_gif_two.gif" alt="Teams playing basketball"/>
 </div>
 
-미세 조정된 모델을 추론에 사용하는 가장 간단한 방법은 [`pipeline`](https://hf-mirror.com/docs/transformers/main/en/main_classes/pipelines#transformers.VideoClassificationPipeline)에서 모델을 사용하는 것입니다. 모델로 영상 분류를 하기 위해 `pipeline`을 인스턴스화하고 영상을 전달하세요:
+미세 조정된 모델을 추론에 사용하는 가장 간단한 방법은 [`pipeline`](https://huggingface.co/docs/transformers/main/en/main_classes/pipelines#transformers.VideoClassificationPipeline)에서 모델을 사용하는 것입니다. 모델로 영상 분류를 하기 위해 `pipeline`을 인스턴스화하고 영상을 전달하세요:
 
 ```py
 >>> from transformers import pipeline
 
 >>> video_cls = pipeline(model="my_awesome_video_cls_model")
->>> video_cls("https://hf-mirror.com/datasets/sayakpaul/ucf101-subset/resolve/main/v_BasketballDunk_g14_c06.avi")
+>>> video_cls("https://huggingface.co/datasets/sayakpaul/ucf101-subset/resolve/main/v_BasketballDunk_g14_c06.avi")
 [{'score': 0.9272987842559814, 'label': 'BasketballDunk'},
  {'score': 0.017777055501937866, 'label': 'BabyCrawling'},
  {'score': 0.01663011871278286, 'label': 'BalanceBeam'},

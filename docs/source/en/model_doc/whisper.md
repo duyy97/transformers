@@ -24,7 +24,7 @@ The abstract from the paper is the following:
 
 *We study the capabilities of speech processing systems trained simply to predict large amounts of transcripts of audio on the internet. When scaled to 680,000 hours of multilingual and multitask supervision, the resulting models generalize well to standard benchmarks and are often competitive with prior fully supervised results but in a zeroshot transfer setting without the need for any finetuning. When compared to humans, the models approach their accuracy and robustness. We are releasing models and inference code to serve as a foundation for further work on robust speech processing.*
 
-This model was contributed by [Arthur Zucker](https://hf-mirror.com/ArthurZ). The Tensorflow version of this model was contributed by [amyeroberts](https://hf-mirror.com/amyeroberts).
+This model was contributed by [Arthur Zucker](https://huggingface.co/ArthurZ). The Tensorflow version of this model was contributed by [amyeroberts](https://huggingface.co/amyeroberts).
 The original code can be found [here](https://github.com/openai/whisper).
 
 ## Usage tips

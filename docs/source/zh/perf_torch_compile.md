@@ -15,7 +15,7 @@ rendered properly in your Markdown viewer.
 
 # 使用 torch.compile() 优化推理
 
-本指南旨在为使用[`torch.compile()`](https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html)在[🤗 Transformers中的计算机视觉模型](https://hf-mirror.com/models?pipeline_tag=image-classification&library=transformers&sort=trending)中引入的推理速度提升提供一个基准。
+本指南旨在为使用[`torch.compile()`](https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html)在[🤗 Transformers中的计算机视觉模型](https://huggingface.co/models?pipeline_tag=image-classification&library=transformers&sort=trending)中引入的推理速度提升提供一个基准。
 
 
 ## torch.compile 的优势
@@ -97,50 +97,50 @@ with torch.no_grad():
 以下是我们进行基准测试的模型列表。
 
 **图像分类** 
-- [google/vit-base-patch16-224](https://hf-mirror.com/google/vit-base-patch16-224)
-- [microsoft/beit-base-patch16-224-pt22k-ft22k](https://hf-mirror.com/microsoft/beit-base-patch16-224-pt22k-ft22k)
-- [facebook/convnext-large-224](https://hf-mirror.com/facebook/convnext-large-224)
-- [microsoft/resnet-50](https://hf-mirror.com/)
+- [google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224)
+- [microsoft/beit-base-patch16-224-pt22k-ft22k](https://huggingface.co/microsoft/beit-base-patch16-224-pt22k-ft22k)
+- [facebook/convnext-large-224](https://huggingface.co/facebook/convnext-large-224)
+- [microsoft/resnet-50](https://huggingface.co/)
 
 **图像分割** 
-- [nvidia/segformer-b0-finetuned-ade-512-512](https://hf-mirror.com/nvidia/segformer-b0-finetuned-ade-512-512)
-- [facebook/mask2former-swin-tiny-coco-panoptic](https://hf-mirror.com/facebook/mask2former-swin-tiny-coco-panoptic)
-- [facebook/maskformer-swin-base-ade](https://hf-mirror.com/facebook/maskformer-swin-base-ade)
-- [google/deeplabv3_mobilenet_v2_1.0_513](https://hf-mirror.com/google/deeplabv3_mobilenet_v2_1.0_513)
+- [nvidia/segformer-b0-finetuned-ade-512-512](https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512)
+- [facebook/mask2former-swin-tiny-coco-panoptic](https://huggingface.co/facebook/mask2former-swin-tiny-coco-panoptic)
+- [facebook/maskformer-swin-base-ade](https://huggingface.co/facebook/maskformer-swin-base-ade)
+- [google/deeplabv3_mobilenet_v2_1.0_513](https://huggingface.co/google/deeplabv3_mobilenet_v2_1.0_513)
 
 **目标检测** 
-- [google/owlvit-base-patch32](https://hf-mirror.com/google/owlvit-base-patch32)
-- [facebook/detr-resnet-101](https://hf-mirror.com/facebook/detr-resnet-101)
-- [microsoft/conditional-detr-resnet-50](https://hf-mirror.com/microsoft/conditional-detr-resnet-50)
+- [google/owlvit-base-patch32](https://huggingface.co/google/owlvit-base-patch32)
+- [facebook/detr-resnet-101](https://huggingface.co/facebook/detr-resnet-101)
+- [microsoft/conditional-detr-resnet-50](https://huggingface.co/microsoft/conditional-detr-resnet-50)
 
  下面是使用和不使用`torch.compile()`的推理持续时间可视化，以及每个模型在不同硬件和数据批量大小下的改进百分比。
 
 
 <div class="flex">
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/a100_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/a100_batch_comp.png" />
   </div>
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_batch_comp.png" />
   </div>
    <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/t4_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/t4_batch_comp.png" />
   </div>
 </div>
 
 <div class="flex">
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_duration.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_duration.png" />
   </div>
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_percentage.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_percentage.png" />
   </div>
 </div>
 
 
-![Duration Comparison on V100 with Batch Size of 1](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_1_duration.png)
+![Duration Comparison on V100 with Batch Size of 1](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_1_duration.png)
 
-![Percentage Improvement on T4 with Batch Size of 4](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/T4_4_percentage.png)
+![Percentage Improvement on T4 with Batch Size of 4](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/T4_4_percentage.png)
 
 下面可以找到每个模型使用和不使用`compile()`的推理时间（毫秒）。请注意，OwlViT在大批量大小下会导致内存溢出。
 

@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # BART
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=bart">
+<a href="https://huggingface.co/models?filter=bart">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-bart-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/bart-large-mnli">
+<a href="https://huggingface.co/spaces/docs-demos/bart-large-mnli">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -57,15 +57,15 @@ Bart モデルは、[BART: Denoising Sequence-to-Sequence Pre-training for Natur
   * 文を並べ替えます
   * ドキュメントを回転して特定のトークンから開始するようにします
 
-このモデルは [sshleifer](https://hf-mirror.com/sshleifer) によって提供されました。著者のコードは [ここ](https://github.com/pytorch/fairseq/tree/master/examples/bart) にあります。
+このモデルは [sshleifer](https://huggingface.co/sshleifer) によって提供されました。著者のコードは [ここ](https://github.com/pytorch/fairseq/tree/master/examples/bart) にあります。
 
 ### Examples
 
 - シーケンス間タスク用の BART およびその他のモデルを微調整するための例とスクリプトは、次の場所にあります。
   [examples/pytorch/summarization/](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization/README.md)。
 - Hugging Face `datasets` を使用して [`BartForConditionalGeneration`] をトレーニングする方法の例
-  オブジェクトは、この [フォーラム ディスカッション](https://discuss.hf-mirror.com/t/train-bart-for-conditional-generation-e-g-summarization/1904) で見つけることができます。
-- [抽出されたチェックポイント](https://hf-mirror.com/models?search=distilbart) は、この [論文](https://arxiv.org/abs/2010.13002) で説明されています。
+  オブジェクトは、この [フォーラム ディスカッション](https://discuss.huggingface.co/t/train-bart-for-conditional-generation-e-g-summarization/1904) で見つけることができます。
+- [抽出されたチェックポイント](https://huggingface.co/models?search=distilbart) は、この [論文](https://arxiv.org/abs/2010.13002) で説明されています。
 
 ## Implementation Notes
 
@@ -104,13 +104,13 @@ BART を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 
 <PipelineTag pipeline="summarization"/>
 
-- に関するブログ投稿 [分散トレーニング: 🤗 Transformers と Amazon SageMaker を使用した要約のための BART/T5 のトレーニング](https://hf-mirror.com/blog/sagemaker-distributed-training-seq2seq)。
+- に関するブログ投稿 [分散トレーニング: 🤗 Transformers と Amazon SageMaker を使用した要約のための BART/T5 のトレーニング](https://huggingface.co/blog/sagemaker-distributed-training-seq2seq)。
 - 方法に関するノートブック [blurr を使用して fastai で要約するために BART を微調整する](https://colab.research.google.com/github/ohmeow/ohmeow_website/blob/master/posts/2021-05-25-mbart-sequence-classification-with-blurr.ipynb). 🌎 🌎
 - 方法に関するノートブック [トレーナー クラスを使用して 2 つの言語で要約するために BART を微調整する](https://colab.research.google.com/github/elsanns/xai-nlp-notebooks/blob/master/fine_tune_bart_summarization_two_langs.ipynb)。 🌎
 - [`BartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/summarization.ipynb)。
 - [`TFBartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/summarization-tf.ipynb)。
 - [`FlaxBartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/flax/summarization) でサポートされています。
-- [要約](https://hf-mirror.com/course/chapter7/5?fw=pt#summarization) 🤗 ハグフェイスコースの章。
+- [要約](https://huggingface.co/course/chapter7/5?fw=pt#summarization) 🤗 ハグフェイスコースの章。
 - [要約タスクガイド](../tasks/summarization.md)
 
 <PipelineTag pipeline="fill-mask"/>
@@ -118,7 +118,7 @@ BART を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [`BartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) でサポートされており、 [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb)。
 - [`TFBartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb)。
 - [`FlaxBartForConditionalGeneration`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) および [ノートブック]( https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb)。
-- [マスクされた言語モデリング](https://hf-mirror.com/course/chapter7/3?fw=pt) 🤗 顔ハグ コースの章。
+- [マスクされた言語モデリング](https://huggingface.co/course/chapter7/3?fw=pt) 🤗 顔ハグ コースの章。
 - [マスクされた言語モデリング タスク ガイド](../tasks/masked_lang_modeling)
 
 <PipelineTag pipeline="translation"/>
@@ -132,7 +132,7 @@ BART を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [テキスト分類タスクガイド](../tasks/sequence_classification)
 - [質問回答タスク ガイド](../tasks/question_answering)
 - [因果言語モデリング タスク ガイド](../tasks/language_modeling)
-- [抽出されたチェックポイント](https://hf-mirror.com/models?search=distilbart) は、この [論文](https://arxiv.org/abs/2010.13002) で説明されています。
+- [抽出されたチェックポイント](https://huggingface.co/models?search=distilbart) は、この [論文](https://arxiv.org/abs/2010.13002) で説明されています。
 
 ## BartConfig
 

@@ -508,7 +508,7 @@ class LoadImageTester(unittest.TestCase):
             tmp_file = tempfile.mktemp()
             with open(tmp_file, "wb") as f:
                 http_get(
-                    "https://hf-mirror.com/datasets/hf-internal-testing/dummy-base64-images/raw/main/image_0.txt", f
+                    "https://huggingface.co/datasets/hf-internal-testing/dummy-base64-images/raw/main/image_0.txt", f
                 )
 
             with open(tmp_file, encoding="utf-8") as b64:
@@ -525,7 +525,7 @@ class LoadImageTester(unittest.TestCase):
             tmp_file = tempfile.mktemp()
             with open(tmp_file, "wb") as f:
                 http_get(
-                    "https://hf-mirror.com/datasets/hf-internal-testing/dummy-base64-images/raw/main/image_1.txt", f
+                    "https://huggingface.co/datasets/hf-internal-testing/dummy-base64-images/raw/main/image_1.txt", f
                 )
 
             with open(tmp_file, encoding="utf-8") as b64:

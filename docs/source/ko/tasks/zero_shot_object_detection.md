@@ -46,7 +46,7 @@ pip install -q transformers
 ## 제로샷(zero-shot) 객체 탐지 파이프라인[[zeroshot-object-detection-pipeline]]
 
 [`pipeline`]을 활용하면 가장 간단하게 OWL-ViT 모델을 추론해볼 수 있습니다.
-[Hugging Face Hub에 업로드된 체크포인트](https://hf-mirror.com/models?pipeline_tag=zero-shot-image-classification&sort=downloads)에서 제로샷(zero-shot) 객체 탐지용 파이프라인을 인스턴스화합니다:
+[Hugging Face Hub에 업로드된 체크포인트](https://huggingface.co/models?pipeline_tag=zero-shot-image-classification&sort=downloads)에서 제로샷(zero-shot) 객체 탐지용 파이프라인을 인스턴스화합니다:
 
 ```python
 >>> from transformers import pipeline
@@ -70,7 +70,7 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
 </div>
 
 이미지와 해당 이미지의 후보 레이블을 파이프라인으로 전달합니다.
@@ -124,14 +124,14 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
 </div>
 
 ## 텍스트 프롬프트 기반 객체 탐지[[textprompted-zeroshot-object-detection-by-hand]]
 
 제로샷 객체 탐지 파이프라인 사용법에 대해 살펴보았으니, 이제 동일한 결과를 복제해보겠습니다.
 
-[Hugging Face Hub에 업로드된 체크포인트](https://hf-mirror.com/models?other=owlvit)에서 관련 모델과 프로세서를 가져오는 것으로 시작합니다.
+[Hugging Face Hub에 업로드된 체크포인트](https://huggingface.co/models?other=owlvit)에서 관련 모델과 프로세서를 가져오는 것으로 시작합니다.
 여기서는 이전과 동일한 체크포인트를 사용하겠습니다:
 
 ```py
@@ -152,7 +152,7 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
 </div>
 
 프로세서를 사용해 모델의 입력을 준비합니다.
@@ -190,7 +190,7 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## 일괄 처리[[batch-processing]]
@@ -232,7 +232,7 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## 이미지 가이드 객체 탐지[[imageguided-object-detection]]
@@ -262,7 +262,7 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
 </div>
 
 전처리 단계에서 텍스트 쿼리 대신에 `query_images`를 사용합니다:
@@ -294,7 +294,7 @@ candidate_labels는 이 예시처럼 간단한 단어일 수도 있고 좀 더 �
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
 </div>
 
 OWL-ViT 모델을 추론하고 싶다면 아래 데모를 확인하세요:

@@ -28,13 +28,13 @@ logger = logging.get_logger(__name__)
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "microsoft/deberta-v2-xlarge": "https://hf-mirror.com/microsoft/deberta-v2-xlarge/resolve/main/spm.model",
-        "microsoft/deberta-v2-xxlarge": "https://hf-mirror.com/microsoft/deberta-v2-xxlarge/resolve/main/spm.model",
+        "microsoft/deberta-v2-xlarge": "https://huggingface.co/microsoft/deberta-v2-xlarge/resolve/main/spm.model",
+        "microsoft/deberta-v2-xxlarge": "https://huggingface.co/microsoft/deberta-v2-xxlarge/resolve/main/spm.model",
         "microsoft/deberta-v2-xlarge-mnli": (
-            "https://hf-mirror.com/microsoft/deberta-v2-xlarge-mnli/resolve/main/spm.model"
+            "https://huggingface.co/microsoft/deberta-v2-xlarge-mnli/resolve/main/spm.model"
         ),
         "microsoft/deberta-v2-xxlarge-mnli": (
-            "https://hf-mirror.com/microsoft/deberta-v2-xxlarge-mnli/resolve/main/spm.model"
+            "https://huggingface.co/microsoft/deberta-v2-xxlarge-mnli/resolve/main/spm.model"
         ),
     }
 }

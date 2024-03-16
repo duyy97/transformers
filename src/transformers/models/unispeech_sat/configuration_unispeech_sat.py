@@ -25,9 +25,9 @@ logger = logging.get_logger(__name__)
 
 UNISPEECH_SAT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/unispeech-sat-base-100h-libri-ft": (
-        "https://hf-mirror.com/microsoft/unispeech-sat-base-100h-libri-ft/resolve/main/config.json"
+        "https://huggingface.co/microsoft/unispeech-sat-base-100h-libri-ft/resolve/main/config.json"
     ),
-    # See all UniSpeechSat models at https://hf-mirror.com/models?filter=unispeech_sat
+    # See all UniSpeechSat models at https://huggingface.co/models?filter=unispeech_sat
 }
 
 
@@ -36,7 +36,7 @@ class UniSpeechSatConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`UniSpeechSatModel`]. It is used to instantiate an
     UniSpeechSat model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the UniSpeechSat
-    [microsoft/unispeech-sat-base-100h-libri-ft](https://hf-mirror.com/microsoft/unispeech-sat-base-100h-libri-ft)
+    [microsoft/unispeech-sat-base-100h-libri-ft](https://huggingface.co/microsoft/unispeech-sat-base-100h-libri-ft)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

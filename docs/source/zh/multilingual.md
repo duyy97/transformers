@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-🤗 Transformers 中有多种多语言模型，它们的推理用法与单语言模型不同。但是，并非*所有*的多语言模型用法都不同。一些模型，例如 [google-bert/bert-base-multilingual-uncased](https://hf-mirror.com/google-bert/bert-base-multilingual-uncased) 就可以像单语言模型一样使用。本指南将向您展示如何使用不同用途的多语言模型进行推理。
+🤗 Transformers 中有多种多语言模型，它们的推理用法与单语言模型不同。但是，并非*所有*的多语言模型用法都不同。一些模型，例如 [google-bert/bert-base-multilingual-uncased](https://huggingface.co/google-bert/bert-base-multilingual-uncased) 就可以像单语言模型一样使用。本指南将向您展示如何使用不同用途的多语言模型进行推理。
 
 ## XLM
 

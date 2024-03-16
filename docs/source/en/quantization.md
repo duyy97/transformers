@@ -73,7 +73,7 @@ Quanto library uses linear quantization algorithm for quantization. Even though 
 
 <div class="flex gap-4">
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/NousResearch-Llama-2-7b-hf_Perplexity.png" alt="llama-2-7b-quanto-perplexity" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/NousResearch-Llama-2-7b-hf_Perplexity.png" alt="llama-2-7b-quanto-perplexity" />
   </div>
 </div>
 
@@ -98,7 +98,7 @@ The instructions on how to quantize models yourself, as well as all the relevant
 
 ### PEFT
 
-Starting with version `aqlm 1.0.2`, AQLM supports Parameter-Efficient Fine-Tuning in a form of [LoRA](https://hf-mirror.com/docs/peft/package_reference/lora) integrated into the [PEFT](https://hf-mirror.com/blog/peft) library.
+Starting with version `aqlm 1.0.2`, AQLM supports Parameter-Efficient Fine-Tuning in a form of [LoRA](https://huggingface.co/docs/peft/package_reference/lora) integrated into the [PEFT](https://huggingface.co/blog/peft) library.
 
 ### AQLM configurations
 
@@ -121,7 +121,7 @@ Try AWQ quantization with this [notebook](https://colab.research.google.com/driv
 
 [Activation-aware Weight Quantization (AWQ)](https://hf.co/papers/2306.00978) doesn't quantize all the weights in a model, and instead, it preserves a small percentage of weights that are important for LLM performance. This significantly reduces quantization loss such that you can run models in 4-bit precision without experiencing any performance degradation.
 
-There are several libraries for quantizing models with the AWQ algorithm, such as [llm-awq](https://github.com/mit-han-lab/llm-awq), [autoawq](https://github.com/casper-hansen/AutoAWQ) or [optimum-intel](https://hf-mirror.com/docs/optimum/main/en/intel/optimization_inc). Transformers supports loading models quantized with the llm-awq and autoawq libraries. This guide will show you how to load models quantized with autoawq, but the process is similar for llm-awq quantized models.
+There are several libraries for quantizing models with the AWQ algorithm, such as [llm-awq](https://github.com/mit-han-lab/llm-awq), [autoawq](https://github.com/casper-hansen/AutoAWQ) or [optimum-intel](https://huggingface.co/docs/optimum/main/en/intel/optimization_inc). Transformers supports loading models quantized with the llm-awq and autoawq libraries. This guide will show you how to load models quantized with autoawq, but the process is similar for llm-awq quantized models.
 
 Make sure you have autoawq installed:
 
@@ -129,7 +129,7 @@ Make sure you have autoawq installed:
 pip install autoawq
 ```
 
-AWQ-quantized models can be identified by checking the `quantization_config` attribute in the model's [config.json](https://hf-mirror.com/TheBloke/zephyr-7B-alpha-AWQ/blob/main/config.json) file:
+AWQ-quantized models can be identified by checking the `quantization_config` attribute in the model's [config.json](https://huggingface.co/TheBloke/zephyr-7B-alpha-AWQ/blob/main/config.json) file:
 
 ```json
 {
@@ -178,7 +178,7 @@ model = AutoModelForCausalLM.from_pretrained("TheBloke/zephyr-7B-alpha-AWQ", att
 
 ### Fused modules
 
-Fused modules offers improved accuracy and performance and it is supported out-of-the-box for AWQ modules for [Llama](https://hf-mirror.com/meta-llama) and [Mistral](https://hf-mirror.com/mistralai/Mistral-7B-v0.1) architectures, but you can also fuse AWQ modules for unsupported architectures.
+Fused modules offers improved accuracy and performance and it is supported out-of-the-box for AWQ modules for [Llama](https://huggingface.co/meta-llama) and [Mistral](https://huggingface.co/mistralai/Mistral-7B-v0.1) architectures, but you can also fuse AWQ modules for unsupported architectures.
 
 <Tip warning={true}>
 
@@ -191,7 +191,7 @@ Fused modules cannot be combined with other optimization techniques such as Flas
 
 To enable fused modules for supported architectures, create an [`AwqConfig`] and set the parameters `fuse_max_seq_len` and `do_fuse=True`. The `fuse_max_seq_len` parameter is the total sequence length and it should include the context length and the expected generation length. You can set it to a larger value to be safe.
 
-For example, to fuse the AWQ modules of the [TheBloke/Mistral-7B-OpenOrca-AWQ](https://hf-mirror.com/TheBloke/Mistral-7B-OpenOrca-AWQ) model.
+For example, to fuse the AWQ modules of the [TheBloke/Mistral-7B-OpenOrca-AWQ](https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-AWQ) model.
 
 ```python
 import torch
@@ -211,7 +211,7 @@ model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=quant
 </hfoption>
 <hfoption id="unsupported architectures">
 
-For architectures that don't support fused modules yet, you need to create a custom fusing mapping to define which modules need to be fused with the `modules_to_fuse` parameter. For example, to fuse the AWQ modules of the [TheBloke/Yi-34B-AWQ](https://hf-mirror.com/TheBloke/Yi-34B-AWQ) model.
+For architectures that don't support fused modules yet, you need to create a custom fusing mapping to define which modules need to be fused with the `modules_to_fuse` parameter. For example, to fuse the AWQ modules of the [TheBloke/Yi-34B-AWQ](https://huggingface.co/TheBloke/Yi-34B-AWQ) model.
 
 ```python
 import torch
@@ -292,7 +292,7 @@ Note this feature is supported on AMD GPUs.
 
 <Tip>
 
-Try GPTQ quantization with PEFT in this [notebook](https://colab.research.google.com/drive/1_TIrmuKOFhuRRiTWN94iLKUFu6ZX4ceb?usp=sharing) and learn more about it's details in this [blog post](https://hf-mirror.com/blog/gptq-integration)!
+Try GPTQ quantization with PEFT in this [notebook](https://colab.research.google.com/drive/1_TIrmuKOFhuRRiTWN94iLKUFu6ZX4ceb?usp=sharing) and learn more about it's details in this [blog post](https://huggingface.co/blog/gptq-integration)!
 
 </Tip>
 
@@ -338,7 +338,7 @@ quantized_model = AutoModelForCausalLM.from_pretrained(model_id, device_map="aut
 
 <Tip warning={true}>
 
-Depending on your hardware, it can take some time to quantize a model from scratch. It can take ~5 minutes to quantize the [facebook/opt-350m](https://hf-mirror.com/facebook/opt-350m) model on a free-tier Google Colab GPU, but it'll take ~4 hours to quantize a 175B parameter model on a NVIDIA A100. Before you quantize a model, it is a good idea to check the Hub if a GPTQ-quantized version of the model already exists.
+Depending on your hardware, it can take some time to quantize a model from scratch. It can take ~5 minutes to quantize the [facebook/opt-350m](https://huggingface.co/facebook/opt-350m) model on a free-tier Google Colab GPU, but it'll take ~4 hours to quantize a 175B parameter model on a NVIDIA A100. Before you quantize a model, it is a good idea to check the Hub if a GPTQ-quantized version of the model already exists.
 
 </Tip>
 
@@ -504,7 +504,7 @@ model = AutoModelForCausalLM.from_pretrained("{your_username}/bloom-560m-8bit", 
 
 <Tip>
 
-Learn more about the details of 8-bit quantization in this [blog post](https://hf-mirror.com/blog/hf-bitsandbytes-integration)!
+Learn more about the details of 8-bit quantization in this [blog post](https://huggingface.co/blog/hf-bitsandbytes-integration)!
 
 </Tip>
 
@@ -512,7 +512,7 @@ This section explores some of the specific features of 8-bit models, such as off
 
 #### Offloading
 
-8-bit models can offload weights between the CPU and GPU to support fitting very large models into memory. The weights dispatched to the CPU are actually stored in **float32**, and aren't converted to 8-bit. For example, to enable offloading for the [bigscience/bloom-1b7](https://hf-mirror.com/bigscience/bloom-1b7) model, start by creating a [`BitsAndBytesConfig`]:
+8-bit models can offload weights between the CPU and GPU to support fitting very large models into memory. The weights dispatched to the CPU are actually stored in **float32**, and aren't converted to 8-bit. For example, to enable offloading for the [bigscience/bloom-1b7](https://huggingface.co/bigscience/bloom-1b7) model, start by creating a [`BitsAndBytesConfig`]:
 
 ```py
 from transformers import AutoModelForCausalLM, BitsAndBytesConfig
@@ -586,13 +586,13 @@ model_8bit = AutoModelForCausalLM.from_pretrained(
 
 #### Finetuning
 
-With the [PEFT](https://github.com/huggingface/peft) library, you can finetune large models like [flan-t5-large](https://hf-mirror.com/google/flan-t5-large) and [facebook/opt-6.7b](https://hf-mirror.com/facebook/opt-6.7b) with 8-bit quantization. You don't need to pass the `device_map` parameter for training because it'll automatically load your model on a GPU. However, you can still customize the device map with the `device_map` parameter if you want to (`device_map="auto"` should only be used for inference).
+With the [PEFT](https://github.com/huggingface/peft) library, you can finetune large models like [flan-t5-large](https://huggingface.co/google/flan-t5-large) and [facebook/opt-6.7b](https://huggingface.co/facebook/opt-6.7b) with 8-bit quantization. You don't need to pass the `device_map` parameter for training because it'll automatically load your model on a GPU. However, you can still customize the device map with the `device_map` parameter if you want to (`device_map="auto"` should only be used for inference).
 
 ### 4-bit
 
 <Tip>
 
-Try 4-bit quantization in this [notebook](https://colab.research.google.com/drive/1ge2F1QSK8Q7h0hn3YKuBCOAS0bK8E0wf) and learn more about it's details in this [blog post](https://hf-mirror.com/blog/4bit-transformers-bitsandbytes).
+Try 4-bit quantization in this [notebook](https://colab.research.google.com/drive/1ge2F1QSK8Q7h0hn3YKuBCOAS0bK8E0wf) and learn more about it's details in this [blog post](https://huggingface.co/blog/4bit-transformers-bitsandbytes).
 
 </Tip>
 
@@ -629,7 +629,7 @@ For inference, the `bnb_4bit_quant_type` does not have a huge impact on performa
 
 #### Nested quantization
 
-Nested quantization is a technique that can save additional memory at no additional performance cost. This feature performs a second quantization of the already quantized weights to save an addition 0.4 bits/parameter. For example, with nested quantization, you can finetune a [Llama-13b](https://hf-mirror.com/meta-llama/Llama-2-13b) model on a 16GB NVIDIA T4 GPU with a sequence length of 1024, a batch size of 1, and enabling gradient accumulation with 4 steps.
+Nested quantization is a technique that can save additional memory at no additional performance cost. This feature performs a second quantization of the already quantized weights to save an addition 0.4 bits/parameter. For example, with nested quantization, you can finetune a [Llama-13b](https://huggingface.co/meta-llama/Llama-2-13b) model on a 16GB NVIDIA T4 GPU with a sequence length of 1024, a batch size of 1, and enabling gradient accumulation with 4 steps.
 
 ```py
 from transformers import BitsAndBytesConfig
@@ -644,39 +644,39 @@ model_double_quant = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-13
 
 ## Optimum
 
-The [Optimum](https://hf-mirror.com/docs/optimum/index) library supports quantization for Intel, Furiosa, ONNX Runtime, GPTQ, and lower-level PyTorch quantization functions. Consider using Optimum for quantization if you're using specific and optimized hardware like Intel CPUs, Furiosa NPUs or a model accelerator like ONNX Runtime.
+The [Optimum](https://huggingface.co/docs/optimum/index) library supports quantization for Intel, Furiosa, ONNX Runtime, GPTQ, and lower-level PyTorch quantization functions. Consider using Optimum for quantization if you're using specific and optimized hardware like Intel CPUs, Furiosa NPUs or a model accelerator like ONNX Runtime.
 
 ## Benchmarks
 
-To compare the speed, throughput, and latency of each quantization scheme, check the following benchmarks obtained from the [optimum-benchmark](https://github.com/huggingface/optimum-benchmark) library. The benchmark was run on a NVIDIA A1000 for the [TheBloke/Mistral-7B-v0.1-AWQ](https://hf-mirror.com/TheBloke/Mistral-7B-v0.1-AWQ) and [TheBloke/Mistral-7B-v0.1-GPTQ](https://hf-mirror.com/TheBloke/Mistral-7B-v0.1-GPTQ) models. These were also tested against the bitsandbytes quantization methods as well as a native fp16 model.
+To compare the speed, throughput, and latency of each quantization scheme, check the following benchmarks obtained from the [optimum-benchmark](https://github.com/huggingface/optimum-benchmark) library. The benchmark was run on a NVIDIA A1000 for the [TheBloke/Mistral-7B-v0.1-AWQ](https://huggingface.co/TheBloke/Mistral-7B-v0.1-AWQ) and [TheBloke/Mistral-7B-v0.1-GPTQ](https://huggingface.co/TheBloke/Mistral-7B-v0.1-GPTQ) models. These were also tested against the bitsandbytes quantization methods as well as a native fp16 model.
 
 <div class="flex gap-4">
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/forward_memory_plot.png" alt="forward peak memory per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/forward_memory_plot.png" alt="forward peak memory per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">forward peak memory/batch size</figcaption>
   </div>
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/generate_memory_plot.png" alt="generate peak memory per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/generate_memory_plot.png" alt="generate peak memory per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">generate peak memory/batch size</figcaption>
   </div>
 </div>
 
 <div class="flex gap-4">
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/generate_throughput_plot.png" alt="generate throughput per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/generate_throughput_plot.png" alt="generate throughput per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">generate throughput/batch size</figcaption>
   </div>
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/forward_latency_plot.png" alt="forward latency per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/forward_latency_plot.png" alt="forward latency per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">forward latency/batch size</figcaption>
   </div>
 </div>
 
-The benchmarks indicate AWQ quantization is the fastest for inference, text generation, and has the lowest peak memory for text generation. However, AWQ has the largest forward latency per batch size. For a more detailed discussion about the pros and cons of each quantization method, read the [Overview of natively supported quantization schemes in 🤗 Transformers](https://hf-mirror.com/blog/overview-quantization-transformers) blog post.
+The benchmarks indicate AWQ quantization is the fastest for inference, text generation, and has the lowest peak memory for text generation. However, AWQ has the largest forward latency per batch size. For a more detailed discussion about the pros and cons of each quantization method, read the [Overview of natively supported quantization schemes in 🤗 Transformers](https://huggingface.co/blog/overview-quantization-transformers) blog post.
 
 ### Fused AWQ modules
 
-The [TheBloke/Mistral-7B-OpenOrca-AWQ](https://hf-mirror.com/TheBloke/Mistral-7B-OpenOrca-AWQ) model was benchmarked with `batch_size=1` with and without fused modules.
+The [TheBloke/Mistral-7B-OpenOrca-AWQ](https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-AWQ) model was benchmarked with `batch_size=1` with and without fused modules.
 
 <figcaption class="text-center text-gray-500 text-lg">Unfused module</figcaption>
 
@@ -706,11 +706,11 @@ The speed and throughput of fused and unfused modules were also tested with the 
 
 <div class="flex gap-4">
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/fused_forward_memory_plot.png" alt="generate throughput per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/fused_forward_memory_plot.png" alt="generate throughput per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">forward peak memory/batch size</figcaption>
   </div>
   <div>
-    <img class="rounded-xl" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/quantization/fused_generate_throughput_plot.png" alt="forward latency per batch size" />
+    <img class="rounded-xl" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/quantization/fused_generate_throughput_plot.png" alt="forward latency per batch size" />
     <figcaption class="mt-2 text-center text-sm text-gray-500">generate throughput/batch size</figcaption>
   </div>
 </div>

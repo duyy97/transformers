@@ -48,19 +48,19 @@ The `.optimization` module provides:
 
 [[autodoc]] get_constant_schedule_with_warmup
 
-<img alt="" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/warmup_constant_schedule.png"/>
+<img alt="" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/warmup_constant_schedule.png"/>
 
 [[autodoc]] get_cosine_schedule_with_warmup
 
-<img alt="" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/warmup_cosine_schedule.png"/>
+<img alt="" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/warmup_cosine_schedule.png"/>
 
 [[autodoc]] get_cosine_with_hard_restarts_schedule_with_warmup
 
-<img alt="" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/warmup_cosine_hard_restarts_schedule.png"/>
+<img alt="" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/warmup_cosine_hard_restarts_schedule.png"/>
 
 [[autodoc]] get_linear_schedule_with_warmup
 
-<img alt="" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/warmup_linear_schedule.png"/>
+<img alt="" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/warmup_linear_schedule.png"/>
 
 [[autodoc]] get_polynomial_decay_schedule_with_warmup
 

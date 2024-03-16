@@ -90,7 +90,7 @@ exact_match = 86.91
 ```
 
 This fine-tuned model is available as a checkpoint under the reference
-[`google-bert/bert-large-uncased-whole-word-masking-finetuned-squad`](https://hf-mirror.com/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad).
+[`google-bert/bert-large-uncased-whole-word-masking-finetuned-squad`](https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad).
 
 ## Results
 

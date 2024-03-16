@@ -304,7 +304,7 @@ resnet50d.push_to_hub("custom-resnet50d")
 
 Oltre ai pesi del modello e alla configurazione in formato json, questo ha anche copiato i file `.py` modeling e
 configuration all'interno della cartella `custom-resnet50d` e ha caricato i risultati sull'Hub. Puoi controllare
-i risultati in questa [model repo](https://hf-mirror.com/sgugger/custom-resnet50d).
+i risultati in questa [model repo](https://huggingface.co/sgugger/custom-resnet50d).
 
 Puoi controllare il tutorial di condivisione [tutorial di condivisione](model_sharing) per più informazioni sul 
 metodo con cui inviare all'Hub.
@@ -313,7 +313,7 @@ metodo con cui inviare all'Hub.
 
 Puoi usare ogni configurazione, modello o tokenizer con file di codice personalizzati nella sua repository 
 con le classi Auto e il metodo `from_pretrained`. Tutti i files e il codice caricati sull'Hub sono scansionati da malware
-(fai riferimento alla documentazione [Hub security](https://hf-mirror.com/docs/hub/security#malware-scanning) per più informazioni),
+(fai riferimento alla documentazione [Hub security](https://huggingface.co/docs/hub/security#malware-scanning) per più informazioni),
 ma dovresti comunque assicurarti dell'affidabilità del codice e dell'autore per evitare di eseguire codice dannoso sulla tua macchina. 
 Imposta `trust_remote_code=True` per usare un modello con codice personalizzato:
 

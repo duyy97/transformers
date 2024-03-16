@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 GPT_BIGCODE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "bigcode/gpt_bigcode-santacoder": "https://hf-mirror.com/bigcode/gpt_bigcode-santacoder/resolve/main/config.json",
+    "bigcode/gpt_bigcode-santacoder": "https://huggingface.co/bigcode/gpt_bigcode-santacoder/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class GPTBigCodeConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GPTBigCodeModel`]. It is used to instantiate a
     GPTBigCode model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the GPTBigCode
-    [gpt_bigcode](https://hf-mirror.com/gpt_bigcode) architecture.
+    [gpt_bigcode](https://huggingface.co/gpt_bigcode) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

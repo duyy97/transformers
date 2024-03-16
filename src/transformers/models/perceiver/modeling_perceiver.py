@@ -53,7 +53,7 @@ _CONFIG_FOR_DOC = "PerceiverConfig"
 
 PERCEIVER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "deepmind/language-perceiver",
-    # See all Perceiver models at https://hf-mirror.com/models?filter=perceiver
+    # See all Perceiver models at https://huggingface.co/models?filter=perceiver
 ]
 
 

@@ -227,7 +227,7 @@ class ConversationalPipeline(Pipeline):
     `"conversational"`.
 
     This pipeline can be used with any model that has a [chat
-    template](https://hf-mirror.com/docs/transformers/chat_templating) set.
+    template](https://huggingface.co/docs/transformers/chat_templating) set.
     """
 
     def __init__(self, *args, **kwargs):

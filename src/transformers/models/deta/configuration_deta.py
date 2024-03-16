@@ -23,7 +23,7 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 DETA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "ut/deta": "https://hf-mirror.com/ut/deta/resolve/main/config.json",
+    "ut/deta": "https://huggingface.co/ut/deta/resolve/main/config.json",
 }
 
 
@@ -32,7 +32,7 @@ class DetaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DetaModel`]. It is used to instantiate a DETA
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the DETA
-    [SenseTime/deformable-detr](https://hf-mirror.com/SenseTime/deformable-detr) architecture.
+    [SenseTime/deformable-detr](https://huggingface.co/SenseTime/deformable-detr) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

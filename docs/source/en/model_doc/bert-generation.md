@@ -33,7 +33,7 @@ GPT-2 and RoBERTa checkpoints and conducted an extensive empirical study on the 
 encoder and decoder, with these checkpoints. Our models result in new state-of-the-art results on Machine Translation,
 Text Summarization, Sentence Splitting, and Sentence Fusion.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The original code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The original code can be
 found [here](https://tfhub.dev/s?module-type=text-generation&subtype=module,placeholder).
 
 ## Usage examples and tips

@@ -66,7 +66,7 @@ to a given token).
 
 ## PreTrainedTokenizerFast
 
-The [`PreTrainedTokenizerFast`] depend on the [tokenizers](https://hf-mirror.com/docs/tokenizers) library. The tokenizers obtained from the 🤗 tokenizers library can be
+The [`PreTrainedTokenizerFast`] depend on the [tokenizers](https://huggingface.co/docs/tokenizers) library. The tokenizers obtained from the 🤗 tokenizers library can be
 loaded very simply into 🤗 transformers. Take a look at the [Using tokenizers from 🤗 tokenizers](../fast_tokenizers) page to understand how this is done.
 
 [[autodoc]] PreTrainedTokenizerFast

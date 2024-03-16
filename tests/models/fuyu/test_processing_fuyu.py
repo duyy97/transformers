@@ -32,7 +32,7 @@ class FuyuProcessingTest(unittest.TestCase):  # TODO Which mixins do we add here
 
         self.processor = FuyuProcessor(image_processor=self.image_processor, tokenizer=self.tokenizer)
         self.text_prompt = "Generate a coco-style caption.\\n"
-        bus_image_url = "https://hf-mirror.com/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
+        bus_image_url = "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
         self.bus_image_pil = Image.open(io.BytesIO(requests.get(bus_image_url).content))
 
     def test_fuyu_processing(self):

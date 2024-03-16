@@ -31,13 +31,13 @@ We therefore advise you to use these models for the tasks they have been fine tu
 
 If you want to use the model to perform conditional text captioning, make sure to use the processor with `add_special_tokens=False`.
 
-This model was contributed by [ybelkada](https://hf-mirror.com/ybelkada).
+This model was contributed by [ybelkada](https://huggingface.co/ybelkada).
 The original code can be found [here](https://github.com/google-research/pix2struct).
 
 ## Resources
 
 - [Fine-tuning Notebook](https://github.com/huggingface/notebooks/blob/main/examples/image_captioning_pix2struct.ipynb)
-- [All models](https://hf-mirror.com/models?search=pix2struct)
+- [All models](https://huggingface.co/models?search=pix2struct)
 
 ## Pix2StructConfig
 

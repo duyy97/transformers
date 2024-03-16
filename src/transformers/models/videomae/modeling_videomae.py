@@ -49,7 +49,7 @@ _CHECKPOINT_FOR_DOC = "MCG-NJU/videomae-base"
 
 VIDEOMAE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "MCG-NJU/videomae-base",
-    # See all VideoMAE models at https://hf-mirror.com/models?filter=videomae
+    # See all VideoMAE models at https://huggingface.co/models?filter=videomae
 ]
 
 

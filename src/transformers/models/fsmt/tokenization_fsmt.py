@@ -35,12 +35,12 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "src_vocab_file": {
-        "stas/tiny-wmt19-en-de": "https://hf-mirror.com/stas/tiny-wmt19-en-de/resolve/main/vocab-src.json"
+        "stas/tiny-wmt19-en-de": "https://huggingface.co/stas/tiny-wmt19-en-de/resolve/main/vocab-src.json"
     },
     "tgt_vocab_file": {
-        "stas/tiny-wmt19-en-de": "https://hf-mirror.com/stas/tiny-wmt19-en-de/resolve/main/vocab-tgt.json"
+        "stas/tiny-wmt19-en-de": "https://huggingface.co/stas/tiny-wmt19-en-de/resolve/main/vocab-tgt.json"
     },
-    "merges_file": {"stas/tiny-wmt19-en-de": "https://hf-mirror.com/stas/tiny-wmt19-en-de/resolve/main/merges.txt"},
+    "merges_file": {"stas/tiny-wmt19-en-de": "https://huggingface.co/stas/tiny-wmt19-en-de/resolve/main/merges.txt"},
 }
 
 PRETRAINED_POSITIONAL_EMBEDDINGS_SIZES = {"stas/tiny-wmt19-en-de": 1024}

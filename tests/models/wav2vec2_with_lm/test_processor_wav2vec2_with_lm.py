@@ -335,7 +335,7 @@ class Wav2Vec2ProcessorWithLMTest(unittest.TestCase):
         expected_decoder_files.sort()
 
         # test that only decoder relevant files from
-        # https://hf-mirror.com/hf-internal-testing/processor_with_lm/tree/main
+        # https://huggingface.co/hf-internal-testing/processor_with_lm/tree/main
         # are downloaded and none of the rest (e.g. README.md, ...)
         self.assertListEqual(downloaded_decoder_files, expected_decoder_files)
 

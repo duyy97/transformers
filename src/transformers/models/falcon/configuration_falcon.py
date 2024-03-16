@@ -20,8 +20,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 FALCON_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "tiiuae/falcon-40b": "https://hf-mirror.com/tiiuae/falcon-40b/resolve/main/config.json",
-    "tiiuae/falcon-7b": "https://hf-mirror.com/tiiuae/falcon-7b/resolve/main/config.json",
+    "tiiuae/falcon-40b": "https://huggingface.co/tiiuae/falcon-40b/resolve/main/config.json",
+    "tiiuae/falcon-7b": "https://huggingface.co/tiiuae/falcon-7b/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class FalconConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`FalconModel`]. It is used to instantiate a Falcon
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the
-    [tiiuae/falcon-7b](https://hf-mirror.com/tiiuae/falcon-7b) architecture.
+    [tiiuae/falcon-7b](https://huggingface.co/tiiuae/falcon-7b) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

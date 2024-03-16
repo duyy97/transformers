@@ -37,9 +37,9 @@ SPIECE_UNDERLINE = "▁"
 VOCAB_FILES_NAMES = {"vocab_file": "spiece.model", "tokenizer_file": "tokenizer.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
-    "vocab_file": {"google/pegasus-xsum": "https://hf-mirror.com/google/pegasus-xsum/resolve/main/spiece.model"},
+    "vocab_file": {"google/pegasus-xsum": "https://huggingface.co/google/pegasus-xsum/resolve/main/spiece.model"},
     "tokenizer_file": {
-        "google/pegasus-xsum": "https://hf-mirror.com/google/pegasus-xsum/resolve/main/tokenizer.json"
+        "google/pegasus-xsum": "https://huggingface.co/google/pegasus-xsum/resolve/main/tokenizer.json"
     },
 }
 
@@ -51,7 +51,7 @@ PRETRAINED_POSITIONAL_EMBEDDINGS_SIZES = {
 class PegasusTokenizerFast(PreTrainedTokenizerFast):
     r"""
     Construct a "fast" PEGASUS tokenizer (backed by HuggingFace's *tokenizers* library). Based on
-    [Unigram](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=unigram#models).
+    [Unigram](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=unigram#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

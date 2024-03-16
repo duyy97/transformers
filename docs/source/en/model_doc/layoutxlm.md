@@ -33,7 +33,7 @@ introduce a multilingual form understanding benchmark dataset named XFUN, which 
 for each language. Experiment results show that the LayoutXLM model has significantly outperformed the existing SOTA
 cross-lingual pre-trained models on the XFUN dataset.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/microsoft/unilm).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/microsoft/unilm).
 
 ## Usage tips and examples
 

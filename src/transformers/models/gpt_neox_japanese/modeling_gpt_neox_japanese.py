@@ -35,8 +35,8 @@ _CHECKPOINT_FOR_DOC = "abeja/gpt-neox-japanese-2.7b"
 _CONFIG_FOR_DOC = "GPTNeoXJapaneseConfig"
 
 GPT_NEOX_JAPANESE_PRETRAINED_MODEL_ARCHIVE_LIST = {
-    "https://hf-mirror.com/abeja/gpt-neox-japanese-2.7b/resolve/main/config.json",
-    # See all GPTNeoXJapanese models at https://hf-mirror.com/models?filter=gpt_neox_japanese
+    "https://huggingface.co/abeja/gpt-neox-japanese-2.7b/resolve/main/config.json",
+    # See all GPTNeoXJapanese models at https://huggingface.co/models?filter=gpt_neox_japanese
 }
 
 

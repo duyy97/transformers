@@ -31,12 +31,12 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt", "tokenizer_file": "tokenizer.jso
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "yjernite/retribert-base-uncased": (
-            "https://hf-mirror.com/yjernite/retribert-base-uncased/resolve/main/vocab.txt"
+            "https://huggingface.co/yjernite/retribert-base-uncased/resolve/main/vocab.txt"
         ),
     },
     "tokenizer_file": {
         "yjernite/retribert-base-uncased": (
-            "https://hf-mirror.com/yjernite/retribert-base-uncased/resolve/main/tokenizer.json"
+            "https://huggingface.co/yjernite/retribert-base-uncased/resolve/main/tokenizer.json"
         ),
     },
 }

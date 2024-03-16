@@ -31,34 +31,34 @@ FlashAttention-2 is experimental and may change considerably in future versions.
 
 </Tip>
 
-[FlashAttention-2](https://hf-mirror.com/papers/2205.14135) is a faster and more efficient implementation of the standard attention mechanism that can significantly speedup inference by:
+[FlashAttention-2](https://huggingface.co/papers/2205.14135) is a faster and more efficient implementation of the standard attention mechanism that can significantly speedup inference by:
 
 1. additionally parallelizing the attention computation over sequence length
 2. partitioning the work between GPU threads to reduce communication and shared memory reads/writes between them
 
 FlashAttention-2 is currently supported for the following architectures:
-* [Bark](https://hf-mirror.com/docs/transformers/model_doc/bark#transformers.BarkModel)
-* [Bart](https://hf-mirror.com/docs/transformers/model_doc/bart#transformers.BartModel)
-* [Cohere](https://hf-mirror.com/docs/transformers/model_doc/cohere#transformers.CohereModel)
-* [DistilBert](https://hf-mirror.com/docs/transformers/model_doc/distilbert#transformers.DistilBertModel)
-* [Gemma](https://hf-mirror.com/docs/transformers/model_doc/gemma#transformers.GemmaModel)
-* [GPTBigCode](https://hf-mirror.com/docs/transformers/model_doc/gpt_bigcode#transformers.GPTBigCodeModel)
-* [GPTNeo](https://hf-mirror.com/docs/transformers/model_doc/gpt_neo#transformers.GPTNeoModel)
-* [GPTNeoX](https://hf-mirror.com/docs/transformers/model_doc/gpt_neox#transformers.GPTNeoXModel)
-* [GPT-J](https://hf-mirror.com/docs/transformers/model_doc/gptj#transformers.GPTJModel)
-* [Falcon](https://hf-mirror.com/docs/transformers/model_doc/falcon#transformers.FalconModel)
-* [Llama](https://hf-mirror.com/docs/transformers/model_doc/llama#transformers.LlamaModel)
-* [Llava](https://hf-mirror.com/docs/transformers/model_doc/llava)
-* [VipLlava](https://hf-mirror.com/docs/transformers/model_doc/vipllava)
-* [MBart](https://hf-mirror.com/docs/transformers/model_doc/mbart#transformers.MBartModel)
-* [Mistral](https://hf-mirror.com/docs/transformers/model_doc/mistral#transformers.MistralModel)
-* [Mixtral](https://hf-mirror.com/docs/transformers/model_doc/mixtral#transformers.MixtralModel)
-* [OPT](https://hf-mirror.com/docs/transformers/model_doc/opt#transformers.OPTModel)
-* [Phi](https://hf-mirror.com/docs/transformers/model_doc/phi#transformers.PhiModel)
-* [StableLm](https://hf-mirror.com/docs/transformers/model_doc/stablelm#transformers.StableLmModel)
-* [Starcoder2](https://hf-mirror.com/docs/transformers/model_doc/starcoder2#transformers.Starcoder2Model)
-* [Qwen2](https://hf-mirror.com/docs/transformers/model_doc/qwen2#transformers.Qwen2Model)
-* [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper#transformers.WhisperModel)
+* [Bark](https://huggingface.co/docs/transformers/model_doc/bark#transformers.BarkModel)
+* [Bart](https://huggingface.co/docs/transformers/model_doc/bart#transformers.BartModel)
+* [Cohere](https://huggingface.co/docs/transformers/model_doc/cohere#transformers.CohereModel)
+* [DistilBert](https://huggingface.co/docs/transformers/model_doc/distilbert#transformers.DistilBertModel)
+* [Gemma](https://huggingface.co/docs/transformers/model_doc/gemma#transformers.GemmaModel)
+* [GPTBigCode](https://huggingface.co/docs/transformers/model_doc/gpt_bigcode#transformers.GPTBigCodeModel)
+* [GPTNeo](https://huggingface.co/docs/transformers/model_doc/gpt_neo#transformers.GPTNeoModel)
+* [GPTNeoX](https://huggingface.co/docs/transformers/model_doc/gpt_neox#transformers.GPTNeoXModel)
+* [GPT-J](https://huggingface.co/docs/transformers/model_doc/gptj#transformers.GPTJModel)
+* [Falcon](https://huggingface.co/docs/transformers/model_doc/falcon#transformers.FalconModel)
+* [Llama](https://huggingface.co/docs/transformers/model_doc/llama#transformers.LlamaModel)
+* [Llava](https://huggingface.co/docs/transformers/model_doc/llava)
+* [VipLlava](https://huggingface.co/docs/transformers/model_doc/vipllava)
+* [MBart](https://huggingface.co/docs/transformers/model_doc/mbart#transformers.MBartModel)
+* [Mistral](https://huggingface.co/docs/transformers/model_doc/mistral#transformers.MistralModel)
+* [Mixtral](https://huggingface.co/docs/transformers/model_doc/mixtral#transformers.MixtralModel)
+* [OPT](https://huggingface.co/docs/transformers/model_doc/opt#transformers.OPTModel)
+* [Phi](https://huggingface.co/docs/transformers/model_doc/phi#transformers.PhiModel)
+* [StableLm](https://huggingface.co/docs/transformers/model_doc/stablelm#transformers.StableLmModel)
+* [Starcoder2](https://huggingface.co/docs/transformers/model_doc/starcoder2#transformers.Starcoder2Model)
+* [Qwen2](https://huggingface.co/docs/transformers/model_doc/qwen2#transformers.Qwen2Model)
+* [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper#transformers.WhisperModel)
 
 You can request to add FlashAttention-2 support for another model by opening a GitHub Issue or Pull Request.
 
@@ -140,19 +140,19 @@ To overcome this, you should use FlashAttention-2 without padding tokens in the 
 For a single forward pass on [tiiuae/falcon-7b](https://hf.co/tiiuae/falcon-7b) with a sequence length of 4096 and various batch sizes without padding tokens, the expected speedup is:
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/falcon-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/falcon-7b-inference-large-seqlen.png">
 </div>
 
 For a single forward pass on [meta-llama/Llama-7b-hf](https://hf.co/meta-llama/Llama-7b-hf) with a sequence length of 4096 and various batch sizes without padding tokens, the expected speedup is:
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-7b-inference-large-seqlen.png">
 </div>
 
 For sequences with padding tokens (generating with padding tokens), you need to unpad/pad the input sequences to correctly compute the attention scores. With a relatively small sequence length, a single forward pass creates overhead leading to a small speedup (in the example below, 30% of the input is filled with padding tokens):
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-2-small-seqlen-padding.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-2-small-seqlen-padding.png">
 </div>
 
 But for larger sequence lengths, you can expect even more speedup benefits:
@@ -164,7 +164,7 @@ FlashAttention is more memory efficient, meaning you can train on much larger se
 </Tip>
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-2-large-seqlen-padding.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-2-large-seqlen-padding.png">
 </div>
 
 ## PyTorch scaled dot product attention
@@ -172,20 +172,20 @@ FlashAttention is more memory efficient, meaning you can train on much larger se
 PyTorch's [`torch.nn.functional.scaled_dot_product_attention`](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention.html) (SDPA) can also call FlashAttention and memory-efficient attention kernels under the hood. SDPA support is currently being added natively in Transformers and is used by default for `torch>=2.1.1` when an implementation is available.
 
 For now, Transformers supports SDPA inference and training for the following architectures:
-* [Bart](https://hf-mirror.com/docs/transformers/model_doc/bart#transformers.BartModel)
-* [Cohere](https://hf-mirror.com/docs/transformers/model_doc/cohere#transformers.CohereModel)
-* [GPTBigCode](https://hf-mirror.com/docs/transformers/model_doc/gpt_bigcode#transformers.GPTBigCodeModel)
-* [Falcon](https://hf-mirror.com/docs/transformers/model_doc/falcon#transformers.FalconModel)
-* [Gemma](https://hf-mirror.com/docs/transformers/model_doc/gemma#transformers.GemmaModel)
-* [Llama](https://hf-mirror.com/docs/transformers/model_doc/llama#transformers.LlamaModel)
-* [Phi](https://hf-mirror.com/docs/transformers/model_doc/phi#transformers.PhiModel)
-* [Idefics](https://hf-mirror.com/docs/transformers/model_doc/idefics#transformers.IdeficsModel)
-* [Whisper](https://hf-mirror.com/docs/transformers/model_doc/whisper#transformers.WhisperModel)
-* [Mistral](https://hf-mirror.com/docs/transformers/model_doc/mistral#transformers.MistralModel)
-* [Mixtral](https://hf-mirror.com/docs/transformers/model_doc/mixtral#transformers.MixtralModel)
-* [StableLm](https://hf-mirror.com/docs/transformers/model_doc/stablelm#transformers.StableLmModel)
-* [Starcoder2](https://hf-mirror.com/docs/transformers/model_doc/starcoder2#transformers.Starcoder2Model)
-* [Qwen2](https://hf-mirror.com/docs/transformers/model_doc/qwen2#transformers.Qwen2Model)
+* [Bart](https://huggingface.co/docs/transformers/model_doc/bart#transformers.BartModel)
+* [Cohere](https://huggingface.co/docs/transformers/model_doc/cohere#transformers.CohereModel)
+* [GPTBigCode](https://huggingface.co/docs/transformers/model_doc/gpt_bigcode#transformers.GPTBigCodeModel)
+* [Falcon](https://huggingface.co/docs/transformers/model_doc/falcon#transformers.FalconModel)
+* [Gemma](https://huggingface.co/docs/transformers/model_doc/gemma#transformers.GemmaModel)
+* [Llama](https://huggingface.co/docs/transformers/model_doc/llama#transformers.LlamaModel)
+* [Phi](https://huggingface.co/docs/transformers/model_doc/phi#transformers.PhiModel)
+* [Idefics](https://huggingface.co/docs/transformers/model_doc/idefics#transformers.IdeficsModel)
+* [Whisper](https://huggingface.co/docs/transformers/model_doc/whisper#transformers.WhisperModel)
+* [Mistral](https://huggingface.co/docs/transformers/model_doc/mistral#transformers.MistralModel)
+* [Mixtral](https://huggingface.co/docs/transformers/model_doc/mixtral#transformers.MixtralModel)
+* [StableLm](https://huggingface.co/docs/transformers/model_doc/stablelm#transformers.StableLmModel)
+* [Starcoder2](https://huggingface.co/docs/transformers/model_doc/starcoder2#transformers.Starcoder2Model)
+* [Qwen2](https://huggingface.co/docs/transformers/model_doc/qwen2#transformers.Qwen2Model)
 
 <Tip>
 
@@ -241,9 +241,9 @@ BetterTransformer accelerates inference with its fastpath (native PyTorch specia
 1. fusion, which combines multiple sequential operations into a single "kernel" to reduce the number of computation steps
 2. skipping the inherent sparsity of padding tokens to avoid unnecessary computation with nested tensors
 
-BetterTransformer also converts all attention operations to use the more memory-efficient [scaled dot product attention (SDPA)](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention), and it calls optimized kernels like [FlashAttention](https://hf-mirror.com/papers/2205.14135) under the hood.
+BetterTransformer also converts all attention operations to use the more memory-efficient [scaled dot product attention (SDPA)](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention), and it calls optimized kernels like [FlashAttention](https://huggingface.co/papers/2205.14135) under the hood.
 
-Before you start, make sure you have 🤗 Optimum [installed](https://hf-mirror.com/docs/optimum/installation).
+Before you start, make sure you have 🤗 Optimum [installed](https://huggingface.co/docs/optimum/installation).
 
 Then you can enable BetterTransformer with the [`PreTrainedModel.to_bettertransformer`] method:
 
@@ -297,7 +297,7 @@ model_4bit = AutoModelForCausalLM.from_pretrained(
 
 <Tip>
 
-If you're curious and interested in learning more about the concepts underlying 8-bit quantization, read the [Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using Hugging Face Transformers, Accelerate and bitsandbytes](https://hf-mirror.com/blog/hf-bitsandbytes-integration) blog post.
+If you're curious and interested in learning more about the concepts underlying 8-bit quantization, read the [Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using Hugging Face Transformers, Accelerate and bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration) blog post.
 
 </Tip>
 
@@ -345,13 +345,13 @@ Feel free to try running a 11 billion parameter [T5 model](https://colab.researc
 
 <Tip>
 
-Learn more details about using ORT with 🤗 Optimum in the [Accelerated inference on NVIDIA GPUs](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/gpu#accelerated-inference-on-nvidia-gpus) and [Accelerated inference on AMD GPUs](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/amdgpu#accelerated-inference-on-amd-gpus) guides. This section only provides a brief and simple example.
+Learn more details about using ORT with 🤗 Optimum in the [Accelerated inference on NVIDIA GPUs](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/gpu#accelerated-inference-on-nvidia-gpus) and [Accelerated inference on AMD GPUs](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/amdgpu#accelerated-inference-on-amd-gpus) guides. This section only provides a brief and simple example.
 
 </Tip>
 
 ONNX Runtime (ORT) is a model accelerator that supports accelerated inference on Nvidia GPUs, and AMD GPUs that use [ROCm](https://www.amd.com/en/products/software/rocm.html) stack. ORT uses optimization techniques like fusing common operations into a single node and constant folding to reduce the number of computations performed and speedup inference. ORT also places the most computationally intensive operations on the GPU and the rest on the CPU to intelligently distribute the workload between the two devices.
 
-ORT is supported by 🤗 Optimum which can be used in 🤗 Transformers. You'll need to use an [`~optimum.onnxruntime.ORTModel`] for the task you're solving, and specify the `provider` parameter which can be set to either [`CUDAExecutionProvider`](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/gpu#cudaexecutionprovider), [`ROCMExecutionProvider`](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/amdgpu) or [`TensorrtExecutionProvider`](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/gpu#tensorrtexecutionprovider). If you want to load a model that was not yet exported to ONNX, you can set `export=True` to convert your model on-the-fly to the ONNX format:
+ORT is supported by 🤗 Optimum which can be used in 🤗 Transformers. You'll need to use an [`~optimum.onnxruntime.ORTModel`] for the task you're solving, and specify the `provider` parameter which can be set to either [`CUDAExecutionProvider`](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/gpu#cudaexecutionprovider), [`ROCMExecutionProvider`](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/amdgpu) or [`TensorrtExecutionProvider`](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/gpu#tensorrtexecutionprovider). If you want to load a model that was not yet exported to ONNX, you can set `export=True` to convert your model on-the-fly to the ONNX format:
 
 ```py
 from optimum.onnxruntime import ORTModelForSequenceClassification

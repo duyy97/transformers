@@ -609,7 +609,7 @@ MARIAN_START_DOCSTRING = r"""
 
 MARIAN_GENERATION_EXAMPLE = r"""
         TF version of marian-nmt's transformer.h (c++). Designed for the OPUS-NMT translation checkpoints. Available
-        models are listed [here](https://hf-mirror.com/models?search=Helsinki-NLP).
+        models are listed [here](https://huggingface.co/models?search=Helsinki-NLP).
 
         Examples:
 

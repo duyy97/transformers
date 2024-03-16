@@ -27,12 +27,12 @@ Apprentissage automatique de pointe pour [PyTorch](https://pytorch.org/), [Tenso
 
 🤗 Transformers prend en charge l'interopérabilité entre PyTorch, TensorFlow et JAX. Cela permet d'utiliser un framework différent à chaque étape de la vie d'un modèle, par exemple entraîner un modèle en trois lignes de code avec un framework, et le charger pour l'inférence avec un autre. Les modèles peuvent également être exportés dans un format comme ONNX et TorchScript pour être déployés dans des environnements de production.
 
-Rejoignez la communauté grandissante sur le [Hub](https://hf-mirror.com/models), le [forum](https://discuss.hf-mirror.com/) ou [Discord](https://discord.com/invite/JfAtkvEtRb) dès aujourd'hui !
+Rejoignez la communauté grandissante sur le [Hub](https://huggingface.co/models), le [forum](https://discuss.huggingface.co/) ou [Discord](https://discord.com/invite/JfAtkvEtRb) dès aujourd'hui !
 
 ## Si vous cherchez un support personnalisé de l'équipe Hugging Face
 
-<a target="_blank" href="https://hf-mirror.com/support">
-    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.hf-mirror.com/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+<a target="_blank" href="https://huggingface.co/support">
+    <img alt="HuggingFace Expert Acceleration Program" src="https://cdn-media.huggingface.co/marketing/transformers/new-support-improved.png" style="width: 100%; max-width: 600px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
 </a>
 
 ## Contents
@@ -71,7 +71,7 @@ La documentation est organisée en 5 parties:
 1. **[Blenderbot](model_doc/blenderbot)** (from Facebook) released with the paper [Recipes for building an open-domain chatbot](https://arxiv.org/abs/2004.13637) by Stephen Roller, Emily Dinan, Naman Goyal, Da Ju, Mary Williamson, Yinhan Liu, Jing Xu, Myle Ott, Kurt Shuster, Eric M. Smith, Y-Lan Boureau, Jason Weston.
 1. **[BlenderbotSmall](model_doc/blenderbot-small)** (from Facebook) released with the paper [Recipes for building an open-domain chatbot](https://arxiv.org/abs/2004.13637) by Stephen Roller, Emily Dinan, Naman Goyal, Da Ju, Mary Williamson, Yinhan Liu, Jing Xu, Myle Ott, Kurt Shuster, Eric M. Smith, Y-Lan Boureau, Jason Weston.
 1. **[BLIP](model_doc/blip)** (from Salesforce) released with the paper [BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation](https://arxiv.org/abs/2201.12086) by Junnan Li, Dongxu Li, Caiming Xiong, Steven Hoi.
-1. **[BLOOM](model_doc/bloom)** (from BigScience workshop) released by the [BigScience Workshop](https://bigscience.hf-mirror.com/).
+1. **[BLOOM](model_doc/bloom)** (from BigScience workshop) released by the [BigScience Workshop](https://bigscience.huggingface.co/).
 1. **[BORT](model_doc/bort)** (from Alexa) released with the paper [Optimal Subarchitecture Extraction For BERT](https://arxiv.org/abs/2010.10499) by Adrian de Wynter and Daniel J. Perry.
 1. **[BridgeTower](model_doc/bridgetower)** (from Harbin Institute of Technology/Microsoft Research Asia/Intel Labs) released with the paper [BridgeTower: Building Bridges Between Encoders in Vision-Language Representation Learning](https://arxiv.org/abs/2206.08657) by Xiao Xu, Chenfei Wu, Shachar Rosenman, Vasudev Lal, Wanxiang Che, Nan Duan.
 1. **[ByT5](model_doc/byt5)** (from Google Research) released with the paper [ByT5: Towards a token-free future with pre-trained byte-to-byte models](https://arxiv.org/abs/2105.13626) by Linting Xue, Aditya Barua, Noah Constant, Rami Al-Rfou, Sharan Narang, Mihir Kale, Adam Roberts, Colin Raffel.

@@ -36,7 +36,7 @@ $$\text{PPL}(X) = \exp \left\{ {-\frac{1}{t}\sum_i^t \log p_\theta (x_i|x_{<i}) 
 모델의 컨텍스트 크기가 정해져있지 않다면,
 아래와 같이 시퀀스를 자동 회귀적으로 분해하고 각 단계에서 선행 하는 전체 시퀀스를 조건부 확률에 넣어 모델의 펄플렉서티를 계산할 것입니다.
 
-<img width="600" alt="Full decomposition of a sequence with unlimited context length" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_full.gif"/>
+<img width="600" alt="Full decomposition of a sequence with unlimited context length" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_full.gif"/>
 
 그러나 모델의 근사치를 구할 때는 일반적으로 모델이 처리할 수 있는 토큰 수에 제한이 있습니다.
 예를 들어, 가장 큰 버전의 [GPT-2](model_doc/gpt2)는 토큰의 길이가 1024로 고정되어 있습니다.
@@ -49,7 +49,7 @@ $$\text{PPL}(X) = \exp \left\{ {-\frac{1}{t}\sum_i^t \log p_\theta (x_i|x_{<i}) 
 모델의 시퀀스에 대한 펄플렉서티를 계산할 때,
 수월하지만 차선책은 시퀀스를 청크로 쪼개고 분해된 각 부분의 로그 우도 값을 독립적으로 합산하는 것입니다.
 
-<img width="600" alt="Suboptimal PPL not taking advantage of full available context" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_chunked.gif"/>
+<img width="600" alt="Suboptimal PPL not taking advantage of full available context" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_chunked.gif"/>
 
 이 방법은 각 부분의 펄플렉서티를 한 번의 포워드 패스로 계산할 수 있어 빠르지만 일반적으로 더 높은(더 나쁜) PPL을 산출합니다.
 왜냐하면 대부분의 예측 단계에서 모델의 컨텍스트가 적기 때문입니다.
@@ -57,7 +57,7 @@ $$\text{PPL}(X) = \exp \left\{ {-\frac{1}{t}\sum_i^t \log p_\theta (x_i|x_{<i}) 
 대신, 고정 길이 모델의 PPL은 슬라이딩 윈도우 전략으로 평가해야 합니다.
 이 전략에는 컨텍스트 윈도우을 반복적으로 슬라이딩해 모델이 각 예측을 수행할 때 더 많은 컨텍스트를 갖도록 하는 작업이 포함됩니다.
 
-<img width="600" alt="Sliding window PPL taking advantage of all available context" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/ppl_sliding.gif"/>
+<img width="600" alt="Sliding window PPL taking advantage of all available context" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/ppl_sliding.gif"/>
 
 이는 시퀀스 확률의 실제 분해에 더 가까운 근사치이며 일반적으로 더 유리한 점수를 산출합니다.
 단점은 말뭉치의 각 토큰에 대해 별도의 포워드 패스가 필요하다는 것입니다.

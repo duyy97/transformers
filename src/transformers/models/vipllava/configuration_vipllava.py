@@ -21,7 +21,7 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 VIPLLAVA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "ybelkada/vip-llava-7b-hf": "https://hf-mirror.com/llava-hf/vip-llava-7b-hf/resolve/main/config.json",
+    "ybelkada/vip-llava-7b-hf": "https://huggingface.co/llava-hf/vip-llava-7b-hf/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class VipLlavaConfig(PretrainedConfig):
     VipLlava model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the VipLlava-9B.
 
-    e.g. [ybelkada/vip-llava-7b-hf](https://hf-mirror.com/ybelkada/vip-llava-7b-hf)
+    e.g. [ybelkada/vip-llava-7b-hf](https://huggingface.co/ybelkada/vip-llava-7b-hf)
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

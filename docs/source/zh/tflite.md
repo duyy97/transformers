@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [TensorFlow Lite](https://www.tensorflow.org/lite/guide) 是一个轻量级框架，用于资源受限的设备上，如手机、嵌入式系统和物联网（IoT）设备，部署机器学习模型。TFLite 旨在在计算能力、内存和功耗有限的设备上优化和高效运行模型。模型以一种特殊的高效可移植格式表示，其文件扩展名为 `.tflite`。
 
-🤗 Optimum 通过 `exporters.tflite` 模块提供将 🤗 Transformers 模型导出至 TFLite 格式的功能。请参考 [🤗 Optimum 文档](https://hf-mirror.com/docs/optimum/exporters/tflite/overview) 以获取支持的模型架构列表。
+🤗 Optimum 通过 `exporters.tflite` 模块提供将 🤗 Transformers 模型导出至 TFLite 格式的功能。请参考 [🤗 Optimum 文档](https://huggingface.co/docs/optimum/exporters/tflite/overview) 以获取支持的模型架构列表。
 
 要将模型导出为 TFLite 格式，请安装所需的依赖项：
 
@@ -26,7 +26,7 @@ rendered properly in your Markdown viewer.
 pip install optimum[exporters-tf]
 ```
 
-请参阅 [🤗 Optimum 文档](https://hf-mirror.com/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model) 以查看所有可用参数，或者在命令行中查看帮助：
+请参阅 [🤗 Optimum 文档](https://huggingface.co/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model) 以查看所有可用参数，或者在命令行中查看帮助：
 
 ```bash
 optimum-cli export tflite --help

@@ -25,7 +25,7 @@ CLVP (Contrastive Language-Voice Pretrained Transformer) モデルは、James Be
 *近年、画像生成の分野は自己回帰変換器と DDPM の応用によって革命を起こしています。これらのアプローチは、画像生成のプロセスを段階的な確率的プロセスとしてモデル化し、大量のコンピューティングとデータを活用して画像の分布を学習します。パフォーマンスを向上させるこの方法論は、画像に限定される必要はありません。この論文では、画像生成ドメインの進歩を音声合成に適用する方法について説明します。その結果、表現力豊かなマルチ音声テキスト読み上げシステムである TorToise が誕生しました。
 
 
-このモデルは [Susnato Dhar](https://hf-mirror.com/susnato) によって提供されました。
+このモデルは [Susnato Dhar](https://huggingface.co/susnato) によって提供されました。
 元のコードは [ここ](https://github.com/neonbjb/tortoise-tts) にあります。
 
 ## Usage tips

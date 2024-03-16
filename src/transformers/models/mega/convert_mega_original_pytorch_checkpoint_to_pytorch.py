@@ -15,7 +15,7 @@
 
 """
 Convert Mega pretrained checkpoint. Built to convert the Masked LM checkpoint located at
-https://hf-mirror.com/mnaylor/mega-wikitext-103
+https://huggingface.co/mnaylor/mega-wikitext-103
 
 Requirements:
   - clone the Mega repo and install fairseq from there

@@ -32,7 +32,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model"}
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/nllb-200-distilled-600M": (
-            "https://hf-mirror.com/facebook/nllb-200-distilled-600M/blob/main/sentencepiece.bpe.model"
+            "https://huggingface.co/facebook/nllb-200-distilled-600M/blob/main/sentencepiece.bpe.model"
         ),
     }
 }

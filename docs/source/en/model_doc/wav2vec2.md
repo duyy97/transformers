@@ -31,7 +31,7 @@ of the art on the 100 hour subset while using 100 times less labeled data. Using
 pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech
 recognition with limited amounts of labeled data.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten).
 
 ## Usage tips
 
@@ -51,9 +51,9 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="automatic-speech-recognition"/>
 
-- A blog post on [boosting Wav2Vec2 with n-grams in 🤗 Transformers](https://hf-mirror.com/blog/wav2vec2-with-ngram).
-- A blog post on how to [finetune Wav2Vec2 for English ASR with 🤗 Transformers](https://hf-mirror.com/blog/fine-tune-wav2vec2-english).
-- A blog post on [finetuning XLS-R for Multi-Lingual ASR with 🤗 Transformers](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2).
+- A blog post on [boosting Wav2Vec2 with n-grams in 🤗 Transformers](https://huggingface.co/blog/wav2vec2-with-ngram).
+- A blog post on how to [finetune Wav2Vec2 for English ASR with 🤗 Transformers](https://huggingface.co/blog/fine-tune-wav2vec2-english).
+- A blog post on [finetuning XLS-R for Multi-Lingual ASR with 🤗 Transformers](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2).
 - A notebook on how to [create YouTube captions from any video by transcribing audio with Wav2Vec2](https://colab.research.google.com/github/Muennighoff/ytclipcc/blob/main/wav2vec_youtube_captions.ipynb). 🌎
 - [`Wav2Vec2ForCTC`] is supported by a notebook on [how to finetune a speech recognition model in English](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/speech_recognition.ipynb), and [how to finetune a speech recognition model in any language](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/multi_lingual_speech_recognition.ipynb).
 - [Automatic speech recognition task guide](../tasks/asr)

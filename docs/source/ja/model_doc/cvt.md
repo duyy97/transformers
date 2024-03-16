@@ -33,7 +33,7 @@ ImageNet-1k 上の他のビジョン トランスフォーマーや ResNet よ�
 ImageNet-22k、当社の CvT-W24 は、ImageNet-1k val set で 87.7\% というトップ 1 の精度を獲得しています。最後に、私たちの結果は、位置エンコーディングが、
 既存のビジョン トランスフォーマーの重要なコンポーネントであるこのコンポーネントは、モデルでは安全に削除できるため、高解像度のビジョン タスクの設計が簡素化されます。*
 
-このモデルは [anugunj](https://hf-mirror.com/anugunj) によって提供されました。元のコードは [ここ](https://github.com/microsoft/CvT) にあります。
+このモデルは [anugunj](https://huggingface.co/anugunj) によって提供されました。元のコードは [ここ](https://github.com/microsoft/CvT) にあります。
 
 ## Usage tips
 

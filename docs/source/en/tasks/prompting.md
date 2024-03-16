@@ -96,14 +96,14 @@ To run inference with an encoder-decoder, use the `text2text-generation` pipelin
 ### Base vs instruct/chat models
 
 Most of the recent LLM checkpoints available on 🤗 Hub come in two versions: base and instruct (or chat). For example, 
-[`tiiuae/falcon-7b`](https://hf-mirror.com/tiiuae/falcon-7b) and [`tiiuae/falcon-7b-instruct`](https://hf-mirror.com/tiiuae/falcon-7b-instruct).
+[`tiiuae/falcon-7b`](https://huggingface.co/tiiuae/falcon-7b) and [`tiiuae/falcon-7b-instruct`](https://huggingface.co/tiiuae/falcon-7b-instruct).
 
 Base models are excellent at completing the text when given an initial prompt, however, they are not ideal for NLP tasks 
 where they need to follow instructions, or for conversational use. This is where the instruct (chat) versions come in. 
 These checkpoints are the result of further fine-tuning of the pre-trained base versions on instructions and conversational data. 
 This additional fine-tuning makes them a better choice for many NLP tasks.  
 
-Let's illustrate some simple prompts that you can use with [`tiiuae/falcon-7b-instruct`](https://hf-mirror.com/tiiuae/falcon-7b-instruct) 
+Let's illustrate some simple prompts that you can use with [`tiiuae/falcon-7b-instruct`](https://huggingface.co/tiiuae/falcon-7b-instruct) 
 to solve some common NLP tasks.
 
 ### NLP tasks 
@@ -407,7 +407,7 @@ There are two ways of steering a model to producing the reasoning steps:
 - by instructing the model to reason by adding phrases like "Let's think step by step" or "Take a deep breath and work through the problem step by step."
 
 If we apply the CoT technique to the muffins example from the [reasoning section](#reasoning) and use a larger model, 
-such as (`tiiuae/falcon-180B-chat`) which you can play with in the [HuggingChat](https://hf-mirror.com/chat/), 
+such as (`tiiuae/falcon-180B-chat`) which you can play with in the [HuggingChat](https://huggingface.co/chat/), 
 we'll get a significant improvement on the reasoning result:
 
 ```text

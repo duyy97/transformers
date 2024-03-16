@@ -86,7 +86,7 @@ _SEQ_CLASS_EXPECTED_LOSS = "4.72"
 
 TF_MOBILEBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/mobilebert-uncased",
-    # See all MobileBERT models at https://hf-mirror.com/models?filter=mobilebert
+    # See all MobileBERT models at https://huggingface.co/models?filter=mobilebert
 ]
 
 

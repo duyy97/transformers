@@ -43,47 +43,47 @@ _model_names = [
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "funnel-transformer/small": "https://hf-mirror.com/funnel-transformer/small/resolve/main/vocab.txt",
-        "funnel-transformer/small-base": "https://hf-mirror.com/funnel-transformer/small-base/resolve/main/vocab.txt",
-        "funnel-transformer/medium": "https://hf-mirror.com/funnel-transformer/medium/resolve/main/vocab.txt",
+        "funnel-transformer/small": "https://huggingface.co/funnel-transformer/small/resolve/main/vocab.txt",
+        "funnel-transformer/small-base": "https://huggingface.co/funnel-transformer/small-base/resolve/main/vocab.txt",
+        "funnel-transformer/medium": "https://huggingface.co/funnel-transformer/medium/resolve/main/vocab.txt",
         "funnel-transformer/medium-base": (
-            "https://hf-mirror.com/funnel-transformer/medium-base/resolve/main/vocab.txt"
+            "https://huggingface.co/funnel-transformer/medium-base/resolve/main/vocab.txt"
         ),
         "funnel-transformer/intermediate": (
-            "https://hf-mirror.com/funnel-transformer/intermediate/resolve/main/vocab.txt"
+            "https://huggingface.co/funnel-transformer/intermediate/resolve/main/vocab.txt"
         ),
         "funnel-transformer/intermediate-base": (
-            "https://hf-mirror.com/funnel-transformer/intermediate-base/resolve/main/vocab.txt"
+            "https://huggingface.co/funnel-transformer/intermediate-base/resolve/main/vocab.txt"
         ),
-        "funnel-transformer/large": "https://hf-mirror.com/funnel-transformer/large/resolve/main/vocab.txt",
-        "funnel-transformer/large-base": "https://hf-mirror.com/funnel-transformer/large-base/resolve/main/vocab.txt",
-        "funnel-transformer/xlarge": "https://hf-mirror.com/funnel-transformer/xlarge/resolve/main/vocab.txt",
+        "funnel-transformer/large": "https://huggingface.co/funnel-transformer/large/resolve/main/vocab.txt",
+        "funnel-transformer/large-base": "https://huggingface.co/funnel-transformer/large-base/resolve/main/vocab.txt",
+        "funnel-transformer/xlarge": "https://huggingface.co/funnel-transformer/xlarge/resolve/main/vocab.txt",
         "funnel-transformer/xlarge-base": (
-            "https://hf-mirror.com/funnel-transformer/xlarge-base/resolve/main/vocab.txt"
+            "https://huggingface.co/funnel-transformer/xlarge-base/resolve/main/vocab.txt"
         ),
     },
     "tokenizer_file": {
-        "funnel-transformer/small": "https://hf-mirror.com/funnel-transformer/small/resolve/main/tokenizer.json",
+        "funnel-transformer/small": "https://huggingface.co/funnel-transformer/small/resolve/main/tokenizer.json",
         "funnel-transformer/small-base": (
-            "https://hf-mirror.com/funnel-transformer/small-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/small-base/resolve/main/tokenizer.json"
         ),
-        "funnel-transformer/medium": "https://hf-mirror.com/funnel-transformer/medium/resolve/main/tokenizer.json",
+        "funnel-transformer/medium": "https://huggingface.co/funnel-transformer/medium/resolve/main/tokenizer.json",
         "funnel-transformer/medium-base": (
-            "https://hf-mirror.com/funnel-transformer/medium-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/medium-base/resolve/main/tokenizer.json"
         ),
         "funnel-transformer/intermediate": (
-            "https://hf-mirror.com/funnel-transformer/intermediate/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/intermediate/resolve/main/tokenizer.json"
         ),
         "funnel-transformer/intermediate-base": (
-            "https://hf-mirror.com/funnel-transformer/intermediate-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/intermediate-base/resolve/main/tokenizer.json"
         ),
-        "funnel-transformer/large": "https://hf-mirror.com/funnel-transformer/large/resolve/main/tokenizer.json",
+        "funnel-transformer/large": "https://huggingface.co/funnel-transformer/large/resolve/main/tokenizer.json",
         "funnel-transformer/large-base": (
-            "https://hf-mirror.com/funnel-transformer/large-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/large-base/resolve/main/tokenizer.json"
         ),
-        "funnel-transformer/xlarge": "https://hf-mirror.com/funnel-transformer/xlarge/resolve/main/tokenizer.json",
+        "funnel-transformer/xlarge": "https://huggingface.co/funnel-transformer/xlarge/resolve/main/tokenizer.json",
         "funnel-transformer/xlarge-base": (
-            "https://hf-mirror.com/funnel-transformer/xlarge-base/resolve/main/tokenizer.json"
+            "https://huggingface.co/funnel-transformer/xlarge-base/resolve/main/tokenizer.json"
         ),
     },
 }

@@ -40,7 +40,7 @@ for any dataset specific training. For instance, we match the accuracy of the or
 without needing to use any of the 1.28 million training examples it was trained on. We release our code and pre-trained
 model weights at this https URL.*
 
-This model was contributed by [valhalla](https://hf-mirror.com/valhalla). The original code can be found [here](https://github.com/openai/CLIP).
+This model was contributed by [valhalla](https://huggingface.co/valhalla). The original code can be found [here](https://github.com/openai/CLIP).
 
 ## Usage tips and example
 
@@ -83,7 +83,7 @@ encode the text and prepare the images. The following example shows how to get t
 
 A list of official Hugging Face and community (indicated by 🌎) resources to help you get started with CLIP.
 
-- [Fine tuning CLIP with Remote Sensing (Satellite) images and captions](https://hf-mirror.com/blog/fine-tune-clip-rsicd), a blog post about how to fine-tune CLIP with [RSICD dataset](https://github.com/201528014227051/RSICD_optimal) and comparison of performance changes due to data augmentation.
+- [Fine tuning CLIP with Remote Sensing (Satellite) images and captions](https://huggingface.co/blog/fine-tune-clip-rsicd), a blog post about how to fine-tune CLIP with [RSICD dataset](https://github.com/201528014227051/RSICD_optimal) and comparison of performance changes due to data augmentation.
 - This [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/contrastive-image-text) shows how to train a CLIP-like vision-text dual encoder model using a pre-trained vision and text encoder using [COCO dataset](https://cocodataset.org/#home).
 
 <PipelineTag pipeline="image-to-text"/>

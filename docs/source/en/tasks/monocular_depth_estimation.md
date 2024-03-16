@@ -50,7 +50,7 @@ pip install -q transformers
 ## Depth estimation pipeline
 
 The simplest way to try out inference with a model supporting depth estimation is to use the corresponding [`pipeline`].
-Instantiate a pipeline from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?pipeline_tag=depth-estimation&sort=downloads):
+Instantiate a pipeline from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?pipeline_tag=depth-estimation&sort=downloads):
 
 ```py
 >>> from transformers import pipeline
@@ -71,7 +71,7 @@ Next, choose an image to analyze:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg" alt="Photo of a busy street"/>
 </div>
 
 Pass the image to the pipeline.
@@ -91,14 +91,14 @@ Let's take a look at the visualized result:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>
 
 ## Depth estimation inference by hand
 
 Now that you've seen how to use the depth estimation pipeline, let's see how we can replicate the same result by hand.
 
-Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://hf-mirror.com/models?pipeline_tag=depth-estimation&sort=downloads).
+Start by loading the model and associated processor from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?pipeline_tag=depth-estimation&sort=downloads).
 Here we'll use the same checkpoint as before:
 
 ```py
@@ -147,5 +147,5 @@ Visualize the results:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-visualization.png" alt="Depth estimation visualization"/>
 </div>

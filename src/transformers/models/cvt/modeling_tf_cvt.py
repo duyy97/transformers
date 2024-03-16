@@ -56,7 +56,7 @@ TF_CVT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/cvt-21",
     "microsoft/cvt-21-384",
     "microsoft/cvt-21-384-22k",
-    # See all Cvt models at https://hf-mirror.com/models?filter=cvt
+    # See all Cvt models at https://huggingface.co/models?filter=cvt
 ]
 
 

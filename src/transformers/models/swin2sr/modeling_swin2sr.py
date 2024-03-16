@@ -51,7 +51,7 @@ _EXPECTED_OUTPUT_SHAPE = [1, 180, 488, 648]
 
 SWIN2SR_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "caidas/swin2SR-classical-sr-x2-64",
-    # See all Swin2SR models at https://hf-mirror.com/models?filter=swin2sr
+    # See all Swin2SR models at https://huggingface.co/models?filter=swin2sr
 ]
 
 
@@ -1119,7 +1119,7 @@ class Swin2SRForImageSuperResolution(Swin2SRPreTrainedModel):
          >>> processor = AutoImageProcessor.from_pretrained("caidas/swin2SR-classical-sr-x2-64")
          >>> model = Swin2SRForImageSuperResolution.from_pretrained("caidas/swin2SR-classical-sr-x2-64")
 
-         >>> url = "https://hf-mirror.com/spaces/jjourney1125/swin2sr/resolve/main/samples/butterfly.jpg"
+         >>> url = "https://huggingface.co/spaces/jjourney1125/swin2sr/resolve/main/samples/butterfly.jpg"
          >>> image = Image.open(requests.get(url, stream=True).raw)
          >>> # prepare image for the model
          >>> inputs = processor(image, return_tensors="pt")

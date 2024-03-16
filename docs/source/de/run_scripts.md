@@ -22,7 +22,7 @@ Sie werden auch Skripte finden, die wir in unseren [Forschungsprojekten](https:/
 
 Es wird nicht erwartet, dass die Beispielskripte bei jedem Problem sofort funktionieren. Möglicherweise müssen Sie das Skript an das Problem anpassen, das Sie zu lösen versuchen. Um Ihnen dabei zu helfen, legen die meisten Skripte vollständig offen, wie die Daten vorverarbeitet werden, so dass Sie sie nach Bedarf für Ihren Anwendungsfall bearbeiten können.
 
-Für jede Funktion, die Sie in einem Beispielskript implementieren möchten, diskutieren Sie bitte im [Forum](https://discuss.hf-mirror.com/) oder in einem [issue](https://github.com/huggingface/transformers/issues), bevor Sie einen Pull Request einreichen. Wir freuen uns zwar über Fehlerkorrekturen, aber es ist unwahrscheinlich, dass wir einen Pull Request zusammenführen, der mehr Funktionalität auf Kosten der Lesbarkeit hinzufügt.
+Für jede Funktion, die Sie in einem Beispielskript implementieren möchten, diskutieren Sie bitte im [Forum](https://discuss.huggingface.co/) oder in einem [issue](https://github.com/huggingface/transformers/issues), bevor Sie einen Pull Request einreichen. Wir freuen uns zwar über Fehlerkorrekturen, aber es ist unwahrscheinlich, dass wir einen Pull Request zusammenführen, der mehr Funktionalität auf Kosten der Lesbarkeit hinzufügt.
 
 Diese Anleitung zeigt Ihnen, wie Sie ein Beispiel für ein Trainingsskript zur Zusammenfassung in [PyTorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization) und [TensorFlow](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization) ausführen können. Sofern nicht anders angegeben, sollten alle Beispiele mit beiden Frameworks funktionieren.
 
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 <frameworkcontent>
 <pt>
-Das Beispielskript lädt einen Datensatz aus der 🤗 [Datasets](https://hf-mirror.com/docs/datasets/) Bibliothek herunter und verarbeitet ihn vor. Dann nimmt das Skript eine Feinabstimmung eines Datensatzes mit dem [Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) auf einer Architektur vor, die eine Zusammenfassung unterstützt. Das folgende Beispiel zeigt, wie die Feinabstimmung von [T5-small](https://hf-mirror.com/google-t5/t5-small) auf dem Datensatz [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) durchgeführt wird. Das T5-Modell benötigt aufgrund der Art und Weise, wie es trainiert wurde, ein zusätzliches Argument `source_prefix`. Mit dieser Eingabeaufforderung weiß T5, dass es sich um eine Zusammenfassungsaufgabe handelt.
+Das Beispielskript lädt einen Datensatz aus der 🤗 [Datasets](https://huggingface.co/docs/datasets/) Bibliothek herunter und verarbeitet ihn vor. Dann nimmt das Skript eine Feinabstimmung eines Datensatzes mit dem [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) auf einer Architektur vor, die eine Zusammenfassung unterstützt. Das folgende Beispiel zeigt, wie die Feinabstimmung von [T5-small](https://huggingface.co/google-t5/t5-small) auf dem Datensatz [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) durchgeführt wird. Das T5-Modell benötigt aufgrund der Art und Weise, wie es trainiert wurde, ein zusätzliches Argument `source_prefix`. Mit dieser Eingabeaufforderung weiß T5, dass es sich um eine Zusammenfassungsaufgabe handelt.
 
 ```bash
 python examples/pytorch/summarization/run_summarization.py \
@@ -105,7 +105,7 @@ python examples/pytorch/summarization/run_summarization.py \
 ```
 </pt>
 <tf>
-Das Beispielskript lädt einen Datensatz aus der 🤗 [Datasets](https://hf-mirror.com/docs/datasets/) Bibliothek herunter und verarbeitet ihn vor. Anschließend nimmt das Skript die Feinabstimmung eines Datensatzes mit Keras auf einer Architektur vor, die die Zusammenfassung unterstützt. Das folgende Beispiel zeigt, wie die Feinabstimmung von [T5-small](https://hf-mirror.com/google-t5/t5-small) auf dem [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) Datensatz durchgeführt wird. Das T5-Modell benötigt aufgrund der Art und Weise, wie es trainiert wurde, ein zusätzliches Argument `source_prefix`. Mit dieser Eingabeaufforderung weiß T5, dass es sich um eine Zusammenfassungsaufgabe handelt.
+Das Beispielskript lädt einen Datensatz aus der 🤗 [Datasets](https://huggingface.co/docs/datasets/) Bibliothek herunter und verarbeitet ihn vor. Anschließend nimmt das Skript die Feinabstimmung eines Datensatzes mit Keras auf einer Architektur vor, die die Zusammenfassung unterstützt. Das folgende Beispiel zeigt, wie die Feinabstimmung von [T5-small](https://huggingface.co/google-t5/t5-small) auf dem [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) Datensatz durchgeführt wird. Das T5-Modell benötigt aufgrund der Art und Weise, wie es trainiert wurde, ein zusätzliches Argument `source_prefix`. Mit dieser Eingabeaufforderung weiß T5, dass es sich um eine Zusammenfassungsaufgabe handelt.
 
 ```bash
 python examples/tensorflow/summarization/run_summarization.py  \
@@ -124,7 +124,7 @@ python examples/tensorflow/summarization/run_summarization.py  \
 
 ## Verteiltes Training und gemischte Präzision
 
-Der [Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) unterstützt verteiltes Training und gemischte Präzision, d.h. Sie können ihn auch in einem Skript verwenden. So aktivieren Sie diese beiden Funktionen:
+Der [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) unterstützt verteiltes Training und gemischte Präzision, d.h. Sie können ihn auch in einem Skript verwenden. So aktivieren Sie diese beiden Funktionen:
 
 - Fügen Sie das Argument `fp16` hinzu, um gemischte Genauigkeit zu aktivieren.
 - Legen Sie die Anzahl der zu verwendenden GPUs mit dem Argument `nproc_per_node` fest.
@@ -191,7 +191,7 @@ python run_summarization.py  \
 
 ## Führen Sie ein Skript mit 🤗 Accelerate aus.
 
-🤗 [Accelerate](https://hf-mirror.com/docs/accelerate) ist eine reine PyTorch-Bibliothek, die eine einheitliche Methode für das Training eines Modells auf verschiedenen Arten von Setups (nur CPU, mehrere GPUs, TPUs) bietet und dabei die vollständige Transparenz der PyTorch-Trainingsschleife beibehält. Stellen Sie sicher, dass Sie 🤗 Accelerate installiert haben, wenn Sie es nicht bereits haben:
+🤗 [Accelerate](https://huggingface.co/docs/accelerate) ist eine reine PyTorch-Bibliothek, die eine einheitliche Methode für das Training eines Modells auf verschiedenen Arten von Setups (nur CPU, mehrere GPUs, TPUs) bietet und dabei die vollständige Transparenz der PyTorch-Trainingsschleife beibehält. Stellen Sie sicher, dass Sie 🤗 Accelerate installiert haben, wenn Sie es nicht bereits haben:
 
 > Hinweis: Da Accelerate schnell weiterentwickelt wird, muss die Git-Version von Accelerate installiert sein, um die Skripte auszuführen.
 ```bash
@@ -321,7 +321,7 @@ python examples/pytorch/summarization/run_summarization.py
 
 ## Teilen Sie Ihr Modell
 
-Alle Skripte können Ihr endgültiges Modell in den [Model Hub](https://hf-mirror.com/models) hochladen. Stellen Sie sicher, dass Sie bei Hugging Face angemeldet sind, bevor Sie beginnen:
+Alle Skripte können Ihr endgültiges Modell in den [Model Hub](https://huggingface.co/models) hochladen. Stellen Sie sicher, dass Sie bei Hugging Face angemeldet sind, bevor Sie beginnen:
 
 ```bash
 huggingface-cli login

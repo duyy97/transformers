@@ -31,7 +31,7 @@ BiT は、[ResNet](resnet) のようなアーキテクチャ (具体的には Re
 2) [重みの標準化](https://arxiv.org/abs/1903.10520) は畳み込み層に使用されます。著者らは、両方の組み合わせが大きなバッチサイズでのトレーニングに役立ち、重要な効果があることを示しています。
 転移学習への影響。
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。
 元のコードは [こちら](https://github.com/google-research/big_transfer) にあります。
 
 ## Resources

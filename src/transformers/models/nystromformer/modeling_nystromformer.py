@@ -45,7 +45,7 @@ _CONFIG_FOR_DOC = "NystromformerConfig"
 
 NYSTROMFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "uw-madison/nystromformer-512",
-    # See all Nyströmformer models at https://hf-mirror.com/models?filter=nystromformer
+    # See all Nyströmformer models at https://huggingface.co/models?filter=nystromformer
 ]
 
 

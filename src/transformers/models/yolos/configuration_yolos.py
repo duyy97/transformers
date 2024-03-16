@@ -27,8 +27,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 YOLOS_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "hustvl/yolos-small": "https://hf-mirror.com/hustvl/yolos-small/resolve/main/config.json",
-    # See all YOLOS models at https://hf-mirror.com/models?filter=yolos
+    "hustvl/yolos-small": "https://huggingface.co/hustvl/yolos-small/resolve/main/config.json",
+    # See all YOLOS models at https://huggingface.co/models?filter=yolos
 }
 
 
@@ -37,7 +37,7 @@ class YolosConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`YolosModel`]. It is used to instantiate a YOLOS
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the YOLOS
-    [hustvl/yolos-base](https://hf-mirror.com/hustvl/yolos-base) architecture.
+    [hustvl/yolos-base](https://huggingface.co/hustvl/yolos-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -20,7 +20,7 @@ rendered properly in your Markdown viewer.
 
 <Tip>
 
-请记住，架构指的是模型的结构，而checkpoints是给定架构的权重。例如，[BERT](https://hf-mirror.com/google-bert/bert-base-uncased)是一种架构，而`google-bert/bert-base-uncased`是一个checkpoint。模型是一个通用术语，可以指代架构或checkpoint。
+请记住，架构指的是模型的结构，而checkpoints是给定架构的权重。例如，[BERT](https://huggingface.co/google-bert/bert-base-uncased)是一种架构，而`google-bert/bert-base-uncased`是一个checkpoint。模型是一个通用术语，可以指代架构或checkpoint。
 
 
 </Tip>
@@ -118,7 +118,7 @@ rendered properly in your Markdown viewer.
 
 <Tip warning={true}>
 
-对于PyTorch模型，`from_pretrained()`方法使用`torch.load()`，它内部使用已知是不安全的`pickle`。一般来说，永远不要加载来自不可信来源或可能被篡改的模型。对于托管在Hugging Face Hub上的公共模型，这种安全风险在一定程度上得到了缓解，因为每次提交都会进行[恶意软件扫描](https://hf-mirror.com/docs/hub/security-malware)。请参阅[Hub文档](https://hf-mirror.com/docs/hub/security)以了解最佳实践，例如使用GPG进行[签名提交验证](https://hf-mirror.com/docs/hub/security-gpg#signing-commits-with-gpg)。
+对于PyTorch模型，`from_pretrained()`方法使用`torch.load()`，它内部使用已知是不安全的`pickle`。一般来说，永远不要加载来自不可信来源或可能被篡改的模型。对于托管在Hugging Face Hub上的公共模型，这种安全风险在一定程度上得到了缓解，因为每次提交都会进行[恶意软件扫描](https://huggingface.co/docs/hub/security-malware)。请参阅[Hub文档](https://huggingface.co/docs/hub/security)以了解最佳实践，例如使用GPG进行[签名提交验证](https://huggingface.co/docs/hub/security-gpg#signing-commits-with-gpg)。
 
 TensorFlow和Flax的checkpoints不受影响，并且可以在PyTorch架构中使用`from_tf`和`from_flax`关键字参数,通过`from_pretrained`方法进行加载,来绕过此问题。
 

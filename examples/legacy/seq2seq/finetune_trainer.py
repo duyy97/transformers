@@ -59,7 +59,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -69,7 +69,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     freeze_encoder: bool = field(default=False, metadata={"help": "Whether tp freeze the encoder."})
     freeze_embeds: bool = field(default=False, metadata={"help": "Whether  to freeze the embeddings."})
@@ -326,7 +326,7 @@ def main():
             trainer.state.save_to_json(os.path.join(training_args.output_dir, "trainer_state.json"))
 
             # For convenience, we also re-save the tokenizer to the same directory,
-            # so that you can share your model easily on hf-mirror.com/models =)
+            # so that you can share your model easily on huggingface.co/models =)
             tokenizer.save_pretrained(training_args.output_dir)
 
     # Evaluation

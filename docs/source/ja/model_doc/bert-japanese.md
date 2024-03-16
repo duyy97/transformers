@@ -74,7 +74,7 @@ MeCab および WordPiece トークン化でモデルを使用する例:
 
 </Tip>
 
-このモデルは[cl-tohaku](https://hf-mirror.com/cl-tohaku)から提供されました。
+このモデルは[cl-tohaku](https://huggingface.co/cl-tohaku)から提供されました。
 
 ## BertJapaneseTokenizer
 

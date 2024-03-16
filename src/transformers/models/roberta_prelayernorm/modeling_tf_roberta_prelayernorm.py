@@ -74,7 +74,7 @@ TF_ROBERTA_PRELAYERNORM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "andreasmadsen/efficient_mlm_m0.60",
     "andreasmadsen/efficient_mlm_m0.70",
     "andreasmadsen/efficient_mlm_m0.80",
-    # See all RoBERTaWithPreLayerNorm models at https://hf-mirror.com/models?filter=roberta_with_prelayernorm
+    # See all RoBERTaWithPreLayerNorm models at https://huggingface.co/models?filter=roberta_with_prelayernorm
 ]
 
 

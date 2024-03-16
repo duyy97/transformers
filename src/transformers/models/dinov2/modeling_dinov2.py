@@ -60,7 +60,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 DINOV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/dinov2-base",
-    # See all DINOv2 models at https://hf-mirror.com/models?filter=dinov2
+    # See all DINOv2 models at https://huggingface.co/models?filter=dinov2
 ]
 
 

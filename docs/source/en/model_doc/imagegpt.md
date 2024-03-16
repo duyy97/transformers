@@ -32,12 +32,12 @@ ResNet, and 99.0% accuracy with full fine-tuning, matching the top supervised pr
 competitive with self-supervised benchmarks on ImageNet when substituting pixels for a VQVAE encoding, achieving 69.0%
 top-1 accuracy on a linear probe of our features.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/imagegpt_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/imagegpt_architecture.png"
 alt="drawing" width="600"/>
 
 <small> Summary of the approach. Taken from the [original paper](https://cdn.openai.com/papers/Generative_Pretraining_from_Pixels_V2.pdf). </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr), based on [this issue](https://github.com/openai/image-gpt/issues/7). The original code can be found
+This model was contributed by [nielsr](https://huggingface.co/nielsr), based on [this issue](https://github.com/openai/image-gpt/issues/7). The original code can be found
 [here](https://github.com/openai/image-gpt).
 
 ## Usage tips

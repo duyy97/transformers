@@ -48,7 +48,7 @@ model = LlamaForCausalLM.from_pretrained("/output/path")
 
 - LLaMA 토크나이저는 [sentencepiece](https://github.com/google/sentencepiece)를 기반으로 하는 BPE 모델입니다. sentencepiece의 특징 중 하나는 시퀀스를 디코딩할 때 첫 토큰이 단어의 시작이라면 (예를 들어 "Banana"), 토크나이저는 문자열 앞에 공백을 추가하지 않는다는 것입니다.
 
-이 모델은 [BlackSamorez](https://hf-mirror.com/BlackSamorez)의 기여와 함께, [zphang](https://hf-mirror.com/zphang)에 의해 제공되었습니다. Hugging Face에서의 구현 코드는 GPT-NeoX를 기반으로 하며 [여기](https://github.com/EleutherAI/gpt-neox)에서 찾을 수 있고, 저자의 코드 원본은 [여기](https://github.com/facebookresearch/llama)에서 확인할 수 있습니다.
+이 모델은 [BlackSamorez](https://huggingface.co/BlackSamorez)의 기여와 함께, [zphang](https://huggingface.co/zphang)에 의해 제공되었습니다. Hugging Face에서의 구현 코드는 GPT-NeoX를 기반으로 하며 [여기](https://github.com/EleutherAI/gpt-neox)에서 찾을 수 있고, 저자의 코드 원본은 [여기](https://github.com/facebookresearch/llama)에서 확인할 수 있습니다.
 
 
 원래 LLaMA 모델을 기반으로 Meta AI에서 몇 가지 후속 작업을 발표했습니다:
@@ -65,7 +65,7 @@ LLaMA를 시작하는 데 도움이 될 Hugging Face 및 커뮤니티(🌎로 �
 
 <PipelineTag pipeline="question-answering"/>
 
-- [Stack Exchange](https://stackexchange.com/)에서 질문에 답하는 LLaMA를 훈련하는 방법을 위한 [StackLLaMA: RLHF로 LLaMA를 훈련하는 실전 가이드](https://hf-mirror.com/blog/stackllama#stackllama-a-hands-on-guide-to-train-llama-with-rlhf) 🌎
+- [Stack Exchange](https://stackexchange.com/)에서 질문에 답하는 LLaMA를 훈련하는 방법을 위한 [StackLLaMA: RLHF로 LLaMA를 훈련하는 실전 가이드](https://huggingface.co/blog/stackllama#stackllama-a-hands-on-guide-to-train-llama-with-rlhf) 🌎
 
 ⚗️ 최적화
 - 제한된 메모리를 가진 GPU에서 xturing 라이브러리를 사용하여 LLaMA 모델을 미세 조정하는 방법에 대한 [노트북](https://colab.research.google.com/drive/1SQUXq1AMZPSLD4mk3A3swUIc6Y2dclme?usp=sharing) 🌎

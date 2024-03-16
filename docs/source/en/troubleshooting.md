@@ -24,7 +24,7 @@ Sometimes errors occur, but we are here to help! This guide covers some of the m
 
 <Youtube id="S2EEG3JIt2A"/>
 
-1. Asking for help on the [forums](https://discuss.hf-mirror.com/). There are specific categories you can post your question to, like [Beginners](https://discuss.hf-mirror.com/c/beginners/5) or [🤗 Transformers](https://discuss.hf-mirror.com/c/transformers/9). Make sure you write a good descriptive forum post with some reproducible code to maximize the likelihood that your problem is solved!
+1. Asking for help on the [forums](https://discuss.huggingface.co/). There are specific categories you can post your question to, like [Beginners](https://discuss.huggingface.co/c/beginners/5) or [🤗 Transformers](https://discuss.huggingface.co/c/transformers/9). Make sure you write a good descriptive forum post with some reproducible code to maximize the likelihood that your problem is solved!
 
 <Youtube id="_PAli-V4wj0"/>
 
@@ -32,7 +32,7 @@ Sometimes errors occur, but we are here to help! This guide covers some of the m
 
 3. Check the [Migration](migration) guide if you use an older version of 🤗 Transformers since some important changes have been introduced between versions.
 
-For more details about troubleshooting and getting help, take a look at [Chapter 8](https://hf-mirror.com/course/chapter8/1?fw=pt) of the Hugging Face course.
+For more details about troubleshooting and getting help, take a look at [Chapter 8](https://huggingface.co/course/chapter8/1?fw=pt) of the Hugging Face course.
 
 
 ## Firewalled environments

@@ -534,7 +534,7 @@ def duplicate_module(
                 f"{new_model_patterns.model_upper_cased}_PRETRAINED_CONFIG_ARCHIVE_MAP = "
                 + "{"
                 + f"""
-    "{new_model_patterns.checkpoint}": "https://hf-mirror.com/{new_model_patterns.checkpoint}/resolve/main/config.json",
+    "{new_model_patterns.checkpoint}": "https://huggingface.co/{new_model_patterns.checkpoint}/resolve/main/config.json",
 """
                 + "}\n"
             )
@@ -550,7 +550,7 @@ def duplicate_module(
             # docstyle-ignore
             obj = f"""{prefix}{new_model_patterns.model_upper_cased}_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "{new_model_patterns.checkpoint}",
-    # See all {new_model_patterns.model_name} models at https://hf-mirror.com/models?filter={new_model_patterns.model_type}
+    # See all {new_model_patterns.model_name} models at https://huggingface.co/models?filter={new_model_patterns.model_type}
 ]
 """
             new_objects.append(obj)
@@ -1166,7 +1166,7 @@ Tips:
 
 <INSERT TIPS ABOUT MODEL HERE>
 
-This model was contributed by [INSERT YOUR HF USERNAME HERE](https://hf-mirror.com/<INSERT YOUR HF USERNAME HERE>).
+This model was contributed by [INSERT YOUR HF USERNAME HERE](https://huggingface.co/<INSERT YOUR HF USERNAME HERE>).
 The original code can be found [here](<INSERT LINK TO GITHUB REPO HERE>).
 
 """

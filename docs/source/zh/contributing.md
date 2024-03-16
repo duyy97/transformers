@@ -51,7 +51,7 @@ limitations under the License.
 
 🤗 Transformers 之所以强大可靠，要感谢用户报告了他们遇到的问题。
 
-在提出issue之前，请你**确认该 bug 尚未被报告**（使用 GitHub 的 Issues 下面的搜索栏）。issue 也应该是与库本身的 bug 有关，而不是与你的代码有关。如果不确定 bug 是在你的代码中还是在库中，请先在[论坛](https://discuss.hf-mirror.com/)中询问。这有助于我们更快地解决与库相关的问题。
+在提出issue之前，请你**确认该 bug 尚未被报告**（使用 GitHub 的 Issues 下面的搜索栏）。issue 也应该是与库本身的 bug 有关，而不是与你的代码有关。如果不确定 bug 是在你的代码中还是在库中，请先在[论坛](https://discuss.huggingface.co/)中询问。这有助于我们更快地解决与库相关的问题。
 
 一旦你确认该 bug 尚未被报告，请在你的 issue 中包含以下信息，以便我们快速解决：
 
@@ -98,7 +98,7 @@ python src/transformers/commands/transformers_cli.py env
 
 如果你想亲自贡献模型，请告诉我们。让我们帮你把它添加到 🤗 Transformers！
 
-我们已经添加了[详细的指南和模板](https://github.com/huggingface/transformers/tree/main/templates)来帮助你添加新模型。我们还有一个更技术性的指南，告诉你[如何将模型添加到 🤗 Transformers](https://hf-mirror.com/docs/transformers/add_new_model)。
+我们已经添加了[详细的指南和模板](https://github.com/huggingface/transformers/tree/main/templates)来帮助你添加新模型。我们还有一个更技术性的指南，告诉你[如何将模型添加到 🤗 Transformers](https://huggingface.co/docs/transformers/add_new_model)。
 
 ## 你想要添加文档吗？
 
@@ -156,7 +156,7 @@ python src/transformers/commands/transformers_cli.py env
    pytest tests/<TEST_TO_RUN>.py
    ```
 
-   想了解更多关于测试的信息，请阅读[测试](https://hf-mirror.com/docs/transformers/testing)指南。
+   想了解更多关于测试的信息，请阅读[测试](https://huggingface.co/docs/transformers/testing)指南。
 
    🤗 Transformers 使用 `black` 和 `ruff` 来保持代码风格的一致性。进行更改后，使用以下命令自动执行格式更正和代码验证：
 
@@ -184,7 +184,7 @@ python src/transformers/commands/transformers_cli.py env
    make repo-consistency
    ```
 
-   想要了解有关这些检查及如何解决相关问题的更多信息，请阅读 [检查 Pull Request](https://hf-mirror.com/docs/transformers/pr_checks) 指南。
+   想要了解有关这些检查及如何解决相关问题的更多信息，请阅读 [检查 Pull Request](https://huggingface.co/docs/transformers/pr_checks) 指南。
 
    如果你修改了 `docs/source` 目录下的文档，请确保文档仍然能够被构建。这个检查也会在你创建 PR 时在 CI 中运行。如果要进行本地检查，请确保安装了文档构建工具：
    
@@ -241,9 +241,9 @@ python src/transformers/commands/transformers_cli.py env
    - CircleCI 不会运行时间较长的测试，但 GitHub Actions 每晚会运行所有测试！<br>
 
 ☐ 所有公共 method 必须具有信息文档（比如 [`modeling_bert.py`](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py)）。<br>
-☐ 由于代码仓库的体积正在迅速增长，请避免添加图像、视频和其他非文本文件，它们会增加仓库的负担。请使用 [`hf-internal-testing`](https://hf-mirror.com/hf-internal-testing) 等 Hub 仓库来托管这些文件，并通过 URL 引用它们。我们建议将与文档相关的图片放置在以下仓库中：[huggingface/documentation-images](https://hf-mirror.com/datasets/huggingface/documentation-images)。你可以在这个数据集仓库上创建一个 PR，并请求 Hugging Face 成员进行合并。
+☐ 由于代码仓库的体积正在迅速增长，请避免添加图像、视频和其他非文本文件，它们会增加仓库的负担。请使用 [`hf-internal-testing`](https://huggingface.co/hf-internal-testing) 等 Hub 仓库来托管这些文件，并通过 URL 引用它们。我们建议将与文档相关的图片放置在以下仓库中：[huggingface/documentation-images](https://huggingface.co/datasets/huggingface/documentation-images)。你可以在这个数据集仓库上创建一个 PR，并请求 Hugging Face 成员进行合并。
 
-要了解更多有关在 Pull request 上运行的检查的信息，请查看我们的 [检查 Pull Request](https://hf-mirror.com/docs/transformers/pr_checks) 指南。
+要了解更多有关在 Pull request 上运行的检查的信息，请查看我们的 [检查 Pull Request](https://huggingface.co/docs/transformers/pr_checks) 指南。
 
 ### 测试
 

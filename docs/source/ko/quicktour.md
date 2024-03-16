@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 [[open-in-colab]]
 
-🤗 Transformers를 시작해보세요! 개발해본 적이 없더라도 쉽게 읽을 수 있도록 쓰인 이 글은 [`pipeline`](./main_classes/pipelines)을 사용하여 추론하고, 사전학습된 모델과 전처리기를 [AutoClass](./model_doc/auto)로 로드하고, PyTorch 또는 TensorFlow로 모델을 빠르게 학습시키는 방법을 소개해 드릴 것입니다. 본 가이드에서 소개되는 개념을 (특히 초보자의 관점으로) 더 친절하게 접하고 싶다면, 튜토리얼이나 [코스](https://hf-mirror.com/course/chapter1/1)를 참조하기를 권장합니다.
+🤗 Transformers를 시작해보세요! 개발해본 적이 없더라도 쉽게 읽을 수 있도록 쓰인 이 글은 [`pipeline`](./main_classes/pipelines)을 사용하여 추론하고, 사전학습된 모델과 전처리기를 [AutoClass](./model_doc/auto)로 로드하고, PyTorch 또는 TensorFlow로 모델을 빠르게 학습시키는 방법을 소개해 드릴 것입니다. 본 가이드에서 소개되는 개념을 (특히 초보자의 관점으로) 더 친절하게 접하고 싶다면, 튜토리얼이나 [코스](https://huggingface.co/course/chapter1/1)를 참조하기를 권장합니다.
 
 시작하기 전에 필요한 라이브러리가 모두 설치되어 있는지 확인하세요:
 
@@ -81,7 +81,7 @@ pip install tensorflow
 >>> classifier = pipeline("sentiment-analysis")
 ```
 
-[`pipeline`]은 감정 분석을 위한 [사전 훈련된 모델](https://hf-mirror.com/distilbert/distilbert-base-uncased-finetuned-sst-2-english)과 토크나이저를 자동으로 다운로드하고 캐시합니다. 이제 `classifier`를 대상 텍스트에 사용할 수 있습니다:
+[`pipeline`]은 감정 분석을 위한 [사전 훈련된 모델](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english)과 토크나이저를 자동으로 다운로드하고 캐시합니다. 이제 `classifier`를 대상 텍스트에 사용할 수 있습니다:
 
 ```py
 >>> classifier("We are very happy to show you the 🤗 Transformers library.")
@@ -107,7 +107,7 @@ label: NEGATIVE, with score: 0.5309
 >>> speech_recognizer = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 ```
 
-데이터셋을 로드할 차례입니다. (자세한 내용은 🤗 Datasets [시작하기](https://hf-mirror.com/docs/datasets/quickstart#audio)을 참조하세요) 여기에서는 [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 데이터셋을 로드하겠습니다:
+데이터셋을 로드할 차례입니다. (자세한 내용은 🤗 Datasets [시작하기](https://huggingface.co/docs/datasets/quickstart#audio)을 참조하세요) 여기에서는 [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 데이터셋을 로드하겠습니다:
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -115,7 +115,7 @@ label: NEGATIVE, with score: 0.5309
 >>> dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")  # doctest: +IGNORE_RESULT
 ```
 
-데이터셋의 샘플링 레이트가 기존 모델인 [`facebook/wav2vec2-base-960h`](https://hf-mirror.com/facebook/wav2vec2-base-960h)의 훈련 당시 샘플링 레이트와 일치하는지 확인해야 합니다:
+데이터셋의 샘플링 레이트가 기존 모델인 [`facebook/wav2vec2-base-960h`](https://huggingface.co/facebook/wav2vec2-base-960h)의 훈련 당시 샘플링 레이트와 일치하는지 확인해야 합니다:
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=speech_recognizer.feature_extractor.sampling_rate))
@@ -133,7 +133,7 @@ label: NEGATIVE, with score: 0.5309
 
 ### 파이프라인에서 다른 모델과 토크나이저 사용하기 [[use-another-model-and-tokenizer-in-the-pipeline]]
 
-[`pipeline`]은 [Hub](https://hf-mirror.com/models)의 모든 모델을 사용할 수 있기 때문에, [`pipeline`]을 다른 용도에 맞게 쉽게 수정할 수 있습니다. 예를 들어, 프랑스어 텍스트를 처리할 수 있는 모델을 사용하기 위해선 Hub의 태그를 사용하여 적절한 모델을 필터링하면 됩니다. 필터링된 결과의 상위 항목으로는 프랑스어 텍스트에 사용할 수 있는 다국어 [BERT 모델](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment)이 반환됩니다:
+[`pipeline`]은 [Hub](https://huggingface.co/models)의 모든 모델을 사용할 수 있기 때문에, [`pipeline`]을 다른 용도에 맞게 쉽게 수정할 수 있습니다. 예를 들어, 프랑스어 텍스트를 처리할 수 있는 모델을 사용하기 위해선 Hub의 태그를 사용하여 적절한 모델을 필터링하면 됩니다. 필터링된 결과의 상위 항목으로는 프랑스어 텍스트에 사용할 수 있는 다국어 [BERT 모델](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment)이 반환됩니다:
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

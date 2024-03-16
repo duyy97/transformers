@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 LUKE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "studio-ousia/luke-base": "https://hf-mirror.com/studio-ousia/luke-base/resolve/main/config.json",
-    "studio-ousia/luke-large": "https://hf-mirror.com/studio-ousia/luke-large/resolve/main/config.json",
+    "studio-ousia/luke-base": "https://huggingface.co/studio-ousia/luke-base/resolve/main/config.json",
+    "studio-ousia/luke-large": "https://huggingface.co/studio-ousia/luke-large/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class LukeConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LukeModel`]. It is used to instantiate a LUKE
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the LUKE
-    [studio-ousia/luke-base](https://hf-mirror.com/studio-ousia/luke-base) architecture.
+    [studio-ousia/luke-base](https://huggingface.co/studio-ousia/luke-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

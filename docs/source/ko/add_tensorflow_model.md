@@ -25,7 +25,7 @@ rendered properly in your Markdown viewer.
 
 더 깊이 알아보기 전에, 🤗 Transformers를 처음 접하는 경우 다음 자료를 확인하는 것이 좋습니다:
 - [🤗 Transformers의 일반 개요](add_new_model#general-overview-of-transformers)
-- [Hugging Face의 TensorFlow 철학](https://hf-mirror.com/blog/tensorflow-philosophy)
+- [Hugging Face의 TensorFlow 철학](https://huggingface.co/blog/tensorflow-philosophy)
 
 이 가이드의 나머지 부분에서는 새로운 TensorFlow 모델 아키텍처를 추가하는 데 필요한 단계, Pytorch를 TensorFlow 모델 가중치로 변환하는 절차 및 ML 프레임워크 간의 불일치를 효율적으로 디버깅하는 방법을 알게 될 것입니다. 시작해봅시다!
 
@@ -33,7 +33,7 @@ rendered properly in your Markdown viewer.
 
 사용하려는 모델이 이미 해당하는 TensorFlow 아키텍처가 있는지 확실하지 않나요?
 
-선택한 모델([예](https://hf-mirror.com/google-bert/bert-base-uncased/blob/main/config.json#L14))의 `config.json`의 `model_type` 필드를 확인해보세요. 🤗 Transformers의 해당 모델 폴더에는 "modeling_tf"로 시작하는 파일이 있는 경우, 해당 모델에는 해당 TensorFlow 아키텍처([예](https://github.com/huggingface/transformers/tree/main/src/transformers/models/bert))가 있다는 의미입니다.
+선택한 모델([예](https://huggingface.co/google-bert/bert-base-uncased/blob/main/config.json#L14))의 `config.json`의 `model_type` 필드를 확인해보세요. 🤗 Transformers의 해당 모델 폴더에는 "modeling_tf"로 시작하는 파일이 있는 경우, 해당 모델에는 해당 TensorFlow 아키텍처([예](https://github.com/huggingface/transformers/tree/main/src/transformers/models/bert))가 있다는 의미입니다.
 
 </Tip>
 
@@ -147,7 +147,7 @@ git push -u origin add_tf_brand_new_bert
 
 모델의 기본 사항을 이해한 후, 기존 구현을 이해하는 것이 중요합니다. 이는 작업 중인 모델에 대한 실제 구현이 여러분의 기대와 일치함을 확인하고, TensorFlow 측면에서의 기술적 문제를 예상할 수 있습니다.
 
-막대한 양의 정보를 처음으로 학습할 때 압도당하는 것은 자연스러운 일입니다. 이 단계에서 모델의 모든 측면을 이해해야 하는 필요는 전혀 없습니다. 그러나 우리는 Hugging Face의 [포럼](https://discuss.hf-mirror.com/)을 통해 질문이 있는 경우 대답을 구할 것을 권장합니다.
+막대한 양의 정보를 처음으로 학습할 때 압도당하는 것은 자연스러운 일입니다. 이 단계에서 모델의 모든 측면을 이해해야 하는 필요는 전혀 없습니다. 그러나 우리는 Hugging Face의 [포럼](https://discuss.huggingface.co/)을 통해 질문이 있는 경우 대답을 구할 것을 권장합니다.
 
 ### 4. 모델 구현 [[4-model-implementation]]
 
@@ -206,7 +206,7 @@ py.test -vv tests/models/brand_new_bert/test_modeling_tf_brand_new_bert.py
 모든 테스트가 통과되면 축하합니다. 이제 모델을 🤗 Transformers 라이브러리에 추가할 준비가 거의 완료된 것입니다! 🎉
 
 
-테스트를 추가하는 방법에 대한 자세한 내용은 [🤗 Transformers의 테스트 가이드](https://hf-mirror.com/transformers/contributing.html#running-tests)를 참조하세요.
+테스트를 추가하는 방법에 대한 자세한 내용은 [🤗 Transformers의 테스트 가이드](https://huggingface.co/transformers/contributing.html#running-tests)를 참조하세요.
 
 ### 6.-7. 모든 사용자가 당신의 모델을 사용할 수 있게 하기 [[6.-7.-ensure-everyone -can-use-your-model]]
 
@@ -232,7 +232,7 @@ py.test -vv tests/models/brand_new_bert/test_modeling_tf_brand_new_bert.py
 오픈 소스의 가장 어려운 부분 중 하나는 발견입니다. 다른 사용자들이 당신의 멋진 TensorFlow 기여를 어떻게 알 수 있을까요? 물론 적절한 커뮤니케이션으로 가능합니다! 📣
 
 커뮤니티와 모델을 공유하는 두 가지 주요 방법이 있습니다:
-- 데모 만들기. Gradio 데모, 노트북 및 모델을 자랑하는 다른 재미있는 방법을 포함합니다. [커뮤니티 기반 데모](https://hf-mirror.com/docs/transformers/community)에 노트북을 추가하는 것을 적극 권장합니다.
+- 데모 만들기. Gradio 데모, 노트북 및 모델을 자랑하는 다른 재미있는 방법을 포함합니다. [커뮤니티 기반 데모](https://huggingface.co/docs/transformers/community)에 노트북을 추가하는 것을 적극 권장합니다.
 - Twitter와 LinkedIn과 같은 소셜 미디어에 이야기 공유하기. 당신의 작업에 자랑스러워하고 커뮤니티와 당신의 업적을 공유해야 합니다. 이제 당신의 모델은 전 세계의 수천 명의 엔지니어와 연구원들에 의해 사용될 수 있습니다 🌍! 우리는 당신의 게시물을 리트윗하고 커뮤니티와 함께 당신의 작업을 공유하는 데 도움이 될 것입니다.
 
 
@@ -241,7 +241,7 @@ py.test -vv tests/models/brand_new_bert/test_modeling_tf_brand_new_bert.py
 TensorFlow 모델 아키텍처가 🤗 Transformers에서 사용 가능하다고 가정하고, PyTorch 가중치를 TensorFlow 가중치로 변환하는 것은 쉽습니다!
 
 다음은 그 방법입니다:
-1. 터미널에서 Hugging Face 계정으로 로그인되어 있는지 확인하십시오. `huggingface-cli login` 명령어를 사용하여 로그인할 수 있습니다. (액세스 토큰은 [여기](https://hf-mirror.com/settings/tokens)에서 찾을 수 있습니다.)
+1. 터미널에서 Hugging Face 계정으로 로그인되어 있는지 확인하십시오. `huggingface-cli login` 명령어를 사용하여 로그인할 수 있습니다. (액세스 토큰은 [여기](https://huggingface.co/settings/tokens)에서 찾을 수 있습니다.)
 2. `transformers-cli pt-to-tf --model-name foo/bar`를 실행하십시오. 여기서 `foo/bar`는 변환하려는 PyTorch 가중치가 있는 모델 저장소의 이름입니다.
 3. 방금 만든 🤗 허브 PR에서 `@joaogante`와 `@Rocketknight1`을 태그합니다.
 

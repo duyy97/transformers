@@ -23,7 +23,7 @@ logger = logging.get_logger(__name__)
 
 SWINV2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/swinv2-tiny-patch4-window8-256": (
-        "https://hf-mirror.com/microsoft/swinv2-tiny-patch4-window8-256/resolve/main/config.json"
+        "https://huggingface.co/microsoft/swinv2-tiny-patch4-window8-256/resolve/main/config.json"
     ),
 }
 
@@ -33,7 +33,7 @@ class Swinv2Config(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`Swinv2Model`]. It is used to instantiate a Swin
     Transformer v2 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Swin Transformer v2
-    [microsoft/swinv2-tiny-patch4-window8-256](https://hf-mirror.com/microsoft/swinv2-tiny-patch4-window8-256)
+    [microsoft/swinv2-tiny-patch4-window8-256](https://huggingface.co/microsoft/swinv2-tiny-patch4-window8-256)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

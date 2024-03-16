@@ -29,7 +29,7 @@ Tips:
 
 - The original checkpoints can be converted using the conversion script `src/transformers/models/gemma/convert_gemma_weights_to_hf.py` 
 
-This model was contributed by [Arthur Zucker](https://hf-mirror.com/ArthurZ), [Younes Belkada](https://hf-mirror.com/ybelkada), [Sanchit Gandhi](https://hf-mirror.com/sanchit-gandhi), [Pedro Cuenca](https://hf-mirror.com/pcuenq).
+This model was contributed by [Arthur Zucker](https://huggingface.co/ArthurZ), [Younes Belkada](https://huggingface.co/ybelkada), [Sanchit Gandhi](https://huggingface.co/sanchit-gandhi), [Pedro Cuenca](https://huggingface.co/pcuenq).
 
 
 ## GemmaConfig

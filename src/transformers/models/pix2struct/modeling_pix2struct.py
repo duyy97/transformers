@@ -67,7 +67,7 @@ PIX2STRUCT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/pix2struct-chartqa-base",
     "google/pix2struct-inforgraphics-vqa-base",
     "google/pix2struct-inforgraphics-vqa-large",
-    # See all Pix2StructVision models at https://hf-mirror.com/models?filter=pix2struct
+    # See all Pix2StructVision models at https://huggingface.co/models?filter=pix2struct
 ]
 
 

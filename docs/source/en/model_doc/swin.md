@@ -36,12 +36,12 @@ prediction tasks such as object detection (58.7 box AP and 51.1 mask AP on COCO 
 +2.6 mask AP on COCO, and +3.2 mIoU on ADE20K, demonstrating the potential of Transformer-based models as vision backbones.
 The hierarchical design and the shifted window approach also prove beneficial for all-MLP architectures.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/swin_transformer_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/swin_transformer_architecture.png"
 alt="drawing" width="600"/>
 
 <small> Swin Transformer architecture. Taken from the <a href="https://arxiv.org/abs/2102.03334">original paper</a>.</small>
 
-This model was contributed by [novice03](https://hf-mirror.com/novice03). The Tensorflow version of this model was contributed by [amyeroberts](https://hf-mirror.com/amyeroberts). The original code can be found [here](https://github.com/microsoft/Swin-Transformer).
+This model was contributed by [novice03](https://huggingface.co/novice03). The Tensorflow version of this model was contributed by [amyeroberts](https://huggingface.co/amyeroberts). The original code can be found [here](https://github.com/microsoft/Swin-Transformer).
 
 ## Usage tips
 

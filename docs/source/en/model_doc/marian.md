@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # MarianMT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=marian">
+<a href="https://huggingface.co/models?filter=marian">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-marian-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/opus-mt-zh-en">
+<a href="https://huggingface.co/spaces/docs-demos/opus-mt-zh-en">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -28,13 +28,13 @@ rendered properly in your Markdown viewer.
 ## Overview
 
 A framework for translation models, using the same models as BART. Translations should be similar, but not identical to output in the test set linked to in each model card.
-This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer).
+This model was contributed by [sshleifer](https://huggingface.co/sshleifer).
 
 
 ## Implementation Notes
 
 - Each model is about 298 MB on disk, there are more than 1,000 models.
-- The list of supported language pairs can be found [here](https://hf-mirror.com/Helsinki-NLP).
+- The list of supported language pairs can be found [here](https://huggingface.co/Helsinki-NLP).
 - Models were originally trained by [Jörg Tiedemann](https://researchportal.helsinki.fi/en/persons/j%C3%B6rg-tiedemann) using the [Marian](https://marian-nmt.github.io/) C++ library, which supports fast training and translation.
 - All models are transformer encoder-decoders with 6 layers in each component. Each model's performance is documented
   in a model card.
@@ -69,7 +69,7 @@ This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer).
 - All model names use the following format: `Helsinki-NLP/opus-mt-{src}-{tgt}`:
 - If a model can output multiple languages, and you should specify a language code by prepending the desired output
   language to the `src_text`.
-- You can see a models's supported language codes in its model card, under target constituents, like in [opus-mt-en-roa](https://hf-mirror.com/Helsinki-NLP/opus-mt-en-roa).
+- You can see a models's supported language codes in its model card, under target constituents, like in [opus-mt-en-roa](https://huggingface.co/Helsinki-NLP/opus-mt-en-roa).
 - Note that if a model is only multilingual on the source side, like `Helsinki-NLP/opus-mt-roa-en`, no language
   codes are required.
 

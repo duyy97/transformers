@@ -72,7 +72,7 @@ Per aggiungere con successo un modello, é importante capire l'interazione tra i
 
 Diamo un'occhiata:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
 
 Come potete vedere, ci basiamo sull'ereditarietà in 🤗 Transformers, tenendo però il livello di astrazione a un minimo 
 assoluto.  Non ci sono mai più di due livelli di astrazione per ogni modello nella libreria. `BrandNewBertModel` eredita 
@@ -125,8 +125,8 @@ Questa sezione sarà creata al piu presto :-(
 
 Ci sono differenti modi per aggiungere un modello a Hugging Face. Qui trovi una lista di blog posts da parte della community su come aggiungere un modello:
 
-1. [Aggiungere GPT2](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) scritto da [Thomas](https://hf-mirror.com/thomwolf)
-2. [Aggiungere WMT19 MT](https://hf-mirror.com/blog/porting-fsmt) scritto da [Stas](https://hf-mirror.com/stas)
+1. [Aggiungere GPT2](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) scritto da [Thomas](https://huggingface.co/thomwolf)
+2. [Aggiungere WMT19 MT](https://huggingface.co/blog/porting-fsmt) scritto da [Stas](https://huggingface.co/stas)
 
 Per esperienza, possiamo dirti che quando si aggiunge un modello é meglio tenere a mente le seguenti considerazioni:
 
@@ -163,7 +163,7 @@ Allora con calma, prendi un po' di tempo per leggere l'articolo su *BrandNewBert
 - Che tipo di modello é *brand_new_bert*? É solo un encoder in stile BERT? O tipo decoder come GPT2? O encoder e decoder stile BART? Dai un'occhiata a [model_summary](model_summary) se non sei famigliare con le differenze tra questi modelli 
 - Quali sono le applicazioni di *brand_new_bert*? Classificazione di testo? Generazione di testo? O per tasks del genere seq2seq? 
 - Quali sono le nuove aggiunte al modello che lo rendono diverso da BERT/GPT-2/BART? 
-- Quali modelli estistenti in [🤗 Transformers models](https://hf-mirror.com/transformers/#contents) sono molto simili a *brand_new_bert*?
+- Quali modelli estistenti in [🤗 Transformers models](https://huggingface.co/transformers/#contents) sono molto simili a *brand_new_bert*?
 - Che tipo di tokenizer si usa in questo caso? Un sentencepiece tokenizer? O un word piece tokenizer? Il tokenizer é lo stesso di BERT o BART? 
 
 Una volta che senti che hai avuto una bella overview dell'architettura del modello, puoi scrivere senza problemi al team di Hugging Face per ogni domanda che tu hai. Questo puó includere domande sull'architettura del modello, o sull'attention layer, etc. Saremo molto felici di aiutarti :) 

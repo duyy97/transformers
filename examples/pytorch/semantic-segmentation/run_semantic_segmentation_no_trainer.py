@@ -177,7 +177,7 @@ def parse_args():
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        help="Path to a pretrained model or model identifier from hf-mirror.com/models.",
+        help="Path to a pretrained model or model identifier from huggingface.co/models.",
         default="nvidia/mit-b0",
     )
     parser.add_argument(

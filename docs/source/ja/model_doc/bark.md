@@ -50,7 +50,7 @@ Better Transformer は、内部でカーネル融合を実行する 🤗 最適�
 model =  model.to_bettertransformer()
 ```
 
-この機能を使用する前に 🤗 Optimum をインストールする必要があることに注意してください。 [インストール方法はこちら](https://hf-mirror.com/docs/optimum/installation)
+この機能を使用する前に 🤗 Optimum をインストールする必要があることに注意してください。 [インストール方法はこちら](https://huggingface.co/docs/optimum/installation)
 
 #### Using CPU offload
 
@@ -62,7 +62,7 @@ CUDA デバイスを使用している場合、メモリ フットプリント�
 model.enable_cpu_offload()
 ```
 
-この機能を使用する前に、🤗 Accelerate をインストールする必要があることに注意してください。 [インストール方法はこちら](https://hf-mirror.com/docs/accelerate/basic_tutorials/install)
+この機能を使用する前に、🤗 Accelerate をインストールする必要があることに注意してください。 [インストール方法はこちら](https://huggingface.co/docs/accelerate/basic_tutorials/install)
 
 #### Combining optimization techniques
 
@@ -84,12 +84,12 @@ model = BetterTransformer.transform(model, keep_original_model=False)
 model.enable_cpu_offload()
 ```
 
-推論最適化手法の詳細については、[こちら](https://hf-mirror.com/docs/transformers/perf_infer_gpu_one) をご覧ください。
+推論最適化手法の詳細については、[こちら](https://huggingface.co/docs/transformers/perf_infer_gpu_one) をご覧ください。
 
 ### Tips
 
 Suno は、多くの言語で音声プリセットのライブラリを提供しています [こちら](https://suno-ai.notion.site/8b8e8749ed514b0cbf3f699013548683?v=bc67cff786b04b50b3ceb756fd05f68c)。
-これらのプリセットは、ハブ [こちら](https://hf-mirror.com/suno/bark-small/tree/main/speaker_embeddings) または [こちら](https://hf-mirror.com/suno/bark/tree/main/speaker_embeddings)。
+これらのプリセットは、ハブ [こちら](https://huggingface.co/suno/bark-small/tree/main/speaker_embeddings) または [こちら](https://huggingface.co/suno/bark/tree/main/speaker_embeddings)。
 
 ```python
 >>> from transformers import AutoProcessor, BarkModel
@@ -142,7 +142,7 @@ Bark は、非常にリアルな **多言語** 音声だけでなく、音楽、
 >>> write_wav("bark_generation.wav", sample_rate, audio_array)
 ```
 
-このモデルは、[Yoach Lacombe (ylacombe)](https://hf-mirror.com/ylacombe) および [Sanchit Gandhi (sanchit-gandhi)](https://github.com/sanchit-gandhi) によって提供されました。
+このモデルは、[Yoach Lacombe (ylacombe)](https://huggingface.co/ylacombe) および [Sanchit Gandhi (sanchit-gandhi)](https://github.com/sanchit-gandhi) によって提供されました。
 元のコードは [ここ](https://github.com/suno-ai/bark) にあります。
 
 ## BarkConfig

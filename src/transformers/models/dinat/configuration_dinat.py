@@ -22,8 +22,8 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 DINAT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "shi-labs/dinat-mini-in1k-224": "https://hf-mirror.com/shi-labs/dinat-mini-in1k-224/resolve/main/config.json",
-    # See all Dinat models at https://hf-mirror.com/models?filter=dinat
+    "shi-labs/dinat-mini-in1k-224": "https://huggingface.co/shi-labs/dinat-mini-in1k-224/resolve/main/config.json",
+    # See all Dinat models at https://huggingface.co/models?filter=dinat
 }
 
 
@@ -32,7 +32,7 @@ class DinatConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`DinatModel`]. It is used to instantiate a Dinat
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Dinat
-    [shi-labs/dinat-mini-in1k-224](https://hf-mirror.com/shi-labs/dinat-mini-in1k-224) architecture.
+    [shi-labs/dinat-mini-in1k-224](https://huggingface.co/shi-labs/dinat-mini-in1k-224) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

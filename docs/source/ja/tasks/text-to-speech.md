@@ -41,7 +41,7 @@ Bark で`text-to-speech`パイプラインを使用する方法の例を次に�
 >>> Audio(output["audio"], rate=output["sampling_rate"])
 ```
 Bark およびその他の事前トレーニングされた TTS モデルができることの詳細な例については、次のドキュメントを参照してください。
-[音声コース](https://hf-mirror.com/learn/audio-course/chapter6/pre-trained_models)。
+[音声コース](https://huggingface.co/learn/audio-course/chapter6/pre-trained_models)。
 
 TTS モデルを微調整する場合、現在微調整できるのは SpeechT5 のみです。 SpeechT5 は、次の組み合わせで事前トレーニングされています。
 音声からテキストへのデータとテキストから音声へのデータ。両方のテキストに共有される隠された表現の統一された空間を学習できるようにします。
@@ -50,7 +50,7 @@ X ベクトル スピーカーの埋め込みを通じて複数のスピーカ�
 
 このガイドの残りの部分では、次の方法を説明します。
 
-1. [VoxPopuli](https://hf-mirror.com/datasets/facebook/voxpopuli) のオランダ語 (`nl`) 言語サブセット上の英語音声で元々トレーニングされた [SpeechT5](../model_doc/speecht5) を微調整します。 データセット。
+1. [VoxPopuli](https://huggingface.co/datasets/facebook/voxpopuli) のオランダ語 (`nl`) 言語サブセット上の英語音声で元々トレーニングされた [SpeechT5](../model_doc/speecht5) を微調整します。 データセット。
 2. パイプラインを使用するか直接使用するかの 2 つの方法のいずれかで、洗練されたモデルを推論に使用します。
 
 始める前に、必要なライブラリがすべてインストールされていることを確認してください。
@@ -86,7 +86,7 @@ Hugging Face アカウントにログインして、モデルをアップロー�
 
 ## Load the dataset
 
-[VoxPopuli](https://hf-mirror.com/datasets/facebook/voxpopuli) は、以下で構成される大規模な多言語音声コーパスです。
+[VoxPopuli](https://huggingface.co/datasets/facebook/voxpopuli) は、以下で構成される大規模な多言語音声コーパスです。
 データは 2009 年から 2020 年の欧州議会のイベント記録をソースとしています。 15 件分のラベル付き音声文字起こしデータが含まれています。
 ヨーロッパの言語。このガイドではオランダ語のサブセットを使用していますが、自由に別のサブセットを選択してください。
 
@@ -232,7 +232,7 @@ VoxPopuli データセットには複数の話者の音声が含まれていま�
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_speakers_histogram.png" alt="Speakers histogram"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_speakers_histogram.png" alt="Speakers histogram"/>
 </div>
 
 ヒストグラムから、データセット内の話者の約 3 分の 1 の例が 100 未満であることがわかります。
@@ -272,7 +272,7 @@ VoxPopuli データセットには複数の話者の音声が含まれていま�
 
 TTS モデルが複数のスピーカーを区別できるようにするには、サンプルごとにスピーカーの埋め込みを作成する必要があります。
 スピーカーの埋め込みは、特定のスピーカーの音声特性をキャプチャするモデルへの追加入力です。
-これらのスピーカー埋め込みを生成するには、事前トレーニングされた [spkrec-xvect-voxceleb](https://hf-mirror.com/speechbrain/spkrec-xvect-voxceleb) を使用します。
+これらのスピーカー埋め込みを生成するには、事前トレーニングされた [spkrec-xvect-voxceleb](https://huggingface.co/speechbrain/spkrec-xvect-voxceleb) を使用します。
 SpeechBrain のモデル。
 
 入力オーディオ波形を受け取り、512 要素のベクトルを出力する関数 `create_speaker_embedding()` を作成します。
@@ -360,7 +360,7 @@ SpeechBrain のモデル。
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_1.png" alt="Log-mel spectrogram with 80 mel bins"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_1.png" alt="Log-mel spectrogram with 80 mel bins"/>
 </div>
 
 補足: このスペクトログラムがわかりにくいと感じる場合は、低周波を配置する規則に慣れていることが原因である可能性があります。
@@ -610,7 +610,7 @@ SpeechT5 では、モデルのデコーダ部分への入力が 2 分の 1 に�
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_2.png" alt="Generated log-mel spectrogram"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/tts_logmelspectrogram_2.png" alt="Generated log-mel spectrogram"/>
 </div>
 
 最後に、ボコーダーを使用してスペクトログラムをサウンドに変換します。

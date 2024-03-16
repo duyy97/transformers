@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # Funnel Transformer
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=funnel">
+<a href="https://huggingface.co/models?filter=funnel">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-funnel-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/funnel-transformer-small">
+<a href="https://huggingface.co/spaces/docs-demos/funnel-transformer-small">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -47,7 +47,7 @@ via a decoder. Empirically, with comparable or fewer FLOPs, Funnel-Transformer o
 a wide variety of sequence-level prediction tasks, including text classification, language understanding, and reading
 comprehension.*
 
-This model was contributed by [sgugger](https://hf-mirror.com/sgugger). The original code can be found [here](https://github.com/laiguokun/Funnel-Transformer).
+This model was contributed by [sgugger](https://huggingface.co/sgugger). The original code can be found [here](https://github.com/laiguokun/Funnel-Transformer).
 
 ## Usage tips
 

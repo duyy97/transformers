@@ -71,7 +71,7 @@ _CONFIG_FOR_DOC = "QDQBertConfig"
 
 QDQBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google-bert/bert-base-uncased",
-    # See all BERT models at https://hf-mirror.com/models?filter=bert
+    # See all BERT models at https://huggingface.co/models?filter=bert
 ]
 
 

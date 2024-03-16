@@ -20,7 +20,7 @@ rendered properly in your Markdown viewer.
 
 Existem vários modelos multilinguísticos no 🤗 Transformers e seus usos para inferência diferem dos modelos monolíngues.
 No entanto, nem *todos* os usos dos modelos multilíngues são tão diferentes.
-Alguns modelos, como o [google-bert/bert-base-multilingual-uncased](https://hf-mirror.com/google-bert/bert-base-multilingual-uncased),
+Alguns modelos, como o [google-bert/bert-base-multilingual-uncased](https://huggingface.co/google-bert/bert-base-multilingual-uncased),
 podem ser usados como se fossem monolíngues. Este guia irá te ajudar a usar modelos multilíngues cujo uso difere
 para o propósito de inferência.
 

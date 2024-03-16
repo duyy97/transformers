@@ -49,7 +49,7 @@ _CHECKPOINT_FOR_DOC = "Salesforce/blip2-opt-2.7b"
 
 BLIP_2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Salesforce/blip2-opt-2.7b",
-    # See all BLIP-2 models at https://hf-mirror.com/models?filter=blip
+    # See all BLIP-2 models at https://huggingface.co/models?filter=blip
 ]
 
 

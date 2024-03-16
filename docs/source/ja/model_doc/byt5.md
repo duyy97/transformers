@@ -37,7 +37,7 @@ FLOP のトレーニングと推論速度を調べ、バイトレベルのモデ
 T5 アーキテクチャに基づいた事前トレーニング済みのバイトレベルの Transformer モデルと、そこで使用されるすべてのコードとデータ
 実験。*
 
-このモデルは、[patrickvonplaten](https://hf-mirror.com/patrickvonplaten) によって提供されました。元のコードは次のとおりです
+このモデルは、[patrickvonplaten](https://huggingface.co/patrickvonplaten) によって提供されました。元のコードは次のとおりです
 [ここ](https://github.com/google-research/byt5) にあります。
 
 <Tip>

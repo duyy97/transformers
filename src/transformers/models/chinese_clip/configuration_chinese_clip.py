@@ -32,7 +32,7 @@ logger = logging.get_logger(__name__)
 
 CHINESE_CLIP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "OFA-Sys/chinese-clip-vit-base-patch16": (
-        "https://hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16/resolve/main/config.json"
+        "https://huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16/resolve/main/config.json"
     ),
 }
 
@@ -43,7 +43,7 @@ class ChineseCLIPTextConfig(PretrainedConfig):
     Chinese CLIP model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Chinese CLIP
     [OFA-Sys/chinese-clip-vit-base-patch16](https:
-        //hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16) architecture.
+        //huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -171,7 +171,7 @@ class ChineseCLIPVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ChineseCLIPModel`]. It is used to instantiate an
     ChineseCLIP model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the ChineseCLIP
-    [OFA-Sys/chinese-clip-vit-base-patch16](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16) architecture.
+    [OFA-Sys/chinese-clip-vit-base-patch16](https://huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -279,7 +279,7 @@ class ChineseCLIPConfig(PretrainedConfig):
     [`ChineseCLIPConfig`] is the configuration class to store the configuration of a [`ChineseCLIPModel`]. It is used
     to instantiate Chinese-CLIP model according to the specified arguments, defining the text model and vision model
     configs. Instantiating a configuration with the defaults will yield a similar configuration to that of the
-    Chinese-CLIP [OFA-Sys/chinese-clip-vit-base-patch16](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16)
+    Chinese-CLIP [OFA-Sys/chinese-clip-vit-base-patch16](https://huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

@@ -52,7 +52,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 TF_REGNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/regnet-y-040",
-    # See all regnet models at https://hf-mirror.com/models?filter=regnet
+    # See all regnet models at https://huggingface.co/models?filter=regnet
 ]
 
 

@@ -51,7 +51,7 @@ Tun Sie Ihr Bestes, diesen Richtlinien zu folgen, wenn Sie ein fehlerspezifische
 
 Die 🤗 Transformers-Bibliothek verdankt ihre Robustheit und Zuverlässigkeit aller Nutzer, die frisch entdeckte Probleme melden.
 
-Wir würden es wirklich schätzen, wenn Sie **sicherstellen könnten, dass der Fehler noch nicht gemeldet wurde** (verwenden Sie die Suchleiste auf GitHub unter Issues), bevor Sie ein Issue erstellen. Ihr Problem sollte sich auch auf Fehler in der Bibliothek selbst und nicht auf Ihren eigenen Code beziehen. Wenn Sie sich nicht sicher sind, ob der Fehler in Ihrem eigenen Code oder der Bibliothek liegt, fragen Sie bitte zuerst im [Forum](https://discuss.hf-mirror.com/) nach. Das hilft uns, schneller auf Probleme im Zusammenhang mit der Bibliothek zu reagieren, anstatt auf allgemeine Fragen.
+Wir würden es wirklich schätzen, wenn Sie **sicherstellen könnten, dass der Fehler noch nicht gemeldet wurde** (verwenden Sie die Suchleiste auf GitHub unter Issues), bevor Sie ein Issue erstellen. Ihr Problem sollte sich auch auf Fehler in der Bibliothek selbst und nicht auf Ihren eigenen Code beziehen. Wenn Sie sich nicht sicher sind, ob der Fehler in Ihrem eigenen Code oder der Bibliothek liegt, fragen Sie bitte zuerst im [Forum](https://discuss.huggingface.co/) nach. Das hilft uns, schneller auf Probleme im Zusammenhang mit der Bibliothek zu reagieren, anstatt auf allgemeine Fragen.
 
 Wenn Sie sich vergewissert haben, dass der Fehler noch nicht gemeldet wurde, geben Sie bitte die folgenden Informationen in Ihrem Issue an, damit wir es schnell beheben können:
 
@@ -98,7 +98,7 @@ Es werden ständig neue Modelle veröffentlicht. Wenn Sie ein neues Modell imple
 
 Lassen Sie es uns wissen, wenn Sie bereit sind, das Modell selbst beizutragen. Dann können wir Ihnen helfen, es zu 🤗 Transformers hinzuzufügen!
 
-Wir haben eine [detaillierte Anleitung und Vorlagen](https://github.com/huggingface/transformers/tree/main/templates) hinzugefügt, um Ihnen das Hinzufügen eines neuen Modells zu erleichtern, und wir haben auch einen technischen Leitfaden dazu, [wie man ein Modell zu 🤗 Transformers hinzufügt](https://hf-mirror.com/docs/transformers/add_new_model).
+Wir haben eine [detaillierte Anleitung und Vorlagen](https://github.com/huggingface/transformers/tree/main/templates) hinzugefügt, um Ihnen das Hinzufügen eines neuen Modells zu erleichtern, und wir haben auch einen technischen Leitfaden dazu, [wie man ein Modell zu 🤗 Transformers hinzufügt](https://huggingface.co/docs/transformers/add_new_model).
 
 ## Möchten Sie die Dokumentation erweitern?
 
@@ -156,7 +156,7 @@ Sie benötigen **[Python 3.8](https://github.com/huggingface/transformers/blob/m
    pytest tests/<TEST_TO_RUN>.py
    ```
 
-   Weitere Informationen über Tests finden Sie in der Anleitung zum Thema [Testen](https://hf-mirror.com/docs/transformers/testing).
+   Weitere Informationen über Tests finden Sie in der Anleitung zum Thema [Testen](https://huggingface.co/docs/transformers/testing).
 
    🤗 Transformers stützt sich auf `black` und `ruff`, um seinen Quellcode konsistent zu formatieren. Nachdem Sie Änderungen vorgenommen haben, wenden Sie automatische Stilkorrekturen und Codeprüfungen, die nicht automatisiert werden können, in einem Schritt an:
 
@@ -184,7 +184,7 @@ Sie benötigen **[Python 3.8](https://github.com/huggingface/transformers/blob/m
    make repo-consistency
    ```
 
-   Um mehr über diese Prüfungen zu erfahren und wie man mit ihnen Probleme behebt, lesen Sie den Leitfaden zu [Überprüfungen bei einer Pull-Anfrage](https://hf-mirror.com/docs/transformers/pr_checks).
+   Um mehr über diese Prüfungen zu erfahren und wie man mit ihnen Probleme behebt, lesen Sie den Leitfaden zu [Überprüfungen bei einer Pull-Anfrage](https://huggingface.co/docs/transformers/pr_checks).
 
    Wenn Sie Dokumente im Verzeichnis `docs/source` ändern, stellen Sie sicher, dass die Dokumentation noch generiert werden kann. Diese Prüfung wird auch im CI laufen, wenn Sie eine Pull-Anfrage erstellen. Um eine lokale Prüfung durchzuführen, müssen Sie den Dukumentation-Builder installieren:
 
@@ -242,9 +242,9 @@ Sie benötigen **[Python 3.8](https://github.com/huggingface/transformers/blob/m
 * CircleCI führt die langsamen Tests nicht aus, aber GitHub Actions tut dies jede Nacht!<br>
 
 ☐ Alle public Methoden müssen informative Docstrings haben (siehe [`modeling_bert.py`](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py) als Beispiel).<br>
-☐ Aufgrund des schnell wachsenden Repositorys fügen Sie bitte keine Bilder, Videos oder andere Nicht-Textdateien hinzu, die das Repository erheblich belasten würden. Verwenden Sie stattdessen ein Hub-Repository wie [`hf-internal-testing`](https://hf-mirror.com/hf-internal-testing), um diese Dateien zu hosten und sie per URL zu verlinken. Wir empfehlen Bilder, die zur Dokumentation gehören, im folgenden Repository abzulegen: [huggingface/documentation-images](https://hf-mirror.com/datasets/huggingface/documentation-images). Sie können eine PR in diesem Datasets-Repository erstellen und ein Hugging-Face-Mitglied bitten, sie zu mergen.
+☐ Aufgrund des schnell wachsenden Repositorys fügen Sie bitte keine Bilder, Videos oder andere Nicht-Textdateien hinzu, die das Repository erheblich belasten würden. Verwenden Sie stattdessen ein Hub-Repository wie [`hf-internal-testing`](https://huggingface.co/hf-internal-testing), um diese Dateien zu hosten und sie per URL zu verlinken. Wir empfehlen Bilder, die zur Dokumentation gehören, im folgenden Repository abzulegen: [huggingface/documentation-images](https://huggingface.co/datasets/huggingface/documentation-images). Sie können eine PR in diesem Datasets-Repository erstellen und ein Hugging-Face-Mitglied bitten, sie zu mergen.
 
-Um mehr über die Prüfungen zu erfahren, die bei einer Pull-Anfrage ausgelöst werden, lesen Sie unseren Leitfaden zu [Überprüfungen bei einer Pull-Anfrage](https://hf-mirror.com/docs/transformers/pr_checks).
+Um mehr über die Prüfungen zu erfahren, die bei einer Pull-Anfrage ausgelöst werden, lesen Sie unseren Leitfaden zu [Überprüfungen bei einer Pull-Anfrage](https://huggingface.co/docs/transformers/pr_checks).
 
 ### Tests
 

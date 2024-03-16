@@ -60,7 +60,7 @@ NEZHA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "sijunhe/nezha-cn-large",
     "sijunhe/nezha-base-wwm",
     "sijunhe/nezha-large-wwm",
-    # See all Nezha models at https://hf-mirror.com/models?filter=nezha
+    # See all Nezha models at https://huggingface.co/models?filter=nezha
 ]
 
 

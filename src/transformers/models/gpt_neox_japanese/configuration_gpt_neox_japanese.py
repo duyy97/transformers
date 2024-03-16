@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 GPT_NEOX_JAPANESE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "abeja/gpt-neox-japanese-2.7b": "https://hf-mirror.com/abeja/gpt-neox-japanese-2.7b/resolve/main/config.json",
+    "abeja/gpt-neox-japanese-2.7b": "https://huggingface.co/abeja/gpt-neox-japanese-2.7b/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class GPTNeoXJapaneseConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GPTNeoXModelJapanese`]. It is used to instantiate
     a GPTNeoX model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the GPTNeoXJapanese
-    [abeja/gpt-neox-japanese-2.7b](https://hf-mirror.com/abeja/gpt-neox-japanese-2.7b) architecture.
+    [abeja/gpt-neox-japanese-2.7b](https://huggingface.co/abeja/gpt-neox-japanese-2.7b) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information. Default configs is set as 2.7B model

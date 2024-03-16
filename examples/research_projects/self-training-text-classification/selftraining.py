@@ -43,11 +43,11 @@ class STModelArguments:
     """Arguments pertaining to which config/tokenizer/model we are going to fine-tune from."""
 
     model_name_or_path: str = dataclasses.field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models."}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models."}
     )
     cache_dir: Optional[str] = dataclasses.field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com."},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co."},
     )
 
 
@@ -153,7 +153,7 @@ def selftrain(model_name_or_path, train_file, infer_file, output_dir, **kwargs):
 
     Args:
       model_name_or_path: Path to pretrained model or model identifier from
-        hf-mirror.com/models.
+        huggingface.co/models.
       train_file: A csv or a json file containing the training data.
       infer_file: A csv or a json file containing the data to predict on.
       output_dir: The output directory where the model predictions and checkpoints

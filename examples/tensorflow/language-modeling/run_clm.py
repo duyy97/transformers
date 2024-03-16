@@ -18,7 +18,7 @@ Fine-tuning the library models for causal language modeling (GPT-2, GPT-Neo...)
 on a text file or a dataset without using HuggingFace Trainer.
 
 Here is the full list of checkpoints on the hub that can be fine-tuned by this script:
-https://hf-mirror.com/models?filter=text-generation
+https://huggingface.co/models?filter=text-generation
 """
 # You can also adapt this script on your own clm task. Pointers for this are left as comments.
 
@@ -103,7 +103,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -299,7 +299,7 @@ def main():
 
     # region Load datasets
     # Get the datasets: you can either provide your own CSV/JSON/TXT training and evaluation files (see below)
-    # or just provide the name of one of the public datasets available on the hub at https://hf-mirror.com/datasets/
+    # or just provide the name of one of the public datasets available on the hub at https://huggingface.co/datasets/
     # (the dataset will be downloaded automatically from the datasets Hub).
     #
     # For CSV/JSON files, this script will use the column called 'text' or the first column if no column called
@@ -371,7 +371,7 @@ def main():
                 **dataset_args,
             )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
     # endregion
 
     # region Load pretrained model and tokenizer
@@ -462,7 +462,7 @@ def main():
     # to preprocess.
     #
     # To speed up this part, we use multiprocessing. See the documentation of the map method for more information:
-    # https://hf-mirror.com/docs/datasets/process#map
+    # https://huggingface.co/docs/datasets/process#map
 
     lm_datasets = tokenized_datasets.map(
         group_texts,
@@ -544,8 +544,8 @@ def main():
         # yourself if you use this method, whereas they are automatically inferred from the model input names when
         # using model.prepare_tf_dataset()
         # For more info see the docs:
-        # https://hf-mirror.com/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
-        # https://hf-mirror.com/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
+        # https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
+        # https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
 
         tf_train_dataset = model.prepare_tf_dataset(
             train_dataset,
@@ -628,7 +628,7 @@ def main():
 
         # For long training runs, you may wish to use the PushToHub() callback here to save intermediate checkpoints
         # to the Hugging Face Hub rather than just pushing the finished model.
-        # See https://hf-mirror.com/docs/transformers/main_classes/keras_callbacks#transformers.PushToHubCallback
+        # See https://huggingface.co/docs/transformers/main_classes/keras_callbacks#transformers.PushToHubCallback
 
         history = model.fit(
             tf_train_dataset,

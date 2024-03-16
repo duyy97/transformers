@@ -58,7 +58,7 @@ _EXPECTED_OUTPUT_SHAPE = [1, 577, 1024]
 DPT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Intel/dpt-large",
     "Intel/dpt-hybrid-midas",
-    # See all DPT models at https://hf-mirror.com/models?filter=dpt
+    # See all DPT models at https://huggingface.co/models?filter=dpt
 ]
 
 

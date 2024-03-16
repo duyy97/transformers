@@ -408,7 +408,7 @@ class GPTQConfig(QuantizationConfigMixin):
         tokenizer (`str` or `PreTrainedTokenizerBase`, *optional*):
             The tokenizer used to process the dataset. You can pass either:
                 - A custom tokenizer object.
-                - A string, the *model id* of a predefined tokenizer hosted inside a model repo on hf-mirror.com.
+                - A string, the *model id* of a predefined tokenizer hosted inside a model repo on huggingface.co.
                 - A path to a *directory* containing vocabulary files required by the tokenizer, for instance saved
                     using the [`~PreTrainedTokenizer.save_pretrained`] method, e.g., `./my_model_directory/`.
         dataset (`Union[List[str]]`, *optional*):

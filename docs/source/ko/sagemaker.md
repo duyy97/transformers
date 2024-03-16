@@ -20,9 +20,9 @@ rendered properly in your Markdown viewer.
 
 # Amazon SageMaker에서 학습 실행하기[[run-training-on-amazon-sagemaker]]
 
-문서가 [hf.co/docs/sagemaker](https://hf-mirror.com/docs/sagemaker)로 이동되었습니다. 이 페이지는 `transformers` 5.0 에서 삭제될 예정입니다. 
+문서가 [hf.co/docs/sagemaker](https://huggingface.co/docs/sagemaker)로 이동되었습니다. 이 페이지는 `transformers` 5.0 에서 삭제될 예정입니다. 
 
 ### 목차[[table-of-content]]
 
-- [Train Hugging Face models on Amazon SageMaker with the SageMaker Python SDK](https://hf-mirror.com/docs/sagemaker/train)
-- [Deploy Hugging Face models to Amazon SageMaker with the SageMaker Python SDK](https://hf-mirror.com/docs/sagemaker/inference)
+- [Train Hugging Face models on Amazon SageMaker with the SageMaker Python SDK](https://huggingface.co/docs/sagemaker/train)
+- [Deploy Hugging Face models to Amazon SageMaker with the SageMaker Python SDK](https://huggingface.co/docs/sagemaker/inference)

@@ -29,7 +29,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 CLVP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "susnato/clvp_dev": "https://hf-mirror.com/susnato/clvp_dev/resolve/main/config.json",
+    "susnato/clvp_dev": "https://huggingface.co/susnato/clvp_dev/resolve/main/config.json",
 }
 
 
@@ -38,7 +38,7 @@ class ClvpEncoderConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ClvpEncoder`]. It is used to instantiate a CLVP
     text or CLVP speech encoder according to the specified arguments. Instantiating a configuration with the defaults
     will yield a similar configuration to that of the encoder of the CLVP
-    [susnato/clvp_dev](https://hf-mirror.com/susnato/clvp_dev) architecture.
+    [susnato/clvp_dev](https://huggingface.co/susnato/clvp_dev) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -169,7 +169,7 @@ class ClvpDecoderConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ClvpDecoder`]. It is used to instantiate a CLVP
     Decoder Model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Decoder part of the CLVP
-    [susnato/clvp_dev](https://hf-mirror.com/susnato/clvp_dev) architecture.
+    [susnato/clvp_dev](https://huggingface.co/susnato/clvp_dev) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -343,7 +343,7 @@ class ClvpConfig(PretrainedConfig):
     [`ClvpConfig`] is the configuration class to store the configuration of a [`ClvpModelForConditionalGeneration`]. It
     is used to instantiate a CLVP model according to the specified arguments, defining the text model, speech model and
     decoder model configs. Instantiating a configuration with the defaults will yield a similar configuration to that
-    of the CLVP [susnato/clvp_dev](https://hf-mirror.com/susnato/clvp_dev) architecture.
+    of the CLVP [susnato/clvp_dev](https://huggingface.co/susnato/clvp_dev) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

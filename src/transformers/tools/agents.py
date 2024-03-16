@@ -283,7 +283,7 @@ class Agent:
         ```py
         from transformers import HfAgent
 
-        agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+        agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
         agent.chat("Draw me a picture of rivers and lakes")
 
         agent.chat("Transform the picture so that there is a rock in there")
@@ -340,7 +340,7 @@ class Agent:
         ```py
         from transformers import HfAgent
 
-        agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+        agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
         agent.run("Draw me a picture of rivers and lakes")
         ```
         """
@@ -619,7 +619,7 @@ class HfAgent(Agent):
     ```py
     from transformers import HfAgent
 
-    agent = HfAgent("https://api-inference.hf-mirror.com/models/bigcode/starcoder")
+    agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
     agent.run("Is the following `text` (in Spanish) positive or negative?", text="¡Este es un API muy agradable!")
     ```
     """

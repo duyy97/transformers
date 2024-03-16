@@ -29,9 +29,9 @@ The depth of representations is of central importance for many visual recognitio
 
 The figure below illustrates the architecture of ResNet. Taken from the [original paper](https://arxiv.org/abs/1512.03385).
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/resnet_architecture.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/resnet_architecture.png"/>
 
-This model was contributed by [Francesco](https://hf-mirror.com/Francesco). The TensorFlow version of this model was added by [amyeroberts](https://hf-mirror.com/amyeroberts). The original code can be found [here](https://github.com/KaimingHe/deep-residual-networks).
+This model was contributed by [Francesco](https://huggingface.co/Francesco). The TensorFlow version of this model was added by [amyeroberts](https://huggingface.co/amyeroberts). The original code can be found [here](https://github.com/KaimingHe/deep-residual-networks).
 
 ## Resources
 

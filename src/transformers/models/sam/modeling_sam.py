@@ -41,7 +41,7 @@ SAM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/sam-vit-huge",
     "facebook/sam-vit-large",
     "facebook/sam-vit-base",
-    # See all SAM models at https://hf-mirror.com/models?filter=sam
+    # See all SAM models at https://huggingface.co/models?filter=sam
 ]
 
 
@@ -1303,7 +1303,7 @@ class SamModel(SamPreTrainedModel):
         >>> model = AutoModel.from_pretrained("facebook/sam-vit-base")
         >>> processor = AutoProcessor.from_pretrained("facebook/sam-vit-base")
 
-        >>> img_url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/sam-car.png"
+        >>> img_url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/sam-car.png"
         >>> raw_image = Image.open(requests.get(img_url, stream=True).raw).convert("RGB")
         >>> input_points = [[[400, 650]]]  # 2D location of a window on the car
         >>> inputs = processor(images=raw_image, input_points=input_points, return_tensors="pt")

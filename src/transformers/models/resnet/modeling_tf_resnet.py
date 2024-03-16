@@ -51,7 +51,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tiger cat"
 
 TF_RESNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/resnet-50",
-    # See all resnet models at https://hf-mirror.com/models?filter=resnet
+    # See all resnet models at https://huggingface.co/models?filter=resnet
 ]
 
 

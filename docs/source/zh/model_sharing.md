@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 最后两个教程展示了如何使用PyTorch、Keras和 🤗 Accelerate进行分布式设置来微调模型。下一步是将您的模型与社区分享！在Hugging Face，我们相信公开分享知识和资源，能实现人工智能的普及化，让每个人都能受益。我们鼓励您将您的模型与社区分享，以帮助他人节省时间和精力。
 
-在本教程中，您将学习两种在[Model Hub](https://hf-mirror.com/models)上共享训练好的或微调的模型的方法：
+在本教程中，您将学习两种在[Model Hub](https://huggingface.co/models)上共享训练好的或微调的模型的方法：
 
 - 通过编程将文件推送到Hub。
 - 使用Web界面将文件拖放到Hub。
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-要与社区共享模型，您需要在[hf-mirror.com](https://hf-mirror.com/join)上拥有一个帐户。您还可以加入现有的组织或创建一个新的组织。
+要与社区共享模型，您需要在[huggingface.co](https://huggingface.co/join)上拥有一个帐户。您还可以加入现有的组织或创建一个新的组织。
 
 </Tip>
 
@@ -48,7 +48,7 @@ Model Hub的内置版本控制基于git和[git-lfs](https://git-lfs.github.com/)
 ```
 
 文件也可以轻松地在仓库中编辑，您可以查看提交历史记录以及差异：
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## 设置
 
@@ -59,12 +59,12 @@ Model Hub的内置版本控制基于git和[git-lfs](https://git-lfs.github.com/)
 huggingface-cli login
 ```
 
-如果您正在使用像Jupyter或Colaboratory这样的`notebook`，请确保您已安装了[`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library)库。该库允许您以编程方式与Hub进行交互。
+如果您正在使用像Jupyter或Colaboratory这样的`notebook`，请确保您已安装了[`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library)库。该库允许您以编程方式与Hub进行交互。
 
 ```bash
 pip install huggingface_hub
 ```
-然后使用`notebook_login`登录到Hub，并按照[这里](https://hf-mirror.com/settings/token)的链接生成一个token进行登录：
+然后使用`notebook_login`登录到Hub，并按照[这里](https://huggingface.co/settings/token)的链接生成一个token进行登录：
 
 
 ```py
@@ -208,14 +208,14 @@ pip install huggingface_hub
 ```
 现在，当您导航到您的Hugging Face个人资料时，您应该看到您新创建的模型仓库。点击**文件**选项卡将显示您已上传到仓库的所有文件。
 
-有关如何创建和上传文件到仓库的更多详细信息，请参考Hub文档[这里](https://hf-mirror.com/docs/hub/how-to-upstream)。
+有关如何创建和上传文件到仓库的更多详细信息，请参考Hub文档[这里](https://huggingface.co/docs/hub/how-to-upstream)。
 
 
 ## 使用Web界面上传
 
-喜欢无代码方法的用户可以通过Hugging Face的Web界面上传模型。访问[hf-mirror.com/new](https://hf-mirror.com/new)创建一个新的仓库：
+喜欢无代码方法的用户可以通过Hugging Face的Web界面上传模型。访问[huggingface.co/new](https://huggingface.co/new)创建一个新的仓库：
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 从这里开始，添加一些关于您的模型的信息：
 
@@ -226,7 +226,7 @@ pip install huggingface_hub
 
 现在点击**文件**选项卡，然后点击**添加文件**按钮将一个新文件上传到你的仓库。接着拖放一个文件进行上传，并添加提交信息。
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## 添加模型卡片
 
@@ -235,4 +235,4 @@ pip install huggingface_hub
 * 手动创建并上传一个`README.md`文件。
 * 在你的模型仓库中点击**编辑模型卡片**按钮。
 
-可以参考DistilBert的[模型卡片](https://hf-mirror.com/distilbert/distilbert-base-uncased)来了解模型卡片应该包含的信息类型。有关您可以在`README.md`文件中控制的更多选项的细节，例如模型的碳足迹或小部件示例，请参考文档[这里](https://hf-mirror.com/docs/hub/models-cards)。
+可以参考DistilBert的[模型卡片](https://huggingface.co/distilbert/distilbert-base-uncased)来了解模型卡片应该包含的信息类型。有关您可以在`README.md`文件中控制的更多选项的细节，例如模型的碳足迹或小部件示例，请参考文档[这里](https://huggingface.co/docs/hub/models-cards)。

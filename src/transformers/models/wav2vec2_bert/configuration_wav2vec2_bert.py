@@ -22,7 +22,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 WAV2VEC2_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/w2v-bert-2.0": "https://hf-mirror.com/facebook/w2v-bert-2.0/resolve/main/config.json",
+    "facebook/w2v-bert-2.0": "https://huggingface.co/facebook/w2v-bert-2.0/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class Wav2Vec2BertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Wav2Vec2BertModel`]. It is used to
     instantiate an Wav2Vec2Bert model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Wav2Vec2Bert
-    [facebook/wav2vec2-bert-rel-pos-large](https://hf-mirror.com/facebook/wav2vec2-bert-rel-pos-large)
+    [facebook/wav2vec2-bert-rel-pos-large](https://huggingface.co/facebook/wav2vec2-bert-rel-pos-large)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

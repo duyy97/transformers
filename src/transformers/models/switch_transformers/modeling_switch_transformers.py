@@ -64,7 +64,7 @@ SWITCH_TRANSFORMERS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/switch-large-128",
     "google/switch-xxl-128",
     "google/switch-c-2048",
-    # See all SwitchTransformers models at https://hf-mirror.com/models?filter=switch_transformers
+    # See all SwitchTransformers models at https://huggingface.co/models?filter=switch_transformers
 ]
 
 

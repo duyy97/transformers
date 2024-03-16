@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 XLNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "xlnet/xlnet-base-cased": "https://hf-mirror.com/xlnet/xlnet-base-cased/resolve/main/config.json",
-    "xlnet/xlnet-large-cased": "https://hf-mirror.com/xlnet/xlnet-large-cased/resolve/main/config.json",
+    "xlnet/xlnet-base-cased": "https://huggingface.co/xlnet/xlnet-base-cased/resolve/main/config.json",
+    "xlnet/xlnet-large-cased": "https://huggingface.co/xlnet/xlnet-large-cased/resolve/main/config.json",
 }
 
 
@@ -34,7 +34,7 @@ class XLNetConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`XLNetModel`] or a [`TFXLNetModel`]. It is used to
     instantiate a XLNet model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the
-    [xlnet/xlnet-large-cased](https://hf-mirror.com/xlnet/xlnet-large-cased) architecture.
+    [xlnet/xlnet-large-cased](https://huggingface.co/xlnet/xlnet-large-cased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -67,7 +67,7 @@ class XLNetConfig(PretrainedConfig):
         mem_len (`int` or `None`, *optional*):
             The number of tokens to cache. The key/value pairs that have already been pre-computed in a previous
             forward pass won't be re-computed. See the
-            [quickstart](https://hf-mirror.com/transformers/quickstart.html#using-the-past) for more information.
+            [quickstart](https://huggingface.co/transformers/quickstart.html#using-the-past) for more information.
         reuse_len (`int`, *optional*):
             The number of tokens in the current batch to be cached and reused in the future.
         bi_data (`bool`, *optional*, defaults to `False`):

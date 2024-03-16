@@ -15,8 +15,8 @@ The abstract from the paper is the following:
 - Strong capabilities across 10 key languages
 - Model weights available on HuggingFace for research and evaluation
 
-Checkout model checkpoints [here](https://hf-mirror.com/CohereForAI/c4ai-command-r-v01).
-This model was contributed by [Saurabh Dash](https://hf-mirror.com/saurabhdash) and [Ahmet Üstün](https://hf-mirror.com/ahmetustun). The code of the implementation in Hugging Face is based on GPT-NeoX [here](https://github.com/EleutherAI/gpt-neox).
+Checkout model checkpoints [here](https://huggingface.co/CohereForAI/c4ai-command-r-v01).
+This model was contributed by [Saurabh Dash](https://huggingface.co/saurabhdash) and [Ahmet Üstün](https://huggingface.co/ahmetustun). The code of the implementation in Hugging Face is based on GPT-NeoX [here](https://github.com/EleutherAI/gpt-neox).
 
 ## Usage tips
 

@@ -24,10 +24,10 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 FLAUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "flaubert/flaubert_small_cased": "https://hf-mirror.com/flaubert/flaubert_small_cased/resolve/main/config.json",
-    "flaubert/flaubert_base_uncased": "https://hf-mirror.com/flaubert/flaubert_base_uncased/resolve/main/config.json",
-    "flaubert/flaubert_base_cased": "https://hf-mirror.com/flaubert/flaubert_base_cased/resolve/main/config.json",
-    "flaubert/flaubert_large_cased": "https://hf-mirror.com/flaubert/flaubert_large_cased/resolve/main/config.json",
+    "flaubert/flaubert_small_cased": "https://huggingface.co/flaubert/flaubert_small_cased/resolve/main/config.json",
+    "flaubert/flaubert_base_uncased": "https://huggingface.co/flaubert/flaubert_base_uncased/resolve/main/config.json",
+    "flaubert/flaubert_base_cased": "https://huggingface.co/flaubert/flaubert_base_cased/resolve/main/config.json",
+    "flaubert/flaubert_large_cased": "https://huggingface.co/flaubert/flaubert_large_cased/resolve/main/config.json",
 }
 
 
@@ -36,7 +36,7 @@ class FlaubertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`FlaubertModel`] or a [`TFFlaubertModel`]. It is
     used to instantiate a FlauBERT model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the FlauBERT
-    [flaubert/flaubert_base_uncased](https://hf-mirror.com/flaubert/flaubert_base_uncased) architecture.
+    [flaubert/flaubert_base_uncased](https://huggingface.co/flaubert/flaubert_base_uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -75,7 +75,7 @@ class FlaubertConfig(PretrainedConfig):
             The number of languages the model handles. Set to 1 for monolingual models.
         use_lang_emb (`bool`, *optional*, defaults to `True`)
             Whether to use language embeddings. Some models use additional language embeddings, see [the multilingual
-            models page](http://hf-mirror.com/transformers/multilingual.html#xlm-language-embeddings) for information
+            models page](http://huggingface.co/transformers/multilingual.html#xlm-language-embeddings) for information
             on how to use them.
         max_position_embeddings (`int`, *optional*, defaults to 512):
             The maximum sequence length that this model might ever be used with. Typically set this to something large

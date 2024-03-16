@@ -531,10 +531,10 @@ class BloomEmbeddingTest(unittest.TestCase):
 
 
     You need to install tokenizers following this readme:
-        - https://hf-mirror.com/bigscience-catalogue-data-dev/byte-level-bpe-tokenizer-no-norm-250k-whitespace-and-eos-regex-alpha-v3-dedup-lines-articles
+        - https://huggingface.co/bigscience-catalogue-data-dev/byte-level-bpe-tokenizer-no-norm-250k-whitespace-and-eos-regex-alpha-v3-dedup-lines-articles
 
     Tokenizer used during training:
-        - https://hf-mirror.com/bigscience-catalogue-data-dev/byte-level-bpe-tokenizer-no-norm-250k-whitespace-and-eos-regex-alpha-v3-dedup-lines-articles
+        - https://huggingface.co/bigscience-catalogue-data-dev/byte-level-bpe-tokenizer-no-norm-250k-whitespace-and-eos-regex-alpha-v3-dedup-lines-articles
 
     # TODO change the script (or just add skip) when building the env with tokenizers 0.12.0
     """

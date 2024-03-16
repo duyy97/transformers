@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 지난 두 튜토리얼에서 분산 설정을 위해 PyTorch, Keras 및 🤗 Accelerate를 사용하여 모델을 미세 조정하는 방법을 보았습니다. 다음 단계는 모델을 커뮤니티와 공유하는 것입니다! Hugging Face는 인공지능의 민주화를 위해 모두에게 지식과 자원을 공개적으로 공유해야 한다고 믿습니다. 다른 사람들이 시간과 자원을 절약할 수 있도록 커뮤니티에 모델을 공유하는 것을 고려해 보세요.
 
-이 튜토리얼에서 [Model Hub](https://hf-mirror.com/models)에서 훈련되거나 미세 조정 모델을 공유하는 두 가지 방법에 대해 알아봅시다:
+이 튜토리얼에서 [Model Hub](https://huggingface.co/models)에서 훈련되거나 미세 조정 모델을 공유하는 두 가지 방법에 대해 알아봅시다:
 
 - API를 통해 파일을 Hub에 푸시합니다.
 - 웹사이트를 통해 파일을 Hub로 끌어다 놓습니다.
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-커뮤니티에 모델을 공유하려면, [hf-mirror.com](https://hf-mirror.com/join)에 계정이 필요합니다. 기존 조직에 가입하거나 새로 만들 수도 있습니다.
+커뮤니티에 모델을 공유하려면, [huggingface.co](https://huggingface.co/join)에 계정이 필요합니다. 기존 조직에 가입하거나 새로 만들 수도 있습니다.
 
 </Tip>
 
@@ -49,7 +49,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 또한 저장소에서 파일을 쉽게 편집할 수 있으며, 커밋 기록과 차이를 볼 수 있습니다:
 
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## 설정[[setup]]
 
@@ -59,13 +59,13 @@ picture-in-picture" allowfullscreen></iframe>
 huggingface-cli login
 ```
 
-Jupyter 또는 Colaboratory와 같은 노트북을 사용 중인 경우, [`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library) 라이브러리가 설치되었는지 확인하세요. 이 라이브러리를 사용하면 API로 허브와 상호 작용할 수 있습니다.
+Jupyter 또는 Colaboratory와 같은 노트북을 사용 중인 경우, [`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library) 라이브러리가 설치되었는지 확인하세요. 이 라이브러리를 사용하면 API로 허브와 상호 작용할 수 있습니다.
 
 ```bash
 pip install huggingface_hub
 ```
 
-그런 다음 `notebook_login`로 허브에 로그인하고, [여기](https://hf-mirror.com/settings/token) 링크에서 로그인할 토큰을 생성합니다:
+그런 다음 `notebook_login`로 허브에 로그인하고, [여기](https://huggingface.co/settings/token) 링크에서 로그인할 토큰을 생성합니다:
 
 ```py
 >>> from huggingface_hub import notebook_login
@@ -203,13 +203,13 @@ Flax에서 모델을 사용하는 경우, PyTorch에서 Flax로 체크포인트�
 
 이제 Hugging Face 프로필로 이동하면, 새로 생성한 모델 저장소가 표시됩니다. **Files** 탭을 클릭하면 저장소에 업로드한 모든 파일이 표시됩니다.
 
-저장소에 파일을 만들고 업로드하는 방법에 대한 자세한 내용은 허브 설명서 [여기](https://hf-mirror.com/docs/hub/how-to-upstream)를 참조하세요.
+저장소에 파일을 만들고 업로드하는 방법에 대한 자세한 내용은 허브 설명서 [여기](https://huggingface.co/docs/hub/how-to-upstream)를 참조하세요.
 
 ## 웹 인터페이스로 업로드하기[[upload-with-the-web-interface]]
 
-코드 없는 접근 방식을 선호하는 사용자는 허브의 웹 인터페이스를 통해 모델을 업로드할 수 있습니다. [hf-mirror.com/new](https://hf-mirror.com/new)를 방문하여 새로운 저장소를 생성하세요:
+코드 없는 접근 방식을 선호하는 사용자는 허브의 웹 인터페이스를 통해 모델을 업로드할 수 있습니다. [huggingface.co/new](https://huggingface.co/new)를 방문하여 새로운 저장소를 생성하세요:
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 여기서 모델에 대한 몇 가지 정보를 추가하세요:
 
@@ -220,7 +220,7 @@ Flax에서 모델을 사용하는 경우, PyTorch에서 Flax로 체크포인트�
 
 이제 **Files** 탭을 클릭하고 **Add file** 버튼을 클릭하여 새로운 파일을 저장소에 업로드합니다. 그런 다음 업로드할 파일을 끌어다 놓고 커밋 메시지를 추가하세요.
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## 모델 카드 추가하기[[add-a-model-card]]
 
@@ -229,4 +229,4 @@ Flax에서 모델을 사용하는 경우, PyTorch에서 Flax로 체크포인트�
 * `README.md` 파일을 수동으로 생성하여 업로드합니다.
 * 모델 저장소에서 **Edit model card** 버튼을 클릭합니다.
 
-모델 카드에 포함할 정보 유형에 대한 좋은 예는 DistilBert [모델 카드](https://hf-mirror.com/distilbert/distilbert-base-uncased)를 참조하세요. 모델의 탄소 발자국이나 위젯 예시 등 `README.md` 파일에서 제어할 수 있는 다른 옵션에 대한 자세한 내용은 [여기](https://hf-mirror.com/docs/hub/models-cards) 문서를 참조하세요.
+모델 카드에 포함할 정보 유형에 대한 좋은 예는 DistilBert [모델 카드](https://huggingface.co/distilbert/distilbert-base-uncased)를 참조하세요. 모델의 탄소 발자국이나 위젯 예시 등 `README.md` 파일에서 제어할 수 있는 다른 옵션에 대한 자세한 내용은 [여기](https://huggingface.co/docs/hub/models-cards) 문서를 참조하세요.

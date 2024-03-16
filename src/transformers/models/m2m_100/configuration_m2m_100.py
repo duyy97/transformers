@@ -26,8 +26,8 @@ from ...utils import TensorType, is_torch_available, logging
 logger = logging.get_logger(__name__)
 
 M2M_100_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/m2m100_418M": "https://hf-mirror.com/facebook/m2m100_418M/resolve/main/config.json",
-    # See all M2M100 models at https://hf-mirror.com/models?filter=m2m_100
+    "facebook/m2m100_418M": "https://huggingface.co/facebook/m2m100_418M/resolve/main/config.json",
+    # See all M2M100 models at https://huggingface.co/models?filter=m2m_100
 }
 
 
@@ -36,7 +36,7 @@ class M2M100Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`M2M100Model`]. It is used to instantiate an
     M2M100 model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the M2M100
-    [facebook/m2m100_418M](https://hf-mirror.com/facebook/m2m100_418M) architecture.
+    [facebook/m2m100_418M](https://huggingface.co/facebook/m2m100_418M) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

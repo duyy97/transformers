@@ -34,7 +34,7 @@ class FeatureExtractionPipeline(Pipeline):
     `"feature-extraction"`.
 
     All models may be used for this pipeline. See a list of all models, including community-contributed models on
-    [hf-mirror.com/models](https://hf-mirror.com/models).
+    [huggingface.co/models](https://huggingface.co/models).
     """
 
     def _sanitize_parameters(self, truncation=None, tokenize_kwargs=None, return_tensors=None, **kwargs):

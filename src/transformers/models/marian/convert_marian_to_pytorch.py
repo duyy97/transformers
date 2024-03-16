@@ -216,7 +216,7 @@ def write_model_card(
 ) -> str:
     """
     Copy the most recent model's readme section from opus, and add metadata. upload command: aws s3 sync model_card_dir
-    s3://models.hf-mirror.com/bert/Helsinki-NLP/ --dryrun
+    s3://models.huggingface.co/bert/Helsinki-NLP/ --dryrun
     """
     import pandas as pd
 

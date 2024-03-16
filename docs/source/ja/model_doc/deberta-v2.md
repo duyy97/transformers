@@ -57,8 +57,8 @@ v2 の新機能:
 - **900M モデル & 1.5B モデル** 2 つの追加モデル サイズ: 900M と 1.5B が利用可能で、これにより、パフォーマンスが大幅に向上します。
   下流タスクのパフォーマンス。
 
-このモデルは [DeBERTa](https://hf-mirror.com/DeBERTa) によって寄稿されました。このモデルの TF 2.0 実装は、
-[kamalkraj](https://hf-mirror.com/kamalkraj) による投稿。元のコードは [こちら](https://github.com/microsoft/DeBERTa) にあります。
+このモデルは [DeBERTa](https://huggingface.co/DeBERTa) によって寄稿されました。このモデルの TF 2.0 実装は、
+[kamalkraj](https://huggingface.co/kamalkraj) による投稿。元のコードは [こちら](https://github.com/microsoft/DeBERTa) にあります。
 
 ## Resources
 - [テキスト分類タスクガイド](../tasks/sequence_classification)

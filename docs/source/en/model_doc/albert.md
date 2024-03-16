@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ALBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=albert">
+<a href="https://huggingface.co/models?filter=albert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-albert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/albert-base-v2">
+<a href="https://huggingface.co/spaces/docs-demos/albert-base-v2">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -45,8 +45,8 @@ self-supervised loss that focuses on modeling inter-sentence coherence, and show
 with multi-sentence inputs. As a result, our best model establishes new state-of-the-art results on the GLUE, RACE, and
 SQuAD benchmarks while having fewer parameters compared to BERT-large.*
 
-This model was contributed by [lysandre](https://hf-mirror.com/lysandre). This model jax version was contributed by
-[kamalkraj](https://hf-mirror.com/kamalkraj). The original code can be found [here](https://github.com/google-research/ALBERT).
+This model was contributed by [lysandre](https://huggingface.co/lysandre). This model jax version was contributed by
+[kamalkraj](https://huggingface.co/kamalkraj). The original code can be found [here](https://github.com/google-research/ALBERT).
 
 ## Usage tips
 
@@ -61,8 +61,8 @@ Next sentence prediction is replaced by a sentence ordering prediction: in the i
 
 
 
-This model was contributed by [lysandre](https://hf-mirror.com/lysandre). This model jax version was contributed by
-[kamalkraj](https://hf-mirror.com/kamalkraj). The original code can be found [here](https://github.com/google-research/ALBERT).
+This model was contributed by [lysandre](https://huggingface.co/lysandre). This model jax version was contributed by
+[kamalkraj](https://huggingface.co/kamalkraj). The original code can be found [here](https://github.com/google-research/ALBERT).
 
 
 ## Resources
@@ -94,7 +94,7 @@ The resources provided in the following sections consist of a list of official H
 
 
 - [`FlaxAlbertForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/token-classification).
-- [Token classification](https://hf-mirror.com/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Token classification](https://huggingface.co/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
 - Check the [Token classification task guide](../tasks/token_classification) on how to use the model.
 
 <PipelineTag pipeline="fill-mask"/>
@@ -102,7 +102,7 @@ The resources provided in the following sections consist of a list of official H
 - [`AlbertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFAlbertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxAlbertForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb).
-- [Masked language modeling](https://hf-mirror.com/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Masked language modeling](https://huggingface.co/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
 - Check the [Masked language modeling task guide](../tasks/masked_language_modeling) on how to use the model.
 
 <PipelineTag pipeline="question-answering"/>
@@ -110,7 +110,7 @@ The resources provided in the following sections consist of a list of official H
 - [`AlbertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb).
 - [`TFAlbertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb).
 - [`FlaxAlbertForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/flax/question-answering).
-- [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Question answering](https://huggingface.co/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
 - Check the [Question answering task guide](../tasks/question_answering) on how to use the model.
 
 **Multiple choice**

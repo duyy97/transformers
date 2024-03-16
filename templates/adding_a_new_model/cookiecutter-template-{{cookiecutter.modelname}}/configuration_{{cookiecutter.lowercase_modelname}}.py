@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 {{cookiecutter.uppercase_modelname}}_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/config.json",
-    # See all {{cookiecutter.modelname}} models at https://hf-mirror.com/models?filter={{cookiecutter.lowercase_modelname}}
+    "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/config.json",
+    # See all {{cookiecutter.modelname}} models at https://huggingface.co/models?filter={{cookiecutter.lowercase_modelname}}
 }
 
 
@@ -31,7 +31,7 @@ class {{cookiecutter.camelcase_modelname}}Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`~{{cookiecutter.camelcase_modelname}}Model`].
     It is used to instantiate an {{cookiecutter.modelname}} model according to the specified arguments, defining the model
     architecture. Instantiating a configuration with the defaults will yield a similar configuration to that of
-    the {{cookiecutter.modelname}} [{{cookiecutter.checkpoint_identifier}}](https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}) architecture.
+    the {{cookiecutter.modelname}} [{{cookiecutter.checkpoint_identifier}}](https://huggingface.co/{{cookiecutter.checkpoint_identifier}}) architecture.
 
     Configuration objects inherit from  [`PretrainedConfig`] and can be used
     to control the model outputs. Read the documentation from  [`PretrainedConfig`]

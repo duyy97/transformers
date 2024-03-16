@@ -35,26 +35,26 @@ VOCAB_FILES_NAMES = {
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "flaubert/flaubert_small_cased": (
-            "https://hf-mirror.com/flaubert/flaubert_small_cased/resolve/main/vocab.json"
+            "https://huggingface.co/flaubert/flaubert_small_cased/resolve/main/vocab.json"
         ),
         "flaubert/flaubert_base_uncased": (
-            "https://hf-mirror.com/flaubert/flaubert_base_uncased/resolve/main/vocab.json"
+            "https://huggingface.co/flaubert/flaubert_base_uncased/resolve/main/vocab.json"
         ),
-        "flaubert/flaubert_base_cased": "https://hf-mirror.com/flaubert/flaubert_base_cased/resolve/main/vocab.json",
+        "flaubert/flaubert_base_cased": "https://huggingface.co/flaubert/flaubert_base_cased/resolve/main/vocab.json",
         "flaubert/flaubert_large_cased": (
-            "https://hf-mirror.com/flaubert/flaubert_large_cased/resolve/main/vocab.json"
+            "https://huggingface.co/flaubert/flaubert_large_cased/resolve/main/vocab.json"
         ),
     },
     "merges_file": {
         "flaubert/flaubert_small_cased": (
-            "https://hf-mirror.com/flaubert/flaubert_small_cased/resolve/main/merges.txt"
+            "https://huggingface.co/flaubert/flaubert_small_cased/resolve/main/merges.txt"
         ),
         "flaubert/flaubert_base_uncased": (
-            "https://hf-mirror.com/flaubert/flaubert_base_uncased/resolve/main/merges.txt"
+            "https://huggingface.co/flaubert/flaubert_base_uncased/resolve/main/merges.txt"
         ),
-        "flaubert/flaubert_base_cased": "https://hf-mirror.com/flaubert/flaubert_base_cased/resolve/main/merges.txt",
+        "flaubert/flaubert_base_cased": "https://huggingface.co/flaubert/flaubert_base_cased/resolve/main/merges.txt",
         "flaubert/flaubert_large_cased": (
-            "https://hf-mirror.com/flaubert/flaubert_large_cased/resolve/main/merges.txt"
+            "https://huggingface.co/flaubert/flaubert_large_cased/resolve/main/merges.txt"
         ),
     },
 }

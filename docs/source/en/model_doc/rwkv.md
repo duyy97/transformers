@@ -24,7 +24,7 @@ It suggests a tweak in the traditional Transformer attention to make it linear. 
 
 This can be more efficient than a regular Transformer and can deal with sentence of any length (even if the model uses a fixed context length for training).
 
-This model was contributed by [sgugger](https://hf-mirror.com/sgugger).
+This model was contributed by [sgugger](https://huggingface.co/sgugger).
 The original code can be found [here](https://github.com/BlinkDL/RWKV-LM).
 
 ## Usage example

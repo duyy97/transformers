@@ -51,7 +51,7 @@ XMOD_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/xmod-base-60-265k",
     "facebook/xmod-base-75-125k",
     "facebook/xmod-base-75-269k",
-    # See all X-MOD models at https://hf-mirror.com/models?filter=xmod
+    # See all X-MOD models at https://huggingface.co/models?filter=xmod
 ]
 
 

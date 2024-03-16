@@ -64,7 +64,7 @@ class ImageToImagePipeline(Pipeline):
     This image to image pipeline can currently be loaded from [`pipeline`] using the following task identifier:
     `"image-to-image"`.
 
-    See the list of available models on [hf-mirror.com/models](https://hf-mirror.com/models?filter=image-to-image).
+    See the list of available models on [huggingface.co/models](https://huggingface.co/models?filter=image-to-image).
     """
 
     def __init__(self, *args, **kwargs):

@@ -39,7 +39,7 @@ rendered properly in your Markdown viewer.
 >>> from transformers import pipeline
 
 >>> classifier = pipeline(task="audio-classification", model="superb/hubert-base-superb-er")
->>> preds = classifier("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> preds = classifier("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
 [{'score': 0.4532, 'label': 'hap'},
@@ -58,7 +58,7 @@ rendered properly in your Markdown viewer.
 >>> from transformers import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition", model="openai/whisper-small")
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
@@ -85,7 +85,7 @@ rendered properly in your Markdown viewer.
 
 >>> classifier = pipeline(task="image-classification")
 >>> preds = classifier(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> print(*preds, sep="\n")
@@ -110,7 +110,7 @@ rendered properly in your Markdown viewer.
 
 >>> detector = pipeline(task="object-detection")
 >>> preds = detector(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"], "box": pred["box"]} for pred in preds]
 >>> preds
@@ -133,7 +133,7 @@ rendered properly in your Markdown viewer.
 
 >>> segmenter = pipeline(task="image-segmentation")
 >>> preds = segmenter(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> print(*preds, sep="\n")
@@ -157,7 +157,7 @@ rendered properly in your Markdown viewer.
 
 >>> depth_estimator = pipeline(task="depth-estimation")
 >>> preds = depth_estimator(
-...     "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 ```
 
@@ -332,7 +332,7 @@ score: 0.9327, start: 30, end: 54, answer: huggingface/transformers
 >>> from PIL import Image
 >>> import requests
 
->>> url = "https://datasets-server.hf-mirror.com/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/2/image/image.jpg"
+>>> url = "https://datasets-server.huggingface.co/assets/hf-internal-testing/example-documents/--/hf-internal-testing--example-documents/test/2/image/image.jpg"
 >>> image = Image.open(requests.get(url, stream=True).raw)
 
 >>> doc_question_answerer = pipeline("document-question-answering", model="magorshunov/layoutlm-invoices")

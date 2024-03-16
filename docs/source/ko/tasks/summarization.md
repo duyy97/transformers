@@ -29,7 +29,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드에서 소개할 내용은 아래와 같습니다:
 
-1. 생성 요약을 위한 [BillSum](https://hf-mirror.com/datasets/billsum) 데이터셋 중 캘리포니아 주 법안 하위 집합으로 [T5](https://hf-mirror.com/google-t5/t5-small)를 파인튜닝합니다.
+1. 생성 요약을 위한 [BillSum](https://huggingface.co/datasets/billsum) 데이터셋 중 캘리포니아 주 법안 하위 집합으로 [T5](https://huggingface.co/google-t5/t5-small)를 파인튜닝합니다.
 2. 파인튜닝된 모델을 사용하여 추론합니다.
 
 <Tip>
@@ -149,9 +149,9 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 ## 평가[[evaluate]]
 
 학습 중에 평가 지표를 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 
-🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하면 평가 방법을 빠르게 불러올 수 있습니다. 
-이 작업에서는 [ROUGE](https://hf-mirror.com/spaces/evaluate-metric/rouge) 평가 지표를 가져옵니다. 
-(평가 지표를 불러오고 계산하는 방법은 🤗 Evaluate [둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하세요.)
+🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하면 평가 방법을 빠르게 불러올 수 있습니다. 
+이 작업에서는 [ROUGE](https://huggingface.co/spaces/evaluate-metric/rouge) 평가 지표를 가져옵니다. 
+(평가 지표를 불러오고 계산하는 방법은 🤗 Evaluate [둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하세요.)
 
 ```py
 >>> import evaluate

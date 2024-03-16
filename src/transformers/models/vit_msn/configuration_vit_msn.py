@@ -22,8 +22,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 VIT_MSN_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "sayakpaul/vit-msn-base": "https://hf-mirror.com/sayakpaul/vit-msn-base/resolve/main/config.json",
-    # See all ViT MSN models at https://hf-mirror.com/models?filter=vit_msn
+    "sayakpaul/vit-msn-base": "https://huggingface.co/sayakpaul/vit-msn-base/resolve/main/config.json",
+    # See all ViT MSN models at https://huggingface.co/models?filter=vit_msn
 }
 
 
@@ -32,7 +32,7 @@ class ViTMSNConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ViTMSNModel`]. It is used to instantiate an ViT
     MSN model according to the specified arguments, defining the model architecture. Instantiating a configuration with
     the defaults will yield a similar configuration to that of the ViT
-    [facebook/vit_msn_base](https://hf-mirror.com/facebook/vit_msn_base) architecture.
+    [facebook/vit_msn_base](https://huggingface.co/facebook/vit_msn_base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

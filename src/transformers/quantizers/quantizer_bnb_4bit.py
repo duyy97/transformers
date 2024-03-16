@@ -89,7 +89,7 @@ class Bnb4BitHfQuantizer(HfQuantizer):
                     quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules
                     in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to
                     `from_pretrained`. Check
-                    https://hf-mirror.com/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu
+                    https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu
                     for more details.
                     """
                 )

@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Allenamento distribuito con 🤗 Accelerate
 
-La parallelizzazione è emersa come strategia per allenare modelli sempre più grandi su hardware limitato e accelerarne la velocità di allenamento di diversi ordini di magnitudine. In Hugging Face, abbiamo creato la libreria [🤗 Accelerate](https://hf-mirror.com/docs/accelerate) per aiutarti ad allenare in modo semplice un modello 🤗 Transformers su qualsiasi tipo di configurazione distribuita, sia che si tratti di più GPU su una sola macchina o di più GPU su più macchine. In questo tutorial, imparerai come personalizzare il training loop nativo di PyTorch per consentire l'addestramento in un ambiente distribuito.
+La parallelizzazione è emersa come strategia per allenare modelli sempre più grandi su hardware limitato e accelerarne la velocità di allenamento di diversi ordini di magnitudine. In Hugging Face, abbiamo creato la libreria [🤗 Accelerate](https://huggingface.co/docs/accelerate) per aiutarti ad allenare in modo semplice un modello 🤗 Transformers su qualsiasi tipo di configurazione distribuita, sia che si tratti di più GPU su una sola macchina o di più GPU su più macchine. In questo tutorial, imparerai come personalizzare il training loop nativo di PyTorch per consentire l'addestramento in un ambiente distribuito.
 
 ## Configurazione
 
@@ -26,7 +26,7 @@ Inizia installando 🤗 Accelerate:
 pip install accelerate
 ```
 
-Poi importa e crea un oggetto [`Accelerator`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator). `Accelerator` rileverà automaticamente il tuo setup distribuito e inizializzerà tutte le componenti necessarie per l'allenamento. Non dovrai allocare esplicitamente il tuo modello su un device.
+Poi importa e crea un oggetto [`Accelerator`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator). `Accelerator` rileverà automaticamente il tuo setup distribuito e inizializzerà tutte le componenti necessarie per l'allenamento. Non dovrai allocare esplicitamente il tuo modello su un device.
 
 ```py
 >>> from accelerate import Accelerator
@@ -36,7 +36,7 @@ Poi importa e crea un oggetto [`Accelerator`](https://hf-mirror.com/docs/acceler
 
 ## Preparati ad accelerare
 
-Il prossimo passo è quello di passare tutti gli oggetti rilevanti per l'allenamento al metodo [`prepare`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare). Questo include i tuoi DataLoaders per l'allenamento e per la valutazione, un modello e un ottimizzatore:
+Il prossimo passo è quello di passare tutti gli oggetti rilevanti per l'allenamento al metodo [`prepare`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare). Questo include i tuoi DataLoaders per l'allenamento e per la valutazione, un modello e un ottimizzatore:
 
 ```py
 >>> train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
@@ -46,7 +46,7 @@ Il prossimo passo è quello di passare tutti gli oggetti rilevanti per l'allenam
 
 ## Backward
 
-Infine, sostituisci il tipico metodo `loss.backward()` nel tuo loop di allenamento con il metodo [`backward`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) di 🤗 Accelerate:
+Infine, sostituisci il tipico metodo `loss.backward()` nel tuo loop di allenamento con il metodo [`backward`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) di 🤗 Accelerate:
 
 ```py
 >>> for epoch in range(num_epochs):
@@ -133,4 +133,4 @@ La libreria 🤗 Accelerate può anche essere utilizzata in un notebook se stai 
 >>> notebook_launcher(training_function)
 ```
 
-Per maggiori informazioni relative a 🤗 Accelerate e le sue numerose funzionalità, fai riferimento alla [documentazione](https://hf-mirror.com/docs/accelerate).
+Per maggiori informazioni relative a 🤗 Accelerate e le sue numerose funzionalità, fai riferimento alla [documentazione](https://huggingface.co/docs/accelerate).

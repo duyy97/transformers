@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 
 サンプルスクリプトはすべての問題でそのまま動作することは期待されておらず、解決しようとしている問題にスクリプトを適応させる必要があるかもしれません。この点をサポートするために、ほとんどのスクリプトはデータがどのように前処理されているかを完全に公開し、必要に応じて編集できるようにしています。
 
-サンプルスクリプトで実装したい機能がある場合は、[フォーラム](https://discuss.hf-mirror.com/)か[イシュートラッカー](https://github.com/huggingface/transformers/issues)で議論してからプルリクエストを提出してください。バグ修正は歓迎しますが、読みやすさのコストで機能を追加するプルリクエストはほとんどマージされない可能性が高いです。
+サンプルスクリプトで実装したい機能がある場合は、[フォーラム](https://discuss.huggingface.co/)か[イシュートラッカー](https://github.com/huggingface/transformers/issues)で議論してからプルリクエストを提出してください。バグ修正は歓迎しますが、読みやすさのコストで機能を追加するプルリクエストはほとんどマージされない可能性が高いです。
 
 このガイドでは、[PyTorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization)と[TensorFlow](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization)で実行するサマリゼーショントレーニングスクリプトの実行方法を示します。すべての例は、明示的に指定されていない限り、両方のフレームワークともに動作することが期待されています。
 
@@ -92,7 +92,7 @@ pip install -r requirements.txt
 
 <frameworkcontent>
 <pt>
-この例のスクリプトは、🤗 [Datasets](https://hf-mirror.com/docs/datasets/) ライブラリからデータセットをダウンロードし、前処理を行います。次に、[Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) を使用して要約をサポートするアーキテクチャ上でデータセットをファインチューニングします。以下の例では、[CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) データセット上で [T5-small](https://hf-mirror.com/google-t5/t5-small) をファインチューニングする方法が示されています。T5 モデルは、そのトレーニング方法に起因して追加の `source_prefix` 引数が必要です。このプロンプトにより、T5 はこれが要約タスクであることを知ることができます。
+この例のスクリプトは、🤗 [Datasets](https://huggingface.co/docs/datasets/) ライブラリからデータセットをダウンロードし、前処理を行います。次に、[Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) を使用して要約をサポートするアーキテクチャ上でデータセットをファインチューニングします。以下の例では、[CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) データセット上で [T5-small](https://huggingface.co/google-t5/t5-small) をファインチューニングする方法が示されています。T5 モデルは、そのトレーニング方法に起因して追加の `source_prefix` 引数が必要です。このプロンプトにより、T5 はこれが要約タスクであることを知ることができます。
 
 
 ```bash
@@ -112,7 +112,7 @@ python examples/pytorch/summarization/run_summarization.py \
 
 </pt>
 <tf>
-この例のスクリプトは、🤗 [Datasets](https://hf-mirror.com/docs/datasets/) ライブラリからデータセットをダウンロードして前処理します。その後、スクリプトは要約をサポートするアーキテクチャ上で Keras を使用してデータセットをファインチューニングします。以下の例では、[T5-small](https://hf-mirror.com/google-t5/t5-small) を [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) データセットでファインチューニングする方法を示しています。T5 モデルは、そのトレーニング方法に起因して追加の `source_prefix` 引数が必要です。このプロンプトは、T5 にこれが要約タスクであることを知らせます。
+この例のスクリプトは、🤗 [Datasets](https://huggingface.co/docs/datasets/) ライブラリからデータセットをダウンロードして前処理します。その後、スクリプトは要約をサポートするアーキテクチャ上で Keras を使用してデータセットをファインチューニングします。以下の例では、[T5-small](https://huggingface.co/google-t5/t5-small) を [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) データセットでファインチューニングする方法を示しています。T5 モデルは、そのトレーニング方法に起因して追加の `source_prefix` 引数が必要です。このプロンプトは、T5 にこれが要約タスクであることを知らせます。
 
 
 ```bash
@@ -132,7 +132,7 @@ python examples/tensorflow/summarization/run_summarization.py  \
 
 ## Distributed training and mixed precision
 
-[Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer)は、分散トレーニングと混合精度をサポートしています。つまり、この機能をスクリプトで使用することができます。これらの機能を有効にするには、次の手順を実行します。
+[Trainer](https://huggingface.co/docs/transformers/main_classes/trainer)は、分散トレーニングと混合精度をサポートしています。つまり、この機能をスクリプトで使用することができます。これらの機能を有効にするには、次の手順を実行します。
 
 - `fp16`引数を追加して混合精度を有効にします。
 - `nproc_per_node`引数で使用するGPUの数を設定します。
@@ -201,7 +201,7 @@ python run_summarization.py  \
 
 ## Run a script with 🤗 Accelerate
 
-🤗 [Accelerate](https://hf-mirror.com/docs/accelerate)は、PyTorch専用のライブラリで、CPUのみ、複数のGPU、TPUなど、さまざまなセットアップでモデルをトレーニングするための統一された方法を提供します。PyTorchのトレーニングループを完全に可視化しながら実行できます。まだインストールしていない場合は、🤗 Accelerateをインストールしてください：
+🤗 [Accelerate](https://huggingface.co/docs/accelerate)は、PyTorch専用のライブラリで、CPUのみ、複数のGPU、TPUなど、さまざまなセットアップでモデルをトレーニングするための統一された方法を提供します。PyTorchのトレーニングループを完全に可視化しながら実行できます。まだインストールしていない場合は、🤗 Accelerateをインストールしてください：
 
 > 注意：Accelerateは急速に開発が進行しているため、スクリプトを実行するにはaccelerateのgitバージョンをインストールする必要があります
 ```bash
@@ -334,7 +334,7 @@ python examples/pytorch/summarization/run_summarization.py
 
 ## Share your model
 
-すべてのスクリプトは、最終的なモデルを [Model Hub](https://hf-mirror.com/models) にアップロードできます。開始する前に Hugging Face にログインしていることを確認してください。
+すべてのスクリプトは、最終的なモデルを [Model Hub](https://huggingface.co/models) にアップロードできます。開始する前に Hugging Face にログインしていることを確認してください。
 
 ```bash
 huggingface-cli login

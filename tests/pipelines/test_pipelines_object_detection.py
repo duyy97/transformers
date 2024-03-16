@@ -266,7 +266,7 @@ class ObjectDetectionPipelineTests(unittest.TestCase):
         object_detector = pipeline("object-detection", model=model_id, threshold=threshold)
 
         outputs = object_detector(
-            "https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png"
+            "https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png"
         )
         self.assertEqual(
             nested_simplify(outputs, decimals=4),

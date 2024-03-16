@@ -27,7 +27,7 @@ Question answering tasks return an answer given a question. If you've ever asked
 
 This guide will show you how to:
 
-1. Finetune [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) on the [SQuAD](https://hf-mirror.com/datasets/squad) dataset for extractive question answering.
+1. Finetune [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) on the [SQuAD](https://huggingface.co/datasets/squad) dataset for extractive question answering.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -332,7 +332,7 @@ or [TensorFlow notebook](https://colab.research.google.com/github/huggingface/no
 
 Evaluation for question answering requires a significant amount of postprocessing. To avoid taking up too much of your time, this guide skips the evaluation step. The [`Trainer`] still calculates the evaluation loss during training so you're not completely in the dark about your model's performance.
 
-If have more time and you're interested in how to evaluate your model for question answering, take a look at the [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt#post-processing) chapter from the 🤗 Hugging Face Course!
+If have more time and you're interested in how to evaluate your model for question answering, take a look at the [Question answering](https://huggingface.co/course/chapter7/7?fw=pt#post-processing) chapter from the 🤗 Hugging Face Course!
 
 ## Inference
 

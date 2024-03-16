@@ -26,7 +26,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
     }
 }
 
@@ -69,13 +69,13 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json", "merges_file": "merges.txt", "t
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.json",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.json",
     },
     "merges_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/merges.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/merges.txt",
     },
     "tokenizer_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/tokenizer.json",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/tokenizer.json",
     },
 }
 
@@ -116,10 +116,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt", "tokenizer_file": "tokenizer.jso
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/vocab.txt",
     },
     "tokenizer_file": {
-        "{{cookiecutter.checkpoint_identifier}}": "https://hf-mirror.com/{{cookiecutter.checkpoint_identifier}}/resolve/main/tokenizer.json",
+        "{{cookiecutter.checkpoint_identifier}}": "https://huggingface.co/{{cookiecutter.checkpoint_identifier}}/resolve/main/tokenizer.json",
     },
 }
 

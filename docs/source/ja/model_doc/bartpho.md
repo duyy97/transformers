@@ -29,7 +29,7 @@ BARTpho モデルは、Nguyen Luong Tran、Duong Minh Le、Dat Quoc Nguyen に�
 強力なベースライン mBART を上回り、最先端の性能を向上させます。将来を容易にするためにBARTphoをリリースします
 生成的なベトナム語 NLP タスクの研究と応用。*
 
-このモデルは [dqnguyen](https://hf-mirror.com/dqnguyen) によって提供されました。元のコードは [こちら](https://github.com/VinAIResearch/BARTpho) にあります。
+このモデルは [dqnguyen](https://huggingface.co/dqnguyen) によって提供されました。元のコードは [こちら](https://github.com/VinAIResearch/BARTpho) にあります。
 
 ## Usage example
 

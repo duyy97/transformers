@@ -24,7 +24,7 @@ The official results of the model can be found in Table 3 and Table 4 of the pap
 
 The Wav2Vec2-Conformer weights were released by the Meta AI team within the [Fairseq library](https://github.com/pytorch/fairseq/blob/main/examples/wav2vec/README.md#pre-trained-models).
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten).
 The original code can be found [here](https://github.com/pytorch/fairseq/tree/main/examples/wav2vec).
 
 ## Usage tips

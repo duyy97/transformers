@@ -34,7 +34,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.json"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "facebook/mms-tts-eng": "https://hf-mirror.com/facebook/mms-tts-eng/resolve/main/vocab.json",
+        "facebook/mms-tts-eng": "https://huggingface.co/facebook/mms-tts-eng/resolve/main/vocab.json",
     }
 }
 

@@ -37,7 +37,7 @@ tasks that are sensitive to spelling and pronunciation. As part of our contribut
 pre-trained byte-level Transformer models based on the T5 architecture, as well as all code and data used in our
 experiments.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The original code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The original code can be
 found [here](https://github.com/google-research/byt5).
 
 <Tip>

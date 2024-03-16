@@ -35,9 +35,9 @@ additional overlapped utterances are created unsupervisedly and incorporated dur
 the training dataset from 60k hours to 94k hours. WavLM Large achieves state-of-the-art performance on the SUPERB
 benchmark, and brings significant improvements for various speech processing tasks on their representative benchmarks.*
 
-Relevant checkpoints can be found under https://hf-mirror.com/models?other=wavlm.
+Relevant checkpoints can be found under https://huggingface.co/models?other=wavlm.
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The Authors' code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The Authors' code can be
 found [here](https://github.com/microsoft/unilm/tree/master/wavlm).
 
 ## Usage tips

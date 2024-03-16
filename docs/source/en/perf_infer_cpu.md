@@ -30,11 +30,11 @@ BetterTransformer also converts all attention operations to use the more memory-
 
 <Tip>
 
-BetterTransformer is not supported for all models. Check this [list](https://hf-mirror.com/docs/optimum/bettertransformer/overview#supported-models) to see if a model supports BetterTransformer.
+BetterTransformer is not supported for all models. Check this [list](https://huggingface.co/docs/optimum/bettertransformer/overview#supported-models) to see if a model supports BetterTransformer.
 
 </Tip>
 
-Before you start, make sure you have 🤗 Optimum [installed](https://hf-mirror.com/docs/optimum/installation).
+Before you start, make sure you have 🤗 Optimum [installed](https://huggingface.co/docs/optimum/installation).
 
 Enable BetterTransformer with the [`PreTrainedModel.to_bettertransformer`] method:
 
@@ -102,13 +102,13 @@ python run_qa.py \
 
 <Tip>
 
-Learn more details about using ORT with 🤗 Optimum in the [Optimum Inference with ONNX Runtime](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/models) guide. This section only provides a brief and simple example.
+Learn more details about using ORT with 🤗 Optimum in the [Optimum Inference with ONNX Runtime](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/models) guide. This section only provides a brief and simple example.
 
 </Tip>
 
 ONNX Runtime (ORT) is a model accelerator that runs inference on CPUs by default. ORT is supported by 🤗 Optimum which can be used in 🤗 Transformers, without making too many changes to your code. You only need to replace the 🤗 Transformers `AutoClass` with its equivalent [`~optimum.onnxruntime.ORTModel`] for the task you're solving, and load a checkpoint in the ONNX format.
 
-For example, if you're running inference on a question answering task, load the [optimum/roberta-base-squad2](https://hf-mirror.com/optimum/roberta-base-squad2) checkpoint which contains a `model.onnx` file:
+For example, if you're running inference on a question answering task, load the [optimum/roberta-base-squad2](https://huggingface.co/optimum/roberta-base-squad2) checkpoint which contains a `model.onnx` file:
 
 ```py
 from transformers import AutoTokenizer, pipeline
@@ -124,4 +124,4 @@ context = "My name is Philipp and I live in Nuremberg."
 pred = onnx_qa(question, context)
 ```
 
-If you have an Intel CPU, take a look at 🤗 [Optimum Intel](https://hf-mirror.com/docs/optimum/intel/index) which supports a variety of compression techniques (quantization, pruning, knowledge distillation) and tools for converting models to the [OpenVINO](https://hf-mirror.com/docs/optimum/intel/inference) format for higher performance inference.
+If you have an Intel CPU, take a look at 🤗 [Optimum Intel](https://huggingface.co/docs/optimum/intel/index) which supports a variety of compression techniques (quantization, pruning, knowledge distillation) and tools for converting models to the [OpenVINO](https://huggingface.co/docs/optimum/intel/inference) format for higher performance inference.

@@ -57,7 +57,7 @@ TF_WAV_2_VEC_2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/wav2vec2-large-960h",
     "facebook/wav2vec2-large-960h-lv60",
     "facebook/wav2vec2-large-960h-lv60-self",
-    # See all Wav2Vec2 models at https://hf-mirror.com/models?filter=wav2vec2
+    # See all Wav2Vec2 models at https://huggingface.co/models?filter=wav2vec2
 ]
 
 LARGE_NEGATIVE = -1e8

@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 이 문서에서 방법을 알아보겠습니다:
 
-1. [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) 데이터 세트를 [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base)로 미세 조정하여 화자의 의도를 분류합니다.
+1. [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) 데이터 세트를 [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base)로 미세 조정하여 화자의 의도를 분류합니다.
 2. 추론에 미세 조정된 모델을 사용하세요.
 
 <Tip>
@@ -133,7 +133,7 @@ DatasetDict({
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 ```
 
-MinDS-14 데이터 세트의 샘플링 속도는 8000khz이므로(이 정보는 [데이터세트 카드](https://hf-mirror.com/datasets/PolyAI/minds14)에서 확인할 수 있습니다), 사전 훈련된 Wav2Vec2 모델을 사용하려면 데이터 세트를 16000kHz로 리샘플링해야 합니다:
+MinDS-14 데이터 세트의 샘플링 속도는 8000khz이므로(이 정보는 [데이터세트 카드](https://huggingface.co/datasets/PolyAI/minds14)에서 확인할 수 있습니다), 사전 훈련된 Wav2Vec2 모델을 사용하려면 데이터 세트를 16000kHz로 리샘플링해야 합니다:
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -148,7 +148,7 @@ MinDS-14 데이터 세트의 샘플링 속도는 8000khz이므로(이 정보는 
 이제 전처리 함수를 만듭니다:
 
 1. 가져올 `오디오` 열을 호출하고 필요한 경우 오디오 파일을 리샘플링합니다.
-2. 오디오 파일의 샘플링 속도가 모델에 사전 훈련된 오디오 데이터의 샘플링 속도와 일치하는지 확인합니다. 이 정보는 Wav2Vec2 [모델 카드](https://hf-mirror.com/facebook/wav2vec2-base)에서 확인할 수 있습니다.
+2. 오디오 파일의 샘플링 속도가 모델에 사전 훈련된 오디오 데이터의 샘플링 속도와 일치하는지 확인합니다. 이 정보는 Wav2Vec2 [모델 카드](https://huggingface.co/facebook/wav2vec2-base)에서 확인할 수 있습니다.
 3. 긴 입력이 잘리지 않고 일괄 처리되도록 최대 입력 길이를 설정합니다.
 
 ```py
@@ -169,7 +169,7 @@ MinDS-14 데이터 세트의 샘플링 속도는 8000khz이므로(이 정보는 
 
 ## 평가하기[[evaluate]]
 
-훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 가져올 수 있습니다. 이 작업에서는 [accuracy(정확도)](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 메트릭을 가져옵니다(메트릭을 가져오고 계산하는 방법에 대한 자세한 내용은 🤗 Evalutate [빠른 둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour) 참조하세요):
+훈련 중에 메트릭을 포함하면 모델의 성능을 평가하는 데 도움이 되는 경우가 많습니다. 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리를 사용하여 평가 방법을 빠르게 가져올 수 있습니다. 이 작업에서는 [accuracy(정확도)](https://huggingface.co/spaces/evaluate-metric/accuracy) 메트릭을 가져옵니다(메트릭을 가져오고 계산하는 방법에 대한 자세한 내용은 🤗 Evalutate [빠른 둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour) 참조하세요):
 
 ```py
 >>> import evaluate

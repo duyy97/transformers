@@ -210,16 +210,16 @@ def convert_weights_and_push(save_directory: Path, model_name: str = None, push_
 
     names_to_original_checkpoints = {
         "van-tiny": (
-            "https://hf-mirror.com/Visual-Attention-Network/VAN-Tiny-original/resolve/main/van_tiny_754.pth.tar"
+            "https://huggingface.co/Visual-Attention-Network/VAN-Tiny-original/resolve/main/van_tiny_754.pth.tar"
         ),
         "van-small": (
-            "https://hf-mirror.com/Visual-Attention-Network/VAN-Small-original/resolve/main/van_small_811.pth.tar"
+            "https://huggingface.co/Visual-Attention-Network/VAN-Small-original/resolve/main/van_small_811.pth.tar"
         ),
         "van-base": (
-            "https://hf-mirror.com/Visual-Attention-Network/VAN-Base-original/resolve/main/van_base_828.pth.tar"
+            "https://huggingface.co/Visual-Attention-Network/VAN-Base-original/resolve/main/van_base_828.pth.tar"
         ),
         "van-large": (
-            "https://hf-mirror.com/Visual-Attention-Network/VAN-Large-original/resolve/main/van_large_839.pth.tar"
+            "https://huggingface.co/Visual-Attention-Network/VAN-Large-original/resolve/main/van_large_839.pth.tar"
         ),
     }
 

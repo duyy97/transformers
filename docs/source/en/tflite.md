@@ -23,7 +23,7 @@ power consumption.
 A TensorFlow Lite model is represented in a special efficient portable format identified by the `.tflite` file extension. 
 
 🤗 Optimum offers functionality to export 🤗 Transformers models to TFLite through the `exporters.tflite` module. 
-For the list of supported model architectures, please refer to [🤗 Optimum documentation](https://hf-mirror.com/docs/optimum/exporters/tflite/overview).
+For the list of supported model architectures, please refer to [🤗 Optimum documentation](https://huggingface.co/docs/optimum/exporters/tflite/overview).
 
 To export a model to TFLite, install the required dependencies:
  
@@ -31,7 +31,7 @@ To export a model to TFLite, install the required dependencies:
 pip install optimum[exporters-tf]
 ```
 
-To check out all available arguments, refer to the [🤗 Optimum docs](https://hf-mirror.com/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model), 
+To check out all available arguments, refer to the [🤗 Optimum docs](https://huggingface.co/docs/optimum/main/en/exporters/tflite/usage_guides/export_a_model), 
 or view help in command line:
 
 ```bash

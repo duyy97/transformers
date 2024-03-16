@@ -105,7 +105,7 @@ if __name__ == "__main__":
         type=str,
         help=(
             "path to fairseq checkpoint in correct format. You can find all checkpoints in the correct format here:"
-            " https://hf-mirror.com/models?other=opt_metasq"
+            " https://huggingface.co/models?other=opt_metasq"
         ),
     )
     parser.add_argument("--pytorch_dump_folder_path", default=None, type=str, help="Path to the output PyTorch model.")

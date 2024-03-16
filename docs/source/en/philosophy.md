@@ -32,12 +32,12 @@ The library was designed with two strong goals in mind:
   - All of these classes can be initialized in a simple and unified way from pretrained instances by using a common
     `from_pretrained()` method which downloads (if needed), caches and
     loads the related class instance and associated data (configurations' hyperparameters, tokenizers' vocabulary,
-    and models' weights) from a pretrained checkpoint provided on [Hugging Face Hub](https://hf-mirror.com/models) or your own saved checkpoint.
+    and models' weights) from a pretrained checkpoint provided on [Hugging Face Hub](https://huggingface.co/models) or your own saved checkpoint.
   - On top of those three base classes, the library provides two APIs: [`pipeline`] for quickly
     using a model for inference on a given task and [`Trainer`] to quickly train or fine-tune a PyTorch model (all TensorFlow models are compatible with `Keras.fit`).
   - As a consequence, this library is NOT a modular toolbox of building blocks for neural nets. If you want to
     extend or build upon the library, just use regular Python, PyTorch, TensorFlow, Keras modules and inherit from the base
-    classes of the library to reuse functionalities like model loading and saving. If you'd like to learn more about our coding philosophy for models, check out our [Repeat Yourself](https://hf-mirror.com/blog/transformers-design-philosophy) blog post.
+    classes of the library to reuse functionalities like model loading and saving. If you'd like to learn more about our coding philosophy for models, check out our [Repeat Yourself](https://huggingface.co/blog/transformers-design-philosophy) blog post.
 
 2. Provide state-of-the-art models with performances as close as possible to the original models:
 
@@ -71,7 +71,7 @@ The library is built around three types of classes for each model:
 All these classes can be instantiated from pretrained instances, saved locally, and shared on the Hub with three methods:
 
 - `from_pretrained()` lets you instantiate a model, configuration, and preprocessing class from a pretrained version either
-  provided by the library itself (the supported models can be found on the [Model Hub](https://hf-mirror.com/models)) or
+  provided by the library itself (the supported models can be found on the [Model Hub](https://huggingface.co/models)) or
   stored locally (or on a server) by the user.
 - `save_pretrained()` lets you save a model, configuration, and preprocessing class locally so that it can be reloaded using
   `from_pretrained()`.

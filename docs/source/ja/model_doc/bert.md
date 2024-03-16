@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # BERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=bert">
+<a href="https://huggingface.co/models?filter=bert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-bert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/bert-base-uncased">
+<a href="https://huggingface.co/spaces/docs-demos/bert-base-uncased">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -61,7 +61,7 @@ Toronto Book Corpus と Wikipedia からなる大規模なコーパスでの予�
 
 
 
-このモデルは [thomwolf](https://hf-mirror.com/thomwolf) によって提供されました。元のコードは [こちら](https://github.com/google-research/bert) にあります。
+このモデルは [thomwolf](https://huggingface.co/thomwolf) によって提供されました。元のコードは [こちら](https://github.com/google-research/bert) にあります。
 
 ## Resources
 
@@ -85,7 +85,7 @@ BERT を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [`BertForTokenClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb)。
 - [`TFBertForTokenClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb)。
 - [`FlaxBertForTokenClassification`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/flax/token-classification) によってサポートされています。
-- [トークン分類](https://hf-mirror.com/course/chapter7/2?fw=pt) 🤗 ハグフェイスコースの章。
+- [トークン分類](https://huggingface.co/course/chapter7/2?fw=pt) 🤗 ハグフェイスコースの章。
 - [トークン分類タスクガイド](../tasks/token_classification)
 
 <PipelineTag pipeline="fill-mask"/>
@@ -93,7 +93,7 @@ BERT を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [`BertForMaskedLM`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) でサポートされており、 [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb)。
 - [`TFBertForMaskedLM`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/lang-modeling#run_mlmpy) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb)。
 - [`FlaxBertForMaskedLM`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#masked-language-modeling) および [ノートブック]( https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/masked_language_modeling_flax.ipynb)。
-- [マスクされた言語モデリング](https://hf-mirror.com/course/chapter7/3?fw=pt) 🤗 顔ハグ コースの章。
+- [マスクされた言語モデリング](https://huggingface.co/course/chapter7/3?fw=pt) 🤗 顔ハグ コースの章。
 - [マスクされた言語モデリング タスク ガイド](../tasks/masked_lang_modeling)
 
 
@@ -102,7 +102,7 @@ BERT を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [`BertForQuestionAnswering`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb)。
 - [`TFBertForQuestionAnswering`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) および [ノートブック](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb)。
 - [`FlaxBertForQuestionAnswering`] は、この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/flax/question-answering) でサポートされています。
-- [質問回答](https://hf-mirror.com/course/chapter7/7?fw=pt) 🤗 ハグフェイスコースの章。
+- [質問回答](https://huggingface.co/course/chapter7/7?fw=pt) 🤗 ハグフェイスコースの章。
 - [質問回答タスク ガイド](../tasks/question_answering)
 
 **複数の選択肢**
@@ -111,7 +111,7 @@ BERT を始めるのに役立つ公式 Hugging Face およびコミュニティ 
 - [多肢選択タスク ガイド](../tasks/multiple_choice)
 
 ⚡️ **推論**
-- 方法に関するブログ投稿  [Hugging Face Transformers と AWS Inferentia を使用して BERT 推論を高速化する](https://hf-mirror.com/blog/bert-inferentia-sagemaker)。
+- 方法に関するブログ投稿  [Hugging Face Transformers と AWS Inferentia を使用して BERT 推論を高速化する](https://huggingface.co/blog/bert-inferentia-sagemaker)。
 - 方法に関するブログ投稿 [GPU 上の DeepSpeed-Inference を使用して BERT 推論を高速化する](https://www.philschmid.de/bert-deepspeed-inference)。
 
 ⚙️ **事前トレーニング**

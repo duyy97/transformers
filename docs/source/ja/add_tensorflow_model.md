@@ -29,7 +29,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 さらに詳しく調べる前に、以下のリソースをチェックすることをお勧めします。🤗 Transformersが初めての場合：
 
 - [🤗 Transformersの一般的な概要](add_new_model#general-overview-of-transformers)
-- [Hugging FaceのTensorFlow哲学](https://hf-mirror.com/blog/tensorflow-philosophy)
+- [Hugging FaceのTensorFlow哲学](https://huggingface.co/blog/tensorflow-philosophy)
 
 このガイドの残りの部分では、新しいTensorFlowモデルアーキテクチャを追加するために必要なもの、
 PyTorchをTensorFlowモデルの重みに変換する手順、およびMLフレームワーク間の不一致を効率的にデバッグする方法について学びます。それでは始めましょう！
@@ -41,7 +41,7 @@ PyTorchをTensorFlowモデルの重みに変換する手順、およびMLフレ�
 &nbsp;
 
 選択したモデルの`config.json`の`model_type`フィールドをチェックしてみてください
-（[例](https://hf-mirror.com/google-bert/bert-base-uncased/blob/main/config.json#L14)）。
+（[例](https://huggingface.co/google-bert/bert-base-uncased/blob/main/config.json#L14)）。
 🤗 Transformersの該当するモデルフォルダに、名前が"modeling_tf"で始まるファイルがある場合、それは対応するTensorFlow
 アーキテクチャを持っていることを意味します（[例](https://github.com/huggingface/transformers/tree/main/src/transformers/models/bert)）。
 
@@ -157,7 +157,7 @@ git push -u origin add_tf_brand_new_bert
 
 実装するモデルの基本を把握した後、既存の実装を理解することは重要です。これは、動作する実装がモデルに対する期待と一致することを確認する絶好の機会であり、TensorFlow側での技術的な課題を予測することもできます。
 
-情報の多さに圧倒されていると感じるのは完全に自然です。この段階ではモデルのすべての側面を理解する必要はありません。ただし、[フォーラム](https://discuss.hf-mirror.com/)で急な質問を解決することを強くお勧めします。
+情報の多さに圧倒されていると感じるのは完全に自然です。この段階ではモデルのすべての側面を理解する必要はありません。ただし、[フォーラム](https://discuss.huggingface.co/)で急な質問を解決することを強くお勧めします。
 
 
 ### 4. Model implementation
@@ -254,7 +254,7 @@ py.test -vv tests/models/brand_new_bert/test_modeling_tf_brand_new_bert.py
 オープンソースの最も難しい部分の1つは、発見です。あなたの素晴らしいTensorFlowの貢献が存在することを他のユーザーがどのように知ることができるでしょうか？適切なコミュニケーションです！ 📣
 
 コミュニティとモデルを共有する主要な方法は2つあります。
-- デモを作成します。これにはGradioデモ、ノートブック、およびモデルを紹介するための他の楽しい方法が含まれます。[コミュニティ駆動のデモ](https://hf-mirror.com/docs/transformers/community)にノートブックを追加することを強くお勧めします。
+- デモを作成します。これにはGradioデモ、ノートブック、およびモデルを紹介するための他の楽しい方法が含まれます。[コミュニティ駆動のデモ](https://huggingface.co/docs/transformers/community)にノートブックを追加することを強くお勧めします。
 - TwitterやLinkedInなどのソーシャルメディアでストーリーを共有します。あなたの仕事に誇りを持ち、コミュニティとあなたの成果を共有するべきです - あなたのモデルは今や世界中の何千人ものエンジニアや研究者によって使用される可能性があります 🌍！私たちはあなたの投稿をリツイートして共同体と共有するお手伝いを喜んでします。
 
 ## Adding TensorFlow weights to 🤗 Hub
@@ -262,7 +262,7 @@ py.test -vv tests/models/brand_new_bert/test_modeling_tf_brand_new_bert.py
 TensorFlowモデルのアーキテクチャが🤗 Transformersで利用可能な場合、PyTorchの重みをTensorFlowの重みに変換することは簡単です！
 
 以下がその方法です：
-1. ターミナルでHugging Faceアカウントにログインしていることを確認してください。コマンド`huggingface-cli login`を使用してログインできます（アクセストークンは[こちら](https://hf-mirror.com/settings/tokens)で見つけることができます）。
+1. ターミナルでHugging Faceアカウントにログインしていることを確認してください。コマンド`huggingface-cli login`を使用してログインできます（アクセストークンは[こちら](https://huggingface.co/settings/tokens)で見つけることができます）。
 2. `transformers-cli pt-to-tf --model-name foo/bar`というコマンドを実行します。ここで、`foo/bar`は変換したいPyTorchの重みを含むモデルリポジトリの名前です。
 3. 上記のコマンドで作成された🤗 Hub PRに`@joaogante`と`@Rocketknight1`をタグ付けします。
 

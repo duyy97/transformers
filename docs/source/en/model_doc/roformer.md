@@ -33,7 +33,7 @@ transformer with rotary position embedding, or RoFormer, achieves superior perfo
 release the theoretical analysis along with some preliminary experiment results on Chinese data. The undergoing
 experiment for English benchmark will soon be updated.*
 
-This model was contributed by [junnyu](https://hf-mirror.com/junnyu). The original code can be found [here](https://github.com/ZhuiyiTechnology/roformer).
+This model was contributed by [junnyu](https://huggingface.co/junnyu). The original code can be found [here](https://github.com/ZhuiyiTechnology/roformer).
 
 ## Usage tips
 RoFormer is a BERT-like autoencoding model with rotary position embeddings. Rotary position embeddings have shown 

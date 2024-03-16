@@ -37,7 +37,7 @@ and with 1% of ImageNet-1K labels, we achieve 75.7% top-1 accuracy, setting a ne
 
 <small> MSN architecture. Taken from the <a href="https://arxiv.org/abs/2204.07141">original paper.</a> </small>
 
-This model was contributed by [sayakpaul](https://hf-mirror.com/sayakpaul). The original code can be found [here](https://github.com/facebookresearch/msn). 
+This model was contributed by [sayakpaul](https://huggingface.co/sayakpaul). The original code can be found [here](https://github.com/facebookresearch/msn). 
 
 ## Usage tips
 

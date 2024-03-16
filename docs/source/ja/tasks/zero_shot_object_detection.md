@@ -47,7 +47,7 @@ pip install -q transformers
 ## Zero-shot object detection pipeline
 
 OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]で使用することです。パイプラインをインスタンス化する
-[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?other=owlvit) からのゼロショット オブジェクト検出の場合:
+[Hugging Face Hub のチェックポイント](https://huggingface.co/models?other=owlvit) からのゼロショット オブジェクト検出の場合:
 
 ```python
 >>> from transformers import pipeline
@@ -71,7 +71,7 @@ OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png" alt="Astronaut Eileen Collins"/>
 </div>
 
 検索する画像と候補オブジェクトのラベルをパイプラインに渡します。
@@ -124,7 +124,7 @@ OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_2.png" alt="Visualized predictions on NASA image"/>
 </div>
 
 ## Text-prompted zero-shot object detection by hand
@@ -132,7 +132,7 @@ OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]
 ゼロショット物体検出パイプラインの使用方法を確認したので、同じことを再現してみましょう。
 手動で結果を取得します。
 
-まず、[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?other=owlvit) からモデルと関連プロセッサをロードします。
+まず、[Hugging Face Hub のチェックポイント](https://huggingface.co/models?other=owlvit) からモデルと関連プロセッサをロードします。
 ここでは、前と同じチェックポイントを使用します。
 
 ```py
@@ -153,7 +153,7 @@ OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_3.png" alt="Beach photo"/>
 </div>
 
 プロセッサを使用してモデルの入力を準備します。プロセッサーは、
@@ -191,7 +191,7 @@ OWL-ViTによる推論を試す最も簡単な方法は、OWL-ViTを[`pipeline`]
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## Batch processing
@@ -235,7 +235,7 @@ PyTorch テンソル、または NumPy 配列。
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_4.png" alt="Beach photo with detected objects"/>
 </div>
 
 ## Image-guided object detection
@@ -266,7 +266,7 @@ PyTorch テンソル、または NumPy 配列。
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_5.png" alt="Cats"/>
 </div>
 
 前処理ステップでは、テキスト クエリの代わりに `query_images` を使用する必要があります。
@@ -297,7 +297,7 @@ PyTorch テンソル、または NumPy 配列。
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_6.png" alt="Cats with bounding boxes"/>
 </div>
 
 OWL-ViTによる推論をインタラクティブに試したい場合は、このデモをチェックしてください。

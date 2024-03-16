@@ -47,7 +47,7 @@ _TOKENIZER_FOR_DOC = "RobertaTokenizer"
 BRIDGETOWER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "BridgeTower/bridgetower-base",
     "BridgeTower/bridgetower-base-itm-mlm",
-    # See all bridgetower models at https://hf-mirror.com/BridgeTower
+    # See all bridgetower models at https://huggingface.co/BridgeTower
 ]
 
 

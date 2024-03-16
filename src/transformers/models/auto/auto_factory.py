@@ -66,7 +66,7 @@ FROM_CONFIG_DOCSTRING = """
         ```python
         >>> from transformers import AutoConfig, BaseAutoModelClass
 
-        >>> # Download configuration from hf-mirror.com and cache.
+        >>> # Download configuration from huggingface.co and cache.
         >>> config = AutoConfig.from_pretrained("checkpoint_placeholder")
         >>> model = BaseAutoModelClass.from_config(config)
         ```
@@ -88,7 +88,7 @@ FROM_PRETRAINED_TORCH_DOCSTRING = """
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~PreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *tensorflow index checkpoint file* (e.g, `./tf_model/model.ckpt.index`). In
@@ -134,7 +134,7 @@ FROM_PRETRAINED_TORCH_DOCSTRING = """
                 Whether or not to only look at local files (e.g., not try downloading the model).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
             trust_remote_code (`bool`, *optional*, defaults to `False`):
                 Whether or not to allow for custom models defined on the Hub in their own modeling files. This option
@@ -143,7 +143,7 @@ FROM_PRETRAINED_TORCH_DOCSTRING = """
             code_revision (`str`, *optional*, defaults to `"main"`):
                 The specific revision to use for the code on the Hub, if the code leaves in a different repository than
                 the rest of the model. It can be a branch name, a tag name, or a commit id, since we use a git-based
-                system for storing models and other artifacts on hf-mirror.com, so `revision` can be any identifier
+                system for storing models and other artifacts on huggingface.co, so `revision` can be any identifier
                 allowed by git.
             kwargs (additional keyword arguments, *optional*):
                 Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
@@ -164,7 +164,7 @@ FROM_PRETRAINED_TORCH_DOCSTRING = """
         ```python
         >>> from transformers import AutoConfig, BaseAutoModelClass
 
-        >>> # Download model and configuration from hf-mirror.com and cache.
+        >>> # Download model and configuration from huggingface.co and cache.
         >>> model = BaseAutoModelClass.from_pretrained("checkpoint_placeholder")
 
         >>> # Update configuration during loading
@@ -193,7 +193,7 @@ FROM_PRETRAINED_TF_DOCSTRING = """
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~PreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *PyTorch state_dict save file* (e.g, `./pt_model/pytorch_model.bin`). In this
@@ -233,7 +233,7 @@ FROM_PRETRAINED_TF_DOCSTRING = """
                 Whether or not to only look at local files (e.g., not try downloading the model).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
             trust_remote_code (`bool`, *optional*, defaults to `False`):
                 Whether or not to allow for custom models defined on the Hub in their own modeling files. This option
@@ -242,7 +242,7 @@ FROM_PRETRAINED_TF_DOCSTRING = """
             code_revision (`str`, *optional*, defaults to `"main"`):
                 The specific revision to use for the code on the Hub, if the code leaves in a different repository than
                 the rest of the model. It can be a branch name, a tag name, or a commit id, since we use a git-based
-                system for storing models and other artifacts on hf-mirror.com, so `revision` can be any identifier
+                system for storing models and other artifacts on huggingface.co, so `revision` can be any identifier
                 allowed by git.
             kwargs (additional keyword arguments, *optional*):
                 Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
@@ -263,7 +263,7 @@ FROM_PRETRAINED_TF_DOCSTRING = """
         ```python
         >>> from transformers import AutoConfig, BaseAutoModelClass
 
-        >>> # Download model and configuration from hf-mirror.com and cache.
+        >>> # Download model and configuration from huggingface.co and cache.
         >>> model = BaseAutoModelClass.from_pretrained("checkpoint_placeholder")
 
         >>> # Update configuration during loading
@@ -292,7 +292,7 @@ FROM_PRETRAINED_FLAX_DOCSTRING = """
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~PreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *PyTorch state_dict save file* (e.g, `./pt_model/pytorch_model.bin`). In this
@@ -332,7 +332,7 @@ FROM_PRETRAINED_FLAX_DOCSTRING = """
                 Whether or not to only look at local files (e.g., not try downloading the model).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
             trust_remote_code (`bool`, *optional*, defaults to `False`):
                 Whether or not to allow for custom models defined on the Hub in their own modeling files. This option
@@ -341,7 +341,7 @@ FROM_PRETRAINED_FLAX_DOCSTRING = """
             code_revision (`str`, *optional*, defaults to `"main"`):
                 The specific revision to use for the code on the Hub, if the code leaves in a different repository than
                 the rest of the model. It can be a branch name, a tag name, or a commit id, since we use a git-based
-                system for storing models and other artifacts on hf-mirror.com, so `revision` can be any identifier
+                system for storing models and other artifacts on huggingface.co, so `revision` can be any identifier
                 allowed by git.
             kwargs (additional keyword arguments, *optional*):
                 Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
@@ -362,7 +362,7 @@ FROM_PRETRAINED_FLAX_DOCSTRING = """
         ```python
         >>> from transformers import AutoConfig, BaseAutoModelClass
 
-        >>> # Download model and configuration from hf-mirror.com and cache.
+        >>> # Download model and configuration from huggingface.co and cache.
         >>> model = BaseAutoModelClass.from_pretrained("checkpoint_placeholder")
 
         >>> # Update configuration during loading

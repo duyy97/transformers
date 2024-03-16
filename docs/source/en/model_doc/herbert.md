@@ -37,7 +37,7 @@ which has the best average performance and obtains the best results for three ou
 extensive evaluation, including several standard baselines and recently proposed, multilingual Transformer-based
 models.*
 
-This model was contributed by [rmroczkowski](https://hf-mirror.com/rmroczkowski). The original code can be found
+This model was contributed by [rmroczkowski](https://huggingface.co/rmroczkowski). The original code can be found
 [here](https://github.com/allegro/HerBERT).
 
 

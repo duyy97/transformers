@@ -38,7 +38,7 @@ self-attention layers with grouped convolutions, and we use this technique in a 
 SqueezeBERT, which runs 4.3x faster than BERT-base on the Pixel 3 while achieving competitive accuracy on the GLUE test
 set. The SqueezeBERT code will be released.*
 
-This model was contributed by [forresti](https://hf-mirror.com/forresti).
+This model was contributed by [forresti](https://huggingface.co/forresti).
 
 ## Usage tips
 

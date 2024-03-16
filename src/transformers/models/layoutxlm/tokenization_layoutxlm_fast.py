@@ -153,7 +153,7 @@ class LayoutXLMTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" LayoutXLM tokenizer (backed by HuggingFace's *tokenizers* library). Adapted from
     [`RobertaTokenizer`] and [`XLNetTokenizer`]. Based on
-    [BPE](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
+    [BPE](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

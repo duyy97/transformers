@@ -3,9 +3,9 @@ Author: [@vasudevgupta7](https://github.com/thevasudevgupta/)
 
 ## Intro
 
-In this project, we fine-tuned [**BigBird**](https://arxiv.org/abs/2007.14062) on [**natural-questions**](https://hf-mirror.com/datasets/natural_questions) dataset for **question-answering** task on long documents. **BigBird**, is a **sparse-attention based transformer** which extends Transformer based models, such as BERT to much **longer sequences**.
+In this project, we fine-tuned [**BigBird**](https://arxiv.org/abs/2007.14062) on [**natural-questions**](https://huggingface.co/datasets/natural_questions) dataset for **question-answering** task on long documents. **BigBird**, is a **sparse-attention based transformer** which extends Transformer based models, such as BERT to much **longer sequences**.
 
-Read more about BigBird at https://hf-mirror.com/blog/big-bird
+Read more about BigBird at https://huggingface.co/blog/big-bird
 
 ## Fine-tuning
 
@@ -49,12 +49,12 @@ Our evaluation script is different from the original script and we are evaluatin
 ```shell
 # download validation-dataset first
 mkdir natural-questions-validation
-wget https://hf-mirror.com/datasets/vasudevgupta/natural-questions-validation/resolve/main/natural_questions-validation.arrow -P natural-questions-validation
-wget https://hf-mirror.com/datasets/vasudevgupta/natural-questions-validation/resolve/main/dataset_info.json -P natural-questions-validation
-wget https://hf-mirror.com/datasets/vasudevgupta/natural-questions-validation/resolve/main/state.json -P natural-questions-validation
+wget https://huggingface.co/datasets/vasudevgupta/natural-questions-validation/resolve/main/natural_questions-validation.arrow -P natural-questions-validation
+wget https://huggingface.co/datasets/vasudevgupta/natural-questions-validation/resolve/main/dataset_info.json -P natural-questions-validation
+wget https://huggingface.co/datasets/vasudevgupta/natural-questions-validation/resolve/main/state.json -P natural-questions-validation
 
 # simply run following command
 python3 evaluate.py
 ```
 
-You can find our checkpoint on HuggingFace Hub ([see this](https://hf-mirror.com/vasudevgupta/flax-bigbird-natural-questions)). In case you are interested in PyTorch BigBird fine-tuning, you can refer to [this repository](https://github.com/thevasudevgupta/bigbird).
+You can find our checkpoint on HuggingFace Hub ([see this](https://huggingface.co/vasudevgupta/flax-bigbird-natural-questions)). In case you are interested in PyTorch BigBird fine-tuning, you can refer to [this repository](https://github.com/thevasudevgupta/bigbird).

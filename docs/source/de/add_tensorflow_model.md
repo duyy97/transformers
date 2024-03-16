@@ -29,7 +29,7 @@ ermutigen Sie daher, Verbesserungsvorschläge für diesen Leitfaden zu machen!
 
 Bevor Sie tiefer eintauchen, empfehlen wir Ihnen, die folgenden Ressourcen zu lesen, wenn Sie neu in 🤗 Transformers sind:
 - [Allgemeiner Überblick über 🤗 Transformers](add_new_model#general-overview-of-transformers)
-- [Die TensorFlow-Philosophie von Hugging Face](https://hf-mirror.com/blog/tensorflow-philosophy)
+- [Die TensorFlow-Philosophie von Hugging Face](https://huggingface.co/blog/tensorflow-philosophy)
 
 Im Rest dieses Leitfadens werden Sie lernen, was nötig ist, um eine neue TensorFlow Modellarchitektur hinzuzufügen, die
 Verfahren zur Konvertierung von PyTorch in TensorFlow-Modellgewichte und wie Sie Unstimmigkeiten zwischen ML
@@ -42,7 +42,7 @@ Sind Sie unsicher, ob das Modell, das Sie verwenden möchten, bereits eine entsp
 &nbsp;
 
 Überprüfen Sie das Feld `model_type` in der `config.json` des Modells Ihrer Wahl
-([Beispiel](https://hf-mirror.com/google-bert/bert-base-uncased/blob/main/config.json#L14)). Wenn der entsprechende Modellordner in
+([Beispiel](https://huggingface.co/google-bert/bert-base-uncased/blob/main/config.json#L14)). Wenn der entsprechende Modellordner in
 🤗 Transformers eine Datei hat, deren Name mit "modeling_tf" beginnt, bedeutet dies, dass es eine entsprechende TensorFlow
 Architektur hat ([Beispiel](https://github.com/huggingface/transformers/tree/main/src/transformers/models/bert)).
 
@@ -181,7 +181,7 @@ Modell entspricht, und um technische Herausforderungen auf der TensorFlow-Seite 
 
 Es ist ganz natürlich, dass Sie sich von der Menge an Informationen, die Sie gerade aufgesogen haben, überwältigt fühlen. Es ist
 Es ist definitiv nicht erforderlich, dass Sie in dieser Phase alle Facetten des Modells verstehen. Dennoch empfehlen wir Ihnen dringend
-ermutigen wir Sie, alle dringenden Fragen in unserem [Forum](https://discuss.hf-mirror.com/) zu klären.
+ermutigen wir Sie, alle dringenden Fragen in unserem [Forum](https://discuss.huggingface.co/) zu klären.
 
 
 ### 4. Implementierung des Modells
@@ -303,7 +303,7 @@ fabelhaften TensorFlow-Beitrags erfahren? Mit der richtigen Kommunikation, natü
 
 Es gibt vor allem zwei Möglichkeiten, Ihr Modell mit der Community zu teilen:
 - Erstellen Sie Demos. Dazu gehören Gradio-Demos, Notebooks und andere unterhaltsame Möglichkeiten, Ihr Modell vorzuführen. Wir raten Ihnen
-   ermutigen Sie, ein Notizbuch zu unseren [community-driven demos](https://hf-mirror.com/docs/transformers/community) hinzuzufügen.
+   ermutigen Sie, ein Notizbuch zu unseren [community-driven demos](https://huggingface.co/docs/transformers/community) hinzuzufügen.
 - Teilen Sie Geschichten in sozialen Medien wie Twitter und LinkedIn. Sie sollten stolz auf Ihre Arbeit sein und sie mit der
    Ihre Leistung mit der Community teilen - Ihr Modell kann nun von Tausenden von Ingenieuren und Forschern auf der ganzen Welt genutzt werden
    der Welt genutzt werden 🌍! Wir werden Ihre Beiträge gerne retweeten und Ihnen helfen, Ihre Arbeit mit der Community zu teilen.
@@ -316,7 +316,7 @@ TensorFlow-Gewichte ist ein Kinderspiel!
 
 Hier sehen Sie, wie es geht:
 1. Stellen Sie sicher, dass Sie in Ihrem Terminal bei Ihrem Hugging Face Konto angemeldet sind. Sie können sich mit dem folgenden Befehl anmelden
-   `huggingface-cli login` (Ihre Zugangstoken finden Sie [hier](https://hf-mirror.com/settings/tokens))
+   `huggingface-cli login` (Ihre Zugangstoken finden Sie [hier](https://huggingface.co/settings/tokens))
 2. Führen Sie `transformers-cli pt-to-tf --model-name foo/bar` aus, wobei `foo/bar` der Name des Modell-Repositorys ist
    ist, das die PyTorch-Gewichte enthält, die Sie konvertieren möchten.
 3. Markieren Sie `@joaogante` und `@Rocketknight1` in dem 🤗 Hub PR, den der obige Befehl gerade erstellt hat

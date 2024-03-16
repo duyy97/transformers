@@ -476,7 +476,7 @@ class TFVisionTextDualEncoderModel(TFPreTrainedModel):
             vision_model_name_or_path (`str`, *optional*, defaults to `None`):
                 Information necessary to initiate the vision model. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~TFPreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *PyTorch checkpoint folder* (e.g, `./pt_model`). In this case, `from_pt`
@@ -485,7 +485,7 @@ class TFVisionTextDualEncoderModel(TFPreTrainedModel):
             text_model_name_or_path (`str`, *optional*):
                 Information necessary to initiate the text model. Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~TFPreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *PyTorch checkpoint folder* (e.g, `./pt_model`). In this case, `from_pt`

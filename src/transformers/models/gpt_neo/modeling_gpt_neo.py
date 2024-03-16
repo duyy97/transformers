@@ -69,7 +69,7 @@ _CONFIG_FOR_DOC = "GPTNeoConfig"
 
 GPT_NEO_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "EleutherAI/gpt-neo-1.3B",
-    # See all GPTNeo models at https://hf-mirror.com/models?filter=gpt_neo
+    # See all GPTNeo models at https://huggingface.co/models?filter=gpt_neo
 ]
 
 _CHECKPOINT_FOR_DOC = "EleutherAI/gpt-neo-1.3B"

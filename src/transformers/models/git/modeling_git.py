@@ -47,7 +47,7 @@ _CONFIG_FOR_DOC = "GitConfig"
 
 GIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/git-base",
-    # See all GIT models at https://hf-mirror.com/models?filter=git
+    # See all GIT models at https://huggingface.co/models?filter=git
 ]
 
 

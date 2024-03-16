@@ -41,7 +41,7 @@ _CONFIG_FOR_DOC = "PatchTSMixerConfig"
 
 PATCHTSMIXER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "ibm/patchtsmixer-etth1-pretrain",
-    # See all PatchTSMixer models at https://hf-mirror.com/models?filter=patchtsmixer
+    # See all PatchTSMixer models at https://huggingface.co/models?filter=patchtsmixer
 ]
 
 

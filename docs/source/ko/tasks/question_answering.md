@@ -27,7 +27,7 @@ rendered properly in your Markdown viewer.
 
 이 가이드는 다음과 같은 방법들을 보여줍니다.
 
-1. 추출적 질의 응답을 하기 위해 [SQuAD](https://hf-mirror.com/datasets/squad) 데이터 세트에서 [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) 미세 조정하기
+1. 추출적 질의 응답을 하기 위해 [SQuAD](https://huggingface.co/datasets/squad) 데이터 세트에서 [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) 미세 조정하기
 2. 추론에 미세 조정된 모델 사용하기
 
 <Tip>
@@ -327,7 +327,7 @@ TensorFlow를 이용한 모델을 미세 조정하려면 옵티마이저 함수,
 
 질의 응답을 평가하려면 상당한 양의 후처리가 필요합니다. 시간이 너무 많이 걸리지 않도록 이 가이드에서는 평가 단계를 생략합니다. [`Trainer`]는 훈련 과정에서 평가 손실(evaluation loss)을 계속 계산하기 때문에 모델의 성능을 대략적으로 알 수 있습니다.
 
-시간에 여유가 있고 질의 응답 모델을 평가하는 방법에 관심이 있다면 🤗 Hugging Face Course의 [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt#postprocessing) 챕터를 살펴보세요!
+시간에 여유가 있고 질의 응답 모델을 평가하는 방법에 관심이 있다면 🤗 Hugging Face Course의 [Question answering](https://huggingface.co/course/chapter7/7?fw=pt#postprocessing) 챕터를 살펴보세요!
 
 ## 추론[[inference]]
 

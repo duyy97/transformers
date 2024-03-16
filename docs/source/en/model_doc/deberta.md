@@ -39,8 +39,8 @@ the training data performs consistently better on a wide range of NLP tasks, ach
 pre-trained models will be made publicly available at https://github.com/microsoft/DeBERTa.*
 
 
-This model was contributed by [DeBERTa](https://hf-mirror.com/DeBERTa). This model TF 2.0 implementation was
-contributed by [kamalkraj](https://hf-mirror.com/kamalkraj) . The original code can be found [here](https://github.com/microsoft/DeBERTa).
+This model was contributed by [DeBERTa](https://huggingface.co/DeBERTa). This model TF 2.0 implementation was
+contributed by [kamalkraj](https://huggingface.co/kamalkraj) . The original code can be found [here](https://github.com/microsoft/DeBERTa).
 
 ## Resources
 
@@ -48,8 +48,8 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-classification"/>
 
-- A blog post on how to [Accelerate Large Model Training using DeepSpeed](https://hf-mirror.com/blog/accelerate-deepspeed) with DeBERTa.
-- A blog post on [Supercharged Customer Service with Machine Learning](https://hf-mirror.com/blog/supercharge-customer-service-with-machine-learning) with DeBERTa.
+- A blog post on how to [Accelerate Large Model Training using DeepSpeed](https://huggingface.co/blog/accelerate-deepspeed) with DeBERTa.
+- A blog post on [Supercharged Customer Service with Machine Learning](https://huggingface.co/blog/supercharge-customer-service-with-machine-learning) with DeBERTa.
 - [`DebertaForSequenceClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification.ipynb).
 - [`TFDebertaForSequenceClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_classification-tf.ipynb).
 - [Text classification task guide](../tasks/sequence_classification)
@@ -58,22 +58,22 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 - [`DebertaForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification.ipynb).
 - [`TFDebertaForTokenClassification`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/token-classification) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/token_classification-tf.ipynb).
-- [Token classification](https://hf-mirror.com/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
-- [Byte-Pair Encoding tokenization](https://hf-mirror.com/course/chapter6/5?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Token classification](https://huggingface.co/course/chapter7/2?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Byte-Pair Encoding tokenization](https://huggingface.co/course/chapter6/5?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Token classification task guide](../tasks/token_classification)
 
 <PipelineTag pipeline="fill-mask"/>
 
 - [`DebertaForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#robertabertdistilbert-and-masked-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFDebertaForMaskedLM`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_mlmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
-- [Masked language modeling](https://hf-mirror.com/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Masked language modeling](https://huggingface.co/course/chapter7/3?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Masked language modeling task guide](../tasks/masked_language_modeling)
 
 <PipelineTag pipeline="question-answering"/>
 
 - [`DebertaForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering.ipynb).
 - [`TFDebertaForQuestionAnswering`] is supported by this [example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/question_answering-tf.ipynb).
-- [Question answering](https://hf-mirror.com/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
+- [Question answering](https://huggingface.co/course/chapter7/7?fw=pt) chapter of the 🤗 Hugging Face Course.
 - [Question answering task guide](../tasks/question_answering)
 
 ## DebertaConfig

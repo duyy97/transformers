@@ -50,7 +50,7 @@ _CONFIG_FOR_DOC = "BrosConfig"
 BROS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "jinho8345/bros-base-uncased",
     "jinho8345/bros-large-uncased",
-    # See all Bros models at https://hf-mirror.com/models?filter=bros
+    # See all Bros models at https://huggingface.co/models?filter=bros
 ]
 
 BROS_START_DOCSTRING = r"""

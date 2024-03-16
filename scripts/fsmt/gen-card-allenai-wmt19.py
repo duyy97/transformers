@@ -64,8 +64,8 @@ For more details, please, see [Deep Encoder, Shallow Decoder: Reevaluating the S
 
 2 models are available:
 
-* [wmt19-de-en-6-6-big](https://hf-mirror.com/allenai/wmt19-de-en-6-6-big)
-* [wmt19-de-en-6-6-base](https://hf-mirror.com/allenai/wmt19-de-en-6-6-base)
+* [wmt19-de-en-6-6-big](https://huggingface.co/allenai/wmt19-de-en-6-6-big)
+* [wmt19-de-en-6-6-base](https://huggingface.co/allenai/wmt19-de-en-6-6-base)
 
 
 ## Intended uses & limitations

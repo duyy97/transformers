@@ -123,7 +123,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        default=None, metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        default=None, metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     language: str = field(
         default=None, metadata={"help": "Evaluation language. Also train language if `train_language` is set to None."}
@@ -139,7 +139,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     do_lower_case: Optional[bool] = field(
         default=False,

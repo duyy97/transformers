@@ -41,9 +41,9 @@ python run_funsd_cord.py \
   --push_to_hub°model_id layoutlmv3-finetuned-funsd
 ```
 
-👀 The resulting model can be found here: https://hf-mirror.com/nielsr/layoutlmv3-finetuned-funsd. By specifying the `push_to_hub` flag, the model gets uploaded automatically to the hub (regularly), together with a model card, which includes metrics such as precision, recall and F1. Note that you can easily update the model card, as it's just a README file of the respective repo on the hub.
+👀 The resulting model can be found here: https://huggingface.co/nielsr/layoutlmv3-finetuned-funsd. By specifying the `push_to_hub` flag, the model gets uploaded automatically to the hub (regularly), together with a model card, which includes metrics such as precision, recall and F1. Note that you can easily update the model card, as it's just a README file of the respective repo on the hub.
 
-There's also the "Training metrics" [tab](https://hf-mirror.com/nielsr/layoutlmv3-finetuned-funsd/tensorboard), which shows Tensorboard logs over the course of training. Pretty neat, huh?
+There's also the "Training metrics" [tab](https://huggingface.co/nielsr/layoutlmv3-finetuned-funsd/tensorboard), which shows Tensorboard logs over the course of training. Pretty neat, huh?
 
 ## Fine-tuning on CORD
 
@@ -66,4 +66,4 @@ python run_funsd_cord.py \
   --push_to_hub°model_id layoutlmv3-finetuned-cord
 ```
 
-👀 The resulting model can be found here: https://hf-mirror.com/nielsr/layoutlmv3-finetuned-cord. Note that a model card gets generated automatically in case you specify the `push_to_hub` flag.
+👀 The resulting model can be found here: https://huggingface.co/nielsr/layoutlmv3-finetuned-cord. Note that a model card gets generated automatically in case you specify the `push_to_hub` flag.

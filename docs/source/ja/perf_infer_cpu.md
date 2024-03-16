@@ -20,7 +20,7 @@ rendered properly in your Markdown viewer.
 
 ## `BetterTransformer` for faster inference
 
-最近、テキスト、画像、および音声モデルのCPU上での高速な推論のために`BetterTransformer`を統合しました。詳細については、この統合に関するドキュメンテーションを[こちら](https://hf-mirror.com/docs/optimum/bettertransformer/overview)で確認してください。
+最近、テキスト、画像、および音声モデルのCPU上での高速な推論のために`BetterTransformer`を統合しました。詳細については、この統合に関するドキュメンテーションを[こちら](https://huggingface.co/docs/optimum/bettertransformer/overview)で確認してください。
 
 ## PyTorch JITモード（TorchScript）
 TorchScriptは、PyTorchコードからシリアライズ可能で最適化可能なモデルを作成する方法です。任意のTorchScriptプログラムは、Python依存性のないプロセスで保存およびロードできます。

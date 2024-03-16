@@ -37,7 +37,7 @@ Representation](https://arxiv.org/abs/2103.06874)、Jonathan H. Clark、Dan Garr
 コンテキストをエンコードするディープトランスフォーマースタックを備えたシーケンスの長さ。 CANINE は、同等の mBERT モデルよりも次の点で優れています。
 TyDi QA の 2.8 F1 は、モデル パラメータが 28% 少ないにもかかわらず、困難な多言語ベンチマークです。*
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。元のコードは [ここ](https://github.com/google-research/language/tree/master/language/canine) にあります。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。元のコードは [ここ](https://github.com/google-research/language/tree/master/language/canine) にあります。
 
 ## Usage tips
 
@@ -55,9 +55,9 @@ TyDi QA の 2.8 F1 は、モデル パラメータが 28% 少ないにもかか�
 
 モデルのチェックポイント:
 
-  - [google/canine-c](https://hf-mirror.com/google/canine-c): 自己回帰文字損失で事前トレーニング済み、
+  - [google/canine-c](https://huggingface.co/google/canine-c): 自己回帰文字損失で事前トレーニング済み、
     12 レイヤー、768 隠し、12 ヘッド、121M パラメーター (サイズ ~500 MB)。
-  - [google/canine-s](https://hf-mirror.com/google/canine-s): サブワード損失で事前トレーニング済み、12 層、
+  - [google/canine-s](https://huggingface.co/google/canine-s): サブワード損失で事前トレーニング済み、12 層、
     768 個の非表示、12 ヘッド、121M パラメーター (サイズ ~500 MB)。
 
 ## Usage example

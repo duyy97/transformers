@@ -25,10 +25,10 @@ logger = logging.get_logger(__name__)
 
 LAYOUTLM_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/layoutlm-base-uncased": (
-        "https://hf-mirror.com/microsoft/layoutlm-base-uncased/resolve/main/config.json"
+        "https://huggingface.co/microsoft/layoutlm-base-uncased/resolve/main/config.json"
     ),
     "microsoft/layoutlm-large-uncased": (
-        "https://hf-mirror.com/microsoft/layoutlm-large-uncased/resolve/main/config.json"
+        "https://huggingface.co/microsoft/layoutlm-large-uncased/resolve/main/config.json"
     ),
 }
 
@@ -38,7 +38,7 @@ class LayoutLMConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LayoutLMModel`]. It is used to instantiate a
     LayoutLM model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the LayoutLM
-    [microsoft/layoutlm-base-uncased](https://hf-mirror.com/microsoft/layoutlm-base-uncased) architecture.
+    [microsoft/layoutlm-base-uncased](https://huggingface.co/microsoft/layoutlm-base-uncased) architecture.
 
     Configuration objects inherit from [`BertConfig`] and can be used to control the model outputs. Read the
     documentation from [`BertConfig`] for more information.

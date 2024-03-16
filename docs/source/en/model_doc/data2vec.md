@@ -35,7 +35,7 @@ the entire input. Experiments on the major benchmarks of speech recognition, ima
 natural language understanding demonstrate a new state of the art or competitive performance to predominant approaches.
 Models and code are available at www.github.com/pytorch/fairseq/tree/master/examples/data2vec.*
 
-This model was contributed by [edugp](https://hf-mirror.com/edugp) and [patrickvonplaten](https://hf-mirror.com/patrickvonplaten).
+This model was contributed by [edugp](https://huggingface.co/edugp) and [patrickvonplaten](https://huggingface.co/patrickvonplaten).
 [sayakpaul](https://github.com/sayakpaul) and [Rocketknight1](https://github.com/Rocketknight1) contributed Data2Vec for vision in TensorFlow.
 
 The original code (for NLP and Speech) can be found [here](https://github.com/pytorch/fairseq/tree/main/examples/data2vec).

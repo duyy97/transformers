@@ -46,7 +46,7 @@ _CHECKPOINT_FOR_DOC = "studio-ousia/luke-base"
 LUKE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "studio-ousia/luke-base",
     "studio-ousia/luke-large",
-    # See all LUKE models at https://hf-mirror.com/models?filter=luke
+    # See all LUKE models at https://huggingface.co/models?filter=luke
 ]
 
 

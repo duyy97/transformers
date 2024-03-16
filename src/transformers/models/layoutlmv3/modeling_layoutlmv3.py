@@ -44,7 +44,7 @@ _CONFIG_FOR_DOC = "LayoutLMv3Config"
 LAYOUTLMV3_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/layoutlmv3-base",
     "microsoft/layoutlmv3-large",
-    # See all LayoutLMv3 models at https://hf-mirror.com/models?filter=layoutlmv3
+    # See all LayoutLMv3 models at https://huggingface.co/models?filter=layoutlmv3
 ]
 
 LAYOUTLMV3_START_DOCSTRING = r"""

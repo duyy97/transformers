@@ -37,7 +37,7 @@ logger = logging.get_logger(__name__)
 TVP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Intel/tvp-base",
     "Intel/tvp-base-ANet",
-    # See all Tvp models at https://hf-mirror.com/models?filter=tvp
+    # See all Tvp models at https://huggingface.co/models?filter=tvp
 ]
 
 

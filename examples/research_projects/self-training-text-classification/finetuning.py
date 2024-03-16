@@ -61,7 +61,7 @@ class FTModelArguments:
     """Arguments pertaining to which config/tokenizer/model we are going to fine-tune from."""
 
     model_name_or_path: str = dataclasses.field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models."}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models."}
     )
     use_fast_tokenizer: Optional[bool] = dataclasses.field(
         default=True,
@@ -69,7 +69,7 @@ class FTModelArguments:
     )
     cache_dir: Optional[str] = dataclasses.field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com."},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co."},
     )
 
 
@@ -528,7 +528,7 @@ def finetune(accelerator, model_name_or_path, train_file, output_dir, **kwargs):
       accelerator: An instance of an accelerator for distributed training (on
         multi-GPU, TPU) or mixed precision training.
       model_name_or_path: Path to pretrained model or model identifier from
-        hf-mirror.com/models.
+        huggingface.co/models.
       train_file: A csv or a json file containing the training data.
       output_dir: The output directory where the model predictions and checkpoints
         will be written.

@@ -34,7 +34,7 @@ _CHECKPOINT_FOR_DOC = "dg845/univnet-dev"
 
 UNIVNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "dg845/univnet-dev",
-    # See all UnivNet models at https://hf-mirror.com/models?filter=univnet
+    # See all UnivNet models at https://huggingface.co/models?filter=univnet
 ]
 
 

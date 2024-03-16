@@ -42,7 +42,7 @@ LLAVA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "llava-hf/llava-1.5-7b-hf",
     "llava-hf/llava-1.5-13b-hf",
     "llava-hf/bakLlava-v1-hf",
-    # See all Llava models at https://hf-mirror.com/models?filter=llava
+    # See all Llava models at https://huggingface.co/models?filter=llava
 ]
 
 

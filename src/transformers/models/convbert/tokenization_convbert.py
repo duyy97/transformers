@@ -28,11 +28,11 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "YituTech/conv-bert-base": "https://hf-mirror.com/YituTech/conv-bert-base/resolve/main/vocab.txt",
+        "YituTech/conv-bert-base": "https://huggingface.co/YituTech/conv-bert-base/resolve/main/vocab.txt",
         "YituTech/conv-bert-medium-small": (
-            "https://hf-mirror.com/YituTech/conv-bert-medium-small/resolve/main/vocab.txt"
+            "https://huggingface.co/YituTech/conv-bert-medium-small/resolve/main/vocab.txt"
         ),
-        "YituTech/conv-bert-small": "https://hf-mirror.com/YituTech/conv-bert-small/resolve/main/vocab.txt",
+        "YituTech/conv-bert-small": "https://huggingface.co/YituTech/conv-bert-small/resolve/main/vocab.txt",
     }
 }
 

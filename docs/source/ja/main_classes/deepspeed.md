@@ -1630,7 +1630,7 @@ ZeRO-3 では、モデルの重みが複数の GPU に分割されるため、�
 **FP32 重量:**
 
 fp16 ウェイトはトレーニングを再開するのに適していますが、モデルの微調整が完了し、それを
-[モデル ハブ](https://hf-mirror.com/models) にアクセスするか、fp32 を入手したいと思われる他の人に渡します。
+[モデル ハブ](https://huggingface.co/models) にアクセスするか、fp32 を入手したいと思われる他の人に渡します。
 重み。これは大量のメモリを必要とするプロセスであるため、トレーニング中に行うべきではないのが理想的です。
 したがって、トレーニングの完了後にオフラインで実行するのが最適です。ただし、必要に応じて、空き CPU が十分にある場合は、
 同じトレーニング スクリプトで実行できることを思い出してください。次のセクションでは、両方のアプローチについて説明します。
@@ -2136,7 +2136,7 @@ train_batch_size = 1 * world_size
 # - which params should remain on gpus - the larger the value the smaller the offload size
 #
 # For in-depth info on Deepspeed config see
-# https://hf-mirror.com/docs/transformers/main/main_classes/deepspeed
+# https://huggingface.co/docs/transformers/main/main_classes/deepspeed
 
 # keeping the same format as json for consistency, except it uses lower case for true/false
 # fmt: off

@@ -55,7 +55,7 @@ _CONFIG_FOR_DOC = "CanineConfig"
 CANINE_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/canine-s",
     "google/canine-r",
-    # See all CANINE models at https://hf-mirror.com/models?filter=canine
+    # See all CANINE models at https://huggingface.co/models?filter=canine
 ]
 
 # Support up to 16 hash functions.

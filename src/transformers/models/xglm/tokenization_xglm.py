@@ -31,7 +31,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "facebook/xglm-564M": "https://hf-mirror.com/facebook/xglm-564M/resolve/main/sentencepiece.bpe.model",
+        "facebook/xglm-564M": "https://huggingface.co/facebook/xglm-564M/resolve/main/sentencepiece.bpe.model",
     }
 }
 

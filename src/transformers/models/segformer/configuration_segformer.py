@@ -29,9 +29,9 @@ logger = logging.get_logger(__name__)
 
 SEGFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "nvidia/segformer-b0-finetuned-ade-512-512": (
-        "https://hf-mirror.com/nvidia/segformer-b0-finetuned-ade-512-512/resolve/main/config.json"
+        "https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512/resolve/main/config.json"
     ),
-    # See all SegFormer models at https://hf-mirror.com/models?filter=segformer
+    # See all SegFormer models at https://huggingface.co/models?filter=segformer
 }
 
 
@@ -40,7 +40,7 @@ class SegformerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SegformerModel`]. It is used to instantiate an
     SegFormer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the SegFormer
-    [nvidia/segformer-b0-finetuned-ade-512-512](https://hf-mirror.com/nvidia/segformer-b0-finetuned-ade-512-512)
+    [nvidia/segformer-b0-finetuned-ade-512-512](https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

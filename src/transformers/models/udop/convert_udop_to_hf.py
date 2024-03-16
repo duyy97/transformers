@@ -189,7 +189,7 @@ def convert_udop_checkpoint(model_name, pytorch_dump_folder_path=None, push_to_h
         model.push_to_hub(f"microsoft/{model_name}")
         processor.push_to_hub(f"microsoft/{model_name}")
         # BIG note here: to save the fast tokenizer files in the repo on the hub, you need to do the following:
-        # see https://discuss.hf-mirror.com/t/convert-slow-xlmrobertatokenizer-to-fast-one/20876
+        # see https://discuss.huggingface.co/t/convert-slow-xlmrobertatokenizer-to-fast-one/20876
 
 
 if __name__ == "__main__":

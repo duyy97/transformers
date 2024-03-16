@@ -45,7 +45,7 @@ pip install -q transformers
 ## Zero-shot image classification pipeline
 
 ゼロショット画像分類をサポートするモデルで推論を試す最も簡単な方法は、対応する [`パイプライン`] を使用することです。
-[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?pipeline_tag=zero-shot-image-classification&sort=downloads) からパイプラインをインスタンス化します。
+[Hugging Face Hub のチェックポイント](https://huggingface.co/models?pipeline_tag=zero-shot-image-classification&sort=downloads) からパイプラインをインスタンス化します。
 
 ```python
 >>> from transformers import pipeline
@@ -67,7 +67,7 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/owl.jpg" alt="Photo of an owl"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/owl.jpg" alt="Photo of an owl"/>
 </div>
 
 画像と候補オブジェクトのラベルをパイプラインに渡します。ここでは画像を直接渡します。他の適切なオプション
@@ -88,7 +88,7 @@ pip install -q transformers
 ゼロショット画像分類パイプラインの使用方法を理解したところで、ゼロショットを実行する方法を見てみましょう。
 画像を手動で分類します。
 
-まず、[Hugging Face Hub のチェックポイント](https://hf-mirror.com/models?pipeline_tag=zero-shot-image-classification&sort=downloads) からモデルと関連プロセッサをロードします。
+まず、[Hugging Face Hub のチェックポイント](https://huggingface.co/models?pipeline_tag=zero-shot-image-classification&sort=downloads) からモデルと関連プロセッサをロードします。
 ここでは、前と同じチェックポイントを使用します。
 
 ```py
@@ -111,7 +111,7 @@ pip install -q transformers
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg" alt="Photo of a car"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg" alt="Photo of a car"/>
 </div>
 
 プロセッサを使用してモデルの入力を準備します。プロセッサーは、

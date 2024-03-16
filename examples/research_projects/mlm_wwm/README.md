@@ -20,7 +20,7 @@ limitations under the License.
 These scripts leverage the 🤗 Datasets library and the Trainer API. You can easily customize them to your needs if you
 need extra processing on your datasets.
 
-The following examples, will run on a datasets hosted on our [hub](https://hf-mirror.com/datasets) or with your own
+The following examples, will run on a datasets hosted on our [hub](https://huggingface.co/datasets) or with your own
 text files for training and validation. We give examples of both below.
 
 

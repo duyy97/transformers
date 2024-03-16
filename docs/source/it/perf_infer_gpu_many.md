@@ -25,4 +25,4 @@ Nota: Un setup con GPU multiple può utilizzare la maggior parte delle strategie
 
 ## `BetterTransformer` per inferenza più rapida
 
-Abbiamo recentemente integrato `BetterTransformer` per inferenza più rapida su multi-GPU per modelli su testo, immagini e audio. Controlla il documento con queste integrazioni [qui](https://hf-mirror.com/docs/optimum/bettertransformer/overview) per maggiori dettagli.
+Abbiamo recentemente integrato `BetterTransformer` per inferenza più rapida su multi-GPU per modelli su testo, immagini e audio. Controlla il documento con queste integrazioni [qui](https://huggingface.co/docs/optimum/bettertransformer/overview) per maggiori dettagli.

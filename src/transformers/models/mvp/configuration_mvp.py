@@ -22,7 +22,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MVP_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "RUCAIBox/mvp": "https://hf-mirror.com/RUCAIBox/mvp/resolve/main/config.json",
+    "RUCAIBox/mvp": "https://huggingface.co/RUCAIBox/mvp/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class MvpConfig(PretrainedConfig):
     r"""
     This is the configuration class to store the configuration of a [`MvpModel`]. It is used to instantiate a MVP model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
-    defaults will yield a similar configuration to that of the MVP [RUCAIBox/mvp](https://hf-mirror.com/RUCAIBox/mvp)
+    defaults will yield a similar configuration to that of the MVP [RUCAIBox/mvp](https://huggingface.co/RUCAIBox/mvp)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

@@ -166,7 +166,7 @@ Transformers ist in der Lage, in einer Firewall- oder Offline-Umgebung zu laufen
 
 <Tip>
 
-Fügen sie [🤗 Datasets](https://hf-mirror.com/docs/datasets/) zu Ihrem Offline-Trainingsworkflow hinzufügen, indem Sie die Umgebungsvariable `HF_DATASETS_OFFLINE=1` setzen.
+Fügen sie [🤗 Datasets](https://huggingface.co/docs/datasets/) zu Ihrem Offline-Trainingsworkflow hinzufügen, indem Sie die Umgebungsvariable `HF_DATASETS_OFFLINE=1` setzen.
 
 </Tip>
 
@@ -190,9 +190,9 @@ Das Skript sollte nun laufen, ohne sich aufzuhängen oder eine Zeitüberschreitu
 
 Eine andere Möglichkeit, 🤗 Transformers offline zu verwenden, besteht darin, die Dateien im Voraus herunterzuladen und dann auf ihren lokalen Pfad zu verweisen, wenn Sie sie offline verwenden müssen. Es gibt drei Möglichkeiten, dies zu tun:
 
-* Laden Sie eine Datei über die Benutzeroberfläche des [Model Hub](https://hf-mirror.com/models) herunter, indem Sie auf das ↓-Symbol klicken.
+* Laden Sie eine Datei über die Benutzeroberfläche des [Model Hub](https://huggingface.co/models) herunter, indem Sie auf das ↓-Symbol klicken.
 
-    ![download-icon](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![download-icon](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
 * Verwenden Sie den [PreTrainedModel.from_pretrained] und [PreTrainedModel.save_pretrained] Workflow:
 
@@ -227,7 +227,7 @@ Eine andere Möglichkeit, 🤗 Transformers offline zu verwenden, besteht darin,
     python -m pip install huggingface_hub
     ```
 
-    2. Verwenden Sie die Funktion [`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub), um eine Datei in einen bestimmten Pfad herunterzuladen. Der folgende Befehl lädt zum Beispiel die Datei "config.json" aus dem Modell [T0](https://hf-mirror.com/bigscience/T0_3B) in den gewünschten Pfad herunter:
+    2. Verwenden Sie die Funktion [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub), um eine Datei in einen bestimmten Pfad herunterzuladen. Der folgende Befehl lädt zum Beispiel die Datei "config.json" aus dem Modell [T0](https://huggingface.co/bigscience/T0_3B) in den gewünschten Pfad herunter:
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -245,6 +245,6 @@ Sobald Ihre Datei heruntergeladen und lokal zwischengespeichert ist, geben Sie d
 
 <Tip>
 
-Weitere Informationen zum Herunterladen von Dateien, die auf dem Hub gespeichert sind, finden Sie im Abschnitt [Wie man Dateien vom Hub herunterlädt](https://hf-mirror.com/docs/hub/how-to-downstream).
+Weitere Informationen zum Herunterladen von Dateien, die auf dem Hub gespeichert sind, finden Sie im Abschnitt [Wie man Dateien vom Hub herunterlädt](https://huggingface.co/docs/hub/how-to-downstream).
 
 </Tip>

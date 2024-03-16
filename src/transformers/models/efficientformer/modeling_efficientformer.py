@@ -52,7 +52,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "Egyptian cat"
 
 EFFICIENTFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "snap-research/efficientformer-l1-300",
-    # See all EfficientFormer models at https://hf-mirror.com/models?filter=efficientformer
+    # See all EfficientFormer models at https://huggingface.co/models?filter=efficientformer
 ]
 
 

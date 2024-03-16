@@ -31,7 +31,7 @@ rendered properly in your Markdown viewer.
 
 <Tip>
 
-더 나아가기 전에, 기존 Transformer 아키텍처에 대한 기본적인 지식을 숙지하는 것이 좋습니다. 인코더, 디코더 및 어텐션의 작동 방식을 알면 다양한 Transformer 모델이 어떻게 작동하는지 이해하는 데 도움이 됩니다. 시작 단계거나 복습이 필요한 경우, 더 많은 정보를 위해 [코스](https://hf-mirror.com/course/chapter1/4?fw=pt)를 확인하세요!
+더 나아가기 전에, 기존 Transformer 아키텍처에 대한 기본적인 지식을 숙지하는 것이 좋습니다. 인코더, 디코더 및 어텐션의 작동 방식을 알면 다양한 Transformer 모델이 어떻게 작동하는지 이해하는 데 도움이 됩니다. 시작 단계거나 복습이 필요한 경우, 더 많은 정보를 위해 [코스](https://huggingface.co/course/chapter1/4?fw=pt)를 확인하세요!
 
 </Tip>
 
@@ -40,7 +40,7 @@ rendered properly in your Markdown viewer.
 [Wav2Vec2](model_doc/wav2vec2)는 레이블이 지정되지 않은 음성 데이터에 대해 사전훈련된 모델로, 오디오 분류 및 자동 음성 인식을 위해 레이블이 지정된 데이터로 미세 조정합니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
 </div>
 
 이 모델에는 4가지 주요 구성 요소가 있습니다:
@@ -91,7 +91,7 @@ ViT와 ConvNeXT 모두 이미지 분류에 사용될 수 있지만, ViT는 어�
 [ViT](model_doc/vit)은 합성곱을 전적으로 순수 Transformer 아키텍처로 대체합니다. 기존 Transformer에 익숙하다면, ViT를 이해하는 방법의 대부분을 이미 파악했다고 볼 수 있습니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
 </div>
 
 ViT가 도입한 주요 변경 사항은 이미지가 Transformer로 어떻게 전달되는지에 있습니다:
@@ -117,7 +117,7 @@ ViT가 도입한 주요 변경 사항은 이미지가 Transformer로 어떻게 �
 [ConvNeXT](model_doc/convnext)는 성능을 높이기 위해 새로운 현대 네트워크 설계를 적용한 CNN 구조입니다. 그러나 합성곱은 여전히 모델의 핵심입니다. 높은 수준의 관점에서 볼 때, [합성곱](glossary#convolution)은 작은 행렬(*커널*)에 이미지 픽셀의 작은 윈도우를 곱하는 연산입니다. 이는 특정 텍스쳐(texture)이나 선의 곡률과 같은 일부 특징을 계산합니다. 그러고 다음 픽셀 윈도우로 넘어가는데, 여기서 합성곱이 이동하는 거리를 *보폭(stride)*이라고 합니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
 </div>
 
 <small>패딩이나 보폭이 없는 기본 합성곱, <a href="https://arxiv.org/abs/1603.07285">딥러닝을 위한 합성곱 연산 가이드</a></small>
@@ -125,7 +125,7 @@ ViT가 도입한 주요 변경 사항은 이미지가 Transformer로 어떻게 �
 이 출력을 다른 합성곱 레이어에 전달할 수 있으며, 각 연속적인 레이어를 통해 네트워크는 핫도그나 로켓과 같이 더 복잡하고 추상적인 것을 학습합니다. 합성곱 레이어 사이에 풀링 레이어를 추가하여 차원을 줄이고 특징의 위치 변화에 대해 모델을 더 견고하게 만드는 것이 일반적입니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
 </div>
 
 ConvNeXT는 CNN을 5가지 방식으로 현대화합니다:
@@ -147,7 +147,7 @@ ConvNeXT는 CNN을 5가지 방식으로 현대화합니다:
 [DETR](model_doc/detr), *DEtection TRansformer*는 CNN과 Transformer 인코더-디코더를 결합한 종단간(end-to-end) 객체 탐지 모델입니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
 </div>
 
 1. 사전훈련된 CNN *백본(backbone)*은 픽셀 값으로 나타낸 이미지를 가져와 저해상도 특징 맵을 만듭니다. 특징 맵에 대해 1x1 합성곱을 적용하여 차원을 줄이고, 고수준 이미지 표현을 가진 새로운 특징 맵을 생성합니다. Transformer는 시퀀스 모델이기 때문에 특징 맵을 위치 임베딩과 결합된 특징 벡터의 시퀀스로 평탄화합니다.
@@ -167,7 +167,7 @@ ConvNeXT는 CNN을 5가지 방식으로 현대화합니다:
 [Mask2Former](model_doc/mask2former)는 모든 유형의 이미지 분할 작업을 해결하는 범용 아키텍처입니다. 전통적인 분할 모델은 일반적으로 시멘틱(semantic) 또는 파놉틱(panoptic) 분할과 같은 이미지 분할의 특정 하위 작업에 맞춰 조정됩니다. Mask2Former는 모든 작업을 *마스크 분류* 문제로 구성합니다. 마스크 분류는 픽셀을 *N*개 세그먼트로 그룹화하고, 주어진 이미지에 대해 *N*개의 마스크와 그에 대응하는 클래스 레이블을 예측합니다. 이 섹션에서 Mask2Former의 작동 방법을 설명한 다음, 마지막에 SegFormer를 미세 조정해볼 수 있습니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
 </div>
 
 Mask2Former에는 3가지 주요 구성 요소가 있습니다:
@@ -189,7 +189,7 @@ Mask2Former에는 3가지 주요 구성 요소가 있습니다:
 [GLPN](model_doc/glpn), *Global-Local Path Network*는 [SegFormer](model_doc/segformer) 인코더와 경량 디코더를 결합한 깊이 추정을 위한 Transformer입니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
 </div>
 
 1. ViT와 같이, 이미지는 패치 시퀀스로 분할되지만, 이미지 패치가 더 작다는 점이 다릅니다. 이는 세그멘테이션이나 깊이 추정과 같은 밀도 예측 작업에 더 적합합니다. 이미지 패치는 패치 임베딩으로 변환되어(패치 임베딩이 생성되는 방법은 [이미지 분류](#image-classification) 섹션을 참조하세요), 인코더로 전달됩니다.
@@ -241,7 +241,7 @@ Transformer는 초기에 기계 번역을 위해 설계되었고, 그 이후로�
 [GPT-2](model_doc/gpt2)는 대량의 텍스트에 대해 사전훈련된 디코딩 전용 모델입니다. 프롬프트를 주어지면 설득력 있는 (항상 사실은 아니지만!) 텍스트를 생성하고 명시적으로 훈련되지 않았음에도 불구하고 질의응답과 같은 다른 NLP 작업을 완수할 수 있습니다.
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
 </div>
 
 1. GPT-2는 단어를 토큰화하고 토큰 임베딩을 생성하기 위해 [바이트 페어 인코딩(BPE, byte pair encoding)](tokenizer_summary#bytepair-encoding-bpe)을 사용합니다. 위치 인코딩은 시퀀스에서 각 토큰의 위치를 나타내기 위해 토큰 임베딩에 추가됩니다. 입력 임베딩은 여러 디코더 블록을 거쳐 일부 최종 은닉 상태를 출력합니다. 각 디코더 블록 내에서 GPT-2는 *마스크드 셀프 어텐션(masked self-attention)* 레이어를 사용합니다. 이는 GPT-2가 이후 토큰(future tokens)에 주의를 기울일 수 없도록 합니다. 왼쪽에 있는 토큰에만 주의를 기울일 수 있습니다. 마스크드 셀프 어텐션에서는 어텐션 마스크를 사용하여 이후 토큰에 대한 점수(score)를 `0`으로 설정하기 때문에 BERT의 [`mask`] 토큰과 다릅니다.
@@ -263,7 +263,7 @@ GPT-2의 사전훈련 목적은 전적으로 [인과적 언어 모델링](glossa
 [BART](model_doc/bart) 및 [T5](model_doc/t5)와 같은 인코더-디코더 모델은 요약 작업의 시퀀스-투-시퀀스 패턴을 위해 설계되었습니다. 이 섹션에서 BART의 작동 방법을 설명한 다음, 마지막에 T5를 미세 조정해볼 수 있습니다. 
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
 </div>
 
 1. BART의 인코더 아키텍처는 BERT와 매우 유사하며 텍스트의 토큰 및 위치 임베딩을 받습니다. BART는 입력을 변형시키고 디코더로 재구성하여 사전훈련됩니다. 특정 변형 기법이 있는 다른 인코더와는 달리, BART는 모든 유형의 변형을 적용할 수 있습니다. 그러나 *text infilling* 변형 기법이 가장 잘 작동합니다. Text Infiling에서는 여러 텍스트 스팬을 **단일** [`mask`] 토큰으로 대체합니다. 이는 모델이 마스크된 토큰을 예측해야 하고, 모델에 누락된 토큰의 수를 예측하도록 가르치기 때문에 중요합니다. 입력 임베딩과 마스크된 스팬이 인코더를 거쳐 최종 은닉 상태를 출력하지만, BERT와 달리 BART는 마지막에 단어를 예측하는 순방향 네트워크를 추가하지 않습니다.

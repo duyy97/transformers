@@ -21,8 +21,8 @@ limitations under the License.
 Based on the script [`run_glue.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py).
 
 Fine-tuning the library models for sequence classification on the GLUE benchmark: [General Language Understanding
-Evaluation](https://gluebenchmark.com/). This script can fine-tune any of the models on the [hub](https://hf-mirror.com/models)
-and can also be used for a dataset hosted on our [hub](https://hf-mirror.com/datasets) or your own data in a csv or a JSON file
+Evaluation](https://gluebenchmark.com/). This script can fine-tune any of the models on the [hub](https://huggingface.co/models)
+and can also be used for a dataset hosted on our [hub](https://huggingface.co/datasets) or your own data in a csv or a JSON file
 (the script might need some tweaks in that case, refer to the comments inside for help).
 
 GLUE is made up of a total of 9 different tasks. Here is how to run the script on one of them:
@@ -64,7 +64,7 @@ single Titan RTX was used):
 Some of these results are significantly different from the ones reported on the test set of GLUE benchmark on the
 website. For QQP and WNLI, please refer to [FAQ #12](https://gluebenchmark.com/faq) on the website.
 
-The following example fine-tunes BERT on the `imdb` dataset hosted on our [hub](https://hf-mirror.com/datasets):
+The following example fine-tunes BERT on the `imdb` dataset hosted on our [hub](https://huggingface.co/datasets):
 
 ```bash
 python run_glue.py \
@@ -84,7 +84,7 @@ python run_glue.py \
 ## Text classification
 As an alternative, we can use the script [`run_classification.py`](./run_classification.py) to fine-tune models on a single/multi-label classification task. 
 
-The following example fine-tunes BERT on the `en` subset of  [`amazon_reviews_multi`](https://hf-mirror.com/datasets/amazon_reviews_multi) dataset.
+The following example fine-tunes BERT on the `en` subset of  [`amazon_reviews_multi`](https://huggingface.co/datasets/amazon_reviews_multi) dataset.
 We can specify the metric, the label column and aso choose which text columns to use jointly for classification. 
 ```bash
 dataset="amazon_reviews_multi"
@@ -108,7 +108,7 @@ python run_classification.py \
 ```
 Training for 1 epoch results in acc of around 0.5958 for review_body only and 0.659 for title+body+category.
 
-The following is a multi-label classification example. It fine-tunes BERT on the `reuters21578` dataset hosted on our [hub](https://hf-mirror.com/datasets/reuters21578):
+The following is a multi-label classification example. It fine-tunes BERT on the `reuters21578` dataset hosted on our [hub](https://huggingface.co/datasets/reuters21578):
 ```bash
 dataset="reuters21578"
 subset="ModApte"
@@ -156,7 +156,7 @@ Using mixed precision training usually results in 2x-speedup for training with t
 
 Based on the script [`run_glue_no_trainer.py`](https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue_no_trainer.py).
 
-Like `run_glue.py`, this script allows you to fine-tune any of the models on the [hub](https://hf-mirror.com/models) on a
+Like `run_glue.py`, this script allows you to fine-tune any of the models on the [hub](https://huggingface.co/models) on a
 text classification task, either a GLUE task or your own data in a csv or a JSON file. The main difference is that this
 script exposes the bare training loop, to allow you to quickly experiment and add any customization you would like.
 

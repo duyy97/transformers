@@ -59,7 +59,7 @@ _CONFIG_FOR_DOC = "GPTJConfig"
 
 GPTJ_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "EleutherAI/gpt-j-6B",
-    # See all GPT-J models at https://hf-mirror.com/models?filter=gptj
+    # See all GPT-J models at https://huggingface.co/models?filter=gptj
 ]
 
 

@@ -976,7 +976,7 @@ def test_integration_foo():
 grep tiny tests examples
 ```
 
-다음은 작은 모델[stas/tiny-wmt19-en-de](https://hf-mirror.com/stas/tiny-wmt19-en-de)을 만든 
+다음은 작은 모델[stas/tiny-wmt19-en-de](https://huggingface.co/stas/tiny-wmt19-en-de)을 만든 
 [script](https://github.com/huggingface/transformers/tree/main/scripts/fsmt/fsmt-make-tiny-model.py) 예시입니다. 
 특정 모델의 아키텍처에 맞게 쉽게 조정할 수 있습니다.
 

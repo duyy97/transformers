@@ -53,7 +53,7 @@ class FillMaskPipeline(Pipeline):
 
     The models that this pipeline can use are models that have been trained with a masked language modeling objective,
     which includes the bi-directional models in the library. See the up-to-date list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=fill-mask).
+    [huggingface.co/models](https://huggingface.co/models?filter=fill-mask).
 
     <Tip>
 

@@ -39,7 +39,7 @@ class ImageSegmentationPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> segmenter = pipeline(model="facebook/detr-resnet-50-panoptic")
-    >>> segments = segmenter("https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png")
+    >>> segments = segmenter("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
     >>> len(segments)
     2
 
@@ -61,7 +61,7 @@ class ImageSegmentationPipeline(Pipeline):
     `"image-segmentation"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=image-segmentation).
+    [huggingface.co/models](https://huggingface.co/models?filter=image-segmentation).
     """
 
     def __init__(self, *args, **kwargs):

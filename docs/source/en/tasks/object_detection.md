@@ -27,8 +27,8 @@ Other applications include counting objects in images, image search, and more.
 
 In this guide, you will learn how to:
 
- 1. Finetune [DETR](https://hf-mirror.com/docs/transformers/model_doc/detr), a model that combines a convolutional
- backbone with an encoder-decoder Transformer, on the [CPPE-5](https://hf-mirror.com/datasets/cppe-5)
+ 1. Finetune [DETR](https://huggingface.co/docs/transformers/model_doc/detr), a model that combines a convolutional
+ backbone with an encoder-decoder Transformer, on the [CPPE-5](https://huggingface.co/datasets/cppe-5)
  dataset.
  2. Use your finetuned model for inference.
 
@@ -63,7 +63,7 @@ When prompted, enter your token to log in:
 
 ## Load the CPPE-5 dataset
 
-The [CPPE-5 dataset](https://hf-mirror.com/datasets/cppe-5) contains images with
+The [CPPE-5 dataset](https://huggingface.co/datasets/cppe-5) contains images with
 annotations identifying medical personal protective equipment (PPE) in the context of the COVID-19 pandemic.
 
 Start by loading the dataset:
@@ -204,7 +204,7 @@ Before passing the images to the `image_processor`, apply two preprocessing tran
 
 First, to make sure the model does not overfit on the training data, you can apply image augmentation with any data augmentation library. Here we use [Albumentations](https://albumentations.ai/docs/) ...
 This library ensures that transformations affect the image and update the bounding boxes accordingly.
-The 🤗 Datasets library documentation has a detailed [guide on how to augment images for object detection](https://hf-mirror.com/docs/datasets/object_detection),
+The 🤗 Datasets library documentation has a detailed [guide on how to augment images for object detection](https://huggingface.co/docs/datasets/object_detection),
 and it uses the exact same dataset as an example. Apply the same approach here, resize each image to (480, 480),
 flip it horizontally, and brighten it:
 

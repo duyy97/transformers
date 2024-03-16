@@ -62,7 +62,7 @@ _CONFIG_FOR_DOC = "FNetConfig"
 FNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/fnet-base",
     "google/fnet-large",
-    # See all FNet models at https://hf-mirror.com/models?filter=fnet
+    # See all FNet models at https://huggingface.co/models?filter=fnet
 ]
 
 

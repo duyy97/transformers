@@ -130,7 +130,7 @@ class ModelCard:
         Parameters:
             pretrained_model_name_or_path: either:
 
-                - a string, the *model id* of a pretrained model card hosted inside a model repo on hf-mirror.com.
+                - a string, the *model id* of a pretrained model card hosted inside a model repo on huggingface.co.
                 - a path to a *directory* containing a model card file saved using the [`~ModelCard.save_pretrained`]
                   method, e.g.: `./my_model_directory/`.
                 - a path or url to a saved model card JSON *file*, e.g.: `./my_model_directory/modelcard.json`.
@@ -160,7 +160,7 @@ class ModelCard:
         Examples:
 
         ```python
-        # Download model card from hf-mirror.com and cache.
+        # Download model card from huggingface.co and cache.
         modelcard = ModelCard.from_pretrained("google-bert/bert-base-uncased")
         # Model card was saved using *save_pretrained('./test/saved_model/')*
         modelcard = ModelCard.from_pretrained("./test/saved_model/")
@@ -486,7 +486,7 @@ class TrainingSummary:
         else:
             model_card += (
                 "This model is a fine-tuned version of"
-                f" [{self.finetuned_from}](https://hf-mirror.com/{self.finetuned_from}) on "
+                f" [{self.finetuned_from}](https://huggingface.co/{self.finetuned_from}) on "
             )
 
         if self.dataset is None:

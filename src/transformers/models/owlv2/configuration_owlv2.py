@@ -28,7 +28,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 OWLV2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/owlv2-base-patch16": "https://hf-mirror.com/google/owlv2-base-patch16/resolve/main/config.json",
+    "google/owlv2-base-patch16": "https://huggingface.co/google/owlv2-base-patch16/resolve/main/config.json",
 }
 
 
@@ -38,7 +38,7 @@ class Owlv2TextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`Owlv2TextModel`]. It is used to instantiate an
     Owlv2 text encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Owlv2
-    [google/owlv2-base-patch16](https://hf-mirror.com/google/owlv2-base-patch16) architecture.
+    [google/owlv2-base-patch16](https://huggingface.co/google/owlv2-base-patch16) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -152,7 +152,7 @@ class Owlv2VisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`Owlv2VisionModel`]. It is used to instantiate
     an OWLv2 image encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the OWLv2
-    [google/owlv2-base-patch16](https://hf-mirror.com/google/owlv2-base-patch16) architecture.
+    [google/owlv2-base-patch16](https://huggingface.co/google/owlv2-base-patch16) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -258,7 +258,7 @@ class Owlv2Config(PretrainedConfig):
     [`Owlv2Config`] is the configuration class to store the configuration of an [`Owlv2Model`]. It is used to
     instantiate an OWLv2 model according to the specified arguments, defining the text model and vision model
     configs. Instantiating a configuration with the defaults will yield a similar configuration to that of the OWLv2
-    [google/owlv2-base-patch16](https://hf-mirror.com/google/owlv2-base-patch16) architecture.
+    [google/owlv2-base-patch16](https://huggingface.co/google/owlv2-base-patch16) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

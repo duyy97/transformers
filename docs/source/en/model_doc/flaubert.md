@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # FlauBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=flaubert">
+<a href="https://huggingface.co/models?filter=flaubert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-flaubert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/flaubert_small_cased">
+<a href="https://huggingface.co/spaces/docs-demos/flaubert_small_cased">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -45,7 +45,7 @@ time they outperform other pretraining approaches. Different versions of FlauBER
 protocol for the downstream tasks, called FLUE (French Language Understanding Evaluation), are shared to the research
 community for further reproducible experiments in French NLP.*
 
-This model was contributed by [formiel](https://hf-mirror.com/formiel). The original code can be found [here](https://github.com/getalp/Flaubert).
+This model was contributed by [formiel](https://huggingface.co/formiel). The original code can be found [here](https://github.com/getalp/Flaubert).
 
 Tips:
 - Like RoBERTa, without the sentence ordering prediction (so just trained on the MLM objective).

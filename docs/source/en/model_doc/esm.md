@@ -76,11 +76,11 @@ proteins in practical timescales.*
 
 The original code can be found [here](https://github.com/facebookresearch/esm) and was
 was developed by the Fundamental AI Research team at Meta AI.
-ESM-1b, ESM-1v and ESM-2 were contributed to huggingface by [jasonliu](https://hf-mirror.com/jasonliu)
-and [Matt](https://hf-mirror.com/Rocketknight1).
+ESM-1b, ESM-1v and ESM-2 were contributed to huggingface by [jasonliu](https://huggingface.co/jasonliu)
+and [Matt](https://huggingface.co/Rocketknight1).
 
-ESMFold was contributed to huggingface by [Matt](https://hf-mirror.com/Rocketknight1) and
-[Sylvain](https://hf-mirror.com/sgugger), with a big thank you to Nikita Smetanin, Roshan Rao and Tom Sercu for their
+ESMFold was contributed to huggingface by [Matt](https://huggingface.co/Rocketknight1) and
+[Sylvain](https://huggingface.co/sgugger), with a big thank you to Nikita Smetanin, Roshan Rao and Tom Sercu for their
 help throughout the process!
 
 ## Usage tips

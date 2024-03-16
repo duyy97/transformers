@@ -33,12 +33,12 @@ application scenarios. Our extensive experiments empirically validate our techni
 to most architectures. Overall, LeViT significantly outperforms existing convnets and vision transformers with respect
 to the speed/accuracy tradeoff. For example, at 80% ImageNet top-1 accuracy, LeViT is 5 times faster than EfficientNet on CPU. *
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/levit_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/levit_architecture.png"
 alt="drawing" width="600"/>
 
 <small> LeViT Architecture. Taken from the <a href="https://arxiv.org/abs/2104.01136">original paper</a>.</small>
 
-This model was contributed by [anugunj](https://hf-mirror.com/anugunj). The original code can be found [here](https://github.com/facebookresearch/LeViT).
+This model was contributed by [anugunj](https://huggingface.co/anugunj). The original code can be found [here](https://github.com/facebookresearch/LeViT).
 
 ## Usage tips
 
@@ -51,7 +51,7 @@ This model was contributed by [anugunj](https://hf-mirror.com/anugunj). The orig
   one takes the average prediction between both heads as final prediction. (2) is also called "fine-tuning with distillation",
   because one relies on a teacher that has already been fine-tuned on the downstream dataset. In terms of models, (1) corresponds
   to [`LevitForImageClassification`] and (2) corresponds to [`LevitForImageClassificationWithTeacher`].
-- All released checkpoints were pre-trained and fine-tuned on  [ImageNet-1k](https://hf-mirror.com/datasets/imagenet-1k)
+- All released checkpoints were pre-trained and fine-tuned on  [ImageNet-1k](https://huggingface.co/datasets/imagenet-1k)
   (also referred to as ILSVRC 2012, a collection of 1.3 million images and 1,000 classes). only. No external data was used. This is in
   contrast with the original ViT model, which used external data like the JFT-300M dataset/Imagenet-21k for
   pre-training.

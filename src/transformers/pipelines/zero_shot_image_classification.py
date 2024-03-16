@@ -42,13 +42,13 @@ class ZeroShotImageClassificationPipeline(Pipeline):
 
     >>> classifier = pipeline(model="google/siglip-so400m-patch14-384")
     >>> classifier(
-    ...     "https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png",
+    ...     "https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png",
     ...     candidate_labels=["animals", "humans", "landscape"],
     ... )
     [{'score': 0.965, 'label': 'animals'}, {'score': 0.03, 'label': 'humans'}, {'score': 0.005, 'label': 'landscape'}]
 
     >>> classifier(
-    ...     "https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png",
+    ...     "https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png",
     ...     candidate_labels=["black and white", "photorealist", "painting"],
     ... )
     [{'score': 0.996, 'label': 'black and white'}, {'score': 0.003, 'label': 'photorealist'}, {'score': 0.0, 'label': 'painting'}]
@@ -60,7 +60,7 @@ class ZeroShotImageClassificationPipeline(Pipeline):
     `"zero-shot-image-classification"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=zero-shot-image-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=zero-shot-image-classification).
     """
 
     def __init__(self, **kwargs):

@@ -26,8 +26,8 @@ from ...utils import TensorType, is_torch_available, logging
 logger = logging.get_logger(__name__)
 
 MBART_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/mbart-large-cc25": "https://hf-mirror.com/facebook/mbart-large-cc25/resolve/main/config.json",
-    # See all MBART models at https://hf-mirror.com/models?filter=mbart
+    "facebook/mbart-large-cc25": "https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json",
+    # See all MBART models at https://huggingface.co/models?filter=mbart
 }
 
 
@@ -36,7 +36,7 @@ class MBartConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MBartModel`]. It is used to instantiate an MBART
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the MBART
-    [facebook/mbart-large-cc25](https://hf-mirror.com/facebook/mbart-large-cc25) architecture.
+    [facebook/mbart-large-cc25](https://huggingface.co/facebook/mbart-large-cc25) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -16,7 +16,7 @@
 Fine-tuning a 🤗 Transformers model for image classification.
 
 Here is the full list of checkpoints on the hub that can be fine-tuned by this script:
-https://hf-mirror.com/models?filter=image-classification
+https://huggingface.co/models?filter=image-classification
 """
 
 import json
@@ -142,7 +142,7 @@ class ModelArguments:
 
     model_name_or_path: str = field(
         default="google/vit-base-patch16-224-in21k",
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"},
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"},
     )
     model_type: Optional[str] = field(
         default=None,
@@ -317,7 +317,7 @@ def main():
             task="image-classification",
         )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     # Prepare label mappings.
     # We'll include these in the model's config to get human readable labels in the Inference API.
@@ -500,8 +500,8 @@ def main():
             # yourself if you use this method, whereas they are automatically inferred from the model input names when
             # using model.prepare_tf_dataset()
             # For more info see the docs:
-            # https://hf-mirror.com/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
-            # https://hf-mirror.com/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
+            # https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
+            # https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
             train_dataset = model.prepare_tf_dataset(
                 train_dataset,
                 shuffle=True,

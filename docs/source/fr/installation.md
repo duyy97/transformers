@@ -175,7 +175,7 @@ Les modèles pré-entraînés sont téléchargés et mis en cache localement dan
 
 <Tip>
 
-Ajoutez [🤗 Datasets](https://hf-mirror.com/docs/datasets/) à votre processus d'entraînement hors ligne en définissant la variable d'environnement `HF_DATASETS_OFFLINE=1`.
+Ajoutez [🤗 Datasets](https://huggingface.co/docs/datasets/) à votre processus d'entraînement hors ligne en définissant la variable d'environnement `HF_DATASETS_OFFLINE=1`.
 
 </Tip>
 
@@ -198,9 +198,9 @@ model = T5Model.from_pretrained("./path/to/local/directory", local_files_only=Tr
 
 Une autre option pour utiliser 🤗 Transformers hors ligne est de télécharger les fichiers à l'avance, puis d'utiliser les chemins locaux lorsque vous en avez besoin en mode hors ligne. Il existe trois façons de faire cela :
 
-  * Téléchargez un fichier via l'interface utilisateur sur le [Model Hub](https://hf-mirror.com/models) en cliquant sur l'icône ↓.
+  * Téléchargez un fichier via l'interface utilisateur sur le [Model Hub](https://huggingface.co/models) en cliquant sur l'icône ↓.
 
-    ![download-icon](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
+    ![download-icon](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/download-icon.png)
 
   * Utilisez les fonctions [`PreTrainedModel.from_pretrained`] et [`PreTrainedModel.save_pretrained`] :
 
@@ -235,7 +235,7 @@ Une autre option pour utiliser 🤗 Transformers hors ligne est de télécharger
     python -m pip install huggingface_hub
     ```
 
-    2. Utilisez la fonction [`hf_hub_download`](https://hf-mirror.com/docs/hub/adding-a-library#download-files-from-the-hub) pour télécharger un fichier vers un chemin de votre choix.  Par exemple, la commande suivante télécharge le fichier `config.json` du modèle [T0](https://hf-mirror.com/bigscience/T0_3B) vers le chemin de votre choix :
+    2. Utilisez la fonction [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) pour télécharger un fichier vers un chemin de votre choix.  Par exemple, la commande suivante télécharge le fichier `config.json` du modèle [T0](https://huggingface.co/bigscience/T0_3B) vers le chemin de votre choix :
 
     ```py
     >>> from huggingface_hub import hf_hub_download
@@ -253,6 +253,6 @@ Une fois que votre fichier est téléchargé et caché localement, spécifiez so
 
 <Tip>
 
-Consultez la section [How to download files from the Hub (Comment télécharger des fichiers depuis le Hub)](https://hf-mirror.com/docs/hub/how-to-downstream) pour plus de détails sur le téléchargement de fichiers stockés sur le Hub.
+Consultez la section [How to download files from the Hub (Comment télécharger des fichiers depuis le Hub)](https://huggingface.co/docs/hub/how-to-downstream) pour plus de détails sur le téléchargement de fichiers stockés sur le Hub.
 
 </Tip>

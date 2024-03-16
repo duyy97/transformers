@@ -41,7 +41,7 @@ all tokens and this process is symmetric: all other tokens have access to those 
 their local window). This is shown in Figure 2d of the paper, see below for a sample attention mask:
 
 <div class="flex justify-center">
-    <img scale="50 %" align="center" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
+    <img scale="50 %" align="center" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
 </div>
 
 Using those attention matrices with less parameters then allows the model to have inputs having a bigger sequence

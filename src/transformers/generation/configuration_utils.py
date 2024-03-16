@@ -88,7 +88,7 @@ class GenerationConfig(PushToHubMixin):
     <Tip>
 
     A large number of these flags control the logits or the stopping criteria of the generation. Make sure you check
-    the [generate-related classes](https://hf-mirror.com/docs/transformers/internal/generation_utils) for a full
+    the [generate-related classes](https://huggingface.co/docs/transformers/internal/generation_utils) for a full
     description of the possible manipulations, as well as examples of their usage.
 
     </Tip>
@@ -725,7 +725,7 @@ class GenerationConfig(PushToHubMixin):
                 This can be either:
 
                 - a string, the *model id* of a pretrained model configuration hosted inside a model repo on
-                  hf-mirror.com.
+                  huggingface.co.
                 - a path to a *directory* containing a configuration file saved using the
                   [`~GenerationConfig.save_pretrained`] method, e.g., `./my_model_directory/`.
             config_file_name (`str` or `os.PathLike`, *optional*, defaults to `"generation_config.json"`):
@@ -747,7 +747,7 @@ class GenerationConfig(PushToHubMixin):
                 the token generated when running `huggingface-cli login` (stored in `~/.huggingface`).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
                 <Tip>
@@ -763,7 +763,7 @@ class GenerationConfig(PushToHubMixin):
                 dictionary consisting of the key/value pairs whose keys are not configuration attributes: i.e., the
                 part of `kwargs` which has not been used to update `config` and is otherwise ignored.
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
             kwargs (`Dict[str, Any]`, *optional*):
                 The values in kwargs of any keys which are configuration attributes will be used to override the loaded
@@ -778,7 +778,7 @@ class GenerationConfig(PushToHubMixin):
         ```python
         >>> from transformers import GenerationConfig
 
-        >>> # Download configuration from hf-mirror.com and cache.
+        >>> # Download configuration from huggingface.co and cache.
         >>> generation_config = GenerationConfig.from_pretrained("openai-community/gpt2")
 
         >>> # E.g. config was saved using *save_pretrained('./test/saved_model/')*
@@ -863,7 +863,7 @@ class GenerationConfig(PushToHubMixin):
                 # For any other exception, we throw a generic error.
                 raise EnvironmentError(
                     f"Can't load the configuration of '{pretrained_model_name}'. If you were trying to load it"
-                    " from 'https://hf-mirror.com/models', make sure you don't have a local directory with the same"
+                    " from 'https://huggingface.co/models', make sure you don't have a local directory with the same"
                     f" name. Otherwise, make sure '{pretrained_model_name}' is the correct path to a directory"
                     f" containing a {configuration_file} file"
                 )

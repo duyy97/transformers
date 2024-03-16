@@ -35,7 +35,7 @@ data and transferred to multiple mid-sized or small image recognition benchmarks
 Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring
 substantially fewer computational resources to train.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> ViT architecture. Taken from the <a href="https://arxiv.org/abs/2010.11929">original paper.</a> </small>
@@ -53,13 +53,13 @@ Following the original Vision Transformer, some follow-up works have been made:
 
 - DINO (a method for self-supervised training of Vision Transformers) by Facebook AI. Vision Transformers trained using
   the DINO method show very interesting properties not seen with convolutional models. They are capable of segmenting
-  objects, without having ever been trained to do so. DINO checkpoints can be found on the [hub](https://hf-mirror.com/models?other=dino).
+  objects, without having ever been trained to do so. DINO checkpoints can be found on the [hub](https://huggingface.co/models?other=dino).
 
 - [MAE](vit_mae) (Masked Autoencoders) by Facebook AI. By pre-training Vision Transformers to reconstruct pixel values for a high portion
   (75%) of masked patches (using an asymmetric encoder-decoder architecture), the authors show that this simple method outperforms
   supervised pre-training after fine-tuning.
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code (written in JAX) can be
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code (written in JAX) can be
 found [here](https://github.com/google-research/vision_transformer).
 
 Note that we converted the weights from Ross Wightman's [timm library](https://github.com/rwightman/pytorch-image-models), 
@@ -75,7 +75,7 @@ who already converted the weights from JAX to PyTorch. Credits go to him!
   [`ViTImageProcessor`] to resize (or rescale) and normalize images for the model.
 - Both the patch resolution and image resolution used during pre-training or fine-tuning are reflected in the name of
   each checkpoint. For example, `google/vit-base-patch16-224` refers to a base-sized architecture with patch
-  resolution of 16x16 and fine-tuning resolution of 224x224. All checkpoints can be found on the [hub](https://hf-mirror.com/models?search=vit).
+  resolution of 16x16 and fine-tuning resolution of 224x224. All checkpoints can be found on the [hub](https://huggingface.co/models?search=vit).
 - The available checkpoints are either (1) pre-trained on [ImageNet-21k](http://www.image-net.org/) (a collection of
   14 million images and 21k classes) only, or (2) also fine-tuned on [ImageNet](http://www.image-net.org/challenges/LSVRC/2012/) (also referred to as ILSVRC 2012, a collection of 1.3 million
   images and 1,000 classes).
@@ -96,7 +96,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 `ViTForImageClassification` is supported by:
 <PipelineTag pipeline="image-classification"/>
 
-- A blog post on how to [Fine-Tune ViT for Image Classification with Hugging Face Transformers](https://hf-mirror.com/blog/fine-tune-vit)
+- A blog post on how to [Fine-Tune ViT for Image Classification with Hugging Face Transformers](https://huggingface.co/blog/fine-tune-vit)
 - A blog post on [Image Classification with Hugging Face Transformers and `Keras`](https://www.philschmid.de/image-classification-huggingface-transformers-keras)
 - A notebook on [Fine-tuning for Image Classification with Hugging Face Transformers](https://github.com/huggingface/notebooks/blob/main/examples/image_classification.ipynb)
 - A notebook on how to [Fine-tune the Vision Transformer on CIFAR-10 with the Hugging Face Trainer](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/VisionTransformer/Fine_tuning_the_Vision_Transformer_on_CIFAR_10_with_the_%F0%9F%A4%97_Trainer.ipynb)
@@ -112,9 +112,9 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 🚀 Deploy
 
-- A blog post on [Deploying Tensorflow Vision Models in Hugging Face with TF Serving](https://hf-mirror.com/blog/tf-serving-vision)
-- A blog post on [Deploying Hugging Face ViT on Vertex AI](https://hf-mirror.com/blog/deploy-vertex-ai)
-- A blog post on [Deploying Hugging Face ViT on Kubernetes with TF Serving](https://hf-mirror.com/blog/deploy-tfserving-kubernetes)
+- A blog post on [Deploying Tensorflow Vision Models in Hugging Face with TF Serving](https://huggingface.co/blog/tf-serving-vision)
+- A blog post on [Deploying Hugging Face ViT on Vertex AI](https://huggingface.co/blog/deploy-vertex-ai)
+- A blog post on [Deploying Hugging Face ViT on Kubernetes with TF Serving](https://huggingface.co/blog/deploy-tfserving-kubernetes)
 
 ## ViTConfig
 

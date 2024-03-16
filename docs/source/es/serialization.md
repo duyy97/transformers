@@ -127,7 +127,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -m MODEL, --model MODEL
-                        Model ID on hf-mirror.com or path on disk to load model from.
+                        Model ID on huggingface.co or path on disk to load model from.
   --feature {causal-lm, ...}
                         The type of features to export the model with.
   --opset OPSET         ONNX opset version to export the model with.
@@ -185,7 +185,7 @@ echando un vistazo a la configuración ONNX de cada modelo. Por ejemplo, para Di
 
 El proceso es idéntico para los checkpoints de TensorFlow en Hub. 
 Por ejemplo, podemos exportar un checkpoint puro de TensorFlow desde 
-[Keras](https://hf-mirror.com/keras-io) de la siguiente manera:
+[Keras](https://huggingface.co/keras-io) de la siguiente manera:
 
 ```bash
 python -m transformers.onnx --model=keras-io/transformers-qa onnx/
@@ -629,9 +629,9 @@ o [TensorFlow](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examp
 #### Implicaciones
 
 Los modelos Transformers basados en la arquitectura 
-[BERT (Representaciones de _Enconder_ bidireccional de Transformers)](https://hf-mirror.com/docs/transformers/main/model_doc/bert), 
-o sus variantes, como [distilBERT](https://hf-mirror.com/docs/transformers/main/model_doc/distilbert) y 
-[roBERTa](https://hf-mirror.com/docs/transformers/main/model_doc/roberta), se ejecutarán mejor en Inf1 para tareas no 
+[BERT (Representaciones de _Enconder_ bidireccional de Transformers)](https://huggingface.co/docs/transformers/main/model_doc/bert), 
+o sus variantes, como [distilBERT](https://huggingface.co/docs/transformers/main/model_doc/distilbert) y 
+[roBERTa](https://huggingface.co/docs/transformers/main/model_doc/roberta), se ejecutarán mejor en Inf1 para tareas no 
 generativas, como la respuesta extractiva de preguntas, la clasificación de secuencias y la clasificación de tokens.
 Como alternativa, las tareas de generación de texto se pueden adaptar para ejecutarse en Inf1, según este 
 [tutorial de AWS Neuron MarianMT](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examples/pytorch/transformers-marianmt.html).
@@ -647,7 +647,7 @@ que viene preconfigurado en [AWS Deep Learning AMI](https://docs.aws.amazon.com/
 
 #### Convertir un modelo a AWS Neuron
 
-Con el mismo script usado en [Uso de TorchScript en Python](https://hf-mirror.com/docs/transformers/main/es/serialization#using-torchscript-in-python)
+Con el mismo script usado en [Uso de TorchScript en Python](https://huggingface.co/docs/transformers/main/es/serialization#using-torchscript-in-python)
 para rastrear un "BertModel", puedes importar la extensión del _framework_ `torch.neuron` para acceder a los componentes 
 del SDK de Neuron a través de una API de Python.
 

@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 VIDEOMAE_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "MCG-NJU/videomae-base": "https://hf-mirror.com/MCG-NJU/videomae-base/resolve/main/config.json",
+    "MCG-NJU/videomae-base": "https://huggingface.co/MCG-NJU/videomae-base/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class VideoMAEConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`VideoMAEModel`]. It is used to instantiate a
     VideoMAE model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the VideoMAE
-    [MCG-NJU/videomae-base](https://hf-mirror.com/MCG-NJU/videomae-base) architecture.
+    [MCG-NJU/videomae-base](https://huggingface.co/MCG-NJU/videomae-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

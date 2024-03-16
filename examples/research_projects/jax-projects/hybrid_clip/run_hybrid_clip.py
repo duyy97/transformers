@@ -19,8 +19,8 @@ Training a CLIP like dual encoder models using text and vision encoders in the l
 The script can be used to train CLIP like models for languages other than english by using
 a text encoder pre-trained in the desired language. Currently this script support the following vision
 and text models:
-Vision models: ViT(https://hf-mirror.com/models?filter=vit), CLIP (https://hf-mirror.com/models?filter=clip)
-Text models: BERT, ROBERTa (https://hf-mirror.com/models?filter=fill-mask)
+Vision models: ViT(https://huggingface.co/models?filter=vit), CLIP (https://huggingface.co/models?filter=clip)
+Text models: BERT, ROBERTa (https://huggingface.co/models?filter=fill-mask)
 """
 
 import json

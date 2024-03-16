@@ -18,7 +18,7 @@ specific language governing permissions and limitations under the License.
 
 最後の2つのチュートリアルでは、PyTorch、Keras、および🤗 Accelerateを使用してモデルをファインチューニングする方法を示しました。次のステップは、モデルをコミュニティと共有することです！Hugging Faceでは、知識とリソースを公開的に共有し、人工知能を誰にでも提供することを信じています。他の人々が時間とリソースを節約できるように、モデルをコミュニティと共有することを検討することをお勧めします。
 
-このチュートリアルでは、訓練済みまたはファインチューニングされたモデルを[Model Hub](https://hf-mirror.com/models)に共有する2つの方法を学びます：
+このチュートリアルでは、訓練済みまたはファインチューニングされたモデルを[Model Hub](https://huggingface.co/models)に共有する2つの方法を学びます：
 
 - プログラムでファイルをHubにプッシュする。
 - ウェブインターフェースを使用してファイルをHubにドラッグアンドドロップする。
@@ -29,7 +29,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 <Tip>
 
-コミュニティとモデルを共有するには、[hf-mirror.com](https://hf-mirror.com/join)でアカウントが必要です。既存の組織に参加したり、新しい組織を作成したりすることもできます。
+コミュニティとモデルを共有するには、[huggingface.co](https://huggingface.co/join)でアカウントが必要です。既存の組織に参加したり、新しい組織を作成したりすることもできます。
 
 </Tip>
 
@@ -49,7 +49,7 @@ Model Hubの組み込みバージョニングはgitおよび[git-lfs](https://gi
 
 ファイルはリポジトリ内で簡単に編集でき、コミット履歴と差分を表示できます：
 
-![vis_diff](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
+![vis_diff](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/vis_diff.png)
 
 ## Set Up
 
@@ -59,14 +59,14 @@ Model Hubの組み込みバージョニングはgitおよび[git-lfs](https://gi
 huggingface-cli login
 ```
 
-JupyterやColaboratoryのようなノートブックを使用している場合、[`huggingface_hub`](https://hf-mirror.com/docs/hub/adding-a-library)ライブラリがインストールされていることを確認してください。
+JupyterやColaboratoryのようなノートブックを使用している場合、[`huggingface_hub`](https://huggingface.co/docs/hub/adding-a-library)ライブラリがインストールされていることを確認してください。
 このライブラリを使用すると、Hubとプログラム的に対話できます。
 
 ```bash
 pip install huggingface_hub
 ```
 
-次に、`notebook_login`を使用してHubにサインインし、[こちらのリンク](https://hf-mirror.com/settings/token)にアクセスしてログインに使用するトークンを生成します：
+次に、`notebook_login`を使用してHubにサインインし、[こちらのリンク](https://huggingface.co/settings/token)にアクセスしてログインに使用するトークンを生成します：
 
 ```python
 >>> from huggingface_hub import notebook_login
@@ -228,13 +228,13 @@ Pass your training arguments as usual to [`Trainer`]:
 
 Hugging Faceプロフィールに移動すると、新しく作成したモデルリポジトリが表示されるはずです。**Files**タブをクリックすると、リポジトリにアップロードしたすべてのファイルが表示されます。
 
-リポジトリにファイルを作成およびアップロードする方法の詳細については、Hubドキュメンテーション[こちら](https://hf-mirror.com/docs/hub/how-to-upstream)を参照してください。
+リポジトリにファイルを作成およびアップロードする方法の詳細については、Hubドキュメンテーション[こちら](https://huggingface.co/docs/hub/how-to-upstream)を参照してください。
 
 ## Upload with the web interface
 
-コードを書かずにモデルをアップロードしたいユーザーは、Hubのウェブインターフェースを使用してモデルをアップロードできます。[hf-mirror.com/new](https://hf-mirror.com/new)を訪れて新しいリポジトリを作成します：
+コードを書かずにモデルをアップロードしたいユーザーは、Hubのウェブインターフェースを使用してモデルをアップロードできます。[huggingface.co/new](https://huggingface.co/new)を訪れて新しいリポジトリを作成します：
 
-![new_model_repo](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
+![new_model_repo](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/new_model_repo.png)
 
 ここから、モデルに関するいくつかの情報を追加します：
 
@@ -245,7 +245,7 @@ Hugging Faceプロフィールに移動すると、新しく作成したモデ�
 
 その後、**Files**タブをクリックし、**Add file**ボタンをクリックしてリポジトリに新しいファイルをアップロードします。次に、ファイルをドラッグアンドドロップしてアップロードし、コミットメッセージを追加します。
 
-![upload_file](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
+![upload_file](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/upload_file.png)
 
 ## Add a model card
 
@@ -254,7 +254,7 @@ Hugging Faceプロフィールに移動すると、新しく作成したモデ�
 * 手動で`README.md`ファイルを作成およびアップロードする。
 * モデルリポジトリ内の**Edit model card**ボタンをクリックする。
 
-モデルカードに含めるべき情報の例については、DistilBert [モデルカード](https://hf-mirror.com/distilbert/distilbert-base-uncased)をご覧ください。`README.md`ファイルで制御できる他のオプション、例えばモデルの炭素フットプリントやウィジェットの例などについての詳細は、[こちらのドキュメンテーション](https://hf-mirror.com/docs/hub/models-cards)を参照してください。
+モデルカードに含めるべき情報の例については、DistilBert [モデルカード](https://huggingface.co/distilbert/distilbert-base-uncased)をご覧ください。`README.md`ファイルで制御できる他のオプション、例えばモデルの炭素フットプリントやウィジェットの例などについての詳細は、[こちらのドキュメンテーション](https://huggingface.co/docs/hub/models-cards)を参照してください。
 
 
 

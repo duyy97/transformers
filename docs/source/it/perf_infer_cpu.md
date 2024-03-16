@@ -19,7 +19,7 @@ Questa guida si concentra sull'inferenza di modelli di grandi dimensioni in modo
 
 ## `BetterTransformer` per inferenza più rapida
 
-Abbiamo integrato di recente `BetterTransformer` per fare inferenza più rapidamente con modelli per testi, immagini e audio. Visualizza la documentazione sull'integrazione [qui](https://hf-mirror.com/docs/optimum/bettertransformer/overview) per maggiori dettagli.
+Abbiamo integrato di recente `BetterTransformer` per fare inferenza più rapidamente con modelli per testi, immagini e audio. Visualizza la documentazione sull'integrazione [qui](https://huggingface.co/docs/optimum/bettertransformer/overview) per maggiori dettagli.
 
 ## PyTorch JIT-mode (TorchScript)
 

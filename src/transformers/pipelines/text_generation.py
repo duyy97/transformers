@@ -63,7 +63,7 @@ class TextGenerationPipeline(Pipeline):
 
     The models that this pipeline can use are models that have been trained with an autoregressive language modeling
     objective, which includes the uni-directional models in the library (e.g. openai-community/gpt2). See the list of available models
-    on [hf-mirror.com/models](https://hf-mirror.com/models?filter=text-generation).
+    on [huggingface.co/models](https://huggingface.co/models?filter=text-generation).
     """
 
     # Prefix text to help Transformer-XL and XLNet with short prompts as proposed by Aman Rusia

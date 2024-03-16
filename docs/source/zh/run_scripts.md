@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 
 示例脚本可能无法在初始配置下直接解决每个问题，您可能需要根据要解决的问题调整脚本。为了帮助您，大多数脚本都完全暴露了数据预处理的方式，允许您根据需要对其进行编辑。
 
-如果您想在示例脚本中实现任何功能，请在[论坛](https://discuss.hf-mirror.com/)或[issue](https://github.com/huggingface/transformers/issues)上讨论，然后再提交Pull Request。虽然我们欢迎修复错误，但不太可能合并添加更多功能的Pull Request，因为这会降低可读性。
+如果您想在示例脚本中实现任何功能，请在[论坛](https://discuss.huggingface.co/)或[issue](https://github.com/huggingface/transformers/issues)上讨论，然后再提交Pull Request。虽然我们欢迎修复错误，但不太可能合并添加更多功能的Pull Request，因为这会降低可读性。
 
 本指南将向您展示如何在[PyTorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization)和[TensorFlow](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization)中运行示例摘要训练脚本。除非另有说明，否则所有示例都可以在两个框架中工作。
 
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 <frameworkcontent>
 <pt>
 
-示例脚本从🤗 [Datasets](https://hf-mirror.com/docs/datasets/)库下载并预处理数据集。然后，脚本通过[Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer)使用支持摘要任务的架构对数据集进行微调。以下示例展示了如何在[CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail)数据集上微调[T5-small](https://hf-mirror.com/google-t5/t5-small)。由于T5模型的训练方式，它需要一个额外的`source_prefix`参数。这个提示让T5知道这是一个摘要任务。
+示例脚本从🤗 [Datasets](https://huggingface.co/docs/datasets/)库下载并预处理数据集。然后，脚本通过[Trainer](https://huggingface.co/docs/transformers/main_classes/trainer)使用支持摘要任务的架构对数据集进行微调。以下示例展示了如何在[CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail)数据集上微调[T5-small](https://huggingface.co/google-t5/t5-small)。由于T5模型的训练方式，它需要一个额外的`source_prefix`参数。这个提示让T5知道这是一个摘要任务。
 
 ```bash
 python examples/pytorch/summarization/run_summarization.py \
@@ -107,7 +107,7 @@ python examples/pytorch/summarization/run_summarization.py \
 </pt>
 <tf>
 
-示例脚本从  🤗 [Datasets](https://hf-mirror.com/docs/datasets/) 库下载并预处理数据集。然后，脚本使用 Keras 在支持摘要的架构上微调数据集。以下示例展示了如何在 [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) 数据集上微调 [T5-small](https://hf-mirror.com/google-t5/t5-small)。T5 模型由于训练方式需要额外的 `source_prefix` 参数。这个提示让 T5 知道这是一个摘要任务。
+示例脚本从  🤗 [Datasets](https://huggingface.co/docs/datasets/) 库下载并预处理数据集。然后，脚本使用 Keras 在支持摘要的架构上微调数据集。以下示例展示了如何在 [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) 数据集上微调 [T5-small](https://huggingface.co/google-t5/t5-small)。T5 模型由于训练方式需要额外的 `source_prefix` 参数。这个提示让 T5 知道这是一个摘要任务。
 
 ```bash
 python examples/tensorflow/summarization/run_summarization.py  \
@@ -126,7 +126,7 @@ python examples/tensorflow/summarization/run_summarization.py  \
 
 ## 分布式训练和混合精度
 
-[Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) 支持分布式训练和混合精度，这意味着你也可以在脚本中使用它。要启用这两个功能，可以做如下设置：
+[Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) 支持分布式训练和混合精度，这意味着你也可以在脚本中使用它。要启用这两个功能，可以做如下设置：
 
 - 添加 `fp16` 参数以启用混合精度。
 - 使用 `nproc_per_node` 参数设置使用的GPU数量。
@@ -196,7 +196,7 @@ python run_summarization.py  \
 
 ## 基于🤗 Accelerate运行脚本
 
-🤗 [Accelerate](https://hf-mirror.com/docs/accelerate) 是一个仅支持 PyTorch 的库，它提供了一种统一的方法来在不同类型的设置（仅 CPU、多个 GPU、多个TPU）上训练模型，同时保持对 PyTorch 训练循环的完全可见性。如果你还没有安装 🤗 Accelerate，请确保你已经安装了它：
+🤗 [Accelerate](https://huggingface.co/docs/accelerate) 是一个仅支持 PyTorch 的库，它提供了一种统一的方法来在不同类型的设置（仅 CPU、多个 GPU、多个TPU）上训练模型，同时保持对 PyTorch 训练循环的完全可见性。如果你还没有安装 🤗 Accelerate，请确保你已经安装了它：
 
 > 注意：由于 Accelerate 正在快速发展，因此必须安装 git 版本的 accelerate 来运行脚本。
 
@@ -328,7 +328,7 @@ python examples/pytorch/summarization/run_summarization.py
 
 ## 分享模型
 
-所有脚本都可以将您的最终模型上传到[Model Hub](https://hf-mirror.com/models)。在开始之前，请确保您已登录Hugging Face：
+所有脚本都可以将您的最终模型上传到[Model Hub](https://huggingface.co/models)。在开始之前，请确保您已登录Hugging Face：
 
 ```bash
 huggingface-cli login

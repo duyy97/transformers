@@ -79,14 +79,14 @@ image_processor = FuyuImageProcessor()
 processor = FuyuProcessor(image_processor=image_processor, tokenizer=tokenizer)
 text_prompt = "Generate a coco-style caption.\\n"
 
-bus_image_url = "https://hf-mirror.com/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
+bus_image_url = "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bus.png"
 bus_image_pil = Image.open(io.BytesIO(requests.get(bus_image_url).content))
 inputs_to_model = processor(text=text_prompt, images=bus_image_pil)
 
 
 ```
 
-This model was contributed by [Molbap](https://hf-mirror.com/Molbap).
+This model was contributed by [Molbap](https://huggingface.co/Molbap).
 The original code can be found [here](https://github.com/persimmon-ai-labs/adept-inference).
 
 - Fuyu uses a `sentencepiece` based tokenizer, with a `Unigram` model. It supports bytefallback, which is only available in `tokenizers==0.14.0` for the fast tokenizer.

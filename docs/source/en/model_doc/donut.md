@@ -26,12 +26,12 @@ The abstract from the paper is the following:
 
 *Understanding document images (e.g., invoices) is a core but challenging task since it requires complex functions such as reading text and a holistic understanding of the document. Current Visual Document Understanding (VDU) methods outsource the task of reading text to off-the-shelf Optical Character Recognition (OCR) engines and focus on the understanding task with the OCR outputs. Although such OCR-based approaches have shown promising performance, they suffer from 1) high computational costs for using OCR; 2) inflexibility of OCR models on languages or types of document; 3) OCR error propagation to the subsequent process. To address these issues, in this paper, we introduce a novel OCR-free VDU model named Donut, which stands for Document understanding transformer. As the first step in OCR-free VDU research, we propose a simple architecture (i.e., Transformer) with a pre-training objective (i.e., cross-entropy loss). Donut is conceptually simple yet effective. Through extensive experiments and analyses, we show a simple OCR-free VDU model, Donut, achieves state-of-the-art performances on various VDU tasks in terms of both speed and accuracy. In addition, we offer a synthetic data generator that helps the model pre-training to be flexible in various languages and domains.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/donut_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/donut_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> Donut high-level overview. Taken from the <a href="https://arxiv.org/abs/2111.15664">original paper</a>. </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found
 [here](https://github.com/clovaai/donut).
 
 ## Usage tips
@@ -182,7 +182,7 @@ into a single instance to both extract the input features and decode the predict
 {'question': 'When is the coffee break?', 'answer': '11-14 to 11:39 a.m.'}
 ```
 
-See the [model hub](https://hf-mirror.com/models?filter=donut) to look for Donut checkpoints.
+See the [model hub](https://huggingface.co/models?filter=donut) to look for Donut checkpoints.
 
 ## Training
 

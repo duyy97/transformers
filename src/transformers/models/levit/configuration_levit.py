@@ -27,8 +27,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 LEVIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/levit-128S": "https://hf-mirror.com/facebook/levit-128S/resolve/main/config.json",
-    # See all LeViT models at https://hf-mirror.com/models?filter=levit
+    "facebook/levit-128S": "https://huggingface.co/facebook/levit-128S/resolve/main/config.json",
+    # See all LeViT models at https://huggingface.co/models?filter=levit
 }
 
 
@@ -37,7 +37,7 @@ class LevitConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LevitModel`]. It is used to instantiate a LeViT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the LeViT
-    [facebook/levit-128S](https://hf-mirror.com/facebook/levit-128S) architecture.
+    [facebook/levit-128S](https://huggingface.co/facebook/levit-128S) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

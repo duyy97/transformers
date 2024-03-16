@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # 推理pipeline
 
-[`pipeline`] 让使用[Hub](https://hf-mirror.com/models)上的任何模型进行任何语言、计算机视觉、语音以及多模态任务的推理变得非常简单。即使您对特定的模态没有经验，或者不熟悉模型的源码，您仍然可以使用[`pipeline`]进行推理！本教程将教您：
+[`pipeline`] 让使用[Hub](https://huggingface.co/models)上的任何模型进行任何语言、计算机视觉、语音以及多模态任务的推理变得非常简单。即使您对特定的模态没有经验，或者不熟悉模型的源码，您仍然可以使用[`pipeline`]进行推理！本教程将教您：
 
 - 如何使用[`pipeline`] 进行推理。
 - 如何使用特定的`tokenizer`(分词器)或模型。
@@ -44,14 +44,14 @@ rendered properly in your Markdown viewer.
 
 
 ```py
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP LIVE UP THE TRUE MEANING OF ITS TREES'}
 ```
 
-您没有得到您期望的结果？可以在Hub上查看一些[最受欢迎的自动语音识别模型](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition&sort=trending) 
+您没有得到您期望的结果？可以在Hub上查看一些[最受欢迎的自动语音识别模型](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition&sort=trending) 
 ，看看是否可以获得更好的转录。
 
-让我们尝试来自 OpenAI 的[Whisper large-v2](https://hf-mirror.com/openai/whisper-large) 模型。Whisperb比Wav2Vec2晚2年发布，使用接近10倍的数据进行了训练。因此，它在大多数下游基准测试上击败了Wav2Vec2。
+让我们尝试来自 OpenAI 的[Whisper large-v2](https://huggingface.co/openai/whisper-large) 模型。Whisperb比Wav2Vec2晚2年发布，使用接近10倍的数据进行了训练。因此，它在大多数下游基准测试上击败了Wav2Vec2。
 它还具有预测标点和大小写的附加优势，而Wav2Vec2则无法实现这些功能。
 
 让我们在这里尝试一下，看看它的表现如何：
@@ -59,11 +59,11 @@ rendered properly in your Markdown viewer.
 
 ```py
 >>> transcriber = pipeline(model="openai/whisper-large-v2")
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
-现在这个结果看起来更准确了！要进行深入的Wav2Vec2与Whisper比较，请参阅[音频变换器课程](https://hf-mirror.com/learn/audio-course/chapter5/asr_models)。
+现在这个结果看起来更准确了！要进行深入的Wav2Vec2与Whisper比较，请参阅[音频变换器课程](https://huggingface.co/learn/audio-course/chapter5/asr_models)。
 我们鼓励您在 Hub 上查看不同语言的模型，以及专业领域的模型等。您可以在Hub上直接查看并比较模型的结果，以确定是否适合或处理边缘情况是否比其他模型更好。如果您没有找到适用于您的用例的模型，您始终可以[训练](training)自己的模型！
 
 如果您有多个输入，您可以将输入作为列表传递：
@@ -72,8 +72,8 @@ rendered properly in your Markdown viewer.
 ```py
 transcriber(
     [
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac",
     ]
 )
 ```
@@ -108,7 +108,7 @@ out = transcriber(...)  # This will go back to using `my_parameter=1`.
 transcriber = pipeline(model="openai/whisper-large-v2", device=0)
 ```
 
-如果模型对于单个GPU来说过于庞大，并且您正在使用PyTorch，您可以设置 `device_map="auto"` 以自动确定如何加载和存储模型权重。使用 `device_map` 参数需要安装🤗 [Accelerate](https://hf-mirror.com/docs/accelerate) 软件包：
+如果模型对于单个GPU来说过于庞大，并且您正在使用PyTorch，您可以设置 `device_map="auto"` 以自动确定如何加载和存储模型权重。使用 `device_map` 参数需要安装🤗 [Accelerate](https://huggingface.co/docs/accelerate) 软件包：
 
 
 ```bash
@@ -126,14 +126,14 @@ transcriber = pipeline(model="openai/whisper-large-v2", device_map="auto")
 
 ### 批量大小
 
-默认情况下，`pipelines`不会进行批量推理，原因在[这里](https://hf-mirror.com/docs/transformers/main_classes/pipelines#pipeline-batching)详细解释。因为批处理不一定更快，实际上在某些情况下可能会更慢。
+默认情况下，`pipelines`不会进行批量推理，原因在[这里](https://huggingface.co/docs/transformers/main_classes/pipelines#pipeline-batching)详细解释。因为批处理不一定更快，实际上在某些情况下可能会更慢。
 
 但如果在您的用例中起作用，您可以使用：
 
 
 ```py
 transcriber = pipeline(model="openai/whisper-large-v2", device=0, batch_size=2)
-audio_filenames = [f"https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/{i}.flac" for i in range(1, 5)]
+audio_filenames = [f"https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/{i}.flac" for i in range(1, 5)]
 texts = transcriber(audio_filenames)
 ```
 
@@ -148,7 +148,7 @@ texts = transcriber(audio_filenames)
 
 ```py
 >>> transcriber = pipeline(model="openai/whisper-large-v2", return_timestamps=True)
->>> transcriber("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.', 'chunks': [{'timestamp': (0.0, 11.88), 'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its'}, {'timestamp': (11.88, 12.38), 'text': ' creed.'}]}
 ```
 
@@ -158,7 +158,7 @@ texts = transcriber(audio_filenames)
 
 ```python
 >>> transcriber = pipeline(model="openai/whisper-large-v2", chunk_length_s=30, return_timestamps=True)
->>> transcriber("https://hf-mirror.com/datasets/sanchit-gandhi/librispeech_long/resolve/main/audio.wav")
+>>> transcriber("https://huggingface.co/datasets/sanchit-gandhi/librispeech_long/resolve/main/audio.wav")
 {'text': " Chapter 16. I might have told you of the beginning of this liaison in a few lines, but I wanted you to see every step by which we came.  I, too, agree to whatever Marguerite wished, Marguerite to be unable to live apart from me. It was the day after the evening...
 ```
 
@@ -215,13 +215,13 @@ for out in pipe(KeyDataset(dataset, "audio")):
 
 指定您的任务并将图像传递给分类器。图像可以是链接、本地路径或base64编码的图像。例如，下面显示的是哪种品种的猫？
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
@@ -250,7 +250,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 
 [`pipeline`] 支持多个模态。例如，视觉问题回答（VQA）任务结合了文本和图像。请随意使用您喜欢的任何图像链接和您想要问关于该图像的问题。图像可以是URL或图像的本地路径。
 
-例如，如果您使用这个[invoice image](https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)：
+例如，如果您使用这个[invoice image](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)：
 
 
 ```py
@@ -258,7 +258,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> vqa(
-...     image="https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
+...     image="https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
 ...     question="What is the invoice number?",
 ... )
 [{'score': 0.42515, 'answer': 'us-001', 'start': 16, 'end': 16}]

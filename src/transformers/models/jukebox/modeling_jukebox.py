@@ -36,7 +36,7 @@ logger = logging.get_logger(__name__)
 JUKEBOX_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai/jukebox-1b-lyrics",
     "openai/jukebox-5b-lyrics",
-    # See all Jukebox models at https://hf-mirror.com/models?filter=jukebox
+    # See all Jukebox models at https://huggingface.co/models?filter=jukebox
 ]
 
 

@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Distributed training with 🤗 Accelerate
 
-As models get bigger, parallelism has emerged as a strategy for training larger models on limited hardware and accelerating training speed by several orders of magnitude. At Hugging Face, we created the [🤗 Accelerate](https://hf-mirror.com/docs/accelerate) library to help users easily train a 🤗 Transformers model on any type of distributed setup, whether it is multiple GPU's on one machine or multiple GPU's across several machines. In this tutorial, learn how to customize your native PyTorch training loop to enable training in a distributed environment.
+As models get bigger, parallelism has emerged as a strategy for training larger models on limited hardware and accelerating training speed by several orders of magnitude. At Hugging Face, we created the [🤗 Accelerate](https://huggingface.co/docs/accelerate) library to help users easily train a 🤗 Transformers model on any type of distributed setup, whether it is multiple GPU's on one machine or multiple GPU's across several machines. In this tutorial, learn how to customize your native PyTorch training loop to enable training in a distributed environment.
 
 ## Setup
 
@@ -133,4 +133,4 @@ accelerate launch train.py
 >>> notebook_launcher(training_function)
 ```
 
-For more information about 🤗 Accelerate and its rich features, refer to the [documentation](https://hf-mirror.com/docs/accelerate).
+For more information about 🤗 Accelerate and its rich features, refer to the [documentation](https://huggingface.co/docs/accelerate).

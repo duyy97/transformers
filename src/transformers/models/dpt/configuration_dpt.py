@@ -25,8 +25,8 @@ from ..bit import BitConfig
 logger = logging.get_logger(__name__)
 
 DPT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "Intel/dpt-large": "https://hf-mirror.com/Intel/dpt-large/resolve/main/config.json",
-    # See all DPT models at https://hf-mirror.com/models?filter=dpt
+    "Intel/dpt-large": "https://huggingface.co/Intel/dpt-large/resolve/main/config.json",
+    # See all DPT models at https://huggingface.co/models?filter=dpt
 }
 
 
@@ -35,7 +35,7 @@ class DPTConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DPTModel`]. It is used to instantiate an DPT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the DPT
-    [Intel/dpt-large](https://hf-mirror.com/Intel/dpt-large) architecture.
+    [Intel/dpt-large](https://huggingface.co/Intel/dpt-large) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

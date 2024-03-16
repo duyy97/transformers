@@ -22,9 +22,9 @@ logger = logging.get_logger(__name__)
 
 TRAJECTORY_TRANSFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "CarlCochet/trajectory-transformer-halfcheetah-medium-v2": (
-        "https://hf-mirror.com/CarlCochet/trajectory-transformer-halfcheetah-medium-v2/resolve/main/config.json"
+        "https://huggingface.co/CarlCochet/trajectory-transformer-halfcheetah-medium-v2/resolve/main/config.json"
     ),
-    # See all TrajectoryTransformer models at https://hf-mirror.com/models?filter=trajectory_transformer
+    # See all TrajectoryTransformer models at https://huggingface.co/models?filter=trajectory_transformer
 }
 
 
@@ -34,7 +34,7 @@ class TrajectoryTransformerConfig(PretrainedConfig):
     instantiate an TrajectoryTransformer model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the
     TrajectoryTransformer
-    [CarlCochet/trajectory-transformer-halfcheetah-medium-v2](https://hf-mirror.com/CarlCochet/trajectory-transformer-halfcheetah-medium-v2)
+    [CarlCochet/trajectory-transformer-halfcheetah-medium-v2](https://huggingface.co/CarlCochet/trajectory-transformer-halfcheetah-medium-v2)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

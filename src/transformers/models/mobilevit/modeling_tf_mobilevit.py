@@ -68,7 +68,7 @@ TF_MOBILEVIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "apple/deeplabv3-mobilevit-small",
     "apple/deeplabv3-mobilevit-x-small",
     "apple/deeplabv3-mobilevit-xx-small",
-    # See all MobileViT models at https://hf-mirror.com/models?filter=mobilevit
+    # See all MobileViT models at https://huggingface.co/models?filter=mobilevit
 ]
 
 

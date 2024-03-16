@@ -66,7 +66,7 @@ _CONFIG_FOR_DOC = "{{cookiecutter.camelcase_modelname}}Config"
 
 TF_{{cookiecutter.uppercase_modelname}}_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "{{cookiecutter.checkpoint_identifier}}",
-    # See all {{cookiecutter.modelname}} models at https://hf-mirror.com/models?filter={{cookiecutter.lowercase_modelname}}
+    # See all {{cookiecutter.modelname}} models at https://huggingface.co/models?filter={{cookiecutter.lowercase_modelname}}
 ]
 
 

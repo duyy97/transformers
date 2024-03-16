@@ -45,7 +45,7 @@ Ein Sprachmodell, das für [causal language modeling](tasks/language_modeling) t
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
     ></video>
     <figcaption>"Forward pass of an LLM"</figcaption>
 </figure>
@@ -57,7 +57,7 @@ Ein wichtiger Aspekt der autoregressiven Generierung mit LLMs ist die Auswahl de
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
     ></video>
     <figcaption>"Die autoregressive Generierung wählt iterativ das nächste Token aus einer Wahrscheinlichkeitsverteilung aus, um Text zu erzeugen"</figcaption>
 </figure>
@@ -130,7 +130,7 @@ Es gibt viele [Generierungsstrategien](generation_strategies), und manchmal sind
 
 ### Generierte Ausgabe ist zu kurz/lang
 
-Wenn in der Datei [`~generation.GenerationConfig`] nichts angegeben ist, gibt `generate` standardmäßig bis zu 20 Token zurück. Wir empfehlen dringend, `max_new_tokens` in Ihrem `generate`-Aufruf manuell zu setzen, um die maximale Anzahl neuer Token zu kontrollieren, die zurückgegeben werden können. Beachten Sie, dass LLMs (genauer gesagt, [decoder-only models](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)) auch die Eingabeaufforderung als Teil der Ausgabe zurückgeben.
+Wenn in der Datei [`~generation.GenerationConfig`] nichts angegeben ist, gibt `generate` standardmäßig bis zu 20 Token zurück. Wir empfehlen dringend, `max_new_tokens` in Ihrem `generate`-Aufruf manuell zu setzen, um die maximale Anzahl neuer Token zu kontrollieren, die zurückgegeben werden können. Beachten Sie, dass LLMs (genauer gesagt, [decoder-only models](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)) auch die Eingabeaufforderung als Teil der Ausgabe zurückgeben.
 
 
 ```py
@@ -149,7 +149,7 @@ Wenn in der Datei [`~generation.GenerationConfig`] nichts angegeben ist, gibt `g
 
 ### Falscher Generierungsmodus
 
-Standardmäßig und sofern nicht in der Datei [`~generation.GenerationConfig`] angegeben, wählt `generate` bei jeder Iteration das wahrscheinlichste Token aus (gierige Dekodierung). Je nach Aufgabe kann dies unerwünscht sein; kreative Aufgaben wie Chatbots oder das Schreiben eines Aufsatzes profitieren vom Sampling. Andererseits profitieren Aufgaben, bei denen es auf die Eingabe ankommt, wie z.B. Audiotranskription oder Übersetzung, von der gierigen Dekodierung. Aktivieren Sie das Sampling mit `do_sample=True`. Mehr zu diesem Thema erfahren Sie in diesem [Blogbeitrag](https://hf-mirror.com/blog/how-to-generate).
+Standardmäßig und sofern nicht in der Datei [`~generation.GenerationConfig`] angegeben, wählt `generate` bei jeder Iteration das wahrscheinlichste Token aus (gierige Dekodierung). Je nach Aufgabe kann dies unerwünscht sein; kreative Aufgaben wie Chatbots oder das Schreiben eines Aufsatzes profitieren vom Sampling. Andererseits profitieren Aufgaben, bei denen es auf die Eingabe ankommt, wie z.B. Audiotranskription oder Übersetzung, von der gierigen Dekodierung. Aktivieren Sie das Sampling mit `do_sample=True`. Mehr zu diesem Thema erfahren Sie in diesem [Blogbeitrag](https://huggingface.co/blog/how-to-generate).
 
 ```py
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
@@ -171,7 +171,7 @@ Standardmäßig und sofern nicht in der Datei [`~generation.GenerationConfig`] a
 
 ### Falsche Auffüllseite
 
-LLMs sind [decoder-only](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)-Architekturen, d.h. sie iterieren weiter über Ihre Eingabeaufforderung. Wenn Ihre Eingaben nicht die gleiche Länge haben, müssen sie aufgefüllt werden. Da LLMs nicht darauf trainiert sind, mit aufgefüllten Token fortzufahren, muss Ihre Eingabe links aufgefüllt werden. Vergessen Sie auch nicht, die Aufmerksamkeitsmaske an generate zu übergeben!
+LLMs sind [decoder-only](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)-Architekturen, d.h. sie iterieren weiter über Ihre Eingabeaufforderung. Wenn Ihre Eingaben nicht die gleiche Länge haben, müssen sie aufgefüllt werden. Da LLMs nicht darauf trainiert sind, mit aufgefüllten Token fortzufahren, muss Ihre Eingabe links aufgefüllt werden. Vergessen Sie auch nicht, die Aufmerksamkeitsmaske an generate zu übergeben!
 
 ```py
 >>> # The tokenizer initialized above has right-padding active by default: the 1st sequence,
@@ -208,8 +208,8 @@ Während der Prozess der autoregressiven Generierung relativ einfach ist, kann d
 
 ### LLM-Ranglisten
 
-1. [Open LLM Leaderboard](https://hf-mirror.com/spaces/HuggingFaceH4/open_llm_leaderboard), das sich auf die Qualität der Open-Source-Modelle konzentriert;
-2. [Open LLM-Perf Leaderboard](https://hf-mirror.com/spaces/optimum/llm-perf-leaderboard), das sich auf den LLM-Durchsatz konzentriert.
+1. [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), das sich auf die Qualität der Open-Source-Modelle konzentriert;
+2. [Open LLM-Perf Leaderboard](https://huggingface.co/spaces/optimum/llm-perf-leaderboard), das sich auf den LLM-Durchsatz konzentriert.
 
 ### Latenz und Durchsatz
 

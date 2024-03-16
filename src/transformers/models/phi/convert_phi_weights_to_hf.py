@@ -34,11 +34,11 @@ from transformers import PhiConfig, PhiForCausalLM
 
 
 _MODELS = {
-    "microsoft/phi-1": ["https://hf-mirror.com/microsoft/phi-1/blob/main/pytorch_model.bin"],
-    "microsoft/phi-1_5": ["https://hf-mirror.com/microsoft/phi-1_5/blob/main/pytorch_model.bin"],
+    "microsoft/phi-1": ["https://huggingface.co/microsoft/phi-1/blob/main/pytorch_model.bin"],
+    "microsoft/phi-1_5": ["https://huggingface.co/microsoft/phi-1_5/blob/main/pytorch_model.bin"],
     "microsoft/phi-2": [
-        "https://hf-mirror.com/microsoft/phi-2/blob/main/model-00001-of-00002.safetensors",
-        "https://hf-mirror.com/microsoft/phi-2/blob/main/model-00002-of-00002.safetensors",
+        "https://huggingface.co/microsoft/phi-2/blob/main/model-00001-of-00002.safetensors",
+        "https://huggingface.co/microsoft/phi-2/blob/main/model-00002-of-00002.safetensors",
     ],
 }
 

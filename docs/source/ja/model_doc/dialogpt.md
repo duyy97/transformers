@@ -41,7 +41,7 @@ DialoGPT を活用すると、強力なベースラインよりも関連性が�
   左よりも。
 - DialoGPT は、会話データの因果言語モデリング (CLM) 目標に基づいてトレーニングされているため、強力です
   オープンドメイン対話システムにおける応答生成時。
-- DialoGPT を使用すると、[DialoGPT's model card](https://hf-mirror.com/microsoft/DialoGPT-medium) に示されているように、ユーザーはわずか 10 行のコードでチャット ボットを作成できます。
+- DialoGPT を使用すると、[DialoGPT's model card](https://huggingface.co/microsoft/DialoGPT-medium) に示されているように、ユーザーはわずか 10 行のコードでチャット ボットを作成できます。
 
 トレーニング：
 

@@ -32,7 +32,7 @@ We also provide `StableLM Zephyr 3B`, an instruction fine-tuned version of the m
 - The architecture is similar to LLaMA but with RoPE applied to 25% of head embedding dimensions, LayerNorm instead of RMSNorm, and optional QKV bias terms.
 - `StableLM 3B 4E1T`-based models uses the same tokenizer as [`GPTNeoXTokenizerFast`].
 
-`StableLM 3B 4E1T` and `StableLM Zephyr 3B` can be found on the [Huggingface Hub](https://hf-mirror.com/stabilityai)
+`StableLM 3B 4E1T` and `StableLM Zephyr 3B` can be found on the [Huggingface Hub](https://huggingface.co/stabilityai)
 
 The following code snippet demonstrates how to use `StableLM 3B 4E1T` for inference:
 

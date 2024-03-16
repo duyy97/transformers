@@ -45,7 +45,7 @@ _CHECKPOINT_FOR_DOC = "microsoft/prophetnet-large-uncased"
 
 PROPHETNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/prophetnet-large-uncased",
-    # See all ProphetNet models at https://hf-mirror.com/models?filter=prophetnet
+    # See all ProphetNet models at https://huggingface.co/models?filter=prophetnet
 ]
 
 

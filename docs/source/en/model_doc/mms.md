@@ -38,7 +38,7 @@ Here are the different models open sourced in the MMS project. The models and co
 
 ### Automatic Speech Recognition (ASR)
 
-The ASR model checkpoints  can be found here : [mms-1b-fl102](https://hf-mirror.com/facebook/mms-1b-fl102), [mms-1b-l1107](https://hf-mirror.com/facebook/mms-1b-l1107), [mms-1b-all](https://hf-mirror.com/facebook/mms-1b-all). For best accuracy, use the `mms-1b-all` model. 
+The ASR model checkpoints  can be found here : [mms-1b-fl102](https://huggingface.co/facebook/mms-1b-fl102), [mms-1b-l1107](https://huggingface.co/facebook/mms-1b-l1107), [mms-1b-all](https://huggingface.co/facebook/mms-1b-all). For best accuracy, use the `mms-1b-all` model. 
 
 Tips:
 
@@ -161,14 +161,14 @@ processor.tokenizer.vocab.keys()
 
 to see all supported languages.
 
-To further improve performance from ASR models, language model decoding can be used. See the documentation [here](https://hf-mirror.com/facebook/mms-1b-all) for further details.  
+To further improve performance from ASR models, language model decoding can be used. See the documentation [here](https://huggingface.co/facebook/mms-1b-all) for further details.  
 
 ### Speech Synthesis (TTS)
 
 MMS-TTS uses the same model architecture as VITS, which was added to 🤗 Transformers in v4.33. MMS trains a separate 
 model checkpoint for each of the 1100+ languages in the project. All available checkpoints can be found on the Hugging 
-Face Hub: [facebook/mms-tts](https://hf-mirror.com/models?sort=trending&search=facebook%2Fmms-tts), and the inference 
-documentation under [VITS](https://hf-mirror.com/docs/transformers/main/en/model_doc/vits).
+Face Hub: [facebook/mms-tts](https://huggingface.co/models?sort=trending&search=facebook%2Fmms-tts), and the inference 
+documentation under [VITS](https://huggingface.co/docs/transformers/main/en/model_doc/vits).
 
 #### Inference
 
@@ -308,7 +308,7 @@ with torch.no_grad():
 
 ### Language Identification (LID)
 
-Different LID models are available based on the number of languages they can recognize - [126](https://hf-mirror.com/facebook/mms-lid-126), [256](https://hf-mirror.com/facebook/mms-lid-256), [512](https://hf-mirror.com/facebook/mms-lid-512), [1024](https://hf-mirror.com/facebook/mms-lid-1024), [2048](https://hf-mirror.com/facebook/mms-lid-2048), [4017](https://hf-mirror.com/facebook/mms-lid-4017). 
+Different LID models are available based on the number of languages they can recognize - [126](https://huggingface.co/facebook/mms-lid-126), [256](https://huggingface.co/facebook/mms-lid-256), [512](https://huggingface.co/facebook/mms-lid-512), [1024](https://huggingface.co/facebook/mms-lid-1024), [2048](https://huggingface.co/facebook/mms-lid-2048), [4017](https://huggingface.co/facebook/mms-lid-4017). 
 
 #### Inference
 First, we install transformers and some other libraries
@@ -346,7 +346,7 @@ processor = AutoFeatureExtractor.from_pretrained(model_id)
 model = Wav2Vec2ForSequenceClassification.from_pretrained(model_id)
 ```
 
-Now we process the audio data, pass the processed audio data to the model to classify it into a language, just like we usually do for Wav2Vec2 audio classification models such as [ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition](https://hf-mirror.com/harshit345/xlsr-wav2vec-speech-emotion-recognition)
+Now we process the audio data, pass the processed audio data to the model to classify it into a language, just like we usually do for Wav2Vec2 audio classification models such as [ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition](https://huggingface.co/harshit345/xlsr-wav2vec-speech-emotion-recognition)
 
 ```py
 # English
@@ -377,8 +377,8 @@ processor.id2label.values()
 
 ### Audio Pretrained Models
 
-Pretrained models are available for two different sizes - [300M](https://hf-mirror.com/facebook/mms-300m) , 
-[1Bil](https://hf-mirror.com/facebook/mms-1b). 
+Pretrained models are available for two different sizes - [300M](https://huggingface.co/facebook/mms-300m) , 
+[1Bil](https://huggingface.co/facebook/mms-1b). 
 
 <Tip>
 

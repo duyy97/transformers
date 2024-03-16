@@ -627,7 +627,7 @@ class IdeficsModelIntegrationTest(TestCasePlus):
     def test_inference_natural_language_visual_reasoning(self):
         cat_image_path = self.tests_dir / "fixtures/tests_samples/COCO/000000039769.png"
         cats_image_obj = Image.open(cat_image_path)  # 2 cats
-        dogs_image_url = "https://hf-mirror.com/datasets/hf-internal-testing/fixtures_nlvr2/raw/main/image1.jpeg"
+        dogs_image_url = "https://huggingface.co/datasets/hf-internal-testing/fixtures_nlvr2/raw/main/image1.jpeg"
 
         prompts = [
             [

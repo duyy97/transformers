@@ -58,7 +58,7 @@ MOBILENET_V2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/mobilenet_v2_1.0_224",
     "google/mobilenet_v2_0.37_160",
     "google/mobilenet_v2_0.35_96",
-    # See all MobileNetV2 models at https://hf-mirror.com/models?filter=mobilenet_v2
+    # See all MobileNetV2 models at https://huggingface.co/models?filter=mobilenet_v2
 ]
 
 

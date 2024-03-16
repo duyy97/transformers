@@ -28,7 +28,7 @@ solution, and the optimal settings depend on the specific hardware configuration
 
 This guide offers an in-depth overview of individual types of parallelism, as well as guidance on ways to combine   
 techniques and choosing an appropriate approach. For step-by-step tutorials on distributed training, please refer to
-the [🤗 Accelerate documentation](https://hf-mirror.com/docs/accelerate/index). 
+the [🤗 Accelerate documentation](https://huggingface.co/docs/accelerate/index). 
 
 <Tip>
 
@@ -43,7 +43,7 @@ large models on a large infrastructure.
 ## Scalability strategy
 
 Begin by estimating how much vRAM is required to train your model. For models hosted on the 🤗 Hub, use our 
-[Model Memory Calculator](https://hf-mirror.com/spaces/hf-accelerate/model-memory-usage), which gives you 
+[Model Memory Calculator](https://huggingface.co/spaces/hf-accelerate/model-memory-usage), which gives you 
 accurate calculations within a few percent margin.  
 
 **Parallelization strategy for a single Node / multi-GPU setup**
@@ -188,7 +188,7 @@ the more a slow link will impede the overall runtime.
 ZeRO-powered data parallelism (ZeRO-DP) is illustrated in the following diagram from this [blog post](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/).
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png" alt="DeepSpeed-Image-1"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero.png" alt="DeepSpeed-Image-1"/>
  </div>
 
 While it may appear complex, it is a very similar concept to `DataParallel` (DP). The difference is that instead of 
@@ -271,7 +271,7 @@ which is discussed next.
 Implementations:
 
 - [DeepSpeed](https://www.deepspeed.ai/tutorials/zero/) ZeRO-DP stages 1+2+3
-- [`Accelerate` integration](https://hf-mirror.com/docs/accelerate/en/usage_guides/deepspeed) 
+- [`Accelerate` integration](https://huggingface.co/docs/accelerate/en/usage_guides/deepspeed) 
 - [`transformers` integration](main_classes/trainer#trainer-integrations)
 
 ## From Naive Model Parallelism to Pipeline Parallelism
@@ -322,7 +322,7 @@ The following illustration from the [GPipe paper](https://ai.googleblog.com/2019
 shows the naive MP on the top, and PP on the bottom:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png" alt="MP vs PP"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-gpipe-bubble.png" alt="MP vs PP"/>
 </div>
 
 At the bottom of the diagram, you can observe that the Pipeline Parallelism (PP) approach minimizes the number of idle 
@@ -382,14 +382,14 @@ Implementations:
 The main obstacle is being unable to convert the models to `nn.Sequential` and have all the inputs to be Tensors. This 
 is because currently the models include many features that make the conversion very complicated, and will need to be removed to accomplish that.
 
-DeepSpeed and Megatron-LM integrations are available in [🤗 Accelerate](https://hf-mirror.com/docs/accelerate/main/en/usage_guides/deepspeed)
+DeepSpeed and Megatron-LM integrations are available in [🤗 Accelerate](https://huggingface.co/docs/accelerate/main/en/usage_guides/deepspeed)
 
 Other approaches:
 
 DeepSpeed, Varuna and SageMaker use the concept of an [Interleaved Pipeline](https://docs.aws.amazon.com/sagemaker/latest/dg/model-parallel-core-features.html)
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-sagemaker-interleaved-pipeline.png" alt="Interleaved pipeline execution"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-sagemaker-interleaved-pipeline.png" alt="Interleaved pipeline execution"/>
 </div>
 
 Here the bubble (idle time) is further minimized by prioritizing backward passes. Varuna further attempts to improve the 
@@ -410,14 +410,14 @@ an input vector, `Y` is the output vector, and `A` is the weight matrix.
 If we look at the computation in matrix form, you can see how the matrix multiplication can be split between multiple GPUs:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png" alt="Parallel GEMM"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_gemm.png" alt="Parallel GEMM"/>
 </div>
 
 If we split the weight matrix `A` column-wise across `N` GPUs and perform matrix multiplications `XA_1` through `XA_n` in parallel, 
 then we will end up with `N` output vectors `Y_1, Y_2, ..., Y_n` which can be fed into `GeLU` independently:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png" alt="Independent GeLU"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-independent-gelu.png" alt="Independent GeLU"/>
 </div>
 
 Using this principle, we can update a multi-layer perceptron of arbitrary depth, without the need for any synchronization 
@@ -425,14 +425,14 @@ between GPUs until the very end, where we need to reconstruct the output vector 
 provide a helpful illustration for that:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png" alt="Parallel shard processing"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_shard_processing.png" alt="Parallel shard processing"/>
 </div>
 
 Parallelizing the multi-headed attention layers is even simpler, since they are already inherently parallel, due to having 
 multiple independent heads!
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png" alt="Parallel self-attention"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-tp-parallel_self_attention.png" alt="Parallel self-attention"/>
 </div>
 
 Special considerations: TP requires very fast network, and therefore it's not advisable to do TP across more than one node. 
@@ -458,7 +458,7 @@ SageMaker combines TP with DP for a more efficient processing.
 - but if you want inference [parallelformers](https://github.com/tunib-ai/parallelformers) provides this support for most of our models. So until this is implemented in the core you can use theirs. And hopefully training mode will be supported too.
 - Deepspeed-Inference also supports our BERT, GPT-2, and GPT-Neo models in their super-fast CUDA-kernel-based inference mode, see more [here](https://www.deepspeed.ai/tutorials/inference-tutorial/)
 
-🤗 Accelerate integrates with [TP from Megatron-LM](https://hf-mirror.com/docs/accelerate/v0.23.0/en/usage_guides/megatron_lm).
+🤗 Accelerate integrates with [TP from Megatron-LM](https://huggingface.co/docs/accelerate/v0.23.0/en/usage_guides/megatron_lm).
 
 ## Data Parallelism + Pipeline Parallelism
 
@@ -466,7 +466,7 @@ The following diagram from the DeepSpeed [pipeline tutorial](https://www.deepspe
 how one can combine DP with PP.
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png" alt="DP + PP-2d"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-zero-dp-pp.png" alt="DP + PP-2d"/>
 </div>
 
 Here it's important to see how DP rank 0 doesn't see GPU2 and DP rank 1 doesn't see GPU3. To DP there is just GPUs 0 
@@ -489,7 +489,7 @@ Implementations:
 To get an even more efficient training a 3D parallelism is used where PP is combined with TP and DP. This can be seen in the following diagram.
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png" alt="dp-pp-tp-3d"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-deepspeed-3d.png" alt="dp-pp-tp-3d"/>
 </div>
 
 This diagram is from a blog post [3D parallelism: Scaling to trillion-parameter models](https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/), which is a good read as well.
@@ -570,7 +570,7 @@ We have 10 batches of 512 length. If we parallelize them by attribute dimension 
 It is similar with tensor model parallelism or naive layer-wise model parallelism.
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/parallelism-flexflow.jpeg" alt="flex-flow-soap"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/parallelism-flexflow.jpeg" alt="flex-flow-soap"/>
 </div>
 
 The significance of this framework is that it takes resources like (1) GPU/TPU/CPU vs. (2) RAM/DRAM vs. (3) 

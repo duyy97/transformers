@@ -24,9 +24,9 @@ from ..swin import SwinConfig
 
 MASKFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/maskformer-swin-base-ade": (
-        "https://hf-mirror.com/facebook/maskformer-swin-base-ade/blob/main/config.json"
+        "https://huggingface.co/facebook/maskformer-swin-base-ade/blob/main/config.json"
     )
-    # See all MaskFormer models at https://hf-mirror.com/models?filter=maskformer
+    # See all MaskFormer models at https://huggingface.co/models?filter=maskformer
 }
 
 logger = logging.get_logger(__name__)
@@ -37,8 +37,8 @@ class MaskFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MaskFormerModel`]. It is used to instantiate a
     MaskFormer model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the MaskFormer
-    [facebook/maskformer-swin-base-ade](https://hf-mirror.com/facebook/maskformer-swin-base-ade) architecture trained
-    on [ADE20k-150](https://hf-mirror.com/datasets/scene_parse_150).
+    [facebook/maskformer-swin-base-ade](https://huggingface.co/facebook/maskformer-swin-base-ade) architecture trained
+    on [ADE20k-150](https://huggingface.co/datasets/scene_parse_150).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -142,7 +142,7 @@ class MaskFormerConfig(PretrainedConfig):
             raise ValueError("You can't specify both `backbone_kwargs` and `backbone_config`.")
 
         if backbone_config is None and backbone is None:
-            # fall back to https://hf-mirror.com/microsoft/swin-base-patch4-window12-384-in22k
+            # fall back to https://huggingface.co/microsoft/swin-base-patch4-window12-384-in22k
             backbone_config = SwinConfig(
                 image_size=384,
                 in_channels=3,
@@ -168,7 +168,7 @@ class MaskFormerConfig(PretrainedConfig):
             )
 
         if decoder_config is None:
-            # fall back to https://hf-mirror.com/facebook/detr-resnet-50
+            # fall back to https://huggingface.co/facebook/detr-resnet-50
             decoder_config = DetrConfig()
         else:
             # verify that the decoder is supported

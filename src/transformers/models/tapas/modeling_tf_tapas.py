@@ -106,7 +106,7 @@ TF_TAPAS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/tapas-tiny-finetuned-wtq",
     "google/tapas-tiny-finetuned-wikisql-supervised",
     "google/tapas-tiny-finetuned-tabfact",
-    # See all TAPAS models at https://hf-mirror.com/models?filter=tapas
+    # See all TAPAS models at https://huggingface.co/models?filter=tapas
 ]
 
 EPSILON_ZERO_DIVISION = 1e-10

@@ -41,12 +41,12 @@ to any binary segmentation task where a text or image query
 can be formulated. Finally, we find our system to adapt well
 to generalized queries involving affordances or properties*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/clipseg_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/clipseg_architecture.png"
 alt="drawing" width="600"/> 
 
 <small> CLIPSeg overview. Taken from the <a href="https://arxiv.org/abs/2112.10003">original paper.</a> </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr).
+This model was contributed by [nielsr](https://huggingface.co/nielsr).
 The original code can be found [here](https://github.com/timojl/clipseg).
 
 ## Usage tips

@@ -22,8 +22,8 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 DEFORMABLE_DETR_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "SenseTime/deformable-detr": "https://hf-mirror.com/sensetime/deformable-detr/resolve/main/config.json",
-    # See all Deformable DETR models at https://hf-mirror.com/models?filter=deformable-detr
+    "SenseTime/deformable-detr": "https://huggingface.co/sensetime/deformable-detr/resolve/main/config.json",
+    # See all Deformable DETR models at https://huggingface.co/models?filter=deformable-detr
 }
 
 
@@ -32,7 +32,7 @@ class DeformableDetrConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DeformableDetrModel`]. It is used to instantiate
     a Deformable DETR model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Deformable DETR
-    [SenseTime/deformable-detr](https://hf-mirror.com/SenseTime/deformable-detr) architecture.
+    [SenseTime/deformable-detr](https://huggingface.co/SenseTime/deformable-detr) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

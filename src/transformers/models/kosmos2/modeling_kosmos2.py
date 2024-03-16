@@ -48,7 +48,7 @@ _CONFIG_FOR_DOC = Kosmos2Config
 
 KOSMOS2_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/kosmos-2-patch14-224",
-    # See all KOSMOS-2 models at https://hf-mirror.com/models?filter=kosmos-2
+    # See all KOSMOS-2 models at https://huggingface.co/models?filter=kosmos-2
 ]
 
 
@@ -1789,7 +1789,7 @@ class Kosmos2Model(Kosmos2PreTrainedModel):
         >>> model = Kosmos2Model.from_pretrained("microsoft/kosmos-2-patch14-224")
         >>> processor = AutoProcessor.from_pretrained("microsoft/kosmos-2-patch14-224")
 
-        >>> url = "https://hf-mirror.com/microsoft/kosmos-2-patch14-224/resolve/main/snowman.jpg"
+        >>> url = "https://huggingface.co/microsoft/kosmos-2-patch14-224/resolve/main/snowman.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)
 
         >>> text = (
@@ -1935,7 +1935,7 @@ class Kosmos2ForConditionalGeneration(Kosmos2PreTrainedModel):
         >>> model = Kosmos2ForConditionalGeneration.from_pretrained("microsoft/kosmos-2-patch14-224")
         >>> processor = AutoProcessor.from_pretrained("microsoft/kosmos-2-patch14-224")
 
-        >>> url = "https://hf-mirror.com/microsoft/kosmos-2-patch14-224/resolve/main/snowman.jpg"
+        >>> url = "https://huggingface.co/microsoft/kosmos-2-patch14-224/resolve/main/snowman.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)
 
         >>> prompt = "<grounding> An image of"

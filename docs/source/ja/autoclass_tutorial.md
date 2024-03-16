@@ -26,7 +26,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 <Tip>
 
 アーキテクチャはモデルの骨格を指し、チェックポイントは特定のアーキテクチャの重みです。
-たとえば、[BERT](https://hf-mirror.com/google-bert/bert-base-uncased)はアーキテクチャであり、`google-bert/bert-base-uncased`はチェックポイントです。
+たとえば、[BERT](https://huggingface.co/google-bert/bert-base-uncased)はアーキテクチャであり、`google-bert/bert-base-uncased`はチェックポイントです。
 モデルはアーキテクチャまたはチェックポイントのどちらを指す一般的な用語です。
 
 </Tip>

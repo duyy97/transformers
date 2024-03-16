@@ -1,7 +1,7 @@
 <p align="center"> <img src="http://sayef.tech:8082/uploads/FSNER-LOGO-2.png" alt="FSNER LOGO"> </p>
 
 <p align="center">
-  Implemented by <a href="https://hf-mirror.com/sayef"> sayef </a>. 
+  Implemented by <a href="https://huggingface.co/sayef"> sayef </a>. 
 </p>
 
 ## Overview
@@ -21,7 +21,7 @@ The FSNER model was proposed in [Example-Based Named Entity Recognition](https:/
 
 | identifier        | epochs           | datasets  |
 | ---------- |:----------:| :-----:|
-| [sayef/fsner-bert-base-uncased](https://hf-mirror.com/sayef/fsner-bert-base-uncased)      | 10 | ontonotes5, conll2003, wnut2017, and fin (Alvarado et al.). |
+| [sayef/fsner-bert-base-uncased](https://huggingface.co/sayef/fsner-bert-base-uncased)      | 10 | ontonotes5, conll2003, wnut2017, and fin (Alvarado et al.). |
 
 
 ## Installation and Example Usage

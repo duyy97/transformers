@@ -64,7 +64,7 @@ XLM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "FacebookAI/xlm-clm-ende-1024",
     "FacebookAI/xlm-mlm-17-1280",
     "FacebookAI/xlm-mlm-100-1280",
-    # See all XLM models at https://hf-mirror.com/models?filter=xlm
+    # See all XLM models at https://huggingface.co/models?filter=xlm
 ]
 
 

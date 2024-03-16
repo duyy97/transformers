@@ -126,7 +126,7 @@ class TokenClassificationPipeline(ChunkPipeline):
 
     The models that this pipeline can use are models that have been fine-tuned on a token classification task. See the
     up-to-date list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=token-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=token-classification).
     """
 
     default_input_names = "sequences"

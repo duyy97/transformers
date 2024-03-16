@@ -43,7 +43,7 @@ Adrian de Wynter and Daniel J. Perry.これは、BERT のアーキテクチャ �
 アーキテクチャ、および一部の非圧縮バリアント: 0.3% ～ 31% のパフォーマンス向上が得られます。
 BERT-large に関して、複数の公開自然言語理解 (NLU) ベンチマークにおける絶対的な評価。*
 
-このモデルは [stefan-it](https://hf-mirror.com/stefan-it) によって提供されました。元のコードは[ここ](https://github.com/alexa/bort/)にあります。
+このモデルは [stefan-it](https://huggingface.co/stefan-it) によって提供されました。元のコードは[ここ](https://github.com/alexa/bort/)にあります。
 
 ## Usage tips
 

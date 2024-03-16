@@ -295,7 +295,7 @@ class TFNoBadWordsLogitsProcessor(TFLogitsProcessor):
             that should not appear in the generated text, make sure to set `add_prefix_space=True` when initializing
             the tokenizer, and use `tokenizer(bad_words, add_special_tokens=False).input_ids`. The `add_prefix_space`
             argument is only supported for some slow tokenizers, as fast tokenizers' prefixing behaviours come from
-            `pre tokenizers`. Read more [here](https://hf-mirror.com/docs/tokenizers/api/pre-tokenizers).
+            `pre tokenizers`. Read more [here](https://huggingface.co/docs/tokenizers/api/pre-tokenizers).
         eos_token_id (`int`):
             The id of the *end-of-sequence* token.
     """

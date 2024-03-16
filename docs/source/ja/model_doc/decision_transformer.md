@@ -35,7 +35,7 @@ Lili Chen, Kevin Lu, Aravind Rajeswaran, Kimin Lee, Aditya Grover, Michael Laski
 
 このバージョンのモデルは、状態がベクトルであるタスク用です。
 
-このモデルは、[edbeeching](https://hf-mirror.com/edbeeching) によって提供されました。元のコードは [ここ](https://github.com/kzl/decion-transformer) にあります。
+このモデルは、[edbeeching](https://huggingface.co/edbeeching) によって提供されました。元のコードは [ここ](https://github.com/kzl/decion-transformer) にあります。
 
 ## DecisionTransformerConfig
 

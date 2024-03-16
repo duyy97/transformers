@@ -31,7 +31,7 @@ if TYPE_CHECKING:
 logger = logging.get_logger(__name__)
 
 GROUPVIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "nvidia/groupvit-gcc-yfcc": "https://hf-mirror.com/nvidia/groupvit-gcc-yfcc/resolve/main/config.json",
+    "nvidia/groupvit-gcc-yfcc": "https://huggingface.co/nvidia/groupvit-gcc-yfcc/resolve/main/config.json",
 }
 
 
@@ -40,7 +40,7 @@ class GroupViTTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GroupViTTextModel`]. It is used to instantiate an
     GroupViT model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the GroupViT
-    [nvidia/groupvit-gcc-yfcc](https://hf-mirror.com/nvidia/groupvit-gcc-yfcc) architecture.
+    [nvidia/groupvit-gcc-yfcc](https://huggingface.co/nvidia/groupvit-gcc-yfcc) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -149,7 +149,7 @@ class GroupViTVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GroupViTVisionModel`]. It is used to instantiate
     an GroupViT model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the GroupViT
-    [nvidia/groupvit-gcc-yfcc](https://hf-mirror.com/nvidia/groupvit-gcc-yfcc) architecture.
+    [nvidia/groupvit-gcc-yfcc](https://huggingface.co/nvidia/groupvit-gcc-yfcc) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -274,7 +274,7 @@ class GroupViTConfig(PretrainedConfig):
     [`GroupViTConfig`] is the configuration class to store the configuration of a [`GroupViTModel`]. It is used to
     instantiate a GroupViT model according to the specified arguments, defining the text model and vision model
     configs. Instantiating a configuration with the defaults will yield a similar configuration to that of the GroupViT
-    [nvidia/groupvit-gcc-yfcc](https://hf-mirror.com/nvidia/groupvit-gcc-yfcc) architecture.
+    [nvidia/groupvit-gcc-yfcc](https://huggingface.co/nvidia/groupvit-gcc-yfcc) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

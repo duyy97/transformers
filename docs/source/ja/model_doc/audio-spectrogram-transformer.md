@@ -24,12 +24,12 @@ Audio Spectrogram Transformerモデルは、[AST: Audio Spectrogram Transformer]
 
 *過去10年間で、畳み込みニューラルネットワーク（CNN）は、音声スペクトログラムから対応するラベルへの直接的なマッピングを学習することを目指す、エンドツーエンドの音声分類モデルの主要な構成要素として広く採用されてきました。長距離のグローバルなコンテキストをより良く捉えるため、最近の傾向として、CNNの上にセルフアテンション機構を追加し、CNN-アテンションハイブリッドモデルを形成することがあります。しかし、CNNへの依存が必要かどうか、そして純粋にアテンションに基づくニューラルネットワークだけで音声分類において良いパフォーマンスを得ることができるかどうかは明らかではありません。本論文では、これらの問いに答えるため、音声分類用では最初の畳み込みなしで純粋にアテンションベースのモデルであるAudio Spectrogram Transformer（AST）を紹介します。我々はASTを様々なオーディオ分類ベンチマークで評価し、AudioSetで0.485 mAP、ESC-50で95.6%の正解率、Speech Commands V2で98.1%の正解率という新たな最先端の結果を達成しました。*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/audio_spectogram_transformer_architecture.png"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/audio_spectogram_transformer_architecture.png"
 alt="drawing" width="600"/>
 
 <small> Audio Spectrogram Transformerのアーキテクチャ。<a href="https://arxiv.org/abs/2104.01778">元論文</a>より抜粋。</small>
 
-このモデルは[nielsr](https://hf-mirror.com/nielsr)より提供されました。
+このモデルは[nielsr](https://huggingface.co/nielsr)より提供されました。
 オリジナルのコードは[こちら](https://github.com/YuanGongND/ast)で見ることができます。
 
 ## 使用上のヒント

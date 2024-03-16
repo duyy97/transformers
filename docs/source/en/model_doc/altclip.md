@@ -31,7 +31,7 @@ teacher learning and contrastive learning. We validate our method through evalua
 performances on a bunch of tasks including ImageNet-CN, Flicker30k- CN, and COCO-CN. Further, we obtain very close performances with 
 CLIP on almost all tasks, suggesting that one can simply alter the text encoder in CLIP for extended capabilities such as multilingual understanding.*
 
-This model was contributed by [jongjyh](https://hf-mirror.com/jongjyh).
+This model was contributed by [jongjyh](https://huggingface.co/jongjyh).
 
 ## Usage tips and example
 

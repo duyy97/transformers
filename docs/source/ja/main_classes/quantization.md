@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 
 量子化モデルの詳細については、以下を確認してください。
 - [GPTQ](https://arxiv.org/pdf/2210.17323.pdf) 論文
-- GPTQ 量子化に関する `optimum` [ガイド](https://hf-mirror.com/docs/optimum/llm_quantization/usage_guides/quantization)
+- GPTQ 量子化に関する `optimum` [ガイド](https://huggingface.co/docs/optimum/llm_quantization/usage_guides/quantization)
 - バックエンドとして使用される [`AutoGPTQ`](https://github.com/PanQiWei/AutoGPTQ) ライブラリ
 
 ### Requirements
@@ -85,7 +85,7 @@ from transformers import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", quantization_config=gptq_config)
 ```
 
-ディスク オフロードはサポートされていないことに注意してください。さらに、データセットが原因でメモリが不足している場合は、`from_pretained` で `max_memory` を渡す必要がある場合があります。 `device_map`と`max_memory`の詳細については、この [ガイド](https://hf-mirror.com/docs/accelerate/usage_guides/big_modeling#designing-a-device-map) を参照してください。
+ディスク オフロードはサポートされていないことに注意してください。さらに、データセットが原因でメモリが不足している場合は、`from_pretained` で `max_memory` を渡す必要がある場合があります。 `device_map`と`max_memory`の詳細については、この [ガイド](https://huggingface.co/docs/accelerate/usage_guides/big_modeling#designing-a-device-map) を参照してください。
 
 <Tip warning={true}>
 GPTQ 量子化は、現時点ではテキスト モデルでのみ機能します。さらに、量子化プロセスはハードウェアによっては長時間かかる場合があります (NVIDIA A100 を使用した場合、175B モデル = 4 gpu 時間)。モデルの GPTQ 量子化バージョンが存在しない場合は、ハブで確認してください。そうでない場合は、github で要求を送信できます。
@@ -163,11 +163,11 @@ GPTQ を使用してモデルを量子化する方法と、peft を使用して�
 🤗 Transformers は、`bitsandbytes` で最もよく使用されるモジュールと緊密に統合されています。数行のコードでモデルを 8 ビット精度でロードできます。
 これは、`bitsandbytes`の `0.37.0`リリース以降、ほとんどの GPU ハードウェアでサポートされています。
 
-量子化方法の詳細については、[LLM.int8()](https://arxiv.org/abs/2208.07339) 論文、または [ブログ投稿](https://hf-mirror.com/blog/hf-bitsandbytes-) をご覧ください。統合）コラボレーションについて。
+量子化方法の詳細については、[LLM.int8()](https://arxiv.org/abs/2208.07339) 論文、または [ブログ投稿](https://huggingface.co/blog/hf-bitsandbytes-) をご覧ください。統合）コラボレーションについて。
 
 `0.39.0`リリース以降、FP4 データ型を活用し、4 ビット量子化を使用して`device_map`をサポートする任意のモデルをロードできます。
 
-独自の pytorch モデルを量子化したい場合は、🤗 Accelerate ライブラリの [ドキュメント](https://hf-mirror.com/docs/accelerate/main/en/usage_guides/quantization) をチェックしてください。
+独自の pytorch モデルを量子化したい場合は、🤗 Accelerate ライブラリの [ドキュメント](https://huggingface.co/docs/accelerate/main/en/usage_guides/quantization) をチェックしてください。
 
 `bitsandbytes`統合を使用してできることは次のとおりです
 
@@ -444,4 +444,4 @@ Hugging Face エコシステムのアダプターの公式サポートにより�
 
 ## Quantization with 🤗 `optimum` 
 
-`optimum`でサポートされている量子化方法の詳細については、[Optimum ドキュメント](https://hf-mirror.com/docs/optimum/index) を参照し、これらが自分のユースケースに適用できるかどうかを確認してください。
+`optimum`でサポートされている量子化方法の詳細については、[Optimum ドキュメント](https://huggingface.co/docs/optimum/index) を参照し、これらが自分のユースケースに適用できるかどうかを確認してください。

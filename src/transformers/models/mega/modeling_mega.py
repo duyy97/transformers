@@ -52,7 +52,7 @@ _CONFIG_FOR_DOC = "MegaConfig"
 
 MEGA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "mnaylor/mega-base-wikitext",
-    # See all Mega models at https://hf-mirror.com/models?filter=mega
+    # See all Mega models at https://huggingface.co/models?filter=mega
 ]
 
 

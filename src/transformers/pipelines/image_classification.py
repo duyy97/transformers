@@ -70,7 +70,7 @@ class ImageClassificationPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> classifier = pipeline(model="microsoft/beit-base-patch16-224-pt22k-ft22k")
-    >>> classifier("https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png")
+    >>> classifier("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
     [{'score': 0.442, 'label': 'macaw'}, {'score': 0.088, 'label': 'popinjay'}, {'score': 0.075, 'label': 'parrot'}, {'score': 0.073, 'label': 'parodist, lampooner'}, {'score': 0.046, 'label': 'poll, poll_parrot'}]
     ```
 
@@ -80,7 +80,7 @@ class ImageClassificationPipeline(Pipeline):
     `"image-classification"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=image-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=image-classification).
     """
 
     function_to_apply: ClassificationFunction = ClassificationFunction.NONE

@@ -39,7 +39,7 @@ Antes de aplicar o fine-tuning a um modelo pré-treinado, baixe um dataset e pre
 O tutorial anterior ensinará a processar os dados para o treinamento, e então poderá ter a oportunidade de testar
 esse novo conhecimento em algo prático.
 
-Comece carregando o dataset [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full):
+Comece carregando o dataset [Yelp Reviews](https://huggingface.co/datasets/yelp_review_full):
 
 ```py
 >>> from datasets import load_dataset
@@ -52,7 +52,7 @@ Comece carregando o dataset [Yelp Reviews](https://hf-mirror.com/datasets/yelp_r
 
 Como já sabe, é necessário ter um tokenizador para processar o texto e incluir uma estratégia de padding e truncamento,
 para manejar qualquer tamanho varíavel de sequência. Para processar o seu dataset em apenas um passo, utilize o método de
-🤗 Datasets [`map`](https://hf-mirror.com/docs/datasets/process#map) para aplicar uma função de preprocessamento sobre
+🤗 Datasets [`map`](https://huggingface.co/docs/datasets/process#map) para aplicar uma função de preprocessamento sobre
 todo o dataset.
 
 ```py
@@ -87,7 +87,7 @@ A API do [`Trainer`] suporta um grande conjunto de opções de treinamento e fun
 o gradient accumulation e o mixed precision.
 
 Comece carregando seu modelo e especifique o número de labels de previsão.
-A partir do [Card Dataset](https://hf-mirror.com/datasets/yelp_review_full#data-fields) do Yelp Reveiw, que ja
+A partir do [Card Dataset](https://huggingface.co/datasets/yelp_review_full#data-fields) do Yelp Reveiw, que ja
 sabemos ter 5 labels usamos o seguinte código:
 
 ```py
@@ -110,7 +110,7 @@ sabemos ter 5 labels usamos o seguinte código:
 
 Em seguida, crie uma classe [`TrainingArguments`] que contenha todos os hiperparâmetros que possam ser ajustados, assim
 como os indicadores para ativar as diferentes opções de treinamento. Para este tutorial, você pode começar o treinamento
-usando os [hiperparámetros](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) padrão,
+usando os [hiperparámetros](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) padrão,
 porém, sinta-se livre para experimentar com eles e encontrar uma configuração ótima.
 
 Especifique onde salvar os checkpoints do treinamento:
@@ -125,8 +125,8 @@ Especifique onde salvar os checkpoints do treinamento:
 
 O [`Trainer`] não avalia automaticamente o rendimento do modelo durante o treinamento. Será necessário passar ao
 [`Trainer`] uma função para calcular e fazer um diagnóstico sobre as métricas. A biblioteca 🤗 Datasets proporciona
-uma função de [`accuracy`](https://hf-mirror.com/metrics/accuracy) simples que pode ser carregada com a função
-`load_metric` (ver este [tutorial](https://hf-mirror.com/docs/datasets/metrics) para mais informações):
+uma função de [`accuracy`](https://huggingface.co/metrics/accuracy) simples que pode ser carregada com a função
+`load_metric` (ver este [tutorial](https://huggingface.co/docs/datasets/metrics) para mais informações):
 
 ```py
 >>> import numpy as np
@@ -203,7 +203,7 @@ Assegure-se de especificar os `return_tensors` para retornar os tensores do Tens
 </Tip>
 
 Em seguida, converta os datasets tokenizados em datasets do TensorFlow com o método
-[`to_tf_dataset`](https://hf-mirror.com/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset).
+[`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.to_tf_dataset).
 Especifique suas entradas em `columns` e seu rótulo em `label_cols`:
 
 ```py
@@ -385,7 +385,7 @@ uma barra de progresso sobre o número de passos percorridos no treinamento atua
 
 Da mesma forma que é necessário adicionar uma função de avaliação ao [`Trainer`], é necessário fazer o mesmo quando
 escrevendo o próprio ciclo de treinamento. Contudo, em vez de calcular e retornar a métrica final de cada época,
-você deverá adicionar todos os batches com [`add_batch`](https://hf-mirror.com/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch)
+você deverá adicionar todos os batches com [`add_batch`](https://huggingface.co/docs/datasets/package_reference/main_classes?highlight=add_batch#datasets.Metric.add_batch)
 e calcular a métrica apenas no final.
 
 ```py

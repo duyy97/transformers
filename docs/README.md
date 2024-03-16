@@ -295,8 +295,8 @@ Here's an example of a tuple return, comprising several objects:
 #### Adding an image
 
 Due to the rapidly growing repository, it is important to make sure that no files that would significantly weigh down the repository are added. This includes images, videos, and other non-text files. We prefer to leverage a hf.co hosted `dataset` like
-the ones hosted on [`hf-internal-testing`](https://hf-mirror.com/hf-internal-testing) in which to place these files and reference
-them by URL. We recommend putting them in the following dataset: [huggingface/documentation-images](https://hf-mirror.com/datasets/huggingface/documentation-images).
+the ones hosted on [`hf-internal-testing`](https://huggingface.co/hf-internal-testing) in which to place these files and reference
+them by URL. We recommend putting them in the following dataset: [huggingface/documentation-images](https://huggingface.co/datasets/huggingface/documentation-images).
 If an external contribution, feel free to add the images to your PR and ask a Hugging Face member to migrate your images
 to this dataset.
 
@@ -314,9 +314,9 @@ easily.
 
 Good documentation often comes with an example of how a specific function or class should be used. 
 Each model class should contain at least one example showcasing
-how to use this model class in inference. *E.g.* the class [Wav2Vec2ForCTC](https://hf-mirror.com/docs/transformers/model_doc/wav2vec2#transformers.Wav2Vec2ForCTC) 
+how to use this model class in inference. *E.g.* the class [Wav2Vec2ForCTC](https://huggingface.co/docs/transformers/model_doc/wav2vec2#transformers.Wav2Vec2ForCTC) 
 includes an example of how to transcribe speech to text in the 
-[docstring of its forward function](https://hf-mirror.com/docs/transformers/model_doc/wav2vec2#transformers.Wav2Vec2ForCTC.forward).
+[docstring of its forward function](https://huggingface.co/docs/transformers/model_doc/wav2vec2#transformers.Wav2Vec2ForCTC.forward).
 
 ## Writing documentation examples
 

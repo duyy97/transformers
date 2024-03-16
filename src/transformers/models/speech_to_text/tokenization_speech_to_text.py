@@ -37,12 +37,12 @@ VOCAB_FILES_NAMES = {
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
         "facebook/s2t-small-librispeech-asr": (
-            "https://hf-mirror.com/facebook/s2t-small-librispeech-asr/resolve/main/vocab.json"
+            "https://huggingface.co/facebook/s2t-small-librispeech-asr/resolve/main/vocab.json"
         ),
     },
     "spm_file": {
         "facebook/s2t-small-librispeech-asr": (
-            "https://hf-mirror.com/facebook/s2t-small-librispeech-asr/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/facebook/s2t-small-librispeech-asr/resolve/main/sentencepiece.bpe.model"
         )
     },
 }

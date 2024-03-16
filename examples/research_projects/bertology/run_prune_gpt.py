@@ -248,7 +248,7 @@ def main():
         default=None,
         type=str,
         required=True,
-        help="Path to pretrained model or model identifier from hf-mirror.com/models",
+        help="Path to pretrained model or model identifier from huggingface.co/models",
     )
     parser.add_argument(
         "--output_dir",

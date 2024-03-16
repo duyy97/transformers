@@ -39,7 +39,7 @@ Imagenet のみでトレーニングしてトランスフォーマーを作成�
 Imagenet (最大 85.2% の精度が得られます) と他のタスクに転送するときの両方で。私たちはコードを共有し、
 モデル。*
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。このモデルの TensorFlow バージョンは、[amyeroberts](https://hf-mirror.com/amyeroberts) によって追加されました。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。このモデルの TensorFlow バージョンは、[amyeroberts](https://huggingface.co/amyeroberts) によって追加されました。
 
 ## Usage tips
 

@@ -52,7 +52,7 @@ BEiT モデルは、[BEiT: BERT Pre-Training of Image Transformers](https://arxi
   [`BeitImageProcessor`] を使用して、モデルの画像のサイズを変更 (または再スケール) し、正規化します。
 - 事前トレーニングまたは微調整中に使用されるパッチ解像度と画像解像度の両方が名前に反映されます。
   各チェックポイント。たとえば、`microsoft/beit-base-patch16-224`は、パッチ付きの基本サイズのアーキテクチャを指します。
-  解像度は 16x16、微調整解像度は 224x224 です。すべてのチェックポイントは [ハブ](https://hf-mirror.com/models?search=microsoft/beit) で見つけることができます。
+  解像度は 16x16、微調整解像度は 224x224 です。すべてのチェックポイントは [ハブ](https://huggingface.co/models?search=microsoft/beit) で見つけることができます。
 - 利用可能なチェックポイントは、(1) [ImageNet-22k](http://www.image-net.org/) で事前トレーニングされています (
   1,400 万の画像と 22,000 のクラス) のみ、(2) ImageNet-22k でも微調整、または (3) [ImageNet-1k](http://www.image-net.org/challenges/LSVRC)でも微調整/2012/) (ILSVRC 2012 とも呼ばれ、130 万件のコレクション)
   画像と 1,000 クラス)。
@@ -63,13 +63,13 @@ BEiT モデルは、[BEiT: BERT Pre-Training of Image Transformers](https://arxi
   追加するには、[`BeitConfig`] の `use_relative_position_bias` 属性を `True` に設定します。
   位置の埋め込み。
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/beit_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/beit_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> BEiT の事前トレーニング。 <a href="https://arxiv.org/abs/2106.08254">元の論文から抜粋。</a> </small>
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。このモデルの JAX/FLAX バージョンは、
-[kamalkraj](https://hf-mirror.com/kamalkraj) による投稿。元のコードは [ここ](https://github.com/microsoft/unilm/tree/master/beit) にあります。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。このモデルの JAX/FLAX バージョンは、
+[kamalkraj](https://huggingface.co/kamalkraj) による投稿。元のコードは [ここ](https://github.com/microsoft/unilm/tree/master/beit) にあります。
 
 ## Resources
 

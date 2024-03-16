@@ -21,7 +21,7 @@ specific language governing permissions and limitations under the License.
 🤗 Transformersを使い始めましょう！ 開発者であろうと、日常的なユーザーであろうと、このクイックツアーは
 初めて始めるのを支援し、[`pipeline`]を使った推論方法、[AutoClass](./model_doc/auto)で事前学習済みモデルとプリプロセッサをロードする方法、
 そしてPyTorchまたはTensorFlowで素早くモデルをトレーニングする方法を示します。 初心者の場合、ここで紹介されたコンセプトの詳細な説明を提供する
-チュートリアルまたは[コース](https://hf-mirror.com/course/chapter1/1)を次に参照することをお勧めします。
+チュートリアルまたは[コース](https://huggingface.co/course/chapter1/1)を次に参照することをお勧めします。
 
 始める前に、必要なライブラリがすべてインストールされていることを確認してください：
 
@@ -83,7 +83,7 @@ pip install tensorflow
 >>> classifier = pipeline("sentiment-analysis")
 ```
 
-[`pipeline`]は、感情分析のためのデフォルトの[事前学習済みモデル](https://hf-mirror.com/distilbert/distilbert-base-uncased-finetuned-sst-2-english)とトークナイザをダウンロードしてキャッシュし、使用できるようになります。
+[`pipeline`]は、感情分析のためのデフォルトの[事前学習済みモデル](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english)とトークナイザをダウンロードしてキャッシュし、使用できるようになります。
 これで、`classifier`を対象のテキストに使用できます：
 
 ```python
@@ -110,8 +110,8 @@ label: NEGATIVE, スコア: 0.5309
 >>> speech_recognizer = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h")
 ```
 
-オーディオデータセットをロードします（詳細については🤗 Datasets [クイックスタート](https://hf-mirror.com/docs/datasets/quickstart#audio)を参照してください）。
-たとえば、[MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14)データセットをロードします：
+オーディオデータセットをロードします（詳細については🤗 Datasets [クイックスタート](https://huggingface.co/docs/datasets/quickstart#audio)を参照してください）。
+たとえば、[MInDS-14](https://huggingface.co/datasets/PolyAI/minds14)データセットをロードします：
 
 ```python
 >>> from datasets import load_dataset, Audio
@@ -119,7 +119,7 @@ label: NEGATIVE, スコア: 0.5309
 >>> dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")  # doctest: +IGNORE_RESULT
 ```
 
-データセットのサンプリングレートが[`facebook/wav2vec2-base-960h`](https://hf-mirror.com/facebook/wav2vec2-base-960h)がトレーニングされたサンプリングレートと一致することを確認してください：
+データセットのサンプリングレートが[`facebook/wav2vec2-base-960h`](https://huggingface.co/facebook/wav2vec2-base-960h)がトレーニングされたサンプリングレートと一致することを確認してください：
 
 ```py
 >>> dataset = dataset.cast_column("audio", Audio(sampling_rate=speech_recognizer.feature_extractor.sampling_rate))
@@ -137,7 +137,7 @@ label: NEGATIVE, スコア: 0.5309
 
 ### Use another model and tokenizer in the pipeline
 
-[`pipeline`]は[Hub](https://hf-mirror.com/models)からの任意のモデルを収容でき、他のユースケースに[`pipeline`]を適応させることが容易です。たとえば、フランス語のテキストを処理できるモデルが必要な場合、Hubのタグを使用して適切なモデルをフィルタリングできます。トップのフィルタリングされた結果は、フランス語のテキストに使用できる感情分析用に調整された多言語の[BERTモデル](https://hf-mirror.com/nlptown/bert-base-multilingual-uncased-sentiment)を返します：
+[`pipeline`]は[Hub](https://huggingface.co/models)からの任意のモデルを収容でき、他のユースケースに[`pipeline`]を適応させることが容易です。たとえば、フランス語のテキストを処理できるモデルが必要な場合、Hubのタグを使用して適切なモデルをフィルタリングできます。トップのフィルタリングされた結果は、フランス語のテキストに使用できる感情分析用に調整された多言語の[BERTモデル](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment)を返します：
 
 ```py
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"

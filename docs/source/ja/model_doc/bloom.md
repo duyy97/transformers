@@ -18,16 +18,16 @@ rendered properly in your Markdown viewer.
 
 ## Overview
 
-BLOOM モデルは、[BigScience Workshop](https://bigscience.hf-mirror.com/) を通じてさまざまなバージョンで提案されています。 BigScience は、研究者が時間とリソースをプールして共同でより高い効果を達成する他のオープン サイエンス イニシアチブからインスピレーションを得ています。
+BLOOM モデルは、[BigScience Workshop](https://bigscience.huggingface.co/) を通じてさまざまなバージョンで提案されています。 BigScience は、研究者が時間とリソースをプールして共同でより高い効果を達成する他のオープン サイエンス イニシアチブからインスピレーションを得ています。
 BLOOM のアーキテクチャは基本的に GPT3 (次のトークン予測のための自己回帰モデル) に似ていますが、46 の異なる言語と 13 のプログラミング言語でトレーニングされています。
 モデルのいくつかの小さいバージョンが同じデータセットでトレーニングされています。 BLOOM は次のバージョンで利用できます。
 
-- [bloom-560m](https://hf-mirror.com/bigscience/bloom-560m)
-- [bloom-1b1](https://hf-mirror.com/bigscience/bloom-1b1)
-- [bloom-1b7](https://hf-mirror.com/bigscience/bloom-1b7)
-- [bloom-3b](https://hf-mirror.com/bigscience/bloom-3b)
-- [bloom-7b1](https://hf-mirror.com/bigscience/bloom-7b1)
-- [bloom](https://hf-mirror.com/bigscience/bloom) (176B parameters)
+- [bloom-560m](https://huggingface.co/bigscience/bloom-560m)
+- [bloom-1b1](https://huggingface.co/bigscience/bloom-1b1)
+- [bloom-1b7](https://huggingface.co/bigscience/bloom-1b7)
+- [bloom-3b](https://huggingface.co/bigscience/bloom-3b)
+- [bloom-7b1](https://huggingface.co/bigscience/bloom-7b1)
+- [bloom](https://huggingface.co/bigscience/bloom) (176B parameters)
 
 ## Resources
 
@@ -45,11 +45,11 @@ BLOOM を使い始めるのに役立つ公式 Hugging Face およびコミュニ
 
 
 ⚡️ 推論
--  に関するブログ  [最適化の話: ブルーム推論](https://hf-mirror.com/blog/bloom-inference-optimization)。
-- に関するブログ [DeepSpeed と Accelerate を使用した信じられないほど高速な BLOOM 推論](https://hf-mirror.com/blog/bloom-inference-pytorch-scripts)。
+-  に関するブログ  [最適化の話: ブルーム推論](https://huggingface.co/blog/bloom-inference-optimization)。
+- に関するブログ [DeepSpeed と Accelerate を使用した信じられないほど高速な BLOOM 推論](https://huggingface.co/blog/bloom-inference-pytorch-scripts)。
 
 ⚙️トレーニング
-- に関するブログ [BLOOM トレーニングの背後にあるテクノロジー](https://hf-mirror.com/blog/bloom-megatron-deepspeed)。
+- に関するブログ [BLOOM トレーニングの背後にあるテクノロジー](https://huggingface.co/blog/bloom-megatron-deepspeed)。
 
 ## BloomConfig
 

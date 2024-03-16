@@ -25,11 +25,11 @@ rendered properly in your Markdown viewer.
 このアプローチは、テキストなどの単一のモダリティに限定されなくなりました。このガイドでは、次のような方法を説明します。
 IDEFICS と呼ばれる大規模なマルチモーダル モデルを使用して、画像とテキストのタスクを解決します。
 
-[IDEFICS](../model_doc/idefics) は、[Flamingo](https://hf-mirror.com/papers/2204.14198) に基づくオープンアクセスのビジョンおよび言語モデルです。
+[IDEFICS](../model_doc/idefics) は、[Flamingo](https://huggingface.co/papers/2204.14198) に基づくオープンアクセスのビジョンおよび言語モデルです。
 DeepMind によって最初に開発された最先端の視覚言語モデル。モデルは任意の画像シーケンスを受け入れます
 テキストを入力し、出力として一貫したテキストを生成します。画像に関する質問に答えたり、視覚的なコンテンツについて説明したり、
-複数のイメージに基づいたストーリーを作成するなど。 IDEFICS には 2 つのバリエーションがあります - [800 億パラメータ](https://hf-mirror.com/HuggingFaceM4/idefics-80b)
-および [90 億のパラメータ](https://hf-mirror.com/HuggingFaceM4/idefics-9b)、どちらも 🤗 Hub で入手できます。各バリエーションについて、細かく調整された指示も見つけることができます。
+複数のイメージに基づいたストーリーを作成するなど。 IDEFICS には 2 つのバリエーションがあります - [800 億パラメータ](https://huggingface.co/HuggingFaceM4/idefics-80b)
+および [90 億のパラメータ](https://huggingface.co/HuggingFaceM4/idefics-9b)、どちらも 🤗 Hub で入手できます。各バリエーションについて、細かく調整された指示も見つけることができます。
 会話のユースケースに適応したモデルのバージョン。
 
 このモデルは非常に多用途で、幅広い画像タスクやマルチモーダル タスクに使用できます。しかし、
@@ -119,7 +119,7 @@ IDEFICS プロセッサは、[`LlamaTokenizer`] と IDEFICS 画像プロセッ�
 タスクを説明するには、キャプションを付ける画像を取得します。例:
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-im-captioning.jpg" alt="Image of a puppy in a flower bed"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-im-captioning.jpg" alt="Image of a puppy in a flower bed"/>
 </div>
 
 写真提供：[Hendo Wang](https://unsplash.com/@hendoo)
@@ -158,7 +158,7 @@ A puppy in a flower bed
 別の図で説明します。
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-prompted-im-captioning.jpg" alt="Image of the Eiffel Tower at night"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-prompted-im-captioning.jpg" alt="Image of the Eiffel Tower at night"/>
 </div>
 
 写真提供：[Denys Nevozhai](https://unsplash.com/@dnevozhai)。
@@ -191,7 +191,7 @@ IDEFICS はゼロショットで優れた結果を示しますが、タスクに
 次に、自由の女神の画像に対して同じ応答形式を取得できるかどうかを見てみましょう。
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg" alt="Image of the Statue of Liberty"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg" alt="Image of the Statue of Liberty"/>
 </div>
 
 写真提供：[Juan Mayobre](https://unsplash.com/@jmayobres)。
@@ -229,7 +229,7 @@ Visual Question Answering (VQA) は、画像に基づいて自由形式の質問
 このタスク用に新しい画像を取得しましょう。
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-vqa.jpg" alt="Image of a couple having a picnic"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-vqa.jpg" alt="Image of a couple having a picnic"/>
 </div>
 
 写真提供  [Jarritos Mexican Soda](https://unsplash.com/@jarritos).
@@ -262,7 +262,7 @@ IDEFICS は、次のデータを含むデータについて明示的にトレー
 たとえば、次のような野菜スタンドの画像があるとします。
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-classification.jpg" alt="Image of a vegetable stand"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-classification.jpg" alt="Image of a vegetable stand"/>
 </div>
 
 写真提供：[Peter Wendt](https://unsplash.com/@peterwendt)。
@@ -296,7 +296,7 @@ Category: Vegetables
 IDEFICS に、赤いドアの単純な画像に基づいてストーリーを書くように促してみましょう。
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-story-generation.jpg" alt="Image of a red door with a pumpkin on the steps"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-story-generation.jpg" alt="Image of a red door with a pumpkin on the steps"/>
 </div>
 
 写真提供：[Craig Tidball](https://unsplash.com/@devonshiremedia)。

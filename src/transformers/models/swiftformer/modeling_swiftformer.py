@@ -54,7 +54,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 SWIFTFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "MBZUAI/swiftformer-xs",
-    # See all SwiftFormer models at https://hf-mirror.com/models?filter=swiftformer
+    # See all SwiftFormer models at https://huggingface.co/models?filter=swiftformer
 ]
 
 

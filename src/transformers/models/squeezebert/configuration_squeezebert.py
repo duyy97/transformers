@@ -25,11 +25,11 @@ logger = logging.get_logger(__name__)
 
 SQUEEZEBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "squeezebert/squeezebert-uncased": (
-        "https://hf-mirror.com/squeezebert/squeezebert-uncased/resolve/main/config.json"
+        "https://huggingface.co/squeezebert/squeezebert-uncased/resolve/main/config.json"
     ),
-    "squeezebert/squeezebert-mnli": "https://hf-mirror.com/squeezebert/squeezebert-mnli/resolve/main/config.json",
+    "squeezebert/squeezebert-mnli": "https://huggingface.co/squeezebert/squeezebert-mnli/resolve/main/config.json",
     "squeezebert/squeezebert-mnli-headless": (
-        "https://hf-mirror.com/squeezebert/squeezebert-mnli-headless/resolve/main/config.json"
+        "https://huggingface.co/squeezebert/squeezebert-mnli-headless/resolve/main/config.json"
     ),
 }
 
@@ -39,7 +39,7 @@ class SqueezeBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`SqueezeBertModel`]. It is used to instantiate a
     SqueezeBERT model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the SqueezeBERT
-    [squeezebert/squeezebert-uncased](https://hf-mirror.com/squeezebert/squeezebert-uncased) architecture.
+    [squeezebert/squeezebert-uncased](https://huggingface.co/squeezebert/squeezebert-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

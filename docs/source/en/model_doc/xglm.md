@@ -40,7 +40,7 @@ on surface form robustness and adaptation to tasks that do not have a natural cl
 in social value tasks such as hate speech detection in five languages and find it has limitations similar to comparable sized GPT-3 models.*
 
 
-This model was contributed by [Suraj](https://hf-mirror.com/valhalla). The original code can be found [here](https://github.com/pytorch/fairseq/tree/main/examples/xglm).
+This model was contributed by [Suraj](https://huggingface.co/valhalla). The original code can be found [here](https://github.com/pytorch/fairseq/tree/main/examples/xglm).
 
 ## Resources
 

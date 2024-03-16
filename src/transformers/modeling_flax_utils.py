@@ -381,7 +381,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
         ```python
         >>> from transformers import FlaxBertModel
 
-        >>> # Download model and configuration from hf-mirror.com
+        >>> # Download model and configuration from huggingface.co
         >>> model = FlaxBertModel.from_pretrained("google-bert/bert-base-cased")
         >>> # By default, the model params will be in fp32, to illustrate the use of this method,
         >>> # we'll first cast to fp16 and back to fp32
@@ -543,7 +543,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
             pretrained_model_name_or_path (`str` or `os.PathLike`):
                 Can be either:
 
-                    - A string, the *model id* of a pretrained model hosted inside a model repo on hf-mirror.com.
+                    - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
                     - A path to a *directory* containing model weights saved using
                       [`~FlaxPreTrainedModel.save_pretrained`], e.g., `./my_model_directory/`.
                     - A path or url to a *pt index checkpoint file* (e.g, `./tf_model/model.ckpt.index`). In this case,
@@ -603,7 +603,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
                 the token generated when running `huggingface-cli login` (stored in `~/.huggingface`).
             revision (`str`, *optional*, defaults to `"main"`):
                 The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-                git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+                git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
                 identifier allowed by git.
 
 
@@ -614,7 +614,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
                 </Tip>
 
             subfolder (`str`, *optional*, defaults to `""`):
-                In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+                In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
                 specify the folder name here.
             kwargs (remaining dictionary of keyword arguments, *optional*):
                 Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
@@ -635,7 +635,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
         ```python
         >>> from transformers import BertConfig, FlaxBertModel
 
-        >>> # Download model and configuration from hf-mirror.com and cache.
+        >>> # Download model and configuration from huggingface.co and cache.
         >>> model = FlaxBertModel.from_pretrained("google-bert/bert-base-cased")
         >>> # Model was saved using *save_pretrained('./test/saved_model/')* (for example purposes, not runnable).
         >>> model = FlaxBertModel.from_pretrained("./test/saved_model/")
@@ -853,7 +853,7 @@ class FlaxPreTrainedModel(PushToHubMixin, FlaxGenerationMixin):
                     # For any other exception, we throw a generic error.
                     raise EnvironmentError(
                         f"Can't load the model for '{pretrained_model_name_or_path}'. If you were trying to load it"
-                        " from 'https://hf-mirror.com/models', make sure you don't have a local directory with the"
+                        " from 'https://huggingface.co/models', make sure you don't have a local directory with the"
                         f" same name. Otherwise, make sure '{pretrained_model_name_or_path}' is the correct path to a"
                         f" directory containing a file named {FLAX_WEIGHTS_NAME} or {WEIGHTS_NAME}."
                     )

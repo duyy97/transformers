@@ -66,7 +66,7 @@ _CTC_EXPECTED_LOSS = 17.04
 
 WAV2VEC2_BERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/w2v-bert-2.0",
-    # See all Wav2Vec2-BERT models at https://hf-mirror.com/models?filter=wav2vec2-bert
+    # See all Wav2Vec2-BERT models at https://huggingface.co/models?filter=wav2vec2-bert
 ]
 
 

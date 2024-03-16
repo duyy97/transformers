@@ -21,11 +21,11 @@ rendered properly in your Markdown viewer.
 The GPT-J model was released in the [kingoflolz/mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax) repository by Ben Wang and Aran Komatsuzaki. It is a GPT-2-like
 causal language model trained on [the Pile](https://pile.eleuther.ai/) dataset.
 
-This model was contributed by [Stella Biderman](https://hf-mirror.com/stellaathena).
+This model was contributed by [Stella Biderman](https://huggingface.co/stellaathena).
 
 ## Usage tips
 
-- To load [GPT-J](https://hf-mirror.com/EleutherAI/gpt-j-6B) in float32 one would need at least 2x model size
+- To load [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B) in float32 one would need at least 2x model size
   RAM: 1x for initial weights and another 1x to load the checkpoint. So for GPT-J it would take at least 48GB
   RAM to just load the model. To reduce the RAM usage there are a few options. The `torch_dtype` argument can be
   used to initialize the model in half-precision on a CUDA device only. There is also a fp16 branch which stores the fp16 weights,
@@ -53,7 +53,7 @@ This model was contributed by [Stella Biderman](https://hf-mirror.com/stellaathe
 
 - Although the embedding matrix has a size of 50400, only 50257 entries are used by the GPT-2 tokenizer. These extra
   tokens are added for the sake of efficiency on TPUs. To avoid the mismatch between embedding matrix size and vocab
-  size, the tokenizer for [GPT-J](https://hf-mirror.com/EleutherAI/gpt-j-6B) contains 143 extra tokens
+  size, the tokenizer for [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B) contains 143 extra tokens
   `<|extratoken_1|>... <|extratoken_143|>`, so the `vocab_size` of tokenizer also becomes 50400.
 
 ## Usage examples
@@ -117,13 +117,13 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-generation"/>
 
-- Description of [GPT-J](https://hf-mirror.com/EleutherAI/gpt-j-6B).
-- A blog on how to [Deploy GPT-J 6B for inference using Hugging Face Transformers and Amazon SageMaker](https://hf-mirror.com/blog/gptj-sagemaker).
+- Description of [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B).
+- A blog on how to [Deploy GPT-J 6B for inference using Hugging Face Transformers and Amazon SageMaker](https://huggingface.co/blog/gptj-sagemaker).
 - A blog on how to [Accelerate GPT-J inference with DeepSpeed-Inference on GPUs](https://www.philschmid.de/gptj-deepspeed-inference).
 - A blog post introducing [GPT-J-6B: 6B JAX-Based Transformer](https://arankomatsuzaki.wordpress.com/2021/06/04/gpt-j/). 🌎
 - A notebook for [GPT-J-6B Inference Demo](https://colab.research.google.com/github/kingoflolz/mesh-transformer-jax/blob/master/colab_demo.ipynb). 🌎
 - Another notebook demonstrating [Inference with GPT-J-6B](https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/GPT-J-6B/Inference_with_GPT_J_6B.ipynb).  
-- [Causal language modeling](https://hf-mirror.com/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
+- [Causal language modeling](https://huggingface.co/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
 - [`GPTJForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#gpt-2gpt-and-causal-language-modeling), [text generation example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-generation), and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFGPTJForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_clmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxGPTJForCausalLM`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#causal-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/causal_language_modeling_flax.ipynb).

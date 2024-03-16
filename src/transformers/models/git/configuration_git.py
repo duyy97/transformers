@@ -23,7 +23,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 GIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/git-base": "https://hf-mirror.com/microsoft/git-base/resolve/main/config.json",
+    "microsoft/git-base": "https://huggingface.co/microsoft/git-base/resolve/main/config.json",
 }
 
 
@@ -32,7 +32,7 @@ class GitVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GitVisionModel`]. It is used to instantiate a GIT
     vision encoder according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the vision encoder of the GIT
-    [microsoft/git-base](https://hf-mirror.com/microsoft/git-base) architecture.
+    [microsoft/git-base](https://huggingface.co/microsoft/git-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -130,7 +130,7 @@ class GitConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`GitModel`]. It is used to instantiate a GIT model
     according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the GIT
-    [microsoft/git-base](https://hf-mirror.com/microsoft/git-base) architecture.
+    [microsoft/git-base](https://huggingface.co/microsoft/git-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

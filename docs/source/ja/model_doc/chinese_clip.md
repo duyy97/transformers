@@ -25,7 +25,7 @@ Chinese-CLIP は、中国語の画像とテキストのペアの大規模なデ�
 
 *CLIP の大成功 (Radford et al., 2021) により、視覚言語の事前訓練のための対照学習の研究と応用が促進されました。この研究では、ほとんどのデータが公開されているデータセットから取得された中国語の画像とテキストのペアの大規模なデータセットを構築し、新しいデータセットで中国語の CLIP モデルを事前トレーニングします。当社では、7,700 万から 9 億 5,800 万のパラメータにわたる、複数のサイズの 5 つの中国 CLIP モデルを開発しています。さらに、モデルのパフォーマンスを向上させるために、最初に画像エンコーダーをフリーズさせてモデルをトレーニングし、次にすべてのパラメーターを最適化してトレーニングする 2 段階の事前トレーニング方法を提案します。私たちの包括的な実験では、中国の CLIP がゼロショット学習と微調整のセットアップで MUGE、Flickr30K-CN、および COCO-CN 上で最先端のパフォーマンスを達成でき、ゼロで競争力のあるパフォーマンスを達成できることを実証しています。 - ELEVATER ベンチマークでの評価に基づくショット画像の分類 (Li et al., 2022)。コード、事前トレーニング済みモデル、デモがリリースされました。*
 
-Chinese-CLIP モデルは、[OFA-Sys](https://hf-mirror.com/OFA-Sys) によって提供されました。
+Chinese-CLIP モデルは、[OFA-Sys](https://huggingface.co/OFA-Sys) によって提供されました。
 
 ## Usage example
 
@@ -63,10 +63,10 @@ Chinese-CLIP モデルは、[OFA-Sys](https://hf-mirror.com/OFA-Sys) によっ�
 
 現在、次のスケールの事前トレーニング済み Chinese-CLIP モデルが 🤗 Hub で利用可能です。
 
-- [OFA-Sys/chinese-clip-vit-base-patch16](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16)
-- [OFA-Sys/chinese-clip-vit-large-patch14](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-large-patch14)
-- [OFA-Sys/chinese-clip-vit-large-patch14-336px](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-large-patch14-336px)
-- [OFA-Sys/chinese-clip-vit-huge-patch14](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-huge-patch14)
+- [OFA-Sys/chinese-clip-vit-base-patch16](https://huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16)
+- [OFA-Sys/chinese-clip-vit-large-patch14](https://huggingface.co/OFA-Sys/chinese-clip-vit-large-patch14)
+- [OFA-Sys/chinese-clip-vit-large-patch14-336px](https://huggingface.co/OFA-Sys/chinese-clip-vit-large-patch14-336px)
+- [OFA-Sys/chinese-clip-vit-huge-patch14](https://huggingface.co/OFA-Sys/chinese-clip-vit-huge-patch14)
 
 ## ChineseCLIPConfig
 

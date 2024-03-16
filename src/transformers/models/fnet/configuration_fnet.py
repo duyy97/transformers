@@ -21,9 +21,9 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 FNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/fnet-base": "https://hf-mirror.com/google/fnet-base/resolve/main/config.json",
-    "google/fnet-large": "https://hf-mirror.com/google/fnet-large/resolve/main/config.json",
-    # See all FNet models at https://hf-mirror.com/models?filter=fnet
+    "google/fnet-base": "https://huggingface.co/google/fnet-base/resolve/main/config.json",
+    "google/fnet-large": "https://huggingface.co/google/fnet-large/resolve/main/config.json",
+    # See all FNet models at https://huggingface.co/models?filter=fnet
 }
 
 
@@ -32,7 +32,7 @@ class FNetConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`FNetModel`]. It is used to instantiate an FNet
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the FNet
-    [google/fnet-base](https://hf-mirror.com/google/fnet-base) architecture.
+    [google/fnet-base](https://huggingface.co/google/fnet-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

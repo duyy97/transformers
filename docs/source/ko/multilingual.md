@@ -21,7 +21,7 @@ rendered properly in your Markdown viewer.
 🤗 Transformers에는 여러 종류의 다국어(multilingual) 모델이 있으며, 단일 언어(monolingual) 모델과 추론 시 사용법이 다릅니다.
 그렇다고 해서 *모든* 다국어 모델의 사용법이 다른 것은 아닙니다.
 
-[google-bert/bert-base-multilingual-uncased](https://hf-mirror.com/google-bert/bert-base-multilingual-uncased)와 같은 몇몇 모델은 단일 언어 모델처럼 사용할 수 있습니다.
+[google-bert/bert-base-multilingual-uncased](https://huggingface.co/google-bert/bert-base-multilingual-uncased)와 같은 몇몇 모델은 단일 언어 모델처럼 사용할 수 있습니다.
 이번 가이드에서 다국어 모델의 추론 시 사용 방법을 알아볼 것입니다.
 
 ## XLM[[xlm]]

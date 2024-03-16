@@ -1,6 +1,6 @@
 # CodeParrot 🦜
 <p align="center">
-    <img src="https://hf-mirror.com/datasets/lvwerra/repo-images/raw/main/code-highlighting-streamlit.png" alt="drawing" width="350"/>
+    <img src="https://huggingface.co/datasets/lvwerra/repo-images/raw/main/code-highlighting-streamlit.png" alt="drawing" width="350"/>
 </p>
 
 ## What is this about?
@@ -11,7 +11,7 @@ This is an open-source effort to train and evaluate code generation models. Code
 - train with `accelerate` on multiple GPUs using data parallelism and mixed precision
 - continuously push checkpoints to the hub with `huggingface_hub`
 - stream the dataset with `datasets` during training to avoid disk bottlenecks
-- apply the `code_eval` metric in `datasets` to evaluate on [OpenAI's _HumanEval_ benchmark](https://hf-mirror.com/datasets/openai_humaneval)
+- apply the `code_eval` metric in `datasets` to evaluate on [OpenAI's _HumanEval_ benchmark](https://huggingface.co/datasets/openai_humaneval)
 - showcase examples for downstream tasks with code models in [examples](https://github.com/huggingface/transformers/tree/main/examples/research_projects/codeparrot/examples) folder:
     - Algorithmic complexity prediction
     - Code generation from english text
@@ -38,7 +38,7 @@ huggingface-cli login
 Additionally, sure you have git-lfs installed. You can find instructions for how to install it [here](https://git-lfs.github.com/).
 
 ## Dataset
-The source of the dataset is the GitHub dump available on Google's [BigQuery](https://cloud.google.com/blog/topics/public-datasets/github-on-bigquery-analyze-all-the-open-source-code). The database was queried for all Python files with less than 1MB in size resulting in a 180GB dataset with over 20M files. The dataset is available on the Hugging Face Hub [here](https://hf-mirror.com/datasets/transformersbook/codeparrot).
+The source of the dataset is the GitHub dump available on Google's [BigQuery](https://cloud.google.com/blog/topics/public-datasets/github-on-bigquery-analyze-all-the-open-source-code). The database was queried for all Python files with less than 1MB in size resulting in a 180GB dataset with over 20M files. The dataset is available on the Hugging Face Hub [here](https://huggingface.co/datasets/transformersbook/codeparrot).
 
 ### Preprocessing
 The raw dataset contains many duplicates. We deduplicated and filtered the dataset using the heuristics proposed in OpenAI's Codex [paper](https://arxiv.org/abs/2107.03374) and some new ones:
@@ -55,7 +55,7 @@ The raw dataset contains many duplicates. We deduplicated and filtered the datas
 - filtering files that use the assignment operator `=` less than 5 times 
 - filtering files with ratio between number of characters and number of tokens after tokenization < 1.5 (the average ratio is 3.6)
 
-The script to process the full dataset can be found in `scripts/preprocessing.py`. Executing the script on 16 vCPUs takes roughly 3h and removes 70% of the original dataset. The cleaned [train](https://hf-mirror.com/datasets/codeparrot/codeparrot-clean-train-v2) and [validation](https://hf-mirror.com/datasets/codeparrot/codeparrot-clean-valid-v2) splits are also available on the Hub if you want to skip this step or use the data for another project.
+The script to process the full dataset can be found in `scripts/preprocessing.py`. Executing the script on 16 vCPUs takes roughly 3h and removes 70% of the original dataset. The cleaned [train](https://huggingface.co/datasets/codeparrot/codeparrot-clean-train-v2) and [validation](https://huggingface.co/datasets/codeparrot/codeparrot-clean-valid-v2) splits are also available on the Hub if you want to skip this step or use the data for another project.
 
 To execute the preprocessing run the following command:
 ```bash
@@ -66,7 +66,7 @@ python scripts/preprocessing.py \
 During preprocessing the dataset is downloaded and stored locally as well as caches of the computations. Make sure you have more than 500GB free disk space to execute it.
 
 ### Pretokenization
-The tokenization of the data might be slow during the training especially for small models. We provide code to pretokenize the data beforehand in `scripts/pretokenizing.py`, but this step is optional. The dataset is downloaded and stored locally and the tokenized data is pushed to the hub. The tokenized clean [train](https://hf-mirror.com/datasets/codeparrot/tokenized-codeparrot-train) and [validation](https://hf-mirror.com/datasets/codeparrot/tokenized-codeparrot-valid) datasets are available if you want to use them directly.
+The tokenization of the data might be slow during the training especially for small models. We provide code to pretokenize the data beforehand in `scripts/pretokenizing.py`, but this step is optional. The dataset is downloaded and stored locally and the tokenized data is pushed to the hub. The tokenized clean [train](https://huggingface.co/datasets/codeparrot/tokenized-codeparrot-train) and [validation](https://huggingface.co/datasets/codeparrot/tokenized-codeparrot-valid) datasets are available if you want to use them directly.
 
 To execute the pretokenization, for the clean train data for instance, run the following command:
 ```bash
@@ -98,7 +98,7 @@ python scripts/initialize_model.py \
 This will initialize a new model with the architecture and configuration of `openai-community/gpt2-large` and use the tokenizer to appropriately size the input embeddings. Finally, the initilaized model is pushed the hub.
 
 We can either pass the name of a text dataset or a pretokenized dataset which speeds up training a bit.
-Now that the tokenizer and model are also ready we can start training the model. The main training script is built with `accelerate` to scale across a wide range of platforms and infrastructure scales. We train two models with [110M](https://hf-mirror.com/codeparrot/codeparrot-small/) and [1.5B](https://hf-mirror.com/codeparrot/codeparrot/) parameters for 25-30B tokens on a 16xA100 (40GB) machine which takes 1 day and 1 week, respectively.
+Now that the tokenizer and model are also ready we can start training the model. The main training script is built with `accelerate` to scale across a wide range of platforms and infrastructure scales. We train two models with [110M](https://huggingface.co/codeparrot/codeparrot-small/) and [1.5B](https://huggingface.co/codeparrot/codeparrot/) parameters for 25-30B tokens on a 16xA100 (40GB) machine which takes 1 day and 1 week, respectively.
 
 First you need to configure `accelerate` and login to Weights & Biases:
 
@@ -139,8 +139,8 @@ Instead of streaming the dataset from the hub you can also stream it from disk. 
 ```bash
 git lfs install
 mkdir data
-git -C "./data" clone https://hf-mirror.com/datasets/codeparrot/codeparrot-clean-train
-git -C "./data" clone https://hf-mirror.com/datasets/codeparrot/codeparrot-clean-valid
+git -C "./data" clone https://huggingface.co/datasets/codeparrot/codeparrot-clean-train
+git -C "./data" clone https://huggingface.co/datasets/codeparrot/codeparrot-clean-valid
 ```
 
 And then pass the paths to the datasets when we run the training script:
@@ -199,9 +199,9 @@ The numbers were obtained by sampling with `T = [0.2, 0.6, 0.8]` and picking the
 
 ## Demo
 Give the model a shot yourself! There are three demos to interact with CodeParrot 🦜:
-- [Code generation](https://hf-mirror.com/spaces/codeparrot/codeparrot-generation)
-- [Code highlighting](https://hf-mirror.com/spaces/codeparrot/codeparrot-highlighting)
-- [Comparison to other code models](https://hf-mirror.com/spaces/codeparrot/loubnabnl/code-generation-models)
+- [Code generation](https://huggingface.co/spaces/codeparrot/codeparrot-generation)
+- [Code highlighting](https://huggingface.co/spaces/codeparrot/codeparrot-highlighting)
+- [Comparison to other code models](https://huggingface.co/spaces/codeparrot/loubnabnl/code-generation-models)
 
 ## Training with Megatron
 [Megatron](https://github.com/NVIDIA/Megatron-LM) is a framework developed by NVIDIA for training large transformer models. While the CodeParrot code is easy to follow and modify to your needs the Megatron framework lets you train models faster. Below we explain how to use it.
@@ -215,7 +215,7 @@ docker run --gpus all -it --rm nvcr.io/nvidia/pytorch:xx.xx-py3
 git clone https://github.com/NVIDIA/Megatron-LM
 ```
 
-You also need to add the vocabulary file and merges table of the tokenizer that you trained on code into the container. You can also find these files in [vocab.json](https://hf-mirror.com/codeparrot/codeparrot/raw/main/vocab.json) and [merges.txt](https://hf-mirror.com/codeparrot/codeparrot/raw/main/merges.txt).
+You also need to add the vocabulary file and merges table of the tokenizer that you trained on code into the container. You can also find these files in [vocab.json](https://huggingface.co/codeparrot/codeparrot/raw/main/vocab.json) and [merges.txt](https://huggingface.co/codeparrot/codeparrot/raw/main/merges.txt).
 ```bash
 sudo docker cp vocab.json CONTAINER_ID:/workspace/Megatron-LM
 sudo docker cp merges.txt CONTAINER_ID:/workspace/Megatron-LM
@@ -298,7 +298,7 @@ python3 -m torch.distributed.launch $DISTRIBUTED_ARGS \
 The training takes almost 12 hours in this setting.
 
 ### Convert model to `transformers`
-After training we want to use the model in `transformers` e.g. to evaluate it on HumanEval. You can convert it to `transformers` following [this](https://hf-mirror.com/nvidia/megatron-gpt2-345m) tutorial. For instance, after the training is finished you can copy the weights of the last iteration 150k and convert the `model_optim_rng.pt` file to a `pytorch_model.bin` file that is supported by `transformers`.
+After training we want to use the model in `transformers` e.g. to evaluate it on HumanEval. You can convert it to `transformers` following [this](https://huggingface.co/nvidia/megatron-gpt2-345m) tutorial. For instance, after the training is finished you can copy the weights of the last iteration 150k and convert the `model_optim_rng.pt` file to a `pytorch_model.bin` file that is supported by `transformers`.
 
 ```bash
 mkdir -p nvidia/megatron-codeparrot-small

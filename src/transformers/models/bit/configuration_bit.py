@@ -22,7 +22,7 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 BIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/bit-50": "https://hf-mirror.com/google/bit-50/resolve/main/config.json",
+    "google/bit-50": "https://huggingface.co/google/bit-50/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class BitConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`BitModel`]. It is used to instantiate an BiT
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the BiT
-    [google/bit-50](https://hf-mirror.com/google/bit-50) architecture.
+    [google/bit-50](https://huggingface.co/google/bit-50) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

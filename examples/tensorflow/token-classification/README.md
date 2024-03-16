@@ -20,7 +20,7 @@ Fine-tuning the library models for token classification task such as Named Entit
 tagging (POS) or phrase extraction (CHUNKS). The main script `run_ner.py` leverages the [🤗 Datasets](https://github.com/huggingface/datasets) library. You can easily
 customize it to your needs if you need extra processing on your datasets.
 
-It will either run on a datasets hosted on our [hub](https://hf-mirror.com/datasets) or with your own text files for
+It will either run on a datasets hosted on our [hub](https://huggingface.co/datasets) or with your own text files for
 training and validation, you might just need to add some tweaks in the data preprocessing.
 
 The following example fine-tunes BERT on CoNLL-2003:
@@ -44,4 +44,4 @@ python run_ner.py \
 
 **Note:** This script only works with models that have a fast tokenizer (backed by the [🤗 Tokenizers](https://github.com/huggingface/tokenizers) library) as it
 uses special features of those tokenizers. You can check if your favorite model has a fast tokenizer in
-[this table](https://hf-mirror.com/transformers/index.html#supported-frameworks).
+[this table](https://huggingface.co/transformers/index.html#supported-frameworks).

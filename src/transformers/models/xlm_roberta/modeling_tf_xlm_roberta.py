@@ -72,7 +72,7 @@ TF_XLM_ROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "FacebookAI/xlm-roberta-large",
     "joeddav/xlm-roberta-large-xnli",
     "cardiffnlp/twitter-xlm-roberta-base-sentiment",
-    # See all XLM-RoBERTa models at https://hf-mirror.com/models?filter=xlm-roberta
+    # See all XLM-RoBERTa models at https://huggingface.co/models?filter=xlm-roberta
 ]
 
 XLM_ROBERTA_START_DOCSTRING = r"""

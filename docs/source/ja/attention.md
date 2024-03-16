@@ -40,7 +40,7 @@ qとkが近いかどうかを決定するために、ハッシュ関数が使用
 これは、論文の図2dに示されており、以下はサンプルのアテンションマスクです：
 
 <div class="flex justify-center">
-    <img scale="50 %" align="center" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
+    <img scale="50 %" align="center" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/local_attention_mask.png"/>
 </div>
 
 

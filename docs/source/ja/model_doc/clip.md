@@ -40,7 +40,7 @@ OCR、ビデオ内のアクション認識、地理的位置特定、および�
 トレーニングに使用された 128 万のトレーニング サンプルを使用する必要はありません。コードをリリースし、事前トレーニング済み
 モデルの重みはこの https URL で確認できます。*
 
-このモデルは [valhalla](https://hf-mirror.com/valhalla) によって提供されました。元のコードは [ここ](https://github.com/openai/CLIP) にあります。
+このモデルは [valhalla](https://huggingface.co/valhalla) によって提供されました。元のコードは [ここ](https://github.com/openai/CLIP) にあります。
 
 ## Usage tips and example
 
@@ -82,7 +82,7 @@ CLIP は、マルチモーダルなビジョンおよび言語モデルです。
 
 CLIP を使い始めるのに役立つ公式 Hugging Face およびコミュニティ (🌎 で示されている) リソースのリスト。
 
-- [リモート センシング (衛星) 画像とキャプションを使用した CLIP の微調整](https://hf-mirror.com/blog/fine-tune-clip-rsicd)、[RSICD データセット] を使用して CLIP を微調整する方法に関するブログ投稿(https://github.com/201528014227051/RSICD_optimal) と、データ拡張によるパフォーマンスの変化の比較。
+- [リモート センシング (衛星) 画像とキャプションを使用した CLIP の微調整](https://huggingface.co/blog/fine-tune-clip-rsicd)、[RSICD データセット] を使用して CLIP を微調整する方法に関するブログ投稿(https://github.com/201528014227051/RSICD_optimal) と、データ拡張によるパフォーマンスの変化の比較。
 - この [サンプル スクリプト](https://github.com/huggingface/transformers/tree/main/examples/pytorch/contrastive-image-text) は、プレ- [COCO データセット](https://cocodataset.org/#home) を使用してトレーニングされたビジョンおよびテキスト エンコーダー。
 
 <PipelineTag pipeline="image-to-text"/>

@@ -20,7 +20,7 @@ rendered properly in your Markdown viewer.
 
 The OneFormer model was proposed in [OneFormer: One Transformer to Rule Universal Image Segmentation](https://arxiv.org/abs/2211.06220) by Jitesh Jain, Jiachen Li, MangTik Chiu, Ali Hassani, Nikita Orlov, Humphrey Shi. OneFormer is a universal image segmentation framework that can be trained on a single panoptic dataset to perform semantic, instance, and panoptic segmentation tasks. OneFormer uses a task token to condition the model on the task in focus, making the architecture task-guided for training, and task-dynamic for inference.
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/oneformer_teaser.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/oneformer_teaser.png"/>
 
 The abstract from the paper is the following:
 
@@ -28,9 +28,9 @@ The abstract from the paper is the following:
 
 The figure below illustrates the architecture of OneFormer. Taken from the [original paper](https://arxiv.org/abs/2211.06220).
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/oneformer_architecture.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/oneformer_architecture.png"/>
 
-This model was contributed by [Jitesh Jain](https://hf-mirror.com/praeclarumjj3). The original code can be found [here](https://github.com/SHI-Labs/OneFormer).
+This model was contributed by [Jitesh Jain](https://huggingface.co/praeclarumjj3). The original code can be found [here](https://github.com/SHI-Labs/OneFormer).
 
 ## Usage tips
 

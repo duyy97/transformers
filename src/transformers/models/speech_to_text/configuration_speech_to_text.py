@@ -22,9 +22,9 @@ logger = logging.get_logger(__name__)
 
 SPEECH_TO_TEXT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "facebook/s2t-small-librispeech-asr": (
-        "https://hf-mirror.com/facebook/s2t-small-librispeech-asr/resolve/main/config.json"
+        "https://huggingface.co/facebook/s2t-small-librispeech-asr/resolve/main/config.json"
     ),
-    # See all Speech2Text models at https://hf-mirror.com/models?filter=speech_to_text
+    # See all Speech2Text models at https://huggingface.co/models?filter=speech_to_text
 }
 
 
@@ -33,7 +33,7 @@ class Speech2TextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Speech2TextModel`]. It is used to instantiate a
     Speech2Text model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Speech2Text
-    [facebook/s2t-small-librispeech-asr](https://hf-mirror.com/facebook/s2t-small-librispeech-asr) architecture.
+    [facebook/s2t-small-librispeech-asr](https://huggingface.co/facebook/s2t-small-librispeech-asr) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

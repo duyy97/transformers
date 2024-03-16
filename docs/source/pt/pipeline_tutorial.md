@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Pipelines para inferência
 
-Um [pipeline] simplifica o uso dos modelos no [Model Hub](https://hf-mirror.com/models) para a inferência de uma diversidade de tarefas,
+Um [pipeline] simplifica o uso dos modelos no [Model Hub](https://huggingface.co/models) para a inferência de uma diversidade de tarefas,
 como a geração de texto, a segmentação de imagens e a classificação de áudio.
 Inclusive, se não tem experiência com alguma modalidade específica ou não compreende o código que forma os modelos,
 pode usar eles mesmo assim com o [pipeline]! Este tutorial te ensinará a:
@@ -77,7 +77,7 @@ Por exemplo, se quiser gerar mais de uma saída, defina-a no parâmetro `num_ret
 
 ### Selecionando um modelo e um tokenizador
 
-O [`pipeline`] aceita qualquer modelo do [Model Hub](https://hf-mirror.com/models). Há rótulos adicionais no Model Hub
+O [`pipeline`] aceita qualquer modelo do [Model Hub](https://huggingface.co/models). Há rótulos adicionais no Model Hub
 que te permitem filtrar pelo modelo que gostaria de usar para sua tarefa. Uma vez que tiver escolhido o modelo apropriado,
 carregue-o com as classes `AutoModelFor` e [`AutoTokenizer`] correspondentes. Por exemplo, carregue a classe [`AutoModelForCausalLM`]
 para uma tarefa de modelagem de linguagem causal:
@@ -110,7 +110,7 @@ A flexibilidade do [`pipeline`] significa que também pode-se extender às taref
 La flexibilidad de [`pipeline`] significa que también se puede extender a tareas de audio.
 
 Por exemplo, classifiquemos a emoção de um breve fragmento do famoso discurso de John F. Kennedy /home/rzimmerdev/dev/transformers/docs/source/pt/pipeline_tutorial.md
-Encontre um modelo de [audio classification](https://hf-mirror.com/models?pipeline_tag=audio-classification) para
+Encontre um modelo de [audio classification](https://huggingface.co/models?pipeline_tag=audio-classification) para
 reconhecimento de emoções no Model Hub e carregue-o usando o [`pipeline`]:
 
 ```py
@@ -138,14 +138,14 @@ Finalmente, utilizar um [`pipeline`] para tarefas de visão é praticamente a me
 Especifique a sua tarefa de visão e passe a sua imagem ao classificador.
 A imagem pode ser um link ou uma rota local à imagem. Por exemplo, que espécie de gato está presente na imagem?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(task="image-classification")
 >>> vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 [{'label': 'lynx, catamount', 'score': 0.4403027892112732},
  {'label': 'cougar, puma, catamount, mountain lion, painter, panther, Felis concolor',

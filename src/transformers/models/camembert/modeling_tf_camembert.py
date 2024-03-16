@@ -66,7 +66,7 @@ _CHECKPOINT_FOR_DOC = "almanach/camembert-base"
 _CONFIG_FOR_DOC = "CamembertConfig"
 
 TF_CAMEMBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
-    # See all CamemBERT models at https://hf-mirror.com/models?filter=camembert
+    # See all CamemBERT models at https://huggingface.co/models?filter=camembert
 ]
 
 

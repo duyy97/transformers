@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # mT5
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=mt5">
+<a href="https://huggingface.co/models?filter=mt5">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-mt5-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/mt5-small-finetuned-arxiv-cs-finetuned-arxiv-cs-full">
+<a href="https://huggingface.co/spaces/docs-demos/mt5-small-finetuned-arxiv-cs-finetuned-arxiv-cs-full">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -40,24 +40,24 @@ benchmarks. We also describe a simple technique to prevent "accidental translati
 generative model chooses to (partially) translate its prediction into the wrong language. All of the code and model
 checkpoints used in this work are publicly available.*
 
-Note: mT5 was only pre-trained on [mC4](https://hf-mirror.com/datasets/mc4) excluding any supervised training.
+Note: mT5 was only pre-trained on [mC4](https://huggingface.co/datasets/mc4) excluding any supervised training.
 Therefore, this model has to be fine-tuned before it is usable on a downstream task, unlike the original T5 model.
 Since mT5 was pre-trained unsupervisedly, there's no real advantage to using a task prefix during single-task
 fine-tuning. If you are doing multi-task fine-tuning, you should use a prefix.
 
 Google has released the following variants:
 
-- [google/mt5-small](https://hf-mirror.com/google/mt5-small)
+- [google/mt5-small](https://huggingface.co/google/mt5-small)
 
-- [google/mt5-base](https://hf-mirror.com/google/mt5-base)
+- [google/mt5-base](https://huggingface.co/google/mt5-base)
 
-- [google/mt5-large](https://hf-mirror.com/google/mt5-large)
+- [google/mt5-large](https://huggingface.co/google/mt5-large)
 
-- [google/mt5-xl](https://hf-mirror.com/google/mt5-xl)
+- [google/mt5-xl](https://huggingface.co/google/mt5-xl)
 
-- [google/mt5-xxl](https://hf-mirror.com/google/mt5-xxl).
+- [google/mt5-xxl](https://huggingface.co/google/mt5-xxl).
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The original code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The original code can be
 found [here](https://github.com/google-research/multilingual-t5).
 
 ## Resources

@@ -29,13 +29,13 @@ rendered properly in your Markdown viewer.
 標準化された演算子とデータ型を備えたグラフを公開することで、ONNXはフレームワーク間の切り替えを容易にします。たとえば、PyTorchでトレーニングされたモデルはONNX形式にエクスポートし、それをTensorFlowでインポートすることができます（逆も同様です）。
 
 ONNX形式にエクスポートされたモデルは、以下のように使用できます：
-- [グラフ最適化](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/optimization)や[量子化](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/quantization)などのテクニックを使用して推論のために最適化。
-- [`ORTModelForXXX`クラス](https://hf-mirror.com/docs/optimum/onnxruntime/package_reference/modeling_ort)を介してONNX Runtimeで実行し、🤗 Transformersでおなじみの`AutoModel` APIに従います。
-- [最適化された推論パイプライン](https://hf-mirror.com/docs/optimum/main/en/onnxruntime/usage_guides/pipelines)を介して実行し、🤗 Transformersの[`pipeline`]関数と同じAPIを持っています。
+- [グラフ最適化](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/optimization)や[量子化](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/quantization)などのテクニックを使用して推論のために最適化。
+- [`ORTModelForXXX`クラス](https://huggingface.co/docs/optimum/onnxruntime/package_reference/modeling_ort)を介してONNX Runtimeで実行し、🤗 Transformersでおなじみの`AutoModel` APIに従います。
+- [最適化された推論パイプライン](https://huggingface.co/docs/optimum/main/en/onnxruntime/usage_guides/pipelines)を介して実行し、🤗 Transformersの[`pipeline`]関数と同じAPIを持っています。
 
 🤗 Optimumは、設定オブジェクトを活用してONNXエクスポートをサポートしており、これらの設定オブジェクトは多くのモデルアーキテクチャ用に事前に作成されており、他のアーキテクチャにも簡単に拡張できるように設計されています。
 
-事前に作成された設定のリストについては、[🤗 Optimumドキュメント](https://hf-mirror.com/docs/optimum/exporters/onnx/overview)を参照してください。
+事前に作成された設定のリストについては、[🤗 Optimumドキュメント](https://huggingface.co/docs/optimum/exporters/onnx/overview)を参照してください。
 
 🤗 TransformersモデルをONNXにエクスポートする方法は2つあります。以下では両方の方法を示します：
 
@@ -50,7 +50,7 @@ ONNX形式にエクスポートされたモデルは、以下のように使用�
 pip install optimum[exporters]
 ```
 
-すべての利用可能な引数を確認するには、[🤗 Optimumドキュメント](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli)を参照してください。または、コマンドラインでヘルプを表示することもできます：
+すべての利用可能な引数を確認するには、[🤗 Optimumドキュメント](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli)を参照してください。または、コマンドラインでヘルプを表示することもできます：
 
 
 ```bash
@@ -78,7 +78,7 @@ Validating ONNX model distilbert_base_uncased_squad_onnx/model.onnx...
 The ONNX export succeeded and the exported model was saved at: distilbert_base_uncased_squad_onnx
 ```
 
-上記の例は🤗 Hubからのチェックポイントのエクスポートを示しています。ローカルモデルをエクスポートする場合、まずモデルの重みとトークナイザのファイルを同じディレクトリ（`local_path`）に保存してください。CLIを使用する場合、🤗 Hubのチェックポイント名の代わりに`model`引数に`local_path`を渡し、`--task`引数を指定してください。[🤗 Optimumドキュメント](https://hf-mirror.com/docs/optimum/exporters/task_manager)でサポートされているタスクのリストを確認できます。`task`引数が指定されていない場合、タスク固有のヘッドを持たないモデルアーキテクチャがデフォルトで選択されます。
+上記の例は🤗 Hubからのチェックポイントのエクスポートを示しています。ローカルモデルをエクスポートする場合、まずモデルの重みとトークナイザのファイルを同じディレクトリ（`local_path`）に保存してください。CLIを使用する場合、🤗 Hubのチェックポイント名の代わりに`model`引数に`local_path`を渡し、`--task`引数を指定してください。[🤗 Optimumドキュメント](https://huggingface.co/docs/optimum/exporters/task_manager)でサポートされているタスクのリストを確認できます。`task`引数が指定されていない場合、タスク固有のヘッドを持たないモデルアーキテクチャがデフォルトで選択されます。
 
 
 ```bash
@@ -98,7 +98,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 >>> outputs = model(**inputs)
 ```
 
-🤗 HubからTensorFlowのチェックポイントをエクスポートするプロセスは、同様です。例えば、[Keras organization](https://hf-mirror.com/keras-io)から純粋なTensorFlowのチェックポイントをエクスポートする方法は以下の通りです：
+🤗 HubからTensorFlowのチェックポイントをエクスポートするプロセスは、同様です。例えば、[Keras organization](https://huggingface.co/keras-io)から純粋なTensorFlowのチェックポイントをエクスポートする方法は以下の通りです：
 
 
 ```bash
@@ -127,7 +127,7 @@ CLIの代わりに、🤗 TransformersモデルをONNXにプログラム的に�
 
 ### Exporting a model for an unsupported architecture
 
-現在エクスポートできないモデルをサポートするために貢献したい場合、まず[`optimum.exporters.onnx`](https://hf-mirror.com/docs/optimum/exporters/onnx/overview)でサポートされているかどうかを確認し、サポートされていない場合は[🤗 Optimumに貢献](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/contribute)してください。
+現在エクスポートできないモデルをサポートするために貢献したい場合、まず[`optimum.exporters.onnx`](https://huggingface.co/docs/optimum/exporters/onnx/overview)でサポートされているかどうかを確認し、サポートされていない場合は[🤗 Optimumに貢献](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/contribute)してください。
 
 ### Exporting a model with `transformers.onnx`
 

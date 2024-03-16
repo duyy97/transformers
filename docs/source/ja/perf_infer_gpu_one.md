@@ -72,19 +72,19 @@ model = AutoModelForCausalLM.from_pretrained(
 以下は、パディングトークンのない場合に、シーケンス長が4096の[tiiuae/falcon-7b](https://hf.co/tiiuae/falcon-7b)に対する単純なフォワードパスの予想される高速化です。さまざまなバッチサイズが示されています：
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/falcon-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/falcon-7b-inference-large-seqlen.png">
 </div>
 
 以下は、パディングトークンのない場合に、シーケンス長が4096の[`meta-llama/Llama-7b-hf`](https://hf.co/meta-llama/Llama-7b-hf)に対する単純なフォワードパスの予想される高速化です。さまざまなバッチサイズが示されています：
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-7b-inference-large-seqlen.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-7b-inference-large-seqlen.png">
 </div>
 
 パディングトークンを含むシーケンス（パディングトークンを使用してトレーニングまたは生成する）の場合、アテンションスコアを正しく計算するために入力シーケンスをアンパッド/パッドする必要があります。比較的小さいシーケンス長の場合、純粋なフォワードパスではパディングトークンが30%未満しか埋められていないため、これはわずかな高速化をもたらします。
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-2-small-seqlen-padding.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-2-small-seqlen-padding.png">
 </div>
 
 しかし、大きなシーケンス長の場合、純粋な推論（トレーニングも含む）には興味深い高速化が得られます。
@@ -92,7 +92,7 @@ model = AutoModelForCausalLM.from_pretrained(
 Flash Attentionは、アテンション計算をよりメモリ効率の良いものにし、大きなシーケンス長でのCUDA OOMの問題を回避できるようにします。大きなシーケンス長に対して最大20のメモリ削減をもたらすことがあります。詳細については、[公式のFlash Attentionリポジトリ](https://github.com/Dao-AILab/flash-attention)をご覧ください。
 
 <div style="text-align: center">
-<img src="https://hf-mirror.com/datasets/ybelkada/documentation-images/resolve/main/llama-2-large-seqlen-padding.png">
+<img src="https://huggingface.co/datasets/ybelkada/documentation-images/resolve/main/llama-2-large-seqlen-padding.png">
 </div>
 
 
@@ -166,7 +166,7 @@ model.add_adapter(lora_config)
 
 ## BetterTransformer
 
-[BetterTransformer](https://hf-mirror.com/docs/optimum/bettertransformer/overview)は、🤗 TransformersモデルをPyTorchネイティブの高速パス実行に変換します。これにより、Flash Attentionなどの最適化されたカーネルが内部で呼び出されます。
+[BetterTransformer](https://huggingface.co/docs/optimum/bettertransformer/overview)は、🤗 TransformersモデルをPyTorchネイティブの高速パス実行に変換します。これにより、Flash Attentionなどの最適化されたカーネルが内部で呼び出されます。
 
 BetterTransformerは、テキスト、画像、およびオーディオモデルの単一およびマルチGPUでの高速な推論をサポートしています。
 
@@ -178,7 +178,7 @@ Flash Attentionは、fp16またはbf16のdtypeを使用するモデルにのみ�
 
 ### Encoder models
 
-PyTorchネイティブの[`nn.MultiHeadAttention`](https://pytorch.org/blog/a-better-transformer-for-fast-transformer-encoder-inference/)アテンション高速パス、BetterTransformerと呼ばれるものは、[🤗 Optimumライブラリ](https://hf-mirror.com/docs/optimum/bettertransformer/overview)の統合を通じてTransformersと一緒に使用できます。
+PyTorchネイティブの[`nn.MultiHeadAttention`](https://pytorch.org/blog/a-better-transformer-for-fast-transformer-encoder-inference/)アテンション高速パス、BetterTransformerと呼ばれるものは、[🤗 Optimumライブラリ](https://huggingface.co/docs/optimum/bettertransformer/overview)の統合を通じてTransformersと一緒に使用できます。
 
 PyTorchのアテンション高速パスを使用すると、カーネルフュージョンと[ネストされたテンソル](https://pytorch.org/docs/stable/nested.html)の使用により、推論を高速化できます。詳細なベンチマーク情報は[このブログ記事](https://medium.com/pytorch/bettertransformer-out-of-the-box-performance-for-huggingface-transformers-3fbe27d50ab2)にあります。
 
@@ -333,12 +333,12 @@ model_4bit = AutoModelForCausalLM.from_pretrained(
 
 論文[`LLM.int8()：スケーラブルなTransformer向けの8ビット行列乗算`](https://arxiv.org/abs/2208.07339)によれば、Hugging Face統合がHub内のすべてのモデルでわずか数行のコードでサポートされています。このメソッドは、半精度（`float16`および`bfloat16`）の重みの場合に`nn.Linear`サイズを2倍、単精度（`float32`）の重みの場合は4倍に縮小し、外れ値に対してほとんど影響を与えません。
 
-![HFxbitsandbytes.png](https://cdn-uploads.hf-mirror.com/production/uploads/1659861207959-62441d1d9fdefb55a0b7d12c.png)
+![HFxbitsandbytes.png](https://cdn-uploads.huggingface.co/production/uploads/1659861207959-62441d1d9fdefb55a0b7d12c.png)
 
 Int8混合精度行列分解は、行列乗算を2つのストリームに分割することによって動作します：(1) システマティックな特徴外れ値ストリームがfp16で行列乗算（0.01%）、(2) int8行列乗算の通常のストリーム（99.9%）。この方法を使用すると、非常に大きなモデルに対して予測の劣化なしにint8推論が可能です。
-このメソッドの詳細については、[論文](https://arxiv.org/abs/2208.07339)または[この統合に関するブログ記事](https://hf-mirror.com/blog/hf-bitsandbytes-integration)をご確認ください。
+このメソッドの詳細については、[論文](https://arxiv.org/abs/2208.07339)または[この統合に関するブログ記事](https://huggingface.co/blog/hf-bitsandbytes-integration)をご確認ください。
 
-![MixedInt8.gif](https://cdn-uploads.hf-mirror.com/production/uploads/1660567469965-62441d1d9fdefb55a0b7d12c.gif)
+![MixedInt8.gif](https://cdn-uploads.huggingface.co/production/uploads/1660567469965-62441d1d9fdefb55a0b7d12c.gif)
 
 なお、この機能を使用するにはGPUが必要であり、カーネルはGPU専用にコンパイルされている必要があります。この機能を使用する前に、モデルの1/4（またはハーフ精度の重みの場合は1/2）を保存するのに十分なGPUメモリがあることを確認してください。
 このモジュールを使用する際のヘルプに関する詳細は、以下のノートをご覧いただくか、[Google Colabのデモ](#colab-demos)をご覧ください。

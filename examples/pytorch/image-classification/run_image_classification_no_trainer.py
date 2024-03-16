@@ -95,7 +95,7 @@ def parse_args():
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        help="Path to pretrained model or model identifier from hf-mirror.com/models.",
+        help="Path to pretrained model or model identifier from huggingface.co/models.",
         default="google/vit-base-patch16-224-in21k",
     )
     parser.add_argument(
@@ -295,7 +295,7 @@ def main():
             data_files=data_files,
         )
         # See more about loading custom images at
-        # https://hf-mirror.com/docs/datasets/v2.0.0/en/image_process#imagefolder.
+        # https://huggingface.co/docs/datasets/v2.0.0/en/image_process#imagefolder.
 
     dataset_column_names = dataset["train"].column_names if "train" in dataset else dataset["validation"].column_names
     if args.image_column_name not in dataset_column_names:

@@ -28,7 +28,7 @@ The abstract from the paper is the following:
 
 *We propose an efficient design of Transformer-based models for multivariate time series forecasting and self-supervised representation learning. It is based on two key components: (i) segmentation of time series into subseries-level patches which are served as input tokens to Transformer; (ii) channel-independence where each channel contains a single univariate time series that shares the same embedding and Transformer weights across all the series. Patching design naturally has three-fold benefit: local semantic information is retained in the embedding; computation and memory usage of the attention maps are quadratically reduced given the same look-back window; and the model can attend longer history. Our channel-independent patch time series Transformer (PatchTST) can improve the long-term forecasting accuracy significantly when compared with that of SOTA Transformer-based models. We also apply our model to self-supervised pre-training tasks and attain excellent fine-tuning performance, which outperforms supervised training on large datasets. Transferring of masked pre-trained representation on one dataset to others also produces SOTA forecasting accuracy.*
 
-This model was contributed by [namctin](https://hf-mirror.com/namctin), [gsinthong](https://hf-mirror.com/gsinthong), [diepi](https://hf-mirror.com/diepi), [vijaye12](https://hf-mirror.com/vijaye12), [wmgifford](https://hf-mirror.com/wmgifford), and [kashif](https://hf-mirror.com/kashif). The original code can be found [here](https://github.com/yuqinie98/PatchTST).
+This model was contributed by [namctin](https://huggingface.co/namctin), [gsinthong](https://huggingface.co/gsinthong), [diepi](https://huggingface.co/diepi), [vijaye12](https://huggingface.co/vijaye12), [wmgifford](https://huggingface.co/wmgifford), and [kashif](https://huggingface.co/kashif). The original code can be found [here](https://github.com/yuqinie98/PatchTST).
 
 ## Usage tips
 
@@ -36,7 +36,7 @@ The model can also be used for time series classification and time series regres
 
 ## Resources
 
-- A blog post explaining PatchTST in depth can be found [here](https://hf-mirror.com/blog/patchtst). The blog can also be opened in Google Colab.
+- A blog post explaining PatchTST in depth can be found [here](https://huggingface.co/blog/patchtst). The blog can also be opened in Google Colab.
 
 ## PatchTSTConfig
 

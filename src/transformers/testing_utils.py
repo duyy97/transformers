@@ -155,7 +155,7 @@ DUMMY_DIFF_TOKENIZER_IDENTIFIER = "julien-c/dummy-diff-tokenizer"
 
 # Used to test the hub
 USER = "__DUMMY_TRANSFORMERS_USER__"
-ENDPOINT_STAGING = "https://hub-ci.hf-mirror.com"
+ENDPOINT_STAGING = "https://hub-ci.huggingface.co"
 
 # Not critical, only usable on the sandboxed CI instance.
 TOKEN = "hf_94wBhPGp6KrrTH3KDchhKpRxZwd6dmHWLL"
@@ -243,7 +243,7 @@ def is_staging_test(test_case):
     """
     Decorator marking a test as a staging test.
 
-    Those tests will run using the staging environment of hf-mirror.com instead of the real model hub.
+    Those tests will run using the staging environment of huggingface.co instead of the real model hub.
     """
     if not _run_staging:
         return unittest.skip("test is staging test")(test_case)

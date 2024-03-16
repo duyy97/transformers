@@ -31,9 +31,9 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 OWLVIT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/owlvit-base-patch32": "https://hf-mirror.com/google/owlvit-base-patch32/resolve/main/config.json",
-    "google/owlvit-base-patch16": "https://hf-mirror.com/google/owlvit-base-patch16/resolve/main/config.json",
-    "google/owlvit-large-patch14": "https://hf-mirror.com/google/owlvit-large-patch14/resolve/main/config.json",
+    "google/owlvit-base-patch32": "https://huggingface.co/google/owlvit-base-patch32/resolve/main/config.json",
+    "google/owlvit-base-patch16": "https://huggingface.co/google/owlvit-base-patch16/resolve/main/config.json",
+    "google/owlvit-large-patch14": "https://huggingface.co/google/owlvit-large-patch14/resolve/main/config.json",
 }
 
 
@@ -42,7 +42,7 @@ class OwlViTTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`OwlViTTextModel`]. It is used to instantiate an
     OwlViT text encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the OwlViT
-    [google/owlvit-base-patch32](https://hf-mirror.com/google/owlvit-base-patch32) architecture.
+    [google/owlvit-base-patch32](https://huggingface.co/google/owlvit-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -155,7 +155,7 @@ class OwlViTVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of an [`OwlViTVisionModel`]. It is used to instantiate
     an OWL-ViT image encoder according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the OWL-ViT
-    [google/owlvit-base-patch32](https://hf-mirror.com/google/owlvit-base-patch32) architecture.
+    [google/owlvit-base-patch32](https://huggingface.co/google/owlvit-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -260,7 +260,7 @@ class OwlViTConfig(PretrainedConfig):
     [`OwlViTConfig`] is the configuration class to store the configuration of an [`OwlViTModel`]. It is used to
     instantiate an OWL-ViT model according to the specified arguments, defining the text model and vision model
     configs. Instantiating a configuration with the defaults will yield a similar configuration to that of the OWL-ViT
-    [google/owlvit-base-patch32](https://hf-mirror.com/google/owlvit-base-patch32) architecture.
+    [google/owlvit-base-patch32](https://huggingface.co/google/owlvit-base-patch32) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

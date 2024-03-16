@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # OpenAI GPT2
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=gpt2">
+<a href="https://huggingface.co/models?filter=gpt2">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-gpt2-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/gpt2">
+<a href="https://huggingface.co/spaces/docs-demos/gpt2">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -28,7 +28,7 @@ rendered properly in your Markdown viewer.
 ## Overview
 
 OpenAI GPT-2 model was proposed in [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) by Alec
-Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei and Ilya Sutskever from [OpenAI](https://hf-mirror.com/openai). It's a causal (unidirectional)
+Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei and Ilya Sutskever from [OpenAI](https://huggingface.co/openai). It's a causal (unidirectional)
 transformer pretrained using language modeling on a very large corpus of ~40 GB of text data.
 
 The abstract from the paper is the following:
@@ -39,11 +39,11 @@ text. The diversity of the dataset causes this simple goal to contain naturally 
 across diverse domains. GPT-2 is a direct scale-up of GPT, with more than 10X the parameters and trained on more than
 10X the amount of data.*
 
-[Write With Transformer](https://transformer.hf-mirror.com/doc/gpt2-large) is a webapp created and hosted by
+[Write With Transformer](https://transformer.huggingface.co/doc/gpt2-large) is a webapp created and hosted by
 Hugging Face showcasing the generative capabilities of several models. GPT-2 is one of them and is available in five
 different sizes: small, medium, large, xl and a distilled version of the small checkpoint: *distilgpt-2*.
 
-This model was contributed by [thomwolf](https://hf-mirror.com/thomwolf). The original code can be found [here](https://openai.com/blog/better-language-models/).
+This model was contributed by [thomwolf](https://huggingface.co/thomwolf). The original code can be found [here](https://openai.com/blog/better-language-models/).
 
 ## Usage tips
 
@@ -67,13 +67,13 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 <PipelineTag pipeline="text-generation"/>
 
 - A blog on how to [Finetune a non-English GPT-2 Model with Hugging Face](https://www.philschmid.de/fine-tune-a-non-english-gpt-2-model-with-huggingface).
-- A blog on [How to generate text: using different decoding methods for language generation with Transformers](https://hf-mirror.com/blog/how-to-generate) with GPT-2.
-- A blog on [Training CodeParrot 🦜 from Scratch](https://hf-mirror.com/blog/codeparrot), a large GPT-2 model.
-- A blog on [Faster Text Generation with TensorFlow and XLA](https://hf-mirror.com/blog/tf-xla-generate) with GPT-2.
-- A blog on [How to train a Language Model with Megatron-LM](https://hf-mirror.com/blog/megatron-training) with a GPT-2 model.
+- A blog on [How to generate text: using different decoding methods for language generation with Transformers](https://huggingface.co/blog/how-to-generate) with GPT-2.
+- A blog on [Training CodeParrot 🦜 from Scratch](https://huggingface.co/blog/codeparrot), a large GPT-2 model.
+- A blog on [Faster Text Generation with TensorFlow and XLA](https://huggingface.co/blog/tf-xla-generate) with GPT-2.
+- A blog on [How to train a Language Model with Megatron-LM](https://huggingface.co/blog/megatron-training) with a GPT-2 model.
 - A notebook on how to [finetune GPT2 to generate lyrics in the style of your favorite artist](https://colab.research.google.com/github/AlekseyKorshuk/huggingartists/blob/master/huggingartists-demo.ipynb). 🌎
 - A notebook on how to [finetune GPT2 to generate tweets in the style of your favorite Twitter user](https://colab.research.google.com/github/borisdayma/huggingtweets/blob/master/huggingtweets-demo.ipynb). 🌎
-- [Causal language modeling](https://hf-mirror.com/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
+- [Causal language modeling](https://huggingface.co/course/en/chapter7/6?fw=pt#training-a-causal-language-model-from-scratch) chapter of the 🤗 Hugging Face Course.
 - [`GPT2LMHeadModel`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling#gpt-2gpt-and-causal-language-modeling), [text generation example script](https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-generation), and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling.ipynb).
 - [`TFGPT2LMHeadModel`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/language-modeling#run_clmpy) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/language_modeling-tf.ipynb).
 - [`FlaxGPT2LMHeadModel`] is supported by this [causal language modeling example script](https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling#causal-language-modeling) and [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/causal_language_modeling_flax.ipynb).

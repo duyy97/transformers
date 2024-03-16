@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Usando os Tokenizers do 🤗 Tokenizers
 
-O [`PreTrainedTokenizerFast`] depende da biblioteca [🤗 Tokenizers](https://hf-mirror.com/docs/tokenizers). O Tokenizer obtido da biblioteca 🤗 Tokenizers pode ser carregado facilmente pelo 🤗 Transformers.
+O [`PreTrainedTokenizerFast`] depende da biblioteca [🤗 Tokenizers](https://huggingface.co/docs/tokenizers). O Tokenizer obtido da biblioteca 🤗 Tokenizers pode ser carregado facilmente pelo 🤗 Transformers.
 
 Antes de entrar nos detalhes, vamos começar criando um tokenizer fictício em algumas linhas:
 

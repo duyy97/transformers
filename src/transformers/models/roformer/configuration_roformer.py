@@ -25,21 +25,21 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 ROFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "junnyu/roformer_chinese_small": "https://hf-mirror.com/junnyu/roformer_chinese_small/resolve/main/config.json",
-    "junnyu/roformer_chinese_base": "https://hf-mirror.com/junnyu/roformer_chinese_base/resolve/main/config.json",
+    "junnyu/roformer_chinese_small": "https://huggingface.co/junnyu/roformer_chinese_small/resolve/main/config.json",
+    "junnyu/roformer_chinese_base": "https://huggingface.co/junnyu/roformer_chinese_base/resolve/main/config.json",
     "junnyu/roformer_chinese_char_small": (
-        "https://hf-mirror.com/junnyu/roformer_chinese_char_small/resolve/main/config.json"
+        "https://huggingface.co/junnyu/roformer_chinese_char_small/resolve/main/config.json"
     ),
     "junnyu/roformer_chinese_char_base": (
-        "https://hf-mirror.com/junnyu/roformer_chinese_char_base/resolve/main/config.json"
+        "https://huggingface.co/junnyu/roformer_chinese_char_base/resolve/main/config.json"
     ),
     "junnyu/roformer_small_discriminator": (
-        "https://hf-mirror.com/junnyu/roformer_small_discriminator/resolve/main/config.json"
+        "https://huggingface.co/junnyu/roformer_small_discriminator/resolve/main/config.json"
     ),
     "junnyu/roformer_small_generator": (
-        "https://hf-mirror.com/junnyu/roformer_small_generator/resolve/main/config.json"
+        "https://huggingface.co/junnyu/roformer_small_generator/resolve/main/config.json"
     ),
-    # See all RoFormer models at https://hf-mirror.com/models?filter=roformer
+    # See all RoFormer models at https://huggingface.co/models?filter=roformer
 }
 
 
@@ -48,7 +48,7 @@ class RoFormerConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`RoFormerModel`]. It is used to instantiate an
     RoFormer model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the RoFormer
-    [junnyu/roformer_chinese_base](https://hf-mirror.com/junnyu/roformer_chinese_base) architecture.
+    [junnyu/roformer_chinese_base](https://huggingface.co/junnyu/roformer_chinese_base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

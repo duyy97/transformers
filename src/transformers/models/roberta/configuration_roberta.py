@@ -25,12 +25,12 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "FacebookAI/roberta-base": "https://hf-mirror.com/FacebookAI/roberta-base/resolve/main/config.json",
-    "FacebookAI/roberta-large": "https://hf-mirror.com/FacebookAI/roberta-large/resolve/main/config.json",
-    "FacebookAI/roberta-large-mnli": "https://hf-mirror.com/FacebookAI/roberta-large-mnli/resolve/main/config.json",
-    "distilbert/distilroberta-base": "https://hf-mirror.com/distilbert/distilroberta-base/resolve/main/config.json",
-    "openai-community/roberta-base-openai-detector": "https://hf-mirror.com/openai-community/roberta-base-openai-detector/resolve/main/config.json",
-    "openai-community/roberta-large-openai-detector": "https://hf-mirror.com/openai-community/roberta-large-openai-detector/resolve/main/config.json",
+    "FacebookAI/roberta-base": "https://huggingface.co/FacebookAI/roberta-base/resolve/main/config.json",
+    "FacebookAI/roberta-large": "https://huggingface.co/FacebookAI/roberta-large/resolve/main/config.json",
+    "FacebookAI/roberta-large-mnli": "https://huggingface.co/FacebookAI/roberta-large-mnli/resolve/main/config.json",
+    "distilbert/distilroberta-base": "https://huggingface.co/distilbert/distilroberta-base/resolve/main/config.json",
+    "openai-community/roberta-base-openai-detector": "https://huggingface.co/openai-community/roberta-base-openai-detector/resolve/main/config.json",
+    "openai-community/roberta-large-openai-detector": "https://huggingface.co/openai-community/roberta-large-openai-detector/resolve/main/config.json",
 }
 
 
@@ -39,7 +39,7 @@ class RobertaConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`RobertaModel`] or a [`TFRobertaModel`]. It is
     used to instantiate a RoBERTa model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the RoBERTa
-    [FacebookAI/roberta-base](https://hf-mirror.com/FacebookAI/roberta-base) architecture.
+    [FacebookAI/roberta-base](https://huggingface.co/FacebookAI/roberta-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

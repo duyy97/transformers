@@ -29,7 +29,7 @@ class ImageFeatureExtractionPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> extractor = pipeline(model="google/vit-base-patch16-224", task="image-feature-extraction")
-    >>> result = extractor("https://hf-mirror.com/datasets/Narsil/image_dummy/raw/main/parrots.png", return_tensors=True)
+    >>> result = extractor("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png", return_tensors=True)
     >>> result.shape  # This is a tensor of shape [1, sequence_lenth, hidden_dimension] representing the input image.
     torch.Size([1, 197, 768])
     ```
@@ -40,7 +40,7 @@ class ImageFeatureExtractionPipeline(Pipeline):
     `"image-feature-extraction"`.
 
     All vision models may be used for this pipeline. See a list of all models, including community-contributed models on
-    [hf-mirror.com/models](https://hf-mirror.com/models).
+    [huggingface.co/models](https://huggingface.co/models).
     """
 
     def _sanitize_parameters(self, image_processor_kwargs=None, return_tensors=None, pool=None, **kwargs):

@@ -56,7 +56,7 @@ Hugging Face 팀은 항상 도움을 줄 준비가 되어 있으므로 혼자가
 
 다음을 살펴보겠습니다:
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_overview.png"/>
 
 보다시피, 🤗 Transformers에서는 상속을 사용하지만 추상화 수준을 최소한으로 유지합니다. 라이브러리의 어떤 모델에서도 두 수준 이상의 추상화가 존재하지 않습니다. `BrandNewBertModel`은 `BrandNewBertPreTrainedModel`에서 상속받고, 이 클래스는 [`PreTrainedModel`]에서 상속받습니다. 이로써 새로운 모델은 [`PreTrainedModel`]에만 의존하도록 하려고 합니다. 모든 새로운 모델에 자동으로 제공되는 중요한 기능은 [`~PreTrainedModel.from_pretrained`] 및 [`~PreTrainedModel.save_pretrained`]입니다. 이러한 기능 외에도 `BrandNewBertModel.forward`와 같은 다른 중요한 기능은 새로운 `modeling_brand_new_bert.py` 스크립트에서 완전히 정의되어야 합니다. 또한 `BrandNewBertForMaskedLM`과 같은 특정 헤드 레이어를 가진 모델은 `BrandNewBertModel`을 상속받지 않고 forward pass에서 호출할 수 있는 `BrandNewBertModel`을 사용하여 추상화 수준을 낮게 유지합니다. 모든 새로운 모델은 `BrandNewBertConfig`라는 구성 클래스를 필요로 합니다. 이 구성은 항상 [`PreTrainedModel`]의 속성으로 저장되며, 따라서 `BrandNewBertPreTrainedModel`을 상속받는 모든 클래스에서 `config` 속성을 통해 액세스할 수 있습니다:
 
@@ -86,8 +86,8 @@ model.config  # model has access to its config
 
 각자 모델을 이식하는 방법에 대한 선호가 다르기 때문에 다른 기여자들이 Hugging Face에 모델을 이식하는 방법에 대한 요약을 살펴보는 것이 매우 유용할 수 있습니다. 다음은 모델을 이식하는 방법에 대한 커뮤니티 블로그 게시물 목록입니다:
 
-1. [GPT2 모델 이식하기](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) - [Thomas](https://hf-mirror.com/thomwolf)
-2. [WMT19 MT 모델 이식하기](https://hf-mirror.com/blog/porting-fsmt) - [Stas](https://hf-mirror.com/stas)
+1. [GPT2 모델 이식하기](https://medium.com/huggingface/from-tensorflow-to-pytorch-265f40ef2a28) - [Thomas](https://huggingface.co/thomwolf)
+2. [WMT19 MT 모델 이식하기](https://huggingface.co/blog/porting-fsmt) - [Stas](https://huggingface.co/stas)
 
 경험상 모델을 추가할 때 주의해야 할 가장 중요한 사항은 다음과 같습니다:
 
@@ -123,7 +123,7 @@ model.config  # model has access to its config
 - *BrandNewBert*는 어떤 유형의 모델인가요? BERT와 유사한 인코더 모델인가요? GPT2와 유사한 디코더 모델인가요? BART와 유사한 인코더-디코더 모델인가요? 이들 간의 차이점에 익숙하지 않은 경우[model_summary](model_summary)를 참조하세요.
 - *BrandNewBert*의 응용 분야는 무엇인가요? 텍스트 분류인가요? 텍스트 생성인가요? 요약과 같은 Seq2Seq 작업인가요?
 - *brand_new_bert*와 BERT/GPT-2/BART의 차이점은 무엇인가요?
-- *brand_new_bert*와 가장 유사한 [🤗 Transformers 모델](https://hf-mirror.com/transformers/#contents)은 무엇인가요?
+- *brand_new_bert*와 가장 유사한 [🤗 Transformers 모델](https://huggingface.co/transformers/#contents)은 무엇인가요?
 - 어떤 종류의 토크나이저가 사용되나요? Sentencepiece 토크나이저인가요? Word piece 토크나이저인가요? BERT 또는 BART에 사용되는 동일한 토크나이저인가요?
 
 모델의 아키텍처에 대해 충분히 이해했다는 생각이 든 후, 궁금한 사항이 있으면 Hugging Face 팀에 문의하십시오. 이는 모델의 아키텍처, 어텐션 레이어 등에 관한 질문을 포함할 수 있습니다. Hugging Face의 유지 관리자들은 보통 코드를 검토하는 것에 대해 매우 기뻐하므로 당신을 돕는 일을 매우 환영할 것입니다!

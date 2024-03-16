@@ -170,7 +170,7 @@ def get_args():
         default=None,
         type=str,
         required=True,
-        help="Path to pretrained checkpoints or model identifier from hf-mirror.com/models",
+        help="Path to pretrained checkpoints or model identifier from huggingface.co/models",
     )
     parser.add_argument(
         "--eval_mode",

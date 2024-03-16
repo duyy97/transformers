@@ -51,7 +51,7 @@ _CHECKPOINT_FOR_DOC = "facebook/m2m100_418M"
 
 M2M_100_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/m2m100_418M",
-    # See all M2M100 models at https://hf-mirror.com/models?filter=m2m_100
+    # See all M2M100 models at https://huggingface.co/models?filter=m2m_100
 ]
 
 

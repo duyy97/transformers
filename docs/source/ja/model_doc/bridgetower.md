@@ -32,12 +32,12 @@ BridgeTower モデルは、Xiao Xu、Chenfei Wu、Shachar Rosenman、Vasudev Lal
 特に、VQAv2 テスト標準セットでは、BRIDGETOWER は 78.73% の精度を達成し、同じ事前トレーニング データとほぼ無視できる追加パラメータと計算コストで以前の最先端モデル METER を 1.09% 上回りました。
 特に、モデルをさらにスケーリングすると、BRIDGETOWER は 81.15% の精度を達成し、桁違いに大きなデータセットで事前トレーニングされたモデルを上回りました。*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/bridgetower_architecture%20.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/bridgetower_architecture%20.jpg"
 alt="drawing" width="600"/>
 
 <small> ブリッジタワー アーキテクチャ。 <a href="https://arxiv.org/abs/2206.08657">元の論文から抜粋。</a> </small>
 
-このモデルは、[Anahita Bhiwandiwalla](https://hf-mirror.com/anahita-b)、[Tiep Le](https://hf-mirror.com/Tile)、[Shaoyen Tseng](https://hf-mirror.com/shaoyent) 。元のコードは [ここ](https://github.com/microsoft/BridgeTower) にあります。
+このモデルは、[Anahita Bhiwandiwalla](https://huggingface.co/anahita-b)、[Tiep Le](https://huggingface.co/Tile)、[Shaoyen Tseng](https://huggingface.co/shaoyent) 。元のコードは [ここ](https://github.com/microsoft/BridgeTower) にあります。
 
 ## Usage tips and examples
 
@@ -123,7 +123,7 @@ BridgeTower は、ビジュアル エンコーダー、テキスト エンコー
 チップ：
 
 - BridgeTower のこの実装では、[`RobertaTokenizer`] を使用してテキスト埋め込みを生成し、OpenAI の CLIP/ViT モデルを使用して視覚的埋め込みを計算します。
-- 事前トレーニングされた [bridgeTower-base](https://hf-mirror.com/BridgeTower/bridgetower-base) および [bridgetower マスクされた言語モデリングと画像テキスト マッチング](https://hf-mirror.com/BridgeTower/bridgetower--base-itm-mlm) のチェックポイント がリリースされました。
+- 事前トレーニングされた [bridgeTower-base](https://huggingface.co/BridgeTower/bridgetower-base) および [bridgetower マスクされた言語モデリングと画像テキスト マッチング](https://huggingface.co/BridgeTower/bridgetower--base-itm-mlm) のチェックポイント がリリースされました。
 - 画像検索およびその他の下流タスクにおける BridgeTower のパフォーマンスについては、[表 5](https://arxiv.org/pdf/2206.08657.pdf) を参照してください。
 - このモデルの PyTorch バージョンは、torch 1.10 以降でのみ使用できます。
 

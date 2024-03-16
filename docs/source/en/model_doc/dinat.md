@@ -45,13 +45,13 @@ It also matches the state of the art specialized semantic segmentation models on
 and ranks second on Cityscapes (84.5 mIoU) (no extra data). *
 
 <img
-src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/dilated-neighborhood-attention-pattern.jpg"
+src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/dilated-neighborhood-attention-pattern.jpg"
 alt="drawing" width="600"/>
 
 <small> Neighborhood Attention with different dilation values.
 Taken from the <a href="https://arxiv.org/abs/2209.15001">original paper</a>.</small>
 
-This model was contributed by [Ali Hassani](https://hf-mirror.com/alihassanijr).
+This model was contributed by [Ali Hassani](https://huggingface.co/alihassanijr).
 The original code can be found [here](https://github.com/SHI-Labs/Neighborhood-Attention-Transformer).
 
 ## Usage tips

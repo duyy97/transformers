@@ -145,7 +145,7 @@ class ModelArguments:
     """
 
     model_name_or_path: str = field(
-        metadata={"help": "Path to pretrained model or model identifier from hf-mirror.com/models"}
+        metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
     config_name: Optional[str] = field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
@@ -155,7 +155,7 @@ class ModelArguments:
     )
     cache_dir: Optional[str] = field(
         default=None,
-        metadata={"help": "Where do you want to store the pretrained models downloaded from hf-mirror.com"},
+        metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
     use_fast_tokenizer: bool = field(
         default=True,
@@ -271,7 +271,7 @@ def main():
         token=model_args.token,
     )
     # See more about loading any type of standard or custom dataset at
-    # https://hf-mirror.com/docs/datasets/loading_datasets.
+    # https://huggingface.co/docs/datasets/loading_datasets.
 
     is_regression = data_args.task_name == "stsb"
     if not is_regression:
@@ -443,8 +443,8 @@ def main():
             # yourself if you use this method, whereas they are automatically inferred from the model input names when
             # using model.prepare_tf_dataset()
             # For more info see the docs:
-            # https://hf-mirror.com/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
-            # https://hf-mirror.com/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
+            # https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.TFPreTrainedModel.prepare_tf_dataset
+            # https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset
             data = model.prepare_tf_dataset(
                 dataset,
                 shuffle=shuffle,
@@ -536,7 +536,7 @@ def main():
             # loss and accuracy on the validation set each epoch, but
             # if you'd like to compute metrics every epoch that are too complex to be written as
             # standard Keras metrics, you can use our KerasMetricCallback. See
-            # https://hf-mirror.com/docs/transformers/main/en/main_classes/keras_callbacks
+            # https://huggingface.co/docs/transformers/main/en/main_classes/keras_callbacks
             logger.info("*** Evaluate ***")
 
             # Loop to handle MNLI double evaluation (matched, mis-matched)

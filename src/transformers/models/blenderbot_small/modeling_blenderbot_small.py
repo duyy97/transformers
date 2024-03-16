@@ -51,7 +51,7 @@ _CONFIG_FOR_DOC = "BlenderbotSmallConfig"
 
 BLENDERBOT_SMALL_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/blenderbot_small-90M",
-    # See all BlenderbotSmall models at https://hf-mirror.com/models?filter=blenderbot_small
+    # See all BlenderbotSmall models at https://huggingface.co/models?filter=blenderbot_small
 ]
 
 

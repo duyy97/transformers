@@ -40,7 +40,7 @@ Recognition、Masked Language Modeling、Sentiment Analysis、Feature Extraction
 [{'label': 'POSITIVE', 'score': 0.9998743534088135}]
 ```
 
-[ハブ](https://hf-mirror.com) の特定のモデルを使用したい場合は、モデルがオンになっている場合はタスクを無視できます。
+[ハブ](https://huggingface.co) の特定のモデルを使用したい場合は、モデルがオンになっている場合はタスクを無視できます。
 ハブはすでにそれを定義しています。
 
 ```python

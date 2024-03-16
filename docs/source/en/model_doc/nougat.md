@@ -25,12 +25,12 @@ The abstract from the paper is the following:
 
 *Scientific knowledge is predominantly stored in books and scientific journals, often in the form of PDFs. However, the PDF format leads to a loss of semantic information, particularly for mathematical expressions. We propose Nougat (Neural Optical Understanding for Academic Documents), a Visual Transformer model that performs an Optical Character Recognition (OCR) task for processing scientific documents into a markup language, and demonstrate the effectiveness of our model on a new dataset of scientific documents. The proposed approach offers a promising solution to enhance the accessibility of scientific knowledge in the digital age, by bridging the gap between human-readable documents and machine-readable text. We release the models and code to accelerate future work on scientific text recognition.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/nougat_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/nougat_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> Nougat high-level overview. Taken from the <a href="https://arxiv.org/abs/2308.13418">original paper</a>. </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found
 [here](https://github.com/facebookresearch/nougat).
 
 ## Usage tips
@@ -87,7 +87,7 @@ into a single instance to both extract the input features and decode the predict
 '\n\n# Nougat: Neural Optical Understanding for Academic Documents\n\n Lukas Blecher\n\nCorrespondence to: lblecher@'
 ```
 
-See the [model hub](https://hf-mirror.com/models?filter=nougat) to look for Nougat checkpoints.
+See the [model hub](https://huggingface.co/models?filter=nougat) to look for Nougat checkpoints.
 
 <Tip>
 

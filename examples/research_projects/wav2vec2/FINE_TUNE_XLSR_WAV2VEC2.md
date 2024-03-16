@@ -2,7 +2,7 @@
 
 Welcome to the fine-tuning week! The goal of this week is to have state-of-the-art automatic speech recognition (ASR) models in as many languages as possible. The fine-tuning week ends on Friday, the 26th March at midnight PST time.
 
-Participants are encouraged to fine-tune the pretrained [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53) checkpoint on one or more of the 60 languages of [Common Voice dataset](https://commonvoice.mozilla.org/en/datasets).
+Participants are encouraged to fine-tune the pretrained [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53) checkpoint on one or more of the 60 languages of [Common Voice dataset](https://commonvoice.mozilla.org/en/datasets).
 Furthermore, it is very much appreciated if participants fine-tune XLSR-Wav2Vec2 on a language that is not included in the Common Voice dataset.
 
 All fine-tuned models uploaded until Friday, the 26th March midnight PST, will be taken into account for competition, and the best model per language will be awarded a prize if the best model performs reasonably well. 
@@ -40,8 +40,8 @@ It is very much possible that prizes will be given to groups of people instead o
 ## Organization of the fine tuning week
 
 The week officially starts on 22.03.2021 and ends on 29.03.2021, but you are more than welcome to start fine-tuning models before the start date. 
-General questions you might have, general problems you encounter, and general tips can be shared directly on the Slack channel (see [this post](https://discuss.hf-mirror.com/t/open-to-the-community-xlsr-wav2vec2-fine-tuning-week-for-low-resource-languages/4467) on how to be added to Slack). 
-More language-specific questions or specific bugs should be posted on the [forum](https://discuss.hf-mirror.com/) (feel free to use already existing language-specific threads, *e.g.* [this one](https://discuss.hf-mirror.com/t/arabic-asr-fine-tuning-wav2vec2/4608) or open a new one if there is no thread for your language yet) or directly on [github](https://github.com/huggingface/transformers) if you think some code or document needs correction/improvement.
+General questions you might have, general problems you encounter, and general tips can be shared directly on the Slack channel (see [this post](https://discuss.huggingface.co/t/open-to-the-community-xlsr-wav2vec2-fine-tuning-week-for-low-resource-languages/4467) on how to be added to Slack). 
+More language-specific questions or specific bugs should be posted on the [forum](https://discuss.huggingface.co/) (feel free to use already existing language-specific threads, *e.g.* [this one](https://discuss.huggingface.co/t/arabic-asr-fine-tuning-wav2vec2/4608) or open a new one if there is no thread for your language yet) or directly on [github](https://github.com/huggingface/transformers) if you think some code or document needs correction/improvement.
 Starting on Monday, the 22.03.2021, the Hugging Face team will try to provide an overview of currently trained models along with their evaluation results.
 All the necessary information on:
 
@@ -54,7 +54,7 @@ can be found in the sections below. If something is still unclear, feel free to 
 
 ## How to fine tune XLSR Wav2Vec2
 
-This chapter gives an in-detail explanation of how to fine-tune [Facebook's multi-lingual Wav2vec2](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53) on any language of the [Common Voice dataset](https://commonvoice.mozilla.org/en/datasets).
+This chapter gives an in-detail explanation of how to fine-tune [Facebook's multi-lingual Wav2vec2](https://huggingface.co/facebook/wav2vec2-large-xlsr-53) on any language of the [Common Voice dataset](https://commonvoice.mozilla.org/en/datasets).
 
 Two possible setups can be used to fine-tune Wav2Vec2. The easiest setup is to simply use [google colab](https://colab.research.google.com/). It is possible to train the full model in a *free* google colab, but it is recommended to use google colab pro since it is more stable.
 
@@ -76,7 +76,7 @@ Having successfully signed up for gmail, you can now sign in to your account to 
 
 **3.**: Now it is highly recommended to carefully read the google colab without running the cells yet. 
 You should get an understanding of the model is trained and what you will have to change when training the model in a different language. 
-Having done so, you can again head over to [Common Voice](https://commonvoice.mozilla.org/en/datasets) and pick a language you want to fine-tune [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53) on. Make sure you remember the language code (For each language, you can find it under the field "*Version*". It corresponds to **all characters before the first underscore**. *E.g.* for Greek it is *el*, while for Irish it is *ga-IE*.
+Having done so, you can again head over to [Common Voice](https://commonvoice.mozilla.org/en/datasets) and pick a language you want to fine-tune [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53) on. Make sure you remember the language code (For each language, you can find it under the field "*Version*". It corresponds to **all characters before the first underscore**. *E.g.* for Greek it is *el*, while for Irish it is *ga-IE*.
 
 **4.**: Now you should replace the language code used for the demo of this colab, being *tr* for Turkish with the language code corresponding to the language you just chose in the **second** cell of the google colab. This will load the correct data for your language.
 
@@ -230,23 +230,23 @@ Here we will run the script on the *Turkish* Common Voice dataset for demonstrat
 4. The script also allows you to resume training from the last saved checkpoint. To resume training from last saved checkpoint remove the `--overwrite_output_dir` option and run the same command again.  And to continue training from a specific checkpoint, keep the `--overwrite_output_dir`
 option and pass the path of the checkpoint as `--model_name_or_path`.
 
-As the script is based on the `Trainer` API, refer to the [Trainer docs](https://hf-mirror.com/transformers/main_classes/trainer.html) for more information about ``Trainer`` and ``TrainingArguments``.
+As the script is based on the `Trainer` API, refer to the [Trainer docs](https://huggingface.co/transformers/main_classes/trainer.html) for more information about ``Trainer`` and ``TrainingArguments``.
 
 [OVH cloud](https://www.ovh.com/world/) has generously offered free compute for this sprint. Please refer to [this video](https://www.youtube.com/watch?v=2hlkWAESMk8&ab_channel=Databuzzword) to get started with OVH. 
 
 
 ## How to upload my trained checkpoint
 
-To upload your trained checkpoint, you have to create a new model repository on the 🤗 model hub, from this page: https://hf-mirror.com/new
+To upload your trained checkpoint, you have to create a new model repository on the 🤗 model hub, from this page: https://huggingface.co/new
 
-> You can also follow the more in-depth instructions [here](https://hf-mirror.com/transformers/model_sharing.html) if needed.
+> You can also follow the more in-depth instructions [here](https://huggingface.co/transformers/model_sharing.html) if needed.
 
 Having created your model repository on the hub, you should clone it locally:
 
 ```bash
 git lfs install
 
-git clone https://hf-mirror.com/username/your-model-name
+git clone https://huggingface.co/username/your-model-name
 ```
 
 Then and add the following files that fully define a XLSR-Wav2Vec2 checkpoint into the repository. You should have added the following files.
@@ -272,7 +272,7 @@ model it is important to understand:
 - How well does your model perform?
 
 All these questions should be answered in a model card which is the first thing people see when 
-visiting your model on the hub under `https://hf-mirror.com/{your_username}/{your_modelname}`.
+visiting your model on the hub under `https://huggingface.co/{your_username}/{your_modelname}`.
 
 **Note**:
 It is extremely important that you add this model card or else we cannot find your model and thus cannot take the model into 
@@ -290,11 +290,11 @@ Make sure that you read and consequently remove all #TODO: statements from the m
 
 <======================Copy **raw** version from here=========================
 ---
-language: {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://hf-mirror.com/languages) site.
+language: {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://huggingface.co/languages) site.
 datasets:
 - common_voice #TODO: remove if you did not use the common voice dataset
 - TODO: add more datasets if you have used additional datasets. Make sure to use the exact same 
-dataset name as the one found [here](https://hf-mirror.com/datasets). If the dataset can not be found in the official datasets, just give it a new name
+dataset name as the one found [here](https://huggingface.co/datasets). If the dataset can not be found in the official datasets, just give it a new name
 metrics:
 - wer
 tags:
@@ -310,9 +310,9 @@ model-index:
       name: Speech Recognition
       type: automatic-speech-recognition
     dataset:
-      name: Common Voice {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://hf-mirror.com/languages) site.
+      name: Common Voice {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://huggingface.co/languages) site.
       type: common_voice
-      args: {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://hf-mirror.com/languages) site.
+      args: {lang_id} #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://huggingface.co/languages) site.
     metrics:
        - name: Test WER
          type: wer
@@ -321,7 +321,7 @@ model-index:
 
 # Wav2Vec2-Large-XLSR-53-{language} #TODO: replace language with your {language}, *e.g.* French
 
-Fine-tuned [facebook/wav2vec2-large-xlsr-53](https://hf-mirror.com/facebook/wav2vec2-large-xlsr-53) on {language} using the [Common Voice](https://hf-mirror.com/datasets/common_voice), ... and ... dataset{s}. #TODO: replace {language} with your language, *e.g.* French and eventually add more datasets that were used and eventually remove common voice if model was not trained on common voice
+Fine-tuned [facebook/wav2vec2-large-xlsr-53](https://huggingface.co/facebook/wav2vec2-large-xlsr-53) on {language} using the [Common Voice](https://huggingface.co/datasets/common_voice), ... and ... dataset{s}. #TODO: replace {language} with your language, *e.g.* French and eventually add more datasets that were used and eventually remove common voice if model was not trained on common voice
 When using this model, make sure that your speech input is sampled at 16kHz.
 
 ## Usage
@@ -334,7 +334,7 @@ import torchaudio
 from datasets import load_dataset
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
-test_dataset = load_dataset("common_voice", "{lang_id}", split="test[:2%]") #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://hf-mirror.com/languages) site.
+test_dataset = load_dataset("common_voice", "{lang_id}", split="test[:2%]") #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://huggingface.co/languages) site.
 
 processor = Wav2Vec2Processor.from_pretrained("{model_id}") #TODO: replace {model_id} with your model id. The model id consists of {your_username}/{your_modelname}, *e.g.* `elgeish/wav2vec2-large-xlsr-53-arabic`
 model = Wav2Vec2ForCTC.from_pretrained("{model_id}") #TODO: replace {model_id} with your model id. The model id consists of {your_username}/{your_modelname}, *e.g.* `elgeish/wav2vec2-large-xlsr-53-arabic`
@@ -373,7 +373,7 @@ from datasets import load_dataset, load_metric
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 import re
 
-test_dataset = load_dataset("common_voice", "{lang_id}", split="test") #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://hf-mirror.com/languages) site.
+test_dataset = load_dataset("common_voice", "{lang_id}", split="test") #TODO: replace {lang_id} in your language code here. Make sure the code is one of the *ISO codes* of [this](https://huggingface.co/languages) site.
 wer = load_metric("wer")
 
 processor = Wav2Vec2Processor.from_pretrained("{model_id}") #TODO: replace {model_id} with your model id. The model id consists of {your_username}/{your_modelname}, *e.g.* `elgeish/wav2vec2-large-xlsr-53-arabic`
@@ -421,7 +421,7 @@ The script used for training can be found [here](...) # TODO: fill in a link to 
 
 =======================To here===============================>
 
-Your model in then available under *hf-mirror.com/{your_username}/{your_chosen_xlsr-large_model_name}* for everybody to use 🎉.
+Your model in then available under *huggingface.co/{your_username}/{your_chosen_xlsr-large_model_name}* for everybody to use 🎉.
 
 ## How to evaluate my trained checkpoint
 
@@ -447,7 +447,7 @@ be given some consideration. As another example, it is fine to remove the "Hypen
 meaninng of a word to another one. *E.g.* "`fine-tuning`" would be changed to "`finetuning`" which has still the same meaning.
 
 Since those choices are not always obvious when in doubt feel free to ask on Slack or even better post on the forum, as was 
-done, *e.g.* [here](https://discuss.hf-mirror.com/t/spanish-asr-fine-tuning-wav2vec2/4586).
+done, *e.g.* [here](https://discuss.huggingface.co/t/spanish-asr-fine-tuning-wav2vec2/4586).
 
 ## Tips and tricks
 
@@ -455,14 +455,14 @@ This section summarizes a couple of tips and tricks across various topics. It wi
 
 ### How to combine multiple datasets into one
 
-Check out [this](https://discuss.hf-mirror.com/t/how-to-combine-local-data-files-with-an-official-dataset/4685) post.
+Check out [this](https://discuss.huggingface.co/t/how-to-combine-local-data-files-with-an-official-dataset/4685) post.
 
 ### How to effectively preprocess the data
 
 
 ### How to do efficiently load datasets with limited ram and hard drive space
 
-Check out [this](https://discuss.hf-mirror.com/t/german-asr-fine-tuning-wav2vec2/4558/8?u=patrickvonplaten) post.
+Check out [this](https://discuss.huggingface.co/t/german-asr-fine-tuning-wav2vec2/4558/8?u=patrickvonplaten) post.
 
 
 ### How to do hyperparameter tuning
@@ -483,7 +483,7 @@ If you are interested in learning more about the model though, here are a couple
 - [Facebook's Wav2Vec2 blog post](https://ai.facebook.com/blog/wav2vec-state-of-the-art-speech-recognition-through-self-supervision/)
 - [Official Wav2Vec2 paper](https://arxiv.org/abs/2006.11477)
 - [Official XLSR Wav2vec2 paper](https://arxiv.org/pdf/2006.13979.pdf)
-- [Hugging Face Blog](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2)
+- [Hugging Face Blog](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)
 - [How does CTC (Connectionist Temporal Classification) work](https://distill.pub/2017/ctc/)
 
 It helps to have a good understanding of the following points:

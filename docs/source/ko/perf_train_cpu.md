@@ -64,4 +64,4 @@ Trainer에서 IPEX의 자동 혼합 정밀도를 활성화하려면 사용자는
 
 ### 실습 예시 [[practice-example]]
 
-블로그: [Intel Sapphire Rapids로 PyTorch Transformers 가속화](https://hf-mirror.com/blog/intel-sapphire-rapids)
+블로그: [Intel Sapphire Rapids로 PyTorch Transformers 가속화](https://huggingface.co/blog/intel-sapphire-rapids)

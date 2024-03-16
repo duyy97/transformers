@@ -25,7 +25,7 @@ logger = logging.get_logger(__name__)
 
 PIX2STRUCT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "google/pix2struct-textcaps-base": (
-        "https://hf-mirror.com/google/pix2struct-textcaps-base/resolve/main/config.json"
+        "https://huggingface.co/google/pix2struct-textcaps-base/resolve/main/config.json"
     ),
 }
 
@@ -35,7 +35,7 @@ class Pix2StructTextConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Pix2StructTextModel`]. It is used to instantiate
     a Pix2Struct text model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Pix2Struct text decoder used by
-    the [google/pix2struct-base](https://hf-mirror.com/google/pix2struct-base) architecture.
+    the [google/pix2struct-base](https://huggingface.co/google/pix2struct-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -175,7 +175,7 @@ class Pix2StructVisionConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`Pix2StructVisionModel`]. It is used to
     instantiate a Pix2Struct vision model according to the specified arguments, defining the model architecture.
     Instantiating a configuration defaults will yield a similar configuration to that of the Pix2Struct-base
-    [google/pix2struct-base](https://hf-mirror.com/google/pix2struct-base) architecture.
+    [google/pix2struct-base](https://huggingface.co/google/pix2struct-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -295,7 +295,7 @@ class Pix2StructConfig(PretrainedConfig):
     [`Pix2StructForConditionalGeneration`]. It is used to instantiate a Pix2Struct model according to the specified
     arguments, defining the text model and vision model configs. Instantiating a configuration with the defaults will
     yield a similar configuration to that of the Pix2Struct-base
-    [google/pix2struct-base](https://hf-mirror.com/google/pix2struct-base) architecture.
+    [google/pix2struct-base](https://huggingface.co/google/pix2struct-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

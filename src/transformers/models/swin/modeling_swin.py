@@ -58,7 +58,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 SWIN_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/swin-tiny-patch4-window7-224",
-    # See all Swin models at https://hf-mirror.com/models?filter=swin
+    # See all Swin models at https://huggingface.co/models?filter=swin
 ]
 
 # drop_path, SwinPatchEmbeddings, SwinPatchMerging and SwinDropPath are from the timm library.

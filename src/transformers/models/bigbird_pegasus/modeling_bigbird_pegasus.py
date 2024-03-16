@@ -58,7 +58,7 @@ BIGBIRD_PEGASUS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/bigbird-pegasus-large-arxiv",
     "google/bigbird-pegasus-large-pubmed",
     "google/bigbird-pegasus-large-bigpatent",
-    # See all BigBirdPegasus models at https://hf-mirror.com/models?filter=bigbird_pegasus
+    # See all BigBirdPegasus models at https://huggingface.co/models?filter=bigbird_pegasus
 ]
 
 

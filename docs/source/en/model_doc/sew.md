@@ -32,7 +32,7 @@ variety of training setups. For example, under the 100h-960h semi-supervised set
 inference speedup compared to wav2vec 2.0, with a 13.5% relative reduction in word error rate. With a similar inference
 time, SEW reduces word error rate by 25-50% across different model sizes.*
 
-This model was contributed by [anton-l](https://hf-mirror.com/anton-l).
+This model was contributed by [anton-l](https://huggingface.co/anton-l).
 
 ## Usage tips
 

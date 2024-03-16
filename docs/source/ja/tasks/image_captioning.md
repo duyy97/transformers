@@ -103,7 +103,7 @@ plot_images(sample_images_to_visualize, sample_captions)
 ```
     
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/sample_training_images_image_cap.png" alt="Sample training images"/>
 </div>
 
 ## Preprocess the dataset
@@ -139,7 +139,7 @@ test_ds.set_transform(transforms)
 
 ## Load a base model
 
-["microsoft/git-base"](https://hf-mirror.com/microsoft/git-base) を [`AutoModelForCausalLM`](https://hf-mirror.com/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) オブジェクト。
+["microsoft/git-base"](https://huggingface.co/microsoft/git-base) を [`AutoModelForCausalLM`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) オブジェクト。
 
 ```python
 from transformers import AutoModelForCausalLM
@@ -154,9 +154,9 @@ model = AutoModelForCausalLM.from_pretrained(checkpoint)
 ```
 ## Evaluate
 
-画像キャプション モデルは通常、[Rouge Score](https://hf-mirror.com/spaces/evaluate-metric/rouge) または [Word Error Rate](https://hf-mirror.com/spaces/evaluate-metric/) で評価されます。そうだった）。このガイドでは、Word Error Rate (WER) を使用します。
+画像キャプション モデルは通常、[Rouge Score](https://huggingface.co/spaces/evaluate-metric/rouge) または [Word Error Rate](https://huggingface.co/spaces/evaluate-metric/) で評価されます。そうだった）。このガイドでは、Word Error Rate (WER) を使用します。
 
-これを行うには 🤗 Evaluate ライブラリを使用します。 WER の潜在的な制限やその他の問題点については、[このガイド](https://hf-mirror.com/spaces/evaluate-metric/wer) を参照してください。
+これを行うには 🤗 Evaluate ライブラリを使用します。 WER の潜在的な制限やその他の問題点については、[このガイド](https://huggingface.co/spaces/evaluate-metric/wer) を参照してください。
 
 ```python
 from evaluate import load
@@ -240,13 +240,13 @@ trainer.push_to_hub()
 from PIL import Image
 import requests
 
-url = "https://hf-mirror.com/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
+url = "https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/pokemon.png"
 image = Image.open(requests.get(url, stream=True).raw)
 image
 ```
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/test_image_image_cap.png" alt="Test image"/>
 </div>
 
 モデル用の画像を準備します。

@@ -28,7 +28,7 @@ logger = logging.get_logger(__name__)
 
 CONDITIONAL_DETR_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/conditional-detr-resnet-50": (
-        "https://hf-mirror.com/microsoft/conditional-detr-resnet-50/resolve/main/config.json"
+        "https://huggingface.co/microsoft/conditional-detr-resnet-50/resolve/main/config.json"
     ),
 }
 
@@ -38,7 +38,7 @@ class ConditionalDetrConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ConditionalDetrModel`]. It is used to instantiate
     a Conditional DETR model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the Conditional DETR
-    [microsoft/conditional-detr-resnet-50](https://hf-mirror.com/microsoft/conditional-detr-resnet-50) architecture.
+    [microsoft/conditional-detr-resnet-50](https://huggingface.co/microsoft/conditional-detr-resnet-50) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

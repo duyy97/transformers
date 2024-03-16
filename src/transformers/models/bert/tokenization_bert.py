@@ -30,43 +30,43 @@ VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google-bert/bert-base-uncased": "https://hf-mirror.com/google-bert/bert-base-uncased/resolve/main/vocab.txt",
-        "google-bert/bert-large-uncased": "https://hf-mirror.com/google-bert/bert-large-uncased/resolve/main/vocab.txt",
-        "google-bert/bert-base-cased": "https://hf-mirror.com/google-bert/bert-base-cased/resolve/main/vocab.txt",
-        "google-bert/bert-large-cased": "https://hf-mirror.com/google-bert/bert-large-cased/resolve/main/vocab.txt",
+        "google-bert/bert-base-uncased": "https://huggingface.co/google-bert/bert-base-uncased/resolve/main/vocab.txt",
+        "google-bert/bert-large-uncased": "https://huggingface.co/google-bert/bert-large-uncased/resolve/main/vocab.txt",
+        "google-bert/bert-base-cased": "https://huggingface.co/google-bert/bert-base-cased/resolve/main/vocab.txt",
+        "google-bert/bert-large-cased": "https://huggingface.co/google-bert/bert-large-cased/resolve/main/vocab.txt",
         "google-bert/bert-base-multilingual-uncased": (
-            "https://hf-mirror.com/google-bert/bert-base-multilingual-uncased/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-base-multilingual-uncased/resolve/main/vocab.txt"
         ),
-        "google-bert/bert-base-multilingual-cased": "https://hf-mirror.com/google-bert/bert-base-multilingual-cased/resolve/main/vocab.txt",
-        "google-bert/bert-base-chinese": "https://hf-mirror.com/google-bert/bert-base-chinese/resolve/main/vocab.txt",
-        "google-bert/bert-base-german-cased": "https://hf-mirror.com/google-bert/bert-base-german-cased/resolve/main/vocab.txt",
+        "google-bert/bert-base-multilingual-cased": "https://huggingface.co/google-bert/bert-base-multilingual-cased/resolve/main/vocab.txt",
+        "google-bert/bert-base-chinese": "https://huggingface.co/google-bert/bert-base-chinese/resolve/main/vocab.txt",
+        "google-bert/bert-base-german-cased": "https://huggingface.co/google-bert/bert-base-german-cased/resolve/main/vocab.txt",
         "google-bert/bert-large-uncased-whole-word-masking": (
-            "https://hf-mirror.com/google-bert/bert-large-uncased-whole-word-masking/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking/resolve/main/vocab.txt"
         ),
         "google-bert/bert-large-cased-whole-word-masking": (
-            "https://hf-mirror.com/google-bert/bert-large-cased-whole-word-masking/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-large-cased-whole-word-masking/resolve/main/vocab.txt"
         ),
         "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad": (
-            "https://hf-mirror.com/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad/resolve/main/vocab.txt"
         ),
         "google-bert/bert-large-cased-whole-word-masking-finetuned-squad": (
-            "https://hf-mirror.com/google-bert/bert-large-cased-whole-word-masking-finetuned-squad/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-large-cased-whole-word-masking-finetuned-squad/resolve/main/vocab.txt"
         ),
         "google-bert/bert-base-cased-finetuned-mrpc": (
-            "https://hf-mirror.com/google-bert/bert-base-cased-finetuned-mrpc/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-base-cased-finetuned-mrpc/resolve/main/vocab.txt"
         ),
-        "google-bert/bert-base-german-dbmdz-cased": "https://hf-mirror.com/google-bert/bert-base-german-dbmdz-cased/resolve/main/vocab.txt",
+        "google-bert/bert-base-german-dbmdz-cased": "https://huggingface.co/google-bert/bert-base-german-dbmdz-cased/resolve/main/vocab.txt",
         "google-bert/bert-base-german-dbmdz-uncased": (
-            "https://hf-mirror.com/google-bert/bert-base-german-dbmdz-uncased/resolve/main/vocab.txt"
+            "https://huggingface.co/google-bert/bert-base-german-dbmdz-uncased/resolve/main/vocab.txt"
         ),
         "TurkuNLP/bert-base-finnish-cased-v1": (
-            "https://hf-mirror.com/TurkuNLP/bert-base-finnish-cased-v1/resolve/main/vocab.txt"
+            "https://huggingface.co/TurkuNLP/bert-base-finnish-cased-v1/resolve/main/vocab.txt"
         ),
         "TurkuNLP/bert-base-finnish-uncased-v1": (
-            "https://hf-mirror.com/TurkuNLP/bert-base-finnish-uncased-v1/resolve/main/vocab.txt"
+            "https://huggingface.co/TurkuNLP/bert-base-finnish-uncased-v1/resolve/main/vocab.txt"
         ),
         "wietsedv/bert-base-dutch-cased": (
-            "https://hf-mirror.com/wietsedv/bert-base-dutch-cased/resolve/main/vocab.txt"
+            "https://huggingface.co/wietsedv/bert-base-dutch-cased/resolve/main/vocab.txt"
         ),
     }
 }

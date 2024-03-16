@@ -1322,7 +1322,7 @@ class ModelOnTheFlyConversionTester(unittest.TestCase):
         initial_model.push_to_hub(self.repo_name, token=self.token, safe_serialization=False)
         headers = {"Authorization": f"Bearer {self.token}"}
         requests.put(
-            f"https://hf-mirror.com/api/models/{self.repo_name}/settings", json={"gated": "auto"}, headers=headers
+            f"https://huggingface.co/api/models/{self.repo_name}/settings", json={"gated": "auto"}, headers=headers
         )
         converted_model = BertModel.from_pretrained(self.repo_name, use_safetensors=True, token=self.token)
 
@@ -1385,7 +1385,7 @@ class ModelOnTheFlyConversionTester(unittest.TestCase):
         initial_model.push_to_hub(self.repo_name, token=self.token, max_shard_size="200kb", safe_serialization=False)
         headers = {"Authorization": f"Bearer {self.token}"}
         requests.put(
-            f"https://hf-mirror.com/api/models/{self.repo_name}/settings", json={"gated": "auto"}, headers=headers
+            f"https://huggingface.co/api/models/{self.repo_name}/settings", json={"gated": "auto"}, headers=headers
         )
         converted_model = BertModel.from_pretrained(self.repo_name, use_safetensors=True, token=self.token)
 

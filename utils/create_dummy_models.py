@@ -271,7 +271,7 @@ def build_processor(config_class, processor_class, allow_no_checkpoint=False):
     # Try to get a new processor class from checkpoint. This is helpful for a checkpoint without necessary file to load
     # processor while `processor_class` is an Auto class. For example, `sew` has `Wav2Vec2Processor` in
     # `PROCESSOR_MAPPING_NAMES`, its `tokenizer_class` is `AutoTokenizer`, and the checkpoint
-    # `https://hf-mirror.com/asapp/sew-tiny-100k` has no tokenizer file, but we can get
+    # `https://huggingface.co/asapp/sew-tiny-100k` has no tokenizer file, but we can get
     # `tokenizer_class: Wav2Vec2CTCTokenizer` from the config file. (The new processor class won't be able to load from
     # `checkpoint`, but it helps this recursive method to find a way to build a processor).
     if (

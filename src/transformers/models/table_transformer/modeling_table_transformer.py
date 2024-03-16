@@ -62,7 +62,7 @@ _CHECKPOINT_FOR_DOC = "microsoft/table-transformer-detection"
 
 TABLE_TRANSFORMER_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "microsoft/table-transformer-detection",
-    # See all Table Transformer models at https://hf-mirror.com/models?filter=table-transformer
+    # See all Table Transformer models at https://huggingface.co/models?filter=table-transformer
 ]
 
 

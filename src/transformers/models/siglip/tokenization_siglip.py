@@ -39,7 +39,7 @@ VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "google/siglip-base-patch16-224": "https://hf-mirror.com/google/siglip-base-patch16-224/resolve/main/spiece.model",
+        "google/siglip-base-patch16-224": "https://huggingface.co/google/siglip-base-patch16-224/resolve/main/spiece.model",
     }
 }
 

@@ -46,7 +46,7 @@ _CONFIG_FOR_DOC = "XLNetConfig"
 XLNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "xlnet/xlnet-base-cased",
     "xlnet/xlnet-large-cased",
-    # See all XLNet models at https://hf-mirror.com/models?filter=xlnet
+    # See all XLNet models at https://huggingface.co/models?filter=xlnet
 ]
 
 

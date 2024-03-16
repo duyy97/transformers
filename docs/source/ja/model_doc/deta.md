@@ -26,12 +26,12 @@ DETA (Detection Transformers with Assignment の略) は、1 対 1 の 2 部ハ�
 
 *Detection Transformer (DETR) は、トレーニング中に 1 対 1 の 2 部マッチングを使用してクエリを一意のオブジェクトに直接変換し、エンドツーエンドのオブジェクト検出を可能にします。最近、これらのモデルは、紛れもない優雅さで COCO の従来の検出器を上回りました。ただし、モデル アーキテクチャやトレーニング スケジュールなど、さまざまな設計において従来の検出器とは異なるため、1 対 1 マッチングの有効性は完全には理解されていません。この研究では、DETR での 1 対 1 のハンガリー語マッチングと、非最大監視 (NMS) を備えた従来の検出器での 1 対多のラベル割り当てとの間の厳密な比較を行います。驚くべきことに、NMS を使用した 1 対多の割り当ては、同じ設定の下で標準的な 1 対 1 のマッチングよりも一貫して優れており、最大 2.5 mAP という大幅な向上が見られます。従来の IoU ベースのラベル割り当てを使用して Deformable-DETR をトレーニングする当社の検出器は、ResNet50 バックボーンを使用して 12 エポック (1x スケジュール) 以内に 50.2 COCO mAP を達成し、この設定で既存のすべての従来の検出器またはトランスベースの検出器を上回りました。複数のデータセット、スケジュール、アーキテクチャに関して、私たちは一貫して、パフォーマンスの高い検出トランスフォーマーには二部マッチングが不要であることを示しています。さらに、検出トランスの成功は、表現力豊かなトランス アーキテクチャによるものであると考えています。*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/deta_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/deta_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> DETA の概要。 <a href="https://arxiv.org/abs/2212.06137">元の論文</a>から抜粋。 </small>
 
-このモデルは、[nielsr](https://hf-mirror.com/nielsr) によって提供されました。
+このモデルは、[nielsr](https://huggingface.co/nielsr) によって提供されました。
 元のコードは [ここ](https://github.com/jozhang97/DETA) にあります。
 
 ## Resources

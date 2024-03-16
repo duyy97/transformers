@@ -33,7 +33,7 @@ recognition by a maximum of 13.4% and 17.8% relative phone error rate reductions
 testing languages). The transferability of UniSpeech is also demonstrated on a domain-shift speech recognition task,
 i.e., a relative word error rate reduction of 6% against the previous approach.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The Authors' code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The Authors' code can be
 found [here](https://github.com/microsoft/UniSpeech/tree/main/UniSpeech).
 
 ## Usage tips

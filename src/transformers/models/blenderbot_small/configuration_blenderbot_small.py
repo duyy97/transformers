@@ -28,8 +28,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 BLENDERBOT_SMALL_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "facebook/blenderbot_small-90M": "https://hf-mirror.com/facebook/blenderbot_small-90M/resolve/main/config.json",
-    # See all BlenderbotSmall models at https://hf-mirror.com/models?filter=blenderbot_small
+    "facebook/blenderbot_small-90M": "https://huggingface.co/facebook/blenderbot_small-90M/resolve/main/config.json",
+    # See all BlenderbotSmall models at https://huggingface.co/models?filter=blenderbot_small
 }
 
 
@@ -38,7 +38,7 @@ class BlenderbotSmallConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`BlenderbotSmallModel`]. It is used to instantiate
     an BlenderbotSmall model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the BlenderbotSmall
-    [facebook/blenderbot_small-90M](https://hf-mirror.com/facebook/blenderbot_small-90M) architecture.
+    [facebook/blenderbot_small-90M](https://huggingface.co/facebook/blenderbot_small-90M) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

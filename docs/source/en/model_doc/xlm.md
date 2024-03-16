@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # XLM
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=xlm">
+<a href="https://huggingface.co/models?filter=xlm">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-xlm-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/xlm-mlm-en-2048">
+<a href="https://huggingface.co/spaces/docs-demos/xlm-mlm-en-2048">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -46,7 +46,7 @@ obtain 34.3 BLEU on WMT'16 German-English, improving the previous state of the a
 machine translation, we obtain a new state of the art of 38.5 BLEU on WMT'16 Romanian-English, outperforming the
 previous best approach by more than 4 BLEU. Our code and pretrained models will be made publicly available.*
 
-This model was contributed by [thomwolf](https://hf-mirror.com/thomwolf). The original code can be found [here](https://github.com/facebookresearch/XLM/).
+This model was contributed by [thomwolf](https://huggingface.co/thomwolf). The original code can be found [here](https://github.com/facebookresearch/XLM/).
 
 ## Usage tips
 

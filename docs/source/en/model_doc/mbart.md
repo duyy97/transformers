@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # MBart and MBart-50
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=mbart">
+<a href="https://huggingface.co/models?filter=mbart">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-mbart-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/mbart-large-50-one-to-many-mmt">
+<a href="https://huggingface.co/spaces/docs-demos/mbart-large-50-one-to-many-mmt">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -36,7 +36,7 @@ corpora in many languages using the BART objective. mBART is one of the first me
 sequence-to-sequence model by denoising full texts in multiple languages, while previous approaches have focused only
 on the encoder, decoder, or reconstructing parts of the text.
 
-This model was contributed by [valhalla](https://hf-mirror.com/valhalla). The Authors' code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/mbart)
+This model was contributed by [valhalla](https://huggingface.co/valhalla). The Authors' code can be found [here](https://github.com/pytorch/fairseq/tree/master/examples/mbart)
 
 ### Training of MBart
 

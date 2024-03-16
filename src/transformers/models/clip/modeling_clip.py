@@ -50,7 +50,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "LABEL_0"
 
 CLIP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openai/clip-vit-base-patch32",
-    # See all CLIP models at https://hf-mirror.com/models?filter=clip
+    # See all CLIP models at https://huggingface.co/models?filter=clip
 ]
 
 

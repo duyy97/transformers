@@ -40,7 +40,7 @@ _CONFIG_FOR_DOC = "DepthAnythingConfig"
 
 DEPTH_ANYTHING_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "LiheYoung/depth-anything-small-hf",
-    # See all Depth Anything models at https://hf-mirror.com/models?filter=depth_anything
+    # See all Depth Anything models at https://huggingface.co/models?filter=depth_anything
 ]
 
 

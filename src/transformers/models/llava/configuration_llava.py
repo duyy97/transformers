@@ -21,7 +21,7 @@ from ..auto import CONFIG_MAPPING
 logger = logging.get_logger(__name__)
 
 LLAVA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "llava-hf/llava-v1.5-7b": "https://hf-mirror.com/llava-hf/llava-v1.5-7b/resolve/main/config.json",
+    "llava-hf/llava-v1.5-7b": "https://huggingface.co/llava-hf/llava-v1.5-7b/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class LlavaConfig(PretrainedConfig):
     Llava model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Llava-9B.
 
-    e.g. [llava-hf/llava-9b](https://hf-mirror.com/llava-hf/llava-9b)
+    e.g. [llava-hf/llava-9b](https://huggingface.co/llava-hf/llava-9b)
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

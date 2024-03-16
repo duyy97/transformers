@@ -68,7 +68,7 @@ Hugging Faceのベンチマークツールは非推奨であり、Transformerモ
 
 ここでは、ベンチマーク引数のデータクラスに対して、`models`、`batch_sizes`
 および`sequence_lengths`の3つの引数が指定されています。引数`models`は必須で、
-[モデルハブ](https://hf-mirror.com/models)からのモデル識別子の`リスト`を期待し
+[モデルハブ](https://huggingface.co/models)からのモデル識別子の`リスト`を期待し
 ます。`batch_sizes`と`sequence_lengths`の2つの`リスト`引数は
 モデルのベンチマーク対象となる`input_ids`のサイズを定義します。
 ベンチマーク引数データクラスを介して設定できる他の多くのパラメータがあります。これらの詳細については、直接ファイル

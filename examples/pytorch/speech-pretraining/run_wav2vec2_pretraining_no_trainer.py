@@ -89,7 +89,7 @@ def parse_args():
         "--cache_dir",
         type=str,
         default=None,
-        help="Where do you want to store the pretrained models downloaded from hf-mirror.com",
+        help="Where do you want to store the pretrained models downloaded from huggingface.co",
     )
     parser.add_argument(
         "--validation_split_percentage",
@@ -118,7 +118,7 @@ def parse_args():
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        help="Path to pretrained model or model identifier from hf-mirror.com/models.",
+        help="Path to pretrained model or model identifier from huggingface.co/models.",
         required=True,
     )
     parser.add_argument(

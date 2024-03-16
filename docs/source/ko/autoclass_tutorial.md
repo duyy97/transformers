@@ -21,7 +21,7 @@ rendered properly in your Markdown viewer.
 
 <Tip>
 
-아키텍처는 모델의 골격을 의미하며 체크포인트는 주어진 아키텍처에 대한 가중치입니다. 예를 들어, [BERT](https://hf-mirror.com/google-bert/bert-base-uncased)는 아키텍처이고, `google-bert/bert-base-uncased`는 체크포인트입니다. 모델은 아키텍처 또는 체크포인트를 의미할 수 있는 일반적인 용어입니다.
+아키텍처는 모델의 골격을 의미하며 체크포인트는 주어진 아키텍처에 대한 가중치입니다. 예를 들어, [BERT](https://huggingface.co/google-bert/bert-base-uncased)는 아키텍처이고, `google-bert/bert-base-uncased`는 체크포인트입니다. 모델은 아키텍처 또는 체크포인트를 의미할 수 있는 일반적인 용어입니다.
 
 </Tip>
 
@@ -114,7 +114,7 @@ rendered properly in your Markdown viewer.
 <Tip warning={true}>
 
 PyTorch모델의 경우 `from_pretrained()` 메서드는 내부적으로 피클을 사용하여 안전하지 않은 것으로 알려진 `torch.load()`를 사용합니다. 
-일반적으로 신뢰할 수 없는 소스에서 가져왔거나 변조되었을 수 있는 모델은 로드하지 마세요. 허깅 페이스 허브에서 호스팅되는 공개 모델의 경우 이러한 보안 위험이 부분적으로 완화되며, 각 커밋 시 멀웨어를 [검사합니다](https://hf-mirror.com/docs/hub/security-malware). GPG를 사용해 서명된 [커밋 검증](https://hf-mirror.com/docs/hub/security-gpg#signing-commits-with-gpg)과 같은 모범사례는 [문서](https://hf-mirror.com/docs/hub/security)를 참조하세요.
+일반적으로 신뢰할 수 없는 소스에서 가져왔거나 변조되었을 수 있는 모델은 로드하지 마세요. 허깅 페이스 허브에서 호스팅되는 공개 모델의 경우 이러한 보안 위험이 부분적으로 완화되며, 각 커밋 시 멀웨어를 [검사합니다](https://huggingface.co/docs/hub/security-malware). GPG를 사용해 서명된 [커밋 검증](https://huggingface.co/docs/hub/security-gpg#signing-commits-with-gpg)과 같은 모범사례는 [문서](https://huggingface.co/docs/hub/security)를 참조하세요.
 
 텐서플로우와 Flax 체크포인트는 영향을 받지 않으며, `from_pretrained`메서드에 `from_tf` 와 `from_flax` 키워드 가변 인자를 사용하여 이 문제를 우회할 수 있습니다.
 

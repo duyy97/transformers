@@ -38,7 +38,7 @@ the full-precision baseline. Furthermore, our preliminary implementation of I-BE
 INT8 inference on a T4 GPU system as compared to FP32 inference. The framework has been developed in PyTorch and has
 been open-sourced.*
 
-This model was contributed by [kssteven](https://hf-mirror.com/kssteven). The original code can be found [here](https://github.com/kssteven418/I-BERT).
+This model was contributed by [kssteven](https://huggingface.co/kssteven). The original code can be found [here](https://github.com/kssteven418/I-BERT).
 
 ## Resources
 

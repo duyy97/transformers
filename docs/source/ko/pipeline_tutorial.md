@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # 추론을 위한 Pipeline[[pipelines-for-inference]]
 
-[`pipeline`]을 사용하면 언어, 컴퓨터 비전, 오디오 및 멀티모달 태스크에 대한 추론을 위해 [Hub](https://hf-mirror.com/models)의 어떤 모델이든 쉽게 사용할 수 있습니다. 특정 분야에 대한 경험이 없거나, 모델을 이루는 코드가 익숙하지 않은 경우에도 [`pipeline`]을 사용해서 추론할 수 있어요! 이 튜토리얼에서는 다음을 배워보겠습니다.
+[`pipeline`]을 사용하면 언어, 컴퓨터 비전, 오디오 및 멀티모달 태스크에 대한 추론을 위해 [Hub](https://huggingface.co/models)의 어떤 모델이든 쉽게 사용할 수 있습니다. 특정 분야에 대한 경험이 없거나, 모델을 이루는 코드가 익숙하지 않은 경우에도 [`pipeline`]을 사용해서 추론할 수 있어요! 이 튜토리얼에서는 다음을 배워보겠습니다.
 
 * 추론을 위해 [`pipeline`]을 사용하는 방법
 * 특정 토크나이저 또는 모델을 사용하는 방법
@@ -43,16 +43,16 @@ rendered properly in your Markdown viewer.
 2. 그리고 [`pipeline`]에 입력을 넣어주세요.
 
 ```py
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP LIVE UP THE TRUE MEANING OF ITS TREES'}
 ```
 
-기대했던 결과가 아닌가요? Hub에서 [가장 많이 다운로드된 자동 음성 인식 모델](https://hf-mirror.com/models?pipeline_tag=automatic-speech-recognition&sort=downloads)로 더 나은 결과를 얻을 수 있는지 확인해보세요.
-다음은 [openai/whisper-large](https://hf-mirror.com/openai/whisper-large)로 시도해보겠습니다.
+기대했던 결과가 아닌가요? Hub에서 [가장 많이 다운로드된 자동 음성 인식 모델](https://huggingface.co/models?pipeline_tag=automatic-speech-recognition&sort=downloads)로 더 나은 결과를 얻을 수 있는지 확인해보세요.
+다음은 [openai/whisper-large](https://huggingface.co/openai/whisper-large)로 시도해보겠습니다.
 
 ```py
 >>> generator = pipeline(model="openai/whisper-large")
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
@@ -66,8 +66,8 @@ Hub의 모델들은 여러 다양한 언어와 전문분야를 아우르기 때�
 ```py
 generator(
     [
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
-        "https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac",
+        "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac",
     ]
 )
 ```
@@ -101,7 +101,7 @@ out = generate(...)  # This will go back to using `my_parameter=1`.
 generator(model="openai/whisper-large", device=0)
 ```
 
-모델이 GPU 하나에 돌아가기 버겁다면, `device_map="auto"`를 지정해서 🤗 [Accelerate](https://hf-mirror.com/docs/accelerate)가 모델 가중치를 어떻게 로드하고 저장할지 자동으로 결정하도록 할 수 있습니다.
+모델이 GPU 하나에 돌아가기 버겁다면, `device_map="auto"`를 지정해서 🤗 [Accelerate](https://huggingface.co/docs/accelerate)가 모델 가중치를 어떻게 로드하고 저장할지 자동으로 결정하도록 할 수 있습니다.
 
 ```py
 #!pip install accelerate
@@ -110,7 +110,7 @@ generator(model="openai/whisper-large", device_map="auto")
 
 ### 배치 사이즈[[batch-size]]
 
-기본적으로 파이프라인은 [여기](https://hf-mirror.com/docs/transformers/main_classes/pipelines#pipeline-batching)에 나온 이유로 추론을 일괄 처리하지 않습니다. 간단히 설명하자면 일괄 처리가 반드시 더 빠르지 않고 오히려 더 느려질 수도 있기 때문입니다.
+기본적으로 파이프라인은 [여기](https://huggingface.co/docs/transformers/main_classes/pipelines#pipeline-batching)에 나온 이유로 추론을 일괄 처리하지 않습니다. 간단히 설명하자면 일괄 처리가 반드시 더 빠르지 않고 오히려 더 느려질 수도 있기 때문입니다.
 
 하지만 자신의 상황에 적합하다면, 이렇게 사용하세요.
 
@@ -133,7 +133,7 @@ texts = generator(audio_filenames)
 ```py
 >>> # Not using whisper, as it cannot provide timestamps.
 >>> generator = pipeline(model="facebook/wav2vec2-large-960h-lv60-self", return_timestamps="word")
->>> generator("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+>>> generator("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
 {'text': 'I HAVE A DREAM BUT ONE DAY THIS NATION WILL RISE UP AND LIVE OUT THE TRUE MEANING OF ITS CREED', 'chunks': [{'text': 'I', 'timestamp': (1.22, 1.24)}, {'text': 'HAVE', 'timestamp': (1.42, 1.58)}, {'text': 'A', 'timestamp': (1.66, 1.68)}, {'text': 'DREAM', 'timestamp': (1.76, 2.14)}, {'text': 'BUT', 'timestamp': (3.68, 3.8)}, {'text': 'ONE', 'timestamp': (3.94, 4.06)}, {'text': 'DAY', 'timestamp': (4.16, 4.3)}, {'text': 'THIS', 'timestamp': (6.36, 6.54)}, {'text': 'NATION', 'timestamp': (6.68, 7.1)}, {'text': 'WILL', 'timestamp': (7.32, 7.56)}, {'text': 'RISE', 'timestamp': (7.8, 8.26)}, {'text': 'UP', 'timestamp': (8.38, 8.48)}, {'text': 'AND', 'timestamp': (10.08, 10.18)}, {'text': 'LIVE', 'timestamp': (10.26, 10.48)}, {'text': 'OUT', 'timestamp': (10.58, 10.7)}, {'text': 'THE', 'timestamp': (10.82, 10.9)}, {'text': 'TRUE', 'timestamp': (10.98, 11.18)}, {'text': 'MEANING', 'timestamp': (11.26, 11.58)}, {'text': 'OF', 'timestamp': (11.66, 11.7)}, {'text': 'ITS', 'timestamp': (11.76, 11.88)}, {'text': 'CREED', 'timestamp': (12.0, 12.38)}]}
 ```
 
@@ -194,14 +194,14 @@ for out in pipe(KeyDataset(dataset["audio"])):
 
 태스크를 지정하고 이미지를 분류기에 전달하면 됩니다. 이미지는 인터넷 링크 또는 로컬 경로의 형태로 전달해주세요. 예를 들어 아래에 표시된 고양이는 어떤 종인가요?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 >>> preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
 >>> preds
@@ -229,14 +229,14 @@ NLP 태스크를 위해 [`pipeline`]을 사용하는 일도 거의 동일합니�
 
 [`pipeline`]은 여러 모달리티(역주: 오디오, 비디오, 텍스트와 같은 데이터 형태)를 지원합니다. 예시로 시각적 질의응답(VQA; Visual Question Answering) 태스크는 텍스트와 이미지를 모두 사용합니다. 그 어떤 이미지 링크나 묻고 싶은 질문도 자유롭게 전달할 수 있습니다. 이미지는 URL 또는 로컬 경로의 형태로 전달해주세요.
 
-예를 들어 이 [거래명세서 사진](https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)에서 거래명세서 번호를 묻고 싶다면,
+예를 들어 이 [거래명세서 사진](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)에서 거래명세서 번호를 묻고 싶다면,
 
 ```py
 >>> from transformers import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> vqa(
-...     image="https://hf-mirror.com/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
+...     image="https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png",
 ...     question="What is the invoice number?",
 ... )
 [{'score': 0.42514941096305847, 'answer': 'us-001', 'start': 16, 'end': 16}]

@@ -24,9 +24,9 @@ logger = logging.get_logger(__name__)
 
 TIME_SERIES_TRANSFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "huggingface/time-series-transformer-tourism-monthly": (
-        "https://hf-mirror.com/huggingface/time-series-transformer-tourism-monthly/resolve/main/config.json"
+        "https://huggingface.co/huggingface/time-series-transformer-tourism-monthly/resolve/main/config.json"
     ),
-    # See all TimeSeriesTransformer models at https://hf-mirror.com/models?filter=time_series_transformer
+    # See all TimeSeriesTransformer models at https://huggingface.co/models?filter=time_series_transformer
 }
 
 
@@ -36,7 +36,7 @@ class TimeSeriesTransformerConfig(PretrainedConfig):
     instantiate a Time Series Transformer model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the Time Series
     Transformer
-    [huggingface/time-series-transformer-tourism-monthly](https://hf-mirror.com/huggingface/time-series-transformer-tourism-monthly)
+    [huggingface/time-series-transformer-tourism-monthly](https://huggingface.co/huggingface/time-series-transformer-tourism-monthly)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] can be used to control the model outputs. Read the

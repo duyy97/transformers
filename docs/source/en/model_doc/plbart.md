@@ -35,7 +35,7 @@ Furthermore, analysis reveals that PLBART learns program syntax, style (e.g., id
 (e.g., if block inside an else block is equivalent to else if block) that are crucial to program semantics and thus excels
 even with limited annotations.*
 
-This model was contributed by [gchhablani](https://hf-mirror.com/gchhablani). The Authors' code can be found [here](https://github.com/wasiahmad/PLBART).
+This model was contributed by [gchhablani](https://huggingface.co/gchhablani). The Authors' code can be found [here](https://github.com/wasiahmad/PLBART).
 
 ## Usage examples
 

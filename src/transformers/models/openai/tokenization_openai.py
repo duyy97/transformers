@@ -34,10 +34,10 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "openai-community/openai-gpt": "https://hf-mirror.com/openai-community/openai-gpt/resolve/main/vocab.json"
+        "openai-community/openai-gpt": "https://huggingface.co/openai-community/openai-gpt/resolve/main/vocab.json"
     },
     "merges_file": {
-        "openai-community/openai-gpt": "https://hf-mirror.com/openai-community/openai-gpt/resolve/main/merges.txt"
+        "openai-community/openai-gpt": "https://huggingface.co/openai-community/openai-gpt/resolve/main/merges.txt"
     },
 }
 

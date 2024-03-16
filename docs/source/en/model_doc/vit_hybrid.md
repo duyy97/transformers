@@ -36,7 +36,7 @@ data and transferred to multiple mid-sized or small image recognition benchmarks
 Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring
 substantially fewer computational resources to train.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code (written in JAX) can be
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code (written in JAX) can be
 found [here](https://github.com/google-research/vision_transformer).
 
 ## Resources

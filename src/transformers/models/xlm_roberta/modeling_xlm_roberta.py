@@ -58,7 +58,7 @@ XLM_ROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "FacebookAI/xlm-roberta-large-finetuned-conll02-spanish",
     "FacebookAI/xlm-roberta-large-finetuned-conll03-english",
     "FacebookAI/xlm-roberta-large-finetuned-conll03-german",
-    # See all XLM-RoBERTa models at https://hf-mirror.com/models?filter=xlm-roberta
+    # See all XLM-RoBERTa models at https://huggingface.co/models?filter=xlm-roberta
 ]
 
 

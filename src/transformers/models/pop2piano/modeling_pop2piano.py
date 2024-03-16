@@ -66,7 +66,7 @@ _CHECKPOINT_FOR_DOC = "sweetcocoa/pop2piano"
 
 POP2PIANO_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "sweetcocoa/pop2piano",
-    # See all Pop2Piano models at https://hf-mirror.com/models?filter=pop2piano
+    # See all Pop2Piano models at https://huggingface.co/models?filter=pop2piano
 ]
 
 
@@ -1247,7 +1247,7 @@ class Pop2PianoForConditionalGeneration(Pop2PianoPreTrainedModel):
                 This value is passed to `Pop2PianoConcatEmbeddingToMel` to generate different embeddings for each
                 `"composer"`. Please make sure that the composet value is present in `composer_to_feature_token` in
                 `generation_config`. For an example please see
-                https://hf-mirror.com/sweetcocoa/pop2piano/blob/main/generation_config.json .
+                https://huggingface.co/sweetcocoa/pop2piano/blob/main/generation_config.json .
             generation_config (`~generation.GenerationConfig`, *optional*):
                 The generation configuration to be used as base parametrization for the generation call. `**kwargs`
                 passed to generate matching the attributes of `generation_config` will override them. If
@@ -1276,7 +1276,7 @@ class Pop2PianoForConditionalGeneration(Pop2PianoPreTrainedModel):
         if not hasattr(generation_config, "composer_to_feature_token"):
             raise ValueError(
                 "`composer_to_feature_token` was not found! Please refer to "
-                "https://hf-mirror.com/sweetcocoa/pop2piano/blob/main/generation_config.json"
+                "https://huggingface.co/sweetcocoa/pop2piano/blob/main/generation_config.json"
                 "and parse a dict like that."
             )
 

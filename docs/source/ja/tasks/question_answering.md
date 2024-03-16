@@ -27,7 +27,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. 抽出的質問応答用に [SQuAD](https://hf-mirror.com/datasets/squad) データセット上の [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) を微調整します。
+1. 抽出的質問応答用に [SQuAD](https://huggingface.co/datasets/squad) データセット上の [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) を微調整します。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -338,7 +338,7 @@ TensorFlow でモデルを微調整するには、オプティマイザー関数
 
 質問応答の評価には、大量の後処理が必要です。時間がかかりすぎないように、このガイドでは評価ステップを省略しています。 [`Trainer`] はトレーニング中に評価損失を計算するため、モデルのパフォーマンスについて完全に分からないわけではありません。
 
-もっと時間があり、質問応答用のモデルを評価する方法に興味がある場合は、[質問応答](https://hf-mirror.com/course/chapter7/7?fw=pt#postprocessing) の章を参照してください。 🤗ハグフェイスコースから！
+もっと時間があり、質問応答用のモデルを評価する方法に興味がある場合は、[質問応答](https://huggingface.co/course/chapter7/7?fw=pt#postprocessing) の章を参照してください。 🤗ハグフェイスコースから！
 
 ## Inference
 

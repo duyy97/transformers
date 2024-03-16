@@ -35,17 +35,17 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model", "tokenizer_file": 
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "moussaKam/mbarthez": "https://hf-mirror.com/moussaKam/mbarthez/resolve/main/sentencepiece.bpe.model",
-        "moussaKam/barthez": "https://hf-mirror.com/moussaKam/barthez/resolve/main/sentencepiece.bpe.model",
+        "moussaKam/mbarthez": "https://huggingface.co/moussaKam/mbarthez/resolve/main/sentencepiece.bpe.model",
+        "moussaKam/barthez": "https://huggingface.co/moussaKam/barthez/resolve/main/sentencepiece.bpe.model",
         "moussaKam/barthez-orangesum-title": (
-            "https://hf-mirror.com/moussaKam/barthez-orangesum-title/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/moussaKam/barthez-orangesum-title/resolve/main/sentencepiece.bpe.model"
         ),
     },
     "tokenizer_file": {
-        "moussaKam/mbarthez": "https://hf-mirror.com/moussaKam/mbarthez/resolve/main/tokenizer.json",
-        "moussaKam/barthez": "https://hf-mirror.com/moussaKam/barthez/resolve/main/tokenizer.json",
+        "moussaKam/mbarthez": "https://huggingface.co/moussaKam/mbarthez/resolve/main/tokenizer.json",
+        "moussaKam/barthez": "https://huggingface.co/moussaKam/barthez/resolve/main/tokenizer.json",
         "moussaKam/barthez-orangesum-title": (
-            "https://hf-mirror.com/moussaKam/barthez-orangesum-title/resolve/main/tokenizer.json"
+            "https://huggingface.co/moussaKam/barthez-orangesum-title/resolve/main/tokenizer.json"
         ),
     },
 }

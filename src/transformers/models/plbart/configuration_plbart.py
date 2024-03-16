@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 PLBART_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "uclanlp/plbart-base": "https://hf-mirror.com/uclanlp/plbart-base/resolve/main/config.json",
-    # See all PLBART models at https://hf-mirror.com/models?filter=plbart
+    "uclanlp/plbart-base": "https://huggingface.co/uclanlp/plbart-base/resolve/main/config.json",
+    # See all PLBART models at https://huggingface.co/models?filter=plbart
 }
 
 
@@ -34,7 +34,7 @@ class PLBartConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`PLBartModel`]. It is used to instantiate an
     PLBART model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the PLBART
-    [uclanlp/plbart-base](https://hf-mirror.com/uclanlp/plbart-base) architecture.
+    [uclanlp/plbart-base](https://huggingface.co/uclanlp/plbart-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

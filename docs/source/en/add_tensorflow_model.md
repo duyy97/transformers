@@ -29,7 +29,7 @@ highly encourage that you suggest improvements to this guide!
 
 Before you dive deeper, it is recommended that you check the following resources if you're new to 🤗 Transformers:
 - [General overview of 🤗 Transformers](add_new_model#general-overview-of-transformers)
-- [Hugging Face's TensorFlow Philosophy](https://hf-mirror.com/blog/tensorflow-philosophy)
+- [Hugging Face's TensorFlow Philosophy](https://huggingface.co/blog/tensorflow-philosophy)
 
 In the remainder of this guide, you will learn what's needed to add a new TensorFlow model architecture, the
 procedure to convert PyTorch into TensorFlow model weights, and how to efficiently debug mismatches across ML
@@ -42,7 +42,7 @@ Are you unsure whether the model you wish to use already has a corresponding Ten
 &nbsp;
 
 Check the `model_type` field of the `config.json` of your model of choice
-([example](https://hf-mirror.com/google-bert/bert-base-uncased/blob/main/config.json#L14)). If the corresponding model folder in
+([example](https://huggingface.co/google-bert/bert-base-uncased/blob/main/config.json#L14)). If the corresponding model folder in
 🤗 Transformers has a file whose name starts with "modeling_tf", it means that it has a corresponding TensorFlow
 architecture ([example](https://github.com/huggingface/transformers/tree/main/src/transformers/models/bert)).
 
@@ -181,7 +181,7 @@ model, as well as to foresee technical challenges on the TensorFlow side.
 
 It's perfectly natural that you feel overwhelmed with the amount of information that you've just absorbed. It is
 definitely not a requirement that you understand all facets of the model at this stage. Nevertheless, we highly
-encourage you to clear any pressing questions in our [forum](https://discuss.hf-mirror.com/).
+encourage you to clear any pressing questions in our [forum](https://discuss.huggingface.co/).
 
 
 ### 4. Model implementation
@@ -303,7 +303,7 @@ fabulous TensorFlow contribution? With proper communication, of course! 📣
 
 There are two main ways to share your model with the community:
 - Build demos. These include Gradio demos, notebooks, and other fun ways to show off your model. We highly
-   encourage you to add a notebook to our [community-driven demos](https://hf-mirror.com/docs/transformers/community).
+   encourage you to add a notebook to our [community-driven demos](https://huggingface.co/docs/transformers/community).
 - Share stories on social media like Twitter and LinkedIn. You should be proud of your work and share
    your achievement with the community - your model can now be used by thousands of engineers and researchers around
    the world 🌍! We will be happy to retweet your posts and help you share your work with the community.
@@ -316,7 +316,7 @@ TensorFlow weights is a breeze!
 
 Here's how to do it:
 1. Make sure you are logged into your Hugging Face account in your terminal. You can log in using the command
-   `huggingface-cli login` (you can find your access tokens [here](https://hf-mirror.com/settings/tokens))
+   `huggingface-cli login` (you can find your access tokens [here](https://huggingface.co/settings/tokens))
 2. Run `transformers-cli pt-to-tf --model-name foo/bar`, where `foo/bar` is the name of the model repository
    containing the PyTorch weights you want to convert
 3. Tag `@joaogante` and `@Rocketknight1` in the 🤗 Hub PR the command above has just created

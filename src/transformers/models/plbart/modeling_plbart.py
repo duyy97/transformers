@@ -58,7 +58,7 @@ PLBART_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "uclanlp/plbart-base",
     "uclanlp/plbart-cs-java",
     "uclanlp/plbart-multi_task-all",
-    # See all PLBART models at https://hf-mirror.com/models?filter=plbart
+    # See all PLBART models at https://huggingface.co/models?filter=plbart
 ]
 
 

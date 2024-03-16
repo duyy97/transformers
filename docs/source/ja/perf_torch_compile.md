@@ -15,7 +15,7 @@ rendered properly in your Markdown viewer.
 
 # Optimize inference using torch.compile()
 
-このガイドは、[`torch.compile()`](https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html) を使用した推論速度の向上に関するベンチマークを提供することを目的としています。これは、[🤗 Transformers のコンピュータビジョンモデル](https://hf-mirror.com/models?pipeline_tag=image-classification&library=transformers&sort=trending)向けのものです。
+このガイドは、[`torch.compile()`](https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html) を使用した推論速度の向上に関するベンチマークを提供することを目的としています。これは、[🤗 Transformers のコンピュータビジョンモデル](https://huggingface.co/models?pipeline_tag=image-classification&library=transformers&sort=trending)向けのものです。
 
 ## Benefits of torch.compile
 
@@ -95,21 +95,21 @@ with torch.no_grad():
 
 
 **Image Classification** 
-- [google/vit-base-patch16-224](https://hf-mirror.com/google/vit-base-patch16-224)
-- [microsoft/beit-base-patch16-224-pt22k-ft22k](https://hf-mirror.com/microsoft/beit-base-patch16-224-pt22k-ft22k)
-- [facebook/convnext-large-224](https://hf-mirror.com/facebook/convnext-large-224)
-- [microsoft/resnet-50](https://hf-mirror.com/)
+- [google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224)
+- [microsoft/beit-base-patch16-224-pt22k-ft22k](https://huggingface.co/microsoft/beit-base-patch16-224-pt22k-ft22k)
+- [facebook/convnext-large-224](https://huggingface.co/facebook/convnext-large-224)
+- [microsoft/resnet-50](https://huggingface.co/)
 
 **Image Segmentation** 
-- [nvidia/segformer-b0-finetuned-ade-512-512](https://hf-mirror.com/nvidia/segformer-b0-finetuned-ade-512-512)
-- [facebook/mask2former-swin-tiny-coco-panoptic](https://hf-mirror.com/facebook/mask2former-swin-tiny-coco-panoptic)
-- [facebook/maskformer-swin-base-ade](https://hf-mirror.com/facebook/maskformer-swin-base-ade)
-- [google/deeplabv3_mobilenet_v2_1.0_513](https://hf-mirror.com/google/deeplabv3_mobilenet_v2_1.0_513)
+- [nvidia/segformer-b0-finetuned-ade-512-512](https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512)
+- [facebook/mask2former-swin-tiny-coco-panoptic](https://huggingface.co/facebook/mask2former-swin-tiny-coco-panoptic)
+- [facebook/maskformer-swin-base-ade](https://huggingface.co/facebook/maskformer-swin-base-ade)
+- [google/deeplabv3_mobilenet_v2_1.0_513](https://huggingface.co/google/deeplabv3_mobilenet_v2_1.0_513)
 
 **Object Detection** 
-- [google/owlvit-base-patch32](https://hf-mirror.com/google/owlvit-base-patch32)
-- [facebook/detr-resnet-101](https://hf-mirror.com/facebook/detr-resnet-101)
-- [microsoft/conditional-detr-resnet-50](https://hf-mirror.com/microsoft/conditional-detr-resnet-50)
+- [google/owlvit-base-patch32](https://huggingface.co/google/owlvit-base-patch32)
+- [facebook/detr-resnet-101](https://huggingface.co/facebook/detr-resnet-101)
+- [microsoft/conditional-detr-resnet-50](https://huggingface.co/microsoft/conditional-detr-resnet-50)
 
 
 以下は、`torch.compile()`を使用した場合と使用しない場合の推論時間の可視化と、異なるハードウェアとバッチサイズの各モデルに対するパフォーマンス向上の割合です。
@@ -117,28 +117,28 @@ with torch.no_grad():
 
 <div class="flex">
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/a100_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/a100_batch_comp.png" />
   </div>
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_batch_comp.png" />
   </div>
    <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/t4_batch_comp.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/t4_batch_comp.png" />
   </div>
 </div>
 
 <div class="flex">
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_duration.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_duration.png" />
   </div>
   <div>
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_percentage.png" />
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/A100_1_percentage.png" />
   </div>
 </div>
 
-![Duration Comparison on V100 with Batch Size of 1](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_1_duration.png)
+![Duration Comparison on V100 with Batch Size of 1](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/v100_1_duration.png)
 
-![Percentage Improvement on T4 with Batch Size of 4](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/T4_4_percentage.png)
+![Percentage Improvement on T4 with Batch Size of 4](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/torch_compile/T4_4_percentage.png)
 
 下記は、各モデルについて`compile()`を使用した場合と使用しなかった場合の推論時間（ミリ秒単位）です。なお、OwlViTは大きなバッチサイズでの使用時にメモリ不足（OOM）が発生することに注意してください。
 

@@ -30,7 +30,7 @@ Some noteworthy use case examples for VQA include:
 
 In this guide you'll learn how to:
 
-- Fine-tune a classification VQA model, specifically [ViLT](../model_doc/vilt), on the [`Graphcore/vqa` dataset](https://hf-mirror.com/datasets/Graphcore/vqa).
+- Fine-tune a classification VQA model, specifically [ViLT](../model_doc/vilt), on the [`Graphcore/vqa` dataset](https://huggingface.co/datasets/Graphcore/vqa).
 - Use your fine-tuned ViLT for inference.
 - Run zero-shot VQA inference with a generative model, like BLIP-2.
 
@@ -68,11 +68,11 @@ Let's define the model checkpoint as a global variable.
 ## Load the data
 
 For illustration purposes, in this guide we use a very small sample of the annotated visual question answering `Graphcore/vqa` dataset. 
-You can find the full dataset on [🤗 Hub](https://hf-mirror.com/datasets/Graphcore/vqa).
+You can find the full dataset on [🤗 Hub](https://huggingface.co/datasets/Graphcore/vqa).
 
-As an alternative to the [`Graphcore/vqa` dataset](https://hf-mirror.com/datasets/Graphcore/vqa), you can download the 
+As an alternative to the [`Graphcore/vqa` dataset](https://huggingface.co/datasets/Graphcore/vqa), you can download the 
 same data manually from the official [VQA dataset page](https://visualqa.org/download.html). If you prefer to follow the 
-tutorial with your custom data, check out how to [Create an image dataset](https://hf-mirror.com/docs/datasets/image_dataset#loading-script)
+tutorial with your custom data, check out how to [Create an image dataset](https://huggingface.co/docs/datasets/image_dataset#loading-script)
 guide in the 🤗 Datasets documentation.  
 
 Let's load the first 200 examples from the validation split and explore the dataset's features:  
@@ -129,7 +129,7 @@ Take a look at the image and consider which answer would you give:
 ```
 
 <div class="flex justify-center">
-     <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/vqa-example.png" alt="VQA Image Example"/>
+     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/vqa-example.png" alt="VQA Image Example"/>
 </div>
 
 Due to the questions' and answers' ambiguity, datasets like this are treated as a multi-label classification problem (as 
@@ -354,7 +354,7 @@ Predicted answer: down
 
 The previous model treated VQA as a classification task. Some recent models, such as BLIP, BLIP-2, and InstructBLIP approach 
 VQA as a generative task. Let's take [BLIP-2](../model_doc/blip-2) as an example. It introduced a new visual-language pre-training 
-paradigm in which any combination of pre-trained vision encoder and LLM can be used (learn more in the [BLIP-2 blog post](https://hf-mirror.com/blog/blip-2)). 
+paradigm in which any combination of pre-trained vision encoder and LLM can be used (learn more in the [BLIP-2 blog post](https://huggingface.co/blog/blip-2)). 
 This enables achieving state-of-the-art results on multiple visual-language tasks including visual question answering. 
 
 Let's illustrate how you can use this model for VQA. First, let's load the model. Here we'll explicitly send the model to a 

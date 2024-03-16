@@ -41,9 +41,9 @@ Tips:
 
 The figure below illustrates the architecture of a Visual Attention Layer. Taken from the [original paper](https://arxiv.org/abs/2202.09741).
 
-<img width="600" src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/van_architecture.png"/>
+<img width="600" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/van_architecture.png"/>
 
-This model was contributed by [Francesco](https://hf-mirror.com/Francesco). The original code can be found [here](https://github.com/Visual-Attention-Network/VAN-Classification).
+This model was contributed by [Francesco](https://huggingface.co/Francesco). The original code can be found [here](https://github.com/Visual-Attention-Network/VAN-Classification).
 
 ## Resources
 

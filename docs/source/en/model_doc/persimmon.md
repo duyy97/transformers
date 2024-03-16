@@ -26,7 +26,7 @@ The authors showcase their approach to model evaluation, focusing on practical t
 
 In terms of model details, the work outlines the architecture and training methodology of Persimmon-8B, providing insights into its design choices, sequence length, and dataset composition. The authors present a fast inference code that outperforms traditional implementations through operator fusion and CUDA graph utilization while maintaining code coherence. They express their anticipation of how the community will leverage this contribution to drive innovation, hinting at further upcoming releases as part of an ongoing series of developments.
 
-This model was contributed by [ArthurZ](https://hf-mirror.com/ArthurZ).
+This model was contributed by [ArthurZ](https://huggingface.co/ArthurZ).
 The original code can be found [here](https://github.com/persimmon-ai-labs/adept-inference).
 
 ## Usage tips

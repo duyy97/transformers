@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 <Youtube id="S2EEG3JIt2A"/>
 
-1. [フォーラム](https://discuss.hf-mirror.com/)で助けを求める。 [初心者向け](https://discuss.hf-mirror.com/c/beginners/5) または [🤗 Transformers](https://discuss.hf-mirror.com/c/transformers/9) など、質問を投稿できる特定のカテゴリがあります。問題が解決される可能性を最大限にするために、再現可能なコードを含む良い説明的なフォーラム投稿を書くことを確認してください！
+1. [フォーラム](https://discuss.huggingface.co/)で助けを求める。 [初心者向け](https://discuss.huggingface.co/c/beginners/5) または [🤗 Transformers](https://discuss.huggingface.co/c/transformers/9) など、質問を投稿できる特定のカテゴリがあります。問題が解決される可能性を最大限にするために、再現可能なコードを含む良い説明的なフォーラム投稿を書くことを確認してください！
 
 <Youtube id="_PAli-V4wj0"/>
 
@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 
 3. より古いバージョンの 🤗 Transformers を使用している場合は、[Migration](migration) ガイドを確認してください。バージョン間で重要な変更が導入されているためです。
 
-トラブルシューティングとヘルプの詳細については、Hugging Faceコースの [第8章](https://hf-mirror.com/course/chapter8/1?fw=pt) を参照してください。
+トラブルシューティングとヘルプの詳細については、Hugging Faceコースの [第8章](https://huggingface.co/course/chapter8/1?fw=pt) を参照してください。
 
 ## Firewalled environments
 

@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # CTRL
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=Salesforce/ctrl">
+<a href="https://huggingface.co/models?filter=Salesforce/ctrl">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-ctrl-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/tiny-ctrl">
+<a href="https://huggingface.co/spaces/docs-demos/tiny-ctrl">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -41,7 +41,7 @@ CTRL モデルは、Nitish Shirish Keskar*、Bryan McCann*、Lav R. Varshney、C
 トレーニング データにはシーケンスが与えられる可能性が最も高くなります。これにより、大量のデータを分析するための潜在的な方法が提供されます。
 モデルベースのソース帰属を介して。*
 
-このモデルは、[keskarnitishr](https://hf-mirror.com/keskarnitishr) によって提供されました。元のコードが見つかる
+このモデルは、[keskarnitishr](https://huggingface.co/keskarnitishr) によって提供されました。元のコードが見つかる
 [こちら](https://github.com/salesforce/Salesforce/ctrl)。
 
 ## Usage tips

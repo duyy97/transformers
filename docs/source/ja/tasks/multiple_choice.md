@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [SWAG](https://hf-mirror.com/datasets/swag) データセットの「通常」構成で [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) を微調整して、最適なデータセットを選択します複数の選択肢と何らかのコンテキストを考慮して回答します。
+1. [SWAG](https://huggingface.co/datasets/swag) データセットの「通常」構成で [BERT](https://huggingface.co/google-bert/bert-base-uncased) を微調整して、最適なデータセットを選択します複数の選択肢と何らかのコンテキストを考慮して回答します。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -217,7 +217,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 
 ## Evaluate
 
-トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) メトリクスを読み込みます (🤗 Evaluate [クイック ツアー](https://hf-mirror.com/docs/evaluate/a_quick_tour) を参照してください) ) メトリクスの読み込みと計算方法の詳細については、次を参照してください)。
+トレーニング中にメトリクスを含めると、多くの場合、モデルのパフォーマンスを評価するのに役立ちます。 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) ライブラリを使用して、評価メソッドをすばやくロードできます。このタスクでは、[accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) メトリクスを読み込みます (🤗 Evaluate [クイック ツアー](https://huggingface.co/docs/evaluate/a_quick_tour) を参照してください) ) メトリクスの読み込みと計算方法の詳細については、次を参照してください)。
 
 ```py
 >>> import evaluate

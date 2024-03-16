@@ -68,7 +68,7 @@ class AssistedCandidateGenerator(CandidateGenerator):
     """
     `CandidateGenerator` class to be used for assisted generation and speculative decoding. This class generates
     candidates through the use of a smaller model. Read the following blog post for more information:
-    https://hf-mirror.com/blog/assisted-generation
+    https://huggingface.co/blog/assisted-generation
 
     Args:
         input_ids (`torch.LongTensor` of shape `(batch_size, sequence_length)`):

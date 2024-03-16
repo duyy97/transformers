@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 Note that [`BlenderbotSmallModel`] and
 [`BlenderbotSmallForConditionalGeneration`] are only used in combination with the checkpoint
-[facebook/blenderbot-90M](https://hf-mirror.com/facebook/blenderbot-90M). Larger Blenderbot checkpoints should
+[facebook/blenderbot-90M](https://huggingface.co/facebook/blenderbot-90M). Larger Blenderbot checkpoints should
 instead be used with [`BlenderbotModel`] and
 [`BlenderbotForConditionalGeneration`]
 
@@ -40,7 +40,7 @@ and code publicly available. Human evaluations show our best models are superior
 dialogue in terms of engagingness and humanness measurements. We then discuss the limitations of this work by analyzing
 failure cases of our models.*
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten). The authors' code can be
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten). The authors' code can be
 found [here](https://github.com/facebookresearch/ParlAI).
 
 ## Usage tips

@@ -23,11 +23,11 @@ La respuesta a preguntas devuelve una respuesta a partir de una pregunta dada. E
 - Extractiva: extraer la respuesta a partir del contexto dado.
 - Abstractiva: generar una respuesta que responda correctamente la pregunta a partir del contexto dado.
 
-Esta guía te mostrará como hacer fine-tuning de [DistilBERT](https://hf-mirror.com/distilbert/distilbert-base-uncased) en el dataset [SQuAD](https://hf-mirror.com/datasets/squad) para responder preguntas de forma extractiva.
+Esta guía te mostrará como hacer fine-tuning de [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) en el dataset [SQuAD](https://huggingface.co/datasets/squad) para responder preguntas de forma extractiva.
 
 <Tip>
 
-Revisa la [página de la tarea](https://hf-mirror.com/tasks/question-answering) de responder preguntas para tener más información sobre otras formas de responder preguntas y los modelos, datasets y métricas asociadas.
+Revisa la [página de la tarea](https://huggingface.co/tasks/question-answering) de responder preguntas para tener más información sobre otras formas de responder preguntas y los modelos, datasets y métricas asociadas.
 
 </Tip>
 
@@ -71,7 +71,7 @@ Hay algunos pasos de preprocesamiento específicos para la tarea de respuesta a 
 
 1. Algunos ejemplos en un dataset pueden tener un contexto que supera la longitud máxima de entrada de un modelo. Trunca solamente el contexto asignándole el valor `"only_second"` al parámetro `truncation`.
 2. A continuación, mapea las posiciones de inicio y fin de la respuesta al contexto original asignándole el valor `True` al parámetro `return_offsets_mapping`.
-3. Una vez tengas el mapeo, puedes encontrar los tokens de inicio y fin de la respuesta. Usa el método [`sequence_ids`](https://hf-mirror.com/docs/tokenizers/python/latest/api/reference.html#tokenizers.Encoding.sequence_ids)
+3. Una vez tengas el mapeo, puedes encontrar los tokens de inicio y fin de la respuesta. Usa el método [`sequence_ids`](https://huggingface.co/docs/tokenizers/python/latest/api/reference.html#tokenizers.Encoding.sequence_ids)
 para encontrar qué parte de la lista de tokens desplazados corresponde a la pregunta y cuál corresponde al contexto.
 
 A continuación puedes ver como se crea una función para truncar y mapear los tokens de inicio y fin de la respuesta al `context`:

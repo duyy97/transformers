@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 ROC_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "weiweishi/roc-bert-base-zh": "https://hf-mirror.com/weiweishi/roc-bert-base-zh/resolve/main/config.json",
+    "weiweishi/roc-bert-base-zh": "https://huggingface.co/weiweishi/roc-bert-base-zh/resolve/main/config.json",
 }
 
 
@@ -30,7 +30,7 @@ class RoCBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`RoCBertModel`]. It is used to instantiate a
     RoCBert model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the RoCBert
-    [weiweishi/roc-bert-base-zh](https://hf-mirror.com/weiweishi/roc-bert-base-zh) architecture.
+    [weiweishi/roc-bert-base-zh](https://huggingface.co/weiweishi/roc-bert-base-zh) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

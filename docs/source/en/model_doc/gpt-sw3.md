@@ -30,7 +30,7 @@ in collaboration with RISE and the WASP WARA for Media and Language. GPT-Sw3 has
 320B tokens in Swedish, Norwegian, Danish, Icelandic, English, and programming code. The model was pretrained using a
 causal language modeling (CLM) objective utilizing the NeMo Megatron GPT implementation.
 
-This model was contributed by [AI Sweden Models](https://hf-mirror.com/AI-Sweden-Models).
+This model was contributed by [AI Sweden Models](https://huggingface.co/AI-Sweden-Models).
 
 ## Usage example
 

@@ -61,7 +61,7 @@ audio = feature_extractor.batch_decode(**audio)[0]
 write("sample_audio.wav", feature_extractor.sampling_rate, audio)
 ```
 
-This model was contributed by [dg845](https://hf-mirror.com/dg845).
+This model was contributed by [dg845](https://huggingface.co/dg845).
 To the best of my knowledge, there is no official code release, but an unofficial implementation can be found at [maum-ai/univnet](https://github.com/maum-ai/univnet) with pretrained checkpoints [here](https://github.com/maum-ai/univnet#pre-trained-model).
 
 

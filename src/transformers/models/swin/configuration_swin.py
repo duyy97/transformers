@@ -29,9 +29,9 @@ logger = logging.get_logger(__name__)
 
 SWIN_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "microsoft/swin-tiny-patch4-window7-224": (
-        "https://hf-mirror.com/microsoft/swin-tiny-patch4-window7-224/resolve/main/config.json"
+        "https://huggingface.co/microsoft/swin-tiny-patch4-window7-224/resolve/main/config.json"
     ),
-    # See all Swin models at https://hf-mirror.com/models?filter=swin
+    # See all Swin models at https://huggingface.co/models?filter=swin
 }
 
 
@@ -40,7 +40,7 @@ class SwinConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`SwinModel`]. It is used to instantiate a Swin
     model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
     defaults will yield a similar configuration to that of the Swin
-    [microsoft/swin-tiny-patch4-window7-224](https://hf-mirror.com/microsoft/swin-tiny-patch4-window7-224)
+    [microsoft/swin-tiny-patch4-window7-224](https://huggingface.co/microsoft/swin-tiny-patch4-window7-224)
     architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the

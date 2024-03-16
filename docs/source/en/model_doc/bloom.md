@@ -18,16 +18,16 @@ rendered properly in your Markdown viewer.
 
 ## Overview
 
-The BLOOM model has been proposed with its various versions through the [BigScience Workshop](https://bigscience.hf-mirror.com/). BigScience is inspired by other open science initiatives where researchers have pooled their time and resources to collectively achieve a higher impact.
+The BLOOM model has been proposed with its various versions through the [BigScience Workshop](https://bigscience.huggingface.co/). BigScience is inspired by other open science initiatives where researchers have pooled their time and resources to collectively achieve a higher impact.
 The architecture of BLOOM is essentially similar to GPT3 (auto-regressive model for next token prediction), but has been trained on 46 different languages and 13 programming languages.
 Several smaller versions of the models have been trained on the same dataset. BLOOM is available in the following versions:
 
-- [bloom-560m](https://hf-mirror.com/bigscience/bloom-560m)
-- [bloom-1b1](https://hf-mirror.com/bigscience/bloom-1b1)
-- [bloom-1b7](https://hf-mirror.com/bigscience/bloom-1b7)
-- [bloom-3b](https://hf-mirror.com/bigscience/bloom-3b)
-- [bloom-7b1](https://hf-mirror.com/bigscience/bloom-7b1)
-- [bloom](https://hf-mirror.com/bigscience/bloom) (176B parameters)
+- [bloom-560m](https://huggingface.co/bigscience/bloom-560m)
+- [bloom-1b1](https://huggingface.co/bigscience/bloom-1b1)
+- [bloom-1b7](https://huggingface.co/bigscience/bloom-1b7)
+- [bloom-3b](https://huggingface.co/bigscience/bloom-3b)
+- [bloom-7b1](https://huggingface.co/bigscience/bloom-7b1)
+- [bloom](https://huggingface.co/bigscience/bloom) (176B parameters)
 
 ## Resources
 
@@ -45,11 +45,11 @@ See also:
 
 
 ⚡️ Inference
-- A blog on [Optimization story: Bloom inference](https://hf-mirror.com/blog/bloom-inference-optimization).
-- A blog on [Incredibly Fast BLOOM Inference with DeepSpeed and Accelerate](https://hf-mirror.com/blog/bloom-inference-pytorch-scripts).
+- A blog on [Optimization story: Bloom inference](https://huggingface.co/blog/bloom-inference-optimization).
+- A blog on [Incredibly Fast BLOOM Inference with DeepSpeed and Accelerate](https://huggingface.co/blog/bloom-inference-pytorch-scripts).
 
 ⚙️ Training
-- A blog on [The Technology Behind BLOOM Training](https://hf-mirror.com/blog/bloom-megatron-deepspeed).
+- A blog on [The Technology Behind BLOOM Training](https://huggingface.co/blog/bloom-megatron-deepspeed).
 
 ## BloomConfig
 

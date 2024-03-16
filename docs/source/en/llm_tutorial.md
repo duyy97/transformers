@@ -45,7 +45,7 @@ A language model trained for [causal language modeling](tasks/language_modeling)
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
     ></video>
     <figcaption>"Forward pass of an LLM"</figcaption>
 </figure>
@@ -57,7 +57,7 @@ A critical aspect of autoregressive generation with LLMs is how to select the ne
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
     ></video>
     <figcaption>"Autoregressive generation iteratively selects the next token from a probability distribution to generate text"</figcaption>
 </figure>
@@ -142,7 +142,7 @@ There are many [generation strategies](generation_strategies), and sometimes the
 
 ### Generated output is too short/long
 
-If not specified in the [`~generation.GenerationConfig`] file, `generate` returns up to 20 tokens by default. We highly recommend manually setting `max_new_tokens` in your `generate` call to control the maximum number of new tokens it can return. Keep in mind LLMs (more precisely, [decoder-only models](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)) also return the input prompt as part of the output.
+If not specified in the [`~generation.GenerationConfig`] file, `generate` returns up to 20 tokens by default. We highly recommend manually setting `max_new_tokens` in your `generate` call to control the maximum number of new tokens it can return. Keep in mind LLMs (more precisely, [decoder-only models](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)) also return the input prompt as part of the output.
 
 
 ```py
@@ -161,7 +161,7 @@ If not specified in the [`~generation.GenerationConfig`] file, `generate` return
 
 ### Incorrect generation mode
 
-By default, and unless specified in the [`~generation.GenerationConfig`] file, `generate` selects the most likely token at each iteration (greedy decoding). Depending on your task, this may be undesirable; creative tasks like chatbots or writing an essay benefit from sampling. On the other hand, input-grounded tasks like audio transcription or translation benefit from greedy decoding. Enable sampling with `do_sample=True`, and you can learn more about this topic in this [blog post](https://hf-mirror.com/blog/how-to-generate).
+By default, and unless specified in the [`~generation.GenerationConfig`] file, `generate` selects the most likely token at each iteration (greedy decoding). Depending on your task, this may be undesirable; creative tasks like chatbots or writing an essay benefit from sampling. On the other hand, input-grounded tasks like audio transcription or translation benefit from greedy decoding. Enable sampling with `do_sample=True`, and you can learn more about this topic in this [blog post](https://huggingface.co/blog/how-to-generate).
 
 ```py
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
@@ -183,7 +183,7 @@ By default, and unless specified in the [`~generation.GenerationConfig`] file, `
 
 ### Wrong padding side
 
-LLMs are [decoder-only](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt) architectures, meaning they continue to iterate on your input prompt. If your inputs do not have the same length, they need to be padded. Since LLMs are not trained to continue from pad tokens, your input needs to be left-padded. Make sure you also don't forget to pass the attention mask to generate!
+LLMs are [decoder-only](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt) architectures, meaning they continue to iterate on your input prompt. If your inputs do not have the same length, they need to be padded. Since LLMs are not trained to continue from pad tokens, your input needs to be left-padded. Make sure you also don't forget to pass the attention mask to generate!
 
 ```py
 >>> # The tokenizer initialized above has right-padding active by default: the 1st sequence,
@@ -254,8 +254,8 @@ While the autoregressive generation process is relatively straightforward, makin
 
 ### LLM leaderboards
 
-1. [Open LLM Leaderboard](https://hf-mirror.com/spaces/HuggingFaceH4/open_llm_leaderboard), which focuses on the quality of the open-source models;
-2. [Open LLM-Perf Leaderboard](https://hf-mirror.com/spaces/optimum/llm-perf-leaderboard), which focuses on LLM throughput.
+1. [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), which focuses on the quality of the open-source models;
+2. [Open LLM-Perf Leaderboard](https://huggingface.co/spaces/optimum/llm-perf-leaderboard), which focuses on LLM throughput.
 
 ### Latency, throughput and memory utilization
 

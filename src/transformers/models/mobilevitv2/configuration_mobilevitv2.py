@@ -27,7 +27,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 MOBILEVITV2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "apple/mobilevitv2-1.0": "https://hf-mirror.com/apple/mobilevitv2-1.0/resolve/main/config.json",
+    "apple/mobilevitv2-1.0": "https://huggingface.co/apple/mobilevitv2-1.0/resolve/main/config.json",
 }
 
 
@@ -36,7 +36,7 @@ class MobileViTV2Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`MobileViTV2Model`]. It is used to instantiate a
     MobileViTV2 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the MobileViTV2
-    [apple/mobilevitv2-1.0](https://hf-mirror.com/apple/mobilevitv2-1.0) architecture.
+    [apple/mobilevitv2-1.0](https://huggingface.co/apple/mobilevitv2-1.0) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

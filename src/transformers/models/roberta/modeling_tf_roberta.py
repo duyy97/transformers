@@ -70,7 +70,7 @@ TF_ROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "FacebookAI/roberta-large",
     "FacebookAI/roberta-large-mnli",
     "distilbert/distilroberta-base",
-    # See all RoBERTa models at https://hf-mirror.com/models?filter=roberta
+    # See all RoBERTa models at https://huggingface.co/models?filter=roberta
 ]
 
 

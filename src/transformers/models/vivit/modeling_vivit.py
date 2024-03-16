@@ -38,7 +38,7 @@ _CONFIG_FOR_DOC = "VivitConfig"
 
 VIVIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/vivit-b-16x2-kinetics400",
-    # See all Vivit models at https://hf-mirror.com/models?filter=vivit
+    # See all Vivit models at https://huggingface.co/models?filter=vivit
 ]
 
 

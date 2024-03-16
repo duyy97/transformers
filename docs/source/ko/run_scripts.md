@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 예제 스크립트가 모든 문제에서 바로 작동하는 것은 아니며, 해결하려는 문제에 맞게 스크립트를 변경해야 할 수도 있습니다.
 이를 위해 대부분의 스크립트에는 데이터 전처리 방법이 나와있어 필요에 따라 수정할 수 있습니다.
 
-예제 스크립트에 구현하고 싶은 기능이 있으면 pull request를 제출하기 전에 [포럼](https://discuss.hf-mirror.com/) 또는 [이슈](https://github.com/huggingface/transformers/issues)에서 논의해 주세요.
+예제 스크립트에 구현하고 싶은 기능이 있으면 pull request를 제출하기 전에 [포럼](https://discuss.huggingface.co/) 또는 [이슈](https://github.com/huggingface/transformers/issues)에서 논의해 주세요.
 버그 수정은 환영하지만 가독성을 희생하면서까지 더 많은 기능을 추가하는 pull request는 병합(merge)하지 않을 가능성이 높습니다.
 
 이 가이드에서는 [PyTorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization) 및 [TensorFlow](https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization)에서 요약 훈련하는
@@ -92,9 +92,9 @@ pip install -r requirements.txt
 
 <frameworkcontent>
 <pt>
-예제 스크립트는 🤗 [Datasets](https://hf-mirror.com/docs/datasets/) 라이브러리에서 데이터 세트를 다운로드하고 전처리합니다.
-그런 다음 스크립트는 요약 기능을 지원하는 아키텍처에서 [Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer)를 사용하여 데이터 세트를 미세 조정합니다.
-다음 예는 [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) 데이터 세트에서 [T5-small](https://hf-mirror.com/google-t5/t5-small)을 미세 조정합니다.
+예제 스크립트는 🤗 [Datasets](https://huggingface.co/docs/datasets/) 라이브러리에서 데이터 세트를 다운로드하고 전처리합니다.
+그런 다음 스크립트는 요약 기능을 지원하는 아키텍처에서 [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer)를 사용하여 데이터 세트를 미세 조정합니다.
+다음 예는 [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) 데이터 세트에서 [T5-small](https://huggingface.co/google-t5/t5-small)을 미세 조정합니다.
 T5 모델은 훈련 방식에 따라 추가 `source_prefix` 인수가 필요하며, 이 프롬프트는 요약 작업임을 T5에 알려줍니다.
 
 ```bash
@@ -113,9 +113,9 @@ python examples/pytorch/summarization/run_summarization.py \
 ```
 </pt>
 <tf>
-예제 스크립트는 🤗 [Datasets](https://hf-mirror.com/docs/datasets/) 라이브러리에서 데이터 세트를 다운로드하고 전처리합니다.
+예제 스크립트는 🤗 [Datasets](https://huggingface.co/docs/datasets/) 라이브러리에서 데이터 세트를 다운로드하고 전처리합니다.
 그런 다음 스크립트는 요약 기능을 지원하는 아키텍처에서 Keras를 사용하여 데이터 세트를 미세 조정합니다. 
-다음 예는 [CNN/DailyMail](https://hf-mirror.com/datasets/cnn_dailymail) 데이터 세트에서 [T5-small](https://hf-mirror.com/google-t5/t5-small)을 미세 조정합니다.
+다음 예는 [CNN/DailyMail](https://huggingface.co/datasets/cnn_dailymail) 데이터 세트에서 [T5-small](https://huggingface.co/google-t5/t5-small)을 미세 조정합니다.
 T5 모델은 훈련 방식에 따라 추가 `source_prefix` 인수가 필요하며, 이 프롬프트는 요약 작업임을 T5에 알려줍니다.
 ```bash
 python examples/tensorflow/summarization/run_summarization.py  \
@@ -134,7 +134,7 @@ python examples/tensorflow/summarization/run_summarization.py  \
 
 ## 혼합 정밀도(mixed precision)로 분산 훈련하기[[distributed-training-and-mixed-precision]]
 
-[Trainer](https://hf-mirror.com/docs/transformers/main_classes/trainer) 클래스는 분산 훈련과 혼합 정밀도(mixed precision)를 지원하므로 스크립트에서도 사용할 수 있습니다.
+[Trainer](https://huggingface.co/docs/transformers/main_classes/trainer) 클래스는 분산 훈련과 혼합 정밀도(mixed precision)를 지원하므로 스크립트에서도 사용할 수 있습니다.
 이 두 가지 기능을 모두 활성화하려면 다음 두 가지를 설정해야 합니다:
 
 - `fp16` 인수를 추가해 혼합 정밀도(mixed precision)를 활성화합니다.
@@ -207,7 +207,7 @@ python run_summarization.py  \
 
 ## 🤗 Accelerate로 스크립트 실행하기[[run-a-script-with-accelerate]]
 
-🤗 [Accelerate](https://hf-mirror.com/docs/accelerate)는 PyTorch 훈련 과정에 대한 완전한 가시성을 유지하면서 여러 유형의 설정(CPU 전용, 다중 GPU, TPU)에서 모델을 훈련할 수 있는 통합 방법을 제공하는 PyTorch 전용 라이브러리입니다.
+🤗 [Accelerate](https://huggingface.co/docs/accelerate)는 PyTorch 훈련 과정에 대한 완전한 가시성을 유지하면서 여러 유형의 설정(CPU 전용, 다중 GPU, TPU)에서 모델을 훈련할 수 있는 통합 방법을 제공하는 PyTorch 전용 라이브러리입니다.
 🤗 Accelerate가 설치되어 있는지 확인하세요:
 
 > 참고: Accelerate는 빠르게 개발 중이므로 스크립트를 실행하려면 accelerate를 설치해야 합니다.
@@ -344,7 +344,7 @@ python examples/pytorch/summarization/run_summarization.py
 
 ## 모델 공유하기[[share-your-model]]
 
-모든 스크립트는 최종 모델을 [Model Hub](https://hf-mirror.com/models)에 업로드할 수 있습니다.
+모든 스크립트는 최종 모델을 [Model Hub](https://huggingface.co/models)에 업로드할 수 있습니다.
 시작하기 전에 Hugging Face에 로그인했는지 확인하세요:
 ```bash
 huggingface-cli login

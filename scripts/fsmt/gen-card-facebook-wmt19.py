@@ -67,10 +67,10 @@ The abbreviation FSMT stands for FairSeqMachineTranslation
 
 All four models are available:
 
-* [wmt19-en-ru](https://hf-mirror.com/facebook/wmt19-en-ru)
-* [wmt19-ru-en](https://hf-mirror.com/facebook/wmt19-ru-en)
-* [wmt19-en-de](https://hf-mirror.com/facebook/wmt19-en-de)
-* [wmt19-de-en](https://hf-mirror.com/facebook/wmt19-de-en)
+* [wmt19-en-ru](https://huggingface.co/facebook/wmt19-en-ru)
+* [wmt19-ru-en](https://huggingface.co/facebook/wmt19-ru-en)
+* [wmt19-en-de](https://huggingface.co/facebook/wmt19-en-de)
+* [wmt19-de-en](https://huggingface.co/facebook/wmt19-de-en)
 
 ## Intended uses & limitations
 
@@ -92,7 +92,7 @@ print(decoded) # {texts[tgt_lang]}
 
 #### Limitations and bias
 
-- The original (and this ported model) doesn't seem to handle well inputs with repeated sub-phrases, [content gets truncated](https://discuss.hf-mirror.com/t/issues-with-translating-inputs-containing-repeated-phrases/981)
+- The original (and this ported model) doesn't seem to handle well inputs with repeated sub-phrases, [content gets truncated](https://discuss.huggingface.co/t/issues-with-translating-inputs-containing-repeated-phrases/981)
 
 ## Training data
 

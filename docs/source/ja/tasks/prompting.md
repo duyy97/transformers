@@ -96,14 +96,14 @@ Falcon、LLaMA などの大規模言語モデルは、事前にトレーニン�
 ### Base vs instruct/chat models
 
 🤗 Hub で利用できる最近の LLM チェックポイントのほとんどには、base と instruct (または chat) の 2 つのバージョンがあります。例えば、
-[`tiiuae/falcon-7b`](https://hf-mirror.com/tiiuae/falcon-7b) および [`tiiuae/falcon-7b-instruct`](https://hf-mirror.com/tiiuae/falcon-7b) -指示する)。
+[`tiiuae/falcon-7b`](https://huggingface.co/tiiuae/falcon-7b) および [`tiiuae/falcon-7b-instruct`](https://huggingface.co/tiiuae/falcon-7b) -指示する)。
 
 基本モデルは、最初のプロンプトが与えられたときにテキストを完成させるのには優れていますが、NLP タスクには理想的ではありません。
 指示に従う必要がある場合、または会話で使用する場合に使用します。ここで、指示 (チャット) バージョンが登場します。
 これらのチェックポイントは、命令と会話データに基づいて事前トレーニングされたベース バージョンをさらに微調整した結果です。
 この追加の微調整により、多くの NLP タスクにとってより適切な選択肢になります。
 
-[`tiiuae/falcon-7b-instruct`](https://hf-mirror.com/tiiuae/falcon-7b-instruct) で使用できるいくつかの簡単なプロンプトを示してみましょう。
+[`tiiuae/falcon-7b-instruct`](https://huggingface.co/tiiuae/falcon-7b-instruct) で使用できるいくつかの簡単なプロンプトを示してみましょう。
 いくつかの一般的な NLP タスクを解決します。
 
 ### NLP tasks 
@@ -408,7 +408,7 @@ Date: 09/28/1960
 - 「ステップごとに考えてみましょう」または「深呼吸して、問題をステップごとに解決してください」などのフレーズを追加してモデルに推論を指示します。
 
 [推論セクション](#reasoning) のマフィンの例に CoT テクニックを適用し、より大きなモデルを使用すると、
-[HuggingChat](https://hf-mirror.com/chat/)で遊べる(`tiiuae/falcon-180B-chat`)など、
+[HuggingChat](https://huggingface.co/chat/)で遊べる(`tiiuae/falcon-180B-chat`)など、
 推論結果は大幅に改善されます。
 
 ```text

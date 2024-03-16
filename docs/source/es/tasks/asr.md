@@ -22,12 +22,12 @@ El reconocimiento automático del habla (ASR, por sus siglas en inglés) convier
 
 En esta guía te mostraremos como:
 
-1. Hacer fine-tuning al modelo [Wav2Vec2](https://hf-mirror.com/facebook/wav2vec2-base) con el dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) para transcribir audio a texto.
+1. Hacer fine-tuning al modelo [Wav2Vec2](https://huggingface.co/facebook/wav2vec2-base) con el dataset [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) para transcribir audio a texto.
 2. Usar tu modelo ajustado para tareas de inferencia.
 
 <Tip>
 
-Revisa la [página de la tarea](https://hf-mirror.com/tasks/automatic-speech-recognition) de reconocimiento automático del habla para acceder a más información sobre los modelos, datasets y métricas asociados.
+Revisa la [página de la tarea](https://huggingface.co/tasks/automatic-speech-recognition) de reconocimiento automático del habla para acceder a más información sobre los modelos, datasets y métricas asociados.
 
 </Tip>
 
@@ -47,7 +47,7 @@ Te aconsejamos iniciar sesión con tu cuenta de Hugging Face para que puedas sub
 
 ## Cargar el dataset MInDS-14
 
-Comencemos cargando un subconjunto más pequeño del dataset [MInDS-14](https://hf-mirror.com/datasets/PolyAI/minds14) desde la biblioteca 🤗 Datasets. De esta forma, tendrás la oportunidad de experimentar y asegurarte de que todo funcione antes de invertir más tiempo entrenando con el dataset entero.
+Comencemos cargando un subconjunto más pequeño del dataset [MInDS-14](https://huggingface.co/datasets/PolyAI/minds14) desde la biblioteca 🤗 Datasets. De esta forma, tendrás la oportunidad de experimentar y asegurarte de que todo funcione antes de invertir más tiempo entrenando con el dataset entero.
 
 ```py
 >>> from datasets import load_dataset, Audio
@@ -108,7 +108,7 @@ El siguiente paso es cargar un procesador Wav2Vec2 para procesar la señal de au
 
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
-El dataset MInDS-14 tiene una tasa de muestreo de 8000kHz (puedes encontrar esta información en su [tarjeta de dataset](https://hf-mirror.com/datasets/PolyAI/minds14)), lo que significa que tendrás que re-muestrear el dataset a 16000kHz para poder usar el modelo Wav2Vec2 pre-entrenado:
+El dataset MInDS-14 tiene una tasa de muestreo de 8000kHz (puedes encontrar esta información en su [tarjeta de dataset](https://huggingface.co/datasets/PolyAI/minds14)), lo que significa que tendrás que re-muestrear el dataset a 16000kHz para poder usar el modelo Wav2Vec2 pre-entrenado:
 
 ```py
 >>> minds = minds.cast_column("audio", Audio(sampling_rate=16_000))
@@ -192,7 +192,7 @@ Ahora puedes instanciar tu `DataCollatorForCTCWithPadding`:
 
 ## Evaluación
 
-A menudo es útil incluir una métrica durante el entrenamiento para evaluar el rendimiento de tu modelo. Puedes cargar un método de evaluación rápidamente con la biblioteca 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index). Para esta tarea, puedes usar la métrica de [tasa de error por palabra](https://hf-mirror.com/spaces/evaluate-metric/wer) (WER, por sus siglas en inglés). Puedes ver la [guía rápida](https://hf-mirror.com/docs/evaluate/a_quick_tour) de 🤗 Evaluate para aprender más acerca de cómo cargar y computar una métrica.
+A menudo es útil incluir una métrica durante el entrenamiento para evaluar el rendimiento de tu modelo. Puedes cargar un método de evaluación rápidamente con la biblioteca 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index). Para esta tarea, puedes usar la métrica de [tasa de error por palabra](https://huggingface.co/spaces/evaluate-metric/wer) (WER, por sus siglas en inglés). Puedes ver la [guía rápida](https://huggingface.co/docs/evaluate/a_quick_tour) de 🤗 Evaluate para aprender más acerca de cómo cargar y computar una métrica.
 
 ```py
 >>> import evaluate
@@ -294,7 +294,7 @@ Una vez que el entrenamiento haya sido completado, comparte tu modelo en el Hub 
 
 <Tip>
 
-Para ver un ejemplo más detallado de cómo hacerle fine-tuning a un modelo para reconocimiento automático del habla, échale un vistazo a esta [entrada de blog](https://hf-mirror.com/blog/fine-tune-wav2vec2-english) para ASR en inglés y a esta [entrada](https://hf-mirror.com/blog/fine-tune-xlsr-wav2vec2) para ASR multilingüe.
+Para ver un ejemplo más detallado de cómo hacerle fine-tuning a un modelo para reconocimiento automático del habla, échale un vistazo a esta [entrada de blog](https://huggingface.co/blog/fine-tune-wav2vec2-english) para ASR en inglés y a esta [entrada](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2) para ASR multilingüe.
 
 </Tip>
 

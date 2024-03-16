@@ -34,7 +34,7 @@ language identification. Moreover, we show that with sufficient model size, cros
 English-only pretraining when translating English speech into other languages, a setting which favors monolingual
 pretraining. We hope XLS-R can help to improve speech processing tasks for many more languages of the world.*
 
-Relevant checkpoints can be found under https://hf-mirror.com/models?other=xls_r.
+Relevant checkpoints can be found under https://huggingface.co/models?other=xls_r.
 
 The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/fairseq/models/wav2vec).
 

@@ -22,9 +22,9 @@ logger = logging.get_logger(__name__)
 
 DECISION_TRANSFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "edbeeching/decision-transformer-gym-hopper-medium": (
-        "https://hf-mirror.com/edbeeching/decision-transformer-gym-hopper-medium/resolve/main/config.json"
+        "https://huggingface.co/edbeeching/decision-transformer-gym-hopper-medium/resolve/main/config.json"
     ),
-    # See all DecisionTransformer models at https://hf-mirror.com/models?filter=decision_transformer
+    # See all DecisionTransformer models at https://huggingface.co/models?filter=decision_transformer
 }
 
 

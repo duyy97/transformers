@@ -747,7 +747,7 @@ def build_pipeline_init_args(
         batch_size (`int`, *optional*, defaults to 1):
             When the pipeline will use *DataLoader* (when passing a dataset, on GPU for a Pytorch model), the size of
             the batch to use, for inference this is not always beneficial, please read [Batching with
-            pipelines](https://hf-mirror.com/transformers/main_classes/pipelines.html#pipeline-batching) .
+            pipelines](https://huggingface.co/transformers/main_classes/pipelines.html#pipeline-batching) .
         args_parser ([`~pipelines.ArgumentHandler`], *optional*):
             Reference to the object in charge of parsing supplied pipeline parameters.
         device (`int`, *optional*, defaults to -1):

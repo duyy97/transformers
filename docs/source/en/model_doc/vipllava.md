@@ -48,7 +48,7 @@ A chat between a curious human and an artificial intelligence assistant. The ass
 
 The original code can be found [here](https://github.com/mu-cai/ViP-LLaVA).
 
-This model was contributed by [Younes Belkada](https://hf-mirror.com/ybelkada)
+This model was contributed by [Younes Belkada](https://huggingface.co/ybelkada)
 
 
 ## VipLlavaConfig

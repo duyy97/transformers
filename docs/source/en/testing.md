@@ -1013,7 +1013,7 @@ grep tiny tests examples
 ```
 
 Here is a an example of a [script](https://github.com/huggingface/transformers/tree/main/scripts/fsmt/fsmt-make-tiny-model.py) that created the tiny model
-[stas/tiny-wmt19-en-de](https://hf-mirror.com/stas/tiny-wmt19-en-de). You can easily adjust it to your specific
+[stas/tiny-wmt19-en-de](https://huggingface.co/stas/tiny-wmt19-en-de). You can easily adjust it to your specific
 model's architecture.
 
 It's easy to measure the run-time incorrectly if for example there is an overheard of downloading a huge model, but if

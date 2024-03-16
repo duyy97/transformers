@@ -22,7 +22,7 @@ from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_feat
 logger = logging.get_logger(__name__)
 
 FOCALNET_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "microsoft/focalnet-tiny": "https://hf-mirror.com/microsoft/focalnet-tiny/resolve/main/config.json",
+    "microsoft/focalnet-tiny": "https://huggingface.co/microsoft/focalnet-tiny/resolve/main/config.json",
 }
 
 
@@ -31,7 +31,7 @@ class FocalNetConfig(BackboneConfigMixin, PretrainedConfig):
     This is the configuration class to store the configuration of a [`FocalNetModel`]. It is used to instantiate a
     FocalNet model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the FocalNet
-    [microsoft/focalnet-tiny](https://hf-mirror.com/microsoft/focalnet-tiny) architecture.
+    [microsoft/focalnet-tiny](https://huggingface.co/microsoft/focalnet-tiny) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -20,9 +20,9 @@ rendered properly in your Markdown viewer.
 
 # Ejecutar el entrenamiento en Amazon SageMaker
 
-La documentación ha sido trasladada a [hf.co/docs/sagemaker](https://hf-mirror.com/docs/sagemaker). Esta página será eliminada en `transformers` 5.0. 
+La documentación ha sido trasladada a [hf.co/docs/sagemaker](https://huggingface.co/docs/sagemaker). Esta página será eliminada en `transformers` 5.0. 
 
 ### Tabla de contenido
 
-- [Entrenar modelos de Hugging Face en Amazon SageMaker con SageMaker Python SDK](https://hf-mirror.com/docs/sagemaker/train)
-- [Desplegar modelos de Hugging Face en Amazon SageMaker con SageMaker Python SDK](https://hf-mirror.com/docs/sagemaker/inference)
+- [Entrenar modelos de Hugging Face en Amazon SageMaker con SageMaker Python SDK](https://huggingface.co/docs/sagemaker/train)
+- [Desplegar modelos de Hugging Face en Amazon SageMaker con SageMaker Python SDK](https://huggingface.co/docs/sagemaker/inference)

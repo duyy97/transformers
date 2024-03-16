@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # UMT5
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=umt5">
+<a href="https://huggingface.co/models?filter=umt5">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-mt5-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/mt5-small-finetuned-arxiv-cs-finetuned-arxiv-cs-full">
+<a href="https://huggingface.co/spaces/docs-demos/mt5-small-finetuned-arxiv-cs-finetuned-arxiv-cs-full">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -35,17 +35,17 @@ The abstract from the paper is the following:
 
 Google has released the following variants:
 
-- [google/umt5-small](https://hf-mirror.com/google/umt5-small)
-- [google/umt5-base](https://hf-mirror.com/google/umt5-base)
-- [google/umt5-xl](https://hf-mirror.com/google/umt5-xl)
-- [google/umt5-xxl](https://hf-mirror.com/google/umt5-xxl).
+- [google/umt5-small](https://huggingface.co/google/umt5-small)
+- [google/umt5-base](https://huggingface.co/google/umt5-base)
+- [google/umt5-xl](https://huggingface.co/google/umt5-xl)
+- [google/umt5-xxl](https://huggingface.co/google/umt5-xxl).
 
-This model was contributed by [agemagician](https://hf-mirror.com/agemagician) and [stefan-it](https://hf-mirror.com/stefan-it). The original code can be
+This model was contributed by [agemagician](https://huggingface.co/agemagician) and [stefan-it](https://huggingface.co/stefan-it). The original code can be
 found [here](https://github.com/google-research/t5x).
 
 ## Usage tips 
 
-- UMT5 was only pre-trained on [mC4](https://hf-mirror.com/datasets/mc4) excluding any supervised training.
+- UMT5 was only pre-trained on [mC4](https://huggingface.co/datasets/mc4) excluding any supervised training.
 Therefore, this model has to be fine-tuned before it is usable on a downstream task, unlike the original T5 model.
 - Since umT5 was pre-trained in an unsupervised manner, there's no real advantage to using a task prefix during single-task
 fine-tuning. If you are doing multi-task fine-tuning, you should use a prefix.

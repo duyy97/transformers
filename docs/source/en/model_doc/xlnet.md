@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # XLNet
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=xlnet">
+<a href="https://huggingface.co/models?filter=xlnet">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-xlnet-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/xlnet-base-cased">
+<a href="https://huggingface.co/spaces/docs-demos/xlnet-base-cased">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -44,7 +44,7 @@ formulation. Furthermore, XLNet integrates ideas from Transformer-XL, the state-
 pretraining. Empirically, under comparable experiment settings, XLNet outperforms BERT on 20 tasks, often by a large
 margin, including question answering, natural language inference, sentiment analysis, and document ranking.*
 
-This model was contributed by [thomwolf](https://hf-mirror.com/thomwolf). The original code can be found [here](https://github.com/zihangdai/xlnet/).
+This model was contributed by [thomwolf](https://huggingface.co/thomwolf). The original code can be found [here](https://github.com/zihangdai/xlnet/).
 
 ## Usage tips
 

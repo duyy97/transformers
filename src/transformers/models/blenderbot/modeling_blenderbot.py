@@ -55,7 +55,7 @@ _CHECKPOINT_FOR_DOC = "facebook/blenderbot-400M-distill"
 
 BLENDERBOT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/blenderbot-3B",
-    # See all Blenderbot models at https://hf-mirror.com/models?filter=blenderbot
+    # See all Blenderbot models at https://huggingface.co/models?filter=blenderbot
 ]
 
 

@@ -36,35 +36,35 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model", "tokenizer_file": 
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "FacebookAI/xlm-roberta-base": "https://hf-mirror.com/FacebookAI/xlm-roberta-base/resolve/main/sentencepiece.bpe.model",
-        "FacebookAI/xlm-roberta-large": "https://hf-mirror.com/FacebookAI/xlm-roberta-large/resolve/main/sentencepiece.bpe.model",
+        "FacebookAI/xlm-roberta-base": "https://huggingface.co/FacebookAI/xlm-roberta-base/resolve/main/sentencepiece.bpe.model",
+        "FacebookAI/xlm-roberta-large": "https://huggingface.co/FacebookAI/xlm-roberta-large/resolve/main/sentencepiece.bpe.model",
         "FacebookAI/xlm-roberta-large-finetuned-conll02-dutch": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/sentencepiece.bpe.model"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll02-spanish": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/sentencepiece.bpe.model"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll03-english": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/sentencepiece.bpe.model"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll03-german": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/sentencepiece.bpe.model"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/sentencepiece.bpe.model"
         ),
     },
     "tokenizer_file": {
-        "FacebookAI/xlm-roberta-base": "https://hf-mirror.com/FacebookAI/xlm-roberta-base/resolve/main/tokenizer.json",
-        "FacebookAI/xlm-roberta-large": "https://hf-mirror.com/FacebookAI/xlm-roberta-large/resolve/main/tokenizer.json",
+        "FacebookAI/xlm-roberta-base": "https://huggingface.co/FacebookAI/xlm-roberta-base/resolve/main/tokenizer.json",
+        "FacebookAI/xlm-roberta-large": "https://huggingface.co/FacebookAI/xlm-roberta-large/resolve/main/tokenizer.json",
         "FacebookAI/xlm-roberta-large-finetuned-conll02-dutch": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/tokenizer.json"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-dutch/resolve/main/tokenizer.json"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll02-spanish": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/tokenizer.json"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll02-spanish/resolve/main/tokenizer.json"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll03-english": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/tokenizer.json"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english/resolve/main/tokenizer.json"
         ),
         "FacebookAI/xlm-roberta-large-finetuned-conll03-german": (
-            "https://hf-mirror.com/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/tokenizer.json"
+            "https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-german/resolve/main/tokenizer.json"
         ),
     },
 }
@@ -83,7 +83,7 @@ class XLMRobertaTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" XLM-RoBERTa tokenizer (backed by HuggingFace's *tokenizers* library). Adapted from
     [`RobertaTokenizer`] and [`XLNetTokenizer`]. Based on
-    [BPE](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
+    [BPE](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

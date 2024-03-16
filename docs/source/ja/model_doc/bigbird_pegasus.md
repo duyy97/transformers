@@ -43,7 +43,7 @@ BigBird は、質問応答や要約などのさまざまな NLP タスクのパ�
 
 ## Usage tips
 
-- BigBird の注意がどのように機能するかについての詳細な説明については、[このブログ投稿](https://hf-mirror.com/blog/big-bird) を参照してください。
+- BigBird の注意がどのように機能するかについての詳細な説明については、[このブログ投稿](https://huggingface.co/blog/big-bird) を参照してください。
 - BigBird には、**original_full** と **block_sparse** の 2 つの実装が付属しています。シーケンス長が 1024 未満の場合、次を使用します。
   **block_sparse** を使用してもメリットがないため、**original_full** を使用することをお勧めします。
 - コードは現在、3 ブロックと 2 グローバル ブロックのウィンドウ サイズを使用しています。

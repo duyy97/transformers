@@ -19,7 +19,7 @@ rendered properly in your Markdown viewer.
 La tarea de selección múltiple es parecida a la de responder preguntas, con la excepción de que se dan varias opciones de respuesta junto con el contexto. El modelo se entrena para escoger la respuesta correcta
 entre varias opciones a partir del contexto dado.
 
-Esta guía te mostrará como hacerle fine-tuning a [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) en la configuración `regular` del dataset [SWAG](https://hf-mirror.com/datasets/swag), de forma
+Esta guía te mostrará como hacerle fine-tuning a [BERT](https://huggingface.co/google-bert/bert-base-uncased) en la configuración `regular` del dataset [SWAG](https://huggingface.co/datasets/swag), de forma
 que seleccione la mejor respuesta a partir de varias opciones y algún contexto.
 
 ## Cargar el dataset SWAG

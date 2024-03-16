@@ -59,8 +59,8 @@ New in v2:
 - **900M model & 1.5B model** Two additional model sizes are available: 900M and 1.5B, which significantly improves the
   performance of downstream tasks.
 
-This model was contributed by [DeBERTa](https://hf-mirror.com/DeBERTa). This model TF 2.0 implementation was
-contributed by [kamalkraj](https://hf-mirror.com/kamalkraj). The original code can be found [here](https://github.com/microsoft/DeBERTa).
+This model was contributed by [DeBERTa](https://huggingface.co/DeBERTa). This model TF 2.0 implementation was
+contributed by [kamalkraj](https://huggingface.co/kamalkraj). The original code can be found [here](https://github.com/microsoft/DeBERTa).
 
 ## Resources
 

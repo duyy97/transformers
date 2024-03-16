@@ -38,7 +38,7 @@ distillation, especially when using a convnet as a teacher. This leads us to rep
 for both Imagenet (where we obtain up to 85.2% accuracy) and when transferring to other tasks. We share our code and
 models.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The TensorFlow version of this model was added by [amyeroberts](https://hf-mirror.com/amyeroberts).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The TensorFlow version of this model was added by [amyeroberts](https://huggingface.co/amyeroberts).
 
 ## Usage tips
 

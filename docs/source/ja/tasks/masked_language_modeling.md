@@ -26,7 +26,7 @@ rendered properly in your Markdown viewer.
 
 このガイドでは、次の方法を説明します。
 
-1. [ELI5](https://hf-mirror.com/distilbert/distilroberta-base) の [r/askscience](https://www.reddit.com/r/askscience/) サブセットで [DistilRoBERTa](https://hf-mirror.com/distilbert/distilroberta-base) を微調整します。 ://hf-mirror.com/datasets/eli5) データセット。
+1. [ELI5](https://huggingface.co/distilbert/distilroberta-base) の [r/askscience](https://www.reddit.com/r/askscience/) サブセットで [DistilRoBERTa](https://huggingface.co/distilbert/distilroberta-base) を微調整します。 ://huggingface.co/datasets/eli5) データセット。
 2. 微調整したモデルを推論に使用します。
 
 <Tip>
@@ -105,7 +105,7 @@ pip install transformers datasets evaluate
 ```
 
 上の例からわかるように、`text`フィールドは実際には`answers`内にネストされています。これは、次のことを行う必要があることを意味します
-[` flatten`](https://hf-mirror.com/docs/datasets/process.html#flatten) メソッドを使用して、ネストされた構造から `text` サブフィールドを抽出します。
+[` flatten`](https://huggingface.co/docs/datasets/process.html#flatten) メソッドを使用して、ネストされた構造から `text` サブフィールドを抽出します。
 
 ```py
 >>> eli5 = eli5.flatten()

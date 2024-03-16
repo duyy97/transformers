@@ -31,16 +31,16 @@ JAX/Flax allows you to trace pure functions and compile them into efficient, fus
 Models written in JAX/Flax are **immutable** and updated in a purely functional
 way which enables simple and efficient model parallelism.
 
-In this example we will use the vision model from [CLIP](https://hf-mirror.com/models?filter=clip)
-as the image encoder and [`FacebookAI/roberta-base`](https://hf-mirror.com/FacebookAI/roberta-base) as the text encoder.
-Note that one can also use the [ViT](https://hf-mirror.com/models?filter=vit) model as image encoder and any other BERT or ROBERTa model as text encoder.
+In this example we will use the vision model from [CLIP](https://huggingface.co/models?filter=clip)
+as the image encoder and [`FacebookAI/roberta-base`](https://huggingface.co/FacebookAI/roberta-base) as the text encoder.
+Note that one can also use the [ViT](https://huggingface.co/models?filter=vit) model as image encoder and any other BERT or ROBERTa model as text encoder.
 To train the model on languages other than English one should choose a text encoder trained on the desired
 language and a image-text dataset in that language. One such dataset is [WIT](https://github.com/google-research-datasets/wit).	
 
 Let's start by creating a model repository to save the trained model and logs.
 Here we call the model `"clip-roberta-base"`, but you can change the model name as you like.
 
-You can do this either directly on [hf-mirror.com](https://hf-mirror.com/new) (assuming that
+You can do this either directly on [huggingface.co](https://huggingface.co/new) (assuming that
 you are logged in) or via the command line:
 
 ```bash
@@ -48,7 +48,7 @@ huggingface-cli repo create clip-roberta-base
 ```
 Next we clone the model repository to add the tokenizer and model files.
 ```bash
-git clone https://hf-mirror.com/<your-username>/clip-roberta-base
+git clone https://huggingface.co/<your-username>/clip-roberta-base
 ```
 To ensure that all tensorboard traces will be uploaded correctly, we need to 
 track them. You can run the following command inside your model repo to do so.

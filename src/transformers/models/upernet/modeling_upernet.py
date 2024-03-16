@@ -29,7 +29,7 @@ from .configuration_upernet import UperNetConfig
 
 UPERNET_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "openmmlab/upernet-convnext-tiny",
-    # See all UperNet models at https://hf-mirror.com/models?filter=upernet
+    # See all UperNet models at https://huggingface.co/models?filter=upernet
 ]
 
 # General docstring

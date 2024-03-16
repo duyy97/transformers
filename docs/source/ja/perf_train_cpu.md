@@ -64,4 +64,4 @@ TrainerでIPEXの自動混合精度を有効にするには、ユーザーはト
 
 ### Practice example
 
-Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://hf-mirror.com/blog/intel-sapphire-rapids)
+Blog: [Accelerating PyTorch Transformers with Intel Sapphire Rapids](https://huggingface.co/blog/intel-sapphire-rapids)

@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # ConvBERT
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=convbert">
+<a href="https://huggingface.co/models?filter=convbert">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-convbert-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/conv-bert-base">
+<a href="https://huggingface.co/spaces/docs-demos/conv-bert-base">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -44,7 +44,7 @@ ConvBERT significantly outperforms BERT and its variants in various downstream t
 fewer model parameters. Remarkably, ConvBERTbase model achieves 86.4 GLUE score, 0.7 higher than ELECTRAbase, while
 using less than 1/4 training cost. Code and pre-trained models will be released.*
 
-This model was contributed by [abhishek](https://hf-mirror.com/abhishek). The original implementation can be found
+This model was contributed by [abhishek](https://huggingface.co/abhishek). The original implementation can be found
 here: https://github.com/yitu-opensource/ConvBert
 
 ## Usage tips

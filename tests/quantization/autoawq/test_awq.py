@@ -404,7 +404,7 @@ class AwqFusedTest(unittest.TestCase):
             },
             revision=self.multi_modal_model_code_revision,
         )
-        url = "https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/diffusers/compel-neg.png"
+        url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/compel-neg.png"
 
         prompt = "USER: <image>\nCan you please describe this image?\nASSISTANT:"
 

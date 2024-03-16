@@ -66,7 +66,7 @@ The benchmark classes [`PyTorchBenchmark`] and [`TensorFlowBenchmark`] expect an
 
 Here, three arguments are given to the benchmark argument data classes, namely `models`, `batch_sizes`, and
 `sequence_lengths`. The argument `models` is required and expects a `list` of model identifiers from the
-[model hub](https://hf-mirror.com/models) The `list` arguments `batch_sizes` and `sequence_lengths` define
+[model hub](https://huggingface.co/models) The `list` arguments `batch_sizes` and `sequence_lengths` define
 the size of the `input_ids` on which the model is benchmarked. There are many more parameters that can be configured
 via the benchmark argument data classes. For more detail on these one can either directly consult the files
 `src/transformers/benchmark/benchmark_args_utils.py`, `src/transformers/benchmark/benchmark_args.py` (for PyTorch)

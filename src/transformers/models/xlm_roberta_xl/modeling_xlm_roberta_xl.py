@@ -53,7 +53,7 @@ _CONFIG_FOR_DOC = "XLMRobertaXLConfig"
 XLM_ROBERTA_XL_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/xlm-roberta-xl",
     "facebook/xlm-roberta-xxl",
-    # See all RoBERTa models at https://hf-mirror.com/models?filter=xlm-roberta-xl
+    # See all RoBERTa models at https://huggingface.co/models?filter=xlm-roberta-xl
 ]
 
 

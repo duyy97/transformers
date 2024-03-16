@@ -44,7 +44,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_1_1080p.mov"
     ></video>
     <figcaption>"Forward pass of an LLM"</figcaption>
 </figure>
@@ -58,7 +58,7 @@ LLM（Language Model）による自己回帰生成の重要な側面の1つは�
     <video
         style="max-width: 90%; margin: auto;"
         autoplay loop muted playsinline
-        src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
+        src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/assisted-generation/gif_2_1080p.mov"
     ></video>
     <figcaption>"Autoregressive generation iteratively selects the next token from a probability distribution to generate text"</figcaption>
 </figure>
@@ -134,7 +134,7 @@ LLM（Language Model）による自己回帰生成の重要な側面の1つは�
 
 ### Generated output is too short/long
 
-[`~generation.GenerationConfig`] ファイルで指定されていない場合、`generate` はデフォルトで最大で 20 トークンまで返します。我々は `generate` コールで `max_new_tokens` を手動で設定することを強くお勧めします。これにより、返される新しいトークンの最大数を制御できます。LLM（正確には、[デコーダー専用モデル](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)）も出力の一部として入力プロンプトを返すことに注意してください。
+[`~generation.GenerationConfig`] ファイルで指定されていない場合、`generate` はデフォルトで最大で 20 トークンまで返します。我々は `generate` コールで `max_new_tokens` を手動で設定することを強くお勧めします。これにより、返される新しいトークンの最大数を制御できます。LLM（正確には、[デコーダー専用モデル](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)）も出力の一部として入力プロンプトを返すことに注意してください。
 
 ```py
 >>> model_inputs = tokenizer(["A sequence of numbers: 1, 2"], return_tensors="pt").to("cuda")
@@ -152,7 +152,7 @@ LLM（Language Model）による自己回帰生成の重要な側面の1つは�
 
 ### Incorrect generation mode
 
-デフォルトでは、 [`~generation.GenerationConfig`] ファイルで指定されていない限り、`generate` は各イテレーションで最も可能性の高いトークンを選択します（貪欲デコーディング）。タスクに応じて、これは望ましくないことがあります。チャットボットやエッセイのような創造的なタスクでは、サンプリングが有益です。一方、音声の転写や翻訳のような入力に基づくタスクでは、貪欲デコーディングが有益です。`do_sample=True` でサンプリングを有効にできます。このトピックについての詳細は、この[ブログポスト](https://hf-mirror.com/blog/how-to-generate)で学ぶことができます。
+デフォルトでは、 [`~generation.GenerationConfig`] ファイルで指定されていない限り、`generate` は各イテレーションで最も可能性の高いトークンを選択します（貪欲デコーディング）。タスクに応じて、これは望ましくないことがあります。チャットボットやエッセイのような創造的なタスクでは、サンプリングが有益です。一方、音声の転写や翻訳のような入力に基づくタスクでは、貪欲デコーディングが有益です。`do_sample=True` でサンプリングを有効にできます。このトピックについての詳細は、この[ブログポスト](https://huggingface.co/blog/how-to-generate)で学ぶことができます。
 
 ```py
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
@@ -174,7 +174,7 @@ LLM（Language Model）による自己回帰生成の重要な側面の1つは�
 
 ### Wrong padding side
 
-LLM（Large Language Models）は[デコーダー専用](https://hf-mirror.com/learn/nlp-course/chapter1/6?fw=pt)のアーキテクチャであり、入力プロンプトを繰り返し処理することを意味します。入力が同じ長さでない場合、それらをパディングする必要があります。LLMはパッドトークンからの続きを学習していないため、入力は左パディングする必要があります。また、生成に対して注目マスクを渡し忘れないようにしてください！
+LLM（Large Language Models）は[デコーダー専用](https://huggingface.co/learn/nlp-course/chapter1/6?fw=pt)のアーキテクチャであり、入力プロンプトを繰り返し処理することを意味します。入力が同じ長さでない場合、それらをパディングする必要があります。LLMはパッドトークンからの続きを学習していないため、入力は左パディングする必要があります。また、生成に対して注目マスクを渡し忘れないようにしてください！
 
 
 ```py
@@ -210,8 +210,8 @@ LLM（Large Language Models）は[デコーダー専用](https://hf-mirror.com/l
 
 ### LLM leaderboards
 
-1. [Open LLM リーダーボード](https://hf-mirror.com/spaces/HuggingFaceH4/open_llm_leaderboard)：オープンソースモデルの品質に焦点を当てたリーダーボード;
-2. [Open LLM-Perf リーダーボード](https://hf-mirror.com/spaces/optimum/llm-perf-leaderboard)：LLMのスループットに焦点を当てたリーダーボード。
+1. [Open LLM リーダーボード](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)：オープンソースモデルの品質に焦点を当てたリーダーボード;
+2. [Open LLM-Perf リーダーボード](https://huggingface.co/spaces/optimum/llm-perf-leaderboard)：LLMのスループットに焦点を当てたリーダーボード。
 
 ### Latency and throughput
 

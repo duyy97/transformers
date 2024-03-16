@@ -65,7 +65,7 @@ _EXPECTED_OUTPUT_SHAPE = [1, 3401, 384]
 
 YOLOS_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "hustvl/yolos-small",
-    # See all YOLOS models at https://hf-mirror.com/models?filter=yolos
+    # See all YOLOS models at https://huggingface.co/models?filter=yolos
 ]
 
 

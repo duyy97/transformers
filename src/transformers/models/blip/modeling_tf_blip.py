@@ -57,7 +57,7 @@ TF_BLIP_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Salesforce/blip-itm-large-coco",
     "Salesforce/blip-itm-base-flickr",
     "Salesforce/blip-itm-large-flickr",
-    # See all BLIP models at https://hf-mirror.com/models?filter=blip
+    # See all BLIP models at https://huggingface.co/models?filter=blip
 ]
 
 

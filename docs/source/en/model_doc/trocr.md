@@ -33,14 +33,14 @@ effective, and can be pre-trained with large-scale synthetic data and fine-tuned
 show that the TrOCR model outperforms the current state-of-the-art models on both printed and handwritten text recognition
 tasks.*
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/trocr_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/trocr_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> TrOCR architecture. Taken from the <a href="https://arxiv.org/abs/2109.10282">original paper</a>. </small>
 
 Please refer to the [`VisionEncoderDecoder`] class on how to use this model.
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found
 [here](https://github.com/microsoft/unilm/tree/6f60612e7cc86a2a1ae85c47231507a587ab4e01/trocr).
 
 ## Usage tips
@@ -51,7 +51,7 @@ This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The origin
 - TrOCR is pre-trained in 2 stages before being fine-tuned on downstream datasets. It achieves state-of-the-art results
   on both printed (e.g. the [SROIE dataset](https://paperswithcode.com/dataset/sroie) and handwritten (e.g. the [IAM
   Handwriting dataset](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database>) text recognition tasks. For more
-  information, see the [official models](https://hf-mirror.com/models?other=trocr>).
+  information, see the [official models](https://huggingface.co/models?other=trocr>).
 - TrOCR is always used within the [VisionEncoderDecoder](vision-encoder-decoder) framework.
 
 ## Resources
@@ -60,7 +60,7 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-classification"/>
 
-- A blog post on [Accelerating Document AI](https://hf-mirror.com/blog/document-ai) with TrOCR.
+- A blog post on [Accelerating Document AI](https://huggingface.co/blog/document-ai) with TrOCR.
 - A blog post on how to [Document AI](https://github.com/philschmid/document-ai-transformers) with TrOCR.
 - A notebook on how to [finetune TrOCR on IAM Handwriting Database using Seq2SeqTrainer](https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/TrOCR/Fine_tune_TrOCR_on_IAM_Handwriting_Database_using_Seq2SeqTrainer.ipynb).
 - A notebook on [inference with TrOCR](https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/TrOCR/Inference_with_TrOCR_%2B_Gradio_demo.ipynb) and Gradio demo.
@@ -69,11 +69,11 @@ A list of official Hugging Face and community (indicated by 🌎) resources to h
 
 <PipelineTag pipeline="text-generation"/>
 
-- [Casual language modeling](https://hf-mirror.com/docs/transformers/tasks/language_modeling) task guide.
+- [Casual language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling) task guide.
 
 ⚡️ Inference
 
-- An interactive-demo on [TrOCR handwritten character recognition](https://hf-mirror.com/spaces/nielsr/TrOCR-handwritten).
+- An interactive-demo on [TrOCR handwritten character recognition](https://huggingface.co/spaces/nielsr/TrOCR-handwritten).
 
 ## Inference
 
@@ -105,7 +105,7 @@ into a single instance to both extract the input features and decode the predict
 >>> generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 ```
 
-See the [model hub](https://hf-mirror.com/models?filter=trocr) to look for TrOCR checkpoints.
+See the [model hub](https://huggingface.co/models?filter=trocr) to look for TrOCR checkpoints.
 
 ## TrOCRConfig
 

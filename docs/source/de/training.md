@@ -32,7 +32,7 @@ Die Verwendung eines vorab trainierten Modells hat erhebliche Vorteile. Es reduz
 
 Bevor Sie die Feinabstimmung eines vortrainierten Modells vornehmen können, müssen Sie einen Datensatz herunterladen und für das Training vorbereiten. Im vorangegangenen Leitfaden haben Sie gelernt, wie man Daten für das Training aufbereitet, und jetzt haben Sie die Gelegenheit, diese Fähigkeiten zu testen!
 
-Laden Sie zunächst den Datensatz [Yelp Reviews](https://hf-mirror.com/datasets/yelp_review_full):
+Laden Sie zunächst den Datensatz [Yelp Reviews](https://huggingface.co/datasets/yelp_review_full):
 
 ```py
 >>> from datasets import load_dataset
@@ -43,7 +43,7 @@ Laden Sie zunächst den Datensatz [Yelp Reviews](https://hf-mirror.com/datasets/
  'text': 'My expectations for McDonalds are t rarely high. But for one to still fail so spectacularly...that takes something special!\\nThe cashier took my friends\'s order, then promptly ignored me. I had to force myself in front of a cashier who opened his register to wait on the person BEHIND me. I waited over five minutes for a gigantic order that included precisely one kid\'s meal. After watching two people who ordered after me be handed their food, I asked where mine was. The manager started yelling at the cashiers for \\"serving off their orders\\" when they didn\'t have their food. But neither cashier was anywhere near those controls, and the manager was the one serving food to customers and clearing the boards.\\nThe manager was rude when giving me my order. She didn\'t make sure that I had everything ON MY RECEIPT, and never even had the decency to apologize that I felt I was getting poor service.\\nI\'ve eaten at various McDonalds restaurants for over 30 years. I\'ve worked at more than one location. I expect bad days, bad moods, and the occasional mistake. But I have yet to have a decent experience at this store. It will remain a place I avoid unless someone in my party needs to avoid illness from low blood sugar. Perhaps I should go back to the racially biased service of Steak n Shake instead!'}
 ```
 
-Wie Sie nun wissen, benötigen Sie einen Tokenizer, um den Text zu verarbeiten und eine Auffüll- und Abschneidungsstrategie einzubauen, um mit variablen Sequenzlängen umzugehen. Um Ihren Datensatz in einem Schritt zu verarbeiten, verwenden Sie die 🤗 Methode Datasets [`map`](https://hf-mirror.com/docs/datasets/process#map), um eine Vorverarbeitungsfunktion auf den gesamten Datensatz anzuwenden:
+Wie Sie nun wissen, benötigen Sie einen Tokenizer, um den Text zu verarbeiten und eine Auffüll- und Abschneidungsstrategie einzubauen, um mit variablen Sequenzlängen umzugehen. Um Ihren Datensatz in einem Schritt zu verarbeiten, verwenden Sie die 🤗 Methode Datasets [`map`](https://huggingface.co/docs/datasets/process#map), um eine Vorverarbeitungsfunktion auf den gesamten Datensatz anzuwenden:
 
 ```py
 >>> from transformers import AutoTokenizer
@@ -81,7 +81,7 @@ klicken Sie einfach auf die Schaltfläche oben rechts im Block des jeweiligen Fr
 
 🤗 Transformers bietet eine [`Trainer`]-Klasse, die für das Training von 🤗 Transformers-Modellen optimiert ist und es einfacher macht, mit dem Training zu beginnen, ohne manuell eine eigene Trainingsschleife zu schreiben. Die [`Trainer`]-API unterstützt eine breite Palette von Trainingsoptionen und Funktionen wie Logging, Gradientenakkumulation und gemischte Präzision.
 
-Beginnen Sie mit dem Laden Ihres Modells und geben Sie die Anzahl der erwarteten Labels an. Aus dem Yelp Review [dataset card](https://hf-mirror.com/datasets/yelp_review_full#data-fields) wissen Sie, dass es fünf Labels gibt:
+Beginnen Sie mit dem Laden Ihres Modells und geben Sie die Anzahl der erwarteten Labels an. Aus dem Yelp Review [dataset card](https://huggingface.co/datasets/yelp_review_full#data-fields) wissen Sie, dass es fünf Labels gibt:
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -98,7 +98,7 @@ initialisiert werden. Machen Sie sich keine Sorgen, das ist völlig normal! Der 
 
 ### Hyperparameter für das Training
 
-Als Nächstes erstellen Sie eine Klasse [`TrainingArguments`], die alle Hyperparameter enthält, die Sie einstellen können, sowie Flags zur Aktivierung verschiedener Trainingsoptionen. Für dieses Lernprogramm können Sie mit den Standard- [Hyperparametern](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments) beginnen, aber Sie können mit diesen experimentieren, um Ihre optimalen Einstellungen zu finden.
+Als Nächstes erstellen Sie eine Klasse [`TrainingArguments`], die alle Hyperparameter enthält, die Sie einstellen können, sowie Flags zur Aktivierung verschiedener Trainingsoptionen. Für dieses Lernprogramm können Sie mit den Standard- [Hyperparametern](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments) beginnen, aber Sie können mit diesen experimentieren, um Ihre optimalen Einstellungen zu finden.
 
 Geben Sie an, wo die Kontrollpunkte Ihres Trainings gespeichert werden sollen:
 
@@ -110,7 +110,7 @@ Geben Sie an, wo die Kontrollpunkte Ihres Trainings gespeichert werden sollen:
 
 ### Auswerten
 
-Der [`Trainer`] wertet die Leistung des Modells während des Trainings nicht automatisch aus. Sie müssen [`Trainer`] eine Funktion übergeben, um Metriken zu berechnen und zu berichten. Die [🤗 Evaluate](https://hf-mirror.com/docs/evaluate/index) Bibliothek bietet eine einfache [`accuracy`](https://hf-mirror.com/spaces/evaluate-metric/accuracy) Funktion, die Sie mit der [`evaluate.load`] Funktion laden können (siehe diese [quicktour](https://hf-mirror.com/docs/evaluate/a_quick_tour) für weitere Informationen):
+Der [`Trainer`] wertet die Leistung des Modells während des Trainings nicht automatisch aus. Sie müssen [`Trainer`] eine Funktion übergeben, um Metriken zu berechnen und zu berichten. Die [🤗 Evaluate](https://huggingface.co/docs/evaluate/index) Bibliothek bietet eine einfache [`accuracy`](https://huggingface.co/spaces/evaluate-metric/accuracy) Funktion, die Sie mit der [`evaluate.load`] Funktion laden können (siehe diese [quicktour](https://huggingface.co/docs/evaluate/a_quick_tour) für weitere Informationen):
 
 ```py
 >>> import numpy as np
@@ -171,7 +171,7 @@ Wenn Sie ein 🤗 Transformers Modell mit der Keras API trainieren wollen, müss
 Keras versteht. Wenn Ihr Datensatz klein ist, können Sie das Ganze einfach in NumPy-Arrays konvertieren und an Keras übergeben.
 Probieren wir das zuerst aus, bevor wir etwas Komplizierteres tun.
 
-Laden Sie zunächst ein Dataset. Wir werden den CoLA-Datensatz aus dem [GLUE-Benchmark](https://hf-mirror.com/datasets/glue) verwenden,
+Laden Sie zunächst ein Dataset. Wir werden den CoLA-Datensatz aus dem [GLUE-Benchmark](https://huggingface.co/datasets/glue) verwenden,
 da es sich um eine einfache Aufgabe zur Klassifizierung von binärem Text handelt, und nehmen vorerst nur den Trainingssplit.
 
 ```py
@@ -258,7 +258,7 @@ Wenn Sie etwas Komplexeres als nur das Auffüllen von Stichproben benötigen (z.
 Modellierung), können Sie stattdessen das Argument `collate_fn` verwenden, um eine Funktion zu übergeben, die aufgerufen wird, um die
 Liste von Stichproben in einen Stapel umwandelt und alle gewünschten Vorverarbeitungen vornimmt. Siehe unsere
 [examples](https://github.com/huggingface/transformers/tree/main/examples) oder
-[notebooks](https://hf-mirror.com/docs/transformers/notebooks), um diesen Ansatz in Aktion zu sehen.
+[notebooks](https://huggingface.co/docs/transformers/notebooks), um diesen Ansatz in Aktion zu sehen.
 
 Sobald Sie einen `tf.data.Dataset` erstellt haben, können Sie das Modell wie zuvor kompilieren und anpassen:
 

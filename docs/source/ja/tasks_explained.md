@@ -31,7 +31,7 @@ rendered properly in your Markdown viewer.
 
 <Tip>
 
-さらに進む前に、元のTransformerアーキテクチャの基本的な知識を持つと良いです。エンコーダ、デコーダ、および注意力がどのように動作するかを知っておくと、異なるTransformerモデルがどのように動作するかを理解するのに役立ちます。始めているか、リフレッシュが必要な場合は、詳細な情報については当社の[コース](https://hf-mirror.com/course/chapter1/4?fw=pt)をチェックしてください！
+さらに進む前に、元のTransformerアーキテクチャの基本的な知識を持つと良いです。エンコーダ、デコーダ、および注意力がどのように動作するかを知っておくと、異なるTransformerモデルがどのように動作するかを理解するのに役立ちます。始めているか、リフレッシュが必要な場合は、詳細な情報については当社の[コース](https://huggingface.co/course/chapter1/4?fw=pt)をチェックしてください！
 
 </Tip>
 
@@ -40,7 +40,7 @@ rendered properly in your Markdown viewer.
 [Wav2Vec2](model_doc/wav2vec2)は、未ラベルの音声データで事前トレーニングされ、オーディオ分類および自動音声認識のラベル付きデータでファインチューンされた自己教師モデルです。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/wav2vec2_architecture.png"/>
 </div>
 
 このモデルには主に次の4つのコンポーネントがあります。
@@ -91,7 +91,7 @@ ViTとConvNeXTの両方を画像分類に使用できます。主な違いは、
 [ViT](model_doc/vit)は畳み込みを完全にTransformerアーキテクチャで置き換えます。元のTransformerに精通している場合、ViTの理解は既にほとんど完了しています。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg"/>
 </div>
 
 ViTが導入した主な変更点は、画像をTransformerに供給する方法です。
@@ -118,7 +118,7 @@ ViTが導入した主な変更点は、画像をTransformerに供給する方法
 [ConvNeXT](model_doc/convnext)は、性能を向上させるために新しいモダンなネットワーク設計を採用したCNNアーキテクチャです。ただし、畳み込みはモデルの中核にまだあります。高レベルから見た場合、[畳み込み（convolution）](glossary#convolution)は、小さな行列（*カーネル*）が画像のピクセルの小さなウィンドウに乗算される操作です。それは特定のテクスチャや線の曲率などの特徴を計算します。その後、次のピクセルのウィンドウに移動します。畳み込みが移動する距離は*ストライド*として知られています。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convolution.gif"/>
 </div>
 
 <small>[Convolution Arithmetic for Deep Learning](https://arxiv.org/abs/1603.07285) からの基本的なパディングやストライドのない畳み込み。</small>
@@ -126,7 +126,7 @@ ViTが導入した主な変更点は、画像をTransformerに供給する方法
 この出力を別の畳み込み層に供給し、各連続した層ごとに、ネットワークはホットドッグやロケットのようなより複雑で抽象的なものを学習します。畳み込み層の間には、特徴の次元を削減し、特徴の位置の変動に対してモデルをより堅牢にするためにプーリング層を追加するのが一般的です。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/convnext_architecture.png"/>
 </div>
 
 ConvNeXTは、以下の5つの方法でCNNをモダン化しています。
@@ -148,7 +148,7 @@ ConvNeXTは、以下の5つの方法でCNNをモダン化しています。
 [DETR](model_doc/detr)、*DEtection TRansformer*、はCNNとTransformerエンコーダーデコーダーを組み合わせたエンドツーエンドのオブジェクト検出モデルです。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/detr_architecture.png"/>
 </div>
 
 1. 事前トレーニングされたCNN *バックボーン* は、ピクセル値で表される画像を受け取り、それの低解像度の特徴マップを作成します。特徴マップには次元削減のために1x1の畳み込みが適用され、高レベルの画像表現を持つ新しい特徴マップが作成されます。Transformerは連続モデルであるため、特徴マップは特徴ベクトルのシーケンスに平坦化され、位置エンベディングと組み合わせられます。
@@ -168,7 +168,7 @@ DETRの上にオブジェクト検出ヘッドを追加して、クラスラベ�
 [Mask2Former](model_doc/mask2former)は、すべての種類の画像セグメンテーションタスクを解決するためのユニバーサルアーキテクチャです。従来のセグメンテーションモデルは通常、インスタンス、セマンティック、またはパノプティックセグメンテーションの特定のサブタスクに合わせて設計されています。Mask2Formerは、それらのタスクのそれぞれを*マスク分類*の問題として捉えます。マスク分類はピクセルを*N*のセグメントにグループ化し、与えられた画像に対して*N*のマスクとそれに対応するクラスラベルを予測します。このセクションでは、Mask2Formerの動作方法を説明し、最後にSegFormerのファインチューニングを試すことができます。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/mask2former_architecture.png"/>
 </div>
 
 Mask2Formerの主要なコンポーネントは次の3つです。
@@ -190,7 +190,7 @@ Mask2Formerの主要なコンポーネントは次の3つです。
 [GLPN](model_doc/glpn)、*Global-Local Path Network*、はセグメンテーションまたは深度推定などの密な予測タスクに適しています。[SegFormer](model_doc/segformer)エンコーダーを軽量デコーダーと組み合わせたTransformerベースの深度推定モデルです。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg"/>
 </div>
 
 1. ViTのように、画像はパッチのシーケンスに分割されますが、これらの画像パッチは小さいです。これはセグメンテーションや深度推定などの密な予測タスクに適しています。画像パッチはパッチ埋め込みに変換されます（パッチ埋め込みの作成方法の詳細については、[画像分類](#image-classification)セクションを参照してください）。これらのパッチ埋め込みはエンコーダーに渡されます。
@@ -246,7 +246,7 @@ BERTを質問応答に使用するには、ベースのBERTモデルの上にス
 [GPT-2](model_doc/gpt2)は大量のテキストで事前トレーニングされたデコーダー専用モデルです。プロンプトを与えると説得力のあるテキストを生成し、明示的にトレーニングされていないにもかかわらず、質問応答などの他のNLPタスクも完了できます。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gpt2_architecture.png"/>
 </div>
 
 1. GPT-2は[バイトペアエンコーディング（BPE）](tokenizer_summary#bytepair-encoding-bpe)を使用して単語をトークナイズし、トークン埋め込みを生成します。位置エンコーディングがトークン埋め込みに追加され、各トークンの位置を示します。入力埋め込みは複数のデコーダーブロックを介して最終的な隠れた状態を出力するために渡されます。各デコーダーブロック内で、GPT-2は「マスクされた自己注意」レイヤーを使用します。これは、GPT-2が未来のトークンに注意を払うことはできないことを意味します。GPT-2は左側のトークンにのみ注意を払うことが許可されています。これはBERTの[`mask`]トークンとは異なり、マスクされた自己注意では未来のトークンに対してスコアを`0`に設定するための注意マスクが使用されます。
@@ -269,7 +269,7 @@ GPT-2の事前トレーニングの目標は完全に[因果言語モデリン�
 [BART](model_doc/bart) や [T5](model_doc/t5) のようなエンコーダーデコーダーモデルは、要約タスクのシーケンス・トゥ・シーケンス・パターンに設計されています。このセクションでは、BARTの動作方法を説明し、最後にT5の微調整を試すことができます。
 
 <div class="flex justify-center">
-    <img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bart_architecture.png"/>
 </div>
 
 1. BARTのエンコーダーアーキテクチャは、BERTと非常に似ており、テキストのトークンと位置エンベディングを受け入れます。BARTは、入力を破壊してからデコーダーで再構築することによって事前トレーニングされます。特定の破壊戦略を持つ他のエンコーダーとは異なり、BARTは任意の種類の破壊を適用できます。ただし、*テキストインフィリング*破壊戦略が最適です。テキストインフィリングでは、いくつかのテキストスパンが**単一の** [`mask`] トークンで置き換えられます。これは重要です、なぜならモデルはマスクされたトークンを予測しなければならず、モデルに欠落トークンの数を予測させるからです。入力埋め込みとマスクされたスパンはエンコーダーを介して最終的な隠れた状態を出力しますが、BERTとは異なり、BARTは単語を予測するための最終的なフィードフォワードネットワークを最後に追加しません。

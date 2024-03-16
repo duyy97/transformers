@@ -76,7 +76,7 @@ class AudioClassificationPipeline(Pipeline):
     >>> from transformers import pipeline
 
     >>> classifier = pipeline(model="superb/wav2vec2-base-superb-ks")
-    >>> classifier("https://hf-mirror.com/datasets/Narsil/asr_dummy/resolve/main/1.flac")
+    >>> classifier("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac")
     [{'score': 0.997, 'label': '_unknown_'}, {'score': 0.002, 'label': 'left'}, {'score': 0.0, 'label': 'yes'}, {'score': 0.0, 'label': 'down'}, {'score': 0.0, 'label': 'stop'}]
     ```
 
@@ -87,7 +87,7 @@ class AudioClassificationPipeline(Pipeline):
     `"audio-classification"`.
 
     See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=audio-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=audio-classification).
     """
 
     def __init__(self, *args, **kwargs):

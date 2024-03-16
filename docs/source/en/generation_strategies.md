@@ -175,7 +175,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 ## Decoding strategies
 
 Certain combinations of the `generate()` parameters, and ultimately `generation_config`, can be used to enable specific
-decoding strategies. If you are new to this concept, we recommend reading [this blog post that illustrates how common decoding strategies work](https://hf-mirror.com/blog/how-to-generate).
+decoding strategies. If you are new to this concept, we recommend reading [this blog post that illustrates how common decoding strategies work](https://huggingface.co/blog/how-to-generate).
 
 Here, we'll show some of the parameters that control the decoding strategies and illustrate how you can use them.
 
@@ -202,7 +202,7 @@ Here, we'll show some of the parameters that control the decoding strategies and
 
 The contrastive search decoding strategy was proposed in the 2022 paper [A Contrastive Framework for Neural Text Generation](https://arxiv.org/abs/2202.06417).
 It demonstrates superior results for generating non-repetitive yet coherent long outputs. To learn how contrastive search
-works, check out [this blog post](https://hf-mirror.com/blog/introducing-csearch).
+works, check out [this blog post](https://huggingface.co/blog/introducing-csearch).
 The two main parameters that enable and control the behavior of contrastive search are `penalty_alpha` and `top_k`:
 
 ```python
@@ -348,7 +348,7 @@ model then validates the candidate tokens in a single forward pass, which speeds
 [speculative decoding paper](https://arxiv.org/pdf/2211.17192.pdf) is used.
 
 Currently, only greedy search and sampling are supported with assisted decoding, and assisted decoding doesn't support batched inputs.
-To learn more about assisted decoding, check [this blog post](https://hf-mirror.com/blog/assisted-generation).
+To learn more about assisted decoding, check [this blog post](https://huggingface.co/blog/assisted-generation).
 
 To enable assisted decoding, set the `assistant_model` argument with a model.
 

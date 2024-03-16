@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 JUKEBOX_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "openai/jukebox-5b-lyrics": "https://hf-mirror.com/openai/jukebox-5b-lyrics/blob/main/config.json",
-    "openai/jukebox-1b-lyrics": "https://hf-mirror.com/openai/jukebox-1b-lyrics/blob/main/config.json",
+    "openai/jukebox-5b-lyrics": "https://huggingface.co/openai/jukebox-5b-lyrics/blob/main/config.json",
+    "openai/jukebox-1b-lyrics": "https://huggingface.co/openai/jukebox-1b-lyrics/blob/main/config.json",
 }
 
 _LARGE_ATTENTION = [
@@ -145,7 +145,7 @@ class JukeboxPriorConfig(PretrainedConfig):
         This is the configuration class to store the configuration of a [`JukeboxPrior`]. It is used to instantiate a
         `JukeboxPrior` according to the specified arguments, defining the model architecture. Instantiating a
         configuration with the defaults will yield a similar configuration to that of the top level prior from the
-        [openai/jukebox-1b-lyrics](https://hf-mirror.com/openai/jukebox
+        [openai/jukebox-1b-lyrics](https://huggingface.co/openai/jukebox
     -1b-lyrics) architecture.
 
         Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
@@ -374,7 +374,7 @@ class JukeboxVQVAEConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`JukeboxVQVAE`]. It is used to instantiate a
     `JukeboxVQVAE` according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the VQVAE from
-    [openai/jukebox-1b-lyrics](https://hf-mirror.com/openai/jukebox-1b-lyrics) architecture.
+    [openai/jukebox-1b-lyrics](https://huggingface.co/openai/jukebox-1b-lyrics) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -499,7 +499,7 @@ class JukeboxConfig(PretrainedConfig):
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information. Instantiating a configuration with the defaults will
     yield a similar configuration to that of
-    [openai/jukebox-1b-lyrics](https://hf-mirror.com/openai/jukebox-1b-lyrics) architecture.
+    [openai/jukebox-1b-lyrics](https://huggingface.co/openai/jukebox-1b-lyrics) architecture.
 
 
     The downsampling and stride are used to determine downsampling of the input sequence. For example, downsampling =

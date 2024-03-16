@@ -302,7 +302,7 @@ class GPT2TokenizationTest(TokenizerTesterMixin, unittest.TestCase):
 class OPTTokenizationTest(unittest.TestCase):
     def test_serialize_deserialize_fast_opt(self):
         # More context:
-        # https://hf-mirror.com/wjmcat/opt-350m-paddle/discussions/1
+        # https://huggingface.co/wjmcat/opt-350m-paddle/discussions/1
         # https://huggingface.slack.com/archives/C01N44FJDHT/p1653511495183519
         # https://github.com/huggingface/transformers/pull/17088#discussion_r871246439
 

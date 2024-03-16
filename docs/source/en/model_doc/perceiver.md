@@ -73,12 +73,12 @@ of the latents to update the `outputs` tensor. After cross-attention, one still 
 vocabulary size of the model, i.e. creating logits of shape `(batch_size, 2048, 262)` (as Perceiver uses a vocabulary
 size of 262 byte IDs).
 
-<img src="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/perceiver_architecture.jpg"
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/perceiver_architecture.jpg"
 alt="drawing" width="600"/>
 
 <small> Perceiver IO architecture. Taken from the <a href="https://arxiv.org/abs/2105.15203">original paper</a> </small>
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found
 [here](https://github.com/deepmind/deepmind-research/tree/master/perceiver).
 
 <Tip warning={true}>
@@ -91,7 +91,7 @@ Perceiver does **not** work with `torch.nn.DataParallel` due to a bug in PyTorch
 
 - The quickest way to get started with the Perceiver is by checking the [tutorial
   notebooks](https://github.com/NielsRogge/Transformers-Tutorials/tree/master/Perceiver).
-- Refer to the [blog post](https://hf-mirror.com/blog/perceiver) if you want to fully understand how the model works and
+- Refer to the [blog post](https://huggingface.co/blog/perceiver) if you want to fully understand how the model works and
 is implemented in the library. Note that the models available in the library only showcase some examples of what you can do
 with the Perceiver. There are many more use cases, including question answering, named-entity recognition, object detection,
 audio classification, video classification, etc.

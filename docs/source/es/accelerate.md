@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Entrenamiento distribuido con 🤗 Accelerate
 
-El paralelismo ha emergido como una estrategia para entrenar modelos grandes en hardware limitado e incrementar la velocidad de entrenamiento en varios órdenes de magnitud. En Hugging Face creamos la biblioteca [🤗 Accelerate](https://hf-mirror.com/docs/accelerate) para ayudar a los usuarios a entrenar modelos 🤗 Transformers en cualquier tipo de configuración distribuida, ya sea en una máquina con múltiples GPUs o en múltiples GPUs distribuidas entre muchas máquinas. En este tutorial aprenderás cómo personalizar tu bucle de entrenamiento de PyTorch nativo para poder entrenar en entornos distribuidos.
+El paralelismo ha emergido como una estrategia para entrenar modelos grandes en hardware limitado e incrementar la velocidad de entrenamiento en varios órdenes de magnitud. En Hugging Face creamos la biblioteca [🤗 Accelerate](https://huggingface.co/docs/accelerate) para ayudar a los usuarios a entrenar modelos 🤗 Transformers en cualquier tipo de configuración distribuida, ya sea en una máquina con múltiples GPUs o en múltiples GPUs distribuidas entre muchas máquinas. En este tutorial aprenderás cómo personalizar tu bucle de entrenamiento de PyTorch nativo para poder entrenar en entornos distribuidos.
 
 ## Configuración
 
@@ -26,7 +26,7 @@ Empecemos por instalar 🤗 Accelerate:
 pip install accelerate
 ```
 
-Luego, importamos y creamos un objeto [`Accelerator`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator). `Accelerator` detectará automáticamente el tipo de configuración distribuida que tengas disponible e inicializará todos los componentes necesarios para el entrenamiento. No necesitas especificar el dispositivo en donde se debe colocar tu modelo.
+Luego, importamos y creamos un objeto [`Accelerator`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator). `Accelerator` detectará automáticamente el tipo de configuración distribuida que tengas disponible e inicializará todos los componentes necesarios para el entrenamiento. No necesitas especificar el dispositivo en donde se debe colocar tu modelo.
 
 ```py
 >>> from accelerate import Accelerator
@@ -36,7 +36,7 @@ Luego, importamos y creamos un objeto [`Accelerator`](https://hf-mirror.com/docs
 
 ## Prepárate para acelerar
 
-Pasa todos los objetos relevantes para el entrenamiento al método [`prepare`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare). Esto incluye los DataLoaders de entrenamiento y evaluación, un modelo y un optimizador:
+Pasa todos los objetos relevantes para el entrenamiento al método [`prepare`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.prepare). Esto incluye los DataLoaders de entrenamiento y evaluación, un modelo y un optimizador:
 
 ```py
 >>> train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
@@ -46,7 +46,7 @@ Pasa todos los objetos relevantes para el entrenamiento al método [`prepare`](h
 
 ## Backward
 
-Por último, reemplaza el típico `loss.backward()` en tu bucle de entrenamiento con el método [`backward`](https://hf-mirror.com/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) de 🤗 Accelerate:
+Por último, reemplaza el típico `loss.backward()` en tu bucle de entrenamiento con el método [`backward`](https://huggingface.co/docs/accelerate/package_reference/accelerator#accelerate.Accelerator.backward) de 🤗 Accelerate:
 
 ```py
 >>> for epoch in range(num_epochs):
@@ -133,4 +133,4 @@ accelerate launch train.py
 >>> notebook_launcher(training_function)
 ```
 
-Para obtener más información sobre 🤗 Accelerate y sus numerosas funciones, consulta la [documentación](https://hf-mirror.com/docs/accelerate).
+Para obtener más información sobre 🤗 Accelerate y sus numerosas funciones, consulta la [documentación](https://huggingface.co/docs/accelerate).

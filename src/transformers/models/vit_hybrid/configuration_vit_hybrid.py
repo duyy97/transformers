@@ -24,8 +24,8 @@ from ..bit import BitConfig
 logger = logging.get_logger(__name__)
 
 VIT_HYBRID_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/vit-hybrid-base-bit-384": "https://hf-mirror.com/vit-hybrid-base-bit-384/resolve/main/config.json",
-    # See all ViT hybrid models at https://hf-mirror.com/models?filter=vit
+    "google/vit-hybrid-base-bit-384": "https://huggingface.co/vit-hybrid-base-bit-384/resolve/main/config.json",
+    # See all ViT hybrid models at https://huggingface.co/models?filter=vit
 }
 
 
@@ -34,7 +34,7 @@ class ViTHybridConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ViTHybridModel`]. It is used to instantiate a ViT
     Hybrid model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the ViT Hybrid
-    [google/vit-hybrid-base-bit-384](https://hf-mirror.com/google/vit-hybrid-base-bit-384) architecture.
+    [google/vit-hybrid-base-bit-384](https://huggingface.co/google/vit-hybrid-base-bit-384) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

@@ -87,7 +87,7 @@ old_default_cache_path = os.path.join(torch_cache_home, "transformers")
 
 # Determine default cache directory. Lots of legacy environment variables to ensure backward compatibility.
 # The best way to set the cache path is with the environment variable HF_HOME. For more details, checkout this
-# documentation page: https://hf-mirror.com/docs/huggingface_hub/package_reference/environment_variables.
+# documentation page: https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables.
 #
 # In code, use `HF_HUB_CACHE` as the default cache path. This variable is set by the library and is guaranteed
 # to be set to the right value.
@@ -127,11 +127,11 @@ for key in ("PYTORCH_PRETRAINED_BERT_CACHE", "PYTORCH_TRANSFORMERS_CACHE", "TRAN
         )
 
 
-S3_BUCKET_PREFIX = "https://s3.amazonaws.com/models.hf-mirror.com/bert"
-CLOUDFRONT_DISTRIB_PREFIX = "https://cdn.hf-mirror.com"
+S3_BUCKET_PREFIX = "https://s3.amazonaws.com/models.huggingface.co/bert"
+CLOUDFRONT_DISTRIB_PREFIX = "https://cdn.huggingface.co"
 
 _staging_mode = os.environ.get("HUGGINGFACE_CO_STAGING", "NO").upper() in ENV_VARS_TRUE_VALUES
-_default_endpoint = "https://hub-ci.hf-mirror.com" if _staging_mode else "https://hf-mirror.com"
+_default_endpoint = "https://hub-ci.huggingface.co" if _staging_mode else "https://huggingface.co"
 
 HUGGINGFACE_CO_RESOLVE_ENDPOINT = _default_endpoint
 if os.environ.get("HUGGINGFACE_CO_RESOLVE_ENDPOINT", None) is not None:
@@ -289,7 +289,7 @@ def cached_file(
         path_or_repo_id (`str` or `os.PathLike`):
             This can be either:
 
-            - a string, the *model id* of a model repo on hf-mirror.com.
+            - a string, the *model id* of a model repo on huggingface.co.
             - a path to a *directory* potentially containing the file.
         filename (`str`):
             The name of the file to locate in `path_or_repo`.
@@ -309,12 +309,12 @@ def cached_file(
             when running `huggingface-cli login` (stored in `~/.huggingface`).
         revision (`str`, *optional*, defaults to `"main"`):
             The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-            git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+            git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
             identifier allowed by git.
         local_files_only (`bool`, *optional*, defaults to `False`):
             If `True`, will only try to load the tokenizer configuration from local files.
         subfolder (`str`, *optional*, defaults to `""`):
-            In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+            In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
             specify the folder name here.
         repo_type (`str`, *optional*):
             Specify the repo type (useful when downloading from a space for instance).
@@ -368,7 +368,7 @@ def cached_file(
             if _raise_exceptions_for_missing_entries:
                 raise EnvironmentError(
                     f"{path_or_repo_id} does not appear to have a file named {full_filename}. Checkout "
-                    f"'https://hf-mirror.com/{path_or_repo_id}/tree/{revision}' for available files."
+                    f"'https://huggingface.co/{path_or_repo_id}/tree/{revision}' for available files."
                 )
             else:
                 return None
@@ -415,12 +415,12 @@ def cached_file(
             return resolved_file
         raise EnvironmentError(
             "You are trying to access a gated repo.\nMake sure to have access to it at "
-            f"https://hf-mirror.com/{path_or_repo_id}.\n{str(e)}"
+            f"https://huggingface.co/{path_or_repo_id}.\n{str(e)}"
         ) from e
     except RepositoryNotFoundError as e:
         raise EnvironmentError(
             f"{path_or_repo_id} is not a local folder and is not a valid model identifier "
-            "listed on 'https://hf-mirror.com/models'\nIf this is a private repository, make sure to pass a token "
+            "listed on 'https://huggingface.co/models'\nIf this is a private repository, make sure to pass a token "
             "having permission to this repo either by logging in with `huggingface-cli login` or by passing "
             "`token=<your_token>`"
         ) from e
@@ -428,7 +428,7 @@ def cached_file(
         raise EnvironmentError(
             f"{revision} is not a valid git identifier (branch name, tag name or commit id) that exists "
             "for this model name. Check the model page at "
-            f"'https://hf-mirror.com/{path_or_repo_id}' for available revisions."
+            f"'https://huggingface.co/{path_or_repo_id}' for available revisions."
         ) from e
     except LocalEntryNotFoundError as e:
         resolved_file = _get_cache_file_to_return(path_or_repo_id, full_filename, cache_dir, revision)
@@ -442,7 +442,7 @@ def cached_file(
             f"We couldn't connect to '{HUGGINGFACE_CO_RESOLVE_ENDPOINT}' to load this file, couldn't find it in the"
             f" cached files and it looks like {path_or_repo_id} is not the path to a directory containing a file named"
             f" {full_filename}.\nCheckout your internet connection or see how to run the library in offline mode at"
-            " 'https://hf-mirror.com/docs/transformers/installation#offline-mode'."
+            " 'https://huggingface.co/docs/transformers/installation#offline-mode'."
         ) from e
     except EntryNotFoundError as e:
         if not _raise_exceptions_for_missing_entries:
@@ -451,7 +451,7 @@ def cached_file(
             revision = "main"
         raise EnvironmentError(
             f"{path_or_repo_id} does not appear to have a file named {full_filename}. Checkout "
-            f"'https://hf-mirror.com/{path_or_repo_id}/{revision}' for available files."
+            f"'https://huggingface.co/{path_or_repo_id}/{revision}' for available files."
         ) from e
     except HTTPError as err:
         resolved_file = _get_cache_file_to_return(path_or_repo_id, full_filename, cache_dir, revision)
@@ -489,7 +489,7 @@ def get_file_from_repo(
         path_or_repo (`str` or `os.PathLike`):
             This can be either:
 
-            - a string, the *model id* of a model repo on hf-mirror.com.
+            - a string, the *model id* of a model repo on huggingface.co.
             - a path to a *directory* potentially containing the file.
         filename (`str`):
             The name of the file to locate in `path_or_repo`.
@@ -509,12 +509,12 @@ def get_file_from_repo(
             when running `huggingface-cli login` (stored in `~/.huggingface`).
         revision (`str`, *optional*, defaults to `"main"`):
             The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
-            git-based system for storing models and other artifacts on hf-mirror.com, so `revision` can be any
+            git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
             identifier allowed by git.
         local_files_only (`bool`, *optional*, defaults to `False`):
             If `True`, will only try to load the tokenizer configuration from local files.
         subfolder (`str`, *optional*, defaults to `""`):
-            In case the relevant files are located inside a subfolder of the model repo on hf-mirror.com, you can
+            In case the relevant files are located inside a subfolder of the model repo on huggingface.co, you can
             specify the folder name here.
 
     <Tip>
@@ -530,7 +530,7 @@ def get_file_from_repo(
     Examples:
 
     ```python
-    # Download a tokenizer configuration from hf-mirror.com and cache.
+    # Download a tokenizer configuration from huggingface.co and cache.
     tokenizer_config = get_file_from_repo("google-bert/bert-base-uncased", "tokenizer_config.json")
     # This model does not have a tokenizer config so the result will be None.
     tokenizer_config = get_file_from_repo("FacebookAI/xlm-roberta-base", "tokenizer_config.json")
@@ -632,7 +632,7 @@ def has_file(
         logger.error(e)
         raise EnvironmentError(
             f"{path_or_repo} is a gated repository. Make sure to request access at "
-            f"https://hf-mirror.com/{path_or_repo} and pass a token having permission to this repo either by "
+            f"https://huggingface.co/{path_or_repo} and pass a token having permission to this repo either by "
             "logging in with `huggingface-cli login` or by passing `token=<your_token>`."
         ) from e
     except RepositoryNotFoundError as e:
@@ -642,7 +642,7 @@ def has_file(
         logger.error(e)
         raise EnvironmentError(
             f"{revision} is not a valid git identifier (branch name, tag name or commit id) that exists for this "
-            f"model name. Check the model page at 'https://hf-mirror.com/{path_or_repo}' for available revisions."
+            f"model name. Check the model page at 'https://huggingface.co/{path_or_repo}' for available revisions."
         )
     except requests.HTTPError:
         # We return false for EntryNotFoundError (logical) as well as any connection error.
@@ -1213,7 +1213,7 @@ def move_cache(cache_dir=None, new_cache_dir=None, token=None):
 
         url_info = extract_info_from_url(url)
         if url_info is None:
-            # Not a file from hf-mirror.com
+            # Not a file from huggingface.co
             continue
 
         repo = os.path.join(new_cache_dir, url_info["repo"])

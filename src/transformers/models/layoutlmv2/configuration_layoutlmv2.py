@@ -21,9 +21,9 @@ from ...utils import is_detectron2_available, logging
 logger = logging.get_logger(__name__)
 
 LAYOUTLMV2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "layoutlmv2-base-uncased": "https://hf-mirror.com/microsoft/layoutlmv2-base-uncased/resolve/main/config.json",
-    "layoutlmv2-large-uncased": "https://hf-mirror.com/microsoft/layoutlmv2-large-uncased/resolve/main/config.json",
-    # See all LayoutLMv2 models at https://hf-mirror.com/models?filter=layoutlmv2
+    "layoutlmv2-base-uncased": "https://huggingface.co/microsoft/layoutlmv2-base-uncased/resolve/main/config.json",
+    "layoutlmv2-large-uncased": "https://huggingface.co/microsoft/layoutlmv2-large-uncased/resolve/main/config.json",
+    # See all LayoutLMv2 models at https://huggingface.co/models?filter=layoutlmv2
 }
 
 # soft dependency
@@ -36,7 +36,7 @@ class LayoutLMv2Config(PretrainedConfig):
     This is the configuration class to store the configuration of a [`LayoutLMv2Model`]. It is used to instantiate an
     LayoutLMv2 model according to the specified arguments, defining the model architecture. Instantiating a
     configuration with the defaults will yield a similar configuration to that of the LayoutLMv2
-    [microsoft/layoutlmv2-base-uncased](https://hf-mirror.com/microsoft/layoutlmv2-base-uncased) architecture.
+    [microsoft/layoutlmv2-base-uncased](https://huggingface.co/microsoft/layoutlmv2-base-uncased) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

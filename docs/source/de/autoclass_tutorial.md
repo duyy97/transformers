@@ -20,7 +20,7 @@ Bei so vielen verschiedenen Transformator-Architekturen kann es eine Herausforde
 
 <Tip>
 
-Denken Sie daran, dass sich die Architektur auf das Skelett des Modells bezieht und die Checkpoints die Gewichte für eine bestimmte Architektur sind. Zum Beispiel ist [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) eine Architektur, während `google-bert/bert-base-uncased` ein Checkpoint ist. Modell ist ein allgemeiner Begriff, der entweder Architektur oder Prüfpunkt bedeuten kann.
+Denken Sie daran, dass sich die Architektur auf das Skelett des Modells bezieht und die Checkpoints die Gewichte für eine bestimmte Architektur sind. Zum Beispiel ist [BERT](https://huggingface.co/google-bert/bert-base-uncased) eine Architektur, während `google-bert/bert-base-uncased` ein Checkpoint ist. Modell ist ein allgemeiner Begriff, der entweder Architektur oder Prüfpunkt bedeuten kann.
 
 </Tip>
 
@@ -101,7 +101,7 @@ Sie können denselben Prüfpunkt problemlos wiederverwenden, um eine Architektur
 
 <Tip warning={true}>
 
-Für PyTorch-Modelle verwendet die Methode `from_pretrained()` `torch.load()`, die intern `pickle` verwendet und als unsicher bekannt ist. Generell sollte man niemals ein Modell laden, das aus einer nicht vertrauenswürdigen Quelle stammen könnte, oder das manipuliert worden sein könnte. Dieses Sicherheitsrisiko wird für öffentliche Modelle, die auf dem Hugging Face Hub gehostet werden, teilweise gemildert, da diese bei jeder Übertragung [auf Malware](https://hf-mirror.com/docs/hub/security-malware) gescannt werden. Siehe die [Hub-Dokumentation](https://hf-mirror.com/docs/hub/security) für Best Practices wie [signierte Commit-Verifizierung](https://hf-mirror.com/docs/hub/security-gpg#signing-commits-with-gpg) mit GPG.
+Für PyTorch-Modelle verwendet die Methode `from_pretrained()` `torch.load()`, die intern `pickle` verwendet und als unsicher bekannt ist. Generell sollte man niemals ein Modell laden, das aus einer nicht vertrauenswürdigen Quelle stammen könnte, oder das manipuliert worden sein könnte. Dieses Sicherheitsrisiko wird für öffentliche Modelle, die auf dem Hugging Face Hub gehostet werden, teilweise gemildert, da diese bei jeder Übertragung [auf Malware](https://huggingface.co/docs/hub/security-malware) gescannt werden. Siehe die [Hub-Dokumentation](https://huggingface.co/docs/hub/security) für Best Practices wie [signierte Commit-Verifizierung](https://huggingface.co/docs/hub/security-gpg#signing-commits-with-gpg) mit GPG.
 
 TensorFlow- und Flax-Checkpoints sind nicht betroffen und können in PyTorch-Architekturen mit den Kwargs `from_tf` und `from_flax` für die Methode `from_pretrained` geladen werden, um dieses Problem zu umgehen.
 

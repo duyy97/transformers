@@ -39,7 +39,7 @@ class ImageGPTConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`ImageGPTModel`] or a [`TFImageGPTModel`]. It is
     used to instantiate a GPT-2 model according to the specified arguments, defining the model architecture.
     Instantiating a configuration with the defaults will yield a similar configuration to that of the ImageGPT
-    [openai/imagegpt-small](https://hf-mirror.com/openai/imagegpt-small) architecture.
+    [openai/imagegpt-small](https://huggingface.co/openai/imagegpt-small) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

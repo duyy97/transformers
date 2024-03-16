@@ -665,7 +665,7 @@ def pipeline(
         revision (`str`, *optional*, defaults to `"main"`):
             When passing a task name or a string model identifier: The specific model version to use. It can be a
             branch name, a tag name, or a commit id, since we use a git-based system for storing models and other
-            artifacts on hf-mirror.com, so `revision` can be any identifier allowed by git.
+            artifacts on huggingface.co, so `revision` can be any identifier allowed by git.
         use_fast (`bool`, *optional*, defaults to `True`):
             Whether or not to use a Fast tokenizer if possible (a [`PreTrainedTokenizerFast`]).
         use_auth_token (`str` or *bool*, *optional*):
@@ -677,7 +677,7 @@ def pipeline(
         device_map (`str` or `Dict[str, Union[int, str, torch.device]`, *optional*):
             Sent directly as `model_kwargs` (just a simpler shortcut). When `accelerate` library is present, set
             `device_map="auto"` to compute the most optimized `device_map` automatically (see
-            [here](https://hf-mirror.com/docs/accelerate/main/en/package_reference/big_modeling#accelerate.cpu_offload)
+            [here](https://huggingface.co/docs/accelerate/main/en/package_reference/big_modeling#accelerate.cpu_offload)
             for more information).
 
             <Tip warning={true}>

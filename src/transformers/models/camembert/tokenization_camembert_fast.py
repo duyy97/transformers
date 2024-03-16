@@ -36,10 +36,10 @@ VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model", "tokenizer_file": 
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "almanach/camembert-base": "https://hf-mirror.com/almanach/camembert-base/resolve/main/sentencepiece.bpe.model",
+        "almanach/camembert-base": "https://huggingface.co/almanach/camembert-base/resolve/main/sentencepiece.bpe.model",
     },
     "tokenizer_file": {
-        "almanach/camembert-base": "https://hf-mirror.com/almanach/camembert-base/resolve/main/tokenizer.json",
+        "almanach/camembert-base": "https://huggingface.co/almanach/camembert-base/resolve/main/tokenizer.json",
     },
 }
 
@@ -54,7 +54,7 @@ class CamembertTokenizerFast(PreTrainedTokenizerFast):
     """
     Construct a "fast" CamemBERT tokenizer (backed by HuggingFace's *tokenizers* library). Adapted from
     [`RobertaTokenizer`] and [`XLNetTokenizer`]. Based on
-    [BPE](https://hf-mirror.com/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
+    [BPE](https://huggingface.co/docs/tokenizers/python/latest/components.html?highlight=BPE#models).
 
     This tokenizer inherits from [`PreTrainedTokenizerFast`] which contains most of the main methods. Users should
     refer to this superclass for more information regarding those methods.

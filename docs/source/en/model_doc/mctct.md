@@ -40,7 +40,7 @@ pseudo-labels for all languages, either from scratch or by fine-tuning. Experime
 Common Voice and unlabeled VoxPopuli datasets show that our recipe can yield a model with better
 performance for many languages that also transfers well to LibriSpeech.*
 
-This model was contributed by [cwkeam](https://hf-mirror.com/cwkeam). The original code can be found [here](https://github.com/flashlight/wav2letter/tree/main/recipes/mling_pl).
+This model was contributed by [cwkeam](https://huggingface.co/cwkeam). The original code can be found [here](https://github.com/flashlight/wav2letter/tree/main/recipes/mling_pl).
 
 ## Usage tips
 

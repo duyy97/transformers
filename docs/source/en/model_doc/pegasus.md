@@ -17,10 +17,10 @@ rendered properly in your Markdown viewer.
 # Pegasus
 
 <div class="flex flex-wrap space-x-1">
-<a href="https://hf-mirror.com/models?filter=pegasus">
+<a href="https://huggingface.co/models?filter=pegasus">
 <img alt="Models" src="https://img.shields.io/badge/All_model_pages-pegasus-blueviolet">
 </a>
-<a href="https://hf-mirror.com/spaces/docs-demos/pegasus_paraphrase">
+<a href="https://huggingface.co/spaces/docs-demos/pegasus_paraphrase">
 <img alt="Spaces" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
 </a>
 </div>
@@ -37,7 +37,7 @@ According to the abstract,
   extractive summary.
 - Pegasus achieves SOTA summarization performance on all 12 downstream tasks, as measured by ROUGE and human eval.
 
-This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer). The Authors' code can be found [here](https://github.com/google-research/pegasus).
+This model was contributed by [sshleifer](https://huggingface.co/sshleifer). The Authors' code can be found [here](https://github.com/google-research/pegasus).
 
 ## Usage tips
 
@@ -52,14 +52,14 @@ This model was contributed by [sshleifer](https://hf-mirror.com/sshleifer). The 
 
 ## Checkpoints
 
-All the [checkpoints](https://hf-mirror.com/models?search=pegasus) are fine-tuned for summarization, besides
+All the [checkpoints](https://huggingface.co/models?search=pegasus) are fine-tuned for summarization, besides
 *pegasus-large*, whence the other checkpoints are fine-tuned:
 
 - Each checkpoint is 2.2 GB on disk and 568M parameters.
 - FP16 is not supported (help/ideas on this appreciated!).
 - Summarizing xsum in fp32 takes about 400ms/sample, with default parameters on a v100 GPU.
 - Full replication results and correctly pre-processed data can be found in this [Issue](https://github.com/huggingface/transformers/issues/6844#issue-689259666).
-- [Distilled checkpoints](https://hf-mirror.com/models?search=distill-pegasus) are described in this [paper](https://arxiv.org/abs/2010.13002).
+- [Distilled checkpoints](https://huggingface.co/models?search=distill-pegasus) are described in this [paper](https://arxiv.org/abs/2010.13002).
 
 ## Implementation Notes
 

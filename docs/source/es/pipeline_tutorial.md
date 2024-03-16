@@ -16,7 +16,7 @@ rendered properly in your Markdown viewer.
 
 # Pipelines para inferencia
 
-Un [`pipeline`] simplifica el uso de cualquier modelo del [Model Hub](https://hf-mirror.com/models) para la inferencia en una variedad de tareas como la generación de texto, la segmentación de imágenes y la clasificación de audio. Incluso si no tienes experiencia con una modalidad específica o no comprendes el código que alimenta los modelos, ¡aún puedes usarlos con el [`pipeline`]! Este tutorial te enseñará a:
+Un [`pipeline`] simplifica el uso de cualquier modelo del [Model Hub](https://huggingface.co/models) para la inferencia en una variedad de tareas como la generación de texto, la segmentación de imágenes y la clasificación de audio. Incluso si no tienes experiencia con una modalidad específica o no comprendes el código que alimenta los modelos, ¡aún puedes usarlos con el [`pipeline`]! Este tutorial te enseñará a:
 
 * Utilizar un [`pipeline`] para inferencia.
 * Utilizar un tokenizador o modelo específico.
@@ -69,7 +69,7 @@ Cualquier parámetro adicional para tu tarea también se puede incluir en el [`p
 
 ### Selecciona un modelo y un tokenizador
 
-El [`pipeline`] acepta cualquier modelo del [Model Hub](https://hf-mirror.com/models). Hay etiquetas en el Model Hub que te permiten filtrar por el modelo que te gustaría utilizar para tu tarea. Una vez que hayas elegido un modelo apropiado, cárgalo con la clase `AutoModelFor` y [`AutoTokenizer`] correspondientes. Por ejemplo, carga la clase [`AutoModelForCausalLM`] para una tarea de modelado de lenguaje causal:
+El [`pipeline`] acepta cualquier modelo del [Model Hub](https://huggingface.co/models). Hay etiquetas en el Model Hub que te permiten filtrar por el modelo que te gustaría utilizar para tu tarea. Una vez que hayas elegido un modelo apropiado, cárgalo con la clase `AutoModelFor` y [`AutoTokenizer`] correspondientes. Por ejemplo, carga la clase [`AutoModelForCausalLM`] para una tarea de modelado de lenguaje causal:
 
 ```py
 >>> from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -97,7 +97,7 @@ Pasa tu texto de entrada a [`pipeline`] para generar algo de texto:
 
 La flexibilidad de [`pipeline`] significa que también se puede extender a tareas de audio.
 
-Por ejemplo, clasifiquemos la emoción de un breve fragmento del famoso discurso de John F. Kennedy ["We choose to go to the Moon"](https://en.wikipedia.org/wiki/We_choose_to_go_to_the_Moon). Encuentra un modelo de [audio classification](https://hf-mirror.com/models?pipeline_tag=audio-classification) para reconocimiento de emociones en el Model Hub y cárgalo en el [`pipeline`]:
+Por ejemplo, clasifiquemos la emoción de un breve fragmento del famoso discurso de John F. Kennedy ["We choose to go to the Moon"](https://en.wikipedia.org/wiki/We_choose_to_go_to_the_Moon). Encuentra un modelo de [audio classification](https://huggingface.co/models?pipeline_tag=audio-classification) para reconocimiento de emociones en el Model Hub y cárgalo en el [`pipeline`]:
 
 ```py
 >>> from transformers import pipeline
@@ -124,14 +124,14 @@ Finalmente, utilizar un [`pipeline`] para tareas de visión es prácticamente ig
 
 Específica tu tarea de visión y pasa tu imagen al clasificador. La imagen puede ser un enlace o una ruta local a la imagen. Por ejemplo, ¿qué especie de gato se muestra a continuación?
 
-![pipeline-cat-chonk](https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
+![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
 >>> from transformers import pipeline
 
 >>> vision_classifier = pipeline(task="image-classification")
 >>> vision_classifier(
-...     images="https://hf-mirror.com/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
+...     images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 ... )
 [{'label': 'lynx, catamount', 'score': 0.4403027892112732},
  {'label': 'cougar, puma, catamount, mountain lion, painter, panther, Felis concolor',

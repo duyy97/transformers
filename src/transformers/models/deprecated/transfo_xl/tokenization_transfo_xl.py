@@ -57,7 +57,7 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "pretrained_vocab_file": {
-        "transfo-xl/transfo-xl-wt103": "https://hf-mirror.com/transfo-xl/transfo-xl-wt103/resolve/main/vocab.pkl",
+        "transfo-xl/transfo-xl-wt103": "https://huggingface.co/transfo-xl/transfo-xl-wt103/resolve/main/vocab.pkl",
     }
 }
 
@@ -66,7 +66,7 @@ PRETRAINED_POSITIONAL_EMBEDDINGS_SIZES = {
 }
 
 PRETRAINED_CORPUS_ARCHIVE_MAP = {
-    "transfo-xl/transfo-xl-wt103": "https://hf-mirror.com/transfo-xl/transfo-xl-wt103/resolve/main/corpus.bin",
+    "transfo-xl/transfo-xl-wt103": "https://huggingface.co/transfo-xl/transfo-xl-wt103/resolve/main/corpus.bin",
 }
 CORPUS_NAME = "corpus.bin"
 

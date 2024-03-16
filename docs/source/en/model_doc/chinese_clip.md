@@ -25,7 +25,7 @@ The abstract from the paper is the following:
 
 *The tremendous success of CLIP (Radford et al., 2021) has promoted the research and application of contrastive learning for vision-language pretraining. In this work, we construct a large-scale dataset of image-text pairs in Chinese, where most data are retrieved from publicly available datasets, and we pretrain Chinese CLIP models on the new dataset. We develop 5 Chinese CLIP models of multiple sizes, spanning from 77 to 958 million parameters. Furthermore, we propose a two-stage pretraining method, where the model is first trained with the image encoder frozen and then trained with all parameters being optimized, to achieve enhanced model performance. Our comprehensive experiments demonstrate that Chinese CLIP can achieve the state-of-the-art performance on MUGE, Flickr30K-CN, and COCO-CN in the setups of zero-shot learning and finetuning, and it is able to achieve competitive performance in zero-shot image classification based on the evaluation on the ELEVATER benchmark (Li et al., 2022). Our codes, pretrained models, and demos have been released.*
 
-The Chinese-CLIP model was contributed by [OFA-Sys](https://hf-mirror.com/OFA-Sys).
+The Chinese-CLIP model was contributed by [OFA-Sys](https://huggingface.co/OFA-Sys).
 
 ## Usage example
 
@@ -63,10 +63,10 @@ The code snippet below shows how to compute image & text features and similariti
 
 Currently, following scales of pretrained Chinese-CLIP models are available on 🤗 Hub:
 
-- [OFA-Sys/chinese-clip-vit-base-patch16](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-base-patch16)
-- [OFA-Sys/chinese-clip-vit-large-patch14](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-large-patch14)
-- [OFA-Sys/chinese-clip-vit-large-patch14-336px](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-large-patch14-336px)
-- [OFA-Sys/chinese-clip-vit-huge-patch14](https://hf-mirror.com/OFA-Sys/chinese-clip-vit-huge-patch14)
+- [OFA-Sys/chinese-clip-vit-base-patch16](https://huggingface.co/OFA-Sys/chinese-clip-vit-base-patch16)
+- [OFA-Sys/chinese-clip-vit-large-patch14](https://huggingface.co/OFA-Sys/chinese-clip-vit-large-patch14)
+- [OFA-Sys/chinese-clip-vit-large-patch14-336px](https://huggingface.co/OFA-Sys/chinese-clip-vit-large-patch14-336px)
+- [OFA-Sys/chinese-clip-vit-huge-patch14](https://huggingface.co/OFA-Sys/chinese-clip-vit-huge-patch14)
 
 ## ChineseCLIPConfig
 

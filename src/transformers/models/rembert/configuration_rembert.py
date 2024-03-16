@@ -24,8 +24,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 REMBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "google/rembert": "https://hf-mirror.com/google/rembert/resolve/main/config.json",
-    # See all RemBERT models at https://hf-mirror.com/models?filter=rembert
+    "google/rembert": "https://huggingface.co/google/rembert/resolve/main/config.json",
+    # See all RemBERT models at https://huggingface.co/models?filter=rembert
 }
 
 
@@ -34,7 +34,7 @@ class RemBertConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`RemBertModel`]. It is used to instantiate an
     RemBERT model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the RemBERT
-    [google/rembert](https://hf-mirror.com/google/rembert) architecture.
+    [google/rembert](https://huggingface.co/google/rembert) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

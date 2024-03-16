@@ -31,7 +31,7 @@ data, then decode using noisy channel model reranking. Our submissions are ranke
 human evaluation campaign. On En->De, our system significantly outperforms other systems as well as human translations.
 This system improves upon our WMT'18 submission by 4.5 BLEU points.*
 
-This model was contributed by [stas](https://hf-mirror.com/stas). The original code can be found
+This model was contributed by [stas](https://huggingface.co/stas). The original code can be found
 [here](https://github.com/pytorch/fairseq/tree/master/examples/wmt19).
 
 ## Implementation Notes

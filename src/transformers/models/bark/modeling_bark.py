@@ -66,7 +66,7 @@ _CONFIG_FOR_DOC = "BarkConfig"
 BARK_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "suno/bark-small",
     "suno/bark",
-    # See all Bark models at https://hf-mirror.com/models?filter=bark
+    # See all Bark models at https://huggingface.co/models?filter=bark
 ]
 
 
@@ -1893,7 +1893,7 @@ class BarkModel(BarkPreTrainedModel):
 
         For using Flash Attention 1.0 you can do it directly via the `BetterTransformer` API, have a look at this
         specific section of the documentation to learn more about it:
-        https://hf-mirror.com/docs/transformers/main/en/perf_infer_gpu_one#decoder-models
+        https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one#decoder-models
 
         The method checks if the current setup is compatible with Flash Attention as it requires the model to be in
         half precision and not ran on CPU.

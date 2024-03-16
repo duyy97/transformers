@@ -65,7 +65,7 @@ MT5_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "google/mt5-large",
     "google/mt5-xl",
     "google/mt5-xxl",
-    # See all mT5 models at https://hf-mirror.com/models?filter=mt5
+    # See all mT5 models at https://huggingface.co/models?filter=mt5
 ]
 
 PARALLELIZE_DOCSTRING = r"""

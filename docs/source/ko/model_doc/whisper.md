@@ -41,7 +41,7 @@ python src/transformers/models/whisper/convert_openai_to_hf.py --checkpoint_path
 스크립트는 OpenAI 체크포인트에서 필요한 모든 매개변수를 자동으로 결정합니다. OpenAI 변환을 수행하려면 `tiktoken` 라이브러리를 설치해야 합니다.
 라이브러리를 설치해야 OpenAI 토큰화기를 `tokenizers` 버전으로 변환할 수 있습니다.
 
-이 모델은 [Arthur Zucker](https://hf-mirror.com/ArthurZ)에 의해 제공되었습니다. 이 모델의 Tensorflow 버전은 [amyeroberts](https://hf-mirror.com/amyeroberts)에 의해 제공되었습니다.
+이 모델은 [Arthur Zucker](https://huggingface.co/ArthurZ)에 의해 제공되었습니다. 이 모델의 Tensorflow 버전은 [amyeroberts](https://huggingface.co/amyeroberts)에 의해 제공되었습니다.
 원본 코드는 [여기](https://github.com/openai/whisper)에서 찾을 수 있습니다.
 
 

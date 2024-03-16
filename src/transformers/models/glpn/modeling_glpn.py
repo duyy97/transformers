@@ -48,7 +48,7 @@ _EXPECTED_OUTPUT_SHAPE = [1, 512, 15, 20]
 
 GLPN_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "vinvino02/glpn-kitti",
-    # See all GLPN models at https://hf-mirror.com/models?filter=glpn
+    # See all GLPN models at https://huggingface.co/models?filter=glpn
 ]
 
 

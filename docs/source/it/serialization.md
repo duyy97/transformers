@@ -112,7 +112,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -m MODEL, --model MODEL
-                        Model ID on hf-mirror.com or path on disk to load model from.
+                        Model ID on huggingface.co or path on disk to load model from.
   --feature {causal-lm, ...}
                         The type of features to export the model with.
   --opset OPSET         ONNX opset version to export the model with.
@@ -171,7 +171,7 @@ DistilBERT abbiamo:
 
 Il processo è identico per i checkpoint TensorFlow sull'hub. Ad esempio, noi
 possiamo esportare un checkpoint TensorFlow puro da [Keras
-organizzazione](https://hf-mirror.com/keras-io) come segue:
+organizzazione](https://huggingface.co/keras-io) come segue:
 
 ```bash
 python -m transformers.onnx --model=keras-io/transformers-qa onnx/
@@ -629,9 +629,9 @@ distribuzione su Inf1. L'SDK Neuron fornisce:
 
 #### Implicazioni
 
-Modelli Transformers basati su architettura [BERT (Bidirectional Encoder Representations from Transformers)](https://hf-mirror.com/docs/transformers/main/model_doc/bert),
-o sue varianti come [distilBERT](https://hf-mirror.com/docs/transformers/main/model_doc/distilbert)
-e [roBERTa](https://hf-mirror.com/docs/transformers/main/model_doc/roberta)
+Modelli Transformers basati su architettura [BERT (Bidirectional Encoder Representations from Transformers)](https://huggingface.co/docs/transformers/main/model_doc/bert),
+o sue varianti come [distilBERT](https://huggingface.co/docs/transformers/main/model_doc/distilbert)
+e [roBERTa](https://huggingface.co/docs/transformers/main/model_doc/roberta)
 funzioneranno meglio su Inf1 per attività non generative come la question answering estrattive,
 Classificazione della sequenza, Classificazione dei token. In alternativa, generazione di testo
 le attività possono essere adattate per essere eseguite su Inf1, secondo questo [tutorial AWS Neuron MarianMT](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/src/examples/pytorch/transformers-marianmt.html).
@@ -647,7 +647,7 @@ L'utilizzo di AWS Neuron per convertire i modelli richiede le seguenti dipendenz
 
 #### Convertire un modello per AWS Neuron
 
-Usando lo stesso script come in [Usando TorchScipt in Python](https://hf-mirror.com/docs/transformers/main/en/serialization#using-torchscript-in-python)
+Usando lo stesso script come in [Usando TorchScipt in Python](https://huggingface.co/docs/transformers/main/en/serialization#using-torchscript-in-python)
 per tracciare un "BertModel", importi l'estensione del framework `torch.neuron` per accedere
 i componenti di Neuron SDK tramite un'API Python.
 

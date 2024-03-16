@@ -35,7 +35,7 @@ _CONFIG_FOR_DOC = "CTRLConfig"
 
 CTRL_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Salesforce/ctrl"
-    # See all CTRL models at https://hf-mirror.com/models?filter=ctrl
+    # See all CTRL models at https://huggingface.co/models?filter=ctrl
 ]
 
 

@@ -29,13 +29,13 @@ rendered properly in your Markdown viewer.
 표준화된 연산자와 데이터 유형을 가진 그래프를 노출함으로써, ONNX는 프레임워크 간에 쉽게 전환할 수 있습니다. 예를 들어, PyTorch에서 훈련된 모델을 ONNX 형식으로 내보내고 TensorFlow에서 가져올 수 있습니다(그 반대도 가능합니다).
 
 ONNX 형식으로 내보낸 모델은 다음과 같이 사용할 수 있습니다:
-- [그래프 최적화](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/optimization) 및 [양자화](https://hf-mirror.com/docs/optimum/onnxruntime/usage_guides/quantization)와 같은 기법을 사용하여 추론을 위해 최적화됩니다.
-- ONNX Runtime을 통해 실행할 수 있습니다. [`ORTModelForXXX` 클래스들](https://hf-mirror.com/docs/optimum/onnxruntime/package_reference/modeling_ort)을 통해 동일한 `AutoModel` API를 따릅니다. 이 API는 🤗 Transformers에서 사용하는 것과 동일합니다.
-- [최적화된 추론 파이프라인](https://hf-mirror.com/docs/optimum/main/en/onnxruntime/usage_guides/pipelines)을 사용할 수 있습니다. 이는 🤗 Transformers의 [`pipeline`] 함수와 동일한 API를 가지고 있습니다.
+- [그래프 최적화](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/optimization) 및 [양자화](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/quantization)와 같은 기법을 사용하여 추론을 위해 최적화됩니다.
+- ONNX Runtime을 통해 실행할 수 있습니다. [`ORTModelForXXX` 클래스들](https://huggingface.co/docs/optimum/onnxruntime/package_reference/modeling_ort)을 통해 동일한 `AutoModel` API를 따릅니다. 이 API는 🤗 Transformers에서 사용하는 것과 동일합니다.
+- [최적화된 추론 파이프라인](https://huggingface.co/docs/optimum/main/en/onnxruntime/usage_guides/pipelines)을 사용할 수 있습니다. 이는 🤗 Transformers의 [`pipeline`] 함수와 동일한 API를 가지고 있습니다.
 
 🤗 Optimum은 구성 객체를 활용하여 ONNX 내보내기를 지원합니다. 이러한 구성 객체는 여러 모델 아키텍처에 대해 미리 준비되어 있으며 다른 아키텍처에 쉽게 확장할 수 있도록 설계되었습니다.
 
-미리 준비된 구성 목록은 [🤗 Optimum 문서](https://hf-mirror.com/docs/optimum/exporters/onnx/overview)를 참조하세요.
+미리 준비된 구성 목록은 [🤗 Optimum 문서](https://huggingface.co/docs/optimum/exporters/onnx/overview)를 참조하세요.
 
 🤗 Transformers 모델을 ONNX로 내보내는 두 가지 방법이 있습니다. 여기에서 두 가지 방법을 모두 보여줍니다:
 
@@ -50,7 +50,7 @@ ONNX 형식으로 내보낸 모델은 다음과 같이 사용할 수 있습니�
 pip install optimum[exporters]
 ```
 
-사용 가능한 모든 인수를 확인하려면 [🤗 Optimum 문서](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli)를 참조하거나 명령줄에서 도움말을 보세요.
+사용 가능한 모든 인수를 확인하려면 [🤗 Optimum 문서](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/export_a_model#exporting-a-model-to-onnx-using-the-cli)를 참조하거나 명령줄에서 도움말을 보세요.
 
 ```bash
 optimum-cli export onnx --help
@@ -76,7 +76,7 @@ Validating ONNX model distilbert_base_uncased_squad_onnx/model.onnx...
 The ONNX export succeeded and the exported model was saved at: distilbert_base_uncased_squad_onnx
 ```
 
-위의 예제는 🤗 Hub에서 체크포인트를 내보내는 것을 설명합니다. 로컬 모델을 내보낼 때에는 모델의 가중치와 토크나이저 파일을 동일한 디렉토리(`local_path`)에 저장했는지 확인하세요. CLI를 사용할 때에는 🤗 Hub의 체크포인트 이름 대신 `model` 인수에 `local_path`를 전달하고 `--task` 인수를 제공하세요. 지원되는 작업의 목록은 [🤗 Optimum 문서](https://hf-mirror.com/docs/optimum/exporters/task_manager)를 참조하세요. `task` 인수가 제공되지 않으면 작업에 특화된 헤드 없이 모델 아키텍처로 기본 설정됩니다.
+위의 예제는 🤗 Hub에서 체크포인트를 내보내는 것을 설명합니다. 로컬 모델을 내보낼 때에는 모델의 가중치와 토크나이저 파일을 동일한 디렉토리(`local_path`)에 저장했는지 확인하세요. CLI를 사용할 때에는 🤗 Hub의 체크포인트 이름 대신 `model` 인수에 `local_path`를 전달하고 `--task` 인수를 제공하세요. 지원되는 작업의 목록은 [🤗 Optimum 문서](https://huggingface.co/docs/optimum/exporters/task_manager)를 참조하세요. `task` 인수가 제공되지 않으면 작업에 특화된 헤드 없이 모델 아키텍처로 기본 설정됩니다.
 
 ```bash
 optimum-cli export onnx --model local_path --task question-answering distilbert_base_uncased_squad_onnx/
@@ -94,7 +94,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 >>> outputs = model(**inputs)
 ```
 
-Hub의 TensorFlow 체크포인트에 대해서도 동일한 프로세스가 적용됩니다. 예를 들어, [Keras organization](https://hf-mirror.com/keras-io)에서 순수한 TensorFlow 체크포인트를 내보내는 방법은 다음과 같습니다:
+Hub의 TensorFlow 체크포인트에 대해서도 동일한 프로세스가 적용됩니다. 예를 들어, [Keras organization](https://huggingface.co/keras-io)에서 순수한 TensorFlow 체크포인트를 내보내는 방법은 다음과 같습니다:
 
 ```bash
 optimum-cli export onnx --model keras-io/transformers-qa distilbert_base_cased_squad_onnx/
@@ -122,7 +122,7 @@ CLI 대신에 `optimum.onnxruntime`을 사용하여 프로그래밍 방식으로
 
 ### 지원되지 않는 아키텍처의 모델 내보내기 [[exporting-a-model-for-an-unsupported-architecture]]
 
-현재 내보낼 수 없는 모델을 지원하기 위해 기여하려면, 먼저 [`optimum.exporters.onnx`](https://hf-mirror.com/docs/optimum/exporters/onnx/overview)에서 지원되는지 확인한 후 지원되지 않는 경우에는 [🤗 Optimum에 기여](https://hf-mirror.com/docs/optimum/exporters/onnx/usage_guides/contribute)하세요.
+현재 내보낼 수 없는 모델을 지원하기 위해 기여하려면, 먼저 [`optimum.exporters.onnx`](https://huggingface.co/docs/optimum/exporters/onnx/overview)에서 지원되는지 확인한 후 지원되지 않는 경우에는 [🤗 Optimum에 기여](https://huggingface.co/docs/optimum/exporters/onnx/usage_guides/contribute)하세요.
 
 ### `transformers.onnx`를 사용하여 모델 내보내기 [[exporting-a-model-with-transformersonnx]]
 

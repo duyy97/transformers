@@ -56,7 +56,7 @@ TF_ESM_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/esm2_t6_8M_UR50D",
     "facebook/esm2_t12_35M_UR50D",
     # This is not a complete list of all ESM models!
-    # See all ESM models at https://hf-mirror.com/models?filter=esm
+    # See all ESM models at https://huggingface.co/models?filter=esm
 ]
 
 
@@ -92,7 +92,7 @@ def average_product_correct(x):
 class TFRotaryEmbedding(keras.layers.Layer):
     """
     Rotary position embeddings based on those in
-    [RoFormer](https://hf-mirror.com/docs/transformers/model_doc/roformer). Query and keys are transformed by rotation
+    [RoFormer](https://huggingface.co/docs/transformers/model_doc/roformer). Query and keys are transformed by rotation
     matrices which depend on their relative positions.
     """
 

@@ -21,8 +21,8 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 DONUT_SWIN_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    "naver-clova-ix/donut-base": "https://hf-mirror.com/naver-clova-ix/donut-base/resolve/main/config.json",
-    # See all Donut models at https://hf-mirror.com/models?filter=donut-swin
+    "naver-clova-ix/donut-base": "https://huggingface.co/naver-clova-ix/donut-base/resolve/main/config.json",
+    # See all Donut models at https://huggingface.co/models?filter=donut-swin
 }
 
 
@@ -31,7 +31,7 @@ class DonutSwinConfig(PretrainedConfig):
     This is the configuration class to store the configuration of a [`DonutSwinModel`]. It is used to instantiate a
     Donut model according to the specified arguments, defining the model architecture. Instantiating a configuration
     with the defaults will yield a similar configuration to that of the Donut
-    [naver-clova-ix/donut-base](https://hf-mirror.com/naver-clova-ix/donut-base) architecture.
+    [naver-clova-ix/donut-base](https://huggingface.co/naver-clova-ix/donut-base) architecture.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.

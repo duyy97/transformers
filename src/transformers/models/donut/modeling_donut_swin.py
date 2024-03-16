@@ -45,12 +45,12 @@ logger = logging.get_logger(__name__)
 _CONFIG_FOR_DOC = "DonutSwinConfig"
 
 # Base docstring
-_CHECKPOINT_FOR_DOC = "https://hf-mirror.com/naver-clova-ix/donut-base"
+_CHECKPOINT_FOR_DOC = "https://huggingface.co/naver-clova-ix/donut-base"
 _EXPECTED_OUTPUT_SHAPE = [1, 49, 768]
 
 DONUT_SWIN_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "naver-clova-ix/donut-base",
-    # See all Donut Swin models at https://hf-mirror.com/models?filter=donut
+    # See all Donut Swin models at https://huggingface.co/models?filter=donut
 ]
 
 

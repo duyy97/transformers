@@ -31,9 +31,9 @@ mapping phonemes of the training languages to the target language using articula
 this simple method significantly outperforms prior work which introduced task-specific architectures and used only part
 of a monolingually pretrained model.*
 
-Relevant checkpoints can be found under https://hf-mirror.com/models?other=phoneme-recognition.
+Relevant checkpoints can be found under https://huggingface.co/models?other=phoneme-recognition.
 
-This model was contributed by [patrickvonplaten](https://hf-mirror.com/patrickvonplaten)
+This model was contributed by [patrickvonplaten](https://huggingface.co/patrickvonplaten)
 
 The original code can be found [here](https://github.com/pytorch/fairseq/tree/master/fairseq/models/wav2vec).
 

@@ -37,7 +37,7 @@ To use its finer-grained input effectively and efficiently, CANINE combines down
 sequence length, with a deep transformer stack, which encodes context. CANINE outperforms a comparable mBERT model by
 2.8 F1 on TyDi QA, a challenging multilingual benchmark, despite having 28% fewer model parameters.*
 
-This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The original code can be found [here](https://github.com/google-research/language/tree/master/language/canine).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/google-research/language/tree/master/language/canine).
 
 ## Usage tips
 
@@ -55,9 +55,9 @@ This model was contributed by [nielsr](https://hf-mirror.com/nielsr). The origin
 
 Model checkpoints:
 
-  - [google/canine-c](https://hf-mirror.com/google/canine-c): Pre-trained with autoregressive character loss,
+  - [google/canine-c](https://huggingface.co/google/canine-c): Pre-trained with autoregressive character loss,
     12-layer, 768-hidden, 12-heads, 121M parameters (size ~500 MB).
-  - [google/canine-s](https://hf-mirror.com/google/canine-s): Pre-trained with subword loss, 12-layer,
+  - [google/canine-s](https://huggingface.co/google/canine-s): Pre-trained with subword loss, 12-layer,
     768-hidden, 12-heads, 121M parameters (size ~500 MB).
 
 

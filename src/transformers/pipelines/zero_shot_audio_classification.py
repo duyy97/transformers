@@ -51,7 +51,7 @@ class ZeroShotAudioClassificationPipeline(Pipeline):
     Learn more about the basics of using a pipeline in the [pipeline tutorial](../pipeline_tutorial) This audio
     classification pipeline can currently be loaded from [`pipeline`] using the following task identifier:
     `"zero-shot-audio-classification"`. See the list of available models on
-    [hf-mirror.com/models](https://hf-mirror.com/models?filter=zero-shot-audio-classification).
+    [huggingface.co/models](https://huggingface.co/models?filter=zero-shot-audio-classification).
     """
 
     def __init__(self, **kwargs):

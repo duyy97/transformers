@@ -59,7 +59,7 @@ SEW_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "asapp/sew-tiny-100k",
     "asapp/sew-small-100k",
     "asapp/sew-mid-100k",
-    # See all SEW models at https://hf-mirror.com/models?filter=sew
+    # See all SEW models at https://huggingface.co/models?filter=sew
 ]
 
 

@@ -49,14 +49,14 @@ VOCAB_FILES_NAMES = {
 
 PRETRAINED_VOCAB_FILES_MAP = {
     "vocab_file": {
-        "weiweishi/roc-bert-base-zh": "https://hf-mirror.com/weiweishi/roc-bert-base-zh/resolve/main/vocab.txt"
+        "weiweishi/roc-bert-base-zh": "https://huggingface.co/weiweishi/roc-bert-base-zh/resolve/main/vocab.txt"
     },
     "word_shape_file": {
-        "weiweishi/roc-bert-base-zh": "https://hf-mirror.com/weiweishi/roc-bert-base-zh/resolve/main/word_shape.json"
+        "weiweishi/roc-bert-base-zh": "https://huggingface.co/weiweishi/roc-bert-base-zh/resolve/main/word_shape.json"
     },
     "word_pronunciation_file": {
         "weiweishi/roc-bert-base-zh": (
-            "https://hf-mirror.com/weiweishi/roc-bert-base-zh/resolve/main/word_pronunciation.json"
+            "https://huggingface.co/weiweishi/roc-bert-base-zh/resolve/main/word_pronunciation.json"
         )
     },
 }

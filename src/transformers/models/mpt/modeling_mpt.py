@@ -52,7 +52,7 @@ MPT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "mosaicml/mpt-30b",
     "mosaicml/mpt-30b-instruct",
     "mosaicml/mpt-30b-chat",
-    # See all MPT models at https://hf-mirror.com/models?filter=mpt
+    # See all MPT models at https://huggingface.co/models?filter=mpt
 ]
 
 
@@ -61,7 +61,7 @@ def build_mpt_alibi_tensor(num_heads, sequence_length, alibi_bias_max=8, device=
     Link to paper: https://arxiv.org/abs/2108.12409 - Alibi tensor is not causal as the original paper mentions, it
     relies on a translation invariance of softmax for quick implementation. This implementation has been copied from
     the alibi implementation of MPT source code that led to slightly different results than the Bloom alibi:
-    https://hf-mirror.com/mosaicml/mpt-7b/blob/main/attention.py#L292
+    https://huggingface.co/mosaicml/mpt-7b/blob/main/attention.py#L292
     """
     alibi = torch.arange(1 - sequence_length, 1, dtype=torch.int32, device=device).view(1, 1, 1, sequence_length)
     num_heads_power_of_2 = 2 ** math.ceil(math.log2(num_heads))

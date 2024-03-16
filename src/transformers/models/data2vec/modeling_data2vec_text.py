@@ -57,7 +57,7 @@ _CONFIG_FOR_DOC = "Data2VecTextConfig"
 
 DATA2VEC_TEXT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/data2vec-text-base",
-    # See all data2vec models at https://hf-mirror.com/models?filter=data2vec-text
+    # See all data2vec models at https://huggingface.co/models?filter=data2vec-text
 ]
 
 

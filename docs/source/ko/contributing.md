@@ -51,7 +51,7 @@ limitations under the License.
 
 🤗 Transformers 라이브러리는 사용 중에 겪는 문제를 보고해주는 사용자들 덕분에 더욱 견고해지고 신뢰할 수 있게 되었습니다.
 
-이슈를 보고하기 전에, 버그가 이미 **보고되지 않았는지** 확인해주세요. (GitHub의 이슈 탭 아래의 검색 바를 사용하세요). 이슈는 라이브러리 자체에서 발생한 버그어야 하며, 코드의 다른 부분과 관련된 것이 아니어야 합니다. 버그가 라이브러리의 문제로 발생하였는지 확실하지 않은 경우 먼저 [포럼](https://discuss.hf-mirror.com/)에서 질문해 주세요. 이렇게 하면 일반적인 질문보다 라이브러리와 관련된 문제를 더 빠르게 해결할 수 있습니다.
+이슈를 보고하기 전에, 버그가 이미 **보고되지 않았는지** 확인해주세요. (GitHub의 이슈 탭 아래의 검색 바를 사용하세요). 이슈는 라이브러리 자체에서 발생한 버그어야 하며, 코드의 다른 부분과 관련된 것이 아니어야 합니다. 버그가 라이브러리의 문제로 발생하였는지 확실하지 않은 경우 먼저 [포럼](https://discuss.huggingface.co/)에서 질문해 주세요. 이렇게 하면 일반적인 질문보다 라이브러리와 관련된 문제를 더 빠르게 해결할 수 있습니다.
 
 버그가 이미 보고되지 않았다는 것을 확인했다면, 다음 정보를 포함하여 이슈를 제출해 주세요. 그러면 우리가 빠르게 해결할 수 있습니다:
 
@@ -99,7 +99,7 @@ python src/transformers/commands/transformers_cli.py env
 
 만약 모델을 직접 기여하고 싶으시다면, 알려주세요. 🤗 Transformers에 추가할 수 있도록 도와드리겠습니다!
 
-새로운 모델을 추가하는 방법에 대한 [상세 안내서와 템플릿](https://github.com/huggingface/transformers/tree/main/templates)을 제공하고 있으며, [🤗 Transformers에 새로운 모델을 추가하는 방법](https://hf-mirror.com/docs/transformers/add_new_model)에 대한 기술적인 안내서도 있습니다.
+새로운 모델을 추가하는 방법에 대한 [상세 안내서와 템플릿](https://github.com/huggingface/transformers/tree/main/templates)을 제공하고 있으며, [🤗 Transformers에 새로운 모델을 추가하는 방법](https://huggingface.co/docs/transformers/add_new_model)에 대한 기술적인 안내서도 있습니다.
 
 ## 문서를 추가하고 싶으신가요? [[do-you-want-to-add-documentation]]
 
@@ -157,7 +157,7 @@ python src/transformers/commands/transformers_cli.py env
    pytest tests/<TEST_TO_RUN>.py
    ```
 
-   테스트에 대한 더 많은 정보는 [테스트](https://hf-mirror.com/docs/transformers/testing) 가이드를 확인하세요.
+   테스트에 대한 더 많은 정보는 [테스트](https://huggingface.co/docs/transformers/testing) 가이드를 확인하세요.
 
    🤗 Transformers는 `black`과 `ruff`를 사용하여 소스 코드의 형식을 일관되게 유지합니다. 변경 사항을 적용한 후에는 다음 명령으로 자동으로 스타일 교정 및 코드 검증을 수행하세요:
 
@@ -185,7 +185,7 @@ python src/transformers/commands/transformers_cli.py env
    make repo-consistency
    ```
 
-   이러한 검사에 대해 자세히 알아보고 관련 문제를 해결하는 방법은 [Pull Request에 대한 검사](https://hf-mirror.com/docs/transformers/pr_checks) 가이드를 확인하세요.
+   이러한 검사에 대해 자세히 알아보고 관련 문제를 해결하는 방법은 [Pull Request에 대한 검사](https://huggingface.co/docs/transformers/pr_checks) 가이드를 확인하세요.
 
    만약 `docs/source` 디렉터리 아래의 문서를 수정하는 경우, 문서가 빌드될 수 있는지 확인하세요. 이 검사는 Pull Request를 열 때도 CI에서 실행됩니다. 로컬 검사를 실행하려면 문서 빌더를 설치해야 합니다:
    
@@ -242,9 +242,9 @@ python src/transformers/commands/transformers_cli.py env
    - CircleCI에서는 느린 테스트를 실행하지 않지만, GitHub Actions에서는 매일 밤 실행됩니다!<br>
 
 ☐ 모든 공개 메소드는 유용한 기술문서를 가져야 합니다 (예를 들어 [`modeling_bert.py`](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py) 참조).<br>
-☐ 저장소가 빠르게 성장하고 있으므로 저장소에 상당한 부담을 주는 이미지, 동영상 및 기타 텍스트가 아닌 파일은 추가하지 마세요. 대신 [`hf-internal-testing`](https://hf-mirror.com/hf-internal-testing)과 같은 Hub 저장소를 사용하여 이러한 파일을 호스팅하고 URL로 참조하세요. 문서와 관련된 이미지는 다음 저장소에 배치하는 것을 권장합니다: [huggingface/documentation-images](https://hf-mirror.com/datasets/huggingface/documentation-images). 이 데이터셋 저장소에서 PR을 열어서 Hugging Face 멤버에게 병합을 요청할 수 있습니다.
+☐ 저장소가 빠르게 성장하고 있으므로 저장소에 상당한 부담을 주는 이미지, 동영상 및 기타 텍스트가 아닌 파일은 추가하지 마세요. 대신 [`hf-internal-testing`](https://huggingface.co/hf-internal-testing)과 같은 Hub 저장소를 사용하여 이러한 파일을 호스팅하고 URL로 참조하세요. 문서와 관련된 이미지는 다음 저장소에 배치하는 것을 권장합니다: [huggingface/documentation-images](https://huggingface.co/datasets/huggingface/documentation-images). 이 데이터셋 저장소에서 PR을 열어서 Hugging Face 멤버에게 병합을 요청할 수 있습니다.
 
-Pull Request에서 실행되는 검사에 대한 자세한 정보는 [Pull Request에 대한 검사](https://hf-mirror.com/docs/transformers/pr_checks) 가이드를 확인하세요.
+Pull Request에서 실행되는 검사에 대한 자세한 정보는 [Pull Request에 대한 검사](https://huggingface.co/docs/transformers/pr_checks) 가이드를 확인하세요.
 
 ### 테스트 [[tests]]
 

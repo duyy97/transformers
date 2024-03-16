@@ -43,7 +43,7 @@ _CONFIG_FOR_DOC = "EncodecConfig"
 ENCODEC_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/encodec_24khz",
     "facebook/encodec_48khz",
-    # See all EnCodec models at https://hf-mirror.com/models?filter=encodec
+    # See all EnCodec models at https://huggingface.co/models?filter=encodec
 ]
 
 

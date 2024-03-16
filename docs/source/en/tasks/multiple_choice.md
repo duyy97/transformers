@@ -22,7 +22,7 @@ A multiple choice task is similar to question answering, except several candidat
 
 This guide will show you how to:
 
-1. Finetune [BERT](https://hf-mirror.com/google-bert/bert-base-uncased) on the `regular` configuration of the [SWAG](https://hf-mirror.com/datasets/swag) dataset to select the best answer given multiple options and some context.
+1. Finetune [BERT](https://huggingface.co/google-bert/bert-base-uncased) on the `regular` configuration of the [SWAG](https://huggingface.co/datasets/swag) dataset to select the best answer given multiple options and some context.
 2. Use your finetuned model for inference.
 
 <Tip>
@@ -216,7 +216,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 
 ## Evaluate
 
-Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://hf-mirror.com/docs/evaluate/index) library. For this task, load the [accuracy](https://hf-mirror.com/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://hf-mirror.com/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
+Including a metric during training is often helpful for evaluating your model's performance. You can quickly load a evaluation method with the 🤗 [Evaluate](https://huggingface.co/docs/evaluate/index) library. For this task, load the [accuracy](https://huggingface.co/spaces/evaluate-metric/accuracy) metric (see the 🤗 Evaluate [quick tour](https://huggingface.co/docs/evaluate/a_quick_tour) to learn more about how to load and compute a metric):
 
 ```py
 >>> import evaluate

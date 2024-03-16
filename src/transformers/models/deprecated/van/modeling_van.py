@@ -49,7 +49,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 VAN_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "Visual-Attention-Network/van-base",
-    # See all VAN models at https://hf-mirror.com/models?filter=van
+    # See all VAN models at https://huggingface.co/models?filter=van
 ]
 
 

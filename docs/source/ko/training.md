@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 
 사전 학습된 모델을 미세 튜닝하기 위해서 데이터셋을 다운로드하고 훈련할 수 있도록 준비하세요. 이전 튜토리얼에서 훈련을 위해 데이터를 처리하는 방법을 보여드렸는데, 지금이 배울 걸 되짚을 기회입니다!
 
-먼저 [Yelp 리뷰](https://hf-mirror.com/datasets/yelp_review_full) 데이터 세트를 로드합니다:
+먼저 [Yelp 리뷰](https://huggingface.co/datasets/yelp_review_full) 데이터 세트를 로드합니다:
 
 ```py
 >>> from datasets import load_dataset
@@ -43,7 +43,7 @@ rendered properly in your Markdown viewer.
  'text': 'My expectations for McDonalds are t rarely high. But for one to still fail so spectacularly...that takes something special!\\nThe cashier took my friends\'s order, then promptly ignored me. I had to force myself in front of a cashier who opened his register to wait on the person BEHIND me. I waited over five minutes for a gigantic order that included precisely one kid\'s meal. After watching two people who ordered after me be handed their food, I asked where mine was. The manager started yelling at the cashiers for \\"serving off their orders\\" when they didn\'t have their food. But neither cashier was anywhere near those controls, and the manager was the one serving food to customers and clearing the boards.\\nThe manager was rude when giving me my order. She didn\'t make sure that I had everything ON MY RECEIPT, and never even had the decency to apologize that I felt I was getting poor service.\\nI\'ve eaten at various McDonalds restaurants for over 30 years. I\'ve worked at more than one location. I expect bad days, bad moods, and the occasional mistake. But I have yet to have a decent experience at this store. It will remain a place I avoid unless someone in my party needs to avoid illness from low blood sugar. Perhaps I should go back to the racially biased service of Steak n Shake instead!'}
 ```
 
-텍스트를 처리하고 서로 다른 길이의 시퀀스 패딩 및 잘라내기 전략을 포함하려면 토크나이저가 필요합니다. 데이터셋을 한 번에 처리하려면 🤗 Dataset [`map`](https://hf-mirror.com/docs/datasets/process#map) 메서드를 사용하여 전체 데이터셋에 전처리 함수를 적용하세요:
+텍스트를 처리하고 서로 다른 길이의 시퀀스 패딩 및 잘라내기 전략을 포함하려면 토크나이저가 필요합니다. 데이터셋을 한 번에 처리하려면 🤗 Dataset [`map`](https://huggingface.co/docs/datasets/process#map) 메서드를 사용하여 전체 데이터셋에 전처리 함수를 적용하세요:
 
 ```py
 >>> from transformers import AutoTokenizer
@@ -79,7 +79,7 @@ rendered properly in your Markdown viewer.
 
 🤗 Transformers는 🤗 Transformers 모델 훈련에 최적화된 [`Trainer`] 클래스를 제공하여 훈련 루프를 직접 작성하지 않고도 쉽게 훈련을 시작할 수 있습니다. [`Trainer`] API는 로깅(logging), 경사 누적(gradient accumulation), 혼합 정밀도(mixed precision) 등 다양한 훈련 옵션과 기능을 지원합니다.
 
-먼저 모델을 가져오고 예상되는 레이블 수를 지정합니다. Yelp 리뷰 [데이터셋 카드](https://hf-mirror.com/datasets/yelp_review_full#data-fields)에서 5개의 레이블이 있음을 알 수 있습니다:
+먼저 모델을 가져오고 예상되는 레이블 수를 지정합니다. Yelp 리뷰 [데이터셋 카드](https://huggingface.co/datasets/yelp_review_full#data-fields)에서 5개의 레이블이 있음을 알 수 있습니다:
 
 ```py
 >>> from transformers import AutoModelForSequenceClassification
@@ -98,7 +98,7 @@ rendered properly in your Markdown viewer.
 
 다음으로 정할 수 있는 모든 하이퍼파라미터와 다양한 훈련 옵션을 활성화하기 위한 플래그를 포함하는 [`TrainingArguments`] 클래스를 생성합니다.
 
-이 튜토리얼에서는 기본 훈련 [하이퍼파라미터](https://hf-mirror.com/docs/transformers/main_classes/trainer#transformers.TrainingArguments)로 시작하지만, 자유롭게 실험하여 여러분들에게 맞는 최적의 설정을 찾을 수 있습니다.
+이 튜토리얼에서는 기본 훈련 [하이퍼파라미터](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)로 시작하지만, 자유롭게 실험하여 여러분들에게 맞는 최적의 설정을 찾을 수 있습니다.
 
 훈련에서 체크포인트(checkpoints)를 저장할 위치를 지정합니다:
 
@@ -111,7 +111,7 @@ rendered properly in your Markdown viewer.
 ### 평가 하기[[evaluate]]
 
 [`Trainer`]는 훈련 중에 모델 성능을 자동으로 평가하지 않습니다. 평가 지표를 계산하고 보고할 함수를 [`Trainer`]에 전달해야 합니다. 
-[🤗 Evaluate](https://hf-mirror.com/docs/evaluate/index) 라이브러리는 [`evaluate.load`](https://hf-mirror.com/spaces/evaluate-metric/accuracy) 함수로 로드할 수 있는 간단한 [`accuracy`]함수를 제공합니다 (자세한 내용은 [둘러보기](https://hf-mirror.com/docs/evaluate/a_quick_tour)를 참조하세요):
+[🤗 Evaluate](https://huggingface.co/docs/evaluate/index) 라이브러리는 [`evaluate.load`](https://huggingface.co/spaces/evaluate-metric/accuracy) 함수로 로드할 수 있는 간단한 [`accuracy`]함수를 제공합니다 (자세한 내용은 [둘러보기](https://huggingface.co/docs/evaluate/a_quick_tour)를 참조하세요):
 
 ```py
 >>> import numpy as np
@@ -172,7 +172,7 @@ Keras API로 🤗 Transformers 모델을 학습시키려면 데이터셋을 Kera
 데이터 세트가 작은 경우, 전체를 NumPy 배열로 변환하여 Keras로 전달하면 됩니다.
 더 복잡한 작업을 수행하기 전에 먼저 이 작업을 시도해 보겠습니다.
 
-먼저 데이터 세트를 로드합니다. [GLUE 벤치마크](https://hf-mirror.com/datasets/glue)의 CoLA 데이터 세트를 사용하겠습니다.
+먼저 데이터 세트를 로드합니다. [GLUE 벤치마크](https://huggingface.co/datasets/glue)의 CoLA 데이터 세트를 사용하겠습니다.
 간단한 바이너리 텍스트 분류 작업이므로 지금은 훈련 데이터 분할만 사용합니다.
 
 ```py
@@ -255,7 +255,7 @@ dataset = dataset.map(tokenize_dataset)
 샘플을 채우는 것보다 더 복잡한 작업(예: 마스킹된 언어의 토큰 손상 모델링)을 수행하기 위해 토큰을 손상시켜야 하는 경우, 
 `collate_fn` 인수를 사용하여 샘플 목록을 배치로 변환하고 원하는 전처리를 적용할 함수를 전달할 수 있습니다. 
 [예시](https://github.com/huggingface/transformers/tree/main/examples) 또는 
-[노트북](https://hf-mirror.com/docs/transformers/notebooks)을 참조하여 이 접근 방식이 실제로 작동하는 모습을 확인하세요.
+[노트북](https://huggingface.co/docs/transformers/notebooks)을 참조하여 이 접근 방식이 실제로 작동하는 모습을 확인하세요.
 
 `tf.data.Dataset`을 생성한 후에는 이전과 마찬가지로 모델을 컴파일하고 훈련(fit)할 수 있습니다:
 

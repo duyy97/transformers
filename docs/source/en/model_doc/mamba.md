@@ -34,7 +34,7 @@ Tips:
 - The current implementation leverages the original cuda kernels: the equivalent of flash attention for Mamba are hosted in the [`mamba-ssm`](https://github.com/state-spaces/mamba) and the [`causal_conv1d`](https://github.com/Dao-AILab/causal-conv1d) repositories. Make sure to install them if your hardware supports them!
 - Contributions to make the naive path faster are welcome 🤗
 
-This model was contributed by [ArthurZ](https://hf-mirror.com/ArthurZ).
+This model was contributed by [ArthurZ](https://huggingface.co/ArthurZ).
 The original code can be found [here](https://github.com/state-spaces/mamba).
 
 # Usage

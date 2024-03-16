@@ -61,7 +61,7 @@ _IMAGE_CLASS_EXPECTED_OUTPUT = "tabby, tabby cat"
 
 DEIT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/deit-base-distilled-patch16-224",
-    # See all DeiT models at https://hf-mirror.com/models?filter=deit
+    # See all DeiT models at https://huggingface.co/models?filter=deit
 ]
 
 
